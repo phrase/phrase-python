@@ -1,0 +1,688 @@
+# Phrase.InvitationsApi
+
+All URIs are relative to *https://api.phrase.com/v2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**invitation_create**](InvitationsApi.md#invitation_create) | **POST** /accounts/{account_id}/invitations | Create a new invitation
+[**invitation_delete**](InvitationsApi.md#invitation_delete) | **DELETE** /accounts/{account_id}/invitations/{id} | Delete an invitation
+[**invitation_resend**](InvitationsApi.md#invitation_resend) | **POST** /accounts/{account_id}/invitations/{id}/resend | Resend an invitation
+[**invitation_show**](InvitationsApi.md#invitation_show) | **GET** /accounts/{account_id}/invitations/{id} | Get a single invitation
+[**invitation_update**](InvitationsApi.md#invitation_update) | **PATCH** /accounts/{account_id}/invitations/{id} | Update an invitation
+[**invitations_list**](InvitationsApi.md#invitations_list) | **GET** /accounts/{account_id}/invitations | List invitations
+
+
+# **invitation_create**
+> invitation_create(account_id, invitation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Create a new invitation
+
+Invite a person to an account. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+invitation_create_parameters = Phrase.InvitationCreateParameters() # InvitationCreateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Create a new invitation
+        api_instance.invitation_create(account_id, invitation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_create: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+invitation_create_parameters = Phrase.InvitationCreateParameters() # InvitationCreateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Create a new invitation
+        api_instance.invitation_create(account_id, invitation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **invitation_create_parameters** | [**InvitationCreateParameters**](InvitationCreateParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invitation_delete**
+> invitation_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+
+Delete an invitation
+
+Delete an existing invitation (must not be accepted yet). Access token scope must include <code>team.manage</code>.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Delete an invitation
+        api_instance.invitation_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_delete: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Delete an invitation
+        api_instance.invitation_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | The resource was deleted successfully. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invitation_resend**
+> Invitation invitation_resend(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+
+Resend an invitation
+
+Resend the invitation email (must not be accepted yet). Access token scope must include <code>team.manage</code>.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Resend an invitation
+        api_response = api_instance.invitation_resend(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_resend: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Resend an invitation
+        api_response = api_instance.invitation_resend(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_resend: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**Invitation**](Invitation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invitation_show**
+> Invitation invitation_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+
+Get a single invitation
+
+Get details on a single invitation. Access token scope must include <code>team.manage</code>.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Get a single invitation
+        api_response = api_instance.invitation_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_show: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Get a single invitation
+        api_response = api_instance.invitation_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_show: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**Invitation**](Invitation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invitation_update**
+> Invitation invitation_update(account_id, id, invitation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Update an invitation
+
+Update an existing invitation (must not be accepted yet). The <code>email</code> cannot be updated. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+invitation_update_parameters = Phrase.InvitationUpdateParameters() # InvitationUpdateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Update an invitation
+        api_response = api_instance.invitation_update(account_id, id, invitation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_update: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+id = 'id_example' # str | ID
+invitation_update_parameters = Phrase.InvitationUpdateParameters() # InvitationUpdateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Update an invitation
+        api_response = api_instance.invitation_update(account_id, id, invitation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitation_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **id** | **str**| ID | 
+ **invitation_update_parameters** | [**InvitationUpdateParameters**](InvitationUpdateParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**Invitation**](Invitation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **invitations_list**
+> list[Invitation] invitations_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+
+List invitations
+
+List invitations for an account. It will also list the accessible resources like projects and locales the invited user has access to. In case nothing is shown the default access from the role is used. Access token scope must include <code>team.manage</code>.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+
+    try:
+        # List invitations
+        api_response = api_instance.invitations_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitations_list: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.InvitationsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+
+    try:
+        # List invitations
+        api_response = api_instance.invitations_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling InvitationsApi->invitations_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+
+### Return type
+
+[**list[Invitation]**](Invitation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

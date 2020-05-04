@@ -1,0 +1,2005 @@
+# Phrase.TranslationsApi
+
+All URIs are relative to *https://api.phrase.com/v2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**translation_create**](TranslationsApi.md#translation_create) | **POST** /projects/{project_id}/translations | Create a translation
+[**translation_exclude**](TranslationsApi.md#translation_exclude) | **PATCH** /projects/{project_id}/translations/{id}/exclude | Exclude a translation from export
+[**translation_include**](TranslationsApi.md#translation_include) | **PATCH** /projects/{project_id}/translations/{id}/include | Revoke exclusion of a translation in export
+[**translation_review**](TranslationsApi.md#translation_review) | **PATCH** /projects/{project_id}/translations/{id}/review | Review a translation
+[**translation_show**](TranslationsApi.md#translation_show) | **GET** /projects/{project_id}/translations/{id} | Get a single translation
+[**translation_unverify**](TranslationsApi.md#translation_unverify) | **PATCH** /projects/{project_id}/translations/{id}/unverify | Mark a translation as unverified
+[**translation_update**](TranslationsApi.md#translation_update) | **PATCH** /projects/{project_id}/translations/{id} | Update a translation
+[**translation_verify**](TranslationsApi.md#translation_verify) | **PATCH** /projects/{project_id}/translations/{id}/verify | Verify a translation
+[**translations_by_key**](TranslationsApi.md#translations_by_key) | **GET** /projects/{project_id}/keys/{key_id}/translations | List translations by key
+[**translations_by_locale**](TranslationsApi.md#translations_by_locale) | **GET** /projects/{project_id}/locales/{locale_id}/translations | List translations by locale
+[**translations_exclude**](TranslationsApi.md#translations_exclude) | **PATCH** /projects/{project_id}/translations/exclude | Set exclude from export flag on translations selected by query
+[**translations_include**](TranslationsApi.md#translations_include) | **PATCH** /projects/{project_id}/translations/include | Remove exlude from import flag from translations selected by query
+[**translations_list**](TranslationsApi.md#translations_list) | **GET** /projects/{project_id}/translations | List all translations
+[**translations_review**](TranslationsApi.md#translations_review) | **PATCH** /projects/{project_id}/translations/review | Review translations selected by query
+[**translations_search**](TranslationsApi.md#translations_search) | **POST** /projects/{project_id}/translations/search | Search translations
+[**translations_unverify**](TranslationsApi.md#translations_unverify) | **PATCH** /projects/{project_id}/translations/unverify | Mark translations selected by query as unverified
+[**translations_verify**](TranslationsApi.md#translations_verify) | **PATCH** /projects/{project_id}/translations/verify | Verify translations selected by query
+
+
+# **translation_create**
+> translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Create a translation
+
+Create a translation.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translation_create_parameters = Phrase.TranslationCreateParameters() # TranslationCreateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Create a translation
+        api_instance.translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_create: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translation_create_parameters = Phrase.TranslationCreateParameters() # TranslationCreateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Create a translation
+        api_instance.translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translation_create_parameters** | [**TranslationCreateParameters**](TranslationCreateParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_exclude**
+> TranslationDetails translation_exclude(project_id, id, translation_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Exclude a translation from export
+
+Set exclude from export flag on an existing translation.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_exclude_parameters = Phrase.TranslationExcludeParameters() # TranslationExcludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Exclude a translation from export
+        api_response = api_instance.translation_exclude(project_id, id, translation_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_exclude: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_exclude_parameters = Phrase.TranslationExcludeParameters() # TranslationExcludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Exclude a translation from export
+        api_response = api_instance.translation_exclude(project_id, id, translation_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_exclude: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **translation_exclude_parameters** | [**TranslationExcludeParameters**](TranslationExcludeParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_include**
+> TranslationDetails translation_include(project_id, id, translation_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Revoke exclusion of a translation in export
+
+Remove exclude from export flag from an existing translation.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_include_parameters = Phrase.TranslationIncludeParameters() # TranslationIncludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Revoke exclusion of a translation in export
+        api_response = api_instance.translation_include(project_id, id, translation_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_include: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_include_parameters = Phrase.TranslationIncludeParameters() # TranslationIncludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Revoke exclusion of a translation in export
+        api_response = api_instance.translation_include(project_id, id, translation_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_include: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **translation_include_parameters** | [**TranslationIncludeParameters**](TranslationIncludeParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_review**
+> TranslationDetails translation_review(project_id, id, translation_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Review a translation
+
+Mark an existing translation as reviewed.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_review_parameters = Phrase.TranslationReviewParameters() # TranslationReviewParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Review a translation
+        api_response = api_instance.translation_review(project_id, id, translation_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_review: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_review_parameters = Phrase.TranslationReviewParameters() # TranslationReviewParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Review a translation
+        api_response = api_instance.translation_review(project_id, id, translation_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_review: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **translation_review_parameters** | [**TranslationReviewParameters**](TranslationReviewParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_show**
+> TranslationDetails translation_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+
+Get a single translation
+
+Get details on a single translation.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+
+    try:
+        # Get a single translation
+        api_response = api_instance.translation_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_show: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+
+    try:
+        # Get a single translation
+        api_response = api_instance.translation_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_show: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_unverify**
+> TranslationDetails translation_unverify(project_id, id, translation_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Mark a translation as unverified
+
+Mark an existing translation as unverified.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_unverify_parameters = Phrase.TranslationUnverifyParameters() # TranslationUnverifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Mark a translation as unverified
+        api_response = api_instance.translation_unverify(project_id, id, translation_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_unverify: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_unverify_parameters = Phrase.TranslationUnverifyParameters() # TranslationUnverifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Mark a translation as unverified
+        api_response = api_instance.translation_unverify(project_id, id, translation_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_unverify: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **translation_unverify_parameters** | [**TranslationUnverifyParameters**](TranslationUnverifyParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_update**
+> TranslationDetails translation_update(project_id, id, translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Update a translation
+
+Update an existing translation.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_update_parameters = Phrase.TranslationUpdateParameters() # TranslationUpdateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Update a translation
+        api_response = api_instance.translation_update(project_id, id, translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_update: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_update_parameters = Phrase.TranslationUpdateParameters() # TranslationUpdateParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Update a translation
+        api_response = api_instance.translation_update(project_id, id, translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **translation_update_parameters** | [**TranslationUpdateParameters**](TranslationUpdateParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translation_verify**
+> TranslationDetails translation_verify(project_id, id, translation_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Verify a translation
+
+Verify an existing translation.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_verify_parameters = Phrase.TranslationVerifyParameters() # TranslationVerifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Verify a translation
+        api_response = api_instance.translation_verify(project_id, id, translation_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_verify: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+id = 'id_example' # str | ID
+translation_verify_parameters = Phrase.TranslationVerifyParameters() # TranslationVerifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Verify a translation
+        api_response = api_instance.translation_verify(project_id, id, translation_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translation_verify: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **translation_verify_parameters** | [**TranslationVerifyParameters**](TranslationVerifyParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**TranslationDetails**](TranslationDetails.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_by_key**
+> list[Translation] translations_by_key(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+
+List translations by key
+
+List translations for a specific key.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+key_id = 'key_id_example' # str | Translation Key ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at. (optional)
+order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
+q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | q_description_placeholder (optional)
+
+    try:
+        # List translations by key
+        api_response = api_instance.translations_by_key(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_by_key: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+key_id = 'key_id_example' # str | Translation Key ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at. (optional)
+order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
+q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | q_description_placeholder (optional)
+
+    try:
+        # List translations by key
+        api_response = api_instance.translations_by_key(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_by_key: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **key_id** | **str**| Translation Key ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+ **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
+ **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
+ **q** | **str**| q_description_placeholder | [optional] 
+
+### Return type
+
+[**list[Translation]**](Translation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_by_locale**
+> list[Translation] translations_by_locale(project_id, locale_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+
+List translations by locale
+
+List translations for a specific locale. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+locale_id = 'locale_id_example' # str | Locale ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at. (optional)
+order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
+q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | q_description_placeholder (optional)
+
+    try:
+        # List translations by locale
+        api_response = api_instance.translations_by_locale(project_id, locale_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_by_locale: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+locale_id = 'locale_id_example' # str | Locale ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at. (optional)
+order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
+q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | q_description_placeholder (optional)
+
+    try:
+        # List translations by locale
+        api_response = api_instance.translations_by_locale(project_id, locale_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_by_locale: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **locale_id** | **str**| Locale ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+ **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
+ **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
+ **q** | **str**| q_description_placeholder | [optional] 
+
+### Return type
+
+[**list[Translation]**](Translation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_exclude**
+> AffectedCount translations_exclude(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Set exclude from export flag on translations selected by query
+
+Exclude translations matching query from locale export.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_exclude_parameters = Phrase.TranslationsExcludeParameters() # TranslationsExcludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Set exclude from export flag on translations selected by query
+        api_response = api_instance.translations_exclude(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_exclude: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_exclude_parameters = Phrase.TranslationsExcludeParameters() # TranslationsExcludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Set exclude from export flag on translations selected by query
+        api_response = api_instance.translations_exclude(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_exclude: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translations_exclude_parameters** | [**TranslationsExcludeParameters**](TranslationsExcludeParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**AffectedCount**](AffectedCount.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_include**
+> AffectedCount translations_include(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Remove exlude from import flag from translations selected by query
+
+Include translations matching query in locale export.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_include_parameters = Phrase.TranslationsIncludeParameters() # TranslationsIncludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Remove exlude from import flag from translations selected by query
+        api_response = api_instance.translations_include(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_include: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_include_parameters = Phrase.TranslationsIncludeParameters() # TranslationsIncludeParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Remove exlude from import flag from translations selected by query
+        api_response = api_instance.translations_include(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_include: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translations_include_parameters** | [**TranslationsIncludeParameters**](TranslationsIncludeParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**AffectedCount**](AffectedCount.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_list**
+> list[Translation] translations_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+
+List all translations
+
+List translations for the given project. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at. (optional)
+order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
+q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | q_description_placeholder (optional)
+
+    try:
+        # List all translations
+        api_response = api_instance.translations_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_list: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+branch = 'my-feature-branch' # str | specify the branch to use (optional)
+sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at. (optional)
+order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
+q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | q_description_placeholder (optional)
+
+    try:
+        # List all translations
+        api_response = api_instance.translations_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+ **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
+ **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
+ **q** | **str**| q_description_placeholder | [optional] 
+
+### Return type
+
+[**list[Translation]**](Translation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_review**
+> AffectedCount translations_review(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Review translations selected by query
+
+Review translations matching query.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_review_parameters = Phrase.TranslationsReviewParameters() # TranslationsReviewParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Review translations selected by query
+        api_response = api_instance.translations_review(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_review: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_review_parameters = Phrase.TranslationsReviewParameters() # TranslationsReviewParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Review translations selected by query
+        api_response = api_instance.translations_review(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_review: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translations_review_parameters** | [**TranslationsReviewParameters**](TranslationsReviewParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**AffectedCount**](AffectedCount.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_search**
+> list[Translation] translations_search(project_id, translations_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+
+Search translations
+
+Search translations for the given project. Provides the same search interface as <code>translations#index</code> but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_search_parameters = Phrase.TranslationsSearchParameters() # TranslationsSearchParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+
+    try:
+        # Search translations
+        api_response = api_instance.translations_search(project_id, translations_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_search: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_search_parameters = Phrase.TranslationsSearchParameters() # TranslationsSearchParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+page = 1 # int | Page number (optional)
+per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+
+    try:
+        # Search translations
+        api_response = api_instance.translations_search(project_id, translations_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_search: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translations_search_parameters** | [**TranslationsSearchParameters**](TranslationsSearchParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+
+### Return type
+
+[**list[Translation]**](Translation.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_unverify**
+> AffectedCount translations_unverify(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Mark translations selected by query as unverified
+
+Mark translations matching query as unverified.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_unverify_parameters = Phrase.TranslationsUnverifyParameters() # TranslationsUnverifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Mark translations selected by query as unverified
+        api_response = api_instance.translations_unverify(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_unverify: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_unverify_parameters = Phrase.TranslationsUnverifyParameters() # TranslationsUnverifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Mark translations selected by query as unverified
+        api_response = api_instance.translations_unverify(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_unverify: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translations_unverify_parameters** | [**TranslationsUnverifyParameters**](TranslationsUnverifyParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**AffectedCount**](AffectedCount.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **translations_verify**
+> AffectedCount translations_verify(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Verify translations selected by query
+
+Verify translations matching query.
+
+### Example
+
+* Basic Authentication (Basic):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_verify_parameters = Phrase.TranslationsVerifyParameters() # TranslationsVerifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Verify translations selected by query
+        api_response = api_instance.translations_verify(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_verify: %s\n" % e)
+```
+
+* Api Key Authentication (Token):
+```python
+from __future__ import print_function
+import time
+import Phrase
+from Phrase.rest import ApiException
+from pprint import pprint
+configuration = Phrase.Configuration()
+# Configure HTTP basic authorization: Basic
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+configuration = Phrase.Configuration()
+# Configure API key authorization: Token
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Defining host is optional and default to https://api.phrase.com/v2
+configuration.host = "https://api.phrase.com/v2"
+
+# Enter a context with an instance of the API client
+with Phrase.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = Phrase.TranslationsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID
+translations_verify_parameters = Phrase.TranslationsVerifyParameters() # TranslationsVerifyParameters | 
+x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+
+    try:
+        # Verify translations selected by query
+        api_response = api_instance.translations_verify(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TranslationsApi->translations_verify: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **translations_verify_parameters** | [**TranslationsVerifyParameters**](TranslationsVerifyParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**AffectedCount**](AffectedCount.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

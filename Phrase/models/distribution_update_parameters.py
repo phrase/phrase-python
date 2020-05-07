@@ -35,7 +35,7 @@ class DistributionUpdateParameters(object):
         'name': 'str',
         'project_id': 'str',
         'platforms': 'list[str]',
-        'format_options': 'object',
+        'format_options': 'dict(str, str)',
         'fallback_to_non_regional_locale': 'bool',
         'fallback_to_default_locale': 'bool',
         'use_last_reviewed_version': 'bool'
@@ -157,7 +157,7 @@ class DistributionUpdateParameters(object):
         Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>.  # noqa: E501
 
         :return: The format_options of this DistributionUpdateParameters.  # noqa: E501
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._format_options
 
@@ -168,7 +168,7 @@ class DistributionUpdateParameters(object):
         Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>.  # noqa: E501
 
         :param format_options: The format_options of this DistributionUpdateParameters.  # noqa: E501
-        :type: object
+        :type: dict(str, str)
         """
 
         self._format_options = format_options

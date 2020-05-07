@@ -35,7 +35,7 @@ class MemberUpdateParameters(object):
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
-        'permissions': 'object'
+        'permissions': 'dict(str, str)'
     }
 
     attribute_map = {
@@ -142,7 +142,7 @@ class MemberUpdateParameters(object):
         Additional permissions depending on member role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
 
         :return: The permissions of this MemberUpdateParameters.  # noqa: E501
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._permissions
 
@@ -153,7 +153,7 @@ class MemberUpdateParameters(object):
         Additional permissions depending on member role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
 
         :param permissions: The permissions of this MemberUpdateParameters.  # noqa: E501
-        :type: object
+        :type: dict(str, str)
         """
 
         self._permissions = permissions

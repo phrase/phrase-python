@@ -36,7 +36,7 @@ class InvitationCreateParameters(object):
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
-        'permissions': 'object'
+        'permissions': 'dict(str, str)'
     }
 
     attribute_map = {
@@ -170,7 +170,7 @@ class InvitationCreateParameters(object):
         Additional permissions depending on invitation role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
 
         :return: The permissions of this InvitationCreateParameters.  # noqa: E501
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._permissions
 
@@ -181,7 +181,7 @@ class InvitationCreateParameters(object):
         Additional permissions depending on invitation role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
 
         :param permissions: The permissions of this InvitationCreateParameters.  # noqa: E501
-        :type: object
+        :type: dict(str, str)
         """
 
         self._permissions = permissions

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.screenshot_marker_create_parameters import ScreenshotMarkerCreateParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.screenshot_marker_create_parameters import ScreenshotMarkerCreateParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestScreenshotMarkerCreateParameters(unittest.TestCase):
     """ScreenshotMarkerCreateParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestScreenshotMarkerCreateParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.screenshot_marker_create_parameters.ScreenshotMarkerCreateParameters()  # noqa: E501
+        # model = phrase-api.models.screenshot_marker_create_parameters.ScreenshotMarkerCreateParameters()  # noqa: E501
         if include_optional :
             return ScreenshotMarkerCreateParameters(
                 key_id = 'abcd1234abcd1234abcd1234abcd1234', 

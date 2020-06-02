@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.translation_version import TranslationVersion  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.translation_version import TranslationVersion  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestTranslationVersion(unittest.TestCase):
     """TranslationVersion unit test stubs"""
@@ -32,13 +32,13 @@ class TestTranslationVersion(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.translation_version.TranslationVersion()  # noqa: E501
+        # model = phrase-api.models.translation_version.TranslationVersion()  # noqa: E501
         if include_optional :
             return TranslationVersion(
                 id = '0', 
                 content = '0', 
                 plural_suffix = '0', 
-                key = Phrase.models.key_preview.key_preview(
+                key = phrase-api.models.key_preview.key_preview(
                     id = '0', 
                     name = '0', 
                     plural = True, ), 

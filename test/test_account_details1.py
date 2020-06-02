@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.account_details1 import AccountDetails1  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.account_details1 import AccountDetails1  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestAccountDetails1(unittest.TestCase):
     """AccountDetails1 unit test stubs"""
@@ -32,7 +32,7 @@ class TestAccountDetails1(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.account_details1.AccountDetails1()  # noqa: E501
+        # model = phrase-api.models.account_details1.AccountDetails1()  # noqa: E501
         if include_optional :
             return AccountDetails1(
                 slug = '0'

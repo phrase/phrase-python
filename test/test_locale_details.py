@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.locale_details import LocaleDetails  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.locale_details import LocaleDetails  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestLocaleDetails(unittest.TestCase):
     """LocaleDetails unit test stubs"""
@@ -32,7 +32,7 @@ class TestLocaleDetails(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.locale_details.LocaleDetails()  # noqa: E501
+        # model = phrase-api.models.locale_details.LocaleDetails()  # noqa: E501
         if include_optional :
             return LocaleDetails(
                 id = '0', 
@@ -47,7 +47,7 @@ class TestLocaleDetails(unittest.TestCase):
                 source_locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                statistics = Phrase.models.locale_statistics.locale_statistics(
+                statistics = phrase-api.models.locale_statistics.locale_statistics(
                     keys_total_count = 56, 
                     keys_untranslated_count = 56, 
                     words_total_count = 56, 

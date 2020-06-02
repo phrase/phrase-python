@@ -1,4 +1,4 @@
-# Phrase.OrdersApi
+# phrase-api.OrdersApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -24,14 +24,14 @@ Confirm an existing order and send it to the provider for translation. Same cons
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -41,12 +41,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
-order_confirm_parameters = Phrase.OrderConfirmParameters() # OrderConfirmParameters | 
+order_confirm_parameters = phrase-api.OrderConfirmParameters() # OrderConfirmParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -61,14 +61,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -78,12 +78,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
-order_confirm_parameters = Phrase.OrderConfirmParameters() # OrderConfirmParameters | 
+order_confirm_parameters = phrase-api.OrderConfirmParameters() # OrderConfirmParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -139,14 +139,14 @@ Create a new order. Access token scope must include <code>orders.create</code>.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -156,11 +156,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
-order_create_parameters = Phrase.OrderCreateParameters() # OrderCreateParameters | 
+order_create_parameters = phrase-api.OrderCreateParameters() # OrderCreateParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -174,14 +174,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -191,11 +191,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
-order_create_parameters = Phrase.OrderCreateParameters() # OrderCreateParameters | 
+order_create_parameters = phrase-api.OrderCreateParameters() # OrderCreateParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -249,14 +249,14 @@ Cancel an existing order. Must not yet be confirmed.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -266,9 +266,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -285,14 +285,14 @@ branch = 'my-feature-branch' # str | specify the branch to use (optional)
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -302,9 +302,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -362,14 +362,14 @@ Get details on a single order.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -379,9 +379,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -399,14 +399,14 @@ branch = 'my-feature-branch' # str | specify the branch to use (optional)
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -416,9 +416,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -477,14 +477,14 @@ List all orders for the given project.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -494,9 +494,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 page = 1 # int | Page number (optional)
@@ -515,14 +515,14 @@ branch = 'my-feature-branch' # str | specify the branch to use (optional)
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -532,9 +532,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.OrdersApi(api_client)
+    api_instance = phrase-api.OrdersApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 page = 1 # int | Page number (optional)

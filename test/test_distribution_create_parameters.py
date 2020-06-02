@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.distribution_create_parameters import DistributionCreateParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.distribution_create_parameters import DistributionCreateParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestDistributionCreateParameters(unittest.TestCase):
     """DistributionCreateParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestDistributionCreateParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.distribution_create_parameters.DistributionCreateParameters()  # noqa: E501
+        # model = phrase-api.models.distribution_create_parameters.DistributionCreateParameters()  # noqa: E501
         if include_optional :
             return DistributionCreateParameters(
                 name = 'My Android Distribution', 

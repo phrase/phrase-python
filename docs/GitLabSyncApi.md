@@ -1,4 +1,4 @@
-# Phrase.GitLabSyncApi
+# phrase-api.GitLabSyncApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -26,14 +26,14 @@ Deletes a single GitLab Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -43,9 +43,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
@@ -61,14 +61,14 @@ account_id = 'abcd1234' # str | Account ID to specify the actual account the Git
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -78,9 +78,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
@@ -136,14 +136,14 @@ Export translations from Phrase to GitLab according to the .phraseapp.yml file w
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -153,11 +153,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID
-gitlab_sync_export_parameters = Phrase.GitlabSyncExportParameters() # GitlabSyncExportParameters | 
+gitlab_sync_export_parameters = phrase-api.GitlabSyncExportParameters() # GitlabSyncExportParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -172,14 +172,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -189,11 +189,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID
-gitlab_sync_export_parameters = Phrase.GitlabSyncExportParameters() # GitlabSyncExportParameters | 
+gitlab_sync_export_parameters = phrase-api.GitlabSyncExportParameters() # GitlabSyncExportParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -248,14 +248,14 @@ List history for a single Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -265,9 +265,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 page = 1 # int | Page number (optional)
@@ -286,14 +286,14 @@ account_id = 'abcd1234' # str | Account ID to specify the actual account the Git
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -303,9 +303,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 page = 1 # int | Page number (optional)
@@ -366,14 +366,14 @@ Import translations from GitLab to Phrase according to the .phraseapp.yml file w
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -383,11 +383,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID
-gitlab_sync_import_parameters = Phrase.GitlabSyncImportParameters() # GitlabSyncImportParameters | 
+gitlab_sync_import_parameters = phrase-api.GitlabSyncImportParameters() # GitlabSyncImportParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -402,14 +402,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -419,11 +419,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID
-gitlab_sync_import_parameters = Phrase.GitlabSyncImportParameters() # GitlabSyncImportParameters | 
+gitlab_sync_import_parameters = phrase-api.GitlabSyncImportParameters() # GitlabSyncImportParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -478,14 +478,14 @@ List all GitLab Sync Settings for which synchronisation with Phrase and GitLab i
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -495,9 +495,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
 
@@ -513,14 +513,14 @@ account_id = 'abcd1234' # str | Account ID to specify the actual account the Git
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -530,9 +530,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
 
@@ -587,14 +587,14 @@ Shows a single GitLab Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -604,9 +604,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
@@ -623,14 +623,14 @@ account_id = 'abcd1234' # str | Account ID to specify the actual account the Git
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -640,9 +640,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
@@ -699,14 +699,14 @@ Updates a single GitLab Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -716,9 +716,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)
@@ -738,14 +738,14 @@ gitlab_branch_name = 'feature-development' # str | Name of the GitLab Branch. (o
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -755,9 +755,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GitLabSyncApi(api_client)
+    api_instance = phrase-api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. (optional)

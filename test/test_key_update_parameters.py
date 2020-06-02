@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.key_update_parameters import KeyUpdateParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.key_update_parameters import KeyUpdateParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestKeyUpdateParameters(unittest.TestCase):
     """KeyUpdateParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestKeyUpdateParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.key_update_parameters.KeyUpdateParameters()  # noqa: E501
+        # model = phrase-api.models.key_update_parameters.KeyUpdateParameters()  # noqa: E501
         if include_optional :
             return KeyUpdateParameters(
                 branch = 'my-feature-branch', 

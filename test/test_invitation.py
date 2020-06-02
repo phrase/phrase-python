@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.invitation import Invitation  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.invitation import Invitation  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestInvitation(unittest.TestCase):
     """Invitation unit test stubs"""
@@ -32,7 +32,7 @@ class TestInvitation(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.invitation.Invitation()  # noqa: E501
+        # model = phrase-api.models.invitation.Invitation()  # noqa: E501
         if include_optional :
             return Invitation(
                 id = '0', 

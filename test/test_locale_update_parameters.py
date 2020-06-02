@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.locale_update_parameters import LocaleUpdateParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.locale_update_parameters import LocaleUpdateParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestLocaleUpdateParameters(unittest.TestCase):
     """LocaleUpdateParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestLocaleUpdateParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.locale_update_parameters.LocaleUpdateParameters()  # noqa: E501
+        # model = phrase-api.models.locale_update_parameters.LocaleUpdateParameters()  # noqa: E501
         if include_optional :
             return LocaleUpdateParameters(
                 branch = 'my-feature-branch', 

@@ -13,16 +13,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import Phrase
-from Phrase.api.bitbucket_sync_api import BitbucketSyncApi  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.api.bitbucket_sync_api import BitbucketSyncApi  # noqa: E501
+from phrase-api.rest import ApiException
 
 
 class TestBitbucketSyncApi(unittest.TestCase):
     """BitbucketSyncApi unit test stubs"""
 
     def setUp(self):
-        self.api = Phrase.api.bitbucket_sync_api.BitbucketSyncApi()  # noqa: E501
+        self.api = phrase-api.api.bitbucket_sync_api.BitbucketSyncApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.gitlab_sync_import_parameters import GitlabSyncImportParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.gitlab_sync_import_parameters import GitlabSyncImportParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestGitlabSyncImportParameters(unittest.TestCase):
     """GitlabSyncImportParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestGitlabSyncImportParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.gitlab_sync_import_parameters.GitlabSyncImportParameters()  # noqa: E501
+        # model = phrase-api.models.gitlab_sync_import_parameters.GitlabSyncImportParameters()  # noqa: E501
         if include_optional :
             return GitlabSyncImportParameters(
                 account_id = 'abcd1234'

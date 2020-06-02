@@ -1,4 +1,4 @@
-# Phrase.GlossaryTermsApi
+# phrase-api.GlossaryTermsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -24,14 +24,14 @@ Create a new glossary term.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -41,12 +41,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
-glossary_term_create_parameters = Phrase.GlossaryTermCreateParameters() # GlossaryTermCreateParameters | 
+glossary_term_create_parameters = phrase-api.GlossaryTermCreateParameters() # GlossaryTermCreateParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -60,14 +60,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -77,12 +77,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
-glossary_term_create_parameters = Phrase.GlossaryTermCreateParameters() # GlossaryTermCreateParameters | 
+glossary_term_create_parameters = phrase-api.GlossaryTermCreateParameters() # GlossaryTermCreateParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -137,14 +137,14 @@ Delete an existing glossary term.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -154,9 +154,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 id = 'id_example' # str | ID
@@ -173,14 +173,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -190,9 +190,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 id = 'id_example' # str | ID
@@ -250,14 +250,14 @@ Get details on a single glossary term.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -267,9 +267,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 id = 'id_example' # str | ID
@@ -287,14 +287,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -304,9 +304,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 id = 'id_example' # str | ID
@@ -365,14 +365,14 @@ Update an existing glossary term.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -382,13 +382,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 id = 'id_example' # str | ID
-glossary_term_update_parameters = Phrase.GlossaryTermUpdateParameters() # GlossaryTermUpdateParameters | 
+glossary_term_update_parameters = phrase-api.GlossaryTermUpdateParameters() # GlossaryTermUpdateParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -403,14 +403,14 @@ x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication 
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -420,13 +420,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 id = 'id_example' # str | ID
-glossary_term_update_parameters = Phrase.GlossaryTermUpdateParameters() # GlossaryTermUpdateParameters | 
+glossary_term_update_parameters = phrase-api.GlossaryTermUpdateParameters() # GlossaryTermUpdateParameters | 
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -483,14 +483,14 @@ List all glossary terms the current user has access to.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -500,9 +500,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -521,14 +521,14 @@ per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by d
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -538,9 +538,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.GlossaryTermsApi(api_client)
+    api_instance = phrase-api.GlossaryTermsApi(api_client)
     account_id = 'account_id_example' # str | Account ID
 glossary_id = 'glossary_id_example' # str | Glossary ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)

@@ -1,4 +1,4 @@
-# Phrase.UploadsApi
+# phrase-api.UploadsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -22,14 +22,14 @@ Upload a new language file. Creates necessary resources in your project.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -39,9 +39,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UploadsApi(api_client)
+    api_instance = phrase-api.UploadsApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 branch = 'branch_example' # str | specify the branch to use (optional)
@@ -69,14 +69,14 @@ mark_reviewed = True # bool | Indicated whether the imported translations should
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -86,9 +86,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UploadsApi(api_client)
+    api_instance = phrase-api.UploadsApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 branch = 'branch_example' # str | specify the branch to use (optional)
@@ -168,14 +168,14 @@ View details and summary for a single upload.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -185,9 +185,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UploadsApi(api_client)
+    api_instance = phrase-api.UploadsApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -205,14 +205,14 @@ branch = 'my-feature-branch' # str | specify the branch to use (optional)
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -222,9 +222,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UploadsApi(api_client)
+    api_instance = phrase-api.UploadsApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
@@ -283,14 +283,14 @@ List all uploads for the given project.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -300,9 +300,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UploadsApi(api_client)
+    api_instance = phrase-api.UploadsApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 page = 1 # int | Page number (optional)
@@ -321,14 +321,14 @@ branch = 'my-feature-branch' # str | specify the branch to use (optional)
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -338,9 +338,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UploadsApi(api_client)
+    api_instance = phrase-api.UploadsApi(api_client)
     project_id = 'project_id_example' # str | Project ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 page = 1 # int | Page number (optional)

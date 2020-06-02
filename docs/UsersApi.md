@@ -1,4 +1,4 @@
-# Phrase.UsersApi
+# phrase-api.UsersApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -20,14 +20,14 @@ Show details for current User.
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -37,9 +37,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UsersApi(api_client)
+    api_instance = phrase-api.UsersApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:
@@ -54,14 +54,14 @@ with Phrase.ApiClient(configuration) as api_client:
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -71,9 +71,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.phrase.com/v2"
 
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.UsersApi(api_client)
+    api_instance = phrase-api.UsersApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 
     try:

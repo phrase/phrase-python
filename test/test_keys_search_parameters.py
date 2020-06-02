@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.keys_search_parameters import KeysSearchParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.keys_search_parameters import KeysSearchParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestKeysSearchParameters(unittest.TestCase):
     """KeysSearchParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestKeysSearchParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.keys_search_parameters.KeysSearchParameters()  # noqa: E501
+        # model = phrase-api.models.keys_search_parameters.KeysSearchParameters()  # noqa: E501
         if include_optional :
             return KeysSearchParameters(
                 branch = 'my-feature-branch', 

@@ -1,4 +1,4 @@
-# Phrase
+# phrase-api
 Phrase is a translation management platform for software projects. You can collaborate on language file translation with your team or order translations through our platform. The API allows you to import locale files, download locale files, tag keys or interact in other ways with the localization data stored in Phrase for your account.
 
 ## API Endpoint
@@ -391,7 +391,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import Phrase
+import phrase-api
 ```
 
 ### Setuptools
@@ -405,7 +405,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import Phrase
+import phrase-api
 ```
 
 ## Getting Started
@@ -415,15 +415,15 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import Phrase
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.rest import ApiException
 from pprint import pprint
 
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure HTTP basic authorization: Basic
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-configuration = Phrase.Configuration()
+configuration = phrase-api.Configuration()
 # Configure API key authorization: Token
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -435,9 +435,9 @@ configuration.host = "https://api.phrase.com/v2"
 # Defining host is optional and default to https://api.phrase.com/v2
 configuration.host = "https://api.phrase.com/v2"
 # Enter a context with an instance of the API client
-with Phrase.ApiClient(configuration) as api_client:
+with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = Phrase.AccountsApi(api_client)
+    api_instance = phrase-api.AccountsApi(api_client)
     id = 'id_example' # str | ID
 x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
 

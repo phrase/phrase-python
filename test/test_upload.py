@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.upload import Upload  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.upload import Upload  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestUpload(unittest.TestCase):
     """Upload unit test stubs"""
@@ -32,7 +32,7 @@ class TestUpload(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.upload.Upload()  # noqa: E501
+        # model = phrase-api.models.upload.Upload()  # noqa: E501
         if include_optional :
             return Upload(
                 id = '0', 
@@ -40,7 +40,7 @@ class TestUpload(unittest.TestCase):
                 format = '0', 
                 state = '0', 
                 tag = '0', 
-                summary = Phrase.models.upload_summary.upload_summary(
+                summary = phrase-api.models.upload_summary.upload_summary(
                     locales_created = 56, 
                     translation_keys_created = 56, 
                     translation_keys_updated = 56, 

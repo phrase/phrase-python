@@ -13,16 +13,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import Phrase
-from Phrase.api.job_locales_api import JobLocalesApi  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.api.job_locales_api import JobLocalesApi  # noqa: E501
+from phrase-api.rest import ApiException
 
 
 class TestJobLocalesApi(unittest.TestCase):
     """JobLocalesApi unit test stubs"""
 
     def setUp(self):
-        self.api = Phrase.api.job_locales_api.JobLocalesApi()  # noqa: E501
+        self.api = phrase-api.api.job_locales_api.JobLocalesApi()  # noqa: E501
 
     def tearDown(self):
         pass

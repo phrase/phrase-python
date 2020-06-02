@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.translations_unverify_parameters import TranslationsUnverifyParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.translations_unverify_parameters import TranslationsUnverifyParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestTranslationsUnverifyParameters(unittest.TestCase):
     """TranslationsUnverifyParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestTranslationsUnverifyParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.translations_unverify_parameters.TranslationsUnverifyParameters()  # noqa: E501
+        # model = phrase-api.models.translations_unverify_parameters.TranslationsUnverifyParameters()  # noqa: E501
         if include_optional :
             return TranslationsUnverifyParameters(
                 branch = 'my-feature-branch', 

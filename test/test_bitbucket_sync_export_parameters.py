@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.bitbucket_sync_export_parameters import BitbucketSyncExportParameters  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.bitbucket_sync_export_parameters import BitbucketSyncExportParameters  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestBitbucketSyncExportParameters(unittest.TestCase):
     """BitbucketSyncExportParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestBitbucketSyncExportParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.bitbucket_sync_export_parameters.BitbucketSyncExportParameters()  # noqa: E501
+        # model = phrase-api.models.bitbucket_sync_export_parameters.BitbucketSyncExportParameters()  # noqa: E501
         if include_optional :
             return BitbucketSyncExportParameters(
                 account_id = 'abcd1234'

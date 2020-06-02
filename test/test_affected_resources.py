@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import Phrase
-from Phrase.models.affected_resources import AffectedResources  # noqa: E501
-from Phrase.rest import ApiException
+import phrase-api
+from phrase-api.models.affected_resources import AffectedResources  # noqa: E501
+from phrase-api.rest import ApiException
 
 class TestAffectedResources(unittest.TestCase):
     """AffectedResources unit test stubs"""
@@ -32,7 +32,7 @@ class TestAffectedResources(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = Phrase.models.affected_resources.AffectedResources()  # noqa: E501
+        # model = phrase-api.models.affected_resources.AffectedResources()  # noqa: E501
         if include_optional :
             return AffectedResources(
                 records_affected = 56

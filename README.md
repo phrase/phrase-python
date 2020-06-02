@@ -382,12 +382,23 @@ Python 2.7 and 3.4+
 ## Installation & Usage
 ### pip install
 
+```sh
+pip install phrase-api
+```
+
+Then import the package:
+```python
+import phrase-api
+```
+
+### pip install from Github repository
+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/phrase/phrase-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/phrase/phrase-python.git`)
 
 Then import the package:
 ```python

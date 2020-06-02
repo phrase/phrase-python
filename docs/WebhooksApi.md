@@ -28,26 +28,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-webhook_create_parameters = phrase-api.WebhookCreateParameters() # WebhookCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    webhook_create_parameters = phrase-api.WebhookCreateParameters() # WebhookCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a webhook
@@ -63,26 +55,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-webhook_create_parameters = phrase-api.WebhookCreateParameters() # WebhookCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    webhook_create_parameters = phrase-api.WebhookCreateParameters() # WebhookCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a webhook
@@ -138,26 +122,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Delete a webhook
@@ -173,26 +149,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Delete a webhook
@@ -248,26 +216,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Get a single webhook
@@ -284,26 +244,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Get a single webhook
@@ -360,26 +312,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Test a webhook
@@ -395,26 +339,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Test a webhook
@@ -470,27 +406,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-webhook_update_parameters = phrase-api.WebhookUpdateParameters() # WebhookUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    webhook_update_parameters = phrase-api.WebhookUpdateParameters() # WebhookUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a webhook
@@ -507,27 +435,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-webhook_update_parameters = phrase-api.WebhookUpdateParameters() # WebhookUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    webhook_update_parameters = phrase-api.WebhookUpdateParameters() # WebhookUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a webhook
@@ -585,27 +505,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
 
     try:
         # List webhooks
@@ -622,27 +534,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
 
     try:
         # List webhooks

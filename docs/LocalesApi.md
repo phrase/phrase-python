@@ -28,26 +28,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-locale_create_parameters = phrase-api.LocaleCreateParameters() # LocaleCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    locale_create_parameters = phrase-api.LocaleCreateParameters() # LocaleCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a locale
@@ -63,26 +55,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-locale_create_parameters = phrase-api.LocaleCreateParameters() # LocaleCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    locale_create_parameters = phrase-api.LocaleCreateParameters() # LocaleCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a locale
@@ -138,27 +122,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a locale
@@ -174,27 +150,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a locale
@@ -251,40 +219,32 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-file_format = 'yml' # str | File format name. See the format guide for all supported file formats. (optional)
-tags = 'feature1,feature2' # str | Limit results to keys tagged with a list of comma separated tag names. (optional)
-tag = 'feature' # str | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead (optional)
-include_empty_translations = True # bool | Indicates whether keys without translations should be included in the output as well. (optional)
-include_translated_keys = True # bool | Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys. (optional)
-keep_notranslate_tags = True # bool | Indicates whether [NOTRANSLATE] tags should be kept. (optional)
-convert_emoji = True # bool | This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively. (optional)
-format_options = {'key': 'format_options_example'} # dict(str, str) | Additional formatting and render options. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code> (optional)
-encoding = 'encoding_example' # str | Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\". (optional)
-skip_unverified_translations = True # bool | Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>. (optional)
-include_unverified_translations = True # bool | if set to false unverified translations are excluded (optional)
-use_last_reviewed_version = True # bool | If set to true the last reviewed version of a translation is used. This is only available if the review workflow (currently in beta) is enabled for the project. (optional)
-fallback_locale_id = 'fallback_locale_id_example' # str | If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>. (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+    file_format = 'yml' # str | File format name. See the format guide for all supported file formats.
+    tags = 'feature1,feature2' # str | Limit results to keys tagged with a list of comma separated tag names.
+    tag = 'feature' # str | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
+    include_empty_translations = True # bool | Indicates whether keys without translations should be included in the output as well.
+    include_translated_keys = True # bool | Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
+    keep_notranslate_tags = True # bool | Indicates whether [NOTRANSLATE] tags should be kept.
+    convert_emoji = True # bool | This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
+    format_options = {'key': 'format_options_example'} # dict(str, str) | Additional formatting and render options. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>
+    encoding = 'encoding_example' # str | Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\".
+    skip_unverified_translations = True # bool | Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>.
+    include_unverified_translations = True # bool | if set to false unverified translations are excluded
+    use_last_reviewed_version = True # bool | If set to true the last reviewed version of a translation is used. This is only available if the review workflow (currently in beta) is enabled for the project.
+    fallback_locale_id = 'fallback_locale_id_example' # str | If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.
 
     try:
         # Download a locale
@@ -300,40 +260,32 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-file_format = 'yml' # str | File format name. See the format guide for all supported file formats. (optional)
-tags = 'feature1,feature2' # str | Limit results to keys tagged with a list of comma separated tag names. (optional)
-tag = 'feature' # str | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead (optional)
-include_empty_translations = True # bool | Indicates whether keys without translations should be included in the output as well. (optional)
-include_translated_keys = True # bool | Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys. (optional)
-keep_notranslate_tags = True # bool | Indicates whether [NOTRANSLATE] tags should be kept. (optional)
-convert_emoji = True # bool | This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively. (optional)
-format_options = {'key': 'format_options_example'} # dict(str, str) | Additional formatting and render options. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code> (optional)
-encoding = 'encoding_example' # str | Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\". (optional)
-skip_unverified_translations = True # bool | Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>. (optional)
-include_unverified_translations = True # bool | if set to false unverified translations are excluded (optional)
-use_last_reviewed_version = True # bool | If set to true the last reviewed version of a translation is used. This is only available if the review workflow (currently in beta) is enabled for the project. (optional)
-fallback_locale_id = 'fallback_locale_id_example' # str | If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>. (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+    file_format = 'yml' # str | File format name. See the format guide for all supported file formats.
+    tags = 'feature1,feature2' # str | Limit results to keys tagged with a list of comma separated tag names.
+    tag = 'feature' # str | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
+    include_empty_translations = True # bool | Indicates whether keys without translations should be included in the output as well.
+    include_translated_keys = True # bool | Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
+    keep_notranslate_tags = True # bool | Indicates whether [NOTRANSLATE] tags should be kept.
+    convert_emoji = True # bool | This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
+    format_options = {'key': 'format_options_example'} # dict(str, str) | Additional formatting and render options. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>
+    encoding = 'encoding_example' # str | Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\".
+    skip_unverified_translations = True # bool | Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>.
+    include_unverified_translations = True # bool | if set to false unverified translations are excluded
+    use_last_reviewed_version = True # bool | If set to true the last reviewed version of a translation is used. This is only available if the review workflow (currently in beta) is enabled for the project.
+    fallback_locale_id = 'fallback_locale_id_example' # str | If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.
 
     try:
         # Download a locale
@@ -403,27 +355,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single locale
@@ -440,27 +384,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single locale
@@ -518,27 +454,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-locale_update_parameters = phrase-api.LocaleUpdateParameters() # LocaleUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    locale_update_parameters = phrase-api.LocaleUpdateParameters() # LocaleUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a locale
@@ -555,27 +483,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-locale_update_parameters = phrase-api.LocaleUpdateParameters() # LocaleUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    locale_update_parameters = phrase-api.LocaleUpdateParameters() # LocaleUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a locale
@@ -633,28 +553,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # List locales
@@ -671,28 +583,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.LocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # List locales

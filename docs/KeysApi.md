@@ -31,26 +31,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-key_create_parameters = phrase-api.KeyCreateParameters() # KeyCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    key_create_parameters = phrase-api.KeyCreateParameters() # KeyCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a key
@@ -66,26 +58,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-key_create_parameters = phrase-api.KeyCreateParameters() # KeyCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    key_create_parameters = phrase-api.KeyCreateParameters() # KeyCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a key
@@ -141,27 +125,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a key
@@ -177,27 +153,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a key
@@ -254,27 +222,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single key
@@ -291,27 +251,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single key
@@ -369,27 +321,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-key_update_parameters = phrase-api.KeyUpdateParameters() # KeyUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    key_update_parameters = phrase-api.KeyUpdateParameters() # KeyUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a key
@@ -406,27 +350,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-key_update_parameters = phrase-api.KeyUpdateParameters() # KeyUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    key_update_parameters = phrase-api.KeyUpdateParameters() # KeyUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a key
@@ -484,28 +420,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-q = 'mykey* translated:true' # str | q_description_placeholder (optional)
-locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys. (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+    q = 'mykey* translated:true' # str | q_description_placeholder
+    locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
 
     try:
         # Delete collection of keys
@@ -522,28 +450,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-q = 'mykey* translated:true' # str | q_description_placeholder (optional)
-locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys. (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+    q = 'mykey* translated:true' # str | q_description_placeholder
+    locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
 
     try:
         # Delete collection of keys
@@ -602,32 +522,24 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-sort = 'updated_at' # str | Sort by field. Can be one of: name, created_at, updated_at. (optional)
-order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
-q = 'mykey* translated:true' # str | q_description_placeholder (optional)
-locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys. (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
+    sort = 'updated_at' # str | Sort by field. Can be one of: name, created_at, updated_at.
+    order = 'desc' # str | Order direction. Can be one of: asc, desc.
+    q = 'mykey* translated:true' # str | q_description_placeholder
+    locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
 
     try:
         # List keys
@@ -644,32 +556,24 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-sort = 'updated_at' # str | Sort by field. Can be one of: name, created_at, updated_at. (optional)
-order = 'desc' # str | Order direction. Can be one of: asc, desc. (optional)
-q = 'mykey* translated:true' # str | q_description_placeholder (optional)
-locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys. (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
+    sort = 'updated_at' # str | Sort by field. Can be one of: name, created_at, updated_at.
+    order = 'desc' # str | Order direction. Can be one of: asc, desc.
+    q = 'mykey* translated:true' # str | q_description_placeholder
+    locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
 
     try:
         # List keys
@@ -732,28 +636,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-keys_search_parameters = phrase-api.KeysSearchParameters() # KeysSearchParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    keys_search_parameters = phrase-api.KeysSearchParameters() # KeysSearchParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
 
     try:
         # Search keys
@@ -770,28 +666,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-keys_search_parameters = phrase-api.KeysSearchParameters() # KeysSearchParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    keys_search_parameters = phrase-api.KeysSearchParameters() # KeysSearchParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
 
     try:
         # Search keys
@@ -850,26 +738,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-keys_tag_parameters = phrase-api.KeysTagParameters() # KeysTagParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    keys_tag_parameters = phrase-api.KeysTagParameters() # KeysTagParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Add tags to collection of keys
@@ -886,26 +766,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-keys_tag_parameters = phrase-api.KeysTagParameters() # KeysTagParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    keys_tag_parameters = phrase-api.KeysTagParameters() # KeysTagParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Add tags to collection of keys
@@ -962,26 +834,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-keys_untag_parameters = phrase-api.KeysUntagParameters() # KeysUntagParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    keys_untag_parameters = phrase-api.KeysUntagParameters() # KeysUntagParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Remove tags from collection of keys
@@ -998,26 +862,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.KeysApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-keys_untag_parameters = phrase-api.KeysUntagParameters() # KeysUntagParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    keys_untag_parameters = phrase-api.KeysUntagParameters() # KeysUntagParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Remove tags from collection of keys

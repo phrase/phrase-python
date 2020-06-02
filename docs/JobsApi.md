@@ -32,27 +32,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_complete_parameters = phrase-api.JobCompleteParameters() # JobCompleteParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_complete_parameters = phrase-api.JobCompleteParameters() # JobCompleteParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Complete a job
@@ -69,27 +61,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_complete_parameters = phrase-api.JobCompleteParameters() # JobCompleteParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_complete_parameters = phrase-api.JobCompleteParameters() # JobCompleteParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Complete a job
@@ -147,26 +131,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-job_create_parameters = phrase-api.JobCreateParameters() # JobCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    job_create_parameters = phrase-api.JobCreateParameters() # JobCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a job
@@ -182,26 +158,18 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-job_create_parameters = phrase-api.JobCreateParameters() # JobCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    job_create_parameters = phrase-api.JobCreateParameters() # JobCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Create a job
@@ -257,27 +225,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a job
@@ -293,27 +253,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a job
@@ -370,27 +322,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_keys_create_parameters = phrase-api.JobKeysCreateParameters() # JobKeysCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_keys_create_parameters = phrase-api.JobKeysCreateParameters() # JobKeysCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Add keys to job
@@ -407,27 +351,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_keys_create_parameters = phrase-api.JobKeysCreateParameters() # JobKeysCreateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_keys_create_parameters = phrase-api.JobKeysCreateParameters() # JobKeysCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Add keys to job
@@ -485,28 +421,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # list[str] | ids of keys that should added to the job (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # list[str] | ids of keys that should added to the job
 
     try:
         # Remove keys from job
@@ -522,28 +450,20 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # list[str] | ids of keys that should added to the job (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # list[str] | ids of keys that should added to the job
 
     try:
         # Remove keys from job
@@ -601,27 +521,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_reopen_parameters = phrase-api.JobReopenParameters() # JobReopenParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_reopen_parameters = phrase-api.JobReopenParameters() # JobReopenParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Reopen a job
@@ -638,27 +550,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_reopen_parameters = phrase-api.JobReopenParameters() # JobReopenParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_reopen_parameters = phrase-api.JobReopenParameters() # JobReopenParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Reopen a job
@@ -716,27 +620,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single job
@@ -753,27 +649,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single job
@@ -831,27 +719,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_start_parameters = phrase-api.JobStartParameters() # JobStartParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_start_parameters = phrase-api.JobStartParameters() # JobStartParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Start a job
@@ -868,27 +748,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_start_parameters = phrase-api.JobStartParameters() # JobStartParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_start_parameters = phrase-api.JobStartParameters() # JobStartParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Start a job
@@ -946,27 +818,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_update_parameters = phrase-api.JobUpdateParameters() # JobUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_update_parameters = phrase-api.JobUpdateParameters() # JobUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a job
@@ -983,27 +847,19 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-id = 'id_example' # str | ID
-job_update_parameters = phrase-api.JobUpdateParameters() # JobUpdateParameters | 
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    job_update_parameters = phrase-api.JobUpdateParameters() # JobUpdateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a job
@@ -1061,31 +917,23 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job (optional)
-assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job (optional)
-state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code> (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
+    owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
+    assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
+    state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
 
     try:
         # List jobs
@@ -1102,31 +950,23 @@ import time
 import phrase-api
 from phrase-api.rest import ApiException
 from pprint import pprint
-configuration = phrase-api.Configuration()
-# Configure HTTP basic authorization: Basic
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-configuration = phrase-api.Configuration()
-# Configure API key authorization: Token
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.phrase.com/v2
-configuration.host = "https://api.phrase.com/v2"
+configuration = phrase-api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
 with phrase-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID
-x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional) (optional)
-page = 1 # int | Page number (optional)
-per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default (optional)
-branch = 'my-feature-branch' # str | specify the branch to use (optional)
-owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job (optional)
-assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job (optional)
-state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code> (optional)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
+    owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
+    assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
+    state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
 
     try:
         # List jobs

@@ -28,7 +28,7 @@ setup(
     description="Phrase API Reference",
     author="Phrase Support",
     author_email="support@phrase.com",
-    url="",
+    url="https://github.com/phrase/phrase-python",
     keywords=["OpenAPI", "OpenAPI-Generator", "Phrase API Reference"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),

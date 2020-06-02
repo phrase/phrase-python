@@ -19,7 +19,6 @@ Create a new tag.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -46,32 +45,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling TagsApi->tag_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.TagsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    tag_create_parameters = phrase-api.TagCreateParameters() # TagCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a tag
-        api_instance.tag_create(project_id, tag_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling TagsApi->tag_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -113,7 +86,6 @@ Delete an existing tag.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -141,33 +113,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling TagsApi->tag_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.TagsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Delete a tag
-        api_instance.tag_delete(project_id, name, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling TagsApi->tag_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -210,7 +155,6 @@ Get details and progress information on a single tag for a given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -239,34 +183,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling TagsApi->tag_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.TagsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Get a single tag
-        api_response = api_instance.tag_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling TagsApi->tag_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -309,7 +225,6 @@ List all tags for the given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -339,35 +254,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling TagsApi->tags_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.TagsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # List tags
-        api_response = api_instance.tags_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling TagsApi->tags_list: %s\n" % e)
-```
 
 ### Parameters
 

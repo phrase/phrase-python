@@ -17,7 +17,6 @@ Get details on a single account.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -44,32 +43,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling AccountsApi->account_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.AccountsApi(api_client)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Get a single account
-        api_response = api_instance.account_show(id, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling AccountsApi->account_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -110,7 +83,6 @@ List all accounts the current user has access to.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -138,33 +110,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling AccountsApi->accounts_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.AccountsApi(api_client)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-
-    try:
-        # List accounts
-        api_response = api_instance.accounts_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling AccountsApi->accounts_list: %s\n" % e)
-```
 
 ### Parameters
 

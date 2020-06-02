@@ -22,7 +22,6 @@ Compare branch with main branch.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -49,32 +48,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branch_compare: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Compare branches
-        api_instance.branch_compare(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branch_compare: %s\n" % e)
-```
 
 ### Parameters
 
@@ -116,7 +89,6 @@ Create a new branch.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -143,32 +115,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branch_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    branch_create_parameters = phrase-api.BranchCreateParameters() # BranchCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a branch
-        api_instance.branch_create(project_id, branch_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branch_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -210,7 +156,6 @@ Delete an existing branch.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -237,32 +182,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branch_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Delete a branch
-        api_instance.branch_delete(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branch_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -304,7 +223,6 @@ Merge an existing branch.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -332,33 +250,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branch_merge: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    branch_merge_parameters = phrase-api.BranchMergeParameters() # BranchMergeParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Merge a branch
-        api_instance.branch_merge(project_id, name, branch_merge_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branch_merge: %s\n" % e)
-```
 
 ### Parameters
 
@@ -401,7 +292,6 @@ Get details on a single branch for a given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -429,33 +319,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branch_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Get a single branch
-        api_response = api_instance.branch_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branch_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -497,7 +360,6 @@ Update an existing branch.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -526,34 +388,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branch_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    name = 'name_example' # str | name (required)
-    branch_update_parameters = phrase-api.BranchUpdateParameters() # BranchUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update a branch
-        api_response = api_instance.branch_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branch_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -596,7 +430,6 @@ List all branches the of the current project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -625,34 +458,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BranchesApi->branches_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BranchesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-
-    try:
-        # List branches
-        api_response = api_instance.branches_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling BranchesApi->branches_list: %s\n" % e)
-```
 
 ### Parameters
 

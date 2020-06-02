@@ -23,7 +23,6 @@ Create a new Space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -50,32 +49,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->space_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    space_create_parameters = phrase-api.SpaceCreateParameters() # SpaceCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a Space
-        api_instance.space_create(account_id, space_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->space_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -117,7 +90,6 @@ Delete the specified Space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -144,32 +116,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->space_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Delete Space
-        api_instance.space_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->space_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -211,7 +157,6 @@ Show the specified Space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -239,33 +184,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->space_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Get Space
-        api_response = api_instance.space_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->space_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -307,7 +225,6 @@ Update the specified Space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -336,34 +253,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->space_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    space_update_parameters = phrase-api.SpaceUpdateParameters() # SpaceUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update Space
-        api_response = api_instance.space_update(account_id, id, space_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->space_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -406,7 +295,6 @@ List all Spaces for the given account.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -435,34 +323,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->spaces_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-
-    try:
-        # List Spaces
-        api_response = api_instance.spaces_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->spaces_list: %s\n" % e)
-```
 
 ### Parameters
 
@@ -505,7 +365,6 @@ Adds an existing project to the space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -533,33 +392,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->spaces_projects_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    space_id = 'space_id_example' # str | Space ID (required)
-    spaces_projects_create_parameters = phrase-api.SpacesProjectsCreateParameters() # SpacesProjectsCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Add Project
-        api_instance.spaces_projects_create(account_id, space_id, spaces_projects_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->spaces_projects_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -602,7 +434,6 @@ Removes a specified project from the specified space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -630,33 +461,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->spaces_projects_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    space_id = 'space_id_example' # str | Space ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Remove Project
-        api_instance.spaces_projects_delete(account_id, space_id, id, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->spaces_projects_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -699,7 +503,6 @@ List all projects for the specified Space.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -729,35 +532,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling SpacesApi->spaces_projects_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.SpacesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    space_id = 'space_id_example' # str | Space ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-
-    try:
-        # List Projects
-        api_response = api_instance.spaces_projects_list(account_id, space_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling SpacesApi->spaces_projects_list: %s\n" % e)
-```
 
 ### Parameters
 

@@ -20,7 +20,6 @@ Confirm an existing order and send it to the provider for translation. Same cons
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -49,34 +48,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling OrdersApi->order_confirm: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.OrdersApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    order_confirm_parameters = phrase-api.OrderConfirmParameters() # OrderConfirmParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Confirm an order
-        api_response = api_instance.order_confirm(project_id, id, order_confirm_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling OrdersApi->order_confirm: %s\n" % e)
-```
 
 ### Parameters
 
@@ -119,7 +90,6 @@ Create a new order. Access token scope must include <code>orders.create</code>.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -146,32 +116,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling OrdersApi->order_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.OrdersApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    order_create_parameters = phrase-api.OrderCreateParameters() # OrderCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a new order
-        api_instance.order_create(project_id, order_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling OrdersApi->order_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -213,7 +157,6 @@ Cancel an existing order. Must not yet be confirmed.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -241,33 +184,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling OrdersApi->order_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.OrdersApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Cancel an order
-        api_instance.order_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling OrdersApi->order_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -310,7 +226,6 @@ Get details on a single order.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -339,34 +254,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling OrdersApi->order_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.OrdersApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Get a single order
-        api_response = api_instance.order_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling OrdersApi->order_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -409,7 +296,6 @@ List all orders for the given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -439,35 +325,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling OrdersApi->orders_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.OrdersApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # List orders
-        api_response = api_instance.orders_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling OrdersApi->orders_list: %s\n" % e)
-```
 
 ### Parameters
 

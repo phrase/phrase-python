@@ -25,7 +25,6 @@ Mark a job as completed.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -54,34 +53,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_complete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    job_complete_parameters = phrase-api.JobCompleteParameters() # JobCompleteParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Complete a job
-        api_response = api_instance.job_complete(project_id, id, job_complete_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_complete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -124,7 +95,6 @@ Create a new job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -151,32 +121,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_create_parameters = phrase-api.JobCreateParameters() # JobCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a job
-        api_instance.job_create(project_id, job_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -218,7 +162,6 @@ Delete an existing job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -246,33 +189,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Delete a job
-        api_instance.job_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -315,7 +231,6 @@ Add multiple keys to a existing job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -344,34 +259,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_keys_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    job_keys_create_parameters = phrase-api.JobKeysCreateParameters() # JobKeysCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Add keys to job
-        api_response = api_instance.job_keys_create(project_id, id, job_keys_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_keys_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -414,7 +301,6 @@ Remove multiple keys from existing job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -443,34 +329,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_keys_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # list[str] | ids of keys that should added to the job
-
-    try:
-        # Remove keys from job
-        api_instance.job_keys_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, translation_key_ids=translation_key_ids)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_keys_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -514,7 +372,6 @@ Mark a job as uncompleted.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -543,34 +400,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_reopen: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    job_reopen_parameters = phrase-api.JobReopenParameters() # JobReopenParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Reopen a job
-        api_response = api_instance.job_reopen(project_id, id, job_reopen_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_reopen: %s\n" % e)
-```
 
 ### Parameters
 
@@ -613,7 +442,6 @@ Get details on a single job for a given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -642,34 +470,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Get a single job
-        api_response = api_instance.job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -712,7 +512,6 @@ Starts an existing job in state draft.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -741,34 +540,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_start: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    job_start_parameters = phrase-api.JobStartParameters() # JobStartParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Start a job
-        api_response = api_instance.job_start(project_id, id, job_start_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_start: %s\n" % e)
-```
 
 ### Parameters
 
@@ -811,7 +582,6 @@ Update an existing job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -840,34 +610,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->job_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    job_update_parameters = phrase-api.JobUpdateParameters() # JobUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update a job
-        api_response = api_instance.job_update(project_id, id, job_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->job_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -910,7 +652,6 @@ List all jobs for the given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -943,38 +684,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobsApi->jobs_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
-    owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
-    assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
-    state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
-
-    try:
-        # List jobs
-        api_response = api_instance.jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobsApi->jobs_list: %s\n" % e)
-```
 
 ### Parameters
 

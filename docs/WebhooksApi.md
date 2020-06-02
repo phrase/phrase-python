@@ -21,7 +21,6 @@ Create a new webhook.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -48,32 +47,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling WebhooksApi->webhook_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    webhook_create_parameters = phrase-api.WebhookCreateParameters() # WebhookCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a webhook
-        api_instance.webhook_create(project_id, webhook_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling WebhooksApi->webhook_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -115,7 +88,6 @@ Delete an existing webhook.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -142,32 +114,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling WebhooksApi->webhook_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Delete a webhook
-        api_instance.webhook_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling WebhooksApi->webhook_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -209,7 +155,6 @@ Get details on a single webhook.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -237,33 +182,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling WebhooksApi->webhook_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Get a single webhook
-        api_response = api_instance.webhook_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling WebhooksApi->webhook_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -305,7 +223,6 @@ Perform a test request for a webhook.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -332,32 +249,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling WebhooksApi->webhook_test: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Test a webhook
-        api_instance.webhook_test(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling WebhooksApi->webhook_test: %s\n" % e)
-```
 
 ### Parameters
 
@@ -399,7 +290,6 @@ Update an existing webhook.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -428,34 +318,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling WebhooksApi->webhook_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    webhook_update_parameters = phrase-api.WebhookUpdateParameters() # WebhookUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update a webhook
-        api_response = api_instance.webhook_update(project_id, id, webhook_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling WebhooksApi->webhook_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -498,7 +360,6 @@ List all webhooks for the given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -527,34 +388,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling WebhooksApi->webhooks_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.WebhooksApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-
-    try:
-        # List webhooks
-        api_response = api_instance.webhooks_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling WebhooksApi->webhooks_list: %s\n" % e)
-```
 
 ### Parameters
 

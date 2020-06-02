@@ -18,7 +18,6 @@ Upload a new language file. Creates necessary resources in your project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -57,44 +56,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling UploadsApi->upload_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.UploadsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'branch_example' # str | specify the branch to use
-    file = '/path/to/file' # file | File to be imported
-    file_format = 'file_format_example' # str | File format. Auto-detected when possible and not specified.
-    locale_id = 'locale_id_example' # str | Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
-    tags = 'tags_example' # str | List of tags separated by comma to be associated with the new keys contained in the upload.
-    update_translations = True # bool | Indicates whether existing translations should be updated with the file content.
-    update_descriptions = True # bool | Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
-    convert_emoji = True # bool | This option is obsolete. Providing the option will cause a bad request error.
-    skip_upload_tags = True # bool | Indicates whether the upload should not create upload tags.
-    skip_unverification = True # bool | Indicates whether the upload should unverify updated translations.
-    file_encoding = 'file_encoding_example' # str | Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
-    autotranslate = True # bool | If set, translations for the uploaded language will be fetched automatically.
-    mark_reviewed = True # bool | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
-
-    try:
-        # Upload a new file
-        api_instance.upload_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file=file, file_format=file_format, locale_id=locale_id, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, autotranslate=autotranslate, mark_reviewed=mark_reviewed)
-    except ApiException as e:
-        print("Exception when calling UploadsApi->upload_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -148,7 +109,6 @@ View details and summary for a single upload.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -177,34 +137,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling UploadsApi->upload_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.UploadsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # View upload details
-        api_response = api_instance.upload_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling UploadsApi->upload_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -247,7 +179,6 @@ List all uploads for the given project.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -277,35 +208,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling UploadsApi->uploads_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.UploadsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # List uploads
-        api_response = api_instance.uploads_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling UploadsApi->uploads_list: %s\n" % e)
-```
 
 ### Parameters
 

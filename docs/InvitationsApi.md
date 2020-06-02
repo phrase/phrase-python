@@ -21,7 +21,6 @@ Invite a person to an account. Developers and translators need <code>project_ids
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -48,32 +47,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling InvitationsApi->invitation_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.InvitationsApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    invitation_create_parameters = phrase-api.InvitationCreateParameters() # InvitationCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a new invitation
-        api_instance.invitation_create(account_id, invitation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling InvitationsApi->invitation_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -115,7 +88,6 @@ Delete an existing invitation (must not be accepted yet). Access token scope mus
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -142,32 +114,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling InvitationsApi->invitation_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.InvitationsApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Delete an invitation
-        api_instance.invitation_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling InvitationsApi->invitation_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -209,7 +155,6 @@ Resend the invitation email (must not be accepted yet). Access token scope must 
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -237,33 +182,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling InvitationsApi->invitation_resend: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.InvitationsApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Resend an invitation
-        api_response = api_instance.invitation_resend(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling InvitationsApi->invitation_resend: %s\n" % e)
-```
 
 ### Parameters
 
@@ -305,7 +223,6 @@ Get details on a single invitation. Access token scope must include <code>team.m
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -333,33 +250,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling InvitationsApi->invitation_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.InvitationsApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Get a single invitation
-        api_response = api_instance.invitation_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling InvitationsApi->invitation_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -401,7 +291,6 @@ Update an existing invitation (must not be accepted yet). The <code>email</code>
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -430,34 +319,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling InvitationsApi->invitation_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.InvitationsApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    id = 'id_example' # str | ID (required)
-    invitation_update_parameters = phrase-api.InvitationUpdateParameters() # InvitationUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update an invitation
-        api_response = api_instance.invitation_update(account_id, id, invitation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling InvitationsApi->invitation_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -500,7 +361,6 @@ List invitations for an account. It will also list the accessible resources like
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -529,34 +389,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling InvitationsApi->invitations_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.InvitationsApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-
-    try:
-        # List invitations
-        api_response = api_instance.invitations_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling InvitationsApi->invitations_list: %s\n" % e)
-```
 
 ### Parameters
 

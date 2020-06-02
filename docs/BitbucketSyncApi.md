@@ -18,7 +18,6 @@ Export translations from Phrase to Bitbucket according to the .phraseapp.yml fil
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -46,33 +45,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BitbucketSyncApi->bitbucket_sync_export: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BitbucketSyncApi(api_client)
-    id = 'id_example' # str | ID (required)
-    bitbucket_sync_export_parameters = phrase-api.BitbucketSyncExportParameters() # BitbucketSyncExportParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Export from Phrase to Bitbucket
-        api_response = api_instance.bitbucket_sync_export(id, bitbucket_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling BitbucketSyncApi->bitbucket_sync_export: %s\n" % e)
-```
 
 ### Parameters
 
@@ -114,7 +86,6 @@ Import translations from Bitbucket to Phrase according to the .phraseapp.yml fil
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -141,32 +112,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BitbucketSyncApi->bitbucket_sync_import: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BitbucketSyncApi(api_client)
-    id = 'id_example' # str | ID (required)
-    bitbucket_sync_import_parameters = phrase-api.BitbucketSyncImportParameters() # BitbucketSyncImportParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Import to Phrase from Bitbucket
-        api_instance.bitbucket_sync_import(id, bitbucket_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling BitbucketSyncApi->bitbucket_sync_import: %s\n" % e)
-```
 
 ### Parameters
 
@@ -208,7 +153,6 @@ List all Bitbucket repositories for which synchronisation with Phrase is activat
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -235,32 +179,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling BitbucketSyncApi->bitbucket_syncs_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.BitbucketSyncApi(api_client)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    account_id = 'abcd1234' # str | Account ID to specify the actual account the project should be created in. Required if the requesting user is a member of multiple accounts.
-
-    try:
-        # List Bitbucket syncs
-        api_response = api_instance.bitbucket_syncs_list(x_phrase_app_otp=x_phrase_app_otp, account_id=account_id)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling BitbucketSyncApi->bitbucket_syncs_list: %s\n" % e)
-```
 
 ### Parameters
 

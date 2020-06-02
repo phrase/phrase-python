@@ -22,7 +22,6 @@ Mark a job locale as completed.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -52,35 +51,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locale_complete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    id = 'id_example' # str | ID (required)
-    job_locale_complete_parameters = phrase-api.JobLocaleCompleteParameters() # JobLocaleCompleteParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Complete a job locale
-        api_response = api_instance.job_locale_complete(project_id, job_id, id, job_locale_complete_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locale_complete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -124,7 +94,6 @@ Delete an existing job locale.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -153,34 +122,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locale_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Delete a job locale
-        api_instance.job_locale_delete(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locale_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -224,7 +165,6 @@ Mark a job locale as uncompleted.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -254,35 +194,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locale_reopen: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    id = 'id_example' # str | ID (required)
-    job_locale_reopen_parameters = phrase-api.JobLocaleReopenParameters() # JobLocaleReopenParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Reopen a job locale
-        api_response = api_instance.job_locale_reopen(project_id, job_id, id, job_locale_reopen_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locale_reopen: %s\n" % e)
-```
 
 ### Parameters
 
@@ -326,7 +237,6 @@ Get a single job locale for a given job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -356,35 +266,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locale_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Get a single job locale
-        api_response = api_instance.job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locale_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -428,7 +309,6 @@ Update an existing job locale.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -458,35 +338,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locale_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    id = 'id_example' # str | ID (required)
-    job_locale_update_parameters = phrase-api.JobLocaleUpdateParameters() # JobLocaleUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update a job locale
-        api_response = api_instance.job_locale_update(project_id, job_id, id, job_locale_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locale_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -530,7 +381,6 @@ Create a new job locale.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -558,33 +408,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locales_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    job_locales_create_parameters = phrase-api.JobLocalesCreateParameters() # JobLocalesCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a job locale
-        api_instance.job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locales_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -627,7 +450,6 @@ List all job locales for a given job.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -658,36 +480,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling JobLocalesApi->job_locales_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.JobLocalesApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    job_id = 'job_id_example' # str | Job ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # List job locales
-        api_response = api_instance.job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling JobLocalesApi->job_locales_list: %s\n" % e)
-```
 
 ### Parameters
 

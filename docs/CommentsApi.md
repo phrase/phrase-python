@@ -23,7 +23,6 @@ Create a new comment for a key.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -51,33 +50,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_create: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    comment_create_parameters = phrase-api.CommentCreateParameters() # CommentCreateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Create a comment
-        api_instance.comment_create(project_id, key_id, comment_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_create: %s\n" % e)
-```
 
 ### Parameters
 
@@ -120,7 +92,6 @@ Delete an existing comment.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -149,34 +120,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Delete a comment
-        api_instance.comment_delete(project_id, key_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_delete: %s\n" % e)
-```
 
 ### Parameters
 
@@ -220,7 +163,6 @@ Check if comment was marked as read. Returns 204 if read, 404 if unread.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -249,34 +191,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_mark_check: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Check if comment is read
-        api_instance.comment_mark_check(project_id, key_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_mark_check: %s\n" % e)
-```
 
 ### Parameters
 
@@ -320,7 +234,6 @@ Mark a comment as read.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -349,34 +262,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_mark_read: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    id = 'id_example' # str | ID (required)
-    comment_mark_read_parameters = phrase-api.CommentMarkReadParameters() # CommentMarkReadParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Mark a comment as read
-        api_instance.comment_mark_read(project_id, key_id, id, comment_mark_read_parameters, x_phrase_app_otp=x_phrase_app_otp)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_mark_read: %s\n" % e)
-```
 
 ### Parameters
 
@@ -420,7 +305,6 @@ Mark a comment as unread.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -449,34 +333,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_mark_unread: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Mark a comment as unread
-        api_instance.comment_mark_unread(project_id, key_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_mark_unread: %s\n" % e)
-```
 
 ### Parameters
 
@@ -520,7 +376,6 @@ Get details on a single comment.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -550,35 +405,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_show: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    id = 'id_example' # str | ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # Get a single comment
-        api_response = api_instance.comment_show(project_id, key_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_show: %s\n" % e)
-```
 
 ### Parameters
 
@@ -622,7 +448,6 @@ Update an existing comment.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -652,35 +477,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comment_update: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    id = 'id_example' # str | ID (required)
-    comment_update_parameters = phrase-api.CommentUpdateParameters() # CommentUpdateParameters |  (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-
-    try:
-        # Update a comment
-        api_response = api_instance.comment_update(project_id, key_id, id, comment_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comment_update: %s\n" % e)
-```
 
 ### Parameters
 
@@ -724,7 +520,6 @@ List all comments for a key.
 
 ### Example
 
-* Basic Authentication (Basic):
 ```python
 from __future__ import print_function
 import time
@@ -755,36 +550,6 @@ with phrase-api.ApiClient(configuration) as api_client:
         print("Exception when calling CommentsApi->comments_list: %s\n" % e)
 ```
 
-* Api Key Authentication (Token):
-```python
-from __future__ import print_function
-import time
-import phrase-api
-from phrase-api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase-api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
-    project_id = 'project_id_example' # str | Project ID (required)
-    key_id = 'key_id_example' # str | Translation Key ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
-
-    try:
-        # List comments
-        api_response = api_instance.comments_list(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CommentsApi->comments_list: %s\n" % e)
-```
 
 ### Parameters
 

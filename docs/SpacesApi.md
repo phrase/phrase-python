@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **space_create**
-> space_create(account_id, space_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> Space space_create(account_id, space_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a Space
 
@@ -44,7 +44,8 @@ with phrase-api.ApiClient(configuration) as api_client:
 
     try:
         # Create a Space
-        api_instance.space_create(account_id, space_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.space_create(account_id, space_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling SpacesApi->space_create: %s\n" % e)
 ```
@@ -60,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Space**](Space.md)
 
 ### Authorization
 
@@ -69,12 +70,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
@@ -418,7 +419,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

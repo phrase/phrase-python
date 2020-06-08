@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_locales_create**
-> job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> JobLocale job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a job locale
 
@@ -403,7 +403,8 @@ with phrase-api.ApiClient(configuration) as api_client:
 
     try:
         # Create a job locale
-        api_instance.job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobLocalesApi->job_locales_create: %s\n" % e)
 ```
@@ -420,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**JobLocale**](JobLocale.md)
 
 ### Authorization
 
@@ -429,12 +430,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **authorization_create**
-> authorization_create(authorization_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> AuthorizationWithToken authorization_create(authorization_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create an authorization
 
@@ -40,7 +40,8 @@ with phrase-api.ApiClient(configuration) as api_client:
 
     try:
         # Create an authorization
-        api_instance.authorization_create(authorization_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.authorization_create(authorization_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling AuthorizationsApi->authorization_create: %s\n" % e)
 ```
@@ -55,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**AuthorizationWithToken**](AuthorizationWithToken.md)
 
 ### Authorization
 
@@ -64,12 +65,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

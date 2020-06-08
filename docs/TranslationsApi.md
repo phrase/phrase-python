@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 
 # **translation_create**
-> translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> TranslationDetails translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a translation
 
@@ -53,7 +53,8 @@ with phrase-api.ApiClient(configuration) as api_client:
 
     try:
         # Create a translation
-        api_instance.translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.translation_create(project_id, translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling TranslationsApi->translation_create: %s\n" % e)
 ```
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**TranslationDetails**](TranslationDetails.md)
 
 ### Authorization
 
@@ -78,12 +79,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | The resource has been created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

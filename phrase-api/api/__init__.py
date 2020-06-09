@@ -12,7 +12,7 @@ from phrase-api.api.comments_api import CommentsApi
 from phrase-api.api.distributions_api import DistributionsApi
 from phrase-api.api.formats_api import FormatsApi
 from phrase-api.api.git_lab_sync_api import GitLabSyncApi
-from phrase-api.api.glossary_api import GlossaryApi
+from phrase-api.api.glossaries_api import GlossariesApi
 from phrase-api.api.glossary_term_translations_api import GlossaryTermTranslationsApi
 from phrase-api.api.glossary_terms_api import GlossaryTermsApi
 from phrase-api.api.invitations_api import InvitationsApi

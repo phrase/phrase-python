@@ -171,7 +171,7 @@ class UploadCreateParameters(object):
     def file_format(self):
         """Gets the file_format of this UploadCreateParameters.  # noqa: E501
 
-        File format. Auto-detected when possible and not specified.  # noqa: E501
+        File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.  # noqa: E501
 
         :return: The file_format of this UploadCreateParameters.  # noqa: E501
         :rtype: str
@@ -182,7 +182,7 @@ class UploadCreateParameters(object):
     def file_format(self, file_format):
         """Sets the file_format of this UploadCreateParameters.
 
-        File format. Auto-detected when possible and not specified.  # noqa: E501
+        File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.  # noqa: E501
 
         :param file_format: The file_format of this UploadCreateParameters.  # noqa: E501
         :type: str

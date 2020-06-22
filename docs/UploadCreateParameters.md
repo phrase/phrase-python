@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **branch** | **str** | specify the branch to use | [optional] 
 **file** | **file** | File to be imported | [optional] 
-**file_format** | **str** | File format. Auto-detected when possible and not specified. | [optional] 
+**file_format** | **str** | File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. | [optional] 
 **locale_id** | **str** | Locale of the file&#39;s content. Can be the name or public id of the locale. Preferred is the public id. | [optional] 
 **tags** | **str** | List of tags separated by comma to be associated with the new keys contained in the upload. | [optional] 
 **update_translations** | **bool** | Indicates whether existing translations should be updated with the file content. | [optional] 

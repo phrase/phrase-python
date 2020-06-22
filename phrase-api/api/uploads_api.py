@@ -49,7 +49,7 @@ class UploadsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
         :param file file: File to be imported
-        :param str file_format: File format. Auto-detected when possible and not specified.
+        :param str file_format: File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.
         :param str locale_id: Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
@@ -90,7 +90,7 @@ class UploadsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
         :param file file: File to be imported
-        :param str file_format: File format. Auto-detected when possible and not specified.
+        :param str file_format: File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.
         :param str locale_id: Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.

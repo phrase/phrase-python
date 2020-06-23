@@ -43,8 +43,8 @@ class UploadCreateParameters(object):
         'skip_upload_tags': 'bool',
         'skip_unverification': 'bool',
         'file_encoding': 'str',
-        'locale_mapping': 'object',
-        'format_options': 'object',
+        'locale_mapping': 'dict(str, str)',
+        'format_options': 'dict(str, str)',
         'autotranslate': 'bool',
         'mark_reviewed': 'bool'
     }
@@ -171,7 +171,7 @@ class UploadCreateParameters(object):
     def file_format(self):
         """Gets the file_format of this UploadCreateParameters.  # noqa: E501
 
-        File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.  # noqa: E501
+        File format. Auto-detected when possible and not specified.  # noqa: E501
 
         :return: The file_format of this UploadCreateParameters.  # noqa: E501
         :rtype: str
@@ -182,7 +182,7 @@ class UploadCreateParameters(object):
     def file_format(self, file_format):
         """Sets the file_format of this UploadCreateParameters.
 
-        File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.  # noqa: E501
+        File format. Auto-detected when possible and not specified.  # noqa: E501
 
         :param file_format: The file_format of this UploadCreateParameters.  # noqa: E501
         :type: str
@@ -381,7 +381,7 @@ class UploadCreateParameters(object):
         Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.  # noqa: E501
 
         :return: The locale_mapping of this UploadCreateParameters.  # noqa: E501
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._locale_mapping
 
@@ -392,7 +392,7 @@ class UploadCreateParameters(object):
         Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.  # noqa: E501
 
         :param locale_mapping: The locale_mapping of this UploadCreateParameters.  # noqa: E501
-        :type: object
+        :type: dict(str, str)
         """
 
         self._locale_mapping = locale_mapping
@@ -404,7 +404,7 @@ class UploadCreateParameters(object):
         Additional options available for specific formats. See our format guide for complete list.  # noqa: E501
 
         :return: The format_options of this UploadCreateParameters.  # noqa: E501
-        :rtype: object
+        :rtype: dict(str, str)
         """
         return self._format_options
 
@@ -415,7 +415,7 @@ class UploadCreateParameters(object):
         Additional options available for specific formats. See our format guide for complete list.  # noqa: E501
 
         :param format_options: The format_options of this UploadCreateParameters.  # noqa: E501
-        :type: object
+        :type: dict(str, str)
         """
 
         self._format_options = format_options

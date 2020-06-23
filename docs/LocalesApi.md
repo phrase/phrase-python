@@ -177,7 +177,7 @@ with phrase-api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
-    file_format = 'yml' # str | File format name. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.
+    file_format = 'yml' # str | File format name. See the format guide for all supported file formats.
     tags = 'feature1,feature2' # str | Limit results to keys tagged with a list of comma separated tag names.
     tag = 'feature' # str | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
     include_empty_translations = True # bool | Indicates whether keys without translations should be included in the output as well.
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
- **file_format** | **str**| File format name. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. | [optional] 
+ **file_format** | **str**| File format name. See the format guide for all supported file formats. | [optional] 
  **tags** | **str**| Limit results to keys tagged with a list of comma separated tag names. | [optional] 
  **tag** | **str**| Limit download to tagged keys. This parameter is deprecated. Please use the \&quot;tags\&quot; parameter instead | [optional] 
  **include_empty_translations** | **bool**| Indicates whether keys without translations should be included in the output as well. | [optional] 

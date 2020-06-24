@@ -58,6 +58,8 @@ class UploadsApi(object):
         :param bool skip_upload_tags: Indicates whether the upload should not create upload tags.
         :param bool skip_unverification: Indicates whether the upload should unverify updated translations.
         :param str file_encoding: Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
+        :param object locale_mapping: Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.
+        :param object format_options: Additional options available for specific formats. See our format guide for complete list.
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -97,6 +99,8 @@ class UploadsApi(object):
         :param bool skip_upload_tags: Indicates whether the upload should not create upload tags.
         :param bool skip_unverification: Indicates whether the upload should unverify updated translations.
         :param str file_encoding: Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
+        :param object locale_mapping: Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.
+        :param object format_options: Additional options available for specific formats. See our format guide for complete list.
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
         :param _return_http_data_only: response data without head status code
@@ -129,6 +133,8 @@ class UploadsApi(object):
             'skip_upload_tags',
             'skip_unverification',
             'file_encoding',
+            'locale_mapping',
+            'format_options',
             'autotranslate',
             'mark_reviewed'
         ]
@@ -190,6 +196,10 @@ class UploadsApi(object):
             form_params.append(('skip_unverification', local_var_params['skip_unverification']))  # noqa: E501
         if 'file_encoding' in local_var_params:
             form_params.append(('file_encoding', local_var_params['file_encoding']))  # noqa: E501
+        if 'locale_mapping' in local_var_params:
+            form_params.append(('locale_mapping', local_var_params['locale_mapping']))  # noqa: E501
+        if 'format_options' in local_var_params:
+            form_params.append(('format_options', local_var_params['format_options']))  # noqa: E501
         if 'autotranslate' in local_var_params:
             form_params.append(('autotranslate', local_var_params['autotranslate']))  # noqa: E501
         if 'mark_reviewed' in local_var_params:

@@ -14,8 +14,8 @@ Name | Type | Description | Notes
 **skip_upload_tags** | **bool** | Indicates whether the upload should not create upload tags. | [optional] 
 **skip_unverification** | **bool** | Indicates whether the upload should unverify updated translations. | [optional] 
 **file_encoding** | **str** | Enforces a specific encoding on the file contents. Valid options are \&quot;UTF-8\&quot;, \&quot;UTF-16\&quot; and \&quot;ISO-8859-1\&quot;. | [optional] 
-**locale_mapping** | **dict(str, str)** | Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. | [optional] 
-**format_options** | **dict(str, str)** | Additional options available for specific formats. See our format guide for complete list. | [optional] 
+**locale_mapping** | [**object**](.md) | Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. | [optional] 
+**format_options** | [**object**](.md) | Additional options available for specific formats. See our format guide for complete list. | [optional] 
 **autotranslate** | **bool** | If set, translations for the uploaded language will be fetched automatically. | [optional] 
 **mark_reviewed** | **bool** | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. | [optional] 
 

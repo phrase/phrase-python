@@ -1,4 +1,4 @@
-# phrase-api.TranslationsApi
+# phrase_api.TranslationsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -35,20 +35,20 @@ Create a translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translation_create_parameters = phrase-api.TranslationCreateParameters() # TranslationCreateParameters |  (required)
+    translation_create_parameters = phrase_api.TranslationCreateParameters() # TranslationCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -103,21 +103,21 @@ Set exclude from export flag on an existing translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    translation_exclude_parameters = phrase-api.TranslationExcludeParameters() # TranslationExcludeParameters |  (required)
+    translation_exclude_parameters = phrase_api.TranslationExcludeParameters() # TranslationExcludeParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -173,21 +173,21 @@ Remove exclude from export flag from an existing translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    translation_include_parameters = phrase-api.TranslationIncludeParameters() # TranslationIncludeParameters |  (required)
+    translation_include_parameters = phrase_api.TranslationIncludeParameters() # TranslationIncludeParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -243,21 +243,21 @@ Mark an existing translation as reviewed.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    translation_review_parameters = phrase-api.TranslationReviewParameters() # TranslationReviewParameters |  (required)
+    translation_review_parameters = phrase_api.TranslationReviewParameters() # TranslationReviewParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -313,18 +313,18 @@ Get details on a single translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -383,21 +383,21 @@ Mark an existing translation as unverified.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    translation_unverify_parameters = phrase-api.TranslationUnverifyParameters() # TranslationUnverifyParameters |  (required)
+    translation_unverify_parameters = phrase_api.TranslationUnverifyParameters() # TranslationUnverifyParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -453,21 +453,21 @@ Update an existing translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    translation_update_parameters = phrase-api.TranslationUpdateParameters() # TranslationUpdateParameters |  (required)
+    translation_update_parameters = phrase_api.TranslationUpdateParameters() # TranslationUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -523,21 +523,21 @@ Verify an existing translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    translation_verify_parameters = phrase-api.TranslationVerifyParameters() # TranslationVerifyParameters |  (required)
+    translation_verify_parameters = phrase_api.TranslationVerifyParameters() # TranslationVerifyParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -593,18 +593,18 @@ List translations for a specific key.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -673,18 +673,18 @@ List translations for a specific locale. If you want to download all translation
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     locale_id = 'locale_id_example' # str | Locale ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -753,20 +753,20 @@ Exclude translations matching query from locale export.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translations_exclude_parameters = phrase-api.TranslationsExcludeParameters() # TranslationsExcludeParameters |  (required)
+    translations_exclude_parameters = phrase_api.TranslationsExcludeParameters() # TranslationsExcludeParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -821,20 +821,20 @@ Include translations matching query in locale export.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translations_include_parameters = phrase-api.TranslationsIncludeParameters() # TranslationsIncludeParameters |  (required)
+    translations_include_parameters = phrase_api.TranslationsIncludeParameters() # TranslationsIncludeParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -889,18 +889,18 @@ List translations for the given project. If you want to download all translation
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
@@ -967,20 +967,20 @@ Review translations matching query.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translations_review_parameters = phrase-api.TranslationsReviewParameters() # TranslationsReviewParameters |  (required)
+    translations_review_parameters = phrase_api.TranslationsReviewParameters() # TranslationsReviewParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -1035,20 +1035,20 @@ Search translations for the given project. Provides the same search interface as
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translations_search_parameters = phrase-api.TranslationsSearchParameters() # TranslationsSearchParameters |  (required)
+    translations_search_parameters = phrase_api.TranslationsSearchParameters() # TranslationsSearchParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
@@ -1107,20 +1107,20 @@ Mark translations matching query as unverified.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translations_unverify_parameters = phrase-api.TranslationsUnverifyParameters() # TranslationsUnverifyParameters |  (required)
+    translations_unverify_parameters = phrase_api.TranslationsUnverifyParameters() # TranslationsUnverifyParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -1175,20 +1175,20 @@ Verify translations matching query.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.TranslationsApi(api_client)
+    api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    translations_verify_parameters = phrase-api.TranslationsVerifyParameters() # TranslationsVerifyParameters |  (required)
+    translations_verify_parameters = phrase_api.TranslationsVerifyParameters() # TranslationsVerifyParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:

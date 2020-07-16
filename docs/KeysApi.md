@@ -1,4 +1,4 @@
-# phrase-api.KeysApi
+# phrase_api.KeysApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -27,20 +27,20 @@ Create a new key.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    key_create_parameters = phrase-api.KeyCreateParameters() # KeyCreateParameters |  (required)
+    key_create_parameters = phrase_api.KeyCreateParameters() # KeyCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -95,18 +95,18 @@ Delete an existing key.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -164,18 +164,18 @@ Get details on a single key for a given project.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -234,21 +234,21 @@ Update an existing key.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    key_update_parameters = phrase-api.KeyUpdateParameters() # KeyUpdateParameters |  (required)
+    key_update_parameters = phrase_api.KeyUpdateParameters() # KeyUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -304,18 +304,18 @@ Delete all keys matching query. Same constraints as list. Please limit the numbe
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
@@ -376,18 +376,18 @@ List all keys for the given project. Alternatively you can POST requests to /sea
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
@@ -456,20 +456,20 @@ Search keys for the given project matching query.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    keys_search_parameters = phrase-api.KeysSearchParameters() # KeysSearchParameters |  (required)
+    keys_search_parameters = phrase_api.KeysSearchParameters() # KeysSearchParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
@@ -528,20 +528,20 @@ Tags all keys matching query. Same constraints as list.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    keys_tag_parameters = phrase-api.KeysTagParameters() # KeysTagParameters |  (required)
+    keys_tag_parameters = phrase_api.KeysTagParameters() # KeysTagParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -596,20 +596,20 @@ Removes specified tags from keys matching query.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.KeysApi(api_client)
+    api_instance = phrase_api.KeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    keys_untag_parameters = phrase-api.KeysUntagParameters() # KeysUntagParameters |  (required)
+    keys_untag_parameters = phrase_api.KeysUntagParameters() # KeysUntagParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:

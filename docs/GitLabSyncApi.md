@@ -1,4 +1,4 @@
-# phrase-api.GitLabSyncApi
+# phrase_api.GitLabSyncApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -25,18 +25,18 @@ Deletes a single GitLab Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts.
@@ -92,20 +92,20 @@ Export translations from Phrase to GitLab according to the .phraseapp.yml file w
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID (required)
-    gitlab_sync_export_parameters = phrase-api.GitlabSyncExportParameters() # GitlabSyncExportParameters |  (required)
+    gitlab_sync_export_parameters = phrase_api.GitlabSyncExportParameters() # GitlabSyncExportParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -160,18 +160,18 @@ List history for a single Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
@@ -232,20 +232,20 @@ Import translations from GitLab to Phrase according to the .phraseapp.yml file w
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID (required)
-    gitlab_sync_import_parameters = phrase-api.GitlabSyncImportParameters() # GitlabSyncImportParameters |  (required)
+    gitlab_sync_import_parameters = phrase_api.GitlabSyncImportParameters() # GitlabSyncImportParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -300,18 +300,18 @@ List all GitLab Sync Settings for which synchronisation with Phrase and GitLab i
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts.
 
@@ -366,18 +366,18 @@ Shows a single GitLab Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts.
@@ -434,18 +434,18 @@ Updates a single GitLab Sync Setting.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GitLabSyncApi(api_client)
+    api_instance = phrase_api.GitLabSyncApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts.

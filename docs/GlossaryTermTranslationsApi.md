@@ -1,4 +1,4 @@
-# phrase-api.GlossaryTermTranslationsApi
+# phrase_api.GlossaryTermTranslationsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -21,22 +21,22 @@ Create a new glossary term translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GlossaryTermTranslationsApi(api_client)
+    api_instance = phrase_api.GlossaryTermTranslationsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     term_id = 'term_id_example' # str | Term ID (required)
-    glossary_term_translation_create_parameters = phrase-api.GlossaryTermTranslationCreateParameters() # GlossaryTermTranslationCreateParameters |  (required)
+    glossary_term_translation_create_parameters = phrase_api.GlossaryTermTranslationCreateParameters() # GlossaryTermTranslationCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -93,18 +93,18 @@ Delete an existing glossary term translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GlossaryTermTranslationsApi(api_client)
+    api_instance = phrase_api.GlossaryTermTranslationsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     term_id = 'term_id_example' # str | Term ID (required)
@@ -164,23 +164,23 @@ Update an existing glossary term translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.GlossaryTermTranslationsApi(api_client)
+    api_instance = phrase_api.GlossaryTermTranslationsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     term_id = 'term_id_example' # str | Term ID (required)
     id = 'id_example' # str | ID (required)
-    glossary_term_translation_update_parameters = phrase-api.GlossaryTermTranslationUpdateParameters() # GlossaryTermTranslationUpdateParameters |  (required)
+    glossary_term_translation_update_parameters = phrase_api.GlossaryTermTranslationUpdateParameters() # GlossaryTermTranslationUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:

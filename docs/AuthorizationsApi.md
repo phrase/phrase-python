@@ -1,4 +1,4 @@
-# phrase-api.AuthorizationsApi
+# phrase_api.AuthorizationsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -23,19 +23,19 @@ Create a new authorization.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.AuthorizationsApi(api_client)
-    authorization_create_parameters = phrase-api.AuthorizationCreateParameters() # AuthorizationCreateParameters |  (required)
+    api_instance = phrase_api.AuthorizationsApi(api_client)
+    authorization_create_parameters = phrase_api.AuthorizationCreateParameters() # AuthorizationCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -89,18 +89,18 @@ Delete an existing authorization. API calls using that token will stop working.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.AuthorizationsApi(api_client)
+    api_instance = phrase_api.AuthorizationsApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
@@ -154,18 +154,18 @@ Get details on a single authorization.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.AuthorizationsApi(api_client)
+    api_instance = phrase_api.AuthorizationsApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
@@ -220,20 +220,20 @@ Update an existing authorization.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.AuthorizationsApi(api_client)
+    api_instance = phrase_api.AuthorizationsApi(api_client)
     id = 'id_example' # str | ID (required)
-    authorization_update_parameters = phrase-api.AuthorizationUpdateParameters() # AuthorizationUpdateParameters |  (required)
+    authorization_update_parameters = phrase_api.AuthorizationUpdateParameters() # AuthorizationUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -288,18 +288,18 @@ List all your authorizations.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.AuthorizationsApi(api_client)
+    api_instance = phrase_api.AuthorizationsApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default

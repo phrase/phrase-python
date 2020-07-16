@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.branch_merge_parameters import BranchMergeParameters  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.branch_merge_parameters import BranchMergeParameters  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestBranchMergeParameters(unittest.TestCase):
     """BranchMergeParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestBranchMergeParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.branch_merge_parameters.BranchMergeParameters()  # noqa: E501
+        # model = phrase_api.models.branch_merge_parameters.BranchMergeParameters()  # noqa: E501
         if include_optional :
             return BranchMergeParameters(
                 strategy = 'use_master'

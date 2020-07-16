@@ -1,4 +1,4 @@
-# phrase-api.CommentsApi
+# phrase_api.CommentsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -26,21 +26,21 @@ Create a new comment for a key.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
-    comment_create_parameters = phrase-api.CommentCreateParameters() # CommentCreateParameters |  (required)
+    comment_create_parameters = phrase_api.CommentCreateParameters() # CommentCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -96,18 +96,18 @@ Delete an existing comment.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     id = 'id_example' # str | ID (required)
@@ -167,18 +167,18 @@ Check if comment was marked as read. Returns 204 if read, 404 if unread.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     id = 'id_example' # str | ID (required)
@@ -238,22 +238,22 @@ Mark a comment as read.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     id = 'id_example' # str | ID (required)
-    comment_mark_read_parameters = phrase-api.CommentMarkReadParameters() # CommentMarkReadParameters |  (required)
+    comment_mark_read_parameters = phrase_api.CommentMarkReadParameters() # CommentMarkReadParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -309,18 +309,18 @@ Mark a comment as unread.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     id = 'id_example' # str | ID (required)
@@ -380,18 +380,18 @@ Get details on a single comment.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     id = 'id_example' # str | ID (required)
@@ -452,22 +452,22 @@ Update an existing comment.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     id = 'id_example' # str | ID (required)
-    comment_update_parameters = phrase-api.CommentUpdateParameters() # CommentUpdateParameters |  (required)
+    comment_update_parameters = phrase_api.CommentUpdateParameters() # CommentUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -524,18 +524,18 @@ List all comments for a key.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.CommentsApi(api_client)
+    api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)

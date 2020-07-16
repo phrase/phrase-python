@@ -1,4 +1,4 @@
-# phrase-api.ReleasesApi
+# phrase_api.ReleasesApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -24,21 +24,21 @@ Create a new release.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ReleasesApi(api_client)
+    api_instance = phrase_api.ReleasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     distribution_id = 'distribution_id_example' # str | Distribution ID (required)
-    release_create_parameters = phrase-api.ReleaseCreateParameters() # ReleaseCreateParameters |  (required)
+    release_create_parameters = phrase_api.ReleaseCreateParameters() # ReleaseCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -94,18 +94,18 @@ Delete an existing release.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ReleasesApi(api_client)
+    api_instance = phrase_api.ReleasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     distribution_id = 'distribution_id_example' # str | Distribution ID (required)
     id = 'id_example' # str | ID (required)
@@ -163,18 +163,18 @@ Publish a release for production.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ReleasesApi(api_client)
+    api_instance = phrase_api.ReleasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     distribution_id = 'distribution_id_example' # str | Distribution ID (required)
     id = 'id_example' # str | ID (required)
@@ -233,18 +233,18 @@ Get details on a single release.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ReleasesApi(api_client)
+    api_instance = phrase_api.ReleasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     distribution_id = 'distribution_id_example' # str | Distribution ID (required)
     id = 'id_example' # str | ID (required)
@@ -303,22 +303,22 @@ Update an existing release.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ReleasesApi(api_client)
+    api_instance = phrase_api.ReleasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     distribution_id = 'distribution_id_example' # str | Distribution ID (required)
     id = 'id_example' # str | ID (required)
-    release_update_parameters = phrase-api.ReleaseUpdateParameters() # ReleaseUpdateParameters |  (required)
+    release_update_parameters = phrase_api.ReleaseUpdateParameters() # ReleaseUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -375,18 +375,18 @@ List all releases for the given distribution.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ReleasesApi(api_client)
+    api_instance = phrase_api.ReleasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     distribution_id = 'distribution_id_example' # str | Distribution ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)

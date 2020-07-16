@@ -1,4 +1,4 @@
-# phrase-api.VersionsHistoryApi
+# phrase_api.VersionsHistoryApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -20,18 +20,18 @@ Get details on a single version.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.VersionsHistoryApi(api_client)
+    api_instance = phrase_api.VersionsHistoryApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     translation_id = 'translation_id_example' # str | Translation ID (required)
     id = 'id_example' # str | ID (required)
@@ -92,18 +92,18 @@ List all versions for the given translation.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.VersionsHistoryApi(api_client)
+    api_instance = phrase_api.VersionsHistoryApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     translation_id = 'translation_id_example' # str | Translation ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)

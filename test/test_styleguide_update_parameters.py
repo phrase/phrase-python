@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.styleguide_update_parameters import StyleguideUpdateParameters  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.styleguide_update_parameters import StyleguideUpdateParameters  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestStyleguideUpdateParameters(unittest.TestCase):
     """StyleguideUpdateParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestStyleguideUpdateParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.styleguide_update_parameters.StyleguideUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.styleguide_update_parameters.StyleguideUpdateParameters()  # noqa: E501
         if include_optional :
             return StyleguideUpdateParameters(
                 title = 'Web application style guide', 

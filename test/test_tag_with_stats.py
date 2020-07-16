@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.tag_with_stats import TagWithStats  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.tag_with_stats import TagWithStats  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestTagWithStats(unittest.TestCase):
     """TagWithStats unit test stubs"""
@@ -32,7 +32,7 @@ class TestTagWithStats(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.tag_with_stats.TagWithStats()  # noqa: E501
+        # model = phrase_api.models.tag_with_stats.TagWithStats()  # noqa: E501
         if include_optional :
             return TagWithStats(
                 name = '0', 
@@ -40,9 +40,9 @@ class TestTagWithStats(unittest.TestCase):
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 statistics = [
-                    phrase-api.models.tag_with_stats_1_statistics_1.tag_with_stats_1_statistics_1(
+                    phrase_api.models.tag_with_stats_1_statistics_1.tag_with_stats_1_statistics_1(
                         locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
-                        statistics = phrase-api.models.tag_with_stats_1_statistics.tag_with_stats_1_statistics(
+                        statistics = phrase_api.models.tag_with_stats_1_statistics.tag_with_stats_1_statistics(
                             keys_total_count = 56, 
                             translations_completed_count = 56, 
                             translations_unverified_count = 56, 

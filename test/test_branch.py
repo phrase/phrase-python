@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.branch import Branch  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.branch import Branch  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestBranch(unittest.TestCase):
     """Branch unit test stubs"""
@@ -32,18 +32,18 @@ class TestBranch(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.branch.Branch()  # noqa: E501
+        # model = phrase_api.models.branch.Branch()  # noqa: E501
         if include_optional :
             return Branch(
                 name = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 merged_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                merged_by = phrase-api.models.user_preview.user_preview(
+                merged_by = phrase_api.models.user_preview.user_preview(
                     id = '0', 
                     username = '0', 
                     name = '0', ), 
-                created_by = phrase-api.models.user_preview.user_preview(
+                created_by = phrase_api.models.user_preview.user_preview(
                     id = '0', 
                     username = '0', 
                     name = '0', ), 

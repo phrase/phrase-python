@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.webhook_create_parameters import WebhookCreateParameters  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.webhook_create_parameters import WebhookCreateParameters  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestWebhookCreateParameters(unittest.TestCase):
     """WebhookCreateParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestWebhookCreateParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.webhook_create_parameters.WebhookCreateParameters()  # noqa: E501
+        # model = phrase_api.models.webhook_create_parameters.WebhookCreateParameters()  # noqa: E501
         if include_optional :
             return WebhookCreateParameters(
                 callback_url = 'http://example.com/hooks/phraseapp-notifications', 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.keys_untag_parameters import KeysUntagParameters  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.keys_untag_parameters import KeysUntagParameters  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestKeysUntagParameters(unittest.TestCase):
     """KeysUntagParameters unit test stubs"""
@@ -32,7 +32,7 @@ class TestKeysUntagParameters(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.keys_untag_parameters.KeysUntagParameters()  # noqa: E501
+        # model = phrase_api.models.keys_untag_parameters.KeysUntagParameters()  # noqa: E501
         if include_optional :
             return KeysUntagParameters(
                 branch = 'my-feature-branch', 

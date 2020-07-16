@@ -22,7 +22,7 @@ pip install phrase-api
 
 Then import the package:
 ```python
-import phrase-api
+import phrase_api
 ```
 
 ### pip install from Github repository
@@ -36,7 +36,7 @@ pip install git+https://github.com/phrase/phrase-python.git
 
 Then import the package:
 ```python
-import phrase-api
+import phrase_api
 ```
 
 ### Setuptools
@@ -50,7 +50,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import phrase-api
+import phrase_api
 ```
 
 ## Getting Started
@@ -60,20 +60,20 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Defining host is optional and default to https://api.phrase.com/v2
 configuration.host = "https://api.phrase.com/v2"
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.AccountsApi(api_client)
+    api_instance = phrase_api.AccountsApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 

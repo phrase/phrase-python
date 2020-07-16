@@ -14,9 +14,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import phrase-api
-from phrase-api.models.locale_details1 import LocaleDetails1  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.models.locale_details1 import LocaleDetails1  # noqa: E501
+from phrase_api.rest import ApiException
 
 class TestLocaleDetails1(unittest.TestCase):
     """LocaleDetails1 unit test stubs"""
@@ -32,10 +32,10 @@ class TestLocaleDetails1(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase-api.models.locale_details1.LocaleDetails1()  # noqa: E501
+        # model = phrase_api.models.locale_details1.LocaleDetails1()  # noqa: E501
         if include_optional :
             return LocaleDetails1(
-                statistics = phrase-api.models.locale_statistics.locale_statistics(
+                statistics = phrase_api.models.locale_statistics.locale_statistics(
                     keys_total_count = 56, 
                     keys_untranslated_count = 56, 
                     words_total_count = 56, 

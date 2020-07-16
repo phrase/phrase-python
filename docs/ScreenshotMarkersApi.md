@@ -1,4 +1,4 @@
-# phrase-api.ScreenshotMarkersApi
+# phrase_api.ScreenshotMarkersApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -23,21 +23,21 @@ Create a new screenshot marker.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ScreenshotMarkersApi(api_client)
+    api_instance = phrase_api.ScreenshotMarkersApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     screenshot_id = 'screenshot_id_example' # str | Screenshot ID (required)
-    screenshot_marker_create_parameters = phrase-api.ScreenshotMarkerCreateParameters() # ScreenshotMarkerCreateParameters |  (required)
+    screenshot_marker_create_parameters = phrase_api.ScreenshotMarkerCreateParameters() # ScreenshotMarkerCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -93,18 +93,18 @@ Delete an existing screenshot marker.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ScreenshotMarkersApi(api_client)
+    api_instance = phrase_api.ScreenshotMarkersApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     screenshot_id = 'screenshot_id_example' # str | Screenshot ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -160,18 +160,18 @@ Get details on a single screenshot marker for a given project.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ScreenshotMarkersApi(api_client)
+    api_instance = phrase_api.ScreenshotMarkersApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     screenshot_id = 'screenshot_id_example' # str | Screenshot ID (required)
     id = 'id_example' # str | ID (required)
@@ -230,21 +230,21 @@ Update an existing screenshot marker.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ScreenshotMarkersApi(api_client)
+    api_instance = phrase_api.ScreenshotMarkersApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     screenshot_id = 'screenshot_id_example' # str | Screenshot ID (required)
-    screenshot_marker_update_parameters = phrase-api.ScreenshotMarkerUpdateParameters() # ScreenshotMarkerUpdateParameters |  (required)
+    screenshot_marker_update_parameters = phrase_api.ScreenshotMarkerUpdateParameters() # ScreenshotMarkerUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -300,18 +300,18 @@ List all screenshot markers for the given project.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.ScreenshotMarkersApi(api_client)
+    api_instance = phrase_api.ScreenshotMarkersApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)

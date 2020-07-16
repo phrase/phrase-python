@@ -13,16 +13,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import phrase-api
-from phrase-api.api.screenshot_markers_api import ScreenshotMarkersApi  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi  # noqa: E501
+from phrase_api.rest import ApiException
 
 
 class TestScreenshotMarkersApi(unittest.TestCase):
     """ScreenshotMarkersApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase-api.api.screenshot_markers_api.ScreenshotMarkersApi()  # noqa: E501
+        self.api = phrase_api.api.screenshot_markers_api.ScreenshotMarkersApi()  # noqa: E501
 
     def tearDown(self):
         pass

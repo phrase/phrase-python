@@ -13,16 +13,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import phrase-api
-from phrase-api.api.uploads_api import UploadsApi  # noqa: E501
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.api.uploads_api import UploadsApi  # noqa: E501
+from phrase_api.rest import ApiException
 
 
 class TestUploadsApi(unittest.TestCase):
     """UploadsApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase-api.api.uploads_api.UploadsApi()  # noqa: E501
+        self.api = phrase_api.api.uploads_api.UploadsApi()  # noqa: E501
 
     def tearDown(self):
         pass

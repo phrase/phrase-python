@@ -1,4 +1,4 @@
-# phrase-api.FormatsApi
+# phrase_api.FormatsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
@@ -19,18 +19,18 @@ Get a handy list of all localization file formats supported in Phrase.
 ```python
 from __future__ import print_function
 import time
-import phrase-api
-from phrase-api.rest import ApiException
+import phrase_api
+from phrase_api.rest import ApiException
 from pprint import pprint
 
-configuration = phrase-api.Configuration()
+configuration = phrase_api.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'token'
 
 # Enter a context with an instance of the API client
-with phrase-api.ApiClient(configuration) as api_client:
+with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase-api.FormatsApi(api_client)
+    api_instance = phrase_api.FormatsApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:

@@ -93,7 +93,7 @@ class TranslationsVerifyParameters(object):
     def q(self):
         """Gets the q of this TranslationsVerifyParameters.  # noqa: E501
 
-        q_description_placeholder  # noqa: E501
+        Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>.   # noqa: E501
 
         :return: The q of this TranslationsVerifyParameters.  # noqa: E501
         :rtype: str
@@ -104,7 +104,7 @@ class TranslationsVerifyParameters(object):
     def q(self, q):
         """Sets the q of this TranslationsVerifyParameters.
 
-        q_description_placeholder  # noqa: E501
+        Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>.   # noqa: E501
 
         :param q: The q of this TranslationsVerifyParameters.  # noqa: E501
         :type: str

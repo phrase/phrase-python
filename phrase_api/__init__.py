@@ -13,7 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # import apis into sdk package
 from phrase_api.api.accounts_api import AccountsApi
@@ -42,6 +42,7 @@ from phrase_api.api.screenshots_api import ScreenshotsApi
 from phrase_api.api.spaces_api import SpacesApi
 from phrase_api.api.style_guides_api import StyleGuidesApi
 from phrase_api.api.tags_api import TagsApi
+from phrase_api.api.teams_api import TeamsApi
 from phrase_api.api.translations_api import TranslationsApi
 from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi
@@ -170,6 +171,13 @@ from phrase_api.models.tag_with_stats import TagWithStats
 from phrase_api.models.tag_with_stats1 import TagWithStats1
 from phrase_api.models.tag_with_stats1_statistics import TagWithStats1Statistics
 from phrase_api.models.tag_with_stats1_statistics1 import TagWithStats1Statistics1
+from phrase_api.models.team import Team
+from phrase_api.models.team_create_parameters import TeamCreateParameters
+from phrase_api.models.team_detail import TeamDetail
+from phrase_api.models.team_update_parameters import TeamUpdateParameters
+from phrase_api.models.teams_projects_create_parameters import TeamsProjectsCreateParameters
+from phrase_api.models.teams_spaces_create_parameters import TeamsSpacesCreateParameters
+from phrase_api.models.teams_users_create_parameters import TeamsUsersCreateParameters
 from phrase_api.models.translation import Translation
 from phrase_api.models.translation_create_parameters import TranslationCreateParameters
 from phrase_api.models.translation_details import TranslationDetails

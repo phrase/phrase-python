@@ -40,7 +40,8 @@ class TestProjectCreateParameters(unittest.TestCase):
                 shares_translation_memory = True, 
                 project_image = bytes(b'blah'), 
                 remove_project_image = True, 
-                account_id = 'abcd1234'
+                account_id = 'abcd1234', 
+                source_project_id = 'abcd1234'
             )
         else :
             return ProjectCreateParameters(

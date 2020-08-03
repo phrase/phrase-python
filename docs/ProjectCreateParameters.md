@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **project_image** | **file** | Image to identify the project | [optional] 
 **remove_project_image** | **bool** | Indicates whether the project image should be deleted. | [optional] 
 **account_id** | **str** | Account ID to specify the actual account the project should be created in. Required if the requesting user is a member of multiple accounts. | [optional] 
+**source_project_id** | **str** | When a source project ID is given, a clone of that project will be created, including all locales, keys and translations as well as the main project settings if they are not defined otherwise through the params. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

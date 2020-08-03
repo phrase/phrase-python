@@ -37,7 +37,8 @@ class ProjectCreateParameters(object):
         'shares_translation_memory': 'bool',
         'project_image': 'file',
         'remove_project_image': 'bool',
-        'account_id': 'str'
+        'account_id': 'str',
+        'source_project_id': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class ProjectCreateParameters(object):
         'shares_translation_memory': 'shares_translation_memory',
         'project_image': 'project_image',
         'remove_project_image': 'remove_project_image',
-        'account_id': 'account_id'
+        'account_id': 'account_id',
+        'source_project_id': 'source_project_id'
     }
 
-    def __init__(self, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, source_project_id=None, local_vars_configuration=None):  # noqa: E501
         """ProjectCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class ProjectCreateParameters(object):
         self._project_image = None
         self._remove_project_image = None
         self._account_id = None
+        self._source_project_id = None
         self.discriminator = None
 
         if name is not None:
@@ -75,6 +78,8 @@ class ProjectCreateParameters(object):
             self.remove_project_image = remove_project_image
         if account_id is not None:
             self.account_id = account_id
+        if source_project_id is not None:
+            self.source_project_id = source_project_id
 
     @property
     def name(self):
@@ -213,6 +218,29 @@ class ProjectCreateParameters(object):
         """
 
         self._account_id = account_id
+
+    @property
+    def source_project_id(self):
+        """Gets the source_project_id of this ProjectCreateParameters.  # noqa: E501
+
+        When a source project ID is given, a clone of that project will be created, including all locales, keys and translations as well as the main project settings if they are not defined otherwise through the params.  # noqa: E501
+
+        :return: The source_project_id of this ProjectCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_project_id
+
+    @source_project_id.setter
+    def source_project_id(self, source_project_id):
+        """Sets the source_project_id of this ProjectCreateParameters.
+
+        When a source project ID is given, a clone of that project will be created, including all locales, keys and translations as well as the main project settings if they are not defined otherwise through the params.  # noqa: E501
+
+        :param source_project_id: The source_project_id of this ProjectCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._source_project_id = source_project_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

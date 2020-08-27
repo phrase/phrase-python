@@ -34,6 +34,7 @@ class Project(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
+        'slug': 'str',
         'main_format': 'str',
         'project_image_url': 'str',
         'account': 'Account',
@@ -44,6 +45,7 @@ class Project(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'slug': 'slug',
         'main_format': 'main_format',
         'project_image_url': 'project_image_url',
         'account': 'account',
@@ -51,7 +53,7 @@ class Project(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, main_format=None, project_image_url=None, account=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Project - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,6 +61,7 @@ class Project(object):
 
         self._id = None
         self._name = None
+        self._slug = None
         self._main_format = None
         self._project_image_url = None
         self._account = None
@@ -70,6 +73,8 @@ class Project(object):
             self.id = id
         if name is not None:
             self.name = name
+        if slug is not None:
+            self.slug = slug
         if main_format is not None:
             self.main_format = main_format
         if project_image_url is not None:
@@ -122,6 +127,27 @@ class Project(object):
         """
 
         self._name = name
+
+    @property
+    def slug(self):
+        """Gets the slug of this Project.  # noqa: E501
+
+
+        :return: The slug of this Project.  # noqa: E501
+        :rtype: str
+        """
+        return self._slug
+
+    @slug.setter
+    def slug(self, slug):
+        """Sets the slug of this Project.
+
+
+        :param slug: The slug of this Project.  # noqa: E501
+        :type: str
+        """
+
+        self._slug = slug
 
     @property
     def main_format(self):

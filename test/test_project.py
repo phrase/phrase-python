@@ -37,9 +37,10 @@ class TestProject(unittest.TestCase):
             return Project(
                 id = '0', 
                 name = '0', 
+                slug = '0', 
                 main_format = '0', 
                 project_image_url = '0', 
-                account = {"id":"abcd1234","name":"Company Account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
+                account = {"id":"abcd1234","name":"Company Account","slug":"company_account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

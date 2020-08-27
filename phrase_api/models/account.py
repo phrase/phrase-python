@@ -34,6 +34,7 @@ class Account(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
+        'slug': 'str',
         'company': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -42,12 +43,13 @@ class Account(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'slug': 'slug',
         'company': 'company',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, company=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, company=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Account - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class Account(object):
 
         self._id = None
         self._name = None
+        self._slug = None
         self._company = None
         self._created_at = None
         self._updated_at = None
@@ -64,6 +67,8 @@ class Account(object):
             self.id = id
         if name is not None:
             self.name = name
+        if slug is not None:
+            self.slug = slug
         if company is not None:
             self.company = company
         if created_at is not None:
@@ -112,6 +117,27 @@ class Account(object):
         """
 
         self._name = name
+
+    @property
+    def slug(self):
+        """Gets the slug of this Account.  # noqa: E501
+
+
+        :return: The slug of this Account.  # noqa: E501
+        :rtype: str
+        """
+        return self._slug
+
+    @slug.setter
+    def slug(self, slug):
+        """Sets the slug of this Account.
+
+
+        :param slug: The slug of this Account.  # noqa: E501
+        :type: str
+        """
+
+        self._slug = slug
 
     @property
     def company(self):

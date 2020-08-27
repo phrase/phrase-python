@@ -34,28 +34,28 @@ class ProjectDetails(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
+        'slug': 'str',
         'main_format': 'str',
         'project_image_url': 'str',
         'account': 'Account',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'slug': 'str',
         'shares_translation_memory': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'slug': 'slug',
         'main_format': 'main_format',
         'project_image_url': 'project_image_url',
         'account': 'account',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'slug': 'slug',
         'shares_translation_memory': 'shares_translation_memory'
     }
 
-    def __init__(self, id=None, name=None, main_format=None, project_image_url=None, account=None, created_at=None, updated_at=None, slug=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, created_at=None, updated_at=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -63,12 +63,12 @@ class ProjectDetails(object):
 
         self._id = None
         self._name = None
+        self._slug = None
         self._main_format = None
         self._project_image_url = None
         self._account = None
         self._created_at = None
         self._updated_at = None
-        self._slug = None
         self._shares_translation_memory = None
         self.discriminator = None
 
@@ -76,6 +76,8 @@ class ProjectDetails(object):
             self.id = id
         if name is not None:
             self.name = name
+        if slug is not None:
+            self.slug = slug
         if main_format is not None:
             self.main_format = main_format
         if project_image_url is not None:
@@ -86,8 +88,6 @@ class ProjectDetails(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if slug is not None:
-            self.slug = slug
         if shares_translation_memory is not None:
             self.shares_translation_memory = shares_translation_memory
 
@@ -132,6 +132,27 @@ class ProjectDetails(object):
         """
 
         self._name = name
+
+    @property
+    def slug(self):
+        """Gets the slug of this ProjectDetails.  # noqa: E501
+
+
+        :return: The slug of this ProjectDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._slug
+
+    @slug.setter
+    def slug(self, slug):
+        """Sets the slug of this ProjectDetails.
+
+
+        :param slug: The slug of this ProjectDetails.  # noqa: E501
+        :type: str
+        """
+
+        self._slug = slug
 
     @property
     def main_format(self):
@@ -237,27 +258,6 @@ class ProjectDetails(object):
         """
 
         self._updated_at = updated_at
-
-    @property
-    def slug(self):
-        """Gets the slug of this ProjectDetails.  # noqa: E501
-
-
-        :return: The slug of this ProjectDetails.  # noqa: E501
-        :rtype: str
-        """
-        return self._slug
-
-    @slug.setter
-    def slug(self, slug):
-        """Sets the slug of this ProjectDetails.
-
-
-        :param slug: The slug of this ProjectDetails.  # noqa: E501
-        :type: str
-        """
-
-        self._slug = slug
 
     @property
     def shares_translation_memory(self):

@@ -37,10 +37,10 @@ class TestAccountDetails(unittest.TestCase):
             return AccountDetails(
                 id = '0', 
                 name = '0', 
+                slug = '0', 
                 company = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                slug = '0'
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )
         else :
             return AccountDetails(

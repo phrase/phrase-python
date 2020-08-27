@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**slug** | **str** |  | [optional] 
 **main_format** | **str** |  | [optional] 
 **project_image_url** | **str** |  | [optional] 
 **account** | [**Account**](Account.md) |  | [optional] 

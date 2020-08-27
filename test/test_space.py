@@ -41,7 +41,7 @@ class TestSpace(unittest.TestCase):
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 projects_count = 56, 
                 projects = [
-                    {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","slug":"android_project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ]
             )
         else :

@@ -574,6 +574,7 @@ class BlacklistedKeysApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 10 by default
+        :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -602,6 +603,7 @@ class BlacklistedKeysApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 10 by default
+        :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -622,7 +624,8 @@ class BlacklistedKeysApi(object):
             'project_id',
             'x_phrase_app_otp',
             'page',
-            'per_page'
+            'per_page',
+            'branch'
         ]
         all_params.extend(
             [
@@ -657,6 +660,8 @@ class BlacklistedKeysApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **blacklisted_keys_list**
-> list[BlacklistedKey] blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[BlacklistedKey] blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List blacklisted keys
 
@@ -312,10 +312,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # List blacklisted keys
-        api_response = api_instance.blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BlacklistedKeysApi->blacklisted_keys_list: %s\n" % e)
@@ -330,6 +331,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type
 

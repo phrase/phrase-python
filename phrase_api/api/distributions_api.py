@@ -573,7 +573,7 @@ class DistributionsApi(object):
         :param str account_id: Account ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 10 by default
+        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -601,7 +601,7 @@ class DistributionsApi(object):
         :param str account_id: Account ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 10 by default
+        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

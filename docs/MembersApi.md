@@ -242,7 +242,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     account_id = 'account_id_example' # str | Account ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
 
     try:
         # List members
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
  **account_id** | **str**| Account ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
 
 ### Return type
 

@@ -609,7 +609,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     key_id = 'key_id_example' # str | Translation Key ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
@@ -632,7 +632,7 @@ Name | Type | Description  | Notes
  **key_id** | **str**| Translation Key ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
@@ -689,7 +689,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     locale_id = 'locale_id_example' # str | Locale ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
@@ -712,7 +712,7 @@ Name | Type | Description  | Notes
  **locale_id** | **str**| Locale ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
@@ -904,7 +904,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
@@ -926,7 +926,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
@@ -1051,7 +1051,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     translations_search_parameters = phrase_api.TranslationsSearchParameters() # TranslationsSearchParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 10 # int | allows you to specify a page size up to 100 items, 10 by default
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
 
     try:
         # Search translations
@@ -1070,7 +1070,7 @@ Name | Type | Description  | Notes
  **translations_search_parameters** | [**TranslationsSearchParameters**](TranslationsSearchParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 10 by default | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
 
 ### Return type
 

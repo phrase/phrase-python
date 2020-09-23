@@ -42,6 +42,7 @@ from phrase_api.models.distribution import Distribution
 from phrase_api.models.distribution_create_parameters import DistributionCreateParameters
 from phrase_api.models.distribution_preview import DistributionPreview
 from phrase_api.models.distribution_update_parameters import DistributionUpdateParameters
+from phrase_api.models.document import Document
 from phrase_api.models.format import Format
 from phrase_api.models.gitlab_sync import GitlabSync
 from phrase_api.models.gitlab_sync_export import GitlabSyncExport

@@ -10,6 +10,7 @@ from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comments_api import CommentsApi
 from phrase_api.api.distributions_api import DistributionsApi
+from phrase_api.api.documents_api import DocumentsApi
 from phrase_api.api.formats_api import FormatsApi
 from phrase_api.api.git_lab_sync_api import GitLabSyncApi
 from phrase_api.api.glossaries_api import GlossariesApi

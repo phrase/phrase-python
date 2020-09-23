@@ -158,6 +158,7 @@ Class | Method | HTTP request | Description
 *DistributionsApi* | [**distribution_show**](docs/DistributionsApi.md#distribution_show) | **GET** /accounts/{account_id}/distributions/{id} | Get a single distribution
 *DistributionsApi* | [**distribution_update**](docs/DistributionsApi.md#distribution_update) | **PATCH** /accounts/{account_id}/distributions/{id} | Update a distribution
 *DistributionsApi* | [**distributions_list**](docs/DistributionsApi.md#distributions_list) | **GET** /accounts/{account_id}/distributions | List distributions
+*DocumentsApi* | [**documents_list**](docs/DocumentsApi.md#documents_list) | **GET** /projects/{project_id}/documents | List documents
 *FormatsApi* | [**formats_list**](docs/FormatsApi.md#formats_list) | **GET** /formats | List formats
 *GitLabSyncApi* | [**gitlab_sync_delete**](docs/GitLabSyncApi.md#gitlab_sync_delete) | **DELETE** /gitlab_syncs/{id} | Delete single Sync Setting
 *GitLabSyncApi* | [**gitlab_sync_export**](docs/GitLabSyncApi.md#gitlab_sync_export) | **POST** /gitlab_syncs/{gitlab_sync_id}/export | Export from Phrase to GitLab
@@ -337,6 +338,7 @@ Class | Method | HTTP request | Description
  - [DistributionCreateParameters](docs/DistributionCreateParameters.md)
  - [DistributionPreview](docs/DistributionPreview.md)
  - [DistributionUpdateParameters](docs/DistributionUpdateParameters.md)
+ - [Document](docs/Document.md)
  - [Format](docs/Format.md)
  - [GitlabSync](docs/GitlabSync.md)
  - [GitlabSyncExport](docs/GitlabSyncExport.md)

@@ -44,6 +44,7 @@ from phrase_api.models.distribution_preview import DistributionPreview
 from phrase_api.models.distribution_update_parameters import DistributionUpdateParameters
 from phrase_api.models.document import Document
 from phrase_api.models.format import Format
+from phrase_api.models.github_sync_export_parameters import GithubSyncExportParameters
 from phrase_api.models.gitlab_sync import GitlabSync
 from phrase_api.models.gitlab_sync_export import GitlabSyncExport
 from phrase_api.models.gitlab_sync_export_parameters import GitlabSyncExportParameters
@@ -58,6 +59,8 @@ from phrase_api.models.glossary_term_translation_create_parameters import Glossa
 from phrase_api.models.glossary_term_translation_update_parameters import GlossaryTermTranslationUpdateParameters
 from phrase_api.models.glossary_term_update_parameters import GlossaryTermUpdateParameters
 from phrase_api.models.glossary_update_parameters import GlossaryUpdateParameters
+from phrase_api.models.inline_response422 import InlineResponse422
+from phrase_api.models.inline_response422_errors import InlineResponse422Errors
 from phrase_api.models.invitation import Invitation
 from phrase_api.models.invitation_create_parameters import InvitationCreateParameters
 from phrase_api.models.invitation_update_parameters import InvitationUpdateParameters

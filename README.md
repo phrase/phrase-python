@@ -160,6 +160,7 @@ Class | Method | HTTP request | Description
 *DistributionsApi* | [**distributions_list**](docs/DistributionsApi.md#distributions_list) | **GET** /accounts/{account_id}/distributions | List distributions
 *DocumentsApi* | [**documents_list**](docs/DocumentsApi.md#documents_list) | **GET** /projects/{project_id}/documents | List documents
 *FormatsApi* | [**formats_list**](docs/FormatsApi.md#formats_list) | **GET** /formats | List formats
+*GitHubSyncApi* | [**github_sync_export**](docs/GitHubSyncApi.md#github_sync_export) | **POST** /github_syncs/export | Export from Phrase to GitHub
 *GitLabSyncApi* | [**gitlab_sync_delete**](docs/GitLabSyncApi.md#gitlab_sync_delete) | **DELETE** /gitlab_syncs/{id} | Delete single Sync Setting
 *GitLabSyncApi* | [**gitlab_sync_export**](docs/GitLabSyncApi.md#gitlab_sync_export) | **POST** /gitlab_syncs/{gitlab_sync_id}/export | Export from Phrase to GitLab
 *GitLabSyncApi* | [**gitlab_sync_history**](docs/GitLabSyncApi.md#gitlab_sync_history) | **GET** /gitlab_syncs/{gitlab_sync_id}/history | History of single Sync Setting
@@ -340,6 +341,7 @@ Class | Method | HTTP request | Description
  - [DistributionUpdateParameters](docs/DistributionUpdateParameters.md)
  - [Document](docs/Document.md)
  - [Format](docs/Format.md)
+ - [GithubSyncExportParameters](docs/GithubSyncExportParameters.md)
  - [GitlabSync](docs/GitlabSync.md)
  - [GitlabSyncExport](docs/GitlabSyncExport.md)
  - [GitlabSyncExportParameters](docs/GitlabSyncExportParameters.md)
@@ -354,6 +356,8 @@ Class | Method | HTTP request | Description
  - [GlossaryTermTranslationUpdateParameters](docs/GlossaryTermTranslationUpdateParameters.md)
  - [GlossaryTermUpdateParameters](docs/GlossaryTermUpdateParameters.md)
  - [GlossaryUpdateParameters](docs/GlossaryUpdateParameters.md)
+ - [InlineResponse422](docs/InlineResponse422.md)
+ - [InlineResponse422Errors](docs/InlineResponse422Errors.md)
  - [Invitation](docs/Invitation.md)
  - [InvitationCreateParameters](docs/InvitationCreateParameters.md)
  - [InvitationUpdateParameters](docs/InvitationUpdateParameters.md)

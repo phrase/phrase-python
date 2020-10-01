@@ -27,6 +27,13 @@ class TestDocumentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_document_delete(self):
+        """Test case for document_delete
+
+        Delete document  # noqa: E501
+        """
+        pass
+
     def test_documents_list(self):
         """Test case for documents_list
 

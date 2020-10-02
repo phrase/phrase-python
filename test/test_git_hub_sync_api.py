@@ -34,6 +34,13 @@ class TestGitHubSyncApi(unittest.TestCase):
         """
         pass
 
+    def test_github_sync_import(self):
+        """Test case for github_sync_import
+
+        Import to Phrase from GitHub  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

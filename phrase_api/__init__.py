@@ -92,6 +92,7 @@ from phrase_api.models.distribution_update_parameters import DistributionUpdateP
 from phrase_api.models.document import Document
 from phrase_api.models.format import Format
 from phrase_api.models.github_sync_export_parameters import GithubSyncExportParameters
+from phrase_api.models.github_sync_import_parameters import GithubSyncImportParameters
 from phrase_api.models.gitlab_sync import GitlabSync
 from phrase_api.models.gitlab_sync_export import GitlabSyncExport
 from phrase_api.models.gitlab_sync_export_parameters import GitlabSyncExportParameters

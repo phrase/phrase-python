@@ -39,6 +39,7 @@ class TestJobCreateParameters(unittest.TestCase):
                 name = 'de', 
                 briefing = 'de-DE', 
                 due_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                ticket_url = 'https://example.atlassian.net/browse/FOO', 
                 tags = ["myUploadTag"], 
                 translation_key_ids = ["abcd1234cdef1234abcd1234cdef1234"]
             )

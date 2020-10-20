@@ -37,6 +37,7 @@ class Job(object):
         'briefing': 'str',
         'due_date': 'datetime',
         'state': 'str',
+        'ticket_url': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -47,11 +48,12 @@ class Job(object):
         'briefing': 'briefing',
         'due_date': 'due_date',
         'state': 'state',
+        'ticket_url': 'ticket_url',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Job - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +64,7 @@ class Job(object):
         self._briefing = None
         self._due_date = None
         self._state = None
+        self._ticket_url = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -76,6 +79,8 @@ class Job(object):
             self.due_date = due_date
         if state is not None:
             self.state = state
+        if ticket_url is not None:
+            self.ticket_url = ticket_url
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -185,6 +190,27 @@ class Job(object):
         """
 
         self._state = state
+
+    @property
+    def ticket_url(self):
+        """Gets the ticket_url of this Job.  # noqa: E501
+
+
+        :return: The ticket_url of this Job.  # noqa: E501
+        :rtype: str
+        """
+        return self._ticket_url
+
+    @ticket_url.setter
+    def ticket_url(self, ticket_url):
+        """Sets the ticket_url of this Job.
+
+
+        :param ticket_url: The ticket_url of this Job.  # noqa: E501
+        :type: str
+        """
+
+        self._ticket_url = ticket_url
 
     @property
     def created_at(self):

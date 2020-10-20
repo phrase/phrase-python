@@ -36,6 +36,7 @@ class JobCreateParameters(object):
         'name': 'str',
         'briefing': 'str',
         'due_date': 'datetime',
+        'ticket_url': 'str',
         'tags': 'list[str]',
         'translation_key_ids': 'list[str]'
     }
@@ -45,11 +46,12 @@ class JobCreateParameters(object):
         'name': 'name',
         'briefing': 'briefing',
         'due_date': 'due_date',
+        'ticket_url': 'ticket_url',
         'tags': 'tags',
         'translation_key_ids': 'translation_key_ids'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, due_date=None, tags=None, translation_key_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,6 +61,7 @@ class JobCreateParameters(object):
         self._name = None
         self._briefing = None
         self._due_date = None
+        self._ticket_url = None
         self._tags = None
         self._translation_key_ids = None
         self.discriminator = None
@@ -71,6 +74,8 @@ class JobCreateParameters(object):
             self.briefing = briefing
         if due_date is not None:
             self.due_date = due_date
+        if ticket_url is not None:
+            self.ticket_url = ticket_url
         if tags is not None:
             self.tags = tags
         if translation_key_ids is not None:
@@ -167,6 +172,29 @@ class JobCreateParameters(object):
         """
 
         self._due_date = due_date
+
+    @property
+    def ticket_url(self):
+        """Gets the ticket_url of this JobCreateParameters.  # noqa: E501
+
+        URL to a ticket for this job (e.g. Jira, Trello)  # noqa: E501
+
+        :return: The ticket_url of this JobCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._ticket_url
+
+    @ticket_url.setter
+    def ticket_url(self, ticket_url):
+        """Sets the ticket_url of this JobCreateParameters.
+
+        URL to a ticket for this job (e.g. Jira, Trello)  # noqa: E501
+
+        :param ticket_url: The ticket_url of this JobCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._ticket_url = ticket_url
 
     @property
     def tags(self):

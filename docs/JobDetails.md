@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **briefing** | **str** |  | [optional] 
 **due_date** | **datetime** |  | [optional] 
 **state** | **str** |  | [optional] 
+**ticket_url** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **owner** | [**UserPreview**](UserPreview.md) |  | [optional] 

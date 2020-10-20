@@ -35,17 +35,19 @@ class JobUpdateParameters(object):
         'branch': 'str',
         'name': 'str',
         'briefing': 'str',
-        'due_date': 'datetime'
+        'due_date': 'datetime',
+        'ticket_url': 'str'
     }
 
     attribute_map = {
         'branch': 'branch',
         'name': 'name',
         'briefing': 'briefing',
-        'due_date': 'due_date'
+        'due_date': 'due_date',
+        'ticket_url': 'ticket_url'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, due_date=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, local_vars_configuration=None):  # noqa: E501
         """JobUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class JobUpdateParameters(object):
         self._name = None
         self._briefing = None
         self._due_date = None
+        self._ticket_url = None
         self.discriminator = None
 
         if branch is not None:
@@ -65,6 +68,8 @@ class JobUpdateParameters(object):
             self.briefing = briefing
         if due_date is not None:
             self.due_date = due_date
+        if ticket_url is not None:
+            self.ticket_url = ticket_url
 
     @property
     def branch(self):
@@ -157,6 +162,29 @@ class JobUpdateParameters(object):
         """
 
         self._due_date = due_date
+
+    @property
+    def ticket_url(self):
+        """Gets the ticket_url of this JobUpdateParameters.  # noqa: E501
+
+        URL to a ticket for this job (e.g. Jira, Trello)  # noqa: E501
+
+        :return: The ticket_url of this JobUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._ticket_url
+
+    @ticket_url.setter
+    def ticket_url(self, ticket_url):
+        """Sets the ticket_url of this JobUpdateParameters.
+
+        URL to a ticket for this job (e.g. Jira, Trello)  # noqa: E501
+
+        :param ticket_url: The ticket_url of this JobUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._ticket_url = ticket_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

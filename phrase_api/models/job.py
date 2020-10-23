@@ -39,7 +39,8 @@ class Job(object):
         'state': 'str',
         'ticket_url': 'str',
         'created_at': 'datetime',
-        'updated_at': 'datetime'
+        'updated_at': 'datetime',
+        'project': 'ProjectShort'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class Job(object):
         'state': 'state',
         'ticket_url': 'ticket_url',
         'created_at': 'created_at',
-        'updated_at': 'updated_at'
+        'updated_at': 'updated_at',
+        'project': 'project'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, created_at=None, updated_at=None, project=None, local_vars_configuration=None):  # noqa: E501
         """Job - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +69,7 @@ class Job(object):
         self._ticket_url = None
         self._created_at = None
         self._updated_at = None
+        self._project = None
         self.discriminator = None
 
         if id is not None:
@@ -85,6 +88,8 @@ class Job(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if project is not None:
+            self.project = project
 
     @property
     def id(self):
@@ -253,6 +258,27 @@ class Job(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def project(self):
+        """Gets the project of this Job.  # noqa: E501
+
+
+        :return: The project of this Job.  # noqa: E501
+        :rtype: ProjectShort
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this Job.
+
+
+        :param project: The project of this Job.  # noqa: E501
+        :type: ProjectShort
+        """
+
+        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

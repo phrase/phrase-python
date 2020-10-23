@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **ticket_url** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
+**project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 
 **owner** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **job_tag_name** | **str** |  | [optional] 
 **locales** | [**list[LocalePreview]**](LocalePreview.md) |  | [optional] 

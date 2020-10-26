@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**job_show**](JobsApi.md#job_show) | **GET** /projects/{project_id}/jobs/{id} | Get a single job
 [**job_start**](JobsApi.md#job_start) | **POST** /projects/{project_id}/jobs/{id}/start | Start a job
 [**job_update**](JobsApi.md#job_update) | **PATCH** /projects/{project_id}/jobs/{id} | Update a job
+[**jobs_by_account**](JobsApi.md#jobs_by_account) | **GET** /accounts/{account_id}/jobs | List account jobs
 [**jobs_list**](JobsApi.md#jobs_list) | **GET** /projects/{project_id}/jobs | List jobs
 
 
@@ -638,6 +639,82 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **jobs_by_account**
+> list[Job] jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state)
+
+List account jobs
+
+List all jobs for the given account.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.JobsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
+    assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
+    state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+
+    try:
+        # List account jobs
+        api_response = api_instance.jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling JobsApi->jobs_by_account: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **owned_by** | **str**| filter by user owning job | [optional] 
+ **assigned_to** | **str**| filter by user assigned to job | [optional] 
+ **state** | **str**| filter by state of job Valid states are &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+
+### Return type
+
+[**list[Job]**](Job.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

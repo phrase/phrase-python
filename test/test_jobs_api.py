@@ -90,6 +90,13 @@ class TestJobsApi(unittest.TestCase):
         """
         pass
 
+    def test_jobs_by_account(self):
+        """Test case for jobs_by_account
+
+        List account jobs  # noqa: E501
+        """
+        pass
+
     def test_jobs_list(self):
         """Test case for jobs_list
 

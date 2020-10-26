@@ -1269,6 +1269,150 @@ class JobsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def jobs_by_account(self, account_id, **kwargs):  # noqa: E501
+        """List account jobs  # noqa: E501
+
+        List all jobs for the given account.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.jobs_by_account(account_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str account_id: Account ID (required)
+        :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param int page: Page number
+        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str owned_by: filter by user owning job
+        :param str assigned_to: filter by user assigned to job
+        :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Job]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.jobs_by_account_with_http_info(account_id, **kwargs)  # noqa: E501
+
+    def jobs_by_account_with_http_info(self, account_id, **kwargs):  # noqa: E501
+        """List account jobs  # noqa: E501
+
+        List all jobs for the given account.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.jobs_by_account_with_http_info(account_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str account_id: Account ID (required)
+        :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param int page: Page number
+        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str owned_by: filter by user owning job
+        :param str assigned_to: filter by user assigned to job
+        :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Job], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'account_id',
+            'x_phrase_app_otp',
+            'page',
+            'per_page',
+            'owned_by',
+            'assigned_to',
+            'state'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method jobs_by_account" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['account_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `account_id` when calling `jobs_by_account`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'account_id' in local_var_params:
+            path_params['account_id'] = local_var_params['account_id']  # noqa: E501
+
+        query_params = []
+        if 'page' in local_var_params and local_var_params['page'] is not None:  # noqa: E501
+            query_params.append(('page', local_var_params['page']))  # noqa: E501
+        if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
+            query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'owned_by' in local_var_params and local_var_params['owned_by'] is not None:  # noqa: E501
+            query_params.append(('owned_by', local_var_params['owned_by']))  # noqa: E501
+        if 'assigned_to' in local_var_params and local_var_params['assigned_to'] is not None:  # noqa: E501
+            query_params.append(('assigned_to', local_var_params['assigned_to']))  # noqa: E501
+        if 'state' in local_var_params and local_var_params['state'] is not None:  # noqa: E501
+            query_params.append(('state', local_var_params['state']))  # noqa: E501
+
+        header_params = {}
+        if 'x_phrase_app_otp' in local_var_params:
+            header_params['X-PhraseApp-OTP'] = local_var_params['x_phrase_app_otp']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic', 'Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/accounts/{account_id}/jobs', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Job]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def jobs_list(self, project_id, **kwargs):  # noqa: E501
         """List jobs  # noqa: E501
 

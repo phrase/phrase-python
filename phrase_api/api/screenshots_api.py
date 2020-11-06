@@ -574,6 +574,7 @@ class ScreenshotsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str key_id: filter by key
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -602,6 +603,7 @@ class ScreenshotsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str key_id: filter by key
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -622,7 +624,8 @@ class ScreenshotsApi(object):
             'project_id',
             'x_phrase_app_otp',
             'page',
-            'per_page'
+            'per_page',
+            'key_id'
         ]
         all_params.extend(
             [
@@ -657,6 +660,8 @@ class ScreenshotsApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'key_id' in local_var_params and local_var_params['key_id'] is not None:  # noqa: E501
+            query_params.append(('key_id', local_var_params['key_id']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

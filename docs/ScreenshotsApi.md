@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshots_list**
-> list[Screenshot] screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[Screenshot] screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, key_id=key_id)
 
 List screenshots
 
@@ -312,10 +312,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    key_id = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by key
 
     try:
         # List screenshots
-        api_response = api_instance.screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, key_id=key_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotsApi->screenshots_list: %s\n" % e)
@@ -330,6 +331,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **key_id** | **str**| filter by key | [optional] 
 
 ### Return type
 

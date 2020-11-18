@@ -36,6 +36,7 @@ class TestWebhookUpdateParameters(unittest.TestCase):
         if include_optional :
             return WebhookUpdateParameters(
                 callback_url = 'http://example.com/hooks/phraseapp-notifications', 
+                secret = 'secr3t', 
                 description = 'My webhook for chat notifications', 
                 events = 'locales:create,translations:update', 
                 active = True

@@ -33,6 +33,7 @@ class WebhookUpdateParameters(object):
     """
     openapi_types = {
         'callback_url': 'str',
+        'secret': 'str',
         'description': 'str',
         'events': 'str',
         'active': 'bool'
@@ -40,18 +41,20 @@ class WebhookUpdateParameters(object):
 
     attribute_map = {
         'callback_url': 'callback_url',
+        'secret': 'secret',
         'description': 'description',
         'events': 'events',
         'active': 'active'
     }
 
-    def __init__(self, callback_url=None, description=None, events=None, active=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, callback_url=None, secret=None, description=None, events=None, active=None, local_vars_configuration=None):  # noqa: E501
         """WebhookUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._callback_url = None
+        self._secret = None
         self._description = None
         self._events = None
         self._active = None
@@ -59,6 +62,8 @@ class WebhookUpdateParameters(object):
 
         if callback_url is not None:
             self.callback_url = callback_url
+        if secret is not None:
+            self.secret = secret
         if description is not None:
             self.description = description
         if events is not None:
@@ -88,6 +93,29 @@ class WebhookUpdateParameters(object):
         """
 
         self._callback_url = callback_url
+
+    @property
+    def secret(self):
+        """Gets the secret of this WebhookUpdateParameters.  # noqa: E501
+
+        Webhook secret used to calculate signature. If empty, the default project secret will be used.  # noqa: E501
+
+        :return: The secret of this WebhookUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._secret
+
+    @secret.setter
+    def secret(self, secret):
+        """Sets the secret of this WebhookUpdateParameters.
+
+        Webhook secret used to calculate signature. If empty, the default project secret will be used.  # noqa: E501
+
+        :param secret: The secret of this WebhookUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._secret = secret
 
     @property
     def description(self):

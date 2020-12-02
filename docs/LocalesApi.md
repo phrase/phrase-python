@@ -150,7 +150,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locale_download**
-> locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
+> locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
 
 Download a locale
 
@@ -181,6 +181,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     tags = 'feature1,feature2' # str | Limit results to keys tagged with a list of comma separated tag names.
     tag = 'feature' # str | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
     include_empty_translations = True # bool | Indicates whether keys without translations should be included in the output as well.
+    exclude_empty_zero_forms = True # bool | Indicates whether zero forms should be included when empty in pluralized keys.
     include_translated_keys = True # bool | Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
     keep_notranslate_tags = True # bool | Indicates whether [NOTRANSLATE] tags should be kept.
     convert_emoji = True # bool | This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
@@ -193,7 +194,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Download a locale
-        api_instance.locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
+        api_instance.locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
     except ApiException as e:
         print("Exception when calling LocalesApi->locale_download: %s\n" % e)
 ```
@@ -211,6 +212,7 @@ Name | Type | Description  | Notes
  **tags** | **str**| Limit results to keys tagged with a list of comma separated tag names. | [optional] 
  **tag** | **str**| Limit download to tagged keys. This parameter is deprecated. Please use the \&quot;tags\&quot; parameter instead | [optional] 
  **include_empty_translations** | **bool**| Indicates whether keys without translations should be included in the output as well. | [optional] 
+ **exclude_empty_zero_forms** | **bool**| Indicates whether zero forms should be included when empty in pluralized keys. | [optional] 
  **include_translated_keys** | **bool**| Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys. | [optional] 
  **keep_notranslate_tags** | **bool**| Indicates whether [NOTRANSLATE] tags should be kept. | [optional] 
  **convert_emoji** | **bool**| This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively. | [optional] 

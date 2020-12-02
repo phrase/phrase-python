@@ -314,6 +314,7 @@ class LocalesApi(object):
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
         :param str tag: Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
         :param bool include_empty_translations: Indicates whether keys without translations should be included in the output as well.
+        :param bool exclude_empty_zero_forms: Indicates whether zero forms should be included when empty in pluralized keys.
         :param bool include_translated_keys: Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
         :param bool keep_notranslate_tags: Indicates whether [NOTRANSLATE] tags should be kept.
         :param bool convert_emoji: This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
@@ -355,6 +356,7 @@ class LocalesApi(object):
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
         :param str tag: Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
         :param bool include_empty_translations: Indicates whether keys without translations should be included in the output as well.
+        :param bool exclude_empty_zero_forms: Indicates whether zero forms should be included when empty in pluralized keys.
         :param bool include_translated_keys: Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
         :param bool keep_notranslate_tags: Indicates whether [NOTRANSLATE] tags should be kept.
         :param bool convert_emoji: This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
@@ -389,6 +391,7 @@ class LocalesApi(object):
             'tags',
             'tag',
             'include_empty_translations',
+            'exclude_empty_zero_forms',
             'include_translated_keys',
             'keep_notranslate_tags',
             'convert_emoji',
@@ -444,6 +447,8 @@ class LocalesApi(object):
             query_params.append(('tag', local_var_params['tag']))  # noqa: E501
         if 'include_empty_translations' in local_var_params and local_var_params['include_empty_translations'] is not None:  # noqa: E501
             query_params.append(('include_empty_translations', local_var_params['include_empty_translations']))  # noqa: E501
+        if 'exclude_empty_zero_forms' in local_var_params and local_var_params['exclude_empty_zero_forms'] is not None:  # noqa: E501
+            query_params.append(('exclude_empty_zero_forms', local_var_params['exclude_empty_zero_forms']))  # noqa: E501
         if 'include_translated_keys' in local_var_params and local_var_params['include_translated_keys'] is not None:  # noqa: E501
             query_params.append(('include_translated_keys', local_var_params['include_translated_keys']))  # noqa: E501
         if 'keep_notranslate_tags' in local_var_params and local_var_params['keep_notranslate_tags'] is not None:  # noqa: E501

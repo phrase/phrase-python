@@ -38,9 +38,10 @@ class JobDetails(object):
         'due_date': 'datetime',
         'state': 'str',
         'ticket_url': 'str',
+        'project': 'ProjectShort',
+        'branch': 'BranchName',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'project': 'ProjectShort',
         'owner': 'UserPreview',
         'job_tag_name': 'str',
         'locales': 'list[LocalePreview]',
@@ -54,16 +55,17 @@ class JobDetails(object):
         'due_date': 'due_date',
         'state': 'state',
         'ticket_url': 'ticket_url',
+        'project': 'project',
+        'branch': 'branch',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'project': 'project',
         'owner': 'owner',
         'job_tag_name': 'job_tag_name',
         'locales': 'locales',
         'keys': 'keys'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, created_at=None, updated_at=None, project=None, owner=None, job_tag_name=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
         """JobDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,9 +77,10 @@ class JobDetails(object):
         self._due_date = None
         self._state = None
         self._ticket_url = None
+        self._project = None
+        self._branch = None
         self._created_at = None
         self._updated_at = None
-        self._project = None
         self._owner = None
         self._job_tag_name = None
         self._locales = None
@@ -96,12 +99,14 @@ class JobDetails(object):
             self.state = state
         if ticket_url is not None:
             self.ticket_url = ticket_url
+        if project is not None:
+            self.project = project
+        if branch is not None:
+            self.branch = branch
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if project is not None:
-            self.project = project
         if owner is not None:
             self.owner = owner
         if job_tag_name is not None:
@@ -238,6 +243,48 @@ class JobDetails(object):
         self._ticket_url = ticket_url
 
     @property
+    def project(self):
+        """Gets the project of this JobDetails.  # noqa: E501
+
+
+        :return: The project of this JobDetails.  # noqa: E501
+        :rtype: ProjectShort
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this JobDetails.
+
+
+        :param project: The project of this JobDetails.  # noqa: E501
+        :type: ProjectShort
+        """
+
+        self._project = project
+
+    @property
+    def branch(self):
+        """Gets the branch of this JobDetails.  # noqa: E501
+
+
+        :return: The branch of this JobDetails.  # noqa: E501
+        :rtype: BranchName
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this JobDetails.
+
+
+        :param branch: The branch of this JobDetails.  # noqa: E501
+        :type: BranchName
+        """
+
+        self._branch = branch
+
+    @property
     def created_at(self):
         """Gets the created_at of this JobDetails.  # noqa: E501
 
@@ -278,27 +325,6 @@ class JobDetails(object):
         """
 
         self._updated_at = updated_at
-
-    @property
-    def project(self):
-        """Gets the project of this JobDetails.  # noqa: E501
-
-
-        :return: The project of this JobDetails.  # noqa: E501
-        :rtype: ProjectShort
-        """
-        return self._project
-
-    @project.setter
-    def project(self, project):
-        """Sets the project of this JobDetails.
-
-
-        :param project: The project of this JobDetails.  # noqa: E501
-        :type: ProjectShort
-        """
-
-        self._project = project
 
     @property
     def owner(self):

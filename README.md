@@ -333,6 +333,7 @@ Class | Method | HTTP request | Description
  - [Branch](docs/Branch.md)
  - [BranchCreateParameters](docs/BranchCreateParameters.md)
  - [BranchMergeParameters](docs/BranchMergeParameters.md)
+ - [BranchName](docs/BranchName.md)
  - [BranchUpdateParameters](docs/BranchUpdateParameters.md)
  - [Comment](docs/Comment.md)
  - [CommentCreateParameters](docs/CommentCreateParameters.md)

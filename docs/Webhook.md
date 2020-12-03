@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **events** | **list[str]** |  | [optional] 
 **active** | **bool** |  | [optional] 
+**include_branches** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

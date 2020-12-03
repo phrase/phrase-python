@@ -39,7 +39,8 @@ class TestWebhookCreateParameters(unittest.TestCase):
                 secret = 'secr3t', 
                 description = 'My webhook for chat notifications', 
                 events = 'locales:create,translations:update', 
-                active = True
+                active = True, 
+                include_branches = True
             )
         else :
             return WebhookCreateParameters(

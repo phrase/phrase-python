@@ -37,6 +37,7 @@ class Webhook(object):
         'description': 'str',
         'events': 'list[str]',
         'active': 'bool',
+        'include_branches': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -47,11 +48,12 @@ class Webhook(object):
         'description': 'description',
         'events': 'events',
         'active': 'active',
+        'include_branches': 'include_branches',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, callback_url=None, description=None, events=None, active=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, callback_url=None, description=None, events=None, active=None, include_branches=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Webhook - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +64,7 @@ class Webhook(object):
         self._description = None
         self._events = None
         self._active = None
+        self._include_branches = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -76,6 +79,8 @@ class Webhook(object):
             self.events = events
         if active is not None:
             self.active = active
+        if include_branches is not None:
+            self.include_branches = include_branches
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -185,6 +190,27 @@ class Webhook(object):
         """
 
         self._active = active
+
+    @property
+    def include_branches(self):
+        """Gets the include_branches of this Webhook.  # noqa: E501
+
+
+        :return: The include_branches of this Webhook.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_branches
+
+    @include_branches.setter
+    def include_branches(self, include_branches):
+        """Sets the include_branches of this Webhook.
+
+
+        :param include_branches: The include_branches of this Webhook.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_branches = include_branches
 
     @property
     def created_at(self):

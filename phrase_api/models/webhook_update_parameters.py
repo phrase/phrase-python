@@ -36,7 +36,8 @@ class WebhookUpdateParameters(object):
         'secret': 'str',
         'description': 'str',
         'events': 'str',
-        'active': 'bool'
+        'active': 'bool',
+        'include_branches': 'bool'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class WebhookUpdateParameters(object):
         'secret': 'secret',
         'description': 'description',
         'events': 'events',
-        'active': 'active'
+        'active': 'active',
+        'include_branches': 'include_branches'
     }
 
-    def __init__(self, callback_url=None, secret=None, description=None, events=None, active=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, callback_url=None, secret=None, description=None, events=None, active=None, include_branches=None, local_vars_configuration=None):  # noqa: E501
         """WebhookUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,6 +60,7 @@ class WebhookUpdateParameters(object):
         self._description = None
         self._events = None
         self._active = None
+        self._include_branches = None
         self.discriminator = None
 
         if callback_url is not None:
@@ -70,6 +73,8 @@ class WebhookUpdateParameters(object):
             self.events = events
         if active is not None:
             self.active = active
+        if include_branches is not None:
+            self.include_branches = include_branches
 
     @property
     def callback_url(self):
@@ -185,6 +190,29 @@ class WebhookUpdateParameters(object):
         """
 
         self._active = active
+
+    @property
+    def include_branches(self):
+        """Gets the include_branches of this WebhookUpdateParameters.  # noqa: E501
+
+        If enabled, webhook will also be triggered for events from branches of the project specified.  # noqa: E501
+
+        :return: The include_branches of this WebhookUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_branches
+
+    @include_branches.setter
+    def include_branches(self, include_branches):
+        """Sets the include_branches of this WebhookUpdateParameters.
+
+        If enabled, webhook will also be triggered for events from branches of the project specified.  # noqa: E501
+
+        :param include_branches: The include_branches of this WebhookUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_branches = include_branches
 
     def to_dict(self):
         """Returns the model properties as a dict"""

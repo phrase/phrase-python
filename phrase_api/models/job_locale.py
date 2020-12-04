@@ -35,17 +35,19 @@ class JobLocale(object):
         'id': 'str',
         'job': 'JobPreview',
         'locale': 'LocalePreview',
-        'users': 'list[UserPreview]'
+        'users': 'list[UserPreview]',
+        'completed': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'job': 'job',
         'locale': 'locale',
-        'users': 'users'
+        'users': 'users',
+        'completed': 'completed'
     }
 
-    def __init__(self, id=None, job=None, locale=None, users=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, job=None, locale=None, users=None, completed=None, local_vars_configuration=None):  # noqa: E501
         """JobLocale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class JobLocale(object):
         self._job = None
         self._locale = None
         self._users = None
+        self._completed = None
         self.discriminator = None
 
         if id is not None:
@@ -65,6 +68,8 @@ class JobLocale(object):
             self.locale = locale
         if users is not None:
             self.users = users
+        if completed is not None:
+            self.completed = completed
 
     @property
     def id(self):
@@ -149,6 +154,27 @@ class JobLocale(object):
         """
 
         self._users = users
+
+    @property
+    def completed(self):
+        """Gets the completed of this JobLocale.  # noqa: E501
+
+
+        :return: The completed of this JobLocale.  # noqa: E501
+        :rtype: bool
+        """
+        return self._completed
+
+    @completed.setter
+    def completed(self, completed):
+        """Sets the completed of this JobLocale.
+
+
+        :param completed: The completed of this JobLocale.  # noqa: E501
+        :type: bool
+        """
+
+        self._completed = completed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

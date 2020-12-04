@@ -46,7 +46,8 @@ class TestJobLocale(unittest.TestCase):
                         id = '0', 
                         username = '0', 
                         name = '0', )
-                    ]
+                    ], 
+                completed = True
             )
         else :
             return JobLocale(

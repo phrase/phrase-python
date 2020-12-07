@@ -39,6 +39,9 @@ class TestMember(unittest.TestCase):
                 email = '0', 
                 username = '0', 
                 role = '0', 
+                default_locale_codes = [
+                    '0'
+                    ], 
                 projects = [
                     null
                     ]

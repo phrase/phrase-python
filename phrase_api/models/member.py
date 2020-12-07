@@ -36,6 +36,7 @@ class Member(object):
         'email': 'str',
         'username': 'str',
         'role': 'str',
+        'default_locale_codes': 'list[str]',
         'projects': 'list[ProjectLocales]'
     }
 
@@ -44,10 +45,11 @@ class Member(object):
         'email': 'email',
         'username': 'username',
         'role': 'role',
+        'default_locale_codes': 'default_locale_codes',
         'projects': 'projects'
     }
 
-    def __init__(self, id=None, email=None, username=None, role=None, projects=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, username=None, role=None, default_locale_codes=None, projects=None, local_vars_configuration=None):  # noqa: E501
         """Member - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class Member(object):
         self._email = None
         self._username = None
         self._role = None
+        self._default_locale_codes = None
         self._projects = None
         self.discriminator = None
 
@@ -68,6 +71,8 @@ class Member(object):
             self.username = username
         if role is not None:
             self.role = role
+        if default_locale_codes is not None:
+            self.default_locale_codes = default_locale_codes
         if projects is not None:
             self.projects = projects
 
@@ -154,6 +159,27 @@ class Member(object):
         """
 
         self._role = role
+
+    @property
+    def default_locale_codes(self):
+        """Gets the default_locale_codes of this Member.  # noqa: E501
+
+
+        :return: The default_locale_codes of this Member.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._default_locale_codes
+
+    @default_locale_codes.setter
+    def default_locale_codes(self, default_locale_codes):
+        """Sets the default_locale_codes of this Member.
+
+
+        :param default_locale_codes: The default_locale_codes of this Member.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._default_locale_codes = default_locale_codes
 
     @property
     def projects(self):

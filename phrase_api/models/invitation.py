@@ -38,6 +38,7 @@ class Invitation(object):
         'state': 'str',
         'projects': 'list[ProjectShort]',
         'locales': 'list[LocalePreview]',
+        'default_locale_codes': 'list[str]',
         'permissions': 'object',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -51,13 +52,14 @@ class Invitation(object):
         'state': 'state',
         'projects': 'projects',
         'locales': 'locales',
+        'default_locale_codes': 'default_locale_codes',
         'permissions': 'permissions',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'accepted_at': 'accepted_at'
     }
 
-    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, permissions=None, created_at=None, updated_at=None, accepted_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, created_at=None, updated_at=None, accepted_at=None, local_vars_configuration=None):  # noqa: E501
         """Invitation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,6 +71,7 @@ class Invitation(object):
         self._state = None
         self._projects = None
         self._locales = None
+        self._default_locale_codes = None
         self._permissions = None
         self._created_at = None
         self._updated_at = None
@@ -87,6 +90,8 @@ class Invitation(object):
             self.projects = projects
         if locales is not None:
             self.locales = locales
+        if default_locale_codes is not None:
+            self.default_locale_codes = default_locale_codes
         if permissions is not None:
             self.permissions = permissions
         if created_at is not None:
@@ -221,6 +226,27 @@ class Invitation(object):
         """
 
         self._locales = locales
+
+    @property
+    def default_locale_codes(self):
+        """Gets the default_locale_codes of this Invitation.  # noqa: E501
+
+
+        :return: The default_locale_codes of this Invitation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._default_locale_codes
+
+    @default_locale_codes.setter
+    def default_locale_codes(self, default_locale_codes):
+        """Sets the default_locale_codes of this Invitation.
+
+
+        :param default_locale_codes: The default_locale_codes of this Invitation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._default_locale_codes = default_locale_codes
 
     @property
     def permissions(self):

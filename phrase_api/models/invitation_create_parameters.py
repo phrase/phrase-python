@@ -36,6 +36,7 @@ class InvitationCreateParameters(object):
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
+        'default_locale_codes': 'list[str]',
         'permissions': 'dict(str, str)'
     }
 
@@ -44,10 +45,11 @@ class InvitationCreateParameters(object):
         'role': 'role',
         'project_ids': 'project_ids',
         'locale_ids': 'locale_ids',
+        'default_locale_codes': 'default_locale_codes',
         'permissions': 'permissions'
     }
 
-    def __init__(self, email=None, role=None, project_ids=None, locale_ids=None, permissions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, email=None, role=None, project_ids=None, locale_ids=None, default_locale_codes=None, permissions=None, local_vars_configuration=None):  # noqa: E501
         """InvitationCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class InvitationCreateParameters(object):
         self._role = None
         self._project_ids = None
         self._locale_ids = None
+        self._default_locale_codes = None
         self._permissions = None
         self.discriminator = None
 
@@ -68,6 +71,8 @@ class InvitationCreateParameters(object):
             self.project_ids = project_ids
         if locale_ids is not None:
             self.locale_ids = locale_ids
+        if default_locale_codes is not None:
+            self.default_locale_codes = default_locale_codes
         if permissions is not None:
             self.permissions = permissions
 
@@ -162,6 +167,29 @@ class InvitationCreateParameters(object):
         """
 
         self._locale_ids = locale_ids
+
+    @property
+    def default_locale_codes(self):
+        """Gets the default_locale_codes of this InvitationCreateParameters.  # noqa: E501
+
+        List of default locales for the user.  # noqa: E501
+
+        :return: The default_locale_codes of this InvitationCreateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._default_locale_codes
+
+    @default_locale_codes.setter
+    def default_locale_codes(self, default_locale_codes):
+        """Sets the default_locale_codes of this InvitationCreateParameters.
+
+        List of default locales for the user.  # noqa: E501
+
+        :param default_locale_codes: The default_locale_codes of this InvitationCreateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._default_locale_codes = default_locale_codes
 
     @property
     def permissions(self):

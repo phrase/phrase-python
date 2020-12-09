@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **state** | **str** |  | [optional] 
 **projects** | [**list[ProjectShort]**](ProjectShort.md) |  | [optional] 
 **locales** | [**list[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**default_locale_codes** | **list[str]** |  | [optional] 
 **permissions** | [**object**](.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

@@ -39,6 +39,7 @@ class TestMemberUpdateParameters(unittest.TestCase):
                 project_ids = 'abcd1234abcd1234abcd1234,abcd1234abcd1234abcd1235', 
                 locale_ids = 'abcd1234abcd1234abcd1234,abcd1234abcd1234abcd1235', 
                 default_locale_codes = ["en","fi"], 
+                space_ids = ["abcd1234abcd1234abcd1234","abcd1234abcd1234abcd1235"], 
                 permissions = {"create_upload":true,"review_translations":true}
             )
         else :

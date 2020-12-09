@@ -95,6 +95,7 @@ from phrase_api.models.locale_preview import LocalePreview
 from phrase_api.models.locale_statistics import LocaleStatistics
 from phrase_api.models.locale_update_parameters import LocaleUpdateParameters
 from phrase_api.models.member import Member
+from phrase_api.models.member_spaces import MemberSpaces
 from phrase_api.models.member_update_parameters import MemberUpdateParameters
 from phrase_api.models.order_confirm_parameters import OrderConfirmParameters
 from phrase_api.models.order_create_parameters import OrderCreateParameters

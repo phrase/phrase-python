@@ -39,11 +39,20 @@ class TestMember(unittest.TestCase):
                 email = '0', 
                 username = '0', 
                 role = '0', 
+                projects = [
+                    null
+                    ], 
+                permissions = None, 
                 default_locale_codes = [
                     '0'
                     ], 
-                projects = [
-                    null
+                spaces = [
+                    phrase_api.models.member_spaces.member_spaces(
+                        id = '0', 
+                        name = '0', 
+                        created_at = null, 
+                        updated_at = null, 
+                        projects_count = 56, )
                     ]
             )
         else :

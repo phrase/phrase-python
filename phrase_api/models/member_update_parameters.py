@@ -36,6 +36,7 @@ class MemberUpdateParameters(object):
         'project_ids': 'str',
         'locale_ids': 'str',
         'default_locale_codes': 'list[str]',
+        'space_ids': 'list[str]',
         'permissions': 'dict(str, str)'
     }
 
@@ -44,10 +45,11 @@ class MemberUpdateParameters(object):
         'project_ids': 'project_ids',
         'locale_ids': 'locale_ids',
         'default_locale_codes': 'default_locale_codes',
+        'space_ids': 'space_ids',
         'permissions': 'permissions'
     }
 
-    def __init__(self, role=None, project_ids=None, locale_ids=None, default_locale_codes=None, permissions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, role=None, project_ids=None, locale_ids=None, default_locale_codes=None, space_ids=None, permissions=None, local_vars_configuration=None):  # noqa: E501
         """MemberUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class MemberUpdateParameters(object):
         self._project_ids = None
         self._locale_ids = None
         self._default_locale_codes = None
+        self._space_ids = None
         self._permissions = None
         self.discriminator = None
 
@@ -68,6 +71,8 @@ class MemberUpdateParameters(object):
             self.locale_ids = locale_ids
         if default_locale_codes is not None:
             self.default_locale_codes = default_locale_codes
+        if space_ids is not None:
+            self.space_ids = space_ids
         if permissions is not None:
             self.permissions = permissions
 
@@ -162,6 +167,29 @@ class MemberUpdateParameters(object):
         """
 
         self._default_locale_codes = default_locale_codes
+
+    @property
+    def space_ids(self):
+        """Gets the space_ids of this MemberUpdateParameters.  # noqa: E501
+
+        List of spaces the user is assigned to.  # noqa: E501
+
+        :return: The space_ids of this MemberUpdateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._space_ids
+
+    @space_ids.setter
+    def space_ids(self, space_ids):
+        """Sets the space_ids of this MemberUpdateParameters.
+
+        List of spaces the user is assigned to.  # noqa: E501
+
+        :param space_ids: The space_ids of this MemberUpdateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._space_ids = space_ids
 
     @property
     def permissions(self):

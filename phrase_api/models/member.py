@@ -36,8 +36,10 @@ class Member(object):
         'email': 'str',
         'username': 'str',
         'role': 'str',
+        'projects': 'list[ProjectLocales]',
+        'permissions': 'object',
         'default_locale_codes': 'list[str]',
-        'projects': 'list[ProjectLocales]'
+        'spaces': 'list[MemberSpaces]'
     }
 
     attribute_map = {
@@ -45,11 +47,13 @@ class Member(object):
         'email': 'email',
         'username': 'username',
         'role': 'role',
+        'projects': 'projects',
+        'permissions': 'permissions',
         'default_locale_codes': 'default_locale_codes',
-        'projects': 'projects'
+        'spaces': 'spaces'
     }
 
-    def __init__(self, id=None, email=None, username=None, role=None, default_locale_codes=None, projects=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, username=None, role=None, projects=None, permissions=None, default_locale_codes=None, spaces=None, local_vars_configuration=None):  # noqa: E501
         """Member - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,8 +63,10 @@ class Member(object):
         self._email = None
         self._username = None
         self._role = None
-        self._default_locale_codes = None
         self._projects = None
+        self._permissions = None
+        self._default_locale_codes = None
+        self._spaces = None
         self.discriminator = None
 
         if id is not None:
@@ -71,10 +77,14 @@ class Member(object):
             self.username = username
         if role is not None:
             self.role = role
-        if default_locale_codes is not None:
-            self.default_locale_codes = default_locale_codes
         if projects is not None:
             self.projects = projects
+        if permissions is not None:
+            self.permissions = permissions
+        if default_locale_codes is not None:
+            self.default_locale_codes = default_locale_codes
+        if spaces is not None:
+            self.spaces = spaces
 
     @property
     def id(self):
@@ -161,6 +171,48 @@ class Member(object):
         self._role = role
 
     @property
+    def projects(self):
+        """Gets the projects of this Member.  # noqa: E501
+
+
+        :return: The projects of this Member.  # noqa: E501
+        :rtype: list[ProjectLocales]
+        """
+        return self._projects
+
+    @projects.setter
+    def projects(self, projects):
+        """Sets the projects of this Member.
+
+
+        :param projects: The projects of this Member.  # noqa: E501
+        :type: list[ProjectLocales]
+        """
+
+        self._projects = projects
+
+    @property
+    def permissions(self):
+        """Gets the permissions of this Member.  # noqa: E501
+
+
+        :return: The permissions of this Member.  # noqa: E501
+        :rtype: object
+        """
+        return self._permissions
+
+    @permissions.setter
+    def permissions(self, permissions):
+        """Sets the permissions of this Member.
+
+
+        :param permissions: The permissions of this Member.  # noqa: E501
+        :type: object
+        """
+
+        self._permissions = permissions
+
+    @property
     def default_locale_codes(self):
         """Gets the default_locale_codes of this Member.  # noqa: E501
 
@@ -182,25 +234,25 @@ class Member(object):
         self._default_locale_codes = default_locale_codes
 
     @property
-    def projects(self):
-        """Gets the projects of this Member.  # noqa: E501
+    def spaces(self):
+        """Gets the spaces of this Member.  # noqa: E501
 
 
-        :return: The projects of this Member.  # noqa: E501
-        :rtype: list[ProjectLocales]
+        :return: The spaces of this Member.  # noqa: E501
+        :rtype: list[MemberSpaces]
         """
-        return self._projects
+        return self._spaces
 
-    @projects.setter
-    def projects(self, projects):
-        """Sets the projects of this Member.
+    @spaces.setter
+    def spaces(self, spaces):
+        """Sets the spaces of this Member.
 
 
-        :param projects: The projects of this Member.  # noqa: E501
-        :type: list[ProjectLocales]
+        :param spaces: The spaces of this Member.  # noqa: E501
+        :type: list[MemberSpaces]
         """
 
-        self._projects = projects
+        self._spaces = spaces
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,6 +35,7 @@ class InvitationUpdateParameters(object):
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
+        'space_ids': 'list[str]',
         'default_locale_codes': 'list[str]',
         'permissions': 'dict(str, str)'
     }
@@ -43,11 +44,12 @@ class InvitationUpdateParameters(object):
         'role': 'role',
         'project_ids': 'project_ids',
         'locale_ids': 'locale_ids',
+        'space_ids': 'space_ids',
         'default_locale_codes': 'default_locale_codes',
         'permissions': 'permissions'
     }
 
-    def __init__(self, role=None, project_ids=None, locale_ids=None, default_locale_codes=None, permissions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, role=None, project_ids=None, locale_ids=None, space_ids=None, default_locale_codes=None, permissions=None, local_vars_configuration=None):  # noqa: E501
         """InvitationUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,6 +58,7 @@ class InvitationUpdateParameters(object):
         self._role = None
         self._project_ids = None
         self._locale_ids = None
+        self._space_ids = None
         self._default_locale_codes = None
         self._permissions = None
         self.discriminator = None
@@ -66,6 +69,8 @@ class InvitationUpdateParameters(object):
             self.project_ids = project_ids
         if locale_ids is not None:
             self.locale_ids = locale_ids
+        if space_ids is not None:
+            self.space_ids = space_ids
         if default_locale_codes is not None:
             self.default_locale_codes = default_locale_codes
         if permissions is not None:
@@ -139,6 +144,29 @@ class InvitationUpdateParameters(object):
         """
 
         self._locale_ids = locale_ids
+
+    @property
+    def space_ids(self):
+        """Gets the space_ids of this InvitationUpdateParameters.  # noqa: E501
+
+        List of spaces the user is assigned to.  # noqa: E501
+
+        :return: The space_ids of this InvitationUpdateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._space_ids
+
+    @space_ids.setter
+    def space_ids(self, space_ids):
+        """Sets the space_ids of this InvitationUpdateParameters.
+
+        List of spaces the user is assigned to.  # noqa: E501
+
+        :param space_ids: The space_ids of this InvitationUpdateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._space_ids = space_ids
 
     @property
     def default_locale_codes(self):

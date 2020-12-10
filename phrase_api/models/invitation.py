@@ -42,7 +42,8 @@ class Invitation(object):
         'permissions': 'object',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'accepted_at': 'datetime'
+        'accepted_at': 'datetime',
+        'spaces': 'list[MemberSpaces]'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class Invitation(object):
         'permissions': 'permissions',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'accepted_at': 'accepted_at'
+        'accepted_at': 'accepted_at',
+        'spaces': 'spaces'
     }
 
-    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, created_at=None, updated_at=None, accepted_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, local_vars_configuration=None):  # noqa: E501
         """Invitation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -76,6 +78,7 @@ class Invitation(object):
         self._created_at = None
         self._updated_at = None
         self._accepted_at = None
+        self._spaces = None
         self.discriminator = None
 
         if id is not None:
@@ -100,6 +103,8 @@ class Invitation(object):
             self.updated_at = updated_at
         if accepted_at is not None:
             self.accepted_at = accepted_at
+        if spaces is not None:
+            self.spaces = spaces
 
     @property
     def id(self):
@@ -331,6 +336,27 @@ class Invitation(object):
         """
 
         self._accepted_at = accepted_at
+
+    @property
+    def spaces(self):
+        """Gets the spaces of this Invitation.  # noqa: E501
+
+
+        :return: The spaces of this Invitation.  # noqa: E501
+        :rtype: list[MemberSpaces]
+        """
+        return self._spaces
+
+    @spaces.setter
+    def spaces(self, spaces):
+        """Sets the spaces of this Invitation.
+
+
+        :param spaces: The spaces of this Invitation.  # noqa: E501
+        :type: list[MemberSpaces]
+        """
+
+        self._spaces = spaces
 
     def to_dict(self):
         """Returns the model properties as a dict"""

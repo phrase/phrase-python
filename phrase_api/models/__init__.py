@@ -95,8 +95,11 @@ from phrase_api.models.locale_preview import LocalePreview
 from phrase_api.models.locale_statistics import LocaleStatistics
 from phrase_api.models.locale_update_parameters import LocaleUpdateParameters
 from phrase_api.models.member import Member
+from phrase_api.models.member_project_detail import MemberProjectDetail
+from phrase_api.models.member_project_detail_project_roles import MemberProjectDetailProjectRoles
 from phrase_api.models.member_spaces import MemberSpaces
 from phrase_api.models.member_update_parameters import MemberUpdateParameters
+from phrase_api.models.member_update_settings_parameters import MemberUpdateSettingsParameters
 from phrase_api.models.order_confirm_parameters import OrderConfirmParameters
 from phrase_api.models.order_create_parameters import OrderCreateParameters
 from phrase_api.models.project import Project

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**member_delete**](MembersApi.md#member_delete) | **DELETE** /accounts/{account_id}/members/{id} | Remove a user from the account
 [**member_show**](MembersApi.md#member_show) | **GET** /accounts/{account_id}/members/{id} | Get single member
 [**member_update**](MembersApi.md#member_update) | **PATCH** /accounts/{account_id}/members/{id} | Update a member
+[**member_update_settings**](MembersApi.md#member_update_settings) | **PATCH** /projects/{project_id}/members/{id} | Update a member&#39;s project settings
 [**members_list**](MembersApi.md#members_list) | **GET** /accounts/{account_id}/members | List members
 
 
@@ -199,6 +200,78 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Member**](Member.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **member_update_settings**
+> MemberProjectDetail member_update_settings(project_id, id, member_update_settings_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Update a member's project settings
+
+Update user settings in the project. Access token scope must include <code>team.manage</code>.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.MembersApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    member_update_settings_parameters = phrase_api.MemberUpdateSettingsParameters() # MemberUpdateSettingsParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+
+    try:
+        # Update a member's project settings
+        api_response = api_instance.member_update_settings(project_id, id, member_update_settings_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling MembersApi->member_update_settings: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **member_update_settings_parameters** | [**MemberUpdateSettingsParameters**](MemberUpdateSettingsParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**MemberProjectDetail**](MemberProjectDetail.md)
 
 ### Authorization
 

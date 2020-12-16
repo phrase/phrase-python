@@ -48,6 +48,13 @@ class TestMembersApi(unittest.TestCase):
         """
         pass
 
+    def test_member_update_settings(self):
+        """Test case for member_update_settings
+
+        Update a member's project settings  # noqa: E501
+        """
+        pass
+
     def test_members_list(self):
         """Test case for members_list
 

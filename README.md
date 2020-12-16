@@ -225,6 +225,7 @@ Class | Method | HTTP request | Description
 *MembersApi* | [**member_delete**](docs/MembersApi.md#member_delete) | **DELETE** /accounts/{account_id}/members/{id} | Remove a user from the account
 *MembersApi* | [**member_show**](docs/MembersApi.md#member_show) | **GET** /accounts/{account_id}/members/{id} | Get single member
 *MembersApi* | [**member_update**](docs/MembersApi.md#member_update) | **PATCH** /accounts/{account_id}/members/{id} | Update a member
+*MembersApi* | [**member_update_settings**](docs/MembersApi.md#member_update_settings) | **PATCH** /projects/{project_id}/members/{id} | Update a member&#39;s project settings
 *MembersApi* | [**members_list**](docs/MembersApi.md#members_list) | **GET** /accounts/{account_id}/members | List members
 *OrdersApi* | [**order_confirm**](docs/OrdersApi.md#order_confirm) | **PATCH** /projects/{project_id}/orders/{id}/confirm | Confirm an order
 *OrdersApi* | [**order_create**](docs/OrdersApi.md#order_create) | **POST** /projects/{project_id}/orders | Create a new order
@@ -395,8 +396,11 @@ Class | Method | HTTP request | Description
  - [LocaleStatistics](docs/LocaleStatistics.md)
  - [LocaleUpdateParameters](docs/LocaleUpdateParameters.md)
  - [Member](docs/Member.md)
+ - [MemberProjectDetail](docs/MemberProjectDetail.md)
+ - [MemberProjectDetailProjectRoles](docs/MemberProjectDetailProjectRoles.md)
  - [MemberSpaces](docs/MemberSpaces.md)
  - [MemberUpdateParameters](docs/MemberUpdateParameters.md)
+ - [MemberUpdateSettingsParameters](docs/MemberUpdateSettingsParameters.md)
  - [OrderConfirmParameters](docs/OrderConfirmParameters.md)
  - [OrderCreateParameters](docs/OrderCreateParameters.md)
  - [Project](docs/Project.md)

@@ -40,10 +40,12 @@ class Invitation(object):
         'locales': 'list[LocalePreview]',
         'default_locale_codes': 'list[str]',
         'permissions': 'object',
+        'locale_ids': 'list[str]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'accepted_at': 'datetime',
-        'spaces': 'list[MemberSpaces]'
+        'spaces': 'list[MemberSpaces]',
+        'project_role': 'list[MemberProjectDetailProjectRoles]'
     }
 
     attribute_map = {
@@ -55,13 +57,15 @@ class Invitation(object):
         'locales': 'locales',
         'default_locale_codes': 'default_locale_codes',
         'permissions': 'permissions',
+        'locale_ids': 'locale_ids',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'accepted_at': 'accepted_at',
-        'spaces': 'spaces'
+        'spaces': 'spaces',
+        'project_role': 'project_role'
     }
 
-    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, locale_ids=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, project_role=None, local_vars_configuration=None):  # noqa: E501
         """Invitation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,10 +79,12 @@ class Invitation(object):
         self._locales = None
         self._default_locale_codes = None
         self._permissions = None
+        self._locale_ids = None
         self._created_at = None
         self._updated_at = None
         self._accepted_at = None
         self._spaces = None
+        self._project_role = None
         self.discriminator = None
 
         if id is not None:
@@ -97,6 +103,8 @@ class Invitation(object):
             self.default_locale_codes = default_locale_codes
         if permissions is not None:
             self.permissions = permissions
+        if locale_ids is not None:
+            self.locale_ids = locale_ids
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -105,6 +113,8 @@ class Invitation(object):
             self.accepted_at = accepted_at
         if spaces is not None:
             self.spaces = spaces
+        if project_role is not None:
+            self.project_role = project_role
 
     @property
     def id(self):
@@ -275,6 +285,27 @@ class Invitation(object):
         self._permissions = permissions
 
     @property
+    def locale_ids(self):
+        """Gets the locale_ids of this Invitation.  # noqa: E501
+
+
+        :return: The locale_ids of this Invitation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._locale_ids
+
+    @locale_ids.setter
+    def locale_ids(self, locale_ids):
+        """Sets the locale_ids of this Invitation.
+
+
+        :param locale_ids: The locale_ids of this Invitation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._locale_ids = locale_ids
+
+    @property
     def created_at(self):
         """Gets the created_at of this Invitation.  # noqa: E501
 
@@ -357,6 +388,27 @@ class Invitation(object):
         """
 
         self._spaces = spaces
+
+    @property
+    def project_role(self):
+        """Gets the project_role of this Invitation.  # noqa: E501
+
+
+        :return: The project_role of this Invitation.  # noqa: E501
+        :rtype: list[MemberProjectDetailProjectRoles]
+        """
+        return self._project_role
+
+    @project_role.setter
+    def project_role(self, project_role):
+        """Sets the project_role of this Invitation.
+
+
+        :param project_role: The project_role of this Invitation.  # noqa: E501
+        :type: list[MemberProjectDetailProjectRoles]
+        """
+
+        self._project_role = project_role
 
     def to_dict(self):
         """Returns the model properties as a dict"""

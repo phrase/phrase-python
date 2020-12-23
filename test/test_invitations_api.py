@@ -62,6 +62,13 @@ class TestInvitationsApi(unittest.TestCase):
         """
         pass
 
+    def test_invitation_update_settings(self):
+        """Test case for invitation_update_settings
+
+        Update a member's invitation access  # noqa: E501
+        """
+        pass
+
     def test_invitations_list(self):
         """Test case for invitations_list
 

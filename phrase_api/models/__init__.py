@@ -66,6 +66,7 @@ from phrase_api.models.inline_response422_errors import InlineResponse422Errors
 from phrase_api.models.invitation import Invitation
 from phrase_api.models.invitation_create_parameters import InvitationCreateParameters
 from phrase_api.models.invitation_update_parameters import InvitationUpdateParameters
+from phrase_api.models.invitation_update_settings_parameters import InvitationUpdateSettingsParameters
 from phrase_api.models.job import Job
 from phrase_api.models.job_complete_parameters import JobCompleteParameters
 from phrase_api.models.job_create_parameters import JobCreateParameters

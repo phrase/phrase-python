@@ -49,6 +49,9 @@ class TestInvitation(unittest.TestCase):
                     '0'
                     ], 
                 permissions = None, 
+                locale_ids = [
+                    '0'
+                    ], 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 accepted_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -59,6 +62,11 @@ class TestInvitation(unittest.TestCase):
                         created_at = null, 
                         updated_at = null, 
                         projects_count = 56, )
+                    ], 
+                project_role = [
+                    phrase_api.models.member_project_detail_project_roles.member_project_detail_project_roles(
+                        project_id = '0', 
+                        role = '0', )
                     ]
             )
         else :

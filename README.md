@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *BranchesApi* | [**branch_show**](docs/BranchesApi.md#branch_show) | **GET** /projects/{project_id}/branches/{name} | Get a single branch
 *BranchesApi* | [**branch_update**](docs/BranchesApi.md#branch_update) | **PATCH** /projects/{project_id}/branches/{name} | Update a branch
 *BranchesApi* | [**branches_list**](docs/BranchesApi.md#branches_list) | **GET** /projects/{project_id}/branches | List branches
+*BranchesApi* | [**variables_list**](docs/BranchesApi.md#variables_list) | **GET** /projects/{project_id}/variables | List variables
 *CommentsApi* | [**comment_create**](docs/CommentsApi.md#comment_create) | **POST** /projects/{project_id}/keys/{key_id}/comments | Create a comment
 *CommentsApi* | [**comment_delete**](docs/CommentsApi.md#comment_delete) | **DELETE** /projects/{project_id}/keys/{key_id}/comments/{id} | Delete a comment
 *CommentsApi* | [**comment_mark_check**](docs/CommentsApi.md#comment_mark_check) | **GET** /projects/{project_id}/keys/{key_id}/comments/{id}/read | Check if comment is read
@@ -303,6 +304,10 @@ Class | Method | HTTP request | Description
 *UploadsApi* | [**upload_show**](docs/UploadsApi.md#upload_show) | **GET** /projects/{project_id}/uploads/{id} | View upload details
 *UploadsApi* | [**uploads_list**](docs/UploadsApi.md#uploads_list) | **GET** /projects/{project_id}/uploads | List uploads
 *UsersApi* | [**show_user**](docs/UsersApi.md#show_user) | **GET** /user | Show current User
+*VariablesApi* | [**variable_create**](docs/VariablesApi.md#variable_create) | **POST** /projects/{project_id}/variables | Create a variable
+*VariablesApi* | [**variable_delete**](docs/VariablesApi.md#variable_delete) | **DELETE** /projects/{project_id}/variables/{name} | Delete a variable
+*VariablesApi* | [**variable_show**](docs/VariablesApi.md#variable_show) | **GET** /projects/{project_id}/variables/{name} | Get a single variable
+*VariablesApi* | [**variable_update**](docs/VariablesApi.md#variable_update) | **PATCH** /projects/{project_id}/variables/{name} | Update a variable
 *VersionsHistoryApi* | [**version_show**](docs/VersionsHistoryApi.md#version_show) | **GET** /projects/{project_id}/translations/{translation_id}/versions/{id} | Get a single version
 *VersionsHistoryApi* | [**versions_list**](docs/VersionsHistoryApi.md#versions_list) | **GET** /projects/{project_id}/translations/{translation_id}/versions | List all versions
 *WebhooksApi* | [**webhook_create**](docs/WebhooksApi.md#webhook_create) | **POST** /projects/{project_id}/webhooks | Create a webhook
@@ -337,6 +342,7 @@ Class | Method | HTTP request | Description
  - [BranchMergeParameters](docs/BranchMergeParameters.md)
  - [BranchName](docs/BranchName.md)
  - [BranchUpdateParameters](docs/BranchUpdateParameters.md)
+ - [BranchUpdateParameters1](docs/BranchUpdateParameters1.md)
  - [Comment](docs/Comment.md)
  - [CommentCreateParameters](docs/CommentCreateParameters.md)
  - [CommentMarkReadParameters](docs/CommentMarkReadParameters.md)
@@ -474,6 +480,8 @@ Class | Method | HTTP request | Description
  - [UploadSummary](docs/UploadSummary.md)
  - [User](docs/User.md)
  - [UserPreview](docs/UserPreview.md)
+ - [Variable](docs/Variable.md)
+ - [VariableCreateParameters](docs/VariableCreateParameters.md)
  - [Webhook](docs/Webhook.md)
  - [WebhookCreateParameters](docs/WebhookCreateParameters.md)
  - [WebhookUpdateParameters](docs/WebhookUpdateParameters.md)

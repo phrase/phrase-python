@@ -48,6 +48,7 @@ from phrase_api.api.teams_api import TeamsApi
 from phrase_api.api.translations_api import TranslationsApi
 from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi
+from phrase_api.api.variables_api import VariablesApi
 from phrase_api.api.versions___history_api import VersionsHistoryApi
 from phrase_api.api.webhooks_api import WebhooksApi
 
@@ -82,6 +83,7 @@ from phrase_api.models.branch_create_parameters import BranchCreateParameters
 from phrase_api.models.branch_merge_parameters import BranchMergeParameters
 from phrase_api.models.branch_name import BranchName
 from phrase_api.models.branch_update_parameters import BranchUpdateParameters
+from phrase_api.models.branch_update_parameters1 import BranchUpdateParameters1
 from phrase_api.models.comment import Comment
 from phrase_api.models.comment_create_parameters import CommentCreateParameters
 from phrase_api.models.comment_mark_read_parameters import CommentMarkReadParameters
@@ -219,6 +221,8 @@ from phrase_api.models.upload_create_parameters import UploadCreateParameters
 from phrase_api.models.upload_summary import UploadSummary
 from phrase_api.models.user import User
 from phrase_api.models.user_preview import UserPreview
+from phrase_api.models.variable import Variable
+from phrase_api.models.variable_create_parameters import VariableCreateParameters
 from phrase_api.models.webhook import Webhook
 from phrase_api.models.webhook_create_parameters import WebhookCreateParameters
 from phrase_api.models.webhook_update_parameters import WebhookUpdateParameters

@@ -1,4 +1,4 @@
-# BranchUpdateParameters
+# VariableCreateParameters
 
 ## Properties
 Name | Type | Description | Notes

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**branch_show**](BranchesApi.md#branch_show) | **GET** /projects/{project_id}/branches/{name} | Get a single branch
 [**branch_update**](BranchesApi.md#branch_update) | **PATCH** /projects/{project_id}/branches/{name} | Update a branch
 [**branches_list**](BranchesApi.md#branches_list) | **GET** /projects/{project_id}/branches | List branches
+[**variables_list**](BranchesApi.md#variables_list) | **GET** /projects/{project_id}/variables | List variables
 
 
 # **branch_compare**
@@ -353,7 +354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **branch_update**
-> Branch branch_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> Branch branch_update(project_id, name, branch_update_parameters1, x_phrase_app_otp=x_phrase_app_otp)
 
 Update a branch
 
@@ -378,12 +379,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.BranchesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     name = 'name_example' # str | name (required)
-    branch_update_parameters = phrase_api.BranchUpdateParameters() # BranchUpdateParameters |  (required)
+    branch_update_parameters1 = phrase_api.BranchUpdateParameters1() # BranchUpdateParameters1 |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a branch
-        api_response = api_instance.branch_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.branch_update(project_id, name, branch_update_parameters1, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BranchesApi->branch_update: %s\n" % e)
@@ -396,7 +397,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **name** | **str**| name | 
- **branch_update_parameters** | [**BranchUpdateParameters**](BranchUpdateParameters.md)|  | 
+ **branch_update_parameters1** | [**BranchUpdateParameters1**](BranchUpdateParameters1.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -472,6 +473,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[Branch]**](Branch.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **variables_list**
+> list[object] variables_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+
+List variables
+
+List all variables for the current project.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.BranchesApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+
+    try:
+        # List variables
+        api_response = api_instance.variables_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BranchesApi->variables_list: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+
+### Return type
+
+**list[object]**
 
 ### Authorization
 

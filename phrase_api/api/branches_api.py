@@ -680,19 +680,19 @@ class BranchesApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def branch_update(self, project_id, name, branch_update_parameters, **kwargs):  # noqa: E501
+    def branch_update(self, project_id, name, branch_update_parameters1, **kwargs):  # noqa: E501
         """Update a branch  # noqa: E501
 
         Update an existing branch.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.branch_update(project_id, name, branch_update_parameters, async_req=True)
+        >>> thread = api.branch_update(project_id, name, branch_update_parameters1, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str name: name (required)
-        :param BranchUpdateParameters branch_update_parameters: (required)
+        :param BranchUpdateParameters1 branch_update_parameters1: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -706,21 +706,21 @@ class BranchesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.branch_update_with_http_info(project_id, name, branch_update_parameters, **kwargs)  # noqa: E501
+        return self.branch_update_with_http_info(project_id, name, branch_update_parameters1, **kwargs)  # noqa: E501
 
-    def branch_update_with_http_info(self, project_id, name, branch_update_parameters, **kwargs):  # noqa: E501
+    def branch_update_with_http_info(self, project_id, name, branch_update_parameters1, **kwargs):  # noqa: E501
         """Update a branch  # noqa: E501
 
         Update an existing branch.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.branch_update_with_http_info(project_id, name, branch_update_parameters, async_req=True)
+        >>> thread = api.branch_update_with_http_info(project_id, name, branch_update_parameters1, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str name: name (required)
-        :param BranchUpdateParameters branch_update_parameters: (required)
+        :param BranchUpdateParameters1 branch_update_parameters1: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -741,7 +741,7 @@ class BranchesApi(object):
         all_params = [
             'project_id',
             'name',
-            'branch_update_parameters',
+            'branch_update_parameters1',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -769,10 +769,10 @@ class BranchesApi(object):
         if self.api_client.client_side_validation and ('name' not in local_var_params or  # noqa: E501
                                                         local_var_params['name'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `name` when calling `branch_update`")  # noqa: E501
-        # verify the required parameter 'branch_update_parameters' is set
-        if self.api_client.client_side_validation and ('branch_update_parameters' not in local_var_params or  # noqa: E501
-                                                        local_var_params['branch_update_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `branch_update_parameters` when calling `branch_update`")  # noqa: E501
+        # verify the required parameter 'branch_update_parameters1' is set
+        if self.api_client.client_side_validation and ('branch_update_parameters1' not in local_var_params or  # noqa: E501
+                                                        local_var_params['branch_update_parameters1'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `branch_update_parameters1` when calling `branch_update`")  # noqa: E501
 
         collection_formats = {}
 
@@ -792,8 +792,8 @@ class BranchesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'branch_update_parameters' in local_var_params:
-            body_params = local_var_params['branch_update_parameters']
+        if 'branch_update_parameters1' in local_var_params:
+            body_params = local_var_params['branch_update_parameters1']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -943,6 +943,135 @@ class BranchesApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[Branch]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def variables_list(self, project_id, **kwargs):  # noqa: E501
+        """List variables  # noqa: E501
+
+        List all variables for the current project.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.variables_list(project_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str project_id: Project ID (required)
+        :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param int page: Page number
+        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[object]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.variables_list_with_http_info(project_id, **kwargs)  # noqa: E501
+
+    def variables_list_with_http_info(self, project_id, **kwargs):  # noqa: E501
+        """List variables  # noqa: E501
+
+        List all variables for the current project.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.variables_list_with_http_info(project_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str project_id: Project ID (required)
+        :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param int page: Page number
+        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[object], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'project_id',
+            'x_phrase_app_otp',
+            'page',
+            'per_page'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method variables_list" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'project_id' is set
+        if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `variables_list`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'project_id' in local_var_params:
+            path_params['project_id'] = local_var_params['project_id']  # noqa: E501
+
+        query_params = []
+        if 'page' in local_var_params and local_var_params['page'] is not None:  # noqa: E501
+            query_params.append(('page', local_var_params['page']))  # noqa: E501
+        if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
+            query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+
+        header_params = {}
+        if 'x_phrase_app_otp' in local_var_params:
+            header_params['X-PhraseApp-OTP'] = local_var_params['x_phrase_app_otp']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic', 'Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/projects/{project_id}/variables', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[object]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

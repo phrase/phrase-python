@@ -76,13 +76,6 @@ class TestBranchesApi(unittest.TestCase):
         """
         pass
 
-    def test_variables_list(self):
-        """Test case for variables_list
-
-        List variables  # noqa: E501
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

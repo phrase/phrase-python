@@ -680,19 +680,19 @@ class BranchesApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def branch_update(self, project_id, name, branch_update_parameters1, **kwargs):  # noqa: E501
+    def branch_update(self, project_id, name, branch_update_parameters, **kwargs):  # noqa: E501
         """Update a branch  # noqa: E501
 
         Update an existing branch.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.branch_update(project_id, name, branch_update_parameters1, async_req=True)
+        >>> thread = api.branch_update(project_id, name, branch_update_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str name: name (required)
-        :param BranchUpdateParameters1 branch_update_parameters1: (required)
+        :param BranchUpdateParameters branch_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -706,21 +706,21 @@ class BranchesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.branch_update_with_http_info(project_id, name, branch_update_parameters1, **kwargs)  # noqa: E501
+        return self.branch_update_with_http_info(project_id, name, branch_update_parameters, **kwargs)  # noqa: E501
 
-    def branch_update_with_http_info(self, project_id, name, branch_update_parameters1, **kwargs):  # noqa: E501
+    def branch_update_with_http_info(self, project_id, name, branch_update_parameters, **kwargs):  # noqa: E501
         """Update a branch  # noqa: E501
 
         Update an existing branch.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.branch_update_with_http_info(project_id, name, branch_update_parameters1, async_req=True)
+        >>> thread = api.branch_update_with_http_info(project_id, name, branch_update_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str name: name (required)
-        :param BranchUpdateParameters1 branch_update_parameters1: (required)
+        :param BranchUpdateParameters branch_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -741,7 +741,7 @@ class BranchesApi(object):
         all_params = [
             'project_id',
             'name',
-            'branch_update_parameters1',
+            'branch_update_parameters',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -769,10 +769,10 @@ class BranchesApi(object):
         if self.api_client.client_side_validation and ('name' not in local_var_params or  # noqa: E501
                                                         local_var_params['name'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `name` when calling `branch_update`")  # noqa: E501
-        # verify the required parameter 'branch_update_parameters1' is set
-        if self.api_client.client_side_validation and ('branch_update_parameters1' not in local_var_params or  # noqa: E501
-                                                        local_var_params['branch_update_parameters1'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `branch_update_parameters1` when calling `branch_update`")  # noqa: E501
+        # verify the required parameter 'branch_update_parameters' is set
+        if self.api_client.client_side_validation and ('branch_update_parameters' not in local_var_params or  # noqa: E501
+                                                        local_var_params['branch_update_parameters'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `branch_update_parameters` when calling `branch_update`")  # noqa: E501
 
         collection_formats = {}
 
@@ -792,8 +792,8 @@ class BranchesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'branch_update_parameters1' in local_var_params:
-            body_params = local_var_params['branch_update_parameters1']
+        if 'branch_update_parameters' in local_var_params:
+            body_params = local_var_params['branch_update_parameters']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

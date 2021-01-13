@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **branch_update**
-> Branch branch_update(project_id, name, branch_update_parameters1, x_phrase_app_otp=x_phrase_app_otp)
+> Branch branch_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Update a branch
 
@@ -378,12 +378,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.BranchesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     name = 'name_example' # str | name (required)
-    branch_update_parameters1 = phrase_api.BranchUpdateParameters1() # BranchUpdateParameters1 |  (required)
+    branch_update_parameters = phrase_api.BranchUpdateParameters() # BranchUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a branch
-        api_response = api_instance.branch_update(project_id, name, branch_update_parameters1, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.branch_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BranchesApi->branch_update: %s\n" % e)
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **name** | **str**| name | 
- **branch_update_parameters1** | [**BranchUpdateParameters1**](BranchUpdateParameters1.md)|  | 
+ **branch_update_parameters** | [**BranchUpdateParameters**](BranchUpdateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type

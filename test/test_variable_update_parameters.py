@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.branch_update_parameters1 import BranchUpdateParameters1  # noqa: E501
+from phrase_api.models.variable_update_parameters import VariableUpdateParameters  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestBranchUpdateParameters1(unittest.TestCase):
-    """BranchUpdateParameters1 unit test stubs"""
+class TestVariableUpdateParameters(unittest.TestCase):
+    """VariableUpdateParameters unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,21 +28,22 @@ class TestBranchUpdateParameters1(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test BranchUpdateParameters1
+        """Test VariableUpdateParameters
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.branch_update_parameters1.BranchUpdateParameters1()  # noqa: E501
+        # model = phrase_api.models.variable_update_parameters.VariableUpdateParameters()  # noqa: E501
         if include_optional :
-            return BranchUpdateParameters1(
-                name = 'my-branch'
+            return VariableUpdateParameters(
+                name = 'MY_VARIABLE', 
+                value = 'Hello World'
             )
         else :
-            return BranchUpdateParameters1(
+            return VariableUpdateParameters(
         )
 
-    def testBranchUpdateParameters1(self):
-        """Test BranchUpdateParameters1"""
+    def testVariableUpdateParameters(self):
+        """Test VariableUpdateParameters"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

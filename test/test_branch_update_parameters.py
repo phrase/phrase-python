@@ -35,8 +35,7 @@ class TestBranchUpdateParameters(unittest.TestCase):
         # model = phrase_api.models.branch_update_parameters.BranchUpdateParameters()  # noqa: E501
         if include_optional :
             return BranchUpdateParameters(
-                name = 'MY_VARIABLE', 
-                value = 'Hello World'
+                name = 'my-branch'
             )
         else :
             return BranchUpdateParameters(

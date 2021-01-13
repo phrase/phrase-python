@@ -147,7 +147,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variable_show**
-> object variable_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
+> Variable variable_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
 
 Get a single variable
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**Variable**](Variable.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variable_update**
-> object variable_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> Variable variable_update(project_id, name, variable_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Update a variable
 
@@ -240,12 +240,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.VariablesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     name = 'name_example' # str | name (required)
-    branch_update_parameters = phrase_api.BranchUpdateParameters() # BranchUpdateParameters |  (required)
+    variable_update_parameters = phrase_api.VariableUpdateParameters() # VariableUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Update a variable
-        api_response = api_instance.variable_update(project_id, name, branch_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.variable_update(project_id, name, variable_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VariablesApi->variable_update: %s\n" % e)
@@ -258,12 +258,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **name** | **str**| name | 
- **branch_update_parameters** | [**BranchUpdateParameters**](BranchUpdateParameters.md)|  | 
+ **variable_update_parameters** | [**VariableUpdateParameters**](VariableUpdateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
 
-**object**
+[**Variable**](Variable.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variables_list**
-> list[object] variables_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[Variable] variables_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List variables
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[Variable]**](Variable.md)
 
 ### Authorization
 

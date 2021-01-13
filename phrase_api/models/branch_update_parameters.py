@@ -32,35 +32,30 @@ class BranchUpdateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'str',
-        'value': 'str'
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'value': 'value'
+        'name': 'name'
     }
 
-    def __init__(self, name=None, value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, local_vars_configuration=None):  # noqa: E501
         """BranchUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._name = None
-        self._value = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
-        if value is not None:
-            self.value = value
 
     @property
     def name(self):
         """Gets the name of this BranchUpdateParameters.  # noqa: E501
 
-        Name of the variable  # noqa: E501
+        Name of the branch  # noqa: E501
 
         :return: The name of this BranchUpdateParameters.  # noqa: E501
         :rtype: str
@@ -71,36 +66,13 @@ class BranchUpdateParameters(object):
     def name(self, name):
         """Sets the name of this BranchUpdateParameters.
 
-        Name of the variable  # noqa: E501
+        Name of the branch  # noqa: E501
 
         :param name: The name of this BranchUpdateParameters.  # noqa: E501
         :type: str
         """
 
         self._name = name
-
-    @property
-    def value(self):
-        """Gets the value of this BranchUpdateParameters.  # noqa: E501
-
-        Value of the variable  # noqa: E501
-
-        :return: The value of this BranchUpdateParameters.  # noqa: E501
-        :rtype: str
-        """
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        """Sets the value of this BranchUpdateParameters.
-
-        Value of the variable  # noqa: E501
-
-        :param value: The value of this BranchUpdateParameters.  # noqa: E501
-        :type: str
-        """
-
-        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

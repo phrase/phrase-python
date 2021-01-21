@@ -32,29 +32,57 @@ class ScreenshotMarkerUpdateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'branch': 'str',
         'key_id': 'str',
         'presentation': 'str'
     }
 
     attribute_map = {
+        'branch': 'branch',
         'key_id': 'key_id',
         'presentation': 'presentation'
     }
 
-    def __init__(self, key_id=None, presentation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, key_id=None, presentation=None, local_vars_configuration=None):  # noqa: E501
         """ScreenshotMarkerUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._branch = None
         self._key_id = None
         self._presentation = None
         self.discriminator = None
 
+        if branch is not None:
+            self.branch = branch
         if key_id is not None:
             self.key_id = key_id
         if presentation is not None:
             self.presentation = presentation
+
+    @property
+    def branch(self):
+        """Gets the branch of this ScreenshotMarkerUpdateParameters.  # noqa: E501
+
+        specify the branch to use  # noqa: E501
+
+        :return: The branch of this ScreenshotMarkerUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this ScreenshotMarkerUpdateParameters.
+
+        specify the branch to use  # noqa: E501
+
+        :param branch: The branch of this ScreenshotMarkerUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._branch = branch
 
     @property
     def key_id(self):

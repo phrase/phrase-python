@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshot_marker_delete**
-> screenshot_marker_delete(project_id, screenshot_id, x_phrase_app_otp=x_phrase_app_otp)
+> screenshot_marker_delete(project_id, screenshot_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Delete a screenshot marker
 
@@ -108,10 +108,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     screenshot_id = 'screenshot_id_example' # str | Screenshot ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a screenshot marker
-        api_instance.screenshot_marker_delete(project_id, screenshot_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_instance.screenshot_marker_delete(project_id, screenshot_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
     except ApiException as e:
         print("Exception when calling ScreenshotMarkersApi->screenshot_marker_delete: %s\n" % e)
 ```
@@ -124,6 +125,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **screenshot_id** | **str**| Screenshot ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type
 
@@ -149,7 +151,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshot_marker_show**
-> ScreenshotMarker screenshot_marker_show(project_id, screenshot_id, id, x_phrase_app_otp=x_phrase_app_otp)
+> ScreenshotMarker screenshot_marker_show(project_id, screenshot_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Get a single screenshot marker
 
@@ -176,10 +178,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     screenshot_id = 'screenshot_id_example' # str | Screenshot ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single screenshot marker
-        api_response = api_instance.screenshot_marker_show(project_id, screenshot_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.screenshot_marker_show(project_id, screenshot_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotMarkersApi->screenshot_marker_show: %s\n" % e)
@@ -194,6 +197,7 @@ Name | Type | Description  | Notes
  **screenshot_id** | **str**| Screenshot ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type
 
@@ -289,7 +293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshot_markers_list**
-> list[ScreenshotMarker] screenshot_markers_list(project_id, id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[ScreenshotMarker] screenshot_markers_list(project_id, id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List screenshot markers
 
@@ -317,10 +321,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # List screenshot markers
-        api_response = api_instance.screenshot_markers_list(project_id, id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.screenshot_markers_list(project_id, id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotMarkersApi->screenshot_markers_list: %s\n" % e)
@@ -336,6 +341,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type
 

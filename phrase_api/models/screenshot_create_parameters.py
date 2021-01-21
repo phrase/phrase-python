@@ -32,34 +32,62 @@ class ScreenshotCreateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'branch': 'str',
         'name': 'str',
         'description': 'str',
         'filename': 'file'
     }
 
     attribute_map = {
+        'branch': 'branch',
         'name': 'name',
         'description': 'description',
         'filename': 'filename'
     }
 
-    def __init__(self, name=None, description=None, filename=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, description=None, filename=None, local_vars_configuration=None):  # noqa: E501
         """ScreenshotCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._branch = None
         self._name = None
         self._description = None
         self._filename = None
         self.discriminator = None
 
+        if branch is not None:
+            self.branch = branch
         if name is not None:
             self.name = name
         if description is not None:
             self.description = description
         if filename is not None:
             self.filename = filename
+
+    @property
+    def branch(self):
+        """Gets the branch of this ScreenshotCreateParameters.  # noqa: E501
+
+        specify the branch to use  # noqa: E501
+
+        :return: The branch of this ScreenshotCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this ScreenshotCreateParameters.
+
+        specify the branch to use  # noqa: E501
+
+        :param branch: The branch of this ScreenshotCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._branch = branch
 
     @property
     def name(self):

@@ -35,6 +35,7 @@ class TestScreenshotMarkerUpdateParameters(unittest.TestCase):
         # model = phrase_api.models.screenshot_marker_update_parameters.ScreenshotMarkerUpdateParameters()  # noqa: E501
         if include_optional :
             return ScreenshotMarkerUpdateParameters(
+                branch = 'my-feature-branch', 
                 key_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 presentation = '{ "x": 100, "y": 100, "w": 100, "h": 100 }'
             )

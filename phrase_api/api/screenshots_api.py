@@ -180,6 +180,7 @@ class ScreenshotsApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -207,6 +208,7 @@ class ScreenshotsApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -226,7 +228,8 @@ class ScreenshotsApi(object):
         all_params = [
             'project_id',
             'id',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'branch'
         ]
         all_params.extend(
             [
@@ -263,6 +266,8 @@ class ScreenshotsApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -304,6 +309,7 @@ class ScreenshotsApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -331,6 +337,7 @@ class ScreenshotsApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -350,7 +357,8 @@ class ScreenshotsApi(object):
         all_params = [
             'project_id',
             'id',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'branch'
         ]
         all_params.extend(
             [
@@ -387,6 +395,8 @@ class ScreenshotsApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -574,6 +584,7 @@ class ScreenshotsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str branch: specify the branch to use
         :param str key_id: filter by key
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -603,6 +614,7 @@ class ScreenshotsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str branch: specify the branch to use
         :param str key_id: filter by key
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -625,6 +637,7 @@ class ScreenshotsApi(object):
             'x_phrase_app_otp',
             'page',
             'per_page',
+            'branch',
             'key_id'
         ]
         all_params.extend(
@@ -660,6 +673,8 @@ class ScreenshotsApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
         if 'key_id' in local_var_params and local_var_params['key_id'] is not None:  # noqa: E501
             query_params.append(('key_id', local_var_params['key_id']))  # noqa: E501
 

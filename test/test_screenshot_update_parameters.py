@@ -35,6 +35,7 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
         # model = phrase_api.models.screenshot_update_parameters.ScreenshotUpdateParameters()  # noqa: E501
         if include_optional :
             return ScreenshotUpdateParameters(
+                branch = 'my-feature-branch', 
                 name = 'A screenshot name', 
                 description = 'A screenshot description', 
                 filename = bytes(b'blah')

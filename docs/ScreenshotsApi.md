@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshot_delete**
-> screenshot_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
+> screenshot_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Delete a screenshot
 
@@ -106,10 +106,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Delete a screenshot
-        api_instance.screenshot_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        api_instance.screenshot_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
     except ApiException as e:
         print("Exception when calling ScreenshotsApi->screenshot_delete: %s\n" % e)
 ```
@@ -122,6 +123,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type
 
@@ -147,7 +149,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshot_show**
-> Screenshot screenshot_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
+> Screenshot screenshot_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Get a single screenshot
 
@@ -173,10 +175,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single screenshot
-        api_response = api_instance.screenshot_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.screenshot_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotsApi->screenshot_show: %s\n" % e)
@@ -190,6 +193,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type
 
@@ -285,7 +289,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshots_list**
-> list[Screenshot] screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, key_id=key_id)
+> list[Screenshot] screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, key_id=key_id)
 
 List screenshots
 
@@ -312,11 +316,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
     key_id = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by key
 
     try:
         # List screenshots
-        api_response = api_instance.screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, key_id=key_id)
+        api_response = api_instance.screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, key_id=key_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotsApi->screenshots_list: %s\n" % e)
@@ -331,6 +336,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
  **key_id** | **str**| filter by key | [optional] 
 
 ### Return type

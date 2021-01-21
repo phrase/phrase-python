@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**branch** | **str** | specify the branch to use | [optional] 
 **name** | **str** | Name of the screenshot | [optional] 
 **description** | **str** | Description of the screenshot | [optional] 
 **filename** | **file** | Screenshot file | [optional] 

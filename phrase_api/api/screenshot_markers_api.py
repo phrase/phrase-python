@@ -189,6 +189,7 @@ class ScreenshotMarkersApi(object):
         :param str project_id: Project ID (required)
         :param str screenshot_id: Screenshot ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -216,6 +217,7 @@ class ScreenshotMarkersApi(object):
         :param str project_id: Project ID (required)
         :param str screenshot_id: Screenshot ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -235,7 +237,8 @@ class ScreenshotMarkersApi(object):
         all_params = [
             'project_id',
             'screenshot_id',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'branch'
         ]
         all_params.extend(
             [
@@ -272,6 +275,8 @@ class ScreenshotMarkersApi(object):
             path_params['screenshot_id'] = local_var_params['screenshot_id']  # noqa: E501
 
         query_params = []
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -314,6 +319,7 @@ class ScreenshotMarkersApi(object):
         :param str screenshot_id: Screenshot ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -342,6 +348,7 @@ class ScreenshotMarkersApi(object):
         :param str screenshot_id: Screenshot ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -362,7 +369,8 @@ class ScreenshotMarkersApi(object):
             'project_id',
             'screenshot_id',
             'id',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'branch'
         ]
         all_params.extend(
             [
@@ -405,6 +413,8 @@ class ScreenshotMarkersApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -593,6 +603,7 @@ class ScreenshotMarkersApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -622,6 +633,7 @@ class ScreenshotMarkersApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -643,7 +655,8 @@ class ScreenshotMarkersApi(object):
             'id',
             'x_phrase_app_otp',
             'page',
-            'per_page'
+            'per_page',
+            'branch'
         ]
         all_params.extend(
             [
@@ -684,6 +697,8 @@ class ScreenshotMarkersApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

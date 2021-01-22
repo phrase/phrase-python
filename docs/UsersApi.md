@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **show_user**
-> User show_user(x_phrase_app_otp=x_phrase_app_otp)
+> CurrentUser show_user(x_phrase_app_otp=x_phrase_app_otp)
 
 Show current User
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**CurrentUser**](CurrentUser.md)
 
 ### Authorization
 

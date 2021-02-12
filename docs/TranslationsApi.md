@@ -14,13 +14,13 @@ Method | HTTP request | Description
 [**translation_verify**](TranslationsApi.md#translation_verify) | **PATCH** /projects/{project_id}/translations/{id}/verify | Verify a translation
 [**translations_by_key**](TranslationsApi.md#translations_by_key) | **GET** /projects/{project_id}/keys/{key_id}/translations | List translations by key
 [**translations_by_locale**](TranslationsApi.md#translations_by_locale) | **GET** /projects/{project_id}/locales/{locale_id}/translations | List translations by locale
-[**translations_exclude**](TranslationsApi.md#translations_exclude) | **PATCH** /projects/{project_id}/translations/exclude | Set exclude from export flag on translations selected by query
-[**translations_include**](TranslationsApi.md#translations_include) | **PATCH** /projects/{project_id}/translations/include | Remove exlude from import flag from translations selected by query
+[**translations_exclude_collection**](TranslationsApi.md#translations_exclude_collection) | **PATCH** /projects/{project_id}/translations/exclude | Set exclude from export flag on translations selected by query
+[**translations_include_collection**](TranslationsApi.md#translations_include_collection) | **PATCH** /projects/{project_id}/translations/include | Remove exlude from import flag from translations selected by query
 [**translations_list**](TranslationsApi.md#translations_list) | **GET** /projects/{project_id}/translations | List all translations
-[**translations_review**](TranslationsApi.md#translations_review) | **PATCH** /projects/{project_id}/translations/review | Review translations selected by query
+[**translations_review_collection**](TranslationsApi.md#translations_review_collection) | **PATCH** /projects/{project_id}/translations/review | Review translations selected by query
 [**translations_search**](TranslationsApi.md#translations_search) | **POST** /projects/{project_id}/translations/search | Search translations
-[**translations_unverify**](TranslationsApi.md#translations_unverify) | **PATCH** /projects/{project_id}/translations/unverify | Mark translations selected by query as unverified
-[**translations_verify**](TranslationsApi.md#translations_verify) | **PATCH** /projects/{project_id}/translations/verify | Verify translations selected by query
+[**translations_unverify_collection**](TranslationsApi.md#translations_unverify_collection) | **PATCH** /projects/{project_id}/translations/unverify | Mark translations selected by query as unverified
+[**translations_verify_collection**](TranslationsApi.md#translations_verify_collection) | **PATCH** /projects/{project_id}/translations/verify | Verify translations selected by query
 
 
 # **translation_create**
@@ -741,8 +741,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **translations_exclude**
-> AffectedCount translations_exclude(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+# **translations_exclude_collection**
+> AffectedCount translations_exclude_collection(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Set exclude from export flag on translations selected by query
 
@@ -771,10 +771,10 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Set exclude from export flag on translations selected by query
-        api_response = api_instance.translations_exclude(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.translations_exclude_collection(project_id, translations_exclude_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TranslationsApi->translations_exclude: %s\n" % e)
+        print("Exception when calling TranslationsApi->translations_exclude_collection: %s\n" % e)
 ```
 
 
@@ -809,8 +809,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **translations_include**
-> AffectedCount translations_include(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+# **translations_include_collection**
+> AffectedCount translations_include_collection(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Remove exlude from import flag from translations selected by query
 
@@ -839,10 +839,10 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Remove exlude from import flag from translations selected by query
-        api_response = api_instance.translations_include(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.translations_include_collection(project_id, translations_include_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TranslationsApi->translations_include: %s\n" % e)
+        print("Exception when calling TranslationsApi->translations_include_collection: %s\n" % e)
 ```
 
 
@@ -955,8 +955,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **translations_review**
-> AffectedCount translations_review(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+# **translations_review_collection**
+> AffectedCount translations_review_collection(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Review translations selected by query
 
@@ -985,10 +985,10 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Review translations selected by query
-        api_response = api_instance.translations_review(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.translations_review_collection(project_id, translations_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TranslationsApi->translations_review: %s\n" % e)
+        print("Exception when calling TranslationsApi->translations_review_collection: %s\n" % e)
 ```
 
 
@@ -1095,8 +1095,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **translations_unverify**
-> AffectedCount translations_unverify(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+# **translations_unverify_collection**
+> AffectedCount translations_unverify_collection(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Mark translations selected by query as unverified
 
@@ -1125,10 +1125,10 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Mark translations selected by query as unverified
-        api_response = api_instance.translations_unverify(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.translations_unverify_collection(project_id, translations_unverify_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TranslationsApi->translations_unverify: %s\n" % e)
+        print("Exception when calling TranslationsApi->translations_unverify_collection: %s\n" % e)
 ```
 
 
@@ -1163,8 +1163,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **translations_verify**
-> AffectedCount translations_verify(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+# **translations_verify_collection**
+> AffectedCount translations_verify_collection(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Verify translations selected by query
 
@@ -1193,10 +1193,10 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Verify translations selected by query
-        api_response = api_instance.translations_verify(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.translations_verify_collection(project_id, translations_verify_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TranslationsApi->translations_verify: %s\n" % e)
+        print("Exception when calling TranslationsApi->translations_verify_collection: %s\n" % e)
 ```
 
 

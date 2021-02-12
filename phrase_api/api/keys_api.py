@@ -570,13 +570,13 @@ class KeysApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def keys_delete(self, project_id, **kwargs):  # noqa: E501
+    def keys_delete_collection(self, project_id, **kwargs):  # noqa: E501
         """Delete collection of keys  # noqa: E501
 
         Delete all keys matching query. Same constraints as list. Please limit the number of affected keys to about 1,000 as you might experience timeouts otherwise.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.keys_delete(project_id, async_req=True)
+        >>> thread = api.keys_delete_collection(project_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -597,15 +597,15 @@ class KeysApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.keys_delete_with_http_info(project_id, **kwargs)  # noqa: E501
+        return self.keys_delete_collection_with_http_info(project_id, **kwargs)  # noqa: E501
 
-    def keys_delete_with_http_info(self, project_id, **kwargs):  # noqa: E501
+    def keys_delete_collection_with_http_info(self, project_id, **kwargs):  # noqa: E501
         """Delete collection of keys  # noqa: E501
 
         Delete all keys matching query. Same constraints as list. Please limit the number of affected keys to about 1,000 as you might experience timeouts otherwise.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.keys_delete_with_http_info(project_id, async_req=True)
+        >>> thread = api.keys_delete_collection_with_http_info(project_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -650,14 +650,14 @@ class KeysApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method keys_delete" % key
+                    " to method keys_delete_collection" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'project_id' is set
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_id` when calling `keys_delete`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `keys_delete_collection`")  # noqa: E501
 
         collection_formats = {}
 

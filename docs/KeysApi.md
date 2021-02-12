@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**key_delete**](KeysApi.md#key_delete) | **DELETE** /projects/{project_id}/keys/{id} | Delete a key
 [**key_show**](KeysApi.md#key_show) | **GET** /projects/{project_id}/keys/{id} | Get a single key
 [**key_update**](KeysApi.md#key_update) | **PATCH** /projects/{project_id}/keys/{id} | Update a key
-[**keys_delete**](KeysApi.md#keys_delete) | **DELETE** /projects/{project_id}/keys | Delete collection of keys
+[**keys_delete_collection**](KeysApi.md#keys_delete_collection) | **DELETE** /projects/{project_id}/keys | Delete collection of keys
 [**keys_list**](KeysApi.md#keys_list) | **GET** /projects/{project_id}/keys | List keys
 [**keys_search**](KeysApi.md#keys_search) | **POST** /projects/{project_id}/keys/search | Search keys
 [**keys_tag**](KeysApi.md#keys_tag) | **PATCH** /projects/{project_id}/keys/tag | Add tags to collection of keys
@@ -292,8 +292,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **keys_delete**
-> AffectedResources keys_delete(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, q=q, locale_id=locale_id)
+# **keys_delete_collection**
+> AffectedResources keys_delete_collection(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, q=q, locale_id=locale_id)
 
 Delete collection of keys
 
@@ -324,10 +324,10 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Delete collection of keys
-        api_response = api_instance.keys_delete(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, q=q, locale_id=locale_id)
+        api_response = api_instance.keys_delete_collection(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, q=q, locale_id=locale_id)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling KeysApi->keys_delete: %s\n" % e)
+        print("Exception when calling KeysApi->keys_delete_collection: %s\n" % e)
 ```
 
 

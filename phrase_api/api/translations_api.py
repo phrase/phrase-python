@@ -1462,13 +1462,13 @@ class TranslationsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def translations_exclude(self, project_id, translations_exclude_parameters, **kwargs):  # noqa: E501
+    def translations_exclude_collection(self, project_id, translations_exclude_parameters, **kwargs):  # noqa: E501
         """Set exclude from export flag on translations selected by query  # noqa: E501
 
         Exclude translations matching query from locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_exclude(project_id, translations_exclude_parameters, async_req=True)
+        >>> thread = api.translations_exclude_collection(project_id, translations_exclude_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1487,15 +1487,15 @@ class TranslationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.translations_exclude_with_http_info(project_id, translations_exclude_parameters, **kwargs)  # noqa: E501
+        return self.translations_exclude_collection_with_http_info(project_id, translations_exclude_parameters, **kwargs)  # noqa: E501
 
-    def translations_exclude_with_http_info(self, project_id, translations_exclude_parameters, **kwargs):  # noqa: E501
+    def translations_exclude_collection_with_http_info(self, project_id, translations_exclude_parameters, **kwargs):  # noqa: E501
         """Set exclude from export flag on translations selected by query  # noqa: E501
 
         Exclude translations matching query from locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_exclude_with_http_info(project_id, translations_exclude_parameters, async_req=True)
+        >>> thread = api.translations_exclude_collection_with_http_info(project_id, translations_exclude_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1536,18 +1536,18 @@ class TranslationsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method translations_exclude" % key
+                    " to method translations_exclude_collection" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'project_id' is set
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_exclude`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_exclude_collection`")  # noqa: E501
         # verify the required parameter 'translations_exclude_parameters' is set
         if self.api_client.client_side_validation and ('translations_exclude_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['translations_exclude_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `translations_exclude_parameters` when calling `translations_exclude`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `translations_exclude_parameters` when calling `translations_exclude_collection`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1594,13 +1594,13 @@ class TranslationsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def translations_include(self, project_id, translations_include_parameters, **kwargs):  # noqa: E501
+    def translations_include_collection(self, project_id, translations_include_parameters, **kwargs):  # noqa: E501
         """Remove exlude from import flag from translations selected by query  # noqa: E501
 
         Include translations matching query in locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_include(project_id, translations_include_parameters, async_req=True)
+        >>> thread = api.translations_include_collection(project_id, translations_include_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1619,15 +1619,15 @@ class TranslationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.translations_include_with_http_info(project_id, translations_include_parameters, **kwargs)  # noqa: E501
+        return self.translations_include_collection_with_http_info(project_id, translations_include_parameters, **kwargs)  # noqa: E501
 
-    def translations_include_with_http_info(self, project_id, translations_include_parameters, **kwargs):  # noqa: E501
+    def translations_include_collection_with_http_info(self, project_id, translations_include_parameters, **kwargs):  # noqa: E501
         """Remove exlude from import flag from translations selected by query  # noqa: E501
 
         Include translations matching query in locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_include_with_http_info(project_id, translations_include_parameters, async_req=True)
+        >>> thread = api.translations_include_collection_with_http_info(project_id, translations_include_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1668,18 +1668,18 @@ class TranslationsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method translations_include" % key
+                    " to method translations_include_collection" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'project_id' is set
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_include`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_include_collection`")  # noqa: E501
         # verify the required parameter 'translations_include_parameters' is set
         if self.api_client.client_side_validation and ('translations_include_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['translations_include_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `translations_include_parameters` when calling `translations_include`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `translations_include_parameters` when calling `translations_include_collection`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1875,13 +1875,13 @@ class TranslationsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def translations_review(self, project_id, translations_review_parameters, **kwargs):  # noqa: E501
+    def translations_review_collection(self, project_id, translations_review_parameters, **kwargs):  # noqa: E501
         """Review translations selected by query  # noqa: E501
 
         Review translations matching query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_review(project_id, translations_review_parameters, async_req=True)
+        >>> thread = api.translations_review_collection(project_id, translations_review_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1900,15 +1900,15 @@ class TranslationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.translations_review_with_http_info(project_id, translations_review_parameters, **kwargs)  # noqa: E501
+        return self.translations_review_collection_with_http_info(project_id, translations_review_parameters, **kwargs)  # noqa: E501
 
-    def translations_review_with_http_info(self, project_id, translations_review_parameters, **kwargs):  # noqa: E501
+    def translations_review_collection_with_http_info(self, project_id, translations_review_parameters, **kwargs):  # noqa: E501
         """Review translations selected by query  # noqa: E501
 
         Review translations matching query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_review_with_http_info(project_id, translations_review_parameters, async_req=True)
+        >>> thread = api.translations_review_collection_with_http_info(project_id, translations_review_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1949,18 +1949,18 @@ class TranslationsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method translations_review" % key
+                    " to method translations_review_collection" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'project_id' is set
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_review`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_review_collection`")  # noqa: E501
         # verify the required parameter 'translations_review_parameters' is set
         if self.api_client.client_side_validation and ('translations_review_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['translations_review_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `translations_review_parameters` when calling `translations_review`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `translations_review_parameters` when calling `translations_review_collection`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2149,13 +2149,13 @@ class TranslationsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def translations_unverify(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
+    def translations_unverify_collection(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
         """Mark translations selected by query as unverified  # noqa: E501
 
         Mark translations matching query as unverified.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_unverify(project_id, translations_unverify_parameters, async_req=True)
+        >>> thread = api.translations_unverify_collection(project_id, translations_unverify_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -2174,15 +2174,15 @@ class TranslationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.translations_unverify_with_http_info(project_id, translations_unverify_parameters, **kwargs)  # noqa: E501
+        return self.translations_unverify_collection_with_http_info(project_id, translations_unverify_parameters, **kwargs)  # noqa: E501
 
-    def translations_unverify_with_http_info(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
+    def translations_unverify_collection_with_http_info(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
         """Mark translations selected by query as unverified  # noqa: E501
 
         Mark translations matching query as unverified.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_unverify_with_http_info(project_id, translations_unverify_parameters, async_req=True)
+        >>> thread = api.translations_unverify_collection_with_http_info(project_id, translations_unverify_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -2223,18 +2223,18 @@ class TranslationsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method translations_unverify" % key
+                    " to method translations_unverify_collection" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'project_id' is set
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_unverify`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_unverify_collection`")  # noqa: E501
         # verify the required parameter 'translations_unverify_parameters' is set
         if self.api_client.client_side_validation and ('translations_unverify_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['translations_unverify_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `translations_unverify_parameters` when calling `translations_unverify`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `translations_unverify_parameters` when calling `translations_unverify_collection`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2281,13 +2281,13 @@ class TranslationsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def translations_verify(self, project_id, translations_verify_parameters, **kwargs):  # noqa: E501
+    def translations_verify_collection(self, project_id, translations_verify_parameters, **kwargs):  # noqa: E501
         """Verify translations selected by query  # noqa: E501
 
         Verify translations matching query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_verify(project_id, translations_verify_parameters, async_req=True)
+        >>> thread = api.translations_verify_collection(project_id, translations_verify_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -2306,15 +2306,15 @@ class TranslationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.translations_verify_with_http_info(project_id, translations_verify_parameters, **kwargs)  # noqa: E501
+        return self.translations_verify_collection_with_http_info(project_id, translations_verify_parameters, **kwargs)  # noqa: E501
 
-    def translations_verify_with_http_info(self, project_id, translations_verify_parameters, **kwargs):  # noqa: E501
+    def translations_verify_collection_with_http_info(self, project_id, translations_verify_parameters, **kwargs):  # noqa: E501
         """Verify translations selected by query  # noqa: E501
 
         Verify translations matching query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.translations_verify_with_http_info(project_id, translations_verify_parameters, async_req=True)
+        >>> thread = api.translations_verify_collection_with_http_info(project_id, translations_verify_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -2355,18 +2355,18 @@ class TranslationsApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method translations_verify" % key
+                    " to method translations_verify_collection" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'project_id' is set
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_verify`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `translations_verify_collection`")  # noqa: E501
         # verify the required parameter 'translations_verify_parameters' is set
         if self.api_client.client_side_validation and ('translations_verify_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['translations_verify_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `translations_verify_parameters` when calling `translations_verify`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `translations_verify_parameters` when calling `translations_verify_collection`")  # noqa: E501
 
         collection_formats = {}
 

@@ -55,8 +55,8 @@ class TestKeysApi(unittest.TestCase):
         """
         pass
 
-    def test_keys_delete(self):
-        """Test case for keys_delete
+    def test_keys_delete_collection(self):
+        """Test case for keys_delete_collection
 
         Delete collection of keys  # noqa: E501
         """

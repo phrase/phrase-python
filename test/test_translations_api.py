@@ -97,15 +97,15 @@ class TestTranslationsApi(unittest.TestCase):
         """
         pass
 
-    def test_translations_exclude(self):
-        """Test case for translations_exclude
+    def test_translations_exclude_collection(self):
+        """Test case for translations_exclude_collection
 
         Set exclude from export flag on translations selected by query  # noqa: E501
         """
         pass
 
-    def test_translations_include(self):
-        """Test case for translations_include
+    def test_translations_include_collection(self):
+        """Test case for translations_include_collection
 
         Remove exlude from import flag from translations selected by query  # noqa: E501
         """
@@ -118,8 +118,8 @@ class TestTranslationsApi(unittest.TestCase):
         """
         pass
 
-    def test_translations_review(self):
-        """Test case for translations_review
+    def test_translations_review_collection(self):
+        """Test case for translations_review_collection
 
         Review translations selected by query  # noqa: E501
         """
@@ -132,15 +132,15 @@ class TestTranslationsApi(unittest.TestCase):
         """
         pass
 
-    def test_translations_unverify(self):
-        """Test case for translations_unverify
+    def test_translations_unverify_collection(self):
+        """Test case for translations_unverify_collection
 
         Mark translations selected by query as unverified  # noqa: E501
         """
         pass
 
-    def test_translations_verify(self):
-        """Test case for translations_verify
+    def test_translations_verify_collection(self):
+        """Test case for translations_verify_collection
 
         Verify translations selected by query  # noqa: E501
         """

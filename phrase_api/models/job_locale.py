@@ -36,7 +36,9 @@ class JobLocale(object):
         'job': 'JobPreview',
         'locale': 'LocalePreview',
         'users': 'list[UserPreview]',
-        'completed': 'bool'
+        'completed': 'bool',
+        'translation_completed_at': 'datetime',
+        'review_completed_at': 'datetime'
     }
 
     attribute_map = {
@@ -44,10 +46,12 @@ class JobLocale(object):
         'job': 'job',
         'locale': 'locale',
         'users': 'users',
-        'completed': 'completed'
+        'completed': 'completed',
+        'translation_completed_at': 'translation_completed_at',
+        'review_completed_at': 'review_completed_at'
     }
 
-    def __init__(self, id=None, job=None, locale=None, users=None, completed=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, job=None, locale=None, users=None, completed=None, translation_completed_at=None, review_completed_at=None, local_vars_configuration=None):  # noqa: E501
         """JobLocale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,6 +62,8 @@ class JobLocale(object):
         self._locale = None
         self._users = None
         self._completed = None
+        self._translation_completed_at = None
+        self._review_completed_at = None
         self.discriminator = None
 
         if id is not None:
@@ -70,6 +76,10 @@ class JobLocale(object):
             self.users = users
         if completed is not None:
             self.completed = completed
+        if translation_completed_at is not None:
+            self.translation_completed_at = translation_completed_at
+        if review_completed_at is not None:
+            self.review_completed_at = review_completed_at
 
     @property
     def id(self):
@@ -175,6 +185,48 @@ class JobLocale(object):
         """
 
         self._completed = completed
+
+    @property
+    def translation_completed_at(self):
+        """Gets the translation_completed_at of this JobLocale.  # noqa: E501
+
+
+        :return: The translation_completed_at of this JobLocale.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._translation_completed_at
+
+    @translation_completed_at.setter
+    def translation_completed_at(self, translation_completed_at):
+        """Sets the translation_completed_at of this JobLocale.
+
+
+        :param translation_completed_at: The translation_completed_at of this JobLocale.  # noqa: E501
+        :type: datetime
+        """
+
+        self._translation_completed_at = translation_completed_at
+
+    @property
+    def review_completed_at(self):
+        """Gets the review_completed_at of this JobLocale.  # noqa: E501
+
+
+        :return: The review_completed_at of this JobLocale.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._review_completed_at
+
+    @review_completed_at.setter
+    def review_completed_at(self, review_completed_at):
+        """Sets the review_completed_at of this JobLocale.
+
+
+        :param review_completed_at: The review_completed_at of this JobLocale.  # noqa: E501
+        :type: datetime
+        """
+
+        self._review_completed_at = review_completed_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

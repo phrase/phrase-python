@@ -47,7 +47,9 @@ class TestJobLocale(unittest.TestCase):
                         username = '0', 
                         name = '0', )
                     ], 
-                completed = True
+                completed = True, 
+                translation_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                review_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )
         else :
             return JobLocale(

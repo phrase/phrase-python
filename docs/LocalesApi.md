@@ -150,7 +150,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locale_download**
-> locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
+> file locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
 
 Download a locale
 
@@ -194,7 +194,8 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Download a locale
-        api_instance.locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
+        api_response = api_instance.locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocalesApi->locale_download: %s\n" % e)
 ```
@@ -225,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**file**
 
 ### Authorization
 
@@ -234,7 +235,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: *
 
 ### HTTP response details
 | Status code | Description | Response headers |

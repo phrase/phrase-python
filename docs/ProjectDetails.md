@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **main_format** | **str** |  | [optional] 
 **project_image_url** | **str** |  | [optional] 
 **account** | [**Account**](Account.md) |  | [optional] 
+**space** | [**Space1**](Space1.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **shares_translation_memory** | **bool** |  | [optional] 

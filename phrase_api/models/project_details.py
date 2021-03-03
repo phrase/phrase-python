@@ -38,6 +38,7 @@ class ProjectDetails(object):
         'main_format': 'str',
         'project_image_url': 'str',
         'account': 'Account',
+        'space': 'Space1',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'shares_translation_memory': 'bool'
@@ -50,12 +51,13 @@ class ProjectDetails(object):
         'main_format': 'main_format',
         'project_image_url': 'project_image_url',
         'account': 'account',
+        'space': 'space',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'shares_translation_memory': 'shares_translation_memory'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, created_at=None, updated_at=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, space=None, created_at=None, updated_at=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +69,7 @@ class ProjectDetails(object):
         self._main_format = None
         self._project_image_url = None
         self._account = None
+        self._space = None
         self._created_at = None
         self._updated_at = None
         self._shares_translation_memory = None
@@ -84,6 +87,8 @@ class ProjectDetails(object):
             self.project_image_url = project_image_url
         if account is not None:
             self.account = account
+        if space is not None:
+            self.space = space
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -216,6 +221,27 @@ class ProjectDetails(object):
         """
 
         self._account = account
+
+    @property
+    def space(self):
+        """Gets the space of this ProjectDetails.  # noqa: E501
+
+
+        :return: The space of this ProjectDetails.  # noqa: E501
+        :rtype: Space1
+        """
+        return self._space
+
+    @space.setter
+    def space(self, space):
+        """Sets the space of this ProjectDetails.
+
+
+        :param space: The space of this ProjectDetails.  # noqa: E501
+        :type: Space1
+        """
+
+        self._space = space
 
     @property
     def created_at(self):

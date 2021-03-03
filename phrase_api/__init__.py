@@ -171,6 +171,7 @@ from phrase_api.models.screenshot_marker_create_parameters import ScreenshotMark
 from phrase_api.models.screenshot_marker_update_parameters import ScreenshotMarkerUpdateParameters
 from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters
 from phrase_api.models.space import Space
+from phrase_api.models.space1 import Space1
 from phrase_api.models.space_create_parameters import SpaceCreateParameters
 from phrase_api.models.space_update_parameters import SpaceUpdateParameters
 from phrase_api.models.spaces_projects_create_parameters import SpacesProjectsCreateParameters

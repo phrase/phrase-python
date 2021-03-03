@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.space import Space  # noqa: E501
+from phrase_api.models.space1 import Space1  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestSpace(unittest.TestCase):
-    """Space unit test stubs"""
+class TestSpace1(unittest.TestCase):
+    """Space1 unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,28 +28,25 @@ class TestSpace(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Space
+        """Test Space1
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.space.Space()  # noqa: E501
+        # model = phrase_api.models.space1.Space1()  # noqa: E501
         if include_optional :
-            return Space(
+            return Space1(
                 id = '0', 
                 name = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                projects_count = 56, 
-                projects = [
-                    {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","slug":"android_project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","space":"space","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
-                    ]
+                projects_count = 56
             )
         else :
-            return Space(
+            return Space1(
         )
 
-    def testSpace(self):
-        """Test Space"""
+    def testSpace1(self):
+        """Test Space1"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

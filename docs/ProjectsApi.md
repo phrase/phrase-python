@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **projects_list**
-> list[Project] projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[Project] projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by)
 
 List projects
 
@@ -303,10 +303,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    sort_by = 'sort_by_example' # str | Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
 
     try:
         # List projects
-        api_response = api_instance.projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ProjectsApi->projects_list: %s\n" % e)
@@ -320,6 +321,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **sort_by** | **str**| Sort projects. Valid options are \&quot;name_asc\&quot;, \&quot;name_desc\&quot;, \&quot;updated_at_asc\&quot;, \&quot;updated_at_desc\&quot;, \&quot;space_asc\&quot; and \&quot;space_desc\&quot;. | [optional] 
 
 ### Return type
 

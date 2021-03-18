@@ -537,6 +537,7 @@ class ProjectsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -565,6 +566,7 @@ class ProjectsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -586,6 +588,7 @@ class ProjectsApi(object):
             'x_phrase_app_otp',
             'page',
             'per_page',
+            'account_id',
             'sort_by'
         ]
         all_params.extend(
@@ -615,6 +618,8 @@ class ProjectsApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'account_id' in local_var_params and local_var_params['account_id'] is not None:  # noqa: E501
+            query_params.append(('account_id', local_var_params['account_id']))  # noqa: E501
         if 'sort_by' in local_var_params and local_var_params['sort_by'] is not None:  # noqa: E501
             query_params.append(('sort_by', local_var_params['sort_by']))  # noqa: E501
 

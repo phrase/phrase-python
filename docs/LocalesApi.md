@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locales_list**
-> list[Locale] locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> list[Locale] locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch)
 
 List locales
 
@@ -415,11 +415,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    sort_by = 'sort_by_example' # str | Sort locales. Valid options are \"name_asc\", \"name_desc\", \"default_asc\", \"default_desc\".
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # List locales
-        api_response = api_instance.locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+        api_response = api_instance.locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocalesApi->locales_list: %s\n" % e)
@@ -434,6 +435,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **sort_by** | **str**| Sort locales. Valid options are \&quot;name_asc\&quot;, \&quot;name_desc\&quot;, \&quot;default_asc\&quot;, \&quot;default_desc\&quot;. | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type

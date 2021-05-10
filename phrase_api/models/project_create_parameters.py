@@ -38,7 +38,23 @@ class ProjectCreateParameters(object):
         'project_image': 'file',
         'remove_project_image': 'bool',
         'account_id': 'str',
-        'source_project_id': 'str'
+        'source_project_id': 'str',
+        'machine_translation_enabled': 'bool',
+        'enable_branching': 'bool',
+        'protect_master_branch': 'bool',
+        'enable_all_data_type_translation_keys_for_translators': 'bool',
+        'enable_icu_message_format': 'bool',
+        'zero_plural_form_enabled': 'bool',
+        'autotranslate_enabled': 'bool',
+        'autotranslate_check_new_translation_keys': 'bool',
+        'autotranslate_check_new_uploads': 'bool',
+        'autotranslate_check_new_locales': 'bool',
+        'autotranslate_mark_as_unverified': 'bool',
+        'autotranslate_use_machine_translation': 'bool',
+        'autotranslate_use_translation_memory': 'bool',
+        'smart_suggest_enabled': 'bool',
+        'smart_suggest_use_glossary': 'bool',
+        'smart_suggest_use_machine_translation': 'bool'
     }
 
     attribute_map = {
@@ -48,10 +64,26 @@ class ProjectCreateParameters(object):
         'project_image': 'project_image',
         'remove_project_image': 'remove_project_image',
         'account_id': 'account_id',
-        'source_project_id': 'source_project_id'
+        'source_project_id': 'source_project_id',
+        'machine_translation_enabled': 'machine_translation_enabled',
+        'enable_branching': 'enable_branching',
+        'protect_master_branch': 'protect_master_branch',
+        'enable_all_data_type_translation_keys_for_translators': 'enable_all_data_type_translation_keys_for_translators',
+        'enable_icu_message_format': 'enable_icu_message_format',
+        'zero_plural_form_enabled': 'zero_plural_form_enabled',
+        'autotranslate_enabled': 'autotranslate_enabled',
+        'autotranslate_check_new_translation_keys': 'autotranslate_check_new_translation_keys',
+        'autotranslate_check_new_uploads': 'autotranslate_check_new_uploads',
+        'autotranslate_check_new_locales': 'autotranslate_check_new_locales',
+        'autotranslate_mark_as_unverified': 'autotranslate_mark_as_unverified',
+        'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
+        'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
+        'smart_suggest_enabled': 'smart_suggest_enabled',
+        'smart_suggest_use_glossary': 'smart_suggest_use_glossary',
+        'smart_suggest_use_machine_translation': 'smart_suggest_use_machine_translation'
     }
 
-    def __init__(self, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, source_project_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, source_project_id=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, local_vars_configuration=None):  # noqa: E501
         """ProjectCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +96,22 @@ class ProjectCreateParameters(object):
         self._remove_project_image = None
         self._account_id = None
         self._source_project_id = None
+        self._machine_translation_enabled = None
+        self._enable_branching = None
+        self._protect_master_branch = None
+        self._enable_all_data_type_translation_keys_for_translators = None
+        self._enable_icu_message_format = None
+        self._zero_plural_form_enabled = None
+        self._autotranslate_enabled = None
+        self._autotranslate_check_new_translation_keys = None
+        self._autotranslate_check_new_uploads = None
+        self._autotranslate_check_new_locales = None
+        self._autotranslate_mark_as_unverified = None
+        self._autotranslate_use_machine_translation = None
+        self._autotranslate_use_translation_memory = None
+        self._smart_suggest_enabled = None
+        self._smart_suggest_use_glossary = None
+        self._smart_suggest_use_machine_translation = None
         self.discriminator = None
 
         if name is not None:
@@ -80,6 +128,38 @@ class ProjectCreateParameters(object):
             self.account_id = account_id
         if source_project_id is not None:
             self.source_project_id = source_project_id
+        if machine_translation_enabled is not None:
+            self.machine_translation_enabled = machine_translation_enabled
+        if enable_branching is not None:
+            self.enable_branching = enable_branching
+        if protect_master_branch is not None:
+            self.protect_master_branch = protect_master_branch
+        if enable_all_data_type_translation_keys_for_translators is not None:
+            self.enable_all_data_type_translation_keys_for_translators = enable_all_data_type_translation_keys_for_translators
+        if enable_icu_message_format is not None:
+            self.enable_icu_message_format = enable_icu_message_format
+        if zero_plural_form_enabled is not None:
+            self.zero_plural_form_enabled = zero_plural_form_enabled
+        if autotranslate_enabled is not None:
+            self.autotranslate_enabled = autotranslate_enabled
+        if autotranslate_check_new_translation_keys is not None:
+            self.autotranslate_check_new_translation_keys = autotranslate_check_new_translation_keys
+        if autotranslate_check_new_uploads is not None:
+            self.autotranslate_check_new_uploads = autotranslate_check_new_uploads
+        if autotranslate_check_new_locales is not None:
+            self.autotranslate_check_new_locales = autotranslate_check_new_locales
+        if autotranslate_mark_as_unverified is not None:
+            self.autotranslate_mark_as_unverified = autotranslate_mark_as_unverified
+        if autotranslate_use_machine_translation is not None:
+            self.autotranslate_use_machine_translation = autotranslate_use_machine_translation
+        if autotranslate_use_translation_memory is not None:
+            self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
+        if smart_suggest_enabled is not None:
+            self.smart_suggest_enabled = smart_suggest_enabled
+        if smart_suggest_use_glossary is not None:
+            self.smart_suggest_use_glossary = smart_suggest_use_glossary
+        if smart_suggest_use_machine_translation is not None:
+            self.smart_suggest_use_machine_translation = smart_suggest_use_machine_translation
 
     @property
     def name(self):
@@ -241,6 +321,374 @@ class ProjectCreateParameters(object):
         """
 
         self._source_project_id = source_project_id
+
+    @property
+    def machine_translation_enabled(self):
+        """Gets the machine_translation_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Enable machine translation support in the project. Required for Autopilot and Smart Suggest  # noqa: E501
+
+        :return: The machine_translation_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._machine_translation_enabled
+
+    @machine_translation_enabled.setter
+    def machine_translation_enabled(self, machine_translation_enabled):
+        """Sets the machine_translation_enabled of this ProjectCreateParameters.
+
+        (Optional) Enable machine translation support in the project. Required for Autopilot and Smart Suggest  # noqa: E501
+
+        :param machine_translation_enabled: The machine_translation_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._machine_translation_enabled = machine_translation_enabled
+
+    @property
+    def enable_branching(self):
+        """Gets the enable_branching of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Enable branching in the project  # noqa: E501
+
+        :return: The enable_branching of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_branching
+
+    @enable_branching.setter
+    def enable_branching(self, enable_branching):
+        """Sets the enable_branching of this ProjectCreateParameters.
+
+        (Optional) Enable branching in the project  # noqa: E501
+
+        :param enable_branching: The enable_branching of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_branching = enable_branching
+
+    @property
+    def protect_master_branch(self):
+        """Gets the protect_master_branch of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Protect the master branch in project where branching is enabled  # noqa: E501
+
+        :return: The protect_master_branch of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._protect_master_branch
+
+    @protect_master_branch.setter
+    def protect_master_branch(self, protect_master_branch):
+        """Sets the protect_master_branch of this ProjectCreateParameters.
+
+        (Optional) Protect the master branch in project where branching is enabled  # noqa: E501
+
+        :param protect_master_branch: The protect_master_branch of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._protect_master_branch = protect_master_branch
+
+    @property
+    def enable_all_data_type_translation_keys_for_translators(self):
+        """Gets the enable_all_data_type_translation_keys_for_translators of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Otherwise, translators are not allowed to edit translations other than strings  # noqa: E501
+
+        :return: The enable_all_data_type_translation_keys_for_translators of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_all_data_type_translation_keys_for_translators
+
+    @enable_all_data_type_translation_keys_for_translators.setter
+    def enable_all_data_type_translation_keys_for_translators(self, enable_all_data_type_translation_keys_for_translators):
+        """Sets the enable_all_data_type_translation_keys_for_translators of this ProjectCreateParameters.
+
+        (Optional) Otherwise, translators are not allowed to edit translations other than strings  # noqa: E501
+
+        :param enable_all_data_type_translation_keys_for_translators: The enable_all_data_type_translation_keys_for_translators of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_all_data_type_translation_keys_for_translators = enable_all_data_type_translation_keys_for_translators
+
+    @property
+    def enable_icu_message_format(self):
+        """Gets the enable_icu_message_format of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) We can validate and highlight your ICU messages. <a href=\"https://help.phrase.com/help/icu-message-format\">Read more</a>  # noqa: E501
+
+        :return: The enable_icu_message_format of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_icu_message_format
+
+    @enable_icu_message_format.setter
+    def enable_icu_message_format(self, enable_icu_message_format):
+        """Sets the enable_icu_message_format of this ProjectCreateParameters.
+
+        (Optional) We can validate and highlight your ICU messages. <a href=\"https://help.phrase.com/help/icu-message-format\">Read more</a>  # noqa: E501
+
+        :param enable_icu_message_format: The enable_icu_message_format of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_icu_message_format = enable_icu_message_format
+
+    @property
+    def zero_plural_form_enabled(self):
+        """Gets the zero_plural_form_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Displays the input fields for the 'ZERO' plural form for every key as well although only some languages require the 'ZERO' explicitly.  # noqa: E501
+
+        :return: The zero_plural_form_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._zero_plural_form_enabled
+
+    @zero_plural_form_enabled.setter
+    def zero_plural_form_enabled(self, zero_plural_form_enabled):
+        """Sets the zero_plural_form_enabled of this ProjectCreateParameters.
+
+        (Optional) Displays the input fields for the 'ZERO' plural form for every key as well although only some languages require the 'ZERO' explicitly.  # noqa: E501
+
+        :param zero_plural_form_enabled: The zero_plural_form_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._zero_plural_form_enabled = zero_plural_form_enabled
+
+    @property
+    def autotranslate_enabled(self):
+        """Gets the autotranslate_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Autopilot, requires machine_translation_enabled. <a href=\"https://help.phrase.com/help/autopilot\">Read more</a>  # noqa: E501
+
+        :return: The autotranslate_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_enabled
+
+    @autotranslate_enabled.setter
+    def autotranslate_enabled(self, autotranslate_enabled):
+        """Sets the autotranslate_enabled of this ProjectCreateParameters.
+
+        (Optional) Autopilot, requires machine_translation_enabled. <a href=\"https://help.phrase.com/help/autopilot\">Read more</a>  # noqa: E501
+
+        :param autotranslate_enabled: The autotranslate_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_enabled = autotranslate_enabled
+
+    @property
+    def autotranslate_check_new_translation_keys(self):
+        """Gets the autotranslate_check_new_translation_keys of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :return: The autotranslate_check_new_translation_keys of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_check_new_translation_keys
+
+    @autotranslate_check_new_translation_keys.setter
+    def autotranslate_check_new_translation_keys(self, autotranslate_check_new_translation_keys):
+        """Sets the autotranslate_check_new_translation_keys of this ProjectCreateParameters.
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :param autotranslate_check_new_translation_keys: The autotranslate_check_new_translation_keys of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_check_new_translation_keys = autotranslate_check_new_translation_keys
+
+    @property
+    def autotranslate_check_new_uploads(self):
+        """Gets the autotranslate_check_new_uploads of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :return: The autotranslate_check_new_uploads of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_check_new_uploads
+
+    @autotranslate_check_new_uploads.setter
+    def autotranslate_check_new_uploads(self, autotranslate_check_new_uploads):
+        """Sets the autotranslate_check_new_uploads of this ProjectCreateParameters.
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :param autotranslate_check_new_uploads: The autotranslate_check_new_uploads of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_check_new_uploads = autotranslate_check_new_uploads
+
+    @property
+    def autotranslate_check_new_locales(self):
+        """Gets the autotranslate_check_new_locales of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :return: The autotranslate_check_new_locales of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_check_new_locales
+
+    @autotranslate_check_new_locales.setter
+    def autotranslate_check_new_locales(self, autotranslate_check_new_locales):
+        """Sets the autotranslate_check_new_locales of this ProjectCreateParameters.
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :param autotranslate_check_new_locales: The autotranslate_check_new_locales of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_check_new_locales = autotranslate_check_new_locales
+
+    @property
+    def autotranslate_mark_as_unverified(self):
+        """Gets the autotranslate_mark_as_unverified of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :return: The autotranslate_mark_as_unverified of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_mark_as_unverified
+
+    @autotranslate_mark_as_unverified.setter
+    def autotranslate_mark_as_unverified(self, autotranslate_mark_as_unverified):
+        """Sets the autotranslate_mark_as_unverified of this ProjectCreateParameters.
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :param autotranslate_mark_as_unverified: The autotranslate_mark_as_unverified of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_mark_as_unverified = autotranslate_mark_as_unverified
+
+    @property
+    def autotranslate_use_machine_translation(self):
+        """Gets the autotranslate_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :return: The autotranslate_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_use_machine_translation
+
+    @autotranslate_use_machine_translation.setter
+    def autotranslate_use_machine_translation(self, autotranslate_use_machine_translation):
+        """Sets the autotranslate_use_machine_translation of this ProjectCreateParameters.
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :param autotranslate_use_machine_translation: The autotranslate_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_use_machine_translation = autotranslate_use_machine_translation
+
+    @property
+    def autotranslate_use_translation_memory(self):
+        """Gets the autotranslate_use_translation_memory of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :return: The autotranslate_use_translation_memory of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_use_translation_memory
+
+    @autotranslate_use_translation_memory.setter
+    def autotranslate_use_translation_memory(self, autotranslate_use_translation_memory):
+        """Sets the autotranslate_use_translation_memory of this ProjectCreateParameters.
+
+        (Optional) Requires autotranslate_enabled to be true  # noqa: E501
+
+        :param autotranslate_use_translation_memory: The autotranslate_use_translation_memory of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_use_translation_memory = autotranslate_use_translation_memory
+
+    @property
+    def smart_suggest_enabled(self):
+        """Gets the smart_suggest_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Smart Suggest, requires machine_translation_enabled  # noqa: E501
+
+        :return: The smart_suggest_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._smart_suggest_enabled
+
+    @smart_suggest_enabled.setter
+    def smart_suggest_enabled(self, smart_suggest_enabled):
+        """Sets the smart_suggest_enabled of this ProjectCreateParameters.
+
+        (Optional) Smart Suggest, requires machine_translation_enabled  # noqa: E501
+
+        :param smart_suggest_enabled: The smart_suggest_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._smart_suggest_enabled = smart_suggest_enabled
+
+    @property
+    def smart_suggest_use_glossary(self):
+        """Gets the smart_suggest_use_glossary of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
+
+        :return: The smart_suggest_use_glossary of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._smart_suggest_use_glossary
+
+    @smart_suggest_use_glossary.setter
+    def smart_suggest_use_glossary(self, smart_suggest_use_glossary):
+        """Sets the smart_suggest_use_glossary of this ProjectCreateParameters.
+
+        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
+
+        :param smart_suggest_use_glossary: The smart_suggest_use_glossary of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._smart_suggest_use_glossary = smart_suggest_use_glossary
+
+    @property
+    def smart_suggest_use_machine_translation(self):
+        """Gets the smart_suggest_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
+
+        :return: The smart_suggest_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._smart_suggest_use_machine_translation
+
+    @smart_suggest_use_machine_translation.setter
+    def smart_suggest_use_machine_translation(self, smart_suggest_use_machine_translation):
+        """Sets the smart_suggest_use_machine_translation of this ProjectCreateParameters.
+
+        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
+
+        :param smart_suggest_use_machine_translation: The smart_suggest_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._smart_suggest_use_machine_translation = smart_suggest_use_machine_translation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

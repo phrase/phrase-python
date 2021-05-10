@@ -32,6 +32,8 @@ class Branch(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'base_project_id': 'str',
+        'branch_project_id': 'str',
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -42,6 +44,8 @@ class Branch(object):
     }
 
     attribute_map = {
+        'base_project_id': 'base_project_id',
+        'branch_project_id': 'branch_project_id',
         'name': 'name',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
@@ -51,12 +55,14 @@ class Branch(object):
         'state': 'state'
     }
 
-    def __init__(self, name=None, created_at=None, updated_at=None, merged_at=None, merged_by=None, created_by=None, state=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, base_project_id=None, branch_project_id=None, name=None, created_at=None, updated_at=None, merged_at=None, merged_by=None, created_by=None, state=None, local_vars_configuration=None):  # noqa: E501
         """Branch - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._base_project_id = None
+        self._branch_project_id = None
         self._name = None
         self._created_at = None
         self._updated_at = None
@@ -66,6 +72,10 @@ class Branch(object):
         self._state = None
         self.discriminator = None
 
+        if base_project_id is not None:
+            self.base_project_id = base_project_id
+        if branch_project_id is not None:
+            self.branch_project_id = branch_project_id
         if name is not None:
             self.name = name
         if created_at is not None:
@@ -80,6 +90,48 @@ class Branch(object):
             self.created_by = created_by
         if state is not None:
             self.state = state
+
+    @property
+    def base_project_id(self):
+        """Gets the base_project_id of this Branch.  # noqa: E501
+
+
+        :return: The base_project_id of this Branch.  # noqa: E501
+        :rtype: str
+        """
+        return self._base_project_id
+
+    @base_project_id.setter
+    def base_project_id(self, base_project_id):
+        """Sets the base_project_id of this Branch.
+
+
+        :param base_project_id: The base_project_id of this Branch.  # noqa: E501
+        :type: str
+        """
+
+        self._base_project_id = base_project_id
+
+    @property
+    def branch_project_id(self):
+        """Gets the branch_project_id of this Branch.  # noqa: E501
+
+
+        :return: The branch_project_id of this Branch.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch_project_id
+
+    @branch_project_id.setter
+    def branch_project_id(self, branch_project_id):
+        """Sets the branch_project_id of this Branch.
+
+
+        :param branch_project_id: The branch_project_id of this Branch.  # noqa: E501
+        :type: str
+        """
+
+        self._branch_project_id = branch_project_id
 
     @property
     def name(self):

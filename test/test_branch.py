@@ -35,6 +35,8 @@ class TestBranch(unittest.TestCase):
         # model = phrase_api.models.branch.Branch()  # noqa: E501
         if include_optional :
             return Branch(
+                base_project_id = '0', 
+                branch_project_id = '0', 
                 name = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

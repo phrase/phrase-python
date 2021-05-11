@@ -39,6 +39,7 @@ class ProjectCreateParameters(object):
         'remove_project_image': 'bool',
         'account_id': 'str',
         'source_project_id': 'str',
+        'workflow': 'str',
         'machine_translation_enabled': 'bool',
         'enable_branching': 'bool',
         'protect_master_branch': 'bool',
@@ -65,6 +66,7 @@ class ProjectCreateParameters(object):
         'remove_project_image': 'remove_project_image',
         'account_id': 'account_id',
         'source_project_id': 'source_project_id',
+        'workflow': 'workflow',
         'machine_translation_enabled': 'machine_translation_enabled',
         'enable_branching': 'enable_branching',
         'protect_master_branch': 'protect_master_branch',
@@ -83,7 +85,7 @@ class ProjectCreateParameters(object):
         'smart_suggest_use_machine_translation': 'smart_suggest_use_machine_translation'
     }
 
-    def __init__(self, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, source_project_id=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, source_project_id=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, local_vars_configuration=None):  # noqa: E501
         """ProjectCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -96,6 +98,7 @@ class ProjectCreateParameters(object):
         self._remove_project_image = None
         self._account_id = None
         self._source_project_id = None
+        self._workflow = None
         self._machine_translation_enabled = None
         self._enable_branching = None
         self._protect_master_branch = None
@@ -128,6 +131,8 @@ class ProjectCreateParameters(object):
             self.account_id = account_id
         if source_project_id is not None:
             self.source_project_id = source_project_id
+        if workflow is not None:
+            self.workflow = workflow
         if machine_translation_enabled is not None:
             self.machine_translation_enabled = machine_translation_enabled
         if enable_branching is not None:
@@ -321,6 +326,29 @@ class ProjectCreateParameters(object):
         """
 
         self._source_project_id = source_project_id
+
+    @property
+    def workflow(self):
+        """Gets the workflow of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Review Workflow. \"simple\" / \"review\". <a href=\"https://help.phrase.com/help/advanced-review-workflow\">Read more</a>  # noqa: E501
+
+        :return: The workflow of this ProjectCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._workflow
+
+    @workflow.setter
+    def workflow(self, workflow):
+        """Sets the workflow of this ProjectCreateParameters.
+
+        (Optional) Review Workflow. \"simple\" / \"review\". <a href=\"https://help.phrase.com/help/advanced-review-workflow\">Read more</a>  # noqa: E501
+
+        :param workflow: The workflow of this ProjectCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._workflow = workflow
 
     @property
     def machine_translation_enabled(self):

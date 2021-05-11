@@ -42,6 +42,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 source_project_id = 'abcd1234', 
+                workflow = 'review', 
                 machine_translation_enabled = True, 
                 enable_branching = True, 
                 protect_master_branch = True, 

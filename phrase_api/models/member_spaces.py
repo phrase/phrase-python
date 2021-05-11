@@ -34,8 +34,8 @@ class MemberSpaces(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
-        'created_at': 'object',
-        'updated_at': 'object',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
         'projects_count': 'int'
     }
 
@@ -119,7 +119,7 @@ class MemberSpaces(object):
 
 
         :return: The created_at of this MemberSpaces.  # noqa: E501
-        :rtype: object
+        :rtype: datetime
         """
         return self._created_at
 
@@ -129,7 +129,7 @@ class MemberSpaces(object):
 
 
         :param created_at: The created_at of this MemberSpaces.  # noqa: E501
-        :type: object
+        :type: datetime
         """
 
         self._created_at = created_at
@@ -140,7 +140,7 @@ class MemberSpaces(object):
 
 
         :return: The updated_at of this MemberSpaces.  # noqa: E501
-        :rtype: object
+        :rtype: datetime
         """
         return self._updated_at
 
@@ -150,7 +150,7 @@ class MemberSpaces(object):
 
 
         :param updated_at: The updated_at of this MemberSpaces.  # noqa: E501
-        :type: object
+        :type: datetime
         """
 
         self._updated_at = updated_at

@@ -37,8 +37,8 @@ class TestMemberSpaces(unittest.TestCase):
             return MemberSpaces(
                 id = '0', 
                 name = '0', 
-                created_at = null, 
-                updated_at = null, 
+                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 projects_count = 56
             )
         else :

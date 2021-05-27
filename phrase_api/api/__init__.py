@@ -23,6 +23,8 @@ from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.locales_api import LocalesApi
 from phrase_api.api.members_api import MembersApi
+from phrase_api.api.notification_groups_api import NotificationGroupsApi
+from phrase_api.api.notifications_api import NotificationsApi
 from phrase_api.api.orders_api import OrdersApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi

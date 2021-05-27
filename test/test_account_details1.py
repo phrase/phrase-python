@@ -35,6 +35,7 @@ class TestAccountDetails1(unittest.TestCase):
         # model = phrase_api.models.account_details1.AccountDetails1()  # noqa: E501
         if include_optional :
             return AccountDetails1(
+                subscription = {"is_current":true,"trial_expired":false}, 
                 slug = '0'
             )
         else :

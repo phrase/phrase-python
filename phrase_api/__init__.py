@@ -36,6 +36,8 @@ from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.locales_api import LocalesApi
 from phrase_api.api.members_api import MembersApi
+from phrase_api.api.notification_groups_api import NotificationGroupsApi
+from phrase_api.api.notifications_api import NotificationsApi
 from phrase_api.api.orders_api import OrdersApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
@@ -150,6 +152,9 @@ from phrase_api.models.member_project_detail_project_roles import MemberProjectD
 from phrase_api.models.member_spaces import MemberSpaces
 from phrase_api.models.member_update_parameters import MemberUpdateParameters
 from phrase_api.models.member_update_settings_parameters import MemberUpdateSettingsParameters
+from phrase_api.models.notification import Notification
+from phrase_api.models.notification_group import NotificationGroup
+from phrase_api.models.notification_group_detail import NotificationGroupDetail
 from phrase_api.models.order_confirm_parameters import OrderConfirmParameters
 from phrase_api.models.order_create_parameters import OrderCreateParameters
 from phrase_api.models.project import Project
@@ -181,6 +186,7 @@ from phrase_api.models.styleguide_details import StyleguideDetails
 from phrase_api.models.styleguide_details1 import StyleguideDetails1
 from phrase_api.models.styleguide_preview import StyleguidePreview
 from phrase_api.models.styleguide_update_parameters import StyleguideUpdateParameters
+from phrase_api.models.subscription import Subscription
 from phrase_api.models.tag import Tag
 from phrase_api.models.tag_create_parameters import TagCreateParameters
 from phrase_api.models.tag_with_stats import TagWithStats

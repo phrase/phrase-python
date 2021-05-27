@@ -34,6 +34,20 @@ class TestNotificationsApi(unittest.TestCase):
         """
         pass
 
+    def test_notifications_mark_all_as_read(self):
+        """Test case for notifications_mark_all_as_read
+
+        Mark all notifications as read  # noqa: E501
+        """
+        pass
+
+    def test_notifications_show(self):
+        """Test case for notifications_show
+
+        Get a single notification  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

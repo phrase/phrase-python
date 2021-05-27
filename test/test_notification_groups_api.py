@@ -34,6 +34,20 @@ class TestNotificationGroupsApi(unittest.TestCase):
         """
         pass
 
+    def test_notification_groups_mark_all_as_read(self):
+        """Test case for notification_groups_mark_all_as_read
+
+        Mark all notification groups as read  # noqa: E501
+        """
+        pass
+
+    def test_notification_groups_mark_as_read(self):
+        """Test case for notification_groups_mark_as_read
+
+        Mark a notification group as read  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

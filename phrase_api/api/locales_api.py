@@ -310,7 +310,7 @@ class LocalesApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param str file_format: File format name. See the format guide for all supported file formats.
+        :param str file_format: File format name. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for all supported file formats.
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
         :param str tag: Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
         :param bool include_empty_translations: Indicates whether keys without translations should be included in the output as well.
@@ -352,7 +352,7 @@ class LocalesApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param str file_format: File format name. See the format guide for all supported file formats.
+        :param str file_format: File format name. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for all supported file formats.
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
         :param str tag: Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
         :param bool include_empty_translations: Indicates whether keys without translations should be included in the output as well.

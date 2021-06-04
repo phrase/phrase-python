@@ -36,7 +36,8 @@ class Comment(object):
         'message': 'str',
         'user': 'UserPreview',
         'created_at': 'datetime',
-        'updated_at': 'datetime'
+        'updated_at': 'datetime',
+        'mentioned_users': 'list[UserPreview]'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class Comment(object):
         'message': 'message',
         'user': 'user',
         'created_at': 'created_at',
-        'updated_at': 'updated_at'
+        'updated_at': 'updated_at',
+        'mentioned_users': 'mentioned_users'
     }
 
-    def __init__(self, id=None, message=None, user=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, message=None, user=None, created_at=None, updated_at=None, mentioned_users=None, local_vars_configuration=None):  # noqa: E501
         """Comment - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,6 +60,7 @@ class Comment(object):
         self._user = None
         self._created_at = None
         self._updated_at = None
+        self._mentioned_users = None
         self.discriminator = None
 
         if id is not None:
@@ -70,6 +73,8 @@ class Comment(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if mentioned_users is not None:
+            self.mentioned_users = mentioned_users
 
     @property
     def id(self):
@@ -175,6 +180,27 @@ class Comment(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def mentioned_users(self):
+        """Gets the mentioned_users of this Comment.  # noqa: E501
+
+
+        :return: The mentioned_users of this Comment.  # noqa: E501
+        :rtype: list[UserPreview]
+        """
+        return self._mentioned_users
+
+    @mentioned_users.setter
+    def mentioned_users(self, mentioned_users):
+        """Sets the mentioned_users of this Comment.
+
+
+        :param mentioned_users: The mentioned_users of this Comment.  # noqa: E501
+        :type: list[UserPreview]
+        """
+
+        self._mentioned_users = mentioned_users
 
     def to_dict(self):
         """Returns the model properties as a dict"""

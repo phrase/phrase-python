@@ -33,6 +33,7 @@ class OrderCreateParameters(object):
     """
     openapi_types = {
         'branch': 'str',
+        'name': 'str',
         'lsp': 'str',
         'source_locale_id': 'str',
         'target_locale_ids': 'list[str]',
@@ -50,6 +51,7 @@ class OrderCreateParameters(object):
 
     attribute_map = {
         'branch': 'branch',
+        'name': 'name',
         'lsp': 'lsp',
         'source_locale_id': 'source_locale_id',
         'target_locale_ids': 'target_locale_ids',
@@ -65,13 +67,14 @@ class OrderCreateParameters(object):
         'priority': 'priority'
     }
 
-    def __init__(self, branch=None, lsp=None, source_locale_id=None, target_locale_ids=None, translation_type=None, tag=None, message=None, styleguide_id=None, unverify_translations_upon_delivery=None, include_untranslated_keys=None, include_unverified_translations=None, category=None, quality=None, priority=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, lsp=None, source_locale_id=None, target_locale_ids=None, translation_type=None, tag=None, message=None, styleguide_id=None, unverify_translations_upon_delivery=None, include_untranslated_keys=None, include_unverified_translations=None, category=None, quality=None, priority=None, local_vars_configuration=None):  # noqa: E501
         """OrderCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._branch = None
+        self._name = None
         self._lsp = None
         self._source_locale_id = None
         self._target_locale_ids = None
@@ -89,6 +92,8 @@ class OrderCreateParameters(object):
 
         if branch is not None:
             self.branch = branch
+        if name is not None:
+            self.name = name
         if lsp is not None:
             self.lsp = lsp
         if source_locale_id is not None:
@@ -138,6 +143,29 @@ class OrderCreateParameters(object):
         """
 
         self._branch = branch
+
+    @property
+    def name(self):
+        """Gets the name of this OrderCreateParameters.  # noqa: E501
+
+        the name of the order, default name is: Translation order from 'current datetime'  # noqa: E501
+
+        :return: The name of this OrderCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this OrderCreateParameters.
+
+        the name of the order, default name is: Translation order from 'current datetime'  # noqa: E501
+
+        :param name: The name of this OrderCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def lsp(self):

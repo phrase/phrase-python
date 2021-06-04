@@ -36,6 +36,7 @@ class TestTranslationOrder(unittest.TestCase):
         if include_optional :
             return TranslationOrder(
                 id = '0', 
+                name = '0', 
                 lsp = '0', 
                 amount_in_cents = 56, 
                 currency = '0', 

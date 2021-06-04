@@ -33,6 +33,7 @@ class TranslationOrder(object):
     """
     openapi_types = {
         'id': 'str',
+        'name': 'str',
         'lsp': 'str',
         'amount_in_cents': 'int',
         'currency': 'str',
@@ -53,6 +54,7 @@ class TranslationOrder(object):
 
     attribute_map = {
         'id': 'id',
+        'name': 'name',
         'lsp': 'lsp',
         'amount_in_cents': 'amount_in_cents',
         'currency': 'currency',
@@ -71,13 +73,14 @@ class TranslationOrder(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, lsp=None, amount_in_cents=None, currency=None, message=None, state=None, translation_type=None, progress_percent=None, source_locale=None, target_locales=None, tag=None, styleguide=None, unverify_translations_upon_delivery=None, quality=None, priority=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, lsp=None, amount_in_cents=None, currency=None, message=None, state=None, translation_type=None, progress_percent=None, source_locale=None, target_locales=None, tag=None, styleguide=None, unverify_translations_upon_delivery=None, quality=None, priority=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """TranslationOrder - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
+        self._name = None
         self._lsp = None
         self._amount_in_cents = None
         self._currency = None
@@ -98,6 +101,8 @@ class TranslationOrder(object):
 
         if id is not None:
             self.id = id
+        if name is not None:
+            self.name = name
         if lsp is not None:
             self.lsp = lsp
         if amount_in_cents is not None:
@@ -151,6 +156,27 @@ class TranslationOrder(object):
         """
 
         self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this TranslationOrder.  # noqa: E501
+
+
+        :return: The name of this TranslationOrder.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this TranslationOrder.
+
+
+        :param name: The name of this TranslationOrder.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def lsp(self):

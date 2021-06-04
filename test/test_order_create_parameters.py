@@ -36,6 +36,7 @@ class TestOrderCreateParameters(unittest.TestCase):
         if include_optional :
             return OrderCreateParameters(
                 branch = 'my-feature-branch', 
+                name = 'Welcome message translations', 
                 lsp = 'textmaster', 
                 source_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 target_locale_ids = ["1234abcd1234abcd1234abcd1234abcd","abcd1234abcd1234abcd1234abcd1234"], 

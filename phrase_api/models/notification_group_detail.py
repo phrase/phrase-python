@@ -36,6 +36,7 @@ class NotificationGroupDetail(object):
         'event_name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
+        'notifications_count': 'int',
         'latest_notification': 'object'
     }
 
@@ -44,10 +45,11 @@ class NotificationGroupDetail(object):
         'event_name': 'event_name',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
+        'notifications_count': 'notifications_count',
         'latest_notification': 'latest_notification'
     }
 
-    def __init__(self, id=None, event_name=None, created_at=None, updated_at=None, latest_notification=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, event_name=None, created_at=None, updated_at=None, notifications_count=None, latest_notification=None, local_vars_configuration=None):  # noqa: E501
         """NotificationGroupDetail - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class NotificationGroupDetail(object):
         self._event_name = None
         self._created_at = None
         self._updated_at = None
+        self._notifications_count = None
         self._latest_notification = None
         self.discriminator = None
 
@@ -68,6 +71,8 @@ class NotificationGroupDetail(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if notifications_count is not None:
+            self.notifications_count = notifications_count
         if latest_notification is not None:
             self.latest_notification = latest_notification
 
@@ -154,6 +159,27 @@ class NotificationGroupDetail(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def notifications_count(self):
+        """Gets the notifications_count of this NotificationGroupDetail.  # noqa: E501
+
+
+        :return: The notifications_count of this NotificationGroupDetail.  # noqa: E501
+        :rtype: int
+        """
+        return self._notifications_count
+
+    @notifications_count.setter
+    def notifications_count(self, notifications_count):
+        """Sets the notifications_count of this NotificationGroupDetail.
+
+
+        :param notifications_count: The notifications_count of this NotificationGroupDetail.  # noqa: E501
+        :type: int
+        """
+
+        self._notifications_count = notifications_count
 
     @property
     def latest_notification(self):

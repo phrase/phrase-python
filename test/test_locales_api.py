@@ -27,6 +27,13 @@ class TestLocalesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_account_locales(self):
+        """Test case for account_locales
+
+        List locales used in account  # noqa: E501
+        """
+        pass
+
     def test_locale_create(self):
         """Test case for locale_create
 

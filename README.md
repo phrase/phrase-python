@@ -217,6 +217,7 @@ Class | Method | HTTP request | Description
 *KeysApi* | [**keys_search**](docs/KeysApi.md#keys_search) | **POST** /projects/{project_id}/keys/search | Search keys
 *KeysApi* | [**keys_tag**](docs/KeysApi.md#keys_tag) | **PATCH** /projects/{project_id}/keys/tag | Add tags to collection of keys
 *KeysApi* | [**keys_untag**](docs/KeysApi.md#keys_untag) | **PATCH** /projects/{project_id}/keys/untag | Remove tags from collection of keys
+*LocalesApi* | [**account_locales**](docs/LocalesApi.md#account_locales) | **GET** /accounts/{account_id}/locales | List locales used in account
 *LocalesApi* | [**locale_create**](docs/LocalesApi.md#locale_create) | **POST** /projects/{project_id}/locales | Create a locale
 *LocalesApi* | [**locale_delete**](docs/LocalesApi.md#locale_delete) | **DELETE** /projects/{project_id}/locales/{id} | Delete a locale
 *LocalesApi* | [**locale_download**](docs/LocalesApi.md#locale_download) | **GET** /projects/{project_id}/locales/{id}/download | Download a locale
@@ -407,6 +408,7 @@ Class | Method | HTTP request | Description
  - [LocaleDetails](docs/LocaleDetails.md)
  - [LocaleDetails1](docs/LocaleDetails1.md)
  - [LocalePreview](docs/LocalePreview.md)
+ - [LocalePreview1](docs/LocalePreview1.md)
  - [LocaleStatistics](docs/LocaleStatistics.md)
  - [LocaleUpdateParameters](docs/LocaleUpdateParameters.md)
  - [Member](docs/Member.md)

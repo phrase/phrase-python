@@ -144,6 +144,7 @@ from phrase_api.models.locale_create_parameters import LocaleCreateParameters
 from phrase_api.models.locale_details import LocaleDetails
 from phrase_api.models.locale_details1 import LocaleDetails1
 from phrase_api.models.locale_preview import LocalePreview
+from phrase_api.models.locale_preview1 import LocalePreview1
 from phrase_api.models.locale_statistics import LocaleStatistics
 from phrase_api.models.locale_update_parameters import LocaleUpdateParameters
 from phrase_api.models.member import Member

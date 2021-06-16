@@ -136,6 +136,8 @@ from phrase_api.models.job_update_parameters import JobUpdateParameters
 from phrase_api.models.key_create_parameters import KeyCreateParameters
 from phrase_api.models.key_preview import KeyPreview
 from phrase_api.models.key_update_parameters import KeyUpdateParameters
+from phrase_api.models.keys_exclude_parameters import KeysExcludeParameters
+from phrase_api.models.keys_include_parameters import KeysIncludeParameters
 from phrase_api.models.keys_search_parameters import KeysSearchParameters
 from phrase_api.models.keys_tag_parameters import KeysTagParameters
 from phrase_api.models.keys_untag_parameters import KeysUntagParameters

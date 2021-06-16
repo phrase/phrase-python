@@ -62,6 +62,20 @@ class TestKeysApi(unittest.TestCase):
         """
         pass
 
+    def test_keys_exclude(self):
+        """Test case for keys_exclude
+
+        Exclude a locale on a collection of keys  # noqa: E501
+        """
+        pass
+
+    def test_keys_include(self):
+        """Test case for keys_include
+
+        Include a locale on a collection of keys  # noqa: E501
+        """
+        pass
+
     def test_keys_list(self):
         """Test case for keys_list
 

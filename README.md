@@ -213,6 +213,8 @@ Class | Method | HTTP request | Description
 *KeysApi* | [**key_show**](docs/KeysApi.md#key_show) | **GET** /projects/{project_id}/keys/{id} | Get a single key
 *KeysApi* | [**key_update**](docs/KeysApi.md#key_update) | **PATCH** /projects/{project_id}/keys/{id} | Update a key
 *KeysApi* | [**keys_delete_collection**](docs/KeysApi.md#keys_delete_collection) | **DELETE** /projects/{project_id}/keys | Delete collection of keys
+*KeysApi* | [**keys_exclude**](docs/KeysApi.md#keys_exclude) | **PATCH** /projects/{project_id}/keys/exclude | Exclude a locale on a collection of keys
+*KeysApi* | [**keys_include**](docs/KeysApi.md#keys_include) | **PATCH** /projects/{project_id}/keys/include | Include a locale on a collection of keys
 *KeysApi* | [**keys_list**](docs/KeysApi.md#keys_list) | **GET** /projects/{project_id}/keys | List keys
 *KeysApi* | [**keys_search**](docs/KeysApi.md#keys_search) | **POST** /projects/{project_id}/keys/search | Search keys
 *KeysApi* | [**keys_tag**](docs/KeysApi.md#keys_tag) | **PATCH** /projects/{project_id}/keys/tag | Add tags to collection of keys
@@ -400,6 +402,8 @@ Class | Method | HTTP request | Description
  - [KeyCreateParameters](docs/KeyCreateParameters.md)
  - [KeyPreview](docs/KeyPreview.md)
  - [KeyUpdateParameters](docs/KeyUpdateParameters.md)
+ - [KeysExcludeParameters](docs/KeysExcludeParameters.md)
+ - [KeysIncludeParameters](docs/KeysIncludeParameters.md)
  - [KeysSearchParameters](docs/KeysSearchParameters.md)
  - [KeysTagParameters](docs/KeysTagParameters.md)
  - [KeysUntagParameters](docs/KeysUntagParameters.md)

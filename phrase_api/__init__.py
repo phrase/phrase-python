@@ -43,6 +43,7 @@ from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
 from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi
 from phrase_api.api.screenshots_api import ScreenshotsApi
+from phrase_api.api.search_api import SearchApi
 from phrase_api.api.spaces_api import SpacesApi
 from phrase_api.api.style_guides_api import StyleGuidesApi
 from phrase_api.api.tags_api import TagsApi
@@ -66,6 +67,7 @@ from phrase_api.exceptions import ApiException
 from phrase_api.models.account import Account
 from phrase_api.models.account_details import AccountDetails
 from phrase_api.models.account_details1 import AccountDetails1
+from phrase_api.models.account_search_result import AccountSearchResult
 from phrase_api.models.affected_count import AffectedCount
 from phrase_api.models.affected_resources import AffectedResources
 from phrase_api.models.authorization import Authorization
@@ -178,6 +180,7 @@ from phrase_api.models.screenshot_marker import ScreenshotMarker
 from phrase_api.models.screenshot_marker_create_parameters import ScreenshotMarkerCreateParameters
 from phrase_api.models.screenshot_marker_update_parameters import ScreenshotMarkerUpdateParameters
 from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters
+from phrase_api.models.search_in_account_parameters import SearchInAccountParameters
 from phrase_api.models.space import Space
 from phrase_api.models.space1 import Space1
 from phrase_api.models.space_create_parameters import SpaceCreateParameters

@@ -30,6 +30,7 @@ from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
 from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi
 from phrase_api.api.screenshots_api import ScreenshotsApi
+from phrase_api.api.search_api import SearchApi
 from phrase_api.api.spaces_api import SpacesApi
 from phrase_api.api.style_guides_api import StyleGuidesApi
 from phrase_api.api.tags_api import TagsApi

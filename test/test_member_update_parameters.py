@@ -35,6 +35,7 @@ class TestMemberUpdateParameters(unittest.TestCase):
         # model = phrase_api.models.member_update_parameters.MemberUpdateParameters()  # noqa: E501
         if include_optional :
             return MemberUpdateParameters(
+                strategy = 'set', 
                 role = 'Developer', 
                 project_ids = 'abcd1234abcd1234abcd1234,abcd1234abcd1234abcd1235', 
                 locale_ids = 'abcd1234abcd1234abcd1234,abcd1234abcd1234abcd1235', 

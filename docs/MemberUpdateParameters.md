@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | **str** | Member role, can be any of of Manager, Developer, Translator | [optional] 
+**strategy** | **str** | Update strategy, can be any of set, add, remove. If provided, it will set, add or remove given spaces, projects and locale ids from users access list. | [optional] 
+**role** | **str** | Member role, can be any of of Admin, ProjectManager, Developer, Designer, Translator | [optional] 
 **project_ids** | **str** | List of project ids the user has access to.  | [optional] 
 **locale_ids** | **str** | List of locale ids the user has access to. | [optional] 
 **default_locale_codes** | **list[str]** | List of default locales for the user. | [optional] 

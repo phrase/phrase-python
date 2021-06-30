@@ -32,6 +32,7 @@ class MemberUpdateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'strategy': 'str',
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
@@ -41,6 +42,7 @@ class MemberUpdateParameters(object):
     }
 
     attribute_map = {
+        'strategy': 'strategy',
         'role': 'role',
         'project_ids': 'project_ids',
         'locale_ids': 'locale_ids',
@@ -49,12 +51,13 @@ class MemberUpdateParameters(object):
         'permissions': 'permissions'
     }
 
-    def __init__(self, role=None, project_ids=None, locale_ids=None, default_locale_codes=None, space_ids=None, permissions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, strategy=None, role=None, project_ids=None, locale_ids=None, default_locale_codes=None, space_ids=None, permissions=None, local_vars_configuration=None):  # noqa: E501
         """MemberUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._strategy = None
         self._role = None
         self._project_ids = None
         self._locale_ids = None
@@ -63,6 +66,8 @@ class MemberUpdateParameters(object):
         self._permissions = None
         self.discriminator = None
 
+        if strategy is not None:
+            self.strategy = strategy
         if role is not None:
             self.role = role
         if project_ids is not None:
@@ -77,10 +82,33 @@ class MemberUpdateParameters(object):
             self.permissions = permissions
 
     @property
+    def strategy(self):
+        """Gets the strategy of this MemberUpdateParameters.  # noqa: E501
+
+        Update strategy, can be any of set, add, remove. If provided, it will set, add or remove given spaces, projects and locale ids from users access list.  # noqa: E501
+
+        :return: The strategy of this MemberUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._strategy
+
+    @strategy.setter
+    def strategy(self, strategy):
+        """Sets the strategy of this MemberUpdateParameters.
+
+        Update strategy, can be any of set, add, remove. If provided, it will set, add or remove given spaces, projects and locale ids from users access list.  # noqa: E501
+
+        :param strategy: The strategy of this MemberUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._strategy = strategy
+
+    @property
     def role(self):
         """Gets the role of this MemberUpdateParameters.  # noqa: E501
 
-        Member role, can be any of of Manager, Developer, Translator  # noqa: E501
+        Member role, can be any of of Admin, ProjectManager, Developer, Designer, Translator  # noqa: E501
 
         :return: The role of this MemberUpdateParameters.  # noqa: E501
         :rtype: str
@@ -91,7 +119,7 @@ class MemberUpdateParameters(object):
     def role(self, role):
         """Sets the role of this MemberUpdateParameters.
 
-        Member role, can be any of of Manager, Developer, Translator  # noqa: E501
+        Member role, can be any of of Admin, ProjectManager, Developer, Designer, Translator  # noqa: E501
 
         :param role: The role of this MemberUpdateParameters.  # noqa: E501
         :type: str

@@ -539,6 +539,7 @@ class ProjectsApi(object):
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
         :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
+        :param list[str] filters: Filter projects. Valid options are [\"favorites\"].
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -568,6 +569,7 @@ class ProjectsApi(object):
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
         :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
+        :param list[str] filters: Filter projects. Valid options are [\"favorites\"].
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -589,7 +591,8 @@ class ProjectsApi(object):
             'page',
             'per_page',
             'account_id',
-            'sort_by'
+            'sort_by',
+            'filters'
         ]
         all_params.extend(
             [
@@ -622,6 +625,9 @@ class ProjectsApi(object):
             query_params.append(('account_id', local_var_params['account_id']))  # noqa: E501
         if 'sort_by' in local_var_params and local_var_params['sort_by'] is not None:  # noqa: E501
             query_params.append(('sort_by', local_var_params['sort_by']))  # noqa: E501
+        if 'filters' in local_var_params and local_var_params['filters'] is not None:  # noqa: E501
+            query_params.append(('filters', local_var_params['filters']))  # noqa: E501
+            collection_formats['filters'] = 'multi'  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

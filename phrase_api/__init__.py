@@ -32,6 +32,8 @@ from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslatio
 from phrase_api.api.glossary_terms_api import GlossaryTermsApi
 from phrase_api.api.invitations_api import InvitationsApi
 from phrase_api.api.job_locales_api import JobLocalesApi
+from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
+from phrase_api.api.job_templates_api import JobTemplatesApi
 from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.locales_api import LocalesApi
@@ -134,6 +136,14 @@ from phrase_api.models.job_locales_create_parameters import JobLocalesCreatePara
 from phrase_api.models.job_preview import JobPreview
 from phrase_api.models.job_reopen_parameters import JobReopenParameters
 from phrase_api.models.job_start_parameters import JobStartParameters
+from phrase_api.models.job_template import JobTemplate
+from phrase_api.models.job_template_create_parameters import JobTemplateCreateParameters
+from phrase_api.models.job_template_locale import JobTemplateLocale
+from phrase_api.models.job_template_locale_update_parameters import JobTemplateLocaleUpdateParameters
+from phrase_api.models.job_template_locales_create_parameters import JobTemplateLocalesCreateParameters
+from phrase_api.models.job_template_preview import JobTemplatePreview
+from phrase_api.models.job_template_update_parameters import JobTemplateUpdateParameters
+from phrase_api.models.job_template_user_preview import JobTemplateUserPreview
 from phrase_api.models.job_update_parameters import JobUpdateParameters
 from phrase_api.models.key_create_parameters import KeyCreateParameters
 from phrase_api.models.key_preview import KeyPreview

@@ -19,6 +19,8 @@ from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslatio
 from phrase_api.api.glossary_terms_api import GlossaryTermsApi
 from phrase_api.api.invitations_api import InvitationsApi
 from phrase_api.api.job_locales_api import JobLocalesApi
+from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
+from phrase_api.api.job_templates_api import JobTemplatesApi
 from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.locales_api import LocalesApi

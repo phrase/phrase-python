@@ -40,6 +40,7 @@ class TestJobDetails1(unittest.TestCase):
                     username = '0', 
                     name = '0', ), 
                 job_tag_name = '0', 
+                source_locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ], 

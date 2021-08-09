@@ -34,6 +34,7 @@ class JobDetails1(object):
     openapi_types = {
         'owner': 'UserPreview',
         'job_tag_name': 'str',
+        'source_locale': 'LocalePreview',
         'locales': 'list[LocalePreview]',
         'keys': 'list[KeyPreview]'
     }
@@ -41,11 +42,12 @@ class JobDetails1(object):
     attribute_map = {
         'owner': 'owner',
         'job_tag_name': 'job_tag_name',
+        'source_locale': 'source_locale',
         'locales': 'locales',
         'keys': 'keys'
     }
 
-    def __init__(self, owner=None, job_tag_name=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, owner=None, job_tag_name=None, source_locale=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
         """JobDetails1 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +55,7 @@ class JobDetails1(object):
 
         self._owner = None
         self._job_tag_name = None
+        self._source_locale = None
         self._locales = None
         self._keys = None
         self.discriminator = None
@@ -61,6 +64,8 @@ class JobDetails1(object):
             self.owner = owner
         if job_tag_name is not None:
             self.job_tag_name = job_tag_name
+        if source_locale is not None:
+            self.source_locale = source_locale
         if locales is not None:
             self.locales = locales
         if keys is not None:
@@ -107,6 +112,27 @@ class JobDetails1(object):
         """
 
         self._job_tag_name = job_tag_name
+
+    @property
+    def source_locale(self):
+        """Gets the source_locale of this JobDetails1.  # noqa: E501
+
+
+        :return: The source_locale of this JobDetails1.  # noqa: E501
+        :rtype: LocalePreview
+        """
+        return self._source_locale
+
+    @source_locale.setter
+    def source_locale(self, source_locale):
+        """Sets the source_locale of this JobDetails1.
+
+
+        :param source_locale: The source_locale of this JobDetails1.  # noqa: E501
+        :type: LocalePreview
+        """
+
+        self._source_locale = source_locale
 
     @property
     def locales(self):

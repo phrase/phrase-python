@@ -34,6 +34,7 @@ class JobCreateParameters(object):
     openapi_types = {
         'branch': 'str',
         'name': 'str',
+        'source_locale_id': 'str',
         'briefing': 'str',
         'due_date': 'datetime',
         'ticket_url': 'str',
@@ -44,6 +45,7 @@ class JobCreateParameters(object):
     attribute_map = {
         'branch': 'branch',
         'name': 'name',
+        'source_locale_id': 'source_locale_id',
         'briefing': 'briefing',
         'due_date': 'due_date',
         'ticket_url': 'ticket_url',
@@ -51,7 +53,7 @@ class JobCreateParameters(object):
         'translation_key_ids': 'translation_key_ids'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,6 +61,7 @@ class JobCreateParameters(object):
 
         self._branch = None
         self._name = None
+        self._source_locale_id = None
         self._briefing = None
         self._due_date = None
         self._ticket_url = None
@@ -70,6 +73,8 @@ class JobCreateParameters(object):
             self.branch = branch
         if name is not None:
             self.name = name
+        if source_locale_id is not None:
+            self.source_locale_id = source_locale_id
         if briefing is not None:
             self.briefing = briefing
         if due_date is not None:
@@ -126,6 +131,29 @@ class JobCreateParameters(object):
         """
 
         self._name = name
+
+    @property
+    def source_locale_id(self):
+        """Gets the source_locale_id of this JobCreateParameters.  # noqa: E501
+
+        The API id of the source language  # noqa: E501
+
+        :return: The source_locale_id of this JobCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_locale_id
+
+    @source_locale_id.setter
+    def source_locale_id(self, source_locale_id):
+        """Sets the source_locale_id of this JobCreateParameters.
+
+        The API id of the source language  # noqa: E501
+
+        :param source_locale_id: The source_locale_id of this JobCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._source_locale_id = source_locale_id
 
     @property
     def briefing(self):

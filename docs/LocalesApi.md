@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **account_locales**
-> list[LocalePreview1] account_locales(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[LocalePreview1] account_locales(id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List locales used in account
 
@@ -37,13 +37,14 @@ configuration.api_key_prefix['Authorization'] = 'token'
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.LocalesApi(api_client)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
 
     try:
         # List locales used in account
-        api_response = api_instance.account_locales(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.account_locales(id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocalesApi->account_locales: %s\n" % e)
@@ -54,6 +55,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 

@@ -35,16 +35,17 @@ class LocalesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def account_locales(self, **kwargs):  # noqa: E501
+    def account_locales(self, id, **kwargs):  # noqa: E501
         """List locales used in account  # noqa: E501
 
         List all locales unique by locale code used across all projects within an account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_locales(async_req=True)
+        >>> thread = api.account_locales(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
@@ -60,18 +61,19 @@ class LocalesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.account_locales_with_http_info(**kwargs)  # noqa: E501
+        return self.account_locales_with_http_info(id, **kwargs)  # noqa: E501
 
-    def account_locales_with_http_info(self, **kwargs):  # noqa: E501
+    def account_locales_with_http_info(self, id, **kwargs):  # noqa: E501
         """List locales used in account  # noqa: E501
 
         List all locales unique by locale code used across all projects within an account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.account_locales_with_http_info(async_req=True)
+        >>> thread = api.account_locales_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: allows you to specify a page size up to 100 items, 25 by default
@@ -92,6 +94,7 @@ class LocalesApi(object):
         local_var_params = locals()
 
         all_params = [
+            'id',
             'x_phrase_app_otp',
             'page',
             'per_page'
@@ -113,10 +116,16 @@ class LocalesApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `account_locales`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
         if 'page' in local_var_params and local_var_params['page'] is not None:  # noqa: E501

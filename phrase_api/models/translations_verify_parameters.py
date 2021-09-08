@@ -33,38 +33,33 @@ class TranslationsVerifyParameters(object):
     """
     openapi_types = {
         'branch': 'str',
-        'q': 'str',
-        'sort': 'str',
-        'order': 'str'
+        'locale_id': 'str',
+        'q': 'str'
     }
 
     attribute_map = {
         'branch': 'branch',
-        'q': 'q',
-        'sort': 'sort',
-        'order': 'order'
+        'locale_id': 'locale_id',
+        'q': 'q'
     }
 
-    def __init__(self, branch=None, q=None, sort=None, order=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, locale_id=None, q=None, local_vars_configuration=None):  # noqa: E501
         """TranslationsVerifyParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._branch = None
+        self._locale_id = None
         self._q = None
-        self._sort = None
-        self._order = None
         self.discriminator = None
 
         if branch is not None:
             self.branch = branch
+        if locale_id is not None:
+            self.locale_id = locale_id
         if q is not None:
             self.q = q
-        if sort is not None:
-            self.sort = sort
-        if order is not None:
-            self.order = order
 
     @property
     def branch(self):
@@ -90,6 +85,29 @@ class TranslationsVerifyParameters(object):
         self._branch = branch
 
     @property
+    def locale_id(self):
+        """Gets the locale_id of this TranslationsVerifyParameters.  # noqa: E501
+
+        specify the locale of the translations to be verified  # noqa: E501
+
+        :return: The locale_id of this TranslationsVerifyParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._locale_id
+
+    @locale_id.setter
+    def locale_id(self, locale_id):
+        """Sets the locale_id of this TranslationsVerifyParameters.
+
+        specify the locale of the translations to be verified  # noqa: E501
+
+        :param locale_id: The locale_id of this TranslationsVerifyParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._locale_id = locale_id
+
+    @property
     def q(self):
         """Gets the q of this TranslationsVerifyParameters.  # noqa: E501
 
@@ -111,52 +129,6 @@ class TranslationsVerifyParameters(object):
         """
 
         self._q = q
-
-    @property
-    def sort(self):
-        """Gets the sort of this TranslationsVerifyParameters.  # noqa: E501
-
-        Sort criteria. Can be one of: key_name, created_at, updated_at.  # noqa: E501
-
-        :return: The sort of this TranslationsVerifyParameters.  # noqa: E501
-        :rtype: str
-        """
-        return self._sort
-
-    @sort.setter
-    def sort(self, sort):
-        """Sets the sort of this TranslationsVerifyParameters.
-
-        Sort criteria. Can be one of: key_name, created_at, updated_at.  # noqa: E501
-
-        :param sort: The sort of this TranslationsVerifyParameters.  # noqa: E501
-        :type: str
-        """
-
-        self._sort = sort
-
-    @property
-    def order(self):
-        """Gets the order of this TranslationsVerifyParameters.  # noqa: E501
-
-        Order direction. Can be one of: asc, desc.  # noqa: E501
-
-        :return: The order of this TranslationsVerifyParameters.  # noqa: E501
-        :rtype: str
-        """
-        return self._order
-
-    @order.setter
-    def order(self, order):
-        """Sets the order of this TranslationsVerifyParameters.
-
-        Order direction. Can be one of: asc, desc.  # noqa: E501
-
-        :param order: The order of this TranslationsVerifyParameters.  # noqa: E501
-        :type: str
-        """
-
-        self._order = order
 
     def to_dict(self):
         """Returns the model properties as a dict"""

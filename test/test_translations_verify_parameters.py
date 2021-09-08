@@ -36,9 +36,8 @@ class TestTranslationsVerifyParameters(unittest.TestCase):
         if include_optional :
             return TranslationsVerifyParameters(
                 branch = 'my-feature-branch', 
-                q = 'PhraseApp*%20unverified:true%20tags:feature,center', 
-                sort = 'updated_at', 
-                order = 'desc'
+                locale_id = 'fc2f11dd6a658fa9652f6f0a9ebee688', 
+                q = 'PhraseApp*%20unverified:true%20tags:feature,center'
             )
         else :
             return TranslationsVerifyParameters(

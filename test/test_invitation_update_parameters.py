@@ -39,6 +39,7 @@ class TestInvitationUpdateParameters(unittest.TestCase):
                 project_ids = 'abcd1234abcd1234abcd1234,abcd1234abcd1234abcd1235', 
                 locale_ids = 'abcd1234abcd1234abcd1234,abcd1234abcd1234abcd1235', 
                 space_ids = ["abcd1234abcd1234abcd1234","abcd1234abcd1234abcd1235"], 
+                team_ids = ["abcd1234abcd1234abcd1234","abcd1234abcd1234abcd1235"], 
                 default_locale_codes = ["en","de"], 
                 permissions = {"create_upload":true}
             )

@@ -36,6 +36,7 @@ class InvitationUpdateParameters(object):
         'project_ids': 'str',
         'locale_ids': 'str',
         'space_ids': 'list[str]',
+        'team_ids': 'list[str]',
         'default_locale_codes': 'list[str]',
         'permissions': 'dict(str, str)'
     }
@@ -45,11 +46,12 @@ class InvitationUpdateParameters(object):
         'project_ids': 'project_ids',
         'locale_ids': 'locale_ids',
         'space_ids': 'space_ids',
+        'team_ids': 'team_ids',
         'default_locale_codes': 'default_locale_codes',
         'permissions': 'permissions'
     }
 
-    def __init__(self, role=None, project_ids=None, locale_ids=None, space_ids=None, default_locale_codes=None, permissions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, role=None, project_ids=None, locale_ids=None, space_ids=None, team_ids=None, default_locale_codes=None, permissions=None, local_vars_configuration=None):  # noqa: E501
         """InvitationUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,6 +61,7 @@ class InvitationUpdateParameters(object):
         self._project_ids = None
         self._locale_ids = None
         self._space_ids = None
+        self._team_ids = None
         self._default_locale_codes = None
         self._permissions = None
         self.discriminator = None
@@ -71,6 +74,8 @@ class InvitationUpdateParameters(object):
             self.locale_ids = locale_ids
         if space_ids is not None:
             self.space_ids = space_ids
+        if team_ids is not None:
+            self.team_ids = team_ids
         if default_locale_codes is not None:
             self.default_locale_codes = default_locale_codes
         if permissions is not None:
@@ -167,6 +172,29 @@ class InvitationUpdateParameters(object):
         """
 
         self._space_ids = space_ids
+
+    @property
+    def team_ids(self):
+        """Gets the team_ids of this InvitationUpdateParameters.  # noqa: E501
+
+        List of teams the user is assigned to.  # noqa: E501
+
+        :return: The team_ids of this InvitationUpdateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._team_ids
+
+    @team_ids.setter
+    def team_ids(self, team_ids):
+        """Sets the team_ids of this InvitationUpdateParameters.
+
+        List of teams the user is assigned to.  # noqa: E501
+
+        :param team_ids: The team_ids of this InvitationUpdateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._team_ids = team_ids
 
     @property
     def default_locale_codes(self):

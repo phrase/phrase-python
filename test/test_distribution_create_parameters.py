@@ -38,6 +38,7 @@ class TestDistributionCreateParameters(unittest.TestCase):
                 name = 'My Android Distribution', 
                 project_id = 'abcd1234abcd1234abcd1234', 
                 platforms = ["android","ios"], 
+                locale_ids = ["abcd1234cdef1234abcd1234cdef1234","fff565db236400772368235db2c6117e"], 
                 format_options = {xml:{enclose_in_cdata:'1'}}, 
                 fallback_to_non_regional_locale = True, 
                 fallback_to_default_locale = True, 

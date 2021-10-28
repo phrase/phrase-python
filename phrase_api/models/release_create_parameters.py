@@ -34,16 +34,18 @@ class ReleaseCreateParameters(object):
     openapi_types = {
         'description': 'str',
         'platforms': 'list[str]',
+        'locale_ids': 'list[str]',
         'branch': 'str'
     }
 
     attribute_map = {
         'description': 'description',
         'platforms': 'platforms',
+        'locale_ids': 'locale_ids',
         'branch': 'branch'
     }
 
-    def __init__(self, description=None, platforms=None, branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, description=None, platforms=None, locale_ids=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """ReleaseCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,6 +53,7 @@ class ReleaseCreateParameters(object):
 
         self._description = None
         self._platforms = None
+        self._locale_ids = None
         self._branch = None
         self.discriminator = None
 
@@ -58,6 +61,8 @@ class ReleaseCreateParameters(object):
             self.description = description
         if platforms is not None:
             self.platforms = platforms
+        if locale_ids is not None:
+            self.locale_ids = locale_ids
         if branch is not None:
             self.branch = branch
 
@@ -106,6 +111,29 @@ class ReleaseCreateParameters(object):
         """
 
         self._platforms = platforms
+
+    @property
+    def locale_ids(self):
+        """Gets the locale_ids of this ReleaseCreateParameters.  # noqa: E501
+
+        List of locale ids that will be included in the release. If empty, distribution locales will be used  # noqa: E501
+
+        :return: The locale_ids of this ReleaseCreateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._locale_ids
+
+    @locale_ids.setter
+    def locale_ids(self, locale_ids):
+        """Sets the locale_ids of this ReleaseCreateParameters.
+
+        List of locale ids that will be included in the release. If empty, distribution locales will be used  # noqa: E501
+
+        :param locale_ids: The locale_ids of this ReleaseCreateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._locale_ids = locale_ids
 
     @property
     def branch(self):

@@ -35,6 +35,7 @@ class DistributionUpdateParameters(object):
         'name': 'str',
         'project_id': 'str',
         'platforms': 'list[str]',
+        'locale_ids': 'list[str]',
         'format_options': 'dict(str, str)',
         'fallback_to_non_regional_locale': 'bool',
         'fallback_to_default_locale': 'bool',
@@ -45,13 +46,14 @@ class DistributionUpdateParameters(object):
         'name': 'name',
         'project_id': 'project_id',
         'platforms': 'platforms',
+        'locale_ids': 'locale_ids',
         'format_options': 'format_options',
         'fallback_to_non_regional_locale': 'fallback_to_non_regional_locale',
         'fallback_to_default_locale': 'fallback_to_default_locale',
         'use_last_reviewed_version': 'use_last_reviewed_version'
     }
 
-    def __init__(self, name=None, project_id=None, platforms=None, format_options=None, fallback_to_non_regional_locale=None, fallback_to_default_locale=None, use_last_reviewed_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, project_id=None, platforms=None, locale_ids=None, format_options=None, fallback_to_non_regional_locale=None, fallback_to_default_locale=None, use_last_reviewed_version=None, local_vars_configuration=None):  # noqa: E501
         """DistributionUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class DistributionUpdateParameters(object):
         self._name = None
         self._project_id = None
         self._platforms = None
+        self._locale_ids = None
         self._format_options = None
         self._fallback_to_non_regional_locale = None
         self._fallback_to_default_locale = None
@@ -72,6 +75,8 @@ class DistributionUpdateParameters(object):
             self.project_id = project_id
         if platforms is not None:
             self.platforms = platforms
+        if locale_ids is not None:
+            self.locale_ids = locale_ids
         if format_options is not None:
             self.format_options = format_options
         if fallback_to_non_regional_locale is not None:
@@ -149,6 +154,29 @@ class DistributionUpdateParameters(object):
         """
 
         self._platforms = platforms
+
+    @property
+    def locale_ids(self):
+        """Gets the locale_ids of this DistributionUpdateParameters.  # noqa: E501
+
+        List of locale ids that will be part of distribution releases  # noqa: E501
+
+        :return: The locale_ids of this DistributionUpdateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._locale_ids
+
+    @locale_ids.setter
+    def locale_ids(self, locale_ids):
+        """Sets the locale_ids of this DistributionUpdateParameters.
+
+        List of locale ids that will be part of distribution releases  # noqa: E501
+
+        :param locale_ids: The locale_ids of this DistributionUpdateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._locale_ids = locale_ids
 
     @property
     def format_options(self):

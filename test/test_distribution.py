@@ -41,6 +41,9 @@ class TestDistribution(unittest.TestCase):
                 platforms = [
                     '0'
                     ], 
+                locales = [
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
+                    ], 
                 releases = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","version":1,"project":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"},"platforms":["android"],"environments":["development"],"locale_codes":["de","en"],"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ], 

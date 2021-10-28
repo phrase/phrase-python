@@ -36,6 +36,7 @@ class Distribution(object):
         'name': 'str',
         'project': 'ProjectShort',
         'platforms': 'list[str]',
+        'locales': 'list[LocalePreview]',
         'releases': 'list[ReleasePreview]',
         'created_at': 'datetime',
         'deleted_at': 'datetime'
@@ -46,12 +47,13 @@ class Distribution(object):
         'name': 'name',
         'project': 'project',
         'platforms': 'platforms',
+        'locales': 'locales',
         'releases': 'releases',
         'created_at': 'created_at',
         'deleted_at': 'deleted_at'
     }
 
-    def __init__(self, id=None, name=None, project=None, platforms=None, releases=None, created_at=None, deleted_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, project=None, platforms=None, locales=None, releases=None, created_at=None, deleted_at=None, local_vars_configuration=None):  # noqa: E501
         """Distribution - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class Distribution(object):
         self._name = None
         self._project = None
         self._platforms = None
+        self._locales = None
         self._releases = None
         self._created_at = None
         self._deleted_at = None
@@ -74,6 +77,8 @@ class Distribution(object):
             self.project = project
         if platforms is not None:
             self.platforms = platforms
+        if locales is not None:
+            self.locales = locales
         if releases is not None:
             self.releases = releases
         if created_at is not None:
@@ -164,6 +169,27 @@ class Distribution(object):
         """
 
         self._platforms = platforms
+
+    @property
+    def locales(self):
+        """Gets the locales of this Distribution.  # noqa: E501
+
+
+        :return: The locales of this Distribution.  # noqa: E501
+        :rtype: list[LocalePreview]
+        """
+        return self._locales
+
+    @locales.setter
+    def locales(self, locales):
+        """Sets the locales of this Distribution.
+
+
+        :param locales: The locales of this Distribution.  # noqa: E501
+        :type: list[LocalePreview]
+        """
+
+        self._locales = locales
 
     @property
     def releases(self):

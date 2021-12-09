@@ -48,7 +48,8 @@ class TestJobDetails(unittest.TestCase):
                 owner = phrase_api.models.user_preview.user_preview(
                     id = '0', 
                     username = '0', 
-                    name = '0', ), 
+                    name = '0', 
+                    role = '0', ), 
                 job_tag_name = '0', 
                 source_locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 locales = [

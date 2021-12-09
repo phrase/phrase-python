@@ -46,7 +46,8 @@ class TestTranslationKeyDetails1(unittest.TestCase):
                 creator = phrase_api.models.user_preview.user_preview(
                     id = '0', 
                     username = '0', 
-                    name = '0', )
+                    name = '0', 
+                    role = '0', )
             )
         else :
             return TranslationKeyDetails1(

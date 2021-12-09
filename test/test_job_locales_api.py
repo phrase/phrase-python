@@ -34,6 +34,13 @@ class TestJobLocalesApi(unittest.TestCase):
         """
         pass
 
+    def test_job_locale_complete_review(self):
+        """Test case for job_locale_complete_review
+
+        Review a job locale  # noqa: E501
+        """
+        pass
+
     def test_job_locale_delete(self):
         """Test case for job_locale_delete
 

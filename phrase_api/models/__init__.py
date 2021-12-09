@@ -77,6 +77,7 @@ from phrase_api.models.job_details1 import JobDetails1
 from phrase_api.models.job_keys_create_parameters import JobKeysCreateParameters
 from phrase_api.models.job_locale import JobLocale
 from phrase_api.models.job_locale_complete_parameters import JobLocaleCompleteParameters
+from phrase_api.models.job_locale_complete_review_parameters import JobLocaleCompleteReviewParameters
 from phrase_api.models.job_locale_reopen_parameters import JobLocaleReopenParameters
 from phrase_api.models.job_locale_update_parameters import JobLocaleUpdateParameters
 from phrase_api.models.job_locales_create_parameters import JobLocalesCreateParameters

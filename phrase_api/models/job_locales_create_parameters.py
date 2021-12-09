@@ -34,16 +34,18 @@ class JobLocalesCreateParameters(object):
     openapi_types = {
         'branch': 'str',
         'locale_id': 'str',
-        'user_ids': 'list[str]'
+        'user_ids': 'list[str]',
+        'reviewer_ids': 'list[str]'
     }
 
     attribute_map = {
         'branch': 'branch',
         'locale_id': 'locale_id',
-        'user_ids': 'user_ids'
+        'user_ids': 'user_ids',
+        'reviewer_ids': 'reviewer_ids'
     }
 
-    def __init__(self, branch=None, locale_id=None, user_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, locale_id=None, user_ids=None, reviewer_ids=None, local_vars_configuration=None):  # noqa: E501
         """JobLocalesCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -52,6 +54,7 @@ class JobLocalesCreateParameters(object):
         self._branch = None
         self._locale_id = None
         self._user_ids = None
+        self._reviewer_ids = None
         self.discriminator = None
 
         if branch is not None:
@@ -60,6 +63,8 @@ class JobLocalesCreateParameters(object):
             self.locale_id = locale_id
         if user_ids is not None:
             self.user_ids = user_ids
+        if reviewer_ids is not None:
+            self.reviewer_ids = reviewer_ids
 
     @property
     def branch(self):
@@ -111,7 +116,7 @@ class JobLocalesCreateParameters(object):
     def user_ids(self):
         """Gets the user_ids of this JobLocalesCreateParameters.  # noqa: E501
 
-        Array of user ids to be assigned to the job locale  # noqa: E501
+        Array of user ids to be assigned to the job locale as translators  # noqa: E501
 
         :return: The user_ids of this JobLocalesCreateParameters.  # noqa: E501
         :rtype: list[str]
@@ -122,13 +127,36 @@ class JobLocalesCreateParameters(object):
     def user_ids(self, user_ids):
         """Sets the user_ids of this JobLocalesCreateParameters.
 
-        Array of user ids to be assigned to the job locale  # noqa: E501
+        Array of user ids to be assigned to the job locale as translators  # noqa: E501
 
         :param user_ids: The user_ids of this JobLocalesCreateParameters.  # noqa: E501
         :type: list[str]
         """
 
         self._user_ids = user_ids
+
+    @property
+    def reviewer_ids(self):
+        """Gets the reviewer_ids of this JobLocalesCreateParameters.  # noqa: E501
+
+        Array of reviewer ids to be assigned to the job locale as reviewers  # noqa: E501
+
+        :return: The reviewer_ids of this JobLocalesCreateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reviewer_ids
+
+    @reviewer_ids.setter
+    def reviewer_ids(self, reviewer_ids):
+        """Sets the reviewer_ids of this JobLocalesCreateParameters.
+
+        Array of reviewer ids to be assigned to the job locale as reviewers  # noqa: E501
+
+        :param reviewer_ids: The reviewer_ids of this JobLocalesCreateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reviewer_ids = reviewer_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

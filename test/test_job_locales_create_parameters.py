@@ -37,7 +37,8 @@ class TestJobLocalesCreateParameters(unittest.TestCase):
             return JobLocalesCreateParameters(
                 branch = 'my-feature-branch', 
                 locale_id = 'abcd1234cdef1234abcd1234cdef1234', 
-                user_ids = ["abcd1234cdef1234abcd1234cdef1234"]
+                user_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
+                reviewer_ids = ["abcd1234cdef1234abcd1234cdef1234"]
             )
         else :
             return JobLocalesCreateParameters(

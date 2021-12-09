@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.user_preview import UserPreview  # noqa: E501
+from phrase_api.models.job_locale_complete_review_parameters import JobLocaleCompleteReviewParameters  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestUserPreview(unittest.TestCase):
-    """UserPreview unit test stubs"""
+class TestJobLocaleCompleteReviewParameters(unittest.TestCase):
+    """JobLocaleCompleteReviewParameters unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,24 +28,21 @@ class TestUserPreview(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test UserPreview
+        """Test JobLocaleCompleteReviewParameters
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.user_preview.UserPreview()  # noqa: E501
+        # model = phrase_api.models.job_locale_complete_review_parameters.JobLocaleCompleteReviewParameters()  # noqa: E501
         if include_optional :
-            return UserPreview(
-                id = '0', 
-                username = '0', 
-                name = '0', 
-                role = '0'
+            return JobLocaleCompleteReviewParameters(
+                branch = 'my-feature-branch'
             )
         else :
-            return UserPreview(
+            return JobLocaleCompleteReviewParameters(
         )
 
-    def testUserPreview(self):
-        """Test UserPreview"""
+    def testJobLocaleCompleteReviewParameters(self):
+        """Test JobLocaleCompleteReviewParameters"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

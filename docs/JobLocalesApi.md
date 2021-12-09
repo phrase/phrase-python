@@ -5,6 +5,7 @@ All URIs are relative to *https://api.phrase.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**job_locale_complete**](JobLocalesApi.md#job_locale_complete) | **POST** /projects/{project_id}/jobs/{job_id}/locales/{id}/complete | Complete a job locale
+[**job_locale_complete_review**](JobLocalesApi.md#job_locale_complete_review) | **POST** /projects/{project_id}/jobs/{job_id}/locales/{id}/complete_review | Review a job locale
 [**job_locale_delete**](JobLocalesApi.md#job_locale_delete) | **DELETE** /projects/{project_id}/jobs/{job_id}/locales/{id} | Delete a job locale
 [**job_locale_reopen**](JobLocalesApi.md#job_locale_reopen) | **POST** /projects/{project_id}/jobs/{job_id}/locales/{id}/reopen | Reopen a job locale
 [**job_locale_show**](JobLocalesApi.md#job_locale_show) | **GET** /projects/{project_id}/jobs/{job_id}/locale/{id} | Get a single job locale
@@ -60,6 +61,78 @@ Name | Type | Description  | Notes
  **job_id** | **str**| Job ID | 
  **id** | **str**| ID | 
  **job_locale_complete_parameters** | [**JobLocaleCompleteParameters**](JobLocaleCompleteParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**JobLocale**](JobLocale.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **job_locale_complete_review**
+> JobLocale job_locale_complete_review(project_id, job_id, id, job_locale_complete_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Review a job locale
+
+Mark job locale as reviewed.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.JobLocalesApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    job_id = 'job_id_example' # str | Job ID (required)
+    id = 'id_example' # str | ID (required)
+    job_locale_complete_review_parameters = phrase_api.JobLocaleCompleteReviewParameters() # JobLocaleCompleteReviewParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+
+    try:
+        # Review a job locale
+        api_response = api_instance.job_locale_complete_review(project_id, job_id, id, job_locale_complete_review_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling JobLocalesApi->job_locale_complete_review: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **job_id** | **str**| Job ID | 
+ **id** | **str**| ID | 
+ **job_locale_complete_review_parameters** | [**JobLocaleCompleteReviewParameters**](JobLocaleCompleteReviewParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type

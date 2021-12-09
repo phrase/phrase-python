@@ -45,7 +45,8 @@ class TestJobLocale(unittest.TestCase):
                     phrase_api.models.user_preview.user_preview(
                         id = '0', 
                         username = '0', 
-                        name = '0', )
+                        name = '0', 
+                        role = '0', )
                     ], 
                 completed = True, 
                 translation_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
 *GlossaryTermsApi* | [**glossary_term_show**](docs/GlossaryTermsApi.md#glossary_term_show) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Get a single glossary term
 *GlossaryTermsApi* | [**glossary_term_update**](docs/GlossaryTermsApi.md#glossary_term_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Update a glossary term
 *GlossaryTermsApi* | [**glossary_terms_list**](docs/GlossaryTermsApi.md#glossary_terms_list) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms | List glossary terms
+*ICUApi* | [**icu_skeleton**](docs/ICUApi.md#icu_skeleton) | **POST** /icu/skeleton | Build icu skeletons
 *InvitationsApi* | [**invitation_create**](docs/InvitationsApi.md#invitation_create) | **POST** /accounts/{account_id}/invitations | Create a new invitation
 *InvitationsApi* | [**invitation_delete**](docs/InvitationsApi.md#invitation_delete) | **DELETE** /accounts/{account_id}/invitations/{id} | Delete an invitation
 *InvitationsApi* | [**invitation_resend**](docs/InvitationsApi.md#invitation_resend) | **POST** /accounts/{account_id}/invitations/{id}/resend | Resend an invitation
@@ -391,6 +392,8 @@ Class | Method | HTTP request | Description
  - [GlossaryTermTranslationUpdateParameters](docs/GlossaryTermTranslationUpdateParameters.md)
  - [GlossaryTermUpdateParameters](docs/GlossaryTermUpdateParameters.md)
  - [GlossaryUpdateParameters](docs/GlossaryUpdateParameters.md)
+ - [Icu](docs/Icu.md)
+ - [IcuSkeletonParameters](docs/IcuSkeletonParameters.md)
  - [InlineResponse422](docs/InlineResponse422.md)
  - [InlineResponse422Errors](docs/InlineResponse422Errors.md)
  - [Invitation](docs/Invitation.md)

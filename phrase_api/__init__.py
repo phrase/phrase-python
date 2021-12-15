@@ -30,6 +30,7 @@ from phrase_api.api.git_lab_sync_api import GitLabSyncApi
 from phrase_api.api.glossaries_api import GlossariesApi
 from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslationsApi
 from phrase_api.api.glossary_terms_api import GlossaryTermsApi
+from phrase_api.api.icu_api import ICUApi
 from phrase_api.api.invitations_api import InvitationsApi
 from phrase_api.api.job_locales_api import JobLocalesApi
 from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
@@ -116,6 +117,8 @@ from phrase_api.models.glossary_term_translation_create_parameters import Glossa
 from phrase_api.models.glossary_term_translation_update_parameters import GlossaryTermTranslationUpdateParameters
 from phrase_api.models.glossary_term_update_parameters import GlossaryTermUpdateParameters
 from phrase_api.models.glossary_update_parameters import GlossaryUpdateParameters
+from phrase_api.models.icu import Icu
+from phrase_api.models.icu_skeleton_parameters import IcuSkeletonParameters
 from phrase_api.models.inline_response422 import InlineResponse422
 from phrase_api.models.inline_response422_errors import InlineResponse422Errors
 from phrase_api.models.invitation import Invitation

@@ -137,7 +137,7 @@ class GitLabSyncApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs/{id}', 'DELETE',
@@ -269,7 +269,7 @@ class GitLabSyncApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs/{gitlab_sync_id}/export', 'POST',
@@ -403,7 +403,7 @@ class GitLabSyncApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs/{gitlab_sync_id}/history', 'GET',
@@ -535,7 +535,7 @@ class GitLabSyncApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs/{gitlab_sync_id}/import', 'POST',
@@ -650,7 +650,7 @@ class GitLabSyncApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs', 'GET',
@@ -774,7 +774,7 @@ class GitLabSyncApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs/{id}', 'GET',
@@ -913,7 +913,7 @@ class GitLabSyncApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/gitlab_syncs/{id}', 'PUT',

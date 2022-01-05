@@ -141,7 +141,7 @@ class BranchesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches/{name}/compare', 'GET',
@@ -273,7 +273,7 @@ class BranchesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches', 'POST',
@@ -397,7 +397,7 @@ class BranchesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches/{name}', 'DELETE',
@@ -534,7 +534,7 @@ class BranchesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches/{name}/merge', 'PATCH',
@@ -662,7 +662,7 @@ class BranchesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches/{name}', 'GET',
@@ -803,7 +803,7 @@ class BranchesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches/{name}', 'PATCH',
@@ -932,7 +932,7 @@ class BranchesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/branches', 'GET',

@@ -167,7 +167,7 @@ class GlossaryTermTranslationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations', 'POST',
@@ -309,7 +309,7 @@ class GlossaryTermTranslationsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id}', 'DELETE',
@@ -468,7 +468,7 @@ class GlossaryTermTranslationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id}', 'PATCH',

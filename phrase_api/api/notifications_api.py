@@ -137,7 +137,7 @@ class NotificationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/notifications', 'GET',
@@ -247,7 +247,7 @@ class NotificationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/notifications/mark_all_as_read', 'POST',
@@ -366,7 +366,7 @@ class NotificationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/notifications/{id}', 'GET',

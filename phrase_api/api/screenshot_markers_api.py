@@ -158,7 +158,7 @@ class ScreenshotMarkersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/screenshots/{screenshot_id}/markers', 'POST',
@@ -287,7 +287,7 @@ class ScreenshotMarkersApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/screenshots/{screenshot_id}/markers', 'DELETE',
@@ -429,7 +429,7 @@ class ScreenshotMarkersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/screenshots/{screenshot_id}/markers/{id}', 'GET',
@@ -570,7 +570,7 @@ class ScreenshotMarkersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/screenshots/{screenshot_id}/markers', 'PATCH',
@@ -713,7 +713,7 @@ class ScreenshotMarkersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/screenshots/{id}/markers', 'GET',

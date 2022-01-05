@@ -117,6 +117,18 @@ configuration.api_key_prefix['Authorization'] = 'token'
 ```
 
 
+## bearerAuth
+
+- **Type**: Bearer authentication (JWT)
+
+```pytjon
+import phrase-api
+
+configuration = phrase-api.Configuration()
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+```
+
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.phrase.com/v2*

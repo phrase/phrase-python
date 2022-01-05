@@ -158,7 +158,7 @@ class ReleasesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/distributions/{distribution_id}/releases', 'POST',
@@ -291,7 +291,7 @@ class ReleasesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/distributions/{distribution_id}/releases/{id}', 'DELETE',
@@ -428,7 +428,7 @@ class ReleasesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/distributions/{distribution_id}/releases/{id}/publish', 'POST',
@@ -565,7 +565,7 @@ class ReleasesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/distributions/{distribution_id}/releases/{id}', 'GET',
@@ -715,7 +715,7 @@ class ReleasesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/distributions/{distribution_id}/releases/{id}', 'PATCH',
@@ -853,7 +853,7 @@ class ReleasesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token']  # noqa: E501
+        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/distributions/{distribution_id}/releases', 'GET',

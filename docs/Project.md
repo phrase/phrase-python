@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **project_image_url** | **str** |  | [optional] 
 **account** | [**Account**](Account.md) |  | [optional] 
 **space** | [**Space1**](Space1.md) |  | [optional] 
+**point_of_contact** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

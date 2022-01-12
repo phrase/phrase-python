@@ -45,12 +45,12 @@ class TestBranch(unittest.TestCase):
                     id = '0', 
                     username = '0', 
                     name = '0', 
-                    role = '0', ), 
+                    gravatar_uid = '0', ), 
                 created_by = phrase_api.models.user_preview.user_preview(
                     id = '0', 
                     username = '0', 
                     name = '0', 
-                    role = '0', ), 
+                    gravatar_uid = '0', ), 
                 state = '0'
             )
         else :

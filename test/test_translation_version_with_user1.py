@@ -39,7 +39,7 @@ class TestTranslationVersionWithUser1(unittest.TestCase):
                     id = '0', 
                     username = '0', 
                     name = '0', 
-                    role = '0', )
+                    gravatar_uid = '0', )
             )
         else :
             return TranslationVersionWithUser1(

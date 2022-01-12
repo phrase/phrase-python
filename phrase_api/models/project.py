@@ -39,6 +39,7 @@ class Project(object):
         'project_image_url': 'str',
         'account': 'Account',
         'space': 'Space1',
+        'point_of_contact': 'UserPreview',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -51,11 +52,12 @@ class Project(object):
         'project_image_url': 'project_image_url',
         'account': 'account',
         'space': 'space',
+        'point_of_contact': 'point_of_contact',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, space=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Project - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -68,6 +70,7 @@ class Project(object):
         self._project_image_url = None
         self._account = None
         self._space = None
+        self._point_of_contact = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -86,6 +89,8 @@ class Project(object):
             self.account = account
         if space is not None:
             self.space = space
+        if point_of_contact is not None:
+            self.point_of_contact = point_of_contact
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -237,6 +242,27 @@ class Project(object):
         """
 
         self._space = space
+
+    @property
+    def point_of_contact(self):
+        """Gets the point_of_contact of this Project.  # noqa: E501
+
+
+        :return: The point_of_contact of this Project.  # noqa: E501
+        :rtype: UserPreview
+        """
+        return self._point_of_contact
+
+    @point_of_contact.setter
+    def point_of_contact(self, point_of_contact):
+        """Sets the point_of_contact of this Project.
+
+
+        :param point_of_contact: The point_of_contact of this Project.  # noqa: E501
+        :type: UserPreview
+        """
+
+        self._point_of_contact = point_of_contact
 
     @property
     def created_at(self):

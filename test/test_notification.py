@@ -48,7 +48,7 @@ class TestNotification(unittest.TestCase):
                     id = '0', 
                     username = '0', 
                     name = '0', 
-                    role = '0', ), 
+                    gravatar_uid = '0', ), 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","slug":"android_project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","space":"space","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 account = {"id":"abcd1234","name":"Company Account","slug":"company_account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","company_logo_url":"http://assets.example.com/company_logo.png"}, 
                 group = {"id":"abcd1234cdef1234abcd1234cdef1234","event_name":"keys:create","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}

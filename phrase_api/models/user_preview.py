@@ -35,17 +35,17 @@ class UserPreview(object):
         'id': 'str',
         'username': 'str',
         'name': 'str',
-        'role': 'str'
+        'gravatar_uid': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'username': 'username',
         'name': 'name',
-        'role': 'role'
+        'gravatar_uid': 'gravatar_uid'
     }
 
-    def __init__(self, id=None, username=None, name=None, role=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, username=None, name=None, gravatar_uid=None, local_vars_configuration=None):  # noqa: E501
         """UserPreview - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,7 +54,7 @@ class UserPreview(object):
         self._id = None
         self._username = None
         self._name = None
-        self._role = None
+        self._gravatar_uid = None
         self.discriminator = None
 
         if id is not None:
@@ -63,8 +63,8 @@ class UserPreview(object):
             self.username = username
         if name is not None:
             self.name = name
-        if role is not None:
-            self.role = role
+        if gravatar_uid is not None:
+            self.gravatar_uid = gravatar_uid
 
     @property
     def id(self):
@@ -130,25 +130,25 @@ class UserPreview(object):
         self._name = name
 
     @property
-    def role(self):
-        """Gets the role of this UserPreview.  # noqa: E501
+    def gravatar_uid(self):
+        """Gets the gravatar_uid of this UserPreview.  # noqa: E501
 
 
-        :return: The role of this UserPreview.  # noqa: E501
+        :return: The gravatar_uid of this UserPreview.  # noqa: E501
         :rtype: str
         """
-        return self._role
+        return self._gravatar_uid
 
-    @role.setter
-    def role(self, role):
-        """Sets the role of this UserPreview.
+    @gravatar_uid.setter
+    def gravatar_uid(self, gravatar_uid):
+        """Sets the gravatar_uid of this UserPreview.
 
 
-        :param role: The role of this UserPreview.  # noqa: E501
+        :param gravatar_uid: The gravatar_uid of this UserPreview.  # noqa: E501
         :type: str
         """
 
-        self._role = role
+        self._gravatar_uid = gravatar_uid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

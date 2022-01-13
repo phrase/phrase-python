@@ -38,6 +38,8 @@ class TestMember(unittest.TestCase):
                 id = '0', 
                 email = '0', 
                 username = '0', 
+                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                last_activity_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 role = '0', 
                 projects = [
                     null
@@ -45,6 +47,9 @@ class TestMember(unittest.TestCase):
                 permissions = None, 
                 default_locale_codes = [
                     '0'
+                    ], 
+                teams = [
+                    {"id":"2e7574e8f2372906a03110c2a7cfe671","name":"My first Team","created_at":"2020-02-25T12:17:25Z","updated_at":"2020-03-13T14:46:57Z"}
                     ], 
                 spaces = [
                     phrase_api.models.member_spaces.member_spaces(

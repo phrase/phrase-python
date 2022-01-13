@@ -214,6 +214,7 @@ from phrase_api.models.tag_with_stats1 import TagWithStats1
 from phrase_api.models.tag_with_stats1_statistics import TagWithStats1Statistics
 from phrase_api.models.tag_with_stats1_statistics1 import TagWithStats1Statistics1
 from phrase_api.models.team import Team
+from phrase_api.models.team1 import Team1
 from phrase_api.models.team_create_parameters import TeamCreateParameters
 from phrase_api.models.team_detail import TeamDetail
 from phrase_api.models.team_update_parameters import TeamUpdateParameters

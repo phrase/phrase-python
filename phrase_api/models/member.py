@@ -35,10 +35,13 @@ class Member(object):
         'id': 'str',
         'email': 'str',
         'username': 'str',
+        'created_at': 'datetime',
+        'last_activity_at': 'datetime',
         'role': 'str',
         'projects': 'list[ProjectLocales]',
         'permissions': 'object',
         'default_locale_codes': 'list[str]',
+        'teams': 'list[Team1]',
         'spaces': 'list[MemberSpaces]'
     }
 
@@ -46,14 +49,17 @@ class Member(object):
         'id': 'id',
         'email': 'email',
         'username': 'username',
+        'created_at': 'created_at',
+        'last_activity_at': 'last_activity_at',
         'role': 'role',
         'projects': 'projects',
         'permissions': 'permissions',
         'default_locale_codes': 'default_locale_codes',
+        'teams': 'teams',
         'spaces': 'spaces'
     }
 
-    def __init__(self, id=None, email=None, username=None, role=None, projects=None, permissions=None, default_locale_codes=None, spaces=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, username=None, created_at=None, last_activity_at=None, role=None, projects=None, permissions=None, default_locale_codes=None, teams=None, spaces=None, local_vars_configuration=None):  # noqa: E501
         """Member - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,10 +68,13 @@ class Member(object):
         self._id = None
         self._email = None
         self._username = None
+        self._created_at = None
+        self._last_activity_at = None
         self._role = None
         self._projects = None
         self._permissions = None
         self._default_locale_codes = None
+        self._teams = None
         self._spaces = None
         self.discriminator = None
 
@@ -75,6 +84,10 @@ class Member(object):
             self.email = email
         if username is not None:
             self.username = username
+        if created_at is not None:
+            self.created_at = created_at
+        if last_activity_at is not None:
+            self.last_activity_at = last_activity_at
         if role is not None:
             self.role = role
         if projects is not None:
@@ -83,6 +96,8 @@ class Member(object):
             self.permissions = permissions
         if default_locale_codes is not None:
             self.default_locale_codes = default_locale_codes
+        if teams is not None:
+            self.teams = teams
         if spaces is not None:
             self.spaces = spaces
 
@@ -148,6 +163,48 @@ class Member(object):
         """
 
         self._username = username
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this Member.  # noqa: E501
+
+
+        :return: The created_at of this Member.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this Member.
+
+
+        :param created_at: The created_at of this Member.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def last_activity_at(self):
+        """Gets the last_activity_at of this Member.  # noqa: E501
+
+
+        :return: The last_activity_at of this Member.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_activity_at
+
+    @last_activity_at.setter
+    def last_activity_at(self, last_activity_at):
+        """Sets the last_activity_at of this Member.
+
+
+        :param last_activity_at: The last_activity_at of this Member.  # noqa: E501
+        :type: datetime
+        """
+
+        self._last_activity_at = last_activity_at
 
     @property
     def role(self):
@@ -232,6 +289,27 @@ class Member(object):
         """
 
         self._default_locale_codes = default_locale_codes
+
+    @property
+    def teams(self):
+        """Gets the teams of this Member.  # noqa: E501
+
+
+        :return: The teams of this Member.  # noqa: E501
+        :rtype: list[Team1]
+        """
+        return self._teams
+
+    @teams.setter
+    def teams(self, teams):
+        """Sets the teams of this Member.
+
+
+        :param teams: The teams of this Member.  # noqa: E501
+        :type: list[Team1]
+        """
+
+        self._teams = teams
 
     @property
     def spaces(self):

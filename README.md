@@ -501,6 +501,7 @@ Class | Method | HTTP request | Description
  - [TagWithStats1Statistics](docs/TagWithStats1Statistics.md)
  - [TagWithStats1Statistics1](docs/TagWithStats1Statistics1.md)
  - [Team](docs/Team.md)
+ - [Team1](docs/Team1.md)
  - [TeamCreateParameters](docs/TeamCreateParameters.md)
  - [TeamDetail](docs/TeamDetail.md)
  - [TeamUpdateParameters](docs/TeamUpdateParameters.md)

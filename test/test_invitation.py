@@ -63,6 +63,9 @@ class TestInvitation(unittest.TestCase):
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         projects_count = 56, )
                     ], 
+                teams = [
+                    None
+                    ], 
                 project_role = [
                     phrase_api.models.member_project_detail_project_roles.member_project_detail_project_roles(
                         project_id = '0', 

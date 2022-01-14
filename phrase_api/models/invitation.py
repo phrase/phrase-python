@@ -45,6 +45,7 @@ class Invitation(object):
         'updated_at': 'datetime',
         'accepted_at': 'datetime',
         'spaces': 'list[MemberSpaces]',
+        'teams': 'list[Items]',
         'project_role': 'list[MemberProjectDetailProjectRoles]'
     }
 
@@ -62,10 +63,11 @@ class Invitation(object):
         'updated_at': 'updated_at',
         'accepted_at': 'accepted_at',
         'spaces': 'spaces',
+        'teams': 'teams',
         'project_role': 'project_role'
     }
 
-    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, locale_ids=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, project_role=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, default_locale_codes=None, permissions=None, locale_ids=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, teams=None, project_role=None, local_vars_configuration=None):  # noqa: E501
         """Invitation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -84,6 +86,7 @@ class Invitation(object):
         self._updated_at = None
         self._accepted_at = None
         self._spaces = None
+        self._teams = None
         self._project_role = None
         self.discriminator = None
 
@@ -113,6 +116,8 @@ class Invitation(object):
             self.accepted_at = accepted_at
         if spaces is not None:
             self.spaces = spaces
+        if teams is not None:
+            self.teams = teams
         if project_role is not None:
             self.project_role = project_role
 
@@ -388,6 +393,27 @@ class Invitation(object):
         """
 
         self._spaces = spaces
+
+    @property
+    def teams(self):
+        """Gets the teams of this Invitation.  # noqa: E501
+
+
+        :return: The teams of this Invitation.  # noqa: E501
+        :rtype: list[Items]
+        """
+        return self._teams
+
+    @teams.setter
+    def teams(self, teams):
+        """Sets the teams of this Invitation.
+
+
+        :param teams: The teams of this Invitation.  # noqa: E501
+        :type: list[Items]
+        """
+
+        self._teams = teams
 
     @property
     def project_role(self):

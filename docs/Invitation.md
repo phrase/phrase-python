@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **accepted_at** | **datetime** |  | [optional] 
 **spaces** | [**list[MemberSpaces]**](MemberSpaces.md) |  | [optional] 
+**teams** | [**list[Items]**](Items.md) |  | [optional] 
 **project_role** | [**list[MemberProjectDetailProjectRoles]**](MemberProjectDetailProjectRoles.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

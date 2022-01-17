@@ -469,6 +469,7 @@ Class | Method | HTTP request | Description
  - [ProjectDetails1](docs/ProjectDetails1.md)
  - [ProjectLocales](docs/ProjectLocales.md)
  - [ProjectLocales1](docs/ProjectLocales1.md)
+ - [ProjectMemberSpecific](docs/ProjectMemberSpecific.md)
  - [ProjectShort](docs/ProjectShort.md)
  - [ProjectUpdateParameters](docs/ProjectUpdateParameters.md)
  - [Release](docs/Release.md)

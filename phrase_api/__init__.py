@@ -182,6 +182,7 @@ from phrase_api.models.project_details import ProjectDetails
 from phrase_api.models.project_details1 import ProjectDetails1
 from phrase_api.models.project_locales import ProjectLocales
 from phrase_api.models.project_locales1 import ProjectLocales1
+from phrase_api.models.project_member_specific import ProjectMemberSpecific
 from phrase_api.models.project_short import ProjectShort
 from phrase_api.models.project_update_parameters import ProjectUpdateParameters
 from phrase_api.models.release import Release

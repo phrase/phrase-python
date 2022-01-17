@@ -149,7 +149,7 @@ class StyleGuidesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/styleguides', 'POST',
@@ -273,7 +273,7 @@ class StyleGuidesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/styleguides/{id}', 'DELETE',
@@ -401,7 +401,7 @@ class StyleGuidesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/styleguides/{id}', 'GET',
@@ -542,7 +542,7 @@ class StyleGuidesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/styleguides/{id}', 'PATCH',
@@ -671,7 +671,7 @@ class StyleGuidesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/styleguides', 'GET',

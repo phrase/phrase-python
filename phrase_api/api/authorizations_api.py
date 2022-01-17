@@ -140,7 +140,7 @@ class AuthorizationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/authorizations', 'POST',
@@ -255,7 +255,7 @@ class AuthorizationsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/authorizations/{id}', 'DELETE',
@@ -374,7 +374,7 @@ class AuthorizationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/authorizations/{id}', 'GET',
@@ -506,7 +506,7 @@ class AuthorizationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/authorizations/{id}', 'PATCH',
@@ -626,7 +626,7 @@ class AuthorizationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/authorizations', 'GET',

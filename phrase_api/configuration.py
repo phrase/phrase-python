@@ -119,9 +119,6 @@ class Configuration(object):
         """Password for HTTP basic authentication
         """
         self.discard_unknown_keys = discard_unknown_keys
-        self.access_token = None
-        """access token for OAuth/Bearer
-        """
         self.logger = {}
         """Logging Settings
         """
@@ -361,14 +358,6 @@ class Configuration(object):
                 'in': 'header',
                 'key': 'Authorization',
                 'value': self.get_api_key_with_prefix('Authorization')
-            }
-        if self.access_token is not None:
-            auth['bearerAuth'] = {
-                'type': 'bearer',
-                'in': 'header',
-                'format': 'JWT',
-                'key': 'Authorization',
-                'value': 'Bearer ' + self.access_token
             }
         return auth
 

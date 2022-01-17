@@ -149,7 +149,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys', 'POST',
@@ -278,7 +278,7 @@ class KeysApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/{id}', 'DELETE',
@@ -411,7 +411,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/{id}', 'GET',
@@ -552,7 +552,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/{id}', 'PATCH',
@@ -686,7 +686,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys', 'DELETE',
@@ -818,7 +818,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/exclude', 'PATCH',
@@ -950,7 +950,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/include', 'PATCH',
@@ -1104,7 +1104,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys', 'GET',
@@ -1246,7 +1246,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/search', 'POST',
@@ -1378,7 +1378,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/tag', 'PATCH',
@@ -1510,7 +1510,7 @@ class KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/keys/untag', 'PATCH',

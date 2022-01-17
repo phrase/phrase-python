@@ -158,7 +158,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}/complete', 'POST',
@@ -290,7 +290,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs', 'POST',
@@ -419,7 +419,7 @@ class JobsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}', 'DELETE',
@@ -560,7 +560,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}/keys', 'POST',
@@ -695,7 +695,7 @@ class JobsApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}/keys', 'DELETE',
@@ -836,7 +836,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}/reopen', 'POST',
@@ -969,7 +969,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}', 'GET',
@@ -1110,7 +1110,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}/start', 'POST',
@@ -1251,7 +1251,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs/{id}', 'PATCH',
@@ -1395,7 +1395,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/accounts/{account_id}/jobs', 'GET',
@@ -1544,7 +1544,7 @@ class JobsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/jobs', 'GET',

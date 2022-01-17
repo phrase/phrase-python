@@ -155,7 +155,7 @@ class JobTemplateLocalesApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/job_templates/{job_template_id}/locales/{job_template_locale_id}', 'DELETE',
@@ -297,7 +297,7 @@ class JobTemplateLocalesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/job_templates/{job_template_id}/locales/{job_template_locale_id}', 'GET',
@@ -447,7 +447,7 @@ class JobTemplateLocalesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/job_templates/{job_template_id}/locales/{job_template_locale_id}', 'PATCH',
@@ -588,7 +588,7 @@ class JobTemplateLocalesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/job_templates/{job_template_id}/locales', 'POST',
@@ -731,7 +731,7 @@ class JobTemplateLocalesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic', 'Token', 'bearerAuth']  # noqa: E501
+        auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{project_id}/job_templates/{job_template_id}/locales', 'GET',

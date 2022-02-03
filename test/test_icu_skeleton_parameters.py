@@ -37,6 +37,7 @@ class TestIcuSkeletonParameters(unittest.TestCase):
             return IcuSkeletonParameters(
                 content = '{number, plural, one {One} other {%{n}}}', 
                 locale_codes = ["en"], 
+                keep_content = True, 
                 zero_form_enabled = True
             )
         else :

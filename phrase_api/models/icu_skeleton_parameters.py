@@ -34,16 +34,18 @@ class IcuSkeletonParameters(object):
     openapi_types = {
         'content': 'str',
         'locale_codes': 'list[str]',
+        'keep_content': 'bool',
         'zero_form_enabled': 'bool'
     }
 
     attribute_map = {
         'content': 'content',
         'locale_codes': 'locale_codes',
+        'keep_content': 'keep_content',
         'zero_form_enabled': 'zero_form_enabled'
     }
 
-    def __init__(self, content=None, locale_codes=None, zero_form_enabled=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, content=None, locale_codes=None, keep_content=None, zero_form_enabled=None, local_vars_configuration=None):  # noqa: E501
         """IcuSkeletonParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,6 +53,7 @@ class IcuSkeletonParameters(object):
 
         self._content = None
         self._locale_codes = None
+        self._keep_content = None
         self._zero_form_enabled = None
         self.discriminator = None
 
@@ -58,6 +61,8 @@ class IcuSkeletonParameters(object):
             self.content = content
         if locale_codes is not None:
             self.locale_codes = locale_codes
+        if keep_content is not None:
+            self.keep_content = keep_content
         if zero_form_enabled is not None:
             self.zero_form_enabled = zero_form_enabled
 
@@ -106,6 +111,29 @@ class IcuSkeletonParameters(object):
         """
 
         self._locale_codes = locale_codes
+
+    @property
+    def keep_content(self):
+        """Gets the keep_content of this IcuSkeletonParameters.  # noqa: E501
+
+        Keep the content and add missing plural forms for each locale  # noqa: E501
+
+        :return: The keep_content of this IcuSkeletonParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._keep_content
+
+    @keep_content.setter
+    def keep_content(self, keep_content):
+        """Sets the keep_content of this IcuSkeletonParameters.
+
+        Keep the content and add missing plural forms for each locale  # noqa: E501
+
+        :param keep_content: The keep_content of this IcuSkeletonParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._keep_content = keep_content
 
     @property
     def zero_form_enabled(self):

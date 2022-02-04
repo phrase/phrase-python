@@ -46,6 +46,7 @@ class TestKeyCreateParameters(unittest.TestCase):
                 screenshot = bytes(b'blah'), 
                 remove_screenshot = True, 
                 unformatted = True, 
+                default_translation_content = 'Default translation content', 
                 xml_space_preserve = True, 
                 original_file = '0', 
                 localized_format_string = '0', 

@@ -62,6 +62,13 @@ class TestJobsApi(unittest.TestCase):
         """
         pass
 
+    def test_job_lock(self):
+        """Test case for job_lock
+
+        Lock a job  # noqa: E501
+        """
+        pass
+
     def test_job_reopen(self):
         """Test case for job_reopen
 
@@ -80,6 +87,13 @@ class TestJobsApi(unittest.TestCase):
         """Test case for job_start
 
         Start a job  # noqa: E501
+        """
+        pass
+
+    def test_job_unlock(self):
+        """Test case for job_unlock
+
+        Unlock a job  # noqa: E501
         """
         pass
 

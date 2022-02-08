@@ -9,9 +9,11 @@ Method | HTTP request | Description
 [**job_delete**](JobsApi.md#job_delete) | **DELETE** /projects/{project_id}/jobs/{id} | Delete a job
 [**job_keys_create**](JobsApi.md#job_keys_create) | **POST** /projects/{project_id}/jobs/{id}/keys | Add keys to job
 [**job_keys_delete**](JobsApi.md#job_keys_delete) | **DELETE** /projects/{project_id}/jobs/{id}/keys | Remove keys from job
+[**job_lock**](JobsApi.md#job_lock) | **POST** /projects/{project_id}/jobs/{id}/lock | Lock a job
 [**job_reopen**](JobsApi.md#job_reopen) | **POST** /projects/{project_id}/jobs/{id}/reopen | Reopen a job
 [**job_show**](JobsApi.md#job_show) | **GET** /projects/{project_id}/jobs/{id} | Get a single job
 [**job_start**](JobsApi.md#job_start) | **POST** /projects/{project_id}/jobs/{id}/start | Start a job
+[**job_unlock**](JobsApi.md#job_unlock) | **POST** /projects/{project_id}/jobs/{id}/unlock | Unlock a job
 [**job_update**](JobsApi.md#job_update) | **PATCH** /projects/{project_id}/jobs/{id} | Update a job
 [**jobs_by_account**](JobsApi.md#jobs_by_account) | **GET** /accounts/{account_id}/jobs | List account jobs
 [**jobs_list**](JobsApi.md#jobs_list) | **GET** /projects/{project_id}/jobs | List jobs
@@ -365,6 +367,75 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **job_lock**
+> job_lock(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+
+Lock a job
+
+If you are the job owner, you may lock a job using this API request.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.JobsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+
+    try:
+        # Lock a job
+        api_instance.job_lock(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+    except ApiException as e:
+        print("Exception when calling JobsApi->job_lock: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | The resource was deleted successfully. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **job_reopen**
 > JobDetails job_reopen(project_id, id, job_reopen_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
@@ -569,6 +640,75 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **job_unlock**
+> job_unlock(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+
+Unlock a job
+
+If you are the job owner, you may unlock a locked job using this API request.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.JobsApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | specify the branch to use
+
+    try:
+        # Unlock a job
+        api_instance.job_unlock(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+    except ApiException as e:
+        print("Exception when calling JobsApi->job_unlock: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | The resource was deleted successfully. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

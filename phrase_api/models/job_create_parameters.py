@@ -39,7 +39,8 @@ class JobCreateParameters(object):
         'due_date': 'datetime',
         'ticket_url': 'str',
         'tags': 'list[str]',
-        'translation_key_ids': 'list[str]'
+        'translation_key_ids': 'list[str]',
+        'job_template_id': 'str'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class JobCreateParameters(object):
         'due_date': 'due_date',
         'ticket_url': 'ticket_url',
         'tags': 'tags',
-        'translation_key_ids': 'translation_key_ids'
+        'translation_key_ids': 'translation_key_ids',
+        'job_template_id': 'job_template_id'
     }
 
-    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, job_template_id=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +69,7 @@ class JobCreateParameters(object):
         self._ticket_url = None
         self._tags = None
         self._translation_key_ids = None
+        self._job_template_id = None
         self.discriminator = None
 
         if branch is not None:
@@ -85,6 +88,8 @@ class JobCreateParameters(object):
             self.tags = tags
         if translation_key_ids is not None:
             self.translation_key_ids = translation_key_ids
+        if job_template_id is not None:
+            self.job_template_id = job_template_id
 
     @property
     def branch(self):
@@ -269,6 +274,29 @@ class JobCreateParameters(object):
         """
 
         self._translation_key_ids = translation_key_ids
+
+    @property
+    def job_template_id(self):
+        """Gets the job_template_id of this JobCreateParameters.  # noqa: E501
+
+        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes.  # noqa: E501
+
+        :return: The job_template_id of this JobCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._job_template_id
+
+    @job_template_id.setter
+    def job_template_id(self, job_template_id):
+        """Sets the job_template_id of this JobCreateParameters.
+
+        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes.  # noqa: E501
+
+        :param job_template_id: The job_template_id of this JobCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._job_template_id = job_template_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

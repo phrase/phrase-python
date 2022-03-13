@@ -552,8 +552,14 @@ class ApiClient(object):
                                  content_disposition).group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
-        with open(path, "wb") as f:
-            f.write(response.data)
+        # In the python 3, the response.data is string.
+        # we need to read as string.
+        if six.PY3:
+            with open(path, "w") as f:
+                f.write(response.data)
+        else:
+            with open(path, "wb") as f:
+                f.write(response.data)
 
         return path
 

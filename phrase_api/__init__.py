@@ -13,7 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 
 # import apis into sdk package
 from phrase_api.api.accounts_api import AccountsApi
@@ -215,9 +215,9 @@ from phrase_api.models.tag_with_stats1 import TagWithStats1
 from phrase_api.models.tag_with_stats1_statistics import TagWithStats1Statistics
 from phrase_api.models.tag_with_stats1_statistics1 import TagWithStats1Statistics1
 from phrase_api.models.team import Team
-from phrase_api.models.team1 import Team1
 from phrase_api.models.team_create_parameters import TeamCreateParameters
 from phrase_api.models.team_detail import TeamDetail
+from phrase_api.models.team_short import TeamShort
 from phrase_api.models.team_update_parameters import TeamUpdateParameters
 from phrase_api.models.teams_projects_create_parameters import TeamsProjectsCreateParameters
 from phrase_api.models.teams_spaces_create_parameters import TeamsSpacesCreateParameters

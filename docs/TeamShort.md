@@ -1,4 +1,4 @@
-# Team1
+# TeamShort
 
 ## Properties
 Name | Type | Description | Notes

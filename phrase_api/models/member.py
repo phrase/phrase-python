@@ -41,7 +41,7 @@ class Member(object):
         'projects': 'list[ProjectLocales]',
         'permissions': 'object',
         'default_locale_codes': 'list[str]',
-        'teams': 'list[Team1]',
+        'teams': 'list[TeamShort]',
         'spaces': 'list[MemberSpaces]'
     }
 
@@ -296,7 +296,7 @@ class Member(object):
 
 
         :return: The teams of this Member.  # noqa: E501
-        :rtype: list[Team1]
+        :rtype: list[TeamShort]
         """
         return self._teams
 
@@ -306,7 +306,7 @@ class Member(object):
 
 
         :param teams: The teams of this Member.  # noqa: E501
-        :type: list[Team1]
+        :type: list[TeamShort]
         """
 
         self._teams = teams

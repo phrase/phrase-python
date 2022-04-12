@@ -14,15 +14,15 @@ from __future__ import absolute_import
 import unittest
 
 import phrase_api
-from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi  # noqa: E501
+from phrase_api.api.blocked_keys_api import BlockedKeysApi  # noqa: E501
 from phrase_api.rest import ApiException
 
 
-class TestBlacklistedKeysApi(unittest.TestCase):
-    """BlacklistedKeysApi unit test stubs"""
+class TestBlockedKeysApi(unittest.TestCase):
+    """BlockedKeysApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.blacklisted_keys_api.BlacklistedKeysApi()  # noqa: E501
+        self.api = phrase_api.api.blocked_keys_api.BlockedKeysApi()  # noqa: E501
 
     def tearDown(self):
         pass

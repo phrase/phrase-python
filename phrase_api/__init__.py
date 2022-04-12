@@ -19,7 +19,7 @@ __version__ = "1.4.0"
 from phrase_api.api.accounts_api import AccountsApi
 from phrase_api.api.authorizations_api import AuthorizationsApi
 from phrase_api.api.bitbucket_sync_api import BitbucketSyncApi
-from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
+from phrase_api.api.blocked_keys_api import BlockedKeysApi
 from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comments_api import CommentsApi
 from phrase_api.api.distributions_api import DistributionsApi
@@ -27,9 +27,6 @@ from phrase_api.api.documents_api import DocumentsApi
 from phrase_api.api.formats_api import FormatsApi
 from phrase_api.api.git_hub_sync_api import GitHubSyncApi
 from phrase_api.api.git_lab_sync_api import GitLabSyncApi
-from phrase_api.api.glossaries_api import GlossariesApi
-from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslationsApi
-from phrase_api.api.glossary_terms_api import GlossaryTermsApi
 from phrase_api.api.icu_api import ICUApi
 from phrase_api.api.invitations_api import InvitationsApi
 from phrase_api.api.job_locales_api import JobLocalesApi
@@ -51,6 +48,10 @@ from phrase_api.api.spaces_api import SpacesApi
 from phrase_api.api.style_guides_api import StyleGuidesApi
 from phrase_api.api.tags_api import TagsApi
 from phrase_api.api.teams_api import TeamsApi
+from phrase_api.api.term_base_api import TermBaseApi
+from phrase_api.api.term_base_translation_api import TermBaseTranslationApi
+from phrase_api.api.term_base_translations_api import TermBaseTranslationsApi
+from phrase_api.api.terms_in_term_base_api import TermsInTermBaseApi
 from phrase_api.api.translations_api import TranslationsApi
 from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi

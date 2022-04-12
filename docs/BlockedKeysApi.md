@@ -1,14 +1,14 @@
-# phrase_api.BlacklistedKeysApi
+# phrase_api.BlockedKeysApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**blacklisted_key_create**](BlacklistedKeysApi.md#blacklisted_key_create) | **POST** /projects/{project_id}/blacklisted_keys | Create a blacklisted key
-[**blacklisted_key_delete**](BlacklistedKeysApi.md#blacklisted_key_delete) | **DELETE** /projects/{project_id}/blacklisted_keys/{id} | Delete a blacklisted key
-[**blacklisted_key_show**](BlacklistedKeysApi.md#blacklisted_key_show) | **GET** /projects/{project_id}/blacklisted_keys/{id} | Get a single blacklisted key
-[**blacklisted_key_update**](BlacklistedKeysApi.md#blacklisted_key_update) | **PATCH** /projects/{project_id}/blacklisted_keys/{id} | Update a blacklisted key
-[**blacklisted_keys_list**](BlacklistedKeysApi.md#blacklisted_keys_list) | **GET** /projects/{project_id}/blacklisted_keys | List blacklisted keys
+[**blacklisted_key_create**](BlockedKeysApi.md#blacklisted_key_create) | **POST** /projects/{project_id}/blacklisted_keys | Create a blacklisted key
+[**blacklisted_key_delete**](BlockedKeysApi.md#blacklisted_key_delete) | **DELETE** /projects/{project_id}/blacklisted_keys/{id} | Delete a blacklisted key
+[**blacklisted_key_show**](BlockedKeysApi.md#blacklisted_key_show) | **GET** /projects/{project_id}/blacklisted_keys/{id} | Get a single blacklisted key
+[**blacklisted_key_update**](BlockedKeysApi.md#blacklisted_key_update) | **PATCH** /projects/{project_id}/blacklisted_keys/{id} | Update a blacklisted key
+[**blacklisted_keys_list**](BlockedKeysApi.md#blacklisted_keys_list) | **GET** /projects/{project_id}/blacklisted_keys | List blacklisted keys
 
 
 # **blacklisted_key_create**
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Create a blacklisted key
 
-Create a new rule for blacklisting keys.
+Create a new rule for blocking keys.
 
 ### Example
 
@@ -34,7 +34,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    api_instance = phrase_api.BlockedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     blacklisted_key_create_parameters = phrase_api.BlacklistedKeyCreateParameters() # BlacklistedKeyCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -44,7 +44,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.blacklisted_key_create(project_id, blacklisted_key_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BlacklistedKeysApi->blacklisted_key_create: %s\n" % e)
+        print("Exception when calling BlockedKeysApi->blacklisted_key_create: %s\n" % e)
 ```
 
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 Delete a blacklisted key
 
-Delete an existing rule for blacklisting keys.
+Delete an existing rule for blocking keys.
 
 ### Example
 
@@ -102,7 +102,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    api_instance = phrase_api.BlockedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -111,7 +111,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         # Delete a blacklisted key
         api_instance.blacklisted_key_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
-        print("Exception when calling BlacklistedKeysApi->blacklisted_key_delete: %s\n" % e)
+        print("Exception when calling BlockedKeysApi->blacklisted_key_delete: %s\n" % e)
 ```
 
 
@@ -151,7 +151,7 @@ void (empty response body)
 
 Get a single blacklisted key
 
-Get details on a single rule for blacklisting keys for a given project.
+Get details on a single rule for blocking keys for a given project.
 
 ### Example
 
@@ -169,7 +169,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    api_instance = phrase_api.BlockedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -179,7 +179,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.blacklisted_key_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BlacklistedKeysApi->blacklisted_key_show: %s\n" % e)
+        print("Exception when calling BlockedKeysApi->blacklisted_key_show: %s\n" % e)
 ```
 
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 Update a blacklisted key
 
-Update an existing rule for blacklisting keys.
+Update an existing rule for blocking keys.
 
 ### Example
 
@@ -237,7 +237,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    api_instance = phrase_api.BlockedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     blacklisted_key_update_parameters = phrase_api.BlacklistedKeyUpdateParameters() # BlacklistedKeyUpdateParameters |  (required)
@@ -248,7 +248,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.blacklisted_key_update(project_id, id, blacklisted_key_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BlacklistedKeysApi->blacklisted_key_update: %s\n" % e)
+        print("Exception when calling BlockedKeysApi->blacklisted_key_update: %s\n" % e)
 ```
 
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 List blacklisted keys
 
-List all rules for blacklisting keys for the given project.
+List all rules for blocking keys for the given project.
 
 ### Example
 
@@ -307,7 +307,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    api_instance = phrase_api.BlockedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
@@ -319,7 +319,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BlacklistedKeysApi->blacklisted_keys_list: %s\n" % e)
+        print("Exception when calling BlockedKeysApi->blacklisted_keys_list: %s\n" % e)
 ```
 
 

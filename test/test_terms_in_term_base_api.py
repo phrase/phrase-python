@@ -14,15 +14,15 @@ from __future__ import absolute_import
 import unittest
 
 import phrase_api
-from phrase_api.api.glossary_terms_api import GlossaryTermsApi  # noqa: E501
+from phrase_api.api.terms_in_term_base_api import TermsInTermBaseApi  # noqa: E501
 from phrase_api.rest import ApiException
 
 
-class TestGlossaryTermsApi(unittest.TestCase):
-    """GlossaryTermsApi unit test stubs"""
+class TestTermsInTermBaseApi(unittest.TestCase):
+    """TermsInTermBaseApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.glossary_terms_api.GlossaryTermsApi()  # noqa: E501
+        self.api = phrase_api.api.terms_in_term_base_api.TermsInTermBaseApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -30,35 +30,35 @@ class TestGlossaryTermsApi(unittest.TestCase):
     def test_glossary_term_create(self):
         """Test case for glossary_term_create
 
-        Create a glossary term  # noqa: E501
+        Create a term  # noqa: E501
         """
         pass
 
     def test_glossary_term_delete(self):
         """Test case for glossary_term_delete
 
-        Delete a glossary term  # noqa: E501
+        Delete a term  # noqa: E501
         """
         pass
 
     def test_glossary_term_show(self):
         """Test case for glossary_term_show
 
-        Get a single glossary term  # noqa: E501
+        Get a single term  # noqa: E501
         """
         pass
 
     def test_glossary_term_update(self):
         """Test case for glossary_term_update
 
-        Update a glossary term  # noqa: E501
+        Update a term  # noqa: E501
         """
         pass
 
     def test_glossary_terms_list(self):
         """Test case for glossary_terms_list
 
-        List glossary terms  # noqa: E501
+        List terms  # noqa: E501
         """
         pass
 

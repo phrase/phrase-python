@@ -14,15 +14,15 @@ from __future__ import absolute_import
 import unittest
 
 import phrase_api
-from phrase_api.api.term_base_api import TermBaseApi  # noqa: E501
+from phrase_api.api.term_bases_api import TermBasesApi  # noqa: E501
 from phrase_api.rest import ApiException
 
 
-class TestTermBaseApi(unittest.TestCase):
-    """TermBaseApi unit test stubs"""
+class TestTermBasesApi(unittest.TestCase):
+    """TermBasesApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.term_base_api.TermBaseApi()  # noqa: E501
+        self.api = phrase_api.api.term_bases_api.TermBasesApi()  # noqa: E501
 
     def tearDown(self):
         pass

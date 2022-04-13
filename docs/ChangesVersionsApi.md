@@ -1,11 +1,11 @@
-# phrase_api.VersionsHistoryApi
+# phrase_api.ChangesVersionsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**version_show**](VersionsHistoryApi.md#version_show) | **GET** /projects/{project_id}/translations/{translation_id}/versions/{id} | Get a single version
-[**versions_list**](VersionsHistoryApi.md#versions_list) | **GET** /projects/{project_id}/translations/{translation_id}/versions | List all versions
+[**version_show**](ChangesVersionsApi.md#version_show) | **GET** /projects/{project_id}/translations/{translation_id}/versions/{id} | Get a single version
+[**versions_list**](ChangesVersionsApi.md#versions_list) | **GET** /projects/{project_id}/translations/{translation_id}/versions | List all versions
 
 
 # **version_show**
@@ -31,7 +31,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.VersionsHistoryApi(api_client)
+    api_instance = phrase_api.ChangesVersionsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     translation_id = 'translation_id_example' # str | Translation ID (required)
     id = 'id_example' # str | ID (required)
@@ -43,7 +43,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.version_show(project_id, translation_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling VersionsHistoryApi->version_show: %s\n" % e)
+        print("Exception when calling ChangesVersionsApi->version_show: %s\n" % e)
 ```
 
 
@@ -103,7 +103,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.VersionsHistoryApi(api_client)
+    api_instance = phrase_api.ChangesVersionsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     translation_id = 'translation_id_example' # str | Translation ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -116,7 +116,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling VersionsHistoryApi->versions_list: %s\n" % e)
+        print("Exception when calling ChangesVersionsApi->versions_list: %s\n" % e)
 ```
 
 

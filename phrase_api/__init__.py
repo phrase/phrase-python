@@ -21,6 +21,7 @@ from phrase_api.api.authorizations_api import AuthorizationsApi
 from phrase_api.api.bitbucket_sync_api import BitbucketSyncApi
 from phrase_api.api.blocked_keys_api import BlockedKeysApi
 from phrase_api.api.branches_api import BranchesApi
+from phrase_api.api.changes___versions_api import ChangesVersionsApi
 from phrase_api.api.comments_api import CommentsApi
 from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
@@ -48,15 +49,13 @@ from phrase_api.api.spaces_api import SpacesApi
 from phrase_api.api.style_guides_api import StyleGuidesApi
 from phrase_api.api.tags_api import TagsApi
 from phrase_api.api.teams_api import TeamsApi
-from phrase_api.api.term_base_api import TermBaseApi
-from phrase_api.api.term_base_translation_api import TermBaseTranslationApi
 from phrase_api.api.term_base_translations_api import TermBaseTranslationsApi
+from phrase_api.api.term_bases_api import TermBasesApi
 from phrase_api.api.terms_in_term_base_api import TermsInTermBaseApi
 from phrase_api.api.translations_api import TranslationsApi
 from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi
 from phrase_api.api.variables_api import VariablesApi
-from phrase_api.api.versions___history_api import VersionsHistoryApi
 from phrase_api.api.webhooks_api import WebhooksApi
 
 # import ApiClient

@@ -1,14 +1,14 @@
-# phrase_api.TermBaseApi
+# phrase_api.TermBasesApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**glossaries_list**](TermBaseApi.md#glossaries_list) | **GET** /accounts/{account_id}/glossaries | List term bases
-[**glossary_create**](TermBaseApi.md#glossary_create) | **POST** /accounts/{account_id}/glossaries | Create a term base
-[**glossary_delete**](TermBaseApi.md#glossary_delete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a term base
-[**glossary_show**](TermBaseApi.md#glossary_show) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single term base
-[**glossary_update**](TermBaseApi.md#glossary_update) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a term base
+[**glossaries_list**](TermBasesApi.md#glossaries_list) | **GET** /accounts/{account_id}/glossaries | List term bases
+[**glossary_create**](TermBasesApi.md#glossary_create) | **POST** /accounts/{account_id}/glossaries | Create a term base
+[**glossary_delete**](TermBasesApi.md#glossary_delete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a term base
+[**glossary_show**](TermBasesApi.md#glossary_show) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single term base
+[**glossary_update**](TermBasesApi.md#glossary_update) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a term base
 
 
 # **glossaries_list**
@@ -34,7 +34,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseApi(api_client)
+    api_instance = phrase_api.TermBasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
@@ -45,7 +45,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.glossaries_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBaseApi->glossaries_list: %s\n" % e)
+        print("Exception when calling TermBasesApi->glossaries_list: %s\n" % e)
 ```
 
 
@@ -104,7 +104,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseApi(api_client)
+    api_instance = phrase_api.TermBasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_create_parameters = phrase_api.GlossaryCreateParameters() # GlossaryCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -114,7 +114,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.glossary_create(account_id, glossary_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBaseApi->glossary_create: %s\n" % e)
+        print("Exception when calling TermBasesApi->glossary_create: %s\n" % e)
 ```
 
 
@@ -172,7 +172,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseApi(api_client)
+    api_instance = phrase_api.TermBasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -181,7 +181,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         # Delete a term base
         api_instance.glossary_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
-        print("Exception when calling TermBaseApi->glossary_delete: %s\n" % e)
+        print("Exception when calling TermBasesApi->glossary_delete: %s\n" % e)
 ```
 
 
@@ -239,7 +239,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseApi(api_client)
+    api_instance = phrase_api.TermBasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
@@ -249,7 +249,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.glossary_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBaseApi->glossary_show: %s\n" % e)
+        print("Exception when calling TermBasesApi->glossary_show: %s\n" % e)
 ```
 
 
@@ -307,7 +307,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseApi(api_client)
+    api_instance = phrase_api.TermBasesApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     id = 'id_example' # str | ID (required)
     glossary_update_parameters = phrase_api.GlossaryUpdateParameters() # GlossaryUpdateParameters |  (required)
@@ -318,7 +318,7 @@ with phrase_api.ApiClient(configuration) as api_client:
         api_response = api_instance.glossary_update(account_id, id, glossary_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBaseApi->glossary_update: %s\n" % e)
+        print("Exception when calling TermBasesApi->glossary_update: %s\n" % e)
 ```
 
 

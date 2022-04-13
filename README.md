@@ -133,11 +133,11 @@ Class | Method | HTTP request | Description
 *BitbucketSyncApi* | [**bitbucket_sync_export**](docs/BitbucketSyncApi.md#bitbucket_sync_export) | **POST** /bitbucket_syncs/{id}/export | Export from Phrase to Bitbucket
 *BitbucketSyncApi* | [**bitbucket_sync_import**](docs/BitbucketSyncApi.md#bitbucket_sync_import) | **POST** /bitbucket_syncs/{id}/import | Import to Phrase from Bitbucket
 *BitbucketSyncApi* | [**bitbucket_syncs_list**](docs/BitbucketSyncApi.md#bitbucket_syncs_list) | **GET** /bitbucket_syncs | List Bitbucket syncs
-*BlockedKeysApi* | [**blacklisted_key_create**](docs/BlockedKeysApi.md#blacklisted_key_create) | **POST** /projects/{project_id}/blacklisted_keys | Create a blacklisted key
-*BlockedKeysApi* | [**blacklisted_key_delete**](docs/BlockedKeysApi.md#blacklisted_key_delete) | **DELETE** /projects/{project_id}/blacklisted_keys/{id} | Delete a blacklisted key
-*BlockedKeysApi* | [**blacklisted_key_show**](docs/BlockedKeysApi.md#blacklisted_key_show) | **GET** /projects/{project_id}/blacklisted_keys/{id} | Get a single blacklisted key
-*BlockedKeysApi* | [**blacklisted_key_update**](docs/BlockedKeysApi.md#blacklisted_key_update) | **PATCH** /projects/{project_id}/blacklisted_keys/{id} | Update a blacklisted key
-*BlockedKeysApi* | [**blacklisted_keys_list**](docs/BlockedKeysApi.md#blacklisted_keys_list) | **GET** /projects/{project_id}/blacklisted_keys | List blacklisted keys
+*BlockedKeysApi* | [**blacklisted_key_create**](docs/BlockedKeysApi.md#blacklisted_key_create) | **POST** /projects/{project_id}/blacklisted_keys | Create a blocked key
+*BlockedKeysApi* | [**blacklisted_key_delete**](docs/BlockedKeysApi.md#blacklisted_key_delete) | **DELETE** /projects/{project_id}/blacklisted_keys/{id} | Delete a blocked key
+*BlockedKeysApi* | [**blacklisted_key_show**](docs/BlockedKeysApi.md#blacklisted_key_show) | **GET** /projects/{project_id}/blacklisted_keys/{id} | Get a single blocked key
+*BlockedKeysApi* | [**blacklisted_key_update**](docs/BlockedKeysApi.md#blacklisted_key_update) | **PATCH** /projects/{project_id}/blacklisted_keys/{id} | Update a blocked key
+*BlockedKeysApi* | [**blacklisted_keys_list**](docs/BlockedKeysApi.md#blacklisted_keys_list) | **GET** /projects/{project_id}/blacklisted_keys | List blocked keys
 *BranchesApi* | [**branch_compare**](docs/BranchesApi.md#branch_compare) | **GET** /projects/{project_id}/branches/{name}/compare | Compare branches
 *BranchesApi* | [**branch_create**](docs/BranchesApi.md#branch_create) | **POST** /projects/{project_id}/branches | Create a branch
 *BranchesApi* | [**branch_delete**](docs/BranchesApi.md#branch_delete) | **DELETE** /projects/{project_id}/branches/{name} | Delete a branch
@@ -145,6 +145,8 @@ Class | Method | HTTP request | Description
 *BranchesApi* | [**branch_show**](docs/BranchesApi.md#branch_show) | **GET** /projects/{project_id}/branches/{name} | Get a single branch
 *BranchesApi* | [**branch_update**](docs/BranchesApi.md#branch_update) | **PATCH** /projects/{project_id}/branches/{name} | Update a branch
 *BranchesApi* | [**branches_list**](docs/BranchesApi.md#branches_list) | **GET** /projects/{project_id}/branches | List branches
+*ChangesVersionsApi* | [**version_show**](docs/ChangesVersionsApi.md#version_show) | **GET** /projects/{project_id}/translations/{translation_id}/versions/{id} | Get a single version
+*ChangesVersionsApi* | [**versions_list**](docs/ChangesVersionsApi.md#versions_list) | **GET** /projects/{project_id}/translations/{translation_id}/versions | List all versions
 *CommentsApi* | [**comment_create**](docs/CommentsApi.md#comment_create) | **POST** /projects/{project_id}/keys/{key_id}/comments | Create a comment
 *CommentsApi* | [**comment_delete**](docs/CommentsApi.md#comment_delete) | **DELETE** /projects/{project_id}/keys/{key_id}/comments/{id} | Delete a comment
 *CommentsApi* | [**comment_mark_check**](docs/CommentsApi.md#comment_mark_check) | **GET** /projects/{project_id}/keys/{key_id}/comments/{id}/read | Check if comment is read
@@ -293,14 +295,14 @@ Class | Method | HTTP request | Description
 *TeamsApi* | [**teams_spaces_delete**](docs/TeamsApi.md#teams_spaces_delete) | **DELETE** /accounts/{account_id}/teams/{team_id}/spaces/{id} | Remove Space
 *TeamsApi* | [**teams_users_create**](docs/TeamsApi.md#teams_users_create) | **POST** /accounts/{account_id}/teams/{team_id}/users | Add User
 *TeamsApi* | [**teams_users_delete**](docs/TeamsApi.md#teams_users_delete) | **DELETE** /accounts/{account_id}/teams/{team_id}/users/{id} | Remove User
-*TermBaseApi* | [**glossaries_list**](docs/TermBaseApi.md#glossaries_list) | **GET** /accounts/{account_id}/glossaries | List term bases
-*TermBaseApi* | [**glossary_create**](docs/TermBaseApi.md#glossary_create) | **POST** /accounts/{account_id}/glossaries | Create a term base
-*TermBaseApi* | [**glossary_delete**](docs/TermBaseApi.md#glossary_delete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a term base
-*TermBaseApi* | [**glossary_show**](docs/TermBaseApi.md#glossary_show) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single term base
-*TermBaseApi* | [**glossary_update**](docs/TermBaseApi.md#glossary_update) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a term base
-*TermBaseTranslationApi* | [**glossary_term_translation_delete**](docs/TermBaseTranslationApi.md#glossary_term_translation_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Delete a translation for a term
 *TermBaseTranslationsApi* | [**glossary_term_translation_create**](docs/TermBaseTranslationsApi.md#glossary_term_translation_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations | Create a translation for a term
+*TermBaseTranslationsApi* | [**glossary_term_translation_delete**](docs/TermBaseTranslationsApi.md#glossary_term_translation_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Delete a translation for a term
 *TermBaseTranslationsApi* | [**glossary_term_translation_update**](docs/TermBaseTranslationsApi.md#glossary_term_translation_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Update a translation for a term
+*TermBasesApi* | [**glossaries_list**](docs/TermBasesApi.md#glossaries_list) | **GET** /accounts/{account_id}/glossaries | List term bases
+*TermBasesApi* | [**glossary_create**](docs/TermBasesApi.md#glossary_create) | **POST** /accounts/{account_id}/glossaries | Create a term base
+*TermBasesApi* | [**glossary_delete**](docs/TermBasesApi.md#glossary_delete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a term base
+*TermBasesApi* | [**glossary_show**](docs/TermBasesApi.md#glossary_show) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single term base
+*TermBasesApi* | [**glossary_update**](docs/TermBasesApi.md#glossary_update) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a term base
 *TermsInTermBaseApi* | [**glossary_term_create**](docs/TermsInTermBaseApi.md#glossary_term_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms | Create a term
 *TermsInTermBaseApi* | [**glossary_term_delete**](docs/TermsInTermBaseApi.md#glossary_term_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Delete a term
 *TermsInTermBaseApi* | [**glossary_term_show**](docs/TermsInTermBaseApi.md#glossary_term_show) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Get a single term
@@ -332,8 +334,6 @@ Class | Method | HTTP request | Description
 *VariablesApi* | [**variable_show**](docs/VariablesApi.md#variable_show) | **GET** /projects/{project_id}/variables/{name} | Get a single variable
 *VariablesApi* | [**variable_update**](docs/VariablesApi.md#variable_update) | **PATCH** /projects/{project_id}/variables/{name} | Update a variable
 *VariablesApi* | [**variables_list**](docs/VariablesApi.md#variables_list) | **GET** /projects/{project_id}/variables | List variables
-*VersionsHistoryApi* | [**version_show**](docs/VersionsHistoryApi.md#version_show) | **GET** /projects/{project_id}/translations/{translation_id}/versions/{id} | Get a single version
-*VersionsHistoryApi* | [**versions_list**](docs/VersionsHistoryApi.md#versions_list) | **GET** /projects/{project_id}/translations/{translation_id}/versions | List all versions
 *WebhooksApi* | [**webhook_create**](docs/WebhooksApi.md#webhook_create) | **POST** /projects/{project_id}/webhooks | Create a webhook
 *WebhooksApi* | [**webhook_delete**](docs/WebhooksApi.md#webhook_delete) | **DELETE** /projects/{project_id}/webhooks/{id} | Delete a webhook
 *WebhooksApi* | [**webhook_show**](docs/WebhooksApi.md#webhook_show) | **GET** /projects/{project_id}/webhooks/{id} | Get a single webhook

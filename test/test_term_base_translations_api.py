@@ -34,6 +34,13 @@ class TestTermBaseTranslationsApi(unittest.TestCase):
         """
         pass
 
+    def test_glossary_term_translation_delete(self):
+        """Test case for glossary_term_translation_delete
+
+        Delete a translation for a term  # noqa: E501
+        """
+        pass
+
     def test_glossary_term_translation_update(self):
         """Test case for glossary_term_translation_update
 

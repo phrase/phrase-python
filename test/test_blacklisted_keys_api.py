@@ -14,15 +14,15 @@ from __future__ import absolute_import
 import unittest
 
 import phrase_api
-from phrase_api.api.blocked_keys_api import BlockedKeysApi  # noqa: E501
+from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi  # noqa: E501
 from phrase_api.rest import ApiException
 
 
-class TestBlockedKeysApi(unittest.TestCase):
-    """BlockedKeysApi unit test stubs"""
+class TestBlacklistedKeysApi(unittest.TestCase):
+    """BlacklistedKeysApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.blocked_keys_api.BlockedKeysApi()  # noqa: E501
+        self.api = phrase_api.api.blacklisted_keys_api.BlacklistedKeysApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -30,35 +30,35 @@ class TestBlockedKeysApi(unittest.TestCase):
     def test_blacklisted_key_create(self):
         """Test case for blacklisted_key_create
 
-        Create a blocked key  # noqa: E501
+        Create a blacklisted key  # noqa: E501
         """
         pass
 
     def test_blacklisted_key_delete(self):
         """Test case for blacklisted_key_delete
 
-        Delete a blocked key  # noqa: E501
+        Delete a blacklisted key  # noqa: E501
         """
         pass
 
     def test_blacklisted_key_show(self):
         """Test case for blacklisted_key_show
 
-        Get a single blocked key  # noqa: E501
+        Get a single blacklisted key  # noqa: E501
         """
         pass
 
     def test_blacklisted_key_update(self):
         """Test case for blacklisted_key_update
 
-        Update a blocked key  # noqa: E501
+        Update a blacklisted key  # noqa: E501
         """
         pass
 
     def test_blacklisted_keys_list(self):
         """Test case for blacklisted_keys_list
 
-        List blocked keys  # noqa: E501
+        List blacklisted keys  # noqa: E501
         """
         pass
 

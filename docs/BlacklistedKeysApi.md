@@ -1,92 +1,22 @@
-# phrase_api.TermBasesApi
+# phrase_api.BlacklistedKeysApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**glossaries_list**](TermBasesApi.md#glossaries_list) | **GET** /accounts/{account_id}/glossaries | List term bases
-[**glossary_create**](TermBasesApi.md#glossary_create) | **POST** /accounts/{account_id}/glossaries | Create a term base
-[**glossary_delete**](TermBasesApi.md#glossary_delete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a term base
-[**glossary_show**](TermBasesApi.md#glossary_show) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single term base
-[**glossary_update**](TermBasesApi.md#glossary_update) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a term base
+[**blacklisted_key_create**](BlacklistedKeysApi.md#blacklisted_key_create) | **POST** /projects/{project_id}/blacklisted_keys | Create a blacklisted key
+[**blacklisted_key_delete**](BlacklistedKeysApi.md#blacklisted_key_delete) | **DELETE** /projects/{project_id}/blacklisted_keys/{id} | Delete a blacklisted key
+[**blacklisted_key_show**](BlacklistedKeysApi.md#blacklisted_key_show) | **GET** /projects/{project_id}/blacklisted_keys/{id} | Get a single blacklisted key
+[**blacklisted_key_update**](BlacklistedKeysApi.md#blacklisted_key_update) | **PATCH** /projects/{project_id}/blacklisted_keys/{id} | Update a blacklisted key
+[**blacklisted_keys_list**](BlacklistedKeysApi.md#blacklisted_keys_list) | **GET** /projects/{project_id}/blacklisted_keys | List blacklisted keys
 
 
-# **glossaries_list**
-> list[Glossary] glossaries_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+# **blacklisted_key_create**
+> BlacklistedKey blacklisted_key_create(project_id, blacklisted_key_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-List term bases
+Create a blacklisted key
 
-List all term bases (previously: glossaries) the current user has access to.
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import phrase_api
-from phrase_api.rest import ApiException
-from pprint import pprint
-
-configuration = phrase_api.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'token'
-
-# Enter a context with an instance of the API client
-with phrase_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = phrase_api.TermBasesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
-
-    try:
-        # List term bases
-        api_response = api_instance.glossaries_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling TermBasesApi->glossaries_list: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_id** | **str**| Account ID | 
- **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
-
-### Return type
-
-[**list[Glossary]**](Glossary.md)
-
-### Authorization
-
-[Basic](../README.md#Basic), [Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
-**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
-**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
-**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **glossary_create**
-> Glossary glossary_create(account_id, glossary_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
-
-Create a term base
-
-Create a new term base (previously: glossary).
+Create a new rule for blacklisting keys.
 
 ### Example
 
@@ -104,17 +34,17 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBasesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
-    glossary_create_parameters = phrase_api.GlossaryCreateParameters() # GlossaryCreateParameters |  (required)
+    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    blacklisted_key_create_parameters = phrase_api.BlacklistedKeyCreateParameters() # BlacklistedKeyCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Create a term base
-        api_response = api_instance.glossary_create(account_id, glossary_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        # Create a blacklisted key
+        api_response = api_instance.blacklisted_key_create(project_id, blacklisted_key_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBasesApi->glossary_create: %s\n" % e)
+        print("Exception when calling BlacklistedKeysApi->blacklisted_key_create: %s\n" % e)
 ```
 
 
@@ -122,13 +52,13 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account_id** | **str**| Account ID | 
- **glossary_create_parameters** | [**GlossaryCreateParameters**](GlossaryCreateParameters.md)|  | 
+ **project_id** | **str**| Project ID | 
+ **blacklisted_key_create_parameters** | [**BlacklistedKeyCreateParameters**](BlacklistedKeyCreateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
 
-[**Glossary**](Glossary.md)
+[**BlacklistedKey**](BlacklistedKey.md)
 
 ### Authorization
 
@@ -149,12 +79,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **glossary_delete**
-> glossary_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+# **blacklisted_key_delete**
+> blacklisted_key_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Delete a term base
+Delete a blacklisted key
 
-Delete an existing term base (previously: glossary).
+Delete an existing rule for blacklisting keys.
 
 ### Example
 
@@ -172,16 +102,16 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBasesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
+    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Delete a term base
-        api_instance.glossary_delete(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        # Delete a blacklisted key
+        api_instance.blacklisted_key_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
-        print("Exception when calling TermBasesApi->glossary_delete: %s\n" % e)
+        print("Exception when calling BlacklistedKeysApi->blacklisted_key_delete: %s\n" % e)
 ```
 
 
@@ -189,7 +119,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account_id** | **str**| Account ID | 
+ **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
@@ -216,12 +146,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **glossary_show**
-> Glossary glossary_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+# **blacklisted_key_show**
+> BlacklistedKey blacklisted_key_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Get a single term base
+Get a single blacklisted key
 
-Get details on a single term base (previously: glossary).
+Get details on a single rule for blacklisting keys for a given project.
 
 ### Example
 
@@ -239,17 +169,17 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBasesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
+    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Get a single term base
-        api_response = api_instance.glossary_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        # Get a single blacklisted key
+        api_response = api_instance.blacklisted_key_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBasesApi->glossary_show: %s\n" % e)
+        print("Exception when calling BlacklistedKeysApi->blacklisted_key_show: %s\n" % e)
 ```
 
 
@@ -257,13 +187,13 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account_id** | **str**| Account ID | 
+ **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
 
-[**Glossary**](Glossary.md)
+[**BlacklistedKey**](BlacklistedKey.md)
 
 ### Authorization
 
@@ -284,12 +214,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **glossary_update**
-> Glossary glossary_update(account_id, id, glossary_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+# **blacklisted_key_update**
+> BlacklistedKey blacklisted_key_update(project_id, id, blacklisted_key_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Update a term base
+Update a blacklisted key
 
-Update an existing term base (previously: glossary).
+Update an existing rule for blacklisting keys.
 
 ### Example
 
@@ -307,18 +237,18 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBasesApi(api_client)
-    account_id = 'account_id_example' # str | Account ID (required)
+    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
-    glossary_update_parameters = phrase_api.GlossaryUpdateParameters() # GlossaryUpdateParameters |  (required)
+    blacklisted_key_update_parameters = phrase_api.BlacklistedKeyUpdateParameters() # BlacklistedKeyUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Update a term base
-        api_response = api_instance.glossary_update(account_id, id, glossary_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        # Update a blacklisted key
+        api_response = api_instance.blacklisted_key_update(project_id, id, blacklisted_key_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBasesApi->glossary_update: %s\n" % e)
+        print("Exception when calling BlacklistedKeysApi->blacklisted_key_update: %s\n" % e)
 ```
 
 
@@ -326,14 +256,14 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **account_id** | **str**| Account ID | 
+ **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
- **glossary_update_parameters** | [**GlossaryUpdateParameters**](GlossaryUpdateParameters.md)|  | 
+ **blacklisted_key_update_parameters** | [**BlacklistedKeyUpdateParameters**](BlacklistedKeyUpdateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
 
-[**Glossary**](Glossary.md)
+[**BlacklistedKey**](BlacklistedKey.md)
 
 ### Authorization
 
@@ -348,6 +278,78 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **blacklisted_keys_list**
+> list[BlacklistedKey] blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+
+List blacklisted keys
+
+List all rules for blacklisting keys for the given project.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.BlacklistedKeysApi(api_client)
+    project_id = 'project_id_example' # str | Project ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    branch = 'my-feature-branch' # str | specify the branch to use
+
+    try:
+        # List blacklisted keys
+        api_response = api_instance.blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BlacklistedKeysApi->blacklisted_keys_list: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **project_id** | **str**| Project ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+
+### Return type
+
+[**list[BlacklistedKey]**](BlacklistedKey.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

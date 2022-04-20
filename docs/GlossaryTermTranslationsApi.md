@@ -1,20 +1,20 @@
-# phrase_api.TermBaseTranslationsApi
+# phrase_api.GlossaryTermTranslationsApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**glossary_term_translation_create**](TermBaseTranslationsApi.md#glossary_term_translation_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations | Create a translation for a term
-[**glossary_term_translation_delete**](TermBaseTranslationsApi.md#glossary_term_translation_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Delete a translation for a term
-[**glossary_term_translation_update**](TermBaseTranslationsApi.md#glossary_term_translation_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Update a translation for a term
+[**glossary_term_translation_create**](GlossaryTermTranslationsApi.md#glossary_term_translation_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations | Create a glossary term translation
+[**glossary_term_translation_delete**](GlossaryTermTranslationsApi.md#glossary_term_translation_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Delete a glossary term translation
+[**glossary_term_translation_update**](GlossaryTermTranslationsApi.md#glossary_term_translation_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Update a glossary term translation
 
 
 # **glossary_term_translation_create**
 > GlossaryTermTranslation glossary_term_translation_create(account_id, glossary_id, term_id, glossary_term_translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Create a translation for a term
+Create a glossary term translation
 
-Create a new translation for a term in a term base (previously: glossary).
+Create a new glossary term translation.
 
 ### Example
 
@@ -32,7 +32,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseTranslationsApi(api_client)
+    api_instance = phrase_api.GlossaryTermTranslationsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     term_id = 'term_id_example' # str | Term ID (required)
@@ -40,11 +40,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Create a translation for a term
+        # Create a glossary term translation
         api_response = api_instance.glossary_term_translation_create(account_id, glossary_id, term_id, glossary_term_translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBaseTranslationsApi->glossary_term_translation_create: %s\n" % e)
+        print("Exception when calling GlossaryTermTranslationsApi->glossary_term_translation_create: %s\n" % e)
 ```
 
 
@@ -84,9 +84,9 @@ Name | Type | Description  | Notes
 # **glossary_term_translation_delete**
 > glossary_term_translation_delete(account_id, glossary_id, term_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Delete a translation for a term
+Delete a glossary term translation
 
-Delete an existing translation of a term in a term base (previously: glossary).
+Delete an existing glossary term translation.
 
 ### Example
 
@@ -104,7 +104,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseTranslationsApi(api_client)
+    api_instance = phrase_api.GlossaryTermTranslationsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     term_id = 'term_id_example' # str | Term ID (required)
@@ -112,10 +112,10 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Delete a translation for a term
+        # Delete a glossary term translation
         api_instance.glossary_term_translation_delete(account_id, glossary_id, term_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
-        print("Exception when calling TermBaseTranslationsApi->glossary_term_translation_delete: %s\n" % e)
+        print("Exception when calling GlossaryTermTranslationsApi->glossary_term_translation_delete: %s\n" % e)
 ```
 
 
@@ -155,9 +155,9 @@ void (empty response body)
 # **glossary_term_translation_update**
 > GlossaryTermTranslation glossary_term_translation_update(account_id, glossary_id, term_id, id, glossary_term_translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Update a translation for a term
+Update a glossary term translation
 
-Update an existing translation for a term in a term base (previously: glossary).
+Update an existing glossary term translation.
 
 ### Example
 
@@ -175,7 +175,7 @@ configuration.api_key_prefix['Authorization'] = 'token'
 # Enter a context with an instance of the API client
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = phrase_api.TermBaseTranslationsApi(api_client)
+    api_instance = phrase_api.GlossaryTermTranslationsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     term_id = 'term_id_example' # str | Term ID (required)
@@ -184,11 +184,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Update a translation for a term
+        # Update a glossary term translation
         api_response = api_instance.glossary_term_translation_update(account_id, glossary_id, term_id, id, glossary_term_translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling TermBaseTranslationsApi->glossary_term_translation_update: %s\n" % e)
+        print("Exception when calling GlossaryTermTranslationsApi->glossary_term_translation_update: %s\n" % e)
 ```
 
 

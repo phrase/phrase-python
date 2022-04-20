@@ -14,15 +14,15 @@ from __future__ import absolute_import
 import unittest
 
 import phrase_api
-from phrase_api.api.term_base_translations_api import TermBaseTranslationsApi  # noqa: E501
+from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslationsApi  # noqa: E501
 from phrase_api.rest import ApiException
 
 
-class TestTermBaseTranslationsApi(unittest.TestCase):
-    """TermBaseTranslationsApi unit test stubs"""
+class TestGlossaryTermTranslationsApi(unittest.TestCase):
+    """GlossaryTermTranslationsApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.term_base_translations_api.TermBaseTranslationsApi()  # noqa: E501
+        self.api = phrase_api.api.glossary_term_translations_api.GlossaryTermTranslationsApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -30,21 +30,21 @@ class TestTermBaseTranslationsApi(unittest.TestCase):
     def test_glossary_term_translation_create(self):
         """Test case for glossary_term_translation_create
 
-        Create a translation for a term  # noqa: E501
+        Create a glossary term translation  # noqa: E501
         """
         pass
 
     def test_glossary_term_translation_delete(self):
         """Test case for glossary_term_translation_delete
 
-        Delete a translation for a term  # noqa: E501
+        Delete a glossary term translation  # noqa: E501
         """
         pass
 
     def test_glossary_term_translation_update(self):
         """Test case for glossary_term_translation_update
 
-        Update a translation for a term  # noqa: E501
+        Update a glossary term translation  # noqa: E501
         """
         pass
 

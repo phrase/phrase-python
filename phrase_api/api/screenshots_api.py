@@ -35,19 +35,22 @@ class ScreenshotsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def screenshot_create(self, project_id, screenshot_create_parameters, **kwargs):  # noqa: E501
+    def screenshot_create(self, project_id, **kwargs):  # noqa: E501
         """Create a screenshot  # noqa: E501
 
         Create a new screenshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.screenshot_create(project_id, screenshot_create_parameters, async_req=True)
+        >>> thread = api.screenshot_create(project_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param ScreenshotCreateParameters screenshot_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
+        :param str name: Name of the screenshot
+        :param str description: Description of the screenshot
+        :param file filename: Screenshot file
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -60,21 +63,24 @@ class ScreenshotsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.screenshot_create_with_http_info(project_id, screenshot_create_parameters, **kwargs)  # noqa: E501
+        return self.screenshot_create_with_http_info(project_id, **kwargs)  # noqa: E501
 
-    def screenshot_create_with_http_info(self, project_id, screenshot_create_parameters, **kwargs):  # noqa: E501
+    def screenshot_create_with_http_info(self, project_id, **kwargs):  # noqa: E501
         """Create a screenshot  # noqa: E501
 
         Create a new screenshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.screenshot_create_with_http_info(project_id, screenshot_create_parameters, async_req=True)
+        >>> thread = api.screenshot_create_with_http_info(project_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param ScreenshotCreateParameters screenshot_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: specify the branch to use
+        :param str name: Name of the screenshot
+        :param str description: Description of the screenshot
+        :param file filename: Screenshot file
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -93,8 +99,11 @@ class ScreenshotsApi(object):
 
         all_params = [
             'project_id',
-            'screenshot_create_parameters',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'branch',
+            'name',
+            'description',
+            'filename'
         ]
         all_params.extend(
             [
@@ -117,10 +126,6 @@ class ScreenshotsApi(object):
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_id` when calling `screenshot_create`")  # noqa: E501
-        # verify the required parameter 'screenshot_create_parameters' is set
-        if self.api_client.client_side_validation and ('screenshot_create_parameters' not in local_var_params or  # noqa: E501
-                                                        local_var_params['screenshot_create_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `screenshot_create_parameters` when calling `screenshot_create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -136,17 +141,23 @@ class ScreenshotsApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'branch' in local_var_params:
+            form_params.append(('branch', local_var_params['branch']))  # noqa: E501
+        if 'name' in local_var_params:
+            form_params.append(('name', local_var_params['name']))  # noqa: E501
+        if 'description' in local_var_params:
+            form_params.append(('description', local_var_params['description']))  # noqa: E501
+        if 'filename' in local_var_params:
+            local_var_files['filename'] = local_var_params['filename']  # noqa: E501
 
         body_params = None
-        if 'screenshot_create_parameters' in local_var_params:
-            body_params = local_var_params['screenshot_create_parameters']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501

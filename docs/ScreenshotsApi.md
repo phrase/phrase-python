@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **screenshot_create**
-> Screenshot screenshot_create(project_id, screenshot_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> Screenshot screenshot_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, name=name, description=description, filename=filename)
 
 Create a screenshot
 
@@ -36,12 +36,15 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.ScreenshotsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    screenshot_create_parameters = phrase_api.ScreenshotCreateParameters() # ScreenshotCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'branch_example' # str | specify the branch to use
+    name = 'name_example' # str | Name of the screenshot
+    description = 'description_example' # str | Description of the screenshot
+    filename = '/path/to/file' # file | Screenshot file
 
     try:
         # Create a screenshot
-        api_response = api_instance.screenshot_create(project_id, screenshot_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.screenshot_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, name=name, description=description, filename=filename)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotsApi->screenshot_create: %s\n" % e)
@@ -53,8 +56,11 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
- **screenshot_create_parameters** | [**ScreenshotCreateParameters**](ScreenshotCreateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| specify the branch to use | [optional] 
+ **name** | **str**| Name of the screenshot | [optional] 
+ **description** | **str**| Description of the screenshot | [optional] 
+ **filename** | **file**| Screenshot file | [optional] 
 
 ### Return type
 
@@ -66,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 ### HTTP response details

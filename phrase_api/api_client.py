@@ -77,7 +77,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'OpenAPI-Generator/1.4.0/python'
+        self.user_agent = 'OpenAPI-Generator/1.4.1/python'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -552,8 +552,13 @@ class ApiClient(object):
                                  content_disposition).group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
-        with open(path, "wb") as f:
-            f.write(response.data)
+        # In Python 3 response.data is a string
+        if six.PY3:
+            with open(path, "w") as f:
+                f.write(response.data)
+        else:
+            with open(path, "wb") as f:
+                f.write(response.data)
 
         return path
 

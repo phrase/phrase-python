@@ -32,6 +32,7 @@ from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslatio
 from phrase_api.api.glossary_terms_api import GlossaryTermsApi
 from phrase_api.api.icu_api import ICUApi
 from phrase_api.api.invitations_api import InvitationsApi
+from phrase_api.api.job_comments_api import JobCommentsApi
 from phrase_api.api.job_locales_api import JobLocalesApi
 from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
 from phrase_api.api.job_templates_api import JobTemplatesApi
@@ -126,6 +127,9 @@ from phrase_api.models.invitation_create_parameters import InvitationCreateParam
 from phrase_api.models.invitation_update_parameters import InvitationUpdateParameters
 from phrase_api.models.invitation_update_settings_parameters import InvitationUpdateSettingsParameters
 from phrase_api.models.job import Job
+from phrase_api.models.job_comment import JobComment
+from phrase_api.models.job_comment_create_parameters import JobCommentCreateParameters
+from phrase_api.models.job_comment_update_parameters import JobCommentUpdateParameters
 from phrase_api.models.job_complete_parameters import JobCompleteParameters
 from phrase_api.models.job_create_parameters import JobCreateParameters
 from phrase_api.models.job_details import JobDetails

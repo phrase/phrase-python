@@ -4,17 +4,17 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**glossary_term_translation_create**](GlossaryTermTranslationsApi.md#glossary_term_translation_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations | Create a glossary term translation
-[**glossary_term_translation_delete**](GlossaryTermTranslationsApi.md#glossary_term_translation_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Delete a glossary term translation
-[**glossary_term_translation_update**](GlossaryTermTranslationsApi.md#glossary_term_translation_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Update a glossary term translation
+[**glossary_term_translation_create**](GlossaryTermTranslationsApi.md#glossary_term_translation_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations | Create a translation for a term
+[**glossary_term_translation_delete**](GlossaryTermTranslationsApi.md#glossary_term_translation_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Delete a translation for a term
+[**glossary_term_translation_update**](GlossaryTermTranslationsApi.md#glossary_term_translation_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{term_id}/translations/{id} | Update a translation for a term
 
 
 # **glossary_term_translation_create**
 > GlossaryTermTranslation glossary_term_translation_create(account_id, glossary_id, term_id, glossary_term_translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Create a glossary term translation
+Create a translation for a term
 
-Create a new glossary term translation.
+Create a new translation for a term in a term base (previously: glossary).
 
 ### Example
 
@@ -40,7 +40,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Create a glossary term translation
+        # Create a translation for a term
         api_response = api_instance.glossary_term_translation_create(account_id, glossary_id, term_id, glossary_term_translation_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -84,9 +84,9 @@ Name | Type | Description  | Notes
 # **glossary_term_translation_delete**
 > glossary_term_translation_delete(account_id, glossary_id, term_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Delete a glossary term translation
+Delete a translation for a term
 
-Delete an existing glossary term translation.
+Delete an existing translation of a term in a term base (previously: glossary).
 
 ### Example
 
@@ -112,7 +112,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Delete a glossary term translation
+        # Delete a translation for a term
         api_instance.glossary_term_translation_delete(account_id, glossary_id, term_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling GlossaryTermTranslationsApi->glossary_term_translation_delete: %s\n" % e)
@@ -155,9 +155,9 @@ void (empty response body)
 # **glossary_term_translation_update**
 > GlossaryTermTranslation glossary_term_translation_update(account_id, glossary_id, term_id, id, glossary_term_translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Update a glossary term translation
+Update a translation for a term
 
-Update an existing glossary term translation.
+Update an existing translation for a term in a term base (previously: glossary).
 
 ### Example
 
@@ -184,7 +184,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Update a glossary term translation
+        # Update a translation for a term
         api_response = api_instance.glossary_term_translation_update(account_id, glossary_id, term_id, id, glossary_term_translation_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:

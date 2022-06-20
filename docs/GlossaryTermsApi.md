@@ -4,19 +4,19 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**glossary_term_create**](GlossaryTermsApi.md#glossary_term_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms | Create a glossary term
-[**glossary_term_delete**](GlossaryTermsApi.md#glossary_term_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Delete a glossary term
-[**glossary_term_show**](GlossaryTermsApi.md#glossary_term_show) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Get a single glossary term
-[**glossary_term_update**](GlossaryTermsApi.md#glossary_term_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Update a glossary term
-[**glossary_terms_list**](GlossaryTermsApi.md#glossary_terms_list) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms | List glossary terms
+[**glossary_term_create**](GlossaryTermsApi.md#glossary_term_create) | **POST** /accounts/{account_id}/glossaries/{glossary_id}/terms | Create a term
+[**glossary_term_delete**](GlossaryTermsApi.md#glossary_term_delete) | **DELETE** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Delete a term
+[**glossary_term_show**](GlossaryTermsApi.md#glossary_term_show) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Get a single term
+[**glossary_term_update**](GlossaryTermsApi.md#glossary_term_update) | **PATCH** /accounts/{account_id}/glossaries/{glossary_id}/terms/{id} | Update a term
+[**glossary_terms_list**](GlossaryTermsApi.md#glossary_terms_list) | **GET** /accounts/{account_id}/glossaries/{glossary_id}/terms | List terms
 
 
 # **glossary_term_create**
 > GlossaryTerm glossary_term_create(account_id, glossary_id, glossary_term_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Create a glossary term
+Create a term
 
-Create a new glossary term.
+Create a new term in a term base (previously: glossary).
 
 ### Example
 
@@ -41,7 +41,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Create a glossary term
+        # Create a term
         api_response = api_instance.glossary_term_create(account_id, glossary_id, glossary_term_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -84,9 +84,9 @@ Name | Type | Description  | Notes
 # **glossary_term_delete**
 > glossary_term_delete(account_id, glossary_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Delete a glossary term
+Delete a term
 
-Delete an existing glossary term.
+Delete an existing term in a term base (previously: glossary).
 
 ### Example
 
@@ -111,7 +111,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Delete a glossary term
+        # Delete a term
         api_instance.glossary_term_delete(account_id, glossary_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling GlossaryTermsApi->glossary_term_delete: %s\n" % e)
@@ -153,9 +153,9 @@ void (empty response body)
 # **glossary_term_show**
 > GlossaryTerm glossary_term_show(account_id, glossary_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Get a single glossary term
+Get a single term
 
-Get details on a single glossary term.
+Get details for a single term in the term base (previously: glossary).
 
 ### Example
 
@@ -180,7 +180,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Get a single glossary term
+        # Get a single term
         api_response = api_instance.glossary_term_show(account_id, glossary_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -223,9 +223,9 @@ Name | Type | Description  | Notes
 # **glossary_term_update**
 > GlossaryTerm glossary_term_update(account_id, glossary_id, id, glossary_term_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Update a glossary term
+Update a term
 
-Update an existing glossary term.
+Update an existing term in a term base (previously: glossary).
 
 ### Example
 
@@ -251,7 +251,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Update a glossary term
+        # Update a term
         api_response = api_instance.glossary_term_update(account_id, glossary_id, id, glossary_term_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -295,9 +295,9 @@ Name | Type | Description  | Notes
 # **glossary_terms_list**
 > list[GlossaryTerm] glossary_terms_list(account_id, glossary_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
-List glossary terms
+List terms
 
-List all glossary terms the current user has access to.
+List all terms in term bases (previously: glossary) that the current user has access to.
 
 ### Example
 
@@ -323,7 +323,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
 
     try:
-        # List glossary terms
+        # List terms
         api_response = api_instance.glossary_terms_list(account_id, glossary_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
         pprint(api_response)
     except ApiException as e:

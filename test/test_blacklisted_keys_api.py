@@ -30,35 +30,35 @@ class TestBlacklistedKeysApi(unittest.TestCase):
     def test_blacklisted_key_create(self):
         """Test case for blacklisted_key_create
 
-        Create a blacklisted key  # noqa: E501
+        Create a blocked key  # noqa: E501
         """
         pass
 
     def test_blacklisted_key_delete(self):
         """Test case for blacklisted_key_delete
 
-        Delete a blacklisted key  # noqa: E501
+        Delete a blocked key  # noqa: E501
         """
         pass
 
     def test_blacklisted_key_show(self):
         """Test case for blacklisted_key_show
 
-        Get a single blacklisted key  # noqa: E501
+        Get a single blocked key  # noqa: E501
         """
         pass
 
     def test_blacklisted_key_update(self):
         """Test case for blacklisted_key_update
 
-        Update a blacklisted key  # noqa: E501
+        Update a blocked key  # noqa: E501
         """
         pass
 
     def test_blacklisted_keys_list(self):
         """Test case for blacklisted_keys_list
 
-        List blacklisted keys  # noqa: E501
+        List blocked keys  # noqa: E501
         """
         pass
 

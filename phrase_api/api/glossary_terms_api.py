@@ -36,9 +36,9 @@ class GlossaryTermsApi(object):
         self.api_client = api_client
 
     def glossary_term_create(self, account_id, glossary_id, glossary_term_create_parameters, **kwargs):  # noqa: E501
-        """Create a glossary term  # noqa: E501
+        """Create a term  # noqa: E501
 
-        Create a new glossary term.  # noqa: E501
+        Create a new term in a term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_create(account_id, glossary_id, glossary_term_create_parameters, async_req=True)
@@ -64,9 +64,9 @@ class GlossaryTermsApi(object):
         return self.glossary_term_create_with_http_info(account_id, glossary_id, glossary_term_create_parameters, **kwargs)  # noqa: E501
 
     def glossary_term_create_with_http_info(self, account_id, glossary_id, glossary_term_create_parameters, **kwargs):  # noqa: E501
-        """Create a glossary term  # noqa: E501
+        """Create a term  # noqa: E501
 
-        Create a new glossary term.  # noqa: E501
+        Create a new term in a term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_create_with_http_info(account_id, glossary_id, glossary_term_create_parameters, async_req=True)
@@ -177,9 +177,9 @@ class GlossaryTermsApi(object):
             collection_formats=collection_formats)
 
     def glossary_term_delete(self, account_id, glossary_id, id, **kwargs):  # noqa: E501
-        """Delete a glossary term  # noqa: E501
+        """Delete a term  # noqa: E501
 
-        Delete an existing glossary term.  # noqa: E501
+        Delete an existing term in a term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_delete(account_id, glossary_id, id, async_req=True)
@@ -205,9 +205,9 @@ class GlossaryTermsApi(object):
         return self.glossary_term_delete_with_http_info(account_id, glossary_id, id, **kwargs)  # noqa: E501
 
     def glossary_term_delete_with_http_info(self, account_id, glossary_id, id, **kwargs):  # noqa: E501
-        """Delete a glossary term  # noqa: E501
+        """Delete a term  # noqa: E501
 
-        Delete an existing glossary term.  # noqa: E501
+        Delete an existing term in a term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_delete_with_http_info(account_id, glossary_id, id, async_req=True)
@@ -310,9 +310,9 @@ class GlossaryTermsApi(object):
             collection_formats=collection_formats)
 
     def glossary_term_show(self, account_id, glossary_id, id, **kwargs):  # noqa: E501
-        """Get a single glossary term  # noqa: E501
+        """Get a single term  # noqa: E501
 
-        Get details on a single glossary term.  # noqa: E501
+        Get details for a single term in the term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_show(account_id, glossary_id, id, async_req=True)
@@ -338,9 +338,9 @@ class GlossaryTermsApi(object):
         return self.glossary_term_show_with_http_info(account_id, glossary_id, id, **kwargs)  # noqa: E501
 
     def glossary_term_show_with_http_info(self, account_id, glossary_id, id, **kwargs):  # noqa: E501
-        """Get a single glossary term  # noqa: E501
+        """Get a single term  # noqa: E501
 
-        Get details on a single glossary term.  # noqa: E501
+        Get details for a single term in the term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_show_with_http_info(account_id, glossary_id, id, async_req=True)
@@ -447,9 +447,9 @@ class GlossaryTermsApi(object):
             collection_formats=collection_formats)
 
     def glossary_term_update(self, account_id, glossary_id, id, glossary_term_update_parameters, **kwargs):  # noqa: E501
-        """Update a glossary term  # noqa: E501
+        """Update a term  # noqa: E501
 
-        Update an existing glossary term.  # noqa: E501
+        Update an existing term in a term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_update(account_id, glossary_id, id, glossary_term_update_parameters, async_req=True)
@@ -476,9 +476,9 @@ class GlossaryTermsApi(object):
         return self.glossary_term_update_with_http_info(account_id, glossary_id, id, glossary_term_update_parameters, **kwargs)  # noqa: E501
 
     def glossary_term_update_with_http_info(self, account_id, glossary_id, id, glossary_term_update_parameters, **kwargs):  # noqa: E501
-        """Update a glossary term  # noqa: E501
+        """Update a term  # noqa: E501
 
-        Update an existing glossary term.  # noqa: E501
+        Update an existing term in a term base (previously: glossary).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_term_update_with_http_info(account_id, glossary_id, id, glossary_term_update_parameters, async_req=True)
@@ -597,9 +597,9 @@ class GlossaryTermsApi(object):
             collection_formats=collection_formats)
 
     def glossary_terms_list(self, account_id, glossary_id, **kwargs):  # noqa: E501
-        """List glossary terms  # noqa: E501
+        """List terms  # noqa: E501
 
-        List all glossary terms the current user has access to.  # noqa: E501
+        List all terms in term bases (previously: glossary) that the current user has access to.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_terms_list(account_id, glossary_id, async_req=True)
@@ -626,9 +626,9 @@ class GlossaryTermsApi(object):
         return self.glossary_terms_list_with_http_info(account_id, glossary_id, **kwargs)  # noqa: E501
 
     def glossary_terms_list_with_http_info(self, account_id, glossary_id, **kwargs):  # noqa: E501
-        """List glossary terms  # noqa: E501
+        """List terms  # noqa: E501
 
-        List all glossary terms the current user has access to.  # noqa: E501
+        List all terms in term bases (previously: glossary) that the current user has access to.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.glossary_terms_list_with_http_info(account_id, glossary_id, async_req=True)

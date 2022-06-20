@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 List all versions
 
-List all versions for the given translation.
+List all changes done to a given translation.
 
 ### Example
 

@@ -36,9 +36,9 @@ class BlacklistedKeysApi(object):
         self.api_client = api_client
 
     def blacklisted_key_create(self, project_id, blacklisted_key_create_parameters, **kwargs):  # noqa: E501
-        """Create a blacklisted key  # noqa: E501
+        """Create a blocked key  # noqa: E501
 
-        Create a new rule for blacklisting keys.  # noqa: E501
+        Create a new rule for blocking keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_create(project_id, blacklisted_key_create_parameters, async_req=True)
@@ -63,9 +63,9 @@ class BlacklistedKeysApi(object):
         return self.blacklisted_key_create_with_http_info(project_id, blacklisted_key_create_parameters, **kwargs)  # noqa: E501
 
     def blacklisted_key_create_with_http_info(self, project_id, blacklisted_key_create_parameters, **kwargs):  # noqa: E501
-        """Create a blacklisted key  # noqa: E501
+        """Create a blocked key  # noqa: E501
 
-        Create a new rule for blacklisting keys.  # noqa: E501
+        Create a new rule for blocking keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_create_with_http_info(project_id, blacklisted_key_create_parameters, async_req=True)
@@ -168,9 +168,9 @@ class BlacklistedKeysApi(object):
             collection_formats=collection_formats)
 
     def blacklisted_key_delete(self, project_id, id, **kwargs):  # noqa: E501
-        """Delete a blacklisted key  # noqa: E501
+        """Delete a blocked key  # noqa: E501
 
-        Delete an existing rule for blacklisting keys.  # noqa: E501
+        Delete an existing rule for blocking keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_delete(project_id, id, async_req=True)
@@ -195,9 +195,9 @@ class BlacklistedKeysApi(object):
         return self.blacklisted_key_delete_with_http_info(project_id, id, **kwargs)  # noqa: E501
 
     def blacklisted_key_delete_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
-        """Delete a blacklisted key  # noqa: E501
+        """Delete a blocked key  # noqa: E501
 
-        Delete an existing rule for blacklisting keys.  # noqa: E501
+        Delete an existing rule for blocking keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_delete_with_http_info(project_id, id, async_req=True)
@@ -292,9 +292,9 @@ class BlacklistedKeysApi(object):
             collection_formats=collection_formats)
 
     def blacklisted_key_show(self, project_id, id, **kwargs):  # noqa: E501
-        """Get a single blacklisted key  # noqa: E501
+        """Get a single blocked key  # noqa: E501
 
-        Get details on a single rule for blacklisting keys for a given project.  # noqa: E501
+        Get details on a single rule for blocking keys for a given project.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_show(project_id, id, async_req=True)
@@ -319,9 +319,9 @@ class BlacklistedKeysApi(object):
         return self.blacklisted_key_show_with_http_info(project_id, id, **kwargs)  # noqa: E501
 
     def blacklisted_key_show_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
-        """Get a single blacklisted key  # noqa: E501
+        """Get a single blocked key  # noqa: E501
 
-        Get details on a single rule for blacklisting keys for a given project.  # noqa: E501
+        Get details on a single rule for blocking keys for a given project.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_show_with_http_info(project_id, id, async_req=True)
@@ -420,9 +420,9 @@ class BlacklistedKeysApi(object):
             collection_formats=collection_formats)
 
     def blacklisted_key_update(self, project_id, id, blacklisted_key_update_parameters, **kwargs):  # noqa: E501
-        """Update a blacklisted key  # noqa: E501
+        """Update a blocked key  # noqa: E501
 
-        Update an existing rule for blacklisting keys.  # noqa: E501
+        Update an existing rule for blocking keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_update(project_id, id, blacklisted_key_update_parameters, async_req=True)
@@ -448,9 +448,9 @@ class BlacklistedKeysApi(object):
         return self.blacklisted_key_update_with_http_info(project_id, id, blacklisted_key_update_parameters, **kwargs)  # noqa: E501
 
     def blacklisted_key_update_with_http_info(self, project_id, id, blacklisted_key_update_parameters, **kwargs):  # noqa: E501
-        """Update a blacklisted key  # noqa: E501
+        """Update a blocked key  # noqa: E501
 
-        Update an existing rule for blacklisting keys.  # noqa: E501
+        Update an existing rule for blocking keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_key_update_with_http_info(project_id, id, blacklisted_key_update_parameters, async_req=True)
@@ -561,9 +561,9 @@ class BlacklistedKeysApi(object):
             collection_formats=collection_formats)
 
     def blacklisted_keys_list(self, project_id, **kwargs):  # noqa: E501
-        """List blacklisted keys  # noqa: E501
+        """List blocked keys  # noqa: E501
 
-        List all rules for blacklisting keys for the given project.  # noqa: E501
+        List all rules for blocking keys for the given project.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_keys_list(project_id, async_req=True)
@@ -590,9 +590,9 @@ class BlacklistedKeysApi(object):
         return self.blacklisted_keys_list_with_http_info(project_id, **kwargs)  # noqa: E501
 
     def blacklisted_keys_list_with_http_info(self, project_id, **kwargs):  # noqa: E501
-        """List blacklisted keys  # noqa: E501
+        """List blocked keys  # noqa: E501
 
-        List all rules for blacklisting keys for the given project.  # noqa: E501
+        List all rules for blocking keys for the given project.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.blacklisted_keys_list_with_http_info(project_id, async_req=True)

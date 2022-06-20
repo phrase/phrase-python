@@ -55,7 +55,7 @@ class BlacklistedKeyUpdateParameters(object):
     def name(self):
         """Gets the name of this BlacklistedKeyUpdateParameters.  # noqa: E501
 
-        Blacklisted key name  # noqa: E501
+        Blocked key name  # noqa: E501
 
         :return: The name of this BlacklistedKeyUpdateParameters.  # noqa: E501
         :rtype: str
@@ -66,7 +66,7 @@ class BlacklistedKeyUpdateParameters(object):
     def name(self, name):
         """Sets the name of this BlacklistedKeyUpdateParameters.
 
-        Blacklisted key name  # noqa: E501
+        Blocked key name  # noqa: E501
 
         :param name: The name of this BlacklistedKeyUpdateParameters.  # noqa: E501
         :type: str

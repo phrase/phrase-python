@@ -30,21 +30,21 @@ class TestGlossaryTermTranslationsApi(unittest.TestCase):
     def test_glossary_term_translation_create(self):
         """Test case for glossary_term_translation_create
 
-        Create a glossary term translation  # noqa: E501
+        Create a translation for a term  # noqa: E501
         """
         pass
 
     def test_glossary_term_translation_delete(self):
         """Test case for glossary_term_translation_delete
 
-        Delete a glossary term translation  # noqa: E501
+        Delete a translation for a term  # noqa: E501
         """
         pass
 
     def test_glossary_term_translation_update(self):
         """Test case for glossary_term_translation_update
 
-        Update a glossary term translation  # noqa: E501
+        Update a translation for a term  # noqa: E501
         """
         pass
 

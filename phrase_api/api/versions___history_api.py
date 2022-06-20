@@ -180,7 +180,7 @@ class VersionsHistoryApi(object):
     def versions_list(self, project_id, translation_id, **kwargs):  # noqa: E501
         """List all versions  # noqa: E501
 
-        List all versions for the given translation.  # noqa: E501
+        List all changes done to a given translation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.versions_list(project_id, translation_id, async_req=True)
@@ -210,7 +210,7 @@ class VersionsHistoryApi(object):
     def versions_list_with_http_info(self, project_id, translation_id, **kwargs):  # noqa: E501
         """List all versions  # noqa: E501
 
-        List all versions for the given translation.  # noqa: E501
+        List all changes done to a given translation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.versions_list_with_http_info(project_id, translation_id, async_req=True)

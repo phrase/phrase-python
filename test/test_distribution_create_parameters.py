@@ -40,6 +40,7 @@ class TestDistributionCreateParameters(unittest.TestCase):
                 platforms = ["android","ios"], 
                 locale_ids = ["abcd1234cdef1234abcd1234cdef1234","fff565db236400772368235db2c6117e"], 
                 format_options = {xml:{enclose_in_cdata:'1'}}, 
+                fallback_locales_enabled = True, 
                 fallback_to_non_regional_locale = True, 
                 fallback_to_default_locale = True, 
                 use_last_reviewed_version = True

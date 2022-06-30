@@ -39,6 +39,7 @@ class LocaleCreateParameters(object):
         'main': 'bool',
         'rtl': 'bool',
         'source_locale_id': 'str',
+        'fallback_locale_id': 'str',
         'unverify_new_translations': 'bool',
         'unverify_updated_translations': 'bool',
         'autotranslate': 'bool'
@@ -52,12 +53,13 @@ class LocaleCreateParameters(object):
         'main': 'main',
         'rtl': 'rtl',
         'source_locale_id': 'source_locale_id',
+        'fallback_locale_id': 'fallback_locale_id',
         'unverify_new_translations': 'unverify_new_translations',
         'unverify_updated_translations': 'unverify_updated_translations',
         'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, code=None, default=None, main=None, rtl=None, source_locale_id=None, unverify_new_translations=None, unverify_updated_translations=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, code=None, default=None, main=None, rtl=None, source_locale_id=None, fallback_locale_id=None, unverify_new_translations=None, unverify_updated_translations=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """LocaleCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class LocaleCreateParameters(object):
         self._main = None
         self._rtl = None
         self._source_locale_id = None
+        self._fallback_locale_id = None
         self._unverify_new_translations = None
         self._unverify_updated_translations = None
         self._autotranslate = None
@@ -89,6 +92,8 @@ class LocaleCreateParameters(object):
             self.rtl = rtl
         if source_locale_id is not None:
             self.source_locale_id = source_locale_id
+        if fallback_locale_id is not None:
+            self.fallback_locale_id = fallback_locale_id
         if unverify_new_translations is not None:
             self.unverify_new_translations = unverify_new_translations
         if unverify_updated_translations is not None:
@@ -256,6 +261,29 @@ class LocaleCreateParameters(object):
         """
 
         self._source_locale_id = source_locale_id
+
+    @property
+    def fallback_locale_id(self):
+        """Gets the fallback_locale_id of this LocaleCreateParameters.  # noqa: E501
+
+        Fallback locale for empty translations. Can be a locale name or id.  # noqa: E501
+
+        :return: The fallback_locale_id of this LocaleCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._fallback_locale_id
+
+    @fallback_locale_id.setter
+    def fallback_locale_id(self, fallback_locale_id):
+        """Sets the fallback_locale_id of this LocaleCreateParameters.
+
+        Fallback locale for empty translations. Can be a locale name or id.  # noqa: E501
+
+        :param fallback_locale_id: The fallback_locale_id of this LocaleCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._fallback_locale_id = fallback_locale_id
 
     @property
     def unverify_new_translations(self):

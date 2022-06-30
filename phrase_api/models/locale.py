@@ -40,6 +40,7 @@ class Locale(object):
         'rtl': 'bool',
         'plural_forms': 'list[str]',
         'source_locale': 'LocalePreview',
+        'fallback_locale': 'LocalePreview',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -53,11 +54,12 @@ class Locale(object):
         'rtl': 'rtl',
         'plural_forms': 'plural_forms',
         'source_locale': 'source_locale',
+        'fallback_locale': 'fallback_locale',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, source_locale=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, source_locale=None, fallback_locale=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Locale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -71,6 +73,7 @@ class Locale(object):
         self._rtl = None
         self._plural_forms = None
         self._source_locale = None
+        self._fallback_locale = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -91,6 +94,8 @@ class Locale(object):
             self.plural_forms = plural_forms
         if source_locale is not None:
             self.source_locale = source_locale
+        if fallback_locale is not None:
+            self.fallback_locale = fallback_locale
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -263,6 +268,27 @@ class Locale(object):
         """
 
         self._source_locale = source_locale
+
+    @property
+    def fallback_locale(self):
+        """Gets the fallback_locale of this Locale.  # noqa: E501
+
+
+        :return: The fallback_locale of this Locale.  # noqa: E501
+        :rtype: LocalePreview
+        """
+        return self._fallback_locale
+
+    @fallback_locale.setter
+    def fallback_locale(self, fallback_locale):
+        """Sets the fallback_locale of this Locale.
+
+
+        :param fallback_locale: The fallback_locale of this Locale.  # noqa: E501
+        :type: LocalePreview
+        """
+
+        self._fallback_locale = fallback_locale
 
     @property
     def created_at(self):

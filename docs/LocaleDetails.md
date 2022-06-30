@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **rtl** | **bool** |  | [optional] 
 **plural_forms** | **list[str]** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
+**fallback_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **statistics** | [**LocaleStatistics**](LocaleStatistics.md) |  | [optional] 

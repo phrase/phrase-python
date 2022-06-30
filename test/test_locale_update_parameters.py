@@ -42,6 +42,7 @@ class TestLocaleUpdateParameters(unittest.TestCase):
                 main = True, 
                 rtl = True, 
                 source_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
+                fallback_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 unverify_new_translations = True, 
                 unverify_updated_translations = True, 
                 autotranslate = True

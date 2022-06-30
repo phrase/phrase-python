@@ -37,6 +37,7 @@ class DistributionCreateParameters(object):
         'platforms': 'list[str]',
         'locale_ids': 'list[str]',
         'format_options': 'dict(str, str)',
+        'fallback_locales_enabled': 'bool',
         'fallback_to_non_regional_locale': 'bool',
         'fallback_to_default_locale': 'bool',
         'use_last_reviewed_version': 'bool'
@@ -48,12 +49,13 @@ class DistributionCreateParameters(object):
         'platforms': 'platforms',
         'locale_ids': 'locale_ids',
         'format_options': 'format_options',
+        'fallback_locales_enabled': 'fallback_locales_enabled',
         'fallback_to_non_regional_locale': 'fallback_to_non_regional_locale',
         'fallback_to_default_locale': 'fallback_to_default_locale',
         'use_last_reviewed_version': 'use_last_reviewed_version'
     }
 
-    def __init__(self, name=None, project_id=None, platforms=None, locale_ids=None, format_options=None, fallback_to_non_regional_locale=None, fallback_to_default_locale=None, use_last_reviewed_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, project_id=None, platforms=None, locale_ids=None, format_options=None, fallback_locales_enabled=None, fallback_to_non_regional_locale=None, fallback_to_default_locale=None, use_last_reviewed_version=None, local_vars_configuration=None):  # noqa: E501
         """DistributionCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +66,7 @@ class DistributionCreateParameters(object):
         self._platforms = None
         self._locale_ids = None
         self._format_options = None
+        self._fallback_locales_enabled = None
         self._fallback_to_non_regional_locale = None
         self._fallback_to_default_locale = None
         self._use_last_reviewed_version = None
@@ -79,6 +82,8 @@ class DistributionCreateParameters(object):
             self.locale_ids = locale_ids
         if format_options is not None:
             self.format_options = format_options
+        if fallback_locales_enabled is not None:
+            self.fallback_locales_enabled = fallback_locales_enabled
         if fallback_to_non_regional_locale is not None:
             self.fallback_to_non_regional_locale = fallback_to_non_regional_locale
         if fallback_to_default_locale is not None:
@@ -200,6 +205,29 @@ class DistributionCreateParameters(object):
         """
 
         self._format_options = format_options
+
+    @property
+    def fallback_locales_enabled(self):
+        """Gets the fallback_locales_enabled of this DistributionCreateParameters.  # noqa: E501
+
+        Use fallback locale if there is no translation in the current locale.  # noqa: E501
+
+        :return: The fallback_locales_enabled of this DistributionCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._fallback_locales_enabled
+
+    @fallback_locales_enabled.setter
+    def fallback_locales_enabled(self, fallback_locales_enabled):
+        """Sets the fallback_locales_enabled of this DistributionCreateParameters.
+
+        Use fallback locale if there is no translation in the current locale.  # noqa: E501
+
+        :param fallback_locales_enabled: The fallback_locales_enabled of this DistributionCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._fallback_locales_enabled = fallback_locales_enabled
 
     @property
     def fallback_to_non_regional_locale(self):

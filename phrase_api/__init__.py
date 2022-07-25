@@ -57,6 +57,7 @@ from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi
 from phrase_api.api.variables_api import VariablesApi
 from phrase_api.api.versions___history_api import VersionsHistoryApi
+from phrase_api.api.webhook_deliveries_api import WebhookDeliveriesApi
 from phrase_api.api.webhooks_api import WebhooksApi
 
 # import ApiClient
@@ -259,5 +260,6 @@ from phrase_api.models.variable_create_parameters import VariableCreateParameter
 from phrase_api.models.variable_update_parameters import VariableUpdateParameters
 from phrase_api.models.webhook import Webhook
 from phrase_api.models.webhook_create_parameters import WebhookCreateParameters
+from phrase_api.models.webhook_delivery import WebhookDelivery
 from phrase_api.models.webhook_update_parameters import WebhookUpdateParameters
 

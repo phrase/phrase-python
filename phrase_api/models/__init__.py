@@ -204,4 +204,5 @@ from phrase_api.models.variable_create_parameters import VariableCreateParameter
 from phrase_api.models.variable_update_parameters import VariableUpdateParameters
 from phrase_api.models.webhook import Webhook
 from phrase_api.models.webhook_create_parameters import WebhookCreateParameters
+from phrase_api.models.webhook_delivery import WebhookDelivery
 from phrase_api.models.webhook_update_parameters import WebhookUpdateParameters

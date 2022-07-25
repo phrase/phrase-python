@@ -44,4 +44,5 @@ from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi
 from phrase_api.api.variables_api import VariablesApi
 from phrase_api.api.versions___history_api import VersionsHistoryApi
+from phrase_api.api.webhook_deliveries_api import WebhookDeliveriesApi
 from phrase_api.api.webhooks_api import WebhooksApi

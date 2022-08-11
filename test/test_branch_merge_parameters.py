@@ -35,7 +35,7 @@ class TestBranchMergeParameters(unittest.TestCase):
         # model = phrase_api.models.branch_merge_parameters.BranchMergeParameters()  # noqa: E501
         if include_optional :
             return BranchMergeParameters(
-                strategy = 'use_master'
+                strategy = 'use_main'
             )
         else :
             return BranchMergeParameters(

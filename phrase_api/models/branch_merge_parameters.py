@@ -55,7 +55,7 @@ class BranchMergeParameters(object):
     def strategy(self):
         """Gets the strategy of this BranchMergeParameters.  # noqa: E501
 
-        strategy used for merge blocking, use_master or use_branch  # noqa: E501
+        strategy used for merge blocking, use_main or use_branch  # noqa: E501
 
         :return: The strategy of this BranchMergeParameters.  # noqa: E501
         :rtype: str
@@ -66,7 +66,7 @@ class BranchMergeParameters(object):
     def strategy(self, strategy):
         """Sets the strategy of this BranchMergeParameters.
 
-        strategy used for merge blocking, use_master or use_branch  # noqa: E501
+        strategy used for merge blocking, use_main or use_branch  # noqa: E501
 
         :param strategy: The strategy of this BranchMergeParameters.  # noqa: E501
         :type: str

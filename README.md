@@ -86,6 +86,28 @@ with phrase_api.ApiClient(configuration) as api_client:
     
 ```
 
+## Datacenters
+
+The API is only accessible via HTTPS and the current version is <code>v2</code>, which results in a base URL like: <code>https://api.phrase.com/v2</code> depending on the datacenter.
+
+### EU Datacenter
+```
+https://api.phrase.com/v2
+```
+
+This is the default datacenter.
+
+### US Datacenter
+```
+https://api.us.app.phrase.com/v2/
+```
+
+### Specifying US Datacenter
+You can use the US datacenter by setting the following:
+```
+configuration.host = "https://api.us.app.phrase.com/v2/"
+```
+
 ## Documentation For Authorization
 
 

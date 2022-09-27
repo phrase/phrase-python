@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -211,7 +211,7 @@ class ProjectUpdateParameters(object):
     def main_format(self):
         """Gets the main_format of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) Main file format specified by its API Extension name. Used for locale downloads if no format is specified. For API Extension names of available file formats see <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">Format Guide</a> or our <a href=\"#formats\">Formats API Endpoint</a>.  # noqa: E501
+        (Optional) Main file format specified by its API Extension name. Used for locale downloads if no format is specified. For API Extension names of available file formats see <a href=\"https://support.phrase.com/hc/en-us/articles/5784070560412\">Format Guide</a> or our <a href=\"#formats\">Formats API Endpoint</a>.  # noqa: E501
 
         :return: The main_format of this ProjectUpdateParameters.  # noqa: E501
         :rtype: str
@@ -222,7 +222,7 @@ class ProjectUpdateParameters(object):
     def main_format(self, main_format):
         """Sets the main_format of this ProjectUpdateParameters.
 
-        (Optional) Main file format specified by its API Extension name. Used for locale downloads if no format is specified. For API Extension names of available file formats see <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">Format Guide</a> or our <a href=\"#formats\">Formats API Endpoint</a>.  # noqa: E501
+        (Optional) Main file format specified by its API Extension name. Used for locale downloads if no format is specified. For API Extension names of available file formats see <a href=\"https://support.phrase.com/hc/en-us/articles/5784070560412\">Format Guide</a> or our <a href=\"#formats\">Formats API Endpoint</a>.  # noqa: E501
 
         :param main_format: The main_format of this ProjectUpdateParameters.  # noqa: E501
         :type: str
@@ -303,7 +303,7 @@ class ProjectUpdateParameters(object):
     def workflow(self):
         """Gets the workflow of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) Review Workflow. \"simple\" / \"review\". <a href=\"https://help.phrase.com/help/advanced-review-workflow\">Read more</a>  # noqa: E501
+        (Optional) Review Workflow. \"simple\" / \"review\". <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\">Read more</a>  # noqa: E501
 
         :return: The workflow of this ProjectUpdateParameters.  # noqa: E501
         :rtype: str
@@ -314,7 +314,7 @@ class ProjectUpdateParameters(object):
     def workflow(self, workflow):
         """Sets the workflow of this ProjectUpdateParameters.
 
-        (Optional) Review Workflow. \"simple\" / \"review\". <a href=\"https://help.phrase.com/help/advanced-review-workflow\">Read more</a>  # noqa: E501
+        (Optional) Review Workflow. \"simple\" / \"review\". <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\">Read more</a>  # noqa: E501
 
         :param workflow: The workflow of this ProjectUpdateParameters.  # noqa: E501
         :type: str
@@ -418,7 +418,7 @@ class ProjectUpdateParameters(object):
     def enable_icu_message_format(self):
         """Gets the enable_icu_message_format of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) We can validate and highlight your ICU messages. <a href=\"https://help.phrase.com/help/icu-message-format\">Read more</a>  # noqa: E501
+        (Optional) We can validate and highlight your ICU messages. <a href=\"https://support.phrase.com/hc/en-us/articles/5822319545116\">Read more</a>  # noqa: E501
 
         :return: The enable_icu_message_format of this ProjectUpdateParameters.  # noqa: E501
         :rtype: bool
@@ -429,7 +429,7 @@ class ProjectUpdateParameters(object):
     def enable_icu_message_format(self, enable_icu_message_format):
         """Sets the enable_icu_message_format of this ProjectUpdateParameters.
 
-        (Optional) We can validate and highlight your ICU messages. <a href=\"https://help.phrase.com/help/icu-message-format\">Read more</a>  # noqa: E501
+        (Optional) We can validate and highlight your ICU messages. <a href=\"https://support.phrase.com/hc/en-us/articles/5822319545116\">Read more</a>  # noqa: E501
 
         :param enable_icu_message_format: The enable_icu_message_format of this ProjectUpdateParameters.  # noqa: E501
         :type: bool
@@ -464,7 +464,7 @@ class ProjectUpdateParameters(object):
     def autotranslate_enabled(self):
         """Gets the autotranslate_enabled of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) Autopilot, requires machine_translation_enabled. <a href=\"https://help.phrase.com/help/autopilot\">Read more</a>  # noqa: E501
+        (Optional) Autopilot, requires machine_translation_enabled. <a href=\"https://support.phrase.com/hc/en-us/articles/5822187934364\">Read more</a>  # noqa: E501
 
         :return: The autotranslate_enabled of this ProjectUpdateParameters.  # noqa: E501
         :rtype: bool
@@ -475,7 +475,7 @@ class ProjectUpdateParameters(object):
     def autotranslate_enabled(self, autotranslate_enabled):
         """Sets the autotranslate_enabled of this ProjectUpdateParameters.
 
-        (Optional) Autopilot, requires machine_translation_enabled. <a href=\"https://help.phrase.com/help/autopilot\">Read more</a>  # noqa: E501
+        (Optional) Autopilot, requires machine_translation_enabled. <a href=\"https://support.phrase.com/hc/en-us/articles/5822187934364\">Read more</a>  # noqa: E501
 
         :param autotranslate_enabled: The autotranslate_enabled of this ProjectUpdateParameters.  # noqa: E501
         :type: bool

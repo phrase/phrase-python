@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -197,7 +197,7 @@ class LocaleUpdateParameters(object):
     def main(self):
         """Gets the main of this LocaleUpdateParameters.  # noqa: E501
 
-        Indicates whether locale is a main locale. Main locales are part of the <a href=\"https://help.phrase.com/help/verification-and-proofreading\" target=\"_blank\">Verification System</a> feature.  # noqa: E501
+        Indicates whether locale is a main locale. Main locales are part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Verification System</a> feature.  # noqa: E501
 
         :return: The main of this LocaleUpdateParameters.  # noqa: E501
         :rtype: bool
@@ -208,7 +208,7 @@ class LocaleUpdateParameters(object):
     def main(self, main):
         """Sets the main of this LocaleUpdateParameters.
 
-        Indicates whether locale is a main locale. Main locales are part of the <a href=\"https://help.phrase.com/help/verification-and-proofreading\" target=\"_blank\">Verification System</a> feature.  # noqa: E501
+        Indicates whether locale is a main locale. Main locales are part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Verification System</a> feature.  # noqa: E501
 
         :param main: The main of this LocaleUpdateParameters.  # noqa: E501
         :type: bool
@@ -289,7 +289,7 @@ class LocaleUpdateParameters(object):
     def unverify_new_translations(self):
         """Gets the unverify_new_translations of this LocaleUpdateParameters.  # noqa: E501
 
-        Indicates that new translations for this locale should be marked as unverified. Part of the <a href=\"https://help.phrase.com/help/verification-and-proofreading\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
+        Indicates that new translations for this locale should be marked as unverified. Part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
 
         :return: The unverify_new_translations of this LocaleUpdateParameters.  # noqa: E501
         :rtype: bool
@@ -300,7 +300,7 @@ class LocaleUpdateParameters(object):
     def unverify_new_translations(self, unverify_new_translations):
         """Sets the unverify_new_translations of this LocaleUpdateParameters.
 
-        Indicates that new translations for this locale should be marked as unverified. Part of the <a href=\"https://help.phrase.com/help/verification-and-proofreading\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
+        Indicates that new translations for this locale should be marked as unverified. Part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
 
         :param unverify_new_translations: The unverify_new_translations of this LocaleUpdateParameters.  # noqa: E501
         :type: bool
@@ -312,7 +312,7 @@ class LocaleUpdateParameters(object):
     def unverify_updated_translations(self):
         """Gets the unverify_updated_translations of this LocaleUpdateParameters.  # noqa: E501
 
-        Indicates that updated translations for this locale should be marked as unverified. Part of the <a href=\"https://help.phrase.com/help/verification-and-proofreading\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
+        Indicates that updated translations for this locale should be marked as unverified. Part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
 
         :return: The unverify_updated_translations of this LocaleUpdateParameters.  # noqa: E501
         :rtype: bool
@@ -323,7 +323,7 @@ class LocaleUpdateParameters(object):
     def unverify_updated_translations(self, unverify_updated_translations):
         """Sets the unverify_updated_translations of this LocaleUpdateParameters.
 
-        Indicates that updated translations for this locale should be marked as unverified. Part of the <a href=\"https://help.phrase.com/help/verification-and-proofreading\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
+        Indicates that updated translations for this locale should be marked as unverified. Part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
 
         :param unverify_updated_translations: The unverify_updated_translations of this LocaleUpdateParameters.  # noqa: E501
         :type: bool

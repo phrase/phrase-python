@@ -4,16 +4,16 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**github_sync_export**](GitHubSyncApi.md#github_sync_export) | **POST** /github_syncs/export | Export from Phrase to GitHub
-[**github_sync_import**](GitHubSyncApi.md#github_sync_import) | **POST** /github_syncs/import | Import to Phrase from GitHub
+[**github_sync_export**](GitHubSyncApi.md#github_sync_export) | **POST** /github_syncs/export | Export from Phrase Strings to GitHub
+[**github_sync_import**](GitHubSyncApi.md#github_sync_import) | **POST** /github_syncs/import | Import to Phrase Strings from GitHub
 
 
 # **github_sync_export**
 > github_sync_export(github_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Export from Phrase to GitHub
+Export from Phrase Strings to GitHub
 
-Export translations from Phrase to GitHub according to the .phraseapp.yml file within the GitHub repository.
+Export translations from Phrase Strings to GitHub according to the .phraseapp.yml file within the GitHub repository.
 
 ### Example
 
@@ -36,7 +36,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Export from Phrase to GitHub
+        # Export from Phrase Strings to GitHub
         api_instance.github_sync_export(github_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling GitHubSyncApi->github_sync_export: %s\n" % e)
@@ -77,9 +77,9 @@ void (empty response body)
 # **github_sync_import**
 > github_sync_import(github_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Import to Phrase from GitHub
+Import to Phrase Strings from GitHub
 
-Import files to Phrase from your connected GitHub repository.
+Import files to Phrase Strings from your connected GitHub repository.
 
 ### Example
 
@@ -102,7 +102,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Import to Phrase from GitHub
+        # Import to Phrase Strings from GitHub
         api_instance.github_sync_import(github_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling GitHubSyncApi->github_sync_import: %s\n" % e)

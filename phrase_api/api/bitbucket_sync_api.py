@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -36,9 +36,9 @@ class BitbucketSyncApi(object):
         self.api_client = api_client
 
     def bitbucket_sync_export(self, id, bitbucket_sync_export_parameters, **kwargs):  # noqa: E501
-        """Export from Phrase to Bitbucket  # noqa: E501
+        """Export from Phrase Strings to Bitbucket  # noqa: E501
 
-        Export translations from Phrase to Bitbucket according to the .phraseapp.yml file within the Bitbucket Repository.  # noqa: E501
+        Export translations from Phrase Strings to Bitbucket according to the .phraseapp.yml file within the Bitbucket Repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.bitbucket_sync_export(id, bitbucket_sync_export_parameters, async_req=True)
@@ -63,9 +63,9 @@ class BitbucketSyncApi(object):
         return self.bitbucket_sync_export_with_http_info(id, bitbucket_sync_export_parameters, **kwargs)  # noqa: E501
 
     def bitbucket_sync_export_with_http_info(self, id, bitbucket_sync_export_parameters, **kwargs):  # noqa: E501
-        """Export from Phrase to Bitbucket  # noqa: E501
+        """Export from Phrase Strings to Bitbucket  # noqa: E501
 
-        Export translations from Phrase to Bitbucket according to the .phraseapp.yml file within the Bitbucket Repository.  # noqa: E501
+        Export translations from Phrase Strings to Bitbucket according to the .phraseapp.yml file within the Bitbucket Repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.bitbucket_sync_export_with_http_info(id, bitbucket_sync_export_parameters, async_req=True)
@@ -168,9 +168,9 @@ class BitbucketSyncApi(object):
             collection_formats=collection_formats)
 
     def bitbucket_sync_import(self, id, bitbucket_sync_import_parameters, **kwargs):  # noqa: E501
-        """Import to Phrase from Bitbucket  # noqa: E501
+        """Import to Phrase Strings from Bitbucket  # noqa: E501
 
-        Import translations from Bitbucket to Phrase according to the .phraseapp.yml file within the Bitbucket repository.  # noqa: E501
+        Import translations from Bitbucket to Phrase Strings according to the .phraseapp.yml file within the Bitbucket repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.bitbucket_sync_import(id, bitbucket_sync_import_parameters, async_req=True)
@@ -195,9 +195,9 @@ class BitbucketSyncApi(object):
         return self.bitbucket_sync_import_with_http_info(id, bitbucket_sync_import_parameters, **kwargs)  # noqa: E501
 
     def bitbucket_sync_import_with_http_info(self, id, bitbucket_sync_import_parameters, **kwargs):  # noqa: E501
-        """Import to Phrase from Bitbucket  # noqa: E501
+        """Import to Phrase Strings from Bitbucket  # noqa: E501
 
-        Import translations from Bitbucket to Phrase according to the .phraseapp.yml file within the Bitbucket repository.  # noqa: E501
+        Import translations from Bitbucket to Phrase Strings according to the .phraseapp.yml file within the Bitbucket repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.bitbucket_sync_import_with_http_info(id, bitbucket_sync_import_parameters, async_req=True)
@@ -298,7 +298,7 @@ class BitbucketSyncApi(object):
     def bitbucket_syncs_list(self, **kwargs):  # noqa: E501
         """List Bitbucket syncs  # noqa: E501
 
-        List all Bitbucket repositories for which synchronisation with Phrase is activated.  # noqa: E501
+        List all Bitbucket repositories for which synchronisation with Phrase Strings is activated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.bitbucket_syncs_list(async_req=True)
@@ -324,7 +324,7 @@ class BitbucketSyncApi(object):
     def bitbucket_syncs_list_with_http_info(self, **kwargs):  # noqa: E501
         """List Bitbucket syncs  # noqa: E501
 
-        List all Bitbucket repositories for which synchronisation with Phrase is activated.  # noqa: E501
+        List all Bitbucket repositories for which synchronisation with Phrase Strings is activated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.bitbucket_syncs_list_with_http_info(async_req=True)

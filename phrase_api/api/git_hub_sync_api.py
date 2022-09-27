@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -36,9 +36,9 @@ class GitHubSyncApi(object):
         self.api_client = api_client
 
     def github_sync_export(self, github_sync_export_parameters, **kwargs):  # noqa: E501
-        """Export from Phrase to GitHub  # noqa: E501
+        """Export from Phrase Strings to GitHub  # noqa: E501
 
-        Export translations from Phrase to GitHub according to the .phraseapp.yml file within the GitHub repository.  # noqa: E501
+        Export translations from Phrase Strings to GitHub according to the .phraseapp.yml file within the GitHub repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.github_sync_export(github_sync_export_parameters, async_req=True)
@@ -62,9 +62,9 @@ class GitHubSyncApi(object):
         return self.github_sync_export_with_http_info(github_sync_export_parameters, **kwargs)  # noqa: E501
 
     def github_sync_export_with_http_info(self, github_sync_export_parameters, **kwargs):  # noqa: E501
-        """Export from Phrase to GitHub  # noqa: E501
+        """Export from Phrase Strings to GitHub  # noqa: E501
 
-        Export translations from Phrase to GitHub according to the .phraseapp.yml file within the GitHub repository.  # noqa: E501
+        Export translations from Phrase Strings to GitHub according to the .phraseapp.yml file within the GitHub repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.github_sync_export_with_http_info(github_sync_export_parameters, async_req=True)
@@ -159,9 +159,9 @@ class GitHubSyncApi(object):
             collection_formats=collection_formats)
 
     def github_sync_import(self, github_sync_import_parameters, **kwargs):  # noqa: E501
-        """Import to Phrase from GitHub  # noqa: E501
+        """Import to Phrase Strings from GitHub  # noqa: E501
 
-        Import files to Phrase from your connected GitHub repository.  # noqa: E501
+        Import files to Phrase Strings from your connected GitHub repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.github_sync_import(github_sync_import_parameters, async_req=True)
@@ -185,9 +185,9 @@ class GitHubSyncApi(object):
         return self.github_sync_import_with_http_info(github_sync_import_parameters, **kwargs)  # noqa: E501
 
     def github_sync_import_with_http_info(self, github_sync_import_parameters, **kwargs):  # noqa: E501
-        """Import to Phrase from GitHub  # noqa: E501
+        """Import to Phrase Strings from GitHub  # noqa: E501
 
-        Import files to Phrase from your connected GitHub repository.  # noqa: E501
+        Import files to Phrase Strings from your connected GitHub repository.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.github_sync_import_with_http_info(github_sync_import_parameters, async_req=True)

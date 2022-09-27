@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -30,14 +30,14 @@ class TestGitHubSyncApi(unittest.TestCase):
     def test_github_sync_export(self):
         """Test case for github_sync_export
 
-        Export from Phrase to GitHub  # noqa: E501
+        Export from Phrase Strings to GitHub  # noqa: E501
         """
         pass
 
     def test_github_sync_import(self):
         """Test case for github_sync_import
 
-        Import to Phrase from GitHub  # noqa: E501
+        Import to Phrase Strings from GitHub  # noqa: E501
         """
         pass
 

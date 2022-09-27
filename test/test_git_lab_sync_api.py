@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -37,7 +37,7 @@ class TestGitLabSyncApi(unittest.TestCase):
     def test_gitlab_sync_export(self):
         """Test case for gitlab_sync_export
 
-        Export from Phrase to GitLab  # noqa: E501
+        Export from Phrase Strings to GitLab  # noqa: E501
         """
         pass
 

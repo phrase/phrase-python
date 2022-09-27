@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -30,14 +30,14 @@ class TestBitbucketSyncApi(unittest.TestCase):
     def test_bitbucket_sync_export(self):
         """Test case for bitbucket_sync_export
 
-        Export from Phrase to Bitbucket  # noqa: E501
+        Export from Phrase Strings to Bitbucket  # noqa: E501
         """
         pass
 
     def test_bitbucket_sync_import(self):
         """Test case for bitbucket_sync_import
 
-        Import to Phrase from Bitbucket  # noqa: E501
+        Import to Phrase Strings from Bitbucket  # noqa: E501
         """
         pass
 

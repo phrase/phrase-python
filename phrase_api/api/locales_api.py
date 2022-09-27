@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Phrase API Reference
+    Phrase Strings API Reference
 
     The version of the OpenAPI document: 2.0.0
     Contact: support@phrase.com
@@ -439,7 +439,7 @@ class LocalesApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param str file_format: File format name. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for all supported file formats.
+        :param str file_format: File format name. See the <a href=\"https://support.phrase.com/hc/en-us/articles/5784070560412\">format guide</a> for all supported file formats.
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
         :param str tag: Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
         :param bool include_empty_translations: Indicates whether keys without translations should be included in the output as well.
@@ -447,7 +447,7 @@ class LocalesApi(object):
         :param bool include_translated_keys: Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
         :param bool keep_notranslate_tags: Indicates whether [NOTRANSLATE] tags should be kept.
         :param bool convert_emoji: This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
-        :param object format_options: Additional formatting and render options. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>
+        :param object format_options: Additional formatting and render options. See the <a href=\"https://support.phrase.com/hc/en-us/articles/5784070560412\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>
         :param str encoding: Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\".
         :param bool skip_unverified_translations: Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>.
         :param bool include_unverified_translations: if set to false unverified translations are excluded
@@ -482,7 +482,7 @@ class LocalesApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param str file_format: File format name. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for all supported file formats.
+        :param str file_format: File format name. See the <a href=\"https://support.phrase.com/hc/en-us/articles/5784070560412\">format guide</a> for all supported file formats.
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
         :param str tag: Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
         :param bool include_empty_translations: Indicates whether keys without translations should be included in the output as well.
@@ -490,7 +490,7 @@ class LocalesApi(object):
         :param bool include_translated_keys: Include translated keys in the locale file. Use in combination with include_empty_translations to obtain only untranslated keys.
         :param bool keep_notranslate_tags: Indicates whether [NOTRANSLATE] tags should be kept.
         :param bool convert_emoji: This option is obsolete. Projects that were created on or after Nov 29th 2019 or that did not contain emoji by then will not require this flag any longer since emoji are now supported natively.
-        :param object format_options: Additional formatting and render options. See the <a href=\"https://help.phrase.com/help/supported-platforms-and-formats\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>
+        :param object format_options: Additional formatting and render options. See the <a href=\"https://support.phrase.com/hc/en-us/articles/5784070560412\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>
         :param str encoding: Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\".
         :param bool skip_unverified_translations: Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>.
         :param bool include_unverified_translations: if set to false unverified translations are excluded

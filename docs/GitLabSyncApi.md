@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phrase.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**gitlab_sync_delete**](GitLabSyncApi.md#gitlab_sync_delete) | **DELETE** /gitlab_syncs/{id} | Delete single Sync Setting
-[**gitlab_sync_export**](GitLabSyncApi.md#gitlab_sync_export) | **POST** /gitlab_syncs/{gitlab_sync_id}/export | Export from Phrase to GitLab
+[**gitlab_sync_export**](GitLabSyncApi.md#gitlab_sync_export) | **POST** /gitlab_syncs/{gitlab_sync_id}/export | Export from Phrase Strings to GitLab
 [**gitlab_sync_history**](GitLabSyncApi.md#gitlab_sync_history) | **GET** /gitlab_syncs/{gitlab_sync_id}/history | History of single Sync Setting
 [**gitlab_sync_import**](GitLabSyncApi.md#gitlab_sync_import) | **POST** /gitlab_syncs/{gitlab_sync_id}/import | Import from GitLab to Phrase
 [**gitlab_sync_list**](GitLabSyncApi.md#gitlab_sync_list) | **GET** /gitlab_syncs | List GitLab syncs
@@ -83,9 +83,9 @@ void (empty response body)
 # **gitlab_sync_export**
 > GitlabSyncExport gitlab_sync_export(gitlab_sync_id, gitlab_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Export from Phrase to GitLab
+Export from Phrase Strings to GitLab
 
-Export translations from Phrase to GitLab according to the .phraseapp.yml file within the GitLab repository.
+Export translations from Phrase Strings to GitLab according to the .phraseapp.yml file within the GitLab repository.
 
 ### Example
 
@@ -109,7 +109,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Export from Phrase to GitLab
+        # Export from Phrase Strings to GitLab
         api_response = api_instance.gitlab_sync_export(gitlab_sync_id, gitlab_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 Import from GitLab to Phrase
 
-Import translations from GitLab to Phrase according to the .phraseapp.yml file within the GitLab repository.
+Import translations from GitLab to Phrase Strings according to the .phraseapp.yml file within the GitLab repository.
 
 ### Example
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 List GitLab syncs
 
-List all GitLab Sync Settings for which synchronisation with Phrase and GitLab is activated.
+List all GitLab Sync Settings for which synchronisation with Phrase Strings and GitLab is activated.
 
 ### Example
 
@@ -449,7 +449,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts.
-    phrase_project_code = '3456abcd' # str | Code of the related Phrase Project.
+    phrase_project_code = '3456abcd' # str | Code of the related Phrase Strings Project.
     gitlab_project_id = 12345 # int | ID of the related GitLab Project.
     gitlab_branch_name = 'feature-development' # str | Name of the GitLab Branch.
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **account_id** | **str**| Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. | [optional] 
- **phrase_project_code** | **str**| Code of the related Phrase Project. | [optional] 
+ **phrase_project_code** | **str**| Code of the related Phrase Strings Project. | [optional] 
  **gitlab_project_id** | **int**| ID of the related GitLab Project. | [optional] 
  **gitlab_branch_name** | **str**| Name of the GitLab Branch. | [optional] 
 

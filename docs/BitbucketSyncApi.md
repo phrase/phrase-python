@@ -4,17 +4,17 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bitbucket_sync_export**](BitbucketSyncApi.md#bitbucket_sync_export) | **POST** /bitbucket_syncs/{id}/export | Export from Phrase to Bitbucket
-[**bitbucket_sync_import**](BitbucketSyncApi.md#bitbucket_sync_import) | **POST** /bitbucket_syncs/{id}/import | Import to Phrase from Bitbucket
+[**bitbucket_sync_export**](BitbucketSyncApi.md#bitbucket_sync_export) | **POST** /bitbucket_syncs/{id}/export | Export from Phrase Strings to Bitbucket
+[**bitbucket_sync_import**](BitbucketSyncApi.md#bitbucket_sync_import) | **POST** /bitbucket_syncs/{id}/import | Import to Phrase Strings from Bitbucket
 [**bitbucket_syncs_list**](BitbucketSyncApi.md#bitbucket_syncs_list) | **GET** /bitbucket_syncs | List Bitbucket syncs
 
 
 # **bitbucket_sync_export**
 > BitbucketSyncExportResponse bitbucket_sync_export(id, bitbucket_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Export from Phrase to Bitbucket
+Export from Phrase Strings to Bitbucket
 
-Export translations from Phrase to Bitbucket according to the .phraseapp.yml file within the Bitbucket Repository.
+Export translations from Phrase Strings to Bitbucket according to the .phraseapp.yml file within the Bitbucket Repository.
 
 ### Example
 
@@ -38,7 +38,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Export from Phrase to Bitbucket
+        # Export from Phrase Strings to Bitbucket
         api_response = api_instance.bitbucket_sync_export(id, bitbucket_sync_export_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -80,9 +80,9 @@ Name | Type | Description  | Notes
 # **bitbucket_sync_import**
 > bitbucket_sync_import(id, bitbucket_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Import to Phrase from Bitbucket
+Import to Phrase Strings from Bitbucket
 
-Import translations from Bitbucket to Phrase according to the .phraseapp.yml file within the Bitbucket repository.
+Import translations from Bitbucket to Phrase Strings according to the .phraseapp.yml file within the Bitbucket repository.
 
 ### Example
 
@@ -106,7 +106,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Import to Phrase from Bitbucket
+        # Import to Phrase Strings from Bitbucket
         api_instance.bitbucket_sync_import(id, bitbucket_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling BitbucketSyncApi->bitbucket_sync_import: %s\n" % e)
@@ -149,7 +149,7 @@ void (empty response body)
 
 List Bitbucket syncs
 
-List all Bitbucket repositories for which synchronisation with Phrase is activated.
+List all Bitbucket repositories for which synchronisation with Phrase Strings is activated.
 
 ### Example
 

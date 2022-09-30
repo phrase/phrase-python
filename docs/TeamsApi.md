@@ -5,9 +5,9 @@ All URIs are relative to *https://api.phrase.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**team_create**](TeamsApi.md#team_create) | **POST** /accounts/{account_id}/teams | Create a Team
-[**team_delete**](TeamsApi.md#team_delete) | **DELETE** /accounts/{account_id}/teams/{team_id} | Delete Team
-[**team_show**](TeamsApi.md#team_show) | **GET** /accounts/{account_id}/teams/{team_id} | Get Team
-[**team_update**](TeamsApi.md#team_update) | **PATCH** /accounts/{account_id}/teams/{team_id} | Update Team
+[**team_delete**](TeamsApi.md#team_delete) | **DELETE** /accounts/{account_id}/teams/{id} | Delete Team
+[**team_show**](TeamsApi.md#team_show) | **GET** /accounts/{account_id}/teams/{id} | Get Team
+[**team_update**](TeamsApi.md#team_update) | **PATCH** /accounts/{account_id}/teams/{id} | Update Team
 [**teams_list**](TeamsApi.md#teams_list) | **GET** /accounts/{account_id}/teams | List Teams
 [**teams_projects_create**](TeamsApi.md#teams_projects_create) | **POST** /accounts/{account_id}/teams/{team_id}/projects | Add Project
 [**teams_projects_delete**](TeamsApi.md#teams_projects_delete) | **DELETE** /accounts/{account_id}/teams/{team_id}/projects/{id} | Remove Project

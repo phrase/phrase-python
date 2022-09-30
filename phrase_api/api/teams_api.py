@@ -276,7 +276,7 @@ class TeamsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/teams/{team_id}', 'DELETE',
+            '/accounts/{account_id}/teams/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -404,7 +404,7 @@ class TeamsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/teams/{team_id}', 'GET',
+            '/accounts/{account_id}/teams/{id}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -545,7 +545,7 @@ class TeamsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/teams/{team_id}', 'PATCH',
+            '/accounts/{account_id}/teams/{id}', 'PATCH',
             path_params,
             query_params,
             header_params,

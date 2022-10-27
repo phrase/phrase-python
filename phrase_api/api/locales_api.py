@@ -149,7 +149,7 @@ class LocalesApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/locales', 'GET',
+            '/accounts/{id}/locales', 'GET',
             path_params,
             query_params,
             header_params,

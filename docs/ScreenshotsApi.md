@@ -321,7 +321,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     key_id = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by key
 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **key_id** | **str**| filter by key | [optional] 
 

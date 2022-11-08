@@ -175,7 +175,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     gitlab_sync_id = 'gitlab_sync_id_example' # str | Gitlab Sync ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     account_id = 'abcd1234' # str | Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts.
 
     try:
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
  **gitlab_sync_id** | **str**| Gitlab Sync ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **account_id** | **str**| Account ID to specify the actual account the GitLab Sync should be created in. Required if the requesting user is a member of multiple accounts. | [optional] 
 
 ### Return type

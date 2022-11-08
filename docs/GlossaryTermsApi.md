@@ -320,7 +320,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     glossary_id = 'glossary_id_example' # str | Glossary ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
 
     try:
         # List terms
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
  **glossary_id** | **str**| Glossary ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
 
 ### Return type
 

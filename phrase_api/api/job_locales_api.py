@@ -1070,7 +1070,7 @@ class JobLocalesApi(object):
         :param str job_id: Job ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1100,7 +1100,7 @@ class JobLocalesApi(object):
         :param str job_id: Job ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers

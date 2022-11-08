@@ -1540,7 +1540,7 @@ class JobsApi(object):
         :param str account_id: Account ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
         :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
@@ -1571,7 +1571,7 @@ class JobsApi(object):
         :param str account_id: Account ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
         :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
@@ -1684,7 +1684,7 @@ class JobsApi(object):
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
@@ -1716,7 +1716,7 @@ class JobsApi(object):
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job

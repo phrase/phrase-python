@@ -536,7 +536,7 @@ class ProjectsApi(object):
         :param async_req bool: execute request asynchronously
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
         :param list[str] filters: Filter projects. Valid options are [\"favorites\"].
@@ -566,7 +566,7 @@ class ProjectsApi(object):
         :param async_req bool: execute request asynchronously
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
         :param list[str] filters: Filter projects. Valid options are [\"favorites\"].

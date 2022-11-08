@@ -48,7 +48,7 @@ class LocalesApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -76,7 +76,7 @@ class LocalesApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -920,7 +920,7 @@ class LocalesApi(object):
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str sort_by: Sort locales. Valid options are \"name_asc\", \"name_desc\", \"default_asc\", \"default_desc\".
         :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -950,7 +950,7 @@ class LocalesApi(object):
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
-        :param int per_page: allows you to specify a page size up to 100 items, 25 by default
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str sort_by: Sort locales. Valid options are \"name_asc\", \"name_desc\", \"default_asc\", \"default_desc\".
         :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code

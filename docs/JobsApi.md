@@ -812,7 +812,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     account_id = 'account_id_example' # str | Account ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
     state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
@@ -833,7 +833,7 @@ Name | Type | Description  | Notes
  **account_id** | **str**| Account ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **owned_by** | **str**| filter by user owning job | [optional] 
  **assigned_to** | **str**| filter by user assigned to job | [optional] 
  **state** | **str**| filter by state of job Valid states are &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
@@ -888,7 +888,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
@@ -910,7 +910,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **owned_by** | **str**| filter by user owning job | [optional] 
  **assigned_to** | **str**| filter by user assigned to job | [optional] 

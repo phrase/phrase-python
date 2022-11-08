@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **notifications_list**
-> list[object] notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[object] notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen)
 
 List notifications
 
@@ -35,11 +35,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.NotificationsApi(api_client)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
-    per_page = 25 # int | allows you to specify a page size up to 100 items, 25 by default
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
+    unseen = true # bool | Include only unseen notifications
 
     try:
         # List notifications
-        api_response = api_instance.notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NotificationsApi->notifications_list: %s\n" % e)
@@ -52,7 +53,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
- **per_page** | **int**| allows you to specify a page size up to 100 items, 25 by default | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
+ **unseen** | **bool**| Include only unseen notifications | [optional] 
 
 ### Return type
 

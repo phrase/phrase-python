@@ -309,7 +309,7 @@ class TranslationsApi(object):
             collection_formats=collection_formats)
 
     def translation_include(self, project_id, id, translation_include_parameters, **kwargs):  # noqa: E501
-        """Revoke exclusion of a translation in export  # noqa: E501
+        """Include a translation  # noqa: E501
 
         Remove exclude from export flag from an existing translation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -337,7 +337,7 @@ class TranslationsApi(object):
         return self.translation_include_with_http_info(project_id, id, translation_include_parameters, **kwargs)  # noqa: E501
 
     def translation_include_with_http_info(self, project_id, id, translation_include_parameters, **kwargs):  # noqa: E501
-        """Revoke exclusion of a translation in export  # noqa: E501
+        """Include a translation  # noqa: E501
 
         Remove exclude from export flag from an existing translation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1322,7 +1322,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1355,7 +1355,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1463,7 +1463,7 @@ class TranslationsApi(object):
             collection_formats=collection_formats)
 
     def translations_exclude_collection(self, project_id, translations_exclude_parameters, **kwargs):  # noqa: E501
-        """Set exclude from export flag on translations selected by query  # noqa: E501
+        """Exclude translations by query  # noqa: E501
 
         Exclude translations matching query from locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1490,7 +1490,7 @@ class TranslationsApi(object):
         return self.translations_exclude_collection_with_http_info(project_id, translations_exclude_parameters, **kwargs)  # noqa: E501
 
     def translations_exclude_collection_with_http_info(self, project_id, translations_exclude_parameters, **kwargs):  # noqa: E501
-        """Set exclude from export flag on translations selected by query  # noqa: E501
+        """Exclude translations by query  # noqa: E501
 
         Exclude translations matching query from locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1595,7 +1595,7 @@ class TranslationsApi(object):
             collection_formats=collection_formats)
 
     def translations_include_collection(self, project_id, translations_include_parameters, **kwargs):  # noqa: E501
-        """Remove exlude from import flag from translations selected by query  # noqa: E501
+        """Include translations by query  # noqa: E501
 
         Include translations matching query in locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1622,7 +1622,7 @@ class TranslationsApi(object):
         return self.translations_include_collection_with_http_info(project_id, translations_include_parameters, **kwargs)  # noqa: E501
 
     def translations_include_collection_with_http_info(self, project_id, translations_include_parameters, **kwargs):  # noqa: E501
-        """Remove exlude from import flag from translations selected by query  # noqa: E501
+        """Include translations by query  # noqa: E501
 
         Include translations matching query in locale export.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1743,7 +1743,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1775,7 +1775,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2150,7 +2150,7 @@ class TranslationsApi(object):
             collection_formats=collection_formats)
 
     def translations_unverify_collection(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
-        """Mark translations selected by query as unverified  # noqa: E501
+        """Unverify translations by query  # noqa: E501
 
         Mark translations matching query as unverified.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -2177,7 +2177,7 @@ class TranslationsApi(object):
         return self.translations_unverify_collection_with_http_info(project_id, translations_unverify_parameters, **kwargs)  # noqa: E501
 
     def translations_unverify_collection_with_http_info(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
-        """Mark translations selected by query as unverified  # noqa: E501
+        """Unverify translations by query  # noqa: E501
 
         Mark translations matching query as unverified.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -2282,7 +2282,7 @@ class TranslationsApi(object):
             collection_formats=collection_formats)
 
     def translations_verify_collection(self, project_id, translations_verify_parameters, **kwargs):  # noqa: E501
-        """Verify translations selected by query  # noqa: E501
+        """Verify translations by query  # noqa: E501
 
         Verify translations matching query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -2309,7 +2309,7 @@ class TranslationsApi(object):
         return self.translations_verify_collection_with_http_info(project_id, translations_verify_parameters, **kwargs)  # noqa: E501
 
     def translations_verify_collection_with_http_info(self, project_id, translations_verify_parameters, **kwargs):  # noqa: E501
-        """Verify translations selected by query  # noqa: E501
+        """Verify translations by query  # noqa: E501
 
         Verify translations matching query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phrase.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**upload_create**](UploadsApi.md#upload_create) | **POST** /projects/{project_id}/uploads | Upload a new file
-[**upload_show**](UploadsApi.md#upload_show) | **GET** /projects/{project_id}/uploads/{id} | View upload details
+[**upload_show**](UploadsApi.md#upload_show) | **GET** /projects/{project_id}/uploads/{id} | Get a single upload
 [**uploads_list**](UploadsApi.md#uploads_list) | **GET** /projects/{project_id}/uploads | List uploads
 
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 # **upload_show**
 > Upload upload_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
-View upload details
+Get a single upload
 
 View details and summary for a single upload.
 
@@ -135,7 +135,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
-        # View upload details
+        # Get a single upload
         api_response = api_instance.upload_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
         pprint(api_response)
     except ApiException as e:

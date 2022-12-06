@@ -38,7 +38,7 @@ class BranchesApi(object):
     def branch_compare(self, project_id, name, **kwargs):  # noqa: E501
         """Compare branches  # noqa: E501
 
-        Compare branch with main branch.  # noqa: E501
+        Compare branch with main branch. <br><br><i>Note: Comparing a branch may take several minutes depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_compare(project_id, name, async_req=True)
@@ -65,7 +65,7 @@ class BranchesApi(object):
     def branch_compare_with_http_info(self, project_id, name, **kwargs):  # noqa: E501
         """Compare branches  # noqa: E501
 
-        Compare branch with main branch.  # noqa: E501
+        Compare branch with main branch. <br><br><i>Note: Comparing a branch may take several minutes depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_compare_with_http_info(project_id, name, async_req=True)
@@ -162,7 +162,7 @@ class BranchesApi(object):
     def branch_create(self, project_id, branch_create_parameters, **kwargs):  # noqa: E501
         """Create a branch  # noqa: E501
 
-        Create a new branch.  # noqa: E501
+        Create a new branch. <br><br><i>Note: Creating a new branch may take several minutes depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_create(project_id, branch_create_parameters, async_req=True)
@@ -189,7 +189,7 @@ class BranchesApi(object):
     def branch_create_with_http_info(self, project_id, branch_create_parameters, **kwargs):  # noqa: E501
         """Create a branch  # noqa: E501
 
-        Create a new branch.  # noqa: E501
+        Create a new branch. <br><br><i>Note: Creating a new branch may take several minutes depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_create_with_http_info(project_id, branch_create_parameters, async_req=True)
@@ -418,7 +418,7 @@ class BranchesApi(object):
     def branch_merge(self, project_id, name, branch_merge_parameters, **kwargs):  # noqa: E501
         """Merge a branch  # noqa: E501
 
-        Merge an existing branch.  # noqa: E501
+        Merge an existing branch. <br><br><i>Note: Merging a branch may take several minutes depending on diff size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_merge(project_id, name, branch_merge_parameters, async_req=True)
@@ -446,7 +446,7 @@ class BranchesApi(object):
     def branch_merge_with_http_info(self, project_id, name, branch_merge_parameters, **kwargs):  # noqa: E501
         """Merge a branch  # noqa: E501
 
-        Merge an existing branch.  # noqa: E501
+        Merge an existing branch. <br><br><i>Note: Merging a branch may take several minutes depending on diff size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_merge_with_http_info(project_id, name, branch_merge_parameters, async_req=True)

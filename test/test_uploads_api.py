@@ -37,7 +37,7 @@ class TestUploadsApi(unittest.TestCase):
     def test_upload_show(self):
         """Test case for upload_show
 
-        View upload details  # noqa: E501
+        Get a single upload  # noqa: E501
         """
         pass
 

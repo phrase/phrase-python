@@ -158,7 +158,7 @@ class GitLabSyncApi(object):
     def gitlab_sync_export(self, gitlab_sync_id, gitlab_sync_export_parameters, **kwargs):  # noqa: E501
         """Export from Phrase Strings to GitLab  # noqa: E501
 
-        Export translations from Phrase Strings to GitLab according to the .phraseapp.yml file within the GitLab repository.  # noqa: E501
+        Export translations from Phrase Strings to GitLab according to the .phraseapp.yml file within the GitLab repository. <br><br><i>Note: Export is done asynchronously and may take several seconds depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.gitlab_sync_export(gitlab_sync_id, gitlab_sync_export_parameters, async_req=True)
@@ -185,7 +185,7 @@ class GitLabSyncApi(object):
     def gitlab_sync_export_with_http_info(self, gitlab_sync_id, gitlab_sync_export_parameters, **kwargs):  # noqa: E501
         """Export from Phrase Strings to GitLab  # noqa: E501
 
-        Export translations from Phrase Strings to GitLab according to the .phraseapp.yml file within the GitLab repository.  # noqa: E501
+        Export translations from Phrase Strings to GitLab according to the .phraseapp.yml file within the GitLab repository. <br><br><i>Note: Export is done asynchronously and may take several seconds depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.gitlab_sync_export_with_http_info(gitlab_sync_id, gitlab_sync_export_parameters, async_req=True)
@@ -424,7 +424,7 @@ class GitLabSyncApi(object):
     def gitlab_sync_import(self, gitlab_sync_id, gitlab_sync_import_parameters, **kwargs):  # noqa: E501
         """Import from GitLab to Phrase  # noqa: E501
 
-        Import translations from GitLab to Phrase Strings according to the .phraseapp.yml file within the GitLab repository.  # noqa: E501
+        Import translations from GitLab to Phrase Strings according to the .phraseapp.yml file within the GitLab repository. <br><br><i>Note: Import is done asynchronously and may take several seconds depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.gitlab_sync_import(gitlab_sync_id, gitlab_sync_import_parameters, async_req=True)
@@ -451,7 +451,7 @@ class GitLabSyncApi(object):
     def gitlab_sync_import_with_http_info(self, gitlab_sync_id, gitlab_sync_import_parameters, **kwargs):  # noqa: E501
         """Import from GitLab to Phrase  # noqa: E501
 
-        Import translations from GitLab to Phrase Strings according to the .phraseapp.yml file within the GitLab repository.  # noqa: E501
+        Import translations from GitLab to Phrase Strings according to the .phraseapp.yml file within the GitLab repository. <br><br><i>Note: Import is done asynchronously and may take several seconds depending on the project size.</i>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.gitlab_sync_import_with_http_info(gitlab_sync_id, gitlab_sync_import_parameters, async_req=True)

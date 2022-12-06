@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Export from Phrase Strings to GitHub
 
-Export translations from Phrase Strings to GitHub according to the .phraseapp.yml file within the GitHub repository.
+Export translations from Phrase Strings to GitHub according to the .phraseapp.yml file within the GitHub repository. <br><br><i>Note: Export is done asynchronously and may take several seconds depending on the project size.</i>
 
 ### Example
 
@@ -79,7 +79,7 @@ void (empty response body)
 
 Import to Phrase Strings from GitHub
 
-Import files to Phrase Strings from your connected GitHub repository.
+Import files to Phrase Strings from your connected GitHub repository. <br><br><i>Note: Import is done asynchronously and may take several seconds depending on the project size.</i>
 
 ### Example
 

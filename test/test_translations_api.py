@@ -44,7 +44,7 @@ class TestTranslationsApi(unittest.TestCase):
     def test_translation_include(self):
         """Test case for translation_include
 
-        Revoke exclusion of a translation in export  # noqa: E501
+        Include a translation  # noqa: E501
         """
         pass
 
@@ -100,14 +100,14 @@ class TestTranslationsApi(unittest.TestCase):
     def test_translations_exclude_collection(self):
         """Test case for translations_exclude_collection
 
-        Set exclude from export flag on translations selected by query  # noqa: E501
+        Exclude translations by query  # noqa: E501
         """
         pass
 
     def test_translations_include_collection(self):
         """Test case for translations_include_collection
 
-        Remove exlude from import flag from translations selected by query  # noqa: E501
+        Include translations by query  # noqa: E501
         """
         pass
 
@@ -135,14 +135,14 @@ class TestTranslationsApi(unittest.TestCase):
     def test_translations_unverify_collection(self):
         """Test case for translations_unverify_collection
 
-        Mark translations selected by query as unverified  # noqa: E501
+        Unverify translations by query  # noqa: E501
         """
         pass
 
     def test_translations_verify_collection(self):
         """Test case for translations_verify_collection
 
-        Verify translations selected by query  # noqa: E501
+        Verify translations by query  # noqa: E501
         """
         pass
 

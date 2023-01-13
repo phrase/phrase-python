@@ -40,6 +40,7 @@ class TestProject(unittest.TestCase):
                 slug = '0', 
                 main_format = '0', 
                 project_image_url = '0', 
+                media = '0', 
                 account = {"id":"abcd1234","name":"Company Account","slug":"company_account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","company_logo_url":"http://assets.example.com/company_logo.png"}, 
                 space = {"id":"2e7574e8f2372906a03110c2a7cfe671","name":"My first space","created_at":"2020-02-25T12:17:25Z","updated_at":"2020-03-13T14:46:57Z","projects_count":2}, 
                 point_of_contact = phrase_api.models.user_preview.user_preview(

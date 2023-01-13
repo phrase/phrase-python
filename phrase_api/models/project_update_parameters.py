@@ -34,7 +34,9 @@ class ProjectUpdateParameters(object):
     openapi_types = {
         'account_id': 'str',
         'name': 'str',
+        'point_of_contact': 'str',
         'main_format': 'str',
+        'media': 'object',
         'shares_translation_memory': 'bool',
         'project_image': 'file',
         'remove_project_image': 'bool',
@@ -60,7 +62,9 @@ class ProjectUpdateParameters(object):
     attribute_map = {
         'account_id': 'account_id',
         'name': 'name',
+        'point_of_contact': 'point_of_contact',
         'main_format': 'main_format',
+        'media': 'media',
         'shares_translation_memory': 'shares_translation_memory',
         'project_image': 'project_image',
         'remove_project_image': 'remove_project_image',
@@ -83,7 +87,7 @@ class ProjectUpdateParameters(object):
         'smart_suggest_use_machine_translation': 'smart_suggest_use_machine_translation'
     }
 
-    def __init__(self, account_id=None, name=None, main_format=None, shares_translation_memory=None, project_image=None, remove_project_image=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, account_id=None, name=None, point_of_contact=None, main_format=None, media=None, shares_translation_memory=None, project_image=None, remove_project_image=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, local_vars_configuration=None):  # noqa: E501
         """ProjectUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -91,7 +95,9 @@ class ProjectUpdateParameters(object):
 
         self._account_id = None
         self._name = None
+        self._point_of_contact = None
         self._main_format = None
+        self._media = None
         self._shares_translation_memory = None
         self._project_image = None
         self._remove_project_image = None
@@ -118,8 +124,12 @@ class ProjectUpdateParameters(object):
             self.account_id = account_id
         if name is not None:
             self.name = name
+        if point_of_contact is not None:
+            self.point_of_contact = point_of_contact
         if main_format is not None:
             self.main_format = main_format
+        if media is not None:
+            self.media = media
         if shares_translation_memory is not None:
             self.shares_translation_memory = shares_translation_memory
         if project_image is not None:
@@ -208,6 +218,29 @@ class ProjectUpdateParameters(object):
         self._name = name
 
     @property
+    def point_of_contact(self):
+        """Gets the point_of_contact of this ProjectUpdateParameters.  # noqa: E501
+
+        (Optional) User ID of the point of contact for the project. Pass `null` to unset.  # noqa: E501
+
+        :return: The point_of_contact of this ProjectUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._point_of_contact
+
+    @point_of_contact.setter
+    def point_of_contact(self, point_of_contact):
+        """Sets the point_of_contact of this ProjectUpdateParameters.
+
+        (Optional) User ID of the point of contact for the project. Pass `null` to unset.  # noqa: E501
+
+        :param point_of_contact: The point_of_contact of this ProjectUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._point_of_contact = point_of_contact
+
+    @property
     def main_format(self):
         """Gets the main_format of this ProjectUpdateParameters.  # noqa: E501
 
@@ -229,6 +262,27 @@ class ProjectUpdateParameters(object):
         """
 
         self._main_format = main_format
+
+    @property
+    def media(self):
+        """Gets the media of this ProjectUpdateParameters.  # noqa: E501
+
+
+        :return: The media of this ProjectUpdateParameters.  # noqa: E501
+        :rtype: object
+        """
+        return self._media
+
+    @media.setter
+    def media(self, media):
+        """Sets the media of this ProjectUpdateParameters.
+
+
+        :param media: The media of this ProjectUpdateParameters.  # noqa: E501
+        :type: object
+        """
+
+        self._media = media
 
     @property
     def shares_translation_memory(self):

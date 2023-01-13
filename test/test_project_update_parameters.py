@@ -37,7 +37,9 @@ class TestProjectUpdateParameters(unittest.TestCase):
             return ProjectUpdateParameters(
                 account_id = 'abcd1234', 
                 name = 'My Android Project', 
+                point_of_contact = 'abcd1234', 
                 main_format = 'yml', 
+                media = None, 
                 shares_translation_memory = True, 
                 project_image = bytes(b'blah'), 
                 remove_project_image = False, 

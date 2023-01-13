@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **slug** | **str** |  | [optional] 
 **main_format** | **str** |  | [optional] 
 **project_image_url** | **str** |  | [optional] 
+**media** | **str** |  | [optional] 
 **account** | [**Account**](Account.md) |  | [optional] 
 **space** | [**Space1**](Space1.md) |  | [optional] 
 **point_of_contact** | [**UserPreview**](UserPreview.md) |  | [optional] 

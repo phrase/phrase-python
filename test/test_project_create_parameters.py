@@ -37,10 +37,12 @@ class TestProjectCreateParameters(unittest.TestCase):
             return ProjectCreateParameters(
                 name = 'My Android Project', 
                 main_format = 'yml', 
+                media = 'Python', 
                 shares_translation_memory = True, 
                 project_image = bytes(b'blah'), 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
+                point_of_contact = 'abcd1234', 
                 source_project_id = 'abcd1234', 
                 workflow = 'review', 
                 machine_translation_enabled = True, 

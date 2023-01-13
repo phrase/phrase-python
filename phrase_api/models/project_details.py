@@ -37,6 +37,7 @@ class ProjectDetails(object):
         'slug': 'str',
         'main_format': 'str',
         'project_image_url': 'str',
+        'media': 'str',
         'account': 'Account',
         'space': 'Space1',
         'point_of_contact': 'UserPreview',
@@ -51,6 +52,7 @@ class ProjectDetails(object):
         'slug': 'slug',
         'main_format': 'main_format',
         'project_image_url': 'project_image_url',
+        'media': 'media',
         'account': 'account',
         'space': 'space',
         'point_of_contact': 'point_of_contact',
@@ -59,7 +61,7 @@ class ProjectDetails(object):
         'shares_translation_memory': 'shares_translation_memory'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class ProjectDetails(object):
         self._slug = None
         self._main_format = None
         self._project_image_url = None
+        self._media = None
         self._account = None
         self._space = None
         self._point_of_contact = None
@@ -88,6 +91,8 @@ class ProjectDetails(object):
             self.main_format = main_format
         if project_image_url is not None:
             self.project_image_url = project_image_url
+        if media is not None:
+            self.media = media
         if account is not None:
             self.account = account
         if space is not None:
@@ -205,6 +210,27 @@ class ProjectDetails(object):
         """
 
         self._project_image_url = project_image_url
+
+    @property
+    def media(self):
+        """Gets the media of this ProjectDetails.  # noqa: E501
+
+
+        :return: The media of this ProjectDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._media
+
+    @media.setter
+    def media(self, media):
+        """Sets the media of this ProjectDetails.
+
+
+        :param media: The media of this ProjectDetails.  # noqa: E501
+        :type: str
+        """
+
+        self._media = media
 
     @property
     def account(self):

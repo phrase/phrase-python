@@ -37,6 +37,7 @@ class Project(object):
         'slug': 'str',
         'main_format': 'str',
         'project_image_url': 'str',
+        'media': 'str',
         'account': 'Account',
         'space': 'Space1',
         'point_of_contact': 'UserPreview',
@@ -50,6 +51,7 @@ class Project(object):
         'slug': 'slug',
         'main_format': 'main_format',
         'project_image_url': 'project_image_url',
+        'media': 'media',
         'account': 'account',
         'space': 'space',
         'point_of_contact': 'point_of_contact',
@@ -57,7 +59,7 @@ class Project(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Project - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -68,6 +70,7 @@ class Project(object):
         self._slug = None
         self._main_format = None
         self._project_image_url = None
+        self._media = None
         self._account = None
         self._space = None
         self._point_of_contact = None
@@ -85,6 +88,8 @@ class Project(object):
             self.main_format = main_format
         if project_image_url is not None:
             self.project_image_url = project_image_url
+        if media is not None:
+            self.media = media
         if account is not None:
             self.account = account
         if space is not None:
@@ -200,6 +205,27 @@ class Project(object):
         """
 
         self._project_image_url = project_image_url
+
+    @property
+    def media(self):
+        """Gets the media of this Project.  # noqa: E501
+
+
+        :return: The media of this Project.  # noqa: E501
+        :rtype: str
+        """
+        return self._media
+
+    @media.setter
+    def media(self, media):
+        """Sets the media of this Project.
+
+
+        :param media: The media of this Project.  # noqa: E501
+        :type: str
+        """
+
+        self._media = media
 
     @property
     def account(self):

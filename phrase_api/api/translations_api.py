@@ -1738,6 +1738,8 @@ class TranslationsApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
@@ -1770,6 +1772,8 @@ class TranslationsApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
@@ -1795,6 +1799,8 @@ class TranslationsApi(object):
         all_params = [
             'project_id',
             'x_phrase_app_otp',
+            'if_modified_since',
+            'if_none_match',
             'page',
             'per_page',
             'branch',
@@ -1847,6 +1853,10 @@ class TranslationsApi(object):
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
             header_params['X-PhraseApp-OTP'] = local_var_params['x_phrase_app_otp']  # noqa: E501
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
+        if 'if_none_match' in local_var_params:
+            header_params['If-None-Match'] = local_var_params['if_none_match']  # noqa: E501
 
         form_params = []
         local_var_files = {}

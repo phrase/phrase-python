@@ -438,6 +438,8 @@ class LocalesApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
         :param str branch: specify the branch to use
         :param str file_format: File format name. See the <a href=\"https://support.phrase.com/hc/en-us/sections/6111343326364\">format guide</a> for all supported file formats.
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
@@ -481,6 +483,8 @@ class LocalesApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
         :param str branch: specify the branch to use
         :param str file_format: File format name. See the <a href=\"https://support.phrase.com/hc/en-us/sections/6111343326364\">format guide</a> for all supported file formats.
         :param str tags: Limit results to keys tagged with a list of comma separated tag names.
@@ -517,6 +521,8 @@ class LocalesApi(object):
             'project_id',
             'id',
             'x_phrase_app_otp',
+            'if_modified_since',
+            'if_none_match',
             'branch',
             'file_format',
             'tags',
@@ -605,6 +611,10 @@ class LocalesApi(object):
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
             header_params['X-PhraseApp-OTP'] = local_var_params['x_phrase_app_otp']  # noqa: E501
+        if 'if_modified_since' in local_var_params:
+            header_params['If-Modified-Since'] = local_var_params['if_modified_since']  # noqa: E501
+        if 'if_none_match' in local_var_params:
+            header_params['If-None-Match'] = local_var_params['if_none_match']  # noqa: E501
 
         form_params = []
         local_var_files = {}

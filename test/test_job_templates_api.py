@@ -41,13 +41,6 @@ class TestJobTemplatesApi(unittest.TestCase):
         """
         pass
 
-    def test_job_template_show(self):
-        """Test case for job_template_show
-
-        Get a single job template  # noqa: E501
-        """
-        pass
-
     def test_job_template_update(self):
         """Test case for job_template_update
 
@@ -59,6 +52,13 @@ class TestJobTemplatesApi(unittest.TestCase):
         """Test case for job_templates_list
 
         List job templates  # noqa: E501
+        """
+        pass
+
+    def test_job_templates_show(self):
+        """Test case for job_templates_show
+
+        Get a single job template  # noqa: E501
         """
         pass
 

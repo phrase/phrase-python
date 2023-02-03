@@ -153,7 +153,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_comment_show**
-> object job_comment_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> JobComment job_comment_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Get a single job comment
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**JobComment**](JobComment.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_comment_update**
-> object job_comment_update(project_id, key_id, id, job_comment_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> JobComment job_comment_update(project_id, key_id, id, job_comment_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Update a job comment
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**JobComment**](JobComment.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_comments_list**
-> list[object] job_comments_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> list[JobComment] job_comments_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 List job comments
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[JobComment]**](JobComment.md)
 
 ### Authorization
 

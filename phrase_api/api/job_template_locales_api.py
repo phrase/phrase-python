@@ -195,7 +195,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: object
+        :return: JobTemplateLocales
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -226,7 +226,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(JobTemplateLocales, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -307,7 +307,7 @@ class JobTemplateLocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='object',  # noqa: E501
+            response_type='JobTemplateLocales',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -337,7 +337,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: object
+        :return: JobTemplateLocales
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -368,7 +368,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(JobTemplateLocales, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -457,7 +457,7 @@ class JobTemplateLocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='object',  # noqa: E501
+            response_type='JobTemplateLocales',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -486,7 +486,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: JobTemplateLocale
+        :return: JobTemplateLocales
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -516,7 +516,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(JobTemplateLocale, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(JobTemplateLocales, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -598,7 +598,7 @@ class JobTemplateLocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='JobTemplateLocale',  # noqa: E501
+            response_type='JobTemplateLocales',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -629,7 +629,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[object]
+        :return: list[JobTemplateLocales]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -661,7 +661,7 @@ class JobTemplateLocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[object], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(list[JobTemplateLocales], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -741,7 +741,7 @@ class JobTemplateLocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[object]',  # noqa: E501
+            response_type='list[JobTemplateLocales]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

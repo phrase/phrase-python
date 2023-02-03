@@ -13,7 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.5.6"
+__version__ = "1.5.7"
 
 # import apis into sdk package
 from phrase_api.api.accounts_api import AccountsApi
@@ -147,8 +147,10 @@ from phrase_api.models.job_reopen_parameters import JobReopenParameters
 from phrase_api.models.job_start_parameters import JobStartParameters
 from phrase_api.models.job_template import JobTemplate
 from phrase_api.models.job_template_create_parameters import JobTemplateCreateParameters
-from phrase_api.models.job_template_locale import JobTemplateLocale
+from phrase_api.models.job_template_details import JobTemplateDetails
+from phrase_api.models.job_template_details1 import JobTemplateDetails1
 from phrase_api.models.job_template_locale_update_parameters import JobTemplateLocaleUpdateParameters
+from phrase_api.models.job_template_locales import JobTemplateLocales
 from phrase_api.models.job_template_locales_create_parameters import JobTemplateLocalesCreateParameters
 from phrase_api.models.job_template_preview import JobTemplatePreview
 from phrase_api.models.job_template_update_parameters import JobTemplateUpdateParameters

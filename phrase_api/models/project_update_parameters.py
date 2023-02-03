@@ -36,7 +36,7 @@ class ProjectUpdateParameters(object):
         'name': 'str',
         'point_of_contact': 'str',
         'main_format': 'str',
-        'media': 'object',
+        'media': 'str',
         'shares_translation_memory': 'bool',
         'project_image': 'file',
         'remove_project_image': 'bool',
@@ -267,9 +267,10 @@ class ProjectUpdateParameters(object):
     def media(self):
         """Gets the media of this ProjectUpdateParameters.  # noqa: E501
 
+        (Optional) Main technology stack used in the project. It affects for example the suggested placeholder style. Predefined values include: `Ruby`, `JavaScript`, `AngularJS`, `React`, `iOS`, `Android`, `Python`, `PHP`, `Java`, `Go`, `Windows Phone`, `Rails`, `Node.js`, `.NET`, `Django`, `Symfony`, `Yii Framework`, `Zend Framework`, `Apple App Store Description`, `Google Play Description`, but it can also take any other value.  # noqa: E501
 
         :return: The media of this ProjectUpdateParameters.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._media
 
@@ -277,9 +278,10 @@ class ProjectUpdateParameters(object):
     def media(self, media):
         """Sets the media of this ProjectUpdateParameters.
 
+        (Optional) Main technology stack used in the project. It affects for example the suggested placeholder style. Predefined values include: `Ruby`, `JavaScript`, `AngularJS`, `React`, `iOS`, `Android`, `Python`, `PHP`, `Java`, `Go`, `Windows Phone`, `Rails`, `Node.js`, `.NET`, `Django`, `Symfony`, `Yii Framework`, `Zend Framework`, `Apple App Store Description`, `Google Play Description`, but it can also take any other value.  # noqa: E501
 
         :param media: The media of this ProjectUpdateParameters.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._media = media

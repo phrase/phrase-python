@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **notifications_list**
-> list[object] notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen)
+> list[Notification] notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen)
 
 List notifications
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[Notification]**](Notification.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notifications_mark_all_as_read**
-> list[object] notifications_mark_all_as_read(x_phrase_app_otp=x_phrase_app_otp)
+> list[Notification] notifications_mark_all_as_read(x_phrase_app_otp=x_phrase_app_otp)
 
 Mark all notifications as read
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[Notification]**](Notification.md)
 
 ### Authorization
 

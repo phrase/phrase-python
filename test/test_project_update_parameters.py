@@ -39,7 +39,7 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 name = 'My Android Project', 
                 point_of_contact = 'abcd1234', 
                 main_format = 'yml', 
-                media = None, 
+                media = 'Python', 
                 shares_translation_memory = True, 
                 project_image = bytes(b'blah'), 
                 remove_project_image = False, 

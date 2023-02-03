@@ -83,7 +83,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_template_locale_show**
-> object job_template_locale_show(project_id, job_template_id, job_template_locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> JobTemplateLocales job_template_locale_show(project_id, job_template_id, job_template_locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Get a single job template locale
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**JobTemplateLocales**](JobTemplateLocales.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_template_locale_update**
-> object job_template_locale_update(project_id, job_template_id, job_template_locale_id, job_template_locale_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> JobTemplateLocales job_template_locale_update(project_id, job_template_id, job_template_locale_id, job_template_locale_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Update a job template locale
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**JobTemplateLocales**](JobTemplateLocales.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_template_locales_create**
-> JobTemplateLocale job_template_locales_create(project_id, job_template_id, job_template_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> JobTemplateLocales job_template_locales_create(project_id, job_template_id, job_template_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a job template locale
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JobTemplateLocale**](JobTemplateLocale.md)
+[**JobTemplateLocales**](JobTemplateLocales.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_template_locales_list**
-> list[object] job_template_locales_list(project_id, job_template_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> list[JobTemplateLocales] job_template_locales_list(project_id, job_template_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List job template locales
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[JobTemplateLocales]**](JobTemplateLocales.md)
 
 ### Authorization
 

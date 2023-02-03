@@ -1,4 +1,4 @@
-# JobTemplateLocale
+# JobTemplateLocales
 
 ## Properties
 Name | Type | Description | Notes

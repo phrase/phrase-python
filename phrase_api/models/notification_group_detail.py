@@ -37,7 +37,7 @@ class NotificationGroupDetail(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'notifications_count': 'int',
-        'latest_notification': 'object'
+        'latest_notification': 'Notification'
     }
 
     attribute_map = {
@@ -187,7 +187,7 @@ class NotificationGroupDetail(object):
 
 
         :return: The latest_notification of this NotificationGroupDetail.  # noqa: E501
-        :rtype: object
+        :rtype: Notification
         """
         return self._latest_notification
 
@@ -197,7 +197,7 @@ class NotificationGroupDetail(object):
 
 
         :param latest_notification: The latest_notification of this NotificationGroupDetail.  # noqa: E501
-        :type: object
+        :type: Notification
         """
 
         self._latest_notification = latest_notification

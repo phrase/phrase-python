@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **notification_groups_list**
-> list[object] notification_groups_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> list[NotificationGroupDetail] notification_groups_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List notification groups
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[NotificationGroupDetail]**](NotificationGroupDetail.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notification_groups_mark_all_as_read**
-> list[object] notification_groups_mark_all_as_read(x_phrase_app_otp=x_phrase_app_otp)
+> list[NotificationGroupDetail] notification_groups_mark_all_as_read(x_phrase_app_otp=x_phrase_app_otp)
 
 Mark all notification groups as read
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[object]**
+[**list[NotificationGroupDetail]**](NotificationGroupDetail.md)
 
 ### Authorization
 

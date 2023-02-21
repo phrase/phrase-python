@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.job_template_locales import JobTemplateLocales  # noqa: E501
+from phrase_api.models.locale_user_preview import LocaleUserPreview  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestJobTemplateLocales(unittest.TestCase):
-    """JobTemplateLocales unit test stubs"""
+class TestLocaleUserPreview(unittest.TestCase):
+    """LocaleUserPreview unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,31 +28,24 @@ class TestJobTemplateLocales(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test JobTemplateLocales
+        """Test LocaleUserPreview
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.job_template_locales.JobTemplateLocales()  # noqa: E501
+        # model = phrase_api.models.locale_user_preview.LocaleUserPreview()  # noqa: E501
         if include_optional :
-            return JobTemplateLocales(
+            return LocaleUserPreview(
                 id = '0', 
-                job_template = phrase_api.models.job_template_preview.job_template_preview(
-                    id = '0', 
-                    name = '0', ), 
-                locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
-                users = [
-                    None
-                    ], 
-                teams = [
-                    None
-                    ]
+                username = '0', 
+                name = '0', 
+                role = '0'
             )
         else :
-            return JobTemplateLocales(
+            return LocaleUserPreview(
         )
 
-    def testJobTemplateLocales(self):
-        """Test JobTemplateLocales"""
+    def testLocaleUserPreview(self):
+        """Test LocaleUserPreview"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

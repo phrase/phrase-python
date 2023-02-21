@@ -35,17 +35,19 @@ class JobTemplateLocales(object):
         'id': 'str',
         'job_template': 'JobTemplatePreview',
         'locale': 'LocalePreview',
-        'users': 'list[JobTemplateUserPreview]'
+        'users': 'list[Items]',
+        'teams': 'list[Items]'
     }
 
     attribute_map = {
         'id': 'id',
         'job_template': 'job_template',
         'locale': 'locale',
-        'users': 'users'
+        'users': 'users',
+        'teams': 'teams'
     }
 
-    def __init__(self, id=None, job_template=None, locale=None, users=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, job_template=None, locale=None, users=None, teams=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplateLocales - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class JobTemplateLocales(object):
         self._job_template = None
         self._locale = None
         self._users = None
+        self._teams = None
         self.discriminator = None
 
         if id is not None:
@@ -65,6 +68,8 @@ class JobTemplateLocales(object):
             self.locale = locale
         if users is not None:
             self.users = users
+        if teams is not None:
+            self.teams = teams
 
     @property
     def id(self):
@@ -135,7 +140,7 @@ class JobTemplateLocales(object):
 
 
         :return: The users of this JobTemplateLocales.  # noqa: E501
-        :rtype: list[JobTemplateUserPreview]
+        :rtype: list[Items]
         """
         return self._users
 
@@ -145,10 +150,31 @@ class JobTemplateLocales(object):
 
 
         :param users: The users of this JobTemplateLocales.  # noqa: E501
-        :type: list[JobTemplateUserPreview]
+        :type: list[Items]
         """
 
         self._users = users
+
+    @property
+    def teams(self):
+        """Gets the teams of this JobTemplateLocales.  # noqa: E501
+
+
+        :return: The teams of this JobTemplateLocales.  # noqa: E501
+        :rtype: list[Items]
+        """
+        return self._teams
+
+    @teams.setter
+    def teams(self, teams):
+        """Sets the teams of this JobTemplateLocales.
+
+
+        :param teams: The teams of this JobTemplateLocales.  # noqa: E501
+        :type: list[Items]
+        """
+
+        self._teams = teams
 
     def to_dict(self):
         """Returns the model properties as a dict"""

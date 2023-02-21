@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.job_template_user_preview import JobTemplateUserPreview  # noqa: E501
+from phrase_api.models.locale_team_preview import LocaleTeamPreview  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestJobTemplateUserPreview(unittest.TestCase):
-    """JobTemplateUserPreview unit test stubs"""
+class TestLocaleTeamPreview(unittest.TestCase):
+    """LocaleTeamPreview unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,24 +28,23 @@ class TestJobTemplateUserPreview(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test JobTemplateUserPreview
+        """Test LocaleTeamPreview
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.job_template_user_preview.JobTemplateUserPreview()  # noqa: E501
+        # model = phrase_api.models.locale_team_preview.LocaleTeamPreview()  # noqa: E501
         if include_optional :
-            return JobTemplateUserPreview(
+            return LocaleTeamPreview(
                 id = '0', 
-                username = '0', 
                 name = '0', 
                 role = '0'
             )
         else :
-            return JobTemplateUserPreview(
+            return LocaleTeamPreview(
         )
 
-    def testJobTemplateUserPreview(self):
-        """Test JobTemplateUserPreview"""
+    def testLocaleTeamPreview(self):
+        """Test LocaleTeamPreview"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

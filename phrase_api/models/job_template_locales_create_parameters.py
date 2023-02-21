@@ -35,17 +35,21 @@ class JobTemplateLocalesCreateParameters(object):
         'branch': 'str',
         'locale_id': 'str',
         'user_ids': 'list[str]',
-        'reviewer_ids': 'list[str]'
+        'reviewer_ids': 'list[str]',
+        'translator_team_ids': 'list[str]',
+        'reviewer_team_ids': 'list[str]'
     }
 
     attribute_map = {
         'branch': 'branch',
         'locale_id': 'locale_id',
         'user_ids': 'user_ids',
-        'reviewer_ids': 'reviewer_ids'
+        'reviewer_ids': 'reviewer_ids',
+        'translator_team_ids': 'translator_team_ids',
+        'reviewer_team_ids': 'reviewer_team_ids'
     }
 
-    def __init__(self, branch=None, locale_id=None, user_ids=None, reviewer_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, locale_id=None, user_ids=None, reviewer_ids=None, translator_team_ids=None, reviewer_team_ids=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplateLocalesCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +59,8 @@ class JobTemplateLocalesCreateParameters(object):
         self._locale_id = None
         self._user_ids = None
         self._reviewer_ids = None
+        self._translator_team_ids = None
+        self._reviewer_team_ids = None
         self.discriminator = None
 
         if branch is not None:
@@ -64,6 +70,10 @@ class JobTemplateLocalesCreateParameters(object):
             self.user_ids = user_ids
         if reviewer_ids is not None:
             self.reviewer_ids = reviewer_ids
+        if translator_team_ids is not None:
+            self.translator_team_ids = translator_team_ids
+        if reviewer_team_ids is not None:
+            self.reviewer_team_ids = reviewer_team_ids
 
     @property
     def branch(self):
@@ -158,6 +168,52 @@ class JobTemplateLocalesCreateParameters(object):
         """
 
         self._reviewer_ids = reviewer_ids
+
+    @property
+    def translator_team_ids(self):
+        """Gets the translator_team_ids of this JobTemplateLocalesCreateParameters.  # noqa: E501
+
+        Array of team ids to be assigned to the job locale as translators  # noqa: E501
+
+        :return: The translator_team_ids of this JobTemplateLocalesCreateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._translator_team_ids
+
+    @translator_team_ids.setter
+    def translator_team_ids(self, translator_team_ids):
+        """Sets the translator_team_ids of this JobTemplateLocalesCreateParameters.
+
+        Array of team ids to be assigned to the job locale as translators  # noqa: E501
+
+        :param translator_team_ids: The translator_team_ids of this JobTemplateLocalesCreateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._translator_team_ids = translator_team_ids
+
+    @property
+    def reviewer_team_ids(self):
+        """Gets the reviewer_team_ids of this JobTemplateLocalesCreateParameters.  # noqa: E501
+
+        Array of team ids to be assigned to the job locale as reviewers  # noqa: E501
+
+        :return: The reviewer_team_ids of this JobTemplateLocalesCreateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reviewer_team_ids
+
+    @reviewer_team_ids.setter
+    def reviewer_team_ids(self, reviewer_team_ids):
+        """Sets the reviewer_team_ids of this JobTemplateLocalesCreateParameters.
+
+        Array of team ids to be assigned to the job locale as reviewers  # noqa: E501
+
+        :param reviewer_team_ids: The reviewer_team_ids of this JobTemplateLocalesCreateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reviewer_team_ids = reviewer_team_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

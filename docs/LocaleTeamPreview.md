@@ -1,10 +1,9 @@
-# JobTemplateUserPreview
+# LocaleTeamPreview
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**username** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **role** | **str** |  | [optional] 
 

@@ -38,11 +38,12 @@ class TestJobTemplateLocaleUpdateParameters(unittest.TestCase):
                 branch = 'my-feature-branch', 
                 locale_id = 'abcd1234cdef1234abcd1234cdef1234', 
                 user_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
-                reviewer_ids = ["abcd1234cdef1234abcd1234cdef1234"]
+                reviewer_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
+                translator_team_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
+                reviewer_team_ids = ["abcd1234cdef1234abcd1234cdef1234"]
             )
         else :
             return JobTemplateLocaleUpdateParameters(
-                locale_id = 'abcd1234cdef1234abcd1234cdef1234',
         )
 
     def testJobTemplateLocaleUpdateParameters(self):

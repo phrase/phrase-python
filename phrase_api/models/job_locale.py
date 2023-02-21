@@ -35,7 +35,8 @@ class JobLocale(object):
         'id': 'str',
         'job': 'JobPreview',
         'locale': 'LocalePreview',
-        'users': 'list[UserPreview]',
+        'users': 'list[LocaleUserPreview]',
+        'teams': 'list[LocaleTeamPreview]',
         'completed': 'bool',
         'translation_completed_at': 'datetime',
         'review_completed_at': 'datetime'
@@ -46,12 +47,13 @@ class JobLocale(object):
         'job': 'job',
         'locale': 'locale',
         'users': 'users',
+        'teams': 'teams',
         'completed': 'completed',
         'translation_completed_at': 'translation_completed_at',
         'review_completed_at': 'review_completed_at'
     }
 
-    def __init__(self, id=None, job=None, locale=None, users=None, completed=None, translation_completed_at=None, review_completed_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, job=None, locale=None, users=None, teams=None, completed=None, translation_completed_at=None, review_completed_at=None, local_vars_configuration=None):  # noqa: E501
         """JobLocale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class JobLocale(object):
         self._job = None
         self._locale = None
         self._users = None
+        self._teams = None
         self._completed = None
         self._translation_completed_at = None
         self._review_completed_at = None
@@ -74,6 +77,8 @@ class JobLocale(object):
             self.locale = locale
         if users is not None:
             self.users = users
+        if teams is not None:
+            self.teams = teams
         if completed is not None:
             self.completed = completed
         if translation_completed_at is not None:
@@ -150,7 +155,7 @@ class JobLocale(object):
 
 
         :return: The users of this JobLocale.  # noqa: E501
-        :rtype: list[UserPreview]
+        :rtype: list[LocaleUserPreview]
         """
         return self._users
 
@@ -160,10 +165,31 @@ class JobLocale(object):
 
 
         :param users: The users of this JobLocale.  # noqa: E501
-        :type: list[UserPreview]
+        :type: list[LocaleUserPreview]
         """
 
         self._users = users
+
+    @property
+    def teams(self):
+        """Gets the teams of this JobLocale.  # noqa: E501
+
+
+        :return: The teams of this JobLocale.  # noqa: E501
+        :rtype: list[LocaleTeamPreview]
+        """
+        return self._teams
+
+    @teams.setter
+    def teams(self, teams):
+        """Sets the teams of this JobLocale.
+
+
+        :param teams: The teams of this JobLocale.  # noqa: E501
+        :type: list[LocaleTeamPreview]
+        """
+
+        self._teams = teams
 
     @property
     def completed(self):

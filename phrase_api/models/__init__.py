@@ -98,7 +98,6 @@ from phrase_api.models.job_template_locales import JobTemplateLocales
 from phrase_api.models.job_template_locales_create_parameters import JobTemplateLocalesCreateParameters
 from phrase_api.models.job_template_preview import JobTemplatePreview
 from phrase_api.models.job_template_update_parameters import JobTemplateUpdateParameters
-from phrase_api.models.job_template_user_preview import JobTemplateUserPreview
 from phrase_api.models.job_update_parameters import JobUpdateParameters
 from phrase_api.models.key_create_parameters import KeyCreateParameters
 from phrase_api.models.key_preview import KeyPreview
@@ -115,7 +114,9 @@ from phrase_api.models.locale_details1 import LocaleDetails1
 from phrase_api.models.locale_preview import LocalePreview
 from phrase_api.models.locale_preview1 import LocalePreview1
 from phrase_api.models.locale_statistics import LocaleStatistics
+from phrase_api.models.locale_team_preview import LocaleTeamPreview
 from phrase_api.models.locale_update_parameters import LocaleUpdateParameters
+from phrase_api.models.locale_user_preview import LocaleUserPreview
 from phrase_api.models.member import Member
 from phrase_api.models.member_project_detail import MemberProjectDetail
 from phrase_api.models.member_project_detail_project_roles import MemberProjectDetailProjectRoles

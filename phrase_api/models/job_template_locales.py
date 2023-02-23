@@ -35,8 +35,8 @@ class JobTemplateLocales(object):
         'id': 'str',
         'job_template': 'JobTemplatePreview',
         'locale': 'LocalePreview',
-        'users': 'list[Items]',
-        'teams': 'list[Items]'
+        'users': 'list[LocaleUserPreview]',
+        'teams': 'list[LocaleTeamPreview]'
     }
 
     attribute_map = {
@@ -140,7 +140,7 @@ class JobTemplateLocales(object):
 
 
         :return: The users of this JobTemplateLocales.  # noqa: E501
-        :rtype: list[Items]
+        :rtype: list[LocaleUserPreview]
         """
         return self._users
 
@@ -150,7 +150,7 @@ class JobTemplateLocales(object):
 
 
         :param users: The users of this JobTemplateLocales.  # noqa: E501
-        :type: list[Items]
+        :type: list[LocaleUserPreview]
         """
 
         self._users = users
@@ -161,7 +161,7 @@ class JobTemplateLocales(object):
 
 
         :return: The teams of this JobTemplateLocales.  # noqa: E501
-        :rtype: list[Items]
+        :rtype: list[LocaleTeamPreview]
         """
         return self._teams
 
@@ -171,7 +171,7 @@ class JobTemplateLocales(object):
 
 
         :param teams: The teams of this JobTemplateLocales.  # noqa: E501
-        :type: list[Items]
+        :type: list[LocaleTeamPreview]
         """
 
         self._teams = teams

@@ -41,10 +41,17 @@ class TestJobTemplateLocales(unittest.TestCase):
                     name = '0', ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 users = [
-                    None
+                    phrase_api.models.locale_user_preview.locale_user_preview(
+                        id = '0', 
+                        username = '0', 
+                        name = '0', 
+                        role = '0', )
                     ], 
                 teams = [
-                    None
+                    phrase_api.models.locale_team_preview.locale_team_preview(
+                        id = '0', 
+                        name = '0', 
+                        role = '0', )
                     ]
             )
         else :

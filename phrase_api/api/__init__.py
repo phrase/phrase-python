@@ -30,6 +30,8 @@ from phrase_api.api.members_api import MembersApi
 from phrase_api.api.notification_groups_api import NotificationGroupsApi
 from phrase_api.api.notifications_api import NotificationsApi
 from phrase_api.api.orders_api import OrdersApi
+from phrase_api.api.organization_job_template_locales_api import OrganizationJobTemplateLocalesApi
+from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
 from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi

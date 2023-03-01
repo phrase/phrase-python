@@ -13,7 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.5.9"
+__version__ = "1.6.0"
 
 # import apis into sdk package
 from phrase_api.api.accounts_api import AccountsApi
@@ -43,6 +43,8 @@ from phrase_api.api.members_api import MembersApi
 from phrase_api.api.notification_groups_api import NotificationGroupsApi
 from phrase_api.api.notifications_api import NotificationsApi
 from phrase_api.api.orders_api import OrdersApi
+from phrase_api.api.organization_job_template_locales_api import OrganizationJobTemplateLocalesApi
+from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
 from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi
@@ -184,6 +186,12 @@ from phrase_api.models.notification_group import NotificationGroup
 from phrase_api.models.notification_group_detail import NotificationGroupDetail
 from phrase_api.models.order_confirm_parameters import OrderConfirmParameters
 from phrase_api.models.order_create_parameters import OrderCreateParameters
+from phrase_api.models.organization_job_template import OrganizationJobTemplate
+from phrase_api.models.organization_job_template_create_parameters import OrganizationJobTemplateCreateParameters
+from phrase_api.models.organization_job_template_details import OrganizationJobTemplateDetails
+from phrase_api.models.organization_job_template_locale_update_parameters import OrganizationJobTemplateLocaleUpdateParameters
+from phrase_api.models.organization_job_template_locales_create_parameters import OrganizationJobTemplateLocalesCreateParameters
+from phrase_api.models.organization_job_template_update_parameters import OrganizationJobTemplateUpdateParameters
 from phrase_api.models.project import Project
 from phrase_api.models.project_create_parameters import ProjectCreateParameters
 from phrase_api.models.project_details import ProjectDetails

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **platforms** | **list[str]** |  | [optional] 
 **environments** | **list[str]** |  | [optional] 
 **locales** | [**list[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**tags** | **list[str]** |  | [optional] 
 **project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

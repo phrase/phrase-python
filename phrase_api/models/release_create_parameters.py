@@ -35,6 +35,7 @@ class ReleaseCreateParameters(object):
         'description': 'str',
         'platforms': 'list[str]',
         'locale_ids': 'list[str]',
+        'tags': 'list[str]',
         'branch': 'str'
     }
 
@@ -42,10 +43,11 @@ class ReleaseCreateParameters(object):
         'description': 'description',
         'platforms': 'platforms',
         'locale_ids': 'locale_ids',
+        'tags': 'tags',
         'branch': 'branch'
     }
 
-    def __init__(self, description=None, platforms=None, locale_ids=None, branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, description=None, platforms=None, locale_ids=None, tags=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """ReleaseCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class ReleaseCreateParameters(object):
         self._description = None
         self._platforms = None
         self._locale_ids = None
+        self._tags = None
         self._branch = None
         self.discriminator = None
 
@@ -63,6 +66,8 @@ class ReleaseCreateParameters(object):
             self.platforms = platforms
         if locale_ids is not None:
             self.locale_ids = locale_ids
+        if tags is not None:
+            self.tags = tags
         if branch is not None:
             self.branch = branch
 
@@ -134,6 +139,29 @@ class ReleaseCreateParameters(object):
         """
 
         self._locale_ids = locale_ids
+
+    @property
+    def tags(self):
+        """Gets the tags of this ReleaseCreateParameters.  # noqa: E501
+
+        Only include tagged keys in the release. For a key to be included it must be tagged with all tags provided  # noqa: E501
+
+        :return: The tags of this ReleaseCreateParameters.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this ReleaseCreateParameters.
+
+        Only include tagged keys in the release. For a key to be included it must be tagged with all tags provided  # noqa: E501
+
+        :param tags: The tags of this ReleaseCreateParameters.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._tags = tags
 
     @property
     def branch(self):

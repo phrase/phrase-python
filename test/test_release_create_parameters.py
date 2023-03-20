@@ -38,6 +38,7 @@ class TestReleaseCreateParameters(unittest.TestCase):
                 description = 'My first Release', 
                 platforms = ["android","ios"], 
                 locale_ids = ["abcd1234cdef1234abcd1234cdef1234","fff565db236400772368235db2c6117e"], 
+                tags = ["android","feature1"], 
                 branch = 'my-feature-branch'
             )
         else :

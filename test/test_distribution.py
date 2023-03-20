@@ -45,7 +45,7 @@ class TestDistribution(unittest.TestCase):
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ], 
                 releases = [
-                    {"id":"abcd1234cdef1234abcd1234cdef1234","version":1,"project":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"},"platforms":["android"],"environments":["development"],"locale_codes":["de","en"],"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","version":1,"project":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"},"platforms":["android"],"environments":["development"],"locale_codes":["de","en"],"tags":["android","feature1"],"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ], 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 deleted_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')

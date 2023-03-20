@@ -40,6 +40,7 @@ class ReleasePreview(object):
         'platforms': 'list[str]',
         'environments': 'list[str]',
         'locale_codes': 'list[str]',
+        'tags': 'list[str]',
         'project': 'ProjectShort',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -54,12 +55,13 @@ class ReleasePreview(object):
         'platforms': 'platforms',
         'environments': 'environments',
         'locale_codes': 'locale_codes',
+        'tags': 'tags',
         'project': 'project',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, version=None, app_min_version=None, app_max_version=None, description=None, platforms=None, environments=None, locale_codes=None, project=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, version=None, app_min_version=None, app_max_version=None, description=None, platforms=None, environments=None, locale_codes=None, tags=None, project=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """ReleasePreview - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,6 +75,7 @@ class ReleasePreview(object):
         self._platforms = None
         self._environments = None
         self._locale_codes = None
+        self._tags = None
         self._project = None
         self._created_at = None
         self._updated_at = None
@@ -94,6 +97,8 @@ class ReleasePreview(object):
             self.environments = environments
         if locale_codes is not None:
             self.locale_codes = locale_codes
+        if tags is not None:
+            self.tags = tags
         if project is not None:
             self.project = project
         if created_at is not None:
@@ -268,6 +273,27 @@ class ReleasePreview(object):
         """
 
         self._locale_codes = locale_codes
+
+    @property
+    def tags(self):
+        """Gets the tags of this ReleasePreview.  # noqa: E501
+
+
+        :return: The tags of this ReleasePreview.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this ReleasePreview.
+
+
+        :param tags: The tags of this ReleasePreview.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._tags = tags
 
     @property
     def project(self):

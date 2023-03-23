@@ -35,17 +35,19 @@ class IcuSkeletonParameters(object):
         'content': 'str',
         'locale_codes': 'list[str]',
         'keep_content': 'bool',
-        'zero_form_enabled': 'bool'
+        'zero_form_enabled': 'bool',
+        'cldr_version': 'str'
     }
 
     attribute_map = {
         'content': 'content',
         'locale_codes': 'locale_codes',
         'keep_content': 'keep_content',
-        'zero_form_enabled': 'zero_form_enabled'
+        'zero_form_enabled': 'zero_form_enabled',
+        'cldr_version': 'cldr_version'
     }
 
-    def __init__(self, content=None, locale_codes=None, keep_content=None, zero_form_enabled=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, content=None, locale_codes=None, keep_content=None, zero_form_enabled=None, cldr_version=None, local_vars_configuration=None):  # noqa: E501
         """IcuSkeletonParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class IcuSkeletonParameters(object):
         self._locale_codes = None
         self._keep_content = None
         self._zero_form_enabled = None
+        self._cldr_version = None
         self.discriminator = None
 
         if content is not None:
@@ -65,6 +68,8 @@ class IcuSkeletonParameters(object):
             self.keep_content = keep_content
         if zero_form_enabled is not None:
             self.zero_form_enabled = zero_form_enabled
+        if cldr_version is not None:
+            self.cldr_version = cldr_version
 
     @property
     def content(self):
@@ -157,6 +162,29 @@ class IcuSkeletonParameters(object):
         """
 
         self._zero_form_enabled = zero_form_enabled
+
+    @property
+    def cldr_version(self):
+        """Gets the cldr_version of this IcuSkeletonParameters.  # noqa: E501
+
+        Strings supports two CLDR variants, when it comes to pluralization rules. \\ You can choose which one you want to use when constructing the skeletons. Possible values \\ are `legacy` and `cldr_41`. Default value is `legacy`.  # noqa: E501
+
+        :return: The cldr_version of this IcuSkeletonParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._cldr_version
+
+    @cldr_version.setter
+    def cldr_version(self, cldr_version):
+        """Sets the cldr_version of this IcuSkeletonParameters.
+
+        Strings supports two CLDR variants, when it comes to pluralization rules. \\ You can choose which one you want to use when constructing the skeletons. Possible values \\ are `legacy` and `cldr_41`. Default value is `legacy`.  # noqa: E501
+
+        :param cldr_version: The cldr_version of this IcuSkeletonParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._cldr_version = cldr_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

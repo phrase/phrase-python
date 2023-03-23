@@ -38,7 +38,8 @@ class TestIcuSkeletonParameters(unittest.TestCase):
                 content = '{number, plural, one {One} other {%{n}}}', 
                 locale_codes = ["en"], 
                 keep_content = True, 
-                zero_form_enabled = True
+                zero_form_enabled = True, 
+                cldr_version = 'cldr_41'
             )
         else :
             return IcuSkeletonParameters(

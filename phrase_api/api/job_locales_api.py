@@ -750,7 +750,7 @@ class JobLocalesApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/projects/{project_id}/jobs/{job_id}/locale/{id}', 'GET',
+            '/projects/{project_id}/jobs/{job_id}/locales/{id}', 'GET',
             path_params,
             query_params,
             header_params,

@@ -49,7 +49,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     locale_mapping = None # object | Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.
     format_options = None # object | Additional options available for specific formats. See our format guide for complete list.
     autotranslate = True # bool | If set, translations for the uploaded language will be fetched automatically.
-    mark_reviewed = True # bool | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
+    mark_reviewed = True # bool | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
 
     try:
         # Upload a new file
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
  **locale_mapping** | [**object**](object.md)| Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. | [optional] 
  **format_options** | [**object**](object.md)| Additional options available for specific formats. See our format guide for complete list. | [optional] 
  **autotranslate** | **bool**| If set, translations for the uploaded language will be fetched automatically. | [optional] 
- **mark_reviewed** | **bool**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. | [optional] 
+ **mark_reviewed** | **bool**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project. | [optional] 
 
 ### Return type
 

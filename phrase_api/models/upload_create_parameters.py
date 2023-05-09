@@ -447,7 +447,7 @@ class UploadCreateParameters(object):
     def mark_reviewed(self):
         """Gets the mark_reviewed of this UploadCreateParameters.  # noqa: E501
 
-        Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.  # noqa: E501
+        Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.  # noqa: E501
 
         :return: The mark_reviewed of this UploadCreateParameters.  # noqa: E501
         :rtype: bool
@@ -458,7 +458,7 @@ class UploadCreateParameters(object):
     def mark_reviewed(self, mark_reviewed):
         """Sets the mark_reviewed of this UploadCreateParameters.
 
-        Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.  # noqa: E501
+        Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.  # noqa: E501
 
         :param mark_reviewed: The mark_reviewed of this UploadCreateParameters.  # noqa: E501
         :type: bool

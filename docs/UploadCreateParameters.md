@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **locale_mapping** | [**object**](.md) | Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. | [optional] 
 **format_options** | [**object**](.md) | Additional options available for specific formats. See our format guide for complete list. | [optional] 
 **autotranslate** | **bool** | If set, translations for the uploaded language will be fetched automatically. | [optional] 
-**mark_reviewed** | **bool** | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. | [optional] 
+**mark_reviewed** | **bool** | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

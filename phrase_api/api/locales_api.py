@@ -453,7 +453,7 @@ class LocalesApi(object):
         :param str encoding: Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\".
         :param bool skip_unverified_translations: Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>.
         :param bool include_unverified_translations: if set to false unverified translations are excluded
-        :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow (currently in beta) is enabled for the project.
+        :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow is enabled for the project.
         :param str fallback_locale_id: If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.
         :param str source_locale_id: Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a <code>tag</code> parameter indicating a specific job.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -498,7 +498,7 @@ class LocalesApi(object):
         :param str encoding: Enforces a specific encoding on the file contents. Valid options are \"UTF-8\", \"UTF-16\" and \"ISO-8859-1\".
         :param bool skip_unverified_translations: Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with <code>include_unverified_translations</code>.
         :param bool include_unverified_translations: if set to false unverified translations are excluded
-        :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow (currently in beta) is enabled for the project.
+        :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow is enabled for the project.
         :param str fallback_locale_id: If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.
         :param str source_locale_id: Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a <code>tag</code> parameter indicating a specific job.
         :param _return_http_data_only: response data without head status code

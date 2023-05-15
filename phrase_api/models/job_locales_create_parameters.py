@@ -102,7 +102,7 @@ class JobLocalesCreateParameters(object):
     def locale_id(self):
         """Gets the locale_id of this JobLocalesCreateParameters.  # noqa: E501
 
-        locale id  # noqa: E501
+        ID of a locale to be added  # noqa: E501
 
         :return: The locale_id of this JobLocalesCreateParameters.  # noqa: E501
         :rtype: str
@@ -113,7 +113,7 @@ class JobLocalesCreateParameters(object):
     def locale_id(self, locale_id):
         """Sets the locale_id of this JobLocalesCreateParameters.
 
-        locale id  # noqa: E501
+        ID of a locale to be added  # noqa: E501
 
         :param locale_id: The locale_id of this JobLocalesCreateParameters.  # noqa: E501
         :type: str

@@ -44,7 +44,7 @@ class TestJobLocalesApi(unittest.TestCase):
     def test_job_locale_delete(self):
         """Test case for job_locale_delete
 
-        Delete a job locale  # noqa: E501
+        Remove a target locale from a job  # noqa: E501
         """
         pass
 
@@ -58,28 +58,28 @@ class TestJobLocalesApi(unittest.TestCase):
     def test_job_locale_show(self):
         """Test case for job_locale_show
 
-        Get a single job locale  # noqa: E501
+        Show single job target locale  # noqa: E501
         """
         pass
 
     def test_job_locale_update(self):
         """Test case for job_locale_update
 
-        Update a job locale  # noqa: E501
+        Update a job target locale  # noqa: E501
         """
         pass
 
     def test_job_locales_create(self):
         """Test case for job_locales_create
 
-        Create a job locale  # noqa: E501
+        Add a target locale to a job  # noqa: E501
         """
         pass
 
     def test_job_locales_list(self):
         """Test case for job_locales_list
 
-        List job locales  # noqa: E501
+        List job target locales  # noqa: E501
         """
         pass
 

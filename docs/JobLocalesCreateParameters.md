@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **branch** | **str** | specify the branch to use | [optional] 
-**locale_id** | **str** | locale id | 
+**locale_id** | **str** | ID of a locale to be added | 
 **user_ids** | **list[str]** | Array of user ids to be assigned to the job locale as translators | [optional] 
 **reviewer_ids** | **list[str]** | Array of reviewer ids to be assigned to the job locale as reviewers | [optional] 
 **translator_team_ids** | **list[str]** | Array of team ids to be assigned to the job locale as translators | [optional] 

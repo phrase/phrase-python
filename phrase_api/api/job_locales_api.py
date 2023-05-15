@@ -336,9 +336,9 @@ class JobLocalesApi(object):
             collection_formats=collection_formats)
 
     def job_locale_delete(self, project_id, job_id, id, **kwargs):  # noqa: E501
-        """Delete a job locale  # noqa: E501
+        """Remove a target locale from a job  # noqa: E501
 
-        Delete an existing job locale.  # noqa: E501
+        Removes a target locale from a job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locale_delete(project_id, job_id, id, async_req=True)
@@ -365,9 +365,9 @@ class JobLocalesApi(object):
         return self.job_locale_delete_with_http_info(project_id, job_id, id, **kwargs)  # noqa: E501
 
     def job_locale_delete_with_http_info(self, project_id, job_id, id, **kwargs):  # noqa: E501
-        """Delete a job locale  # noqa: E501
+        """Remove a target locale from a job  # noqa: E501
 
-        Delete an existing job locale.  # noqa: E501
+        Removes a target locale from a job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locale_delete_with_http_info(project_id, job_id, id, async_req=True)
@@ -624,9 +624,9 @@ class JobLocalesApi(object):
             collection_formats=collection_formats)
 
     def job_locale_show(self, project_id, job_id, id, **kwargs):  # noqa: E501
-        """Get a single job locale  # noqa: E501
+        """Show single job target locale  # noqa: E501
 
-        Get a single job locale for a given job.  # noqa: E501
+        Get a single target locale for a given job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locale_show(project_id, job_id, id, async_req=True)
@@ -653,9 +653,9 @@ class JobLocalesApi(object):
         return self.job_locale_show_with_http_info(project_id, job_id, id, **kwargs)  # noqa: E501
 
     def job_locale_show_with_http_info(self, project_id, job_id, id, **kwargs):  # noqa: E501
-        """Get a single job locale  # noqa: E501
+        """Show single job target locale  # noqa: E501
 
-        Get a single job locale for a given job.  # noqa: E501
+        Get a single target locale for a given job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locale_show_with_http_info(project_id, job_id, id, async_req=True)
@@ -766,9 +766,9 @@ class JobLocalesApi(object):
             collection_formats=collection_formats)
 
     def job_locale_update(self, project_id, job_id, id, job_locale_update_parameters, **kwargs):  # noqa: E501
-        """Update a job locale  # noqa: E501
+        """Update a job target locale  # noqa: E501
 
-        Update an existing job locale.  # noqa: E501
+        Update an existing job target locale.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locale_update(project_id, job_id, id, job_locale_update_parameters, async_req=True)
@@ -795,9 +795,9 @@ class JobLocalesApi(object):
         return self.job_locale_update_with_http_info(project_id, job_id, id, job_locale_update_parameters, **kwargs)  # noqa: E501
 
     def job_locale_update_with_http_info(self, project_id, job_id, id, job_locale_update_parameters, **kwargs):  # noqa: E501
-        """Update a job locale  # noqa: E501
+        """Update a job target locale  # noqa: E501
 
-        Update an existing job locale.  # noqa: E501
+        Update an existing job target locale.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locale_update_with_http_info(project_id, job_id, id, job_locale_update_parameters, async_req=True)
@@ -916,9 +916,9 @@ class JobLocalesApi(object):
             collection_formats=collection_formats)
 
     def job_locales_create(self, project_id, job_id, job_locales_create_parameters, **kwargs):  # noqa: E501
-        """Create a job locale  # noqa: E501
+        """Add a target locale to a job  # noqa: E501
 
-        Create a new job locale.  # noqa: E501
+        Adds a target locale to a job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locales_create(project_id, job_id, job_locales_create_parameters, async_req=True)
@@ -944,9 +944,9 @@ class JobLocalesApi(object):
         return self.job_locales_create_with_http_info(project_id, job_id, job_locales_create_parameters, **kwargs)  # noqa: E501
 
     def job_locales_create_with_http_info(self, project_id, job_id, job_locales_create_parameters, **kwargs):  # noqa: E501
-        """Create a job locale  # noqa: E501
+        """Add a target locale to a job  # noqa: E501
 
-        Create a new job locale.  # noqa: E501
+        Adds a target locale to a job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locales_create_with_http_info(project_id, job_id, job_locales_create_parameters, async_req=True)
@@ -1057,9 +1057,9 @@ class JobLocalesApi(object):
             collection_formats=collection_formats)
 
     def job_locales_list(self, project_id, job_id, **kwargs):  # noqa: E501
-        """List job locales  # noqa: E501
+        """List job target locales  # noqa: E501
 
-        List all job locales for a given job.  # noqa: E501
+        List all target locales for a given job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locales_list(project_id, job_id, async_req=True)
@@ -1087,9 +1087,9 @@ class JobLocalesApi(object):
         return self.job_locales_list_with_http_info(project_id, job_id, **kwargs)  # noqa: E501
 
     def job_locales_list_with_http_info(self, project_id, job_id, **kwargs):  # noqa: E501
-        """List job locales  # noqa: E501
+        """List job target locales  # noqa: E501
 
-        List all job locales for a given job.  # noqa: E501
+        List all target locales for a given job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.job_locales_list_with_http_info(project_id, job_id, async_req=True)

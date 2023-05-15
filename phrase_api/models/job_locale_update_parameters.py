@@ -103,7 +103,7 @@ class JobLocaleUpdateParameters(object):
     def locale_id(self):
         """Gets the locale_id of this JobLocaleUpdateParameters.  # noqa: E501
 
-        locale id  # noqa: E501
+        ID of a target locale to update  # noqa: E501
 
         :return: The locale_id of this JobLocaleUpdateParameters.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class JobLocaleUpdateParameters(object):
     def locale_id(self, locale_id):
         """Sets the locale_id of this JobLocaleUpdateParameters.
 
-        locale id  # noqa: E501
+        ID of a target locale to update  # noqa: E501
 
         :param locale_id: The locale_id of this JobLocaleUpdateParameters.  # noqa: E501
         :type: str

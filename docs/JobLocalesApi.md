@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**job_locale_complete**](JobLocalesApi.md#job_locale_complete) | **POST** /projects/{project_id}/jobs/{job_id}/locales/{id}/complete | Complete a job locale
 [**job_locale_complete_review**](JobLocalesApi.md#job_locale_complete_review) | **POST** /projects/{project_id}/jobs/{job_id}/locales/{id}/complete_review | Review a job locale
-[**job_locale_delete**](JobLocalesApi.md#job_locale_delete) | **DELETE** /projects/{project_id}/jobs/{job_id}/locales/{id} | Delete a job locale
+[**job_locale_delete**](JobLocalesApi.md#job_locale_delete) | **DELETE** /projects/{project_id}/jobs/{job_id}/locales/{id} | Remove a target locale from a job
 [**job_locale_reopen**](JobLocalesApi.md#job_locale_reopen) | **POST** /projects/{project_id}/jobs/{job_id}/locales/{id}/reopen | Reopen a job locale
-[**job_locale_show**](JobLocalesApi.md#job_locale_show) | **GET** /projects/{project_id}/jobs/{job_id}/locales/{id} | Get a single job locale
-[**job_locale_update**](JobLocalesApi.md#job_locale_update) | **PATCH** /projects/{project_id}/jobs/{job_id}/locales/{id} | Update a job locale
-[**job_locales_create**](JobLocalesApi.md#job_locales_create) | **POST** /projects/{project_id}/jobs/{job_id}/locales | Create a job locale
-[**job_locales_list**](JobLocalesApi.md#job_locales_list) | **GET** /projects/{project_id}/jobs/{job_id}/locales | List job locales
+[**job_locale_show**](JobLocalesApi.md#job_locale_show) | **GET** /projects/{project_id}/jobs/{job_id}/locales/{id} | Show single job target locale
+[**job_locale_update**](JobLocalesApi.md#job_locale_update) | **PATCH** /projects/{project_id}/jobs/{job_id}/locales/{id} | Update a job target locale
+[**job_locales_create**](JobLocalesApi.md#job_locales_create) | **POST** /projects/{project_id}/jobs/{job_id}/locales | Add a target locale to a job
+[**job_locales_list**](JobLocalesApi.md#job_locales_list) | **GET** /projects/{project_id}/jobs/{job_id}/locales | List job target locales
 
 
 # **job_locale_complete**
@@ -161,9 +161,9 @@ Name | Type | Description  | Notes
 # **job_locale_delete**
 > job_locale_delete(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
-Delete a job locale
+Remove a target locale from a job
 
-Delete an existing job locale.
+Removes a target locale from a job.
 
 ### Example
 
@@ -189,7 +189,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
-        # Delete a job locale
+        # Remove a target locale from a job
         api_instance.job_locale_delete(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
     except ApiException as e:
         print("Exception when calling JobLocalesApi->job_locale_delete: %s\n" % e)
@@ -304,9 +304,9 @@ Name | Type | Description  | Notes
 # **job_locale_show**
 > JobLocale job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
-Get a single job locale
+Show single job target locale
 
-Get a single job locale for a given job.
+Get a single target locale for a given job.
 
 ### Example
 
@@ -332,7 +332,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
-        # Get a single job locale
+        # Show single job target locale
         api_response = api_instance.job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
         pprint(api_response)
     except ApiException as e:
@@ -376,9 +376,9 @@ Name | Type | Description  | Notes
 # **job_locale_update**
 > JobLocale job_locale_update(project_id, job_id, id, job_locale_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Update a job locale
+Update a job target locale
 
-Update an existing job locale.
+Update an existing job target locale.
 
 ### Example
 
@@ -404,7 +404,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Update a job locale
+        # Update a job target locale
         api_response = api_instance.job_locale_update(project_id, job_id, id, job_locale_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -448,9 +448,9 @@ Name | Type | Description  | Notes
 # **job_locales_create**
 > JobLocale job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Create a job locale
+Add a target locale to a job
 
-Create a new job locale.
+Adds a target locale to a job.
 
 ### Example
 
@@ -475,7 +475,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Create a job locale
+        # Add a target locale to a job
         api_response = api_instance.job_locales_create(project_id, job_id, job_locales_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
@@ -518,9 +518,9 @@ Name | Type | Description  | Notes
 # **job_locales_list**
 > list[JobLocale] job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
-List job locales
+List job target locales
 
-List all job locales for a given job.
+List all target locales for a given job.
 
 ### Example
 
@@ -547,7 +547,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
-        # List job locales
+        # List job target locales
         api_response = api_instance.job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
         pprint(api_response)
     except ApiException as e:

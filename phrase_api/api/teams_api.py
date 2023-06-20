@@ -690,7 +690,7 @@ class TeamsApi(object):
             collection_formats=collection_formats)
 
     def teams_projects_create(self, account_id, team_id, teams_projects_create_parameters, **kwargs):  # noqa: E501
-        """Add Project  # noqa: E501
+        """Add Project to Team  # noqa: E501
 
         Adds an existing project to the team.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -718,7 +718,7 @@ class TeamsApi(object):
         return self.teams_projects_create_with_http_info(account_id, team_id, teams_projects_create_parameters, **kwargs)  # noqa: E501
 
     def teams_projects_create_with_http_info(self, account_id, team_id, teams_projects_create_parameters, **kwargs):  # noqa: E501
-        """Add Project  # noqa: E501
+        """Add Project to Team  # noqa: E501
 
         Adds an existing project to the team.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -827,7 +827,7 @@ class TeamsApi(object):
             collection_formats=collection_formats)
 
     def teams_projects_delete(self, account_id, team_id, id, **kwargs):  # noqa: E501
-        """Remove Project  # noqa: E501
+        """Remove Project from Team  # noqa: E501
 
         Removes a specified project from the specified team.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -855,7 +855,7 @@ class TeamsApi(object):
         return self.teams_projects_delete_with_http_info(account_id, team_id, id, **kwargs)  # noqa: E501
 
     def teams_projects_delete_with_http_info(self, account_id, team_id, id, **kwargs):  # noqa: E501
-        """Remove Project  # noqa: E501
+        """Remove Project from Team  # noqa: E501
 
         Removes a specified project from the specified team.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

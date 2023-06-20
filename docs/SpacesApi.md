@@ -9,9 +9,9 @@ Method | HTTP request | Description
 [**space_show**](SpacesApi.md#space_show) | **GET** /accounts/{account_id}/spaces/{id} | Get Space
 [**space_update**](SpacesApi.md#space_update) | **PATCH** /accounts/{account_id}/spaces/{id} | Update Space
 [**spaces_list**](SpacesApi.md#spaces_list) | **GET** /accounts/{account_id}/spaces | List Spaces
-[**spaces_projects_create**](SpacesApi.md#spaces_projects_create) | **POST** /accounts/{account_id}/spaces/{space_id}/projects | Add Project
-[**spaces_projects_delete**](SpacesApi.md#spaces_projects_delete) | **DELETE** /accounts/{account_id}/spaces/{space_id}/projects/{id} | Remove Project
-[**spaces_projects_list**](SpacesApi.md#spaces_projects_list) | **GET** /accounts/{account_id}/spaces/{space_id}/projects | List Projects
+[**spaces_projects_create**](SpacesApi.md#spaces_projects_create) | **POST** /accounts/{account_id}/spaces/{space_id}/projects | Add Project to Space
+[**spaces_projects_delete**](SpacesApi.md#spaces_projects_delete) | **DELETE** /accounts/{account_id}/spaces/{space_id}/projects/{id} | Remove Project from Space
+[**spaces_projects_list**](SpacesApi.md#spaces_projects_list) | **GET** /accounts/{account_id}/spaces/{space_id}/projects | List Projects in Space
 
 
 # **space_create**
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 # **spaces_projects_create**
 > spaces_projects_create(account_id, space_id, spaces_projects_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Add Project
+Add Project to Space
 
 Adds an existing project to the space.
 
@@ -387,7 +387,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Add Project
+        # Add Project to Space
         api_instance.spaces_projects_create(account_id, space_id, spaces_projects_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling SpacesApi->spaces_projects_create: %s\n" % e)
@@ -429,7 +429,7 @@ void (empty response body)
 # **spaces_projects_delete**
 > spaces_projects_delete(account_id, space_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Remove Project
+Remove Project from Space
 
 Removes a specified project from the specified space.
 
@@ -456,7 +456,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Remove Project
+        # Remove Project from Space
         api_instance.spaces_projects_delete(account_id, space_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling SpacesApi->spaces_projects_delete: %s\n" % e)
@@ -498,7 +498,7 @@ void (empty response body)
 # **spaces_projects_list**
 > list[Project] spaces_projects_list(account_id, space_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
-List Projects
+List Projects in Space
 
 List all projects for the specified Space.
 
@@ -526,7 +526,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
 
     try:
-        # List Projects
+        # List Projects in Space
         api_response = api_instance.spaces_projects_list(account_id, space_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
         pprint(api_response)
     except ApiException as e:

@@ -9,8 +9,8 @@ Method | HTTP request | Description
 [**team_show**](TeamsApi.md#team_show) | **GET** /accounts/{account_id}/teams/{id} | Get Team
 [**team_update**](TeamsApi.md#team_update) | **PATCH** /accounts/{account_id}/teams/{id} | Update Team
 [**teams_list**](TeamsApi.md#teams_list) | **GET** /accounts/{account_id}/teams | List Teams
-[**teams_projects_create**](TeamsApi.md#teams_projects_create) | **POST** /accounts/{account_id}/teams/{team_id}/projects | Add Project
-[**teams_projects_delete**](TeamsApi.md#teams_projects_delete) | **DELETE** /accounts/{account_id}/teams/{team_id}/projects/{id} | Remove Project
+[**teams_projects_create**](TeamsApi.md#teams_projects_create) | **POST** /accounts/{account_id}/teams/{team_id}/projects | Add Project to Team
+[**teams_projects_delete**](TeamsApi.md#teams_projects_delete) | **DELETE** /accounts/{account_id}/teams/{team_id}/projects/{id} | Remove Project from Team
 [**teams_spaces_create**](TeamsApi.md#teams_spaces_create) | **POST** /accounts/{account_id}/teams/{team_id}/spaces | Add Space
 [**teams_spaces_delete**](TeamsApi.md#teams_spaces_delete) | **DELETE** /accounts/{account_id}/teams/{team_id}/spaces/{id} | Remove Space
 [**teams_users_create**](TeamsApi.md#teams_users_create) | **POST** /accounts/{account_id}/teams/{team_id}/users | Add User
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 # **teams_projects_create**
 > teams_projects_create(account_id, team_id, teams_projects_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Add Project
+Add Project to Team
 
 Adds an existing project to the team.
 
@@ -390,7 +390,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Add Project
+        # Add Project to Team
         api_instance.teams_projects_create(account_id, team_id, teams_projects_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling TeamsApi->teams_projects_create: %s\n" % e)
@@ -432,7 +432,7 @@ void (empty response body)
 # **teams_projects_delete**
 > teams_projects_delete(account_id, team_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Remove Project
+Remove Project from Team
 
 Removes a specified project from the specified team.
 
@@ -459,7 +459,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Remove Project
+        # Remove Project from Team
         api_instance.teams_projects_delete(account_id, team_id, id, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling TeamsApi->teams_projects_delete: %s\n" % e)

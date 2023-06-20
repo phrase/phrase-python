@@ -690,7 +690,7 @@ class SpacesApi(object):
             collection_formats=collection_formats)
 
     def spaces_projects_create(self, account_id, space_id, spaces_projects_create_parameters, **kwargs):  # noqa: E501
-        """Add Project  # noqa: E501
+        """Add Project to Space  # noqa: E501
 
         Adds an existing project to the space.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -718,7 +718,7 @@ class SpacesApi(object):
         return self.spaces_projects_create_with_http_info(account_id, space_id, spaces_projects_create_parameters, **kwargs)  # noqa: E501
 
     def spaces_projects_create_with_http_info(self, account_id, space_id, spaces_projects_create_parameters, **kwargs):  # noqa: E501
-        """Add Project  # noqa: E501
+        """Add Project to Space  # noqa: E501
 
         Adds an existing project to the space.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -827,7 +827,7 @@ class SpacesApi(object):
             collection_formats=collection_formats)
 
     def spaces_projects_delete(self, account_id, space_id, id, **kwargs):  # noqa: E501
-        """Remove Project  # noqa: E501
+        """Remove Project from Space  # noqa: E501
 
         Removes a specified project from the specified space.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -855,7 +855,7 @@ class SpacesApi(object):
         return self.spaces_projects_delete_with_http_info(account_id, space_id, id, **kwargs)  # noqa: E501
 
     def spaces_projects_delete_with_http_info(self, account_id, space_id, id, **kwargs):  # noqa: E501
-        """Remove Project  # noqa: E501
+        """Remove Project from Space  # noqa: E501
 
         Removes a specified project from the specified space.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -960,7 +960,7 @@ class SpacesApi(object):
             collection_formats=collection_formats)
 
     def spaces_projects_list(self, account_id, space_id, **kwargs):  # noqa: E501
-        """List Projects  # noqa: E501
+        """List Projects in Space  # noqa: E501
 
         List all projects for the specified Space.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -989,7 +989,7 @@ class SpacesApi(object):
         return self.spaces_projects_list_with_http_info(account_id, space_id, **kwargs)  # noqa: E501
 
     def spaces_projects_list_with_http_info(self, account_id, space_id, **kwargs):  # noqa: E501
-        """List Projects  # noqa: E501
+        """List Projects in Space  # noqa: E501
 
         List all projects for the specified Space.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

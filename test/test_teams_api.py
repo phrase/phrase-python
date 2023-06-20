@@ -65,14 +65,14 @@ class TestTeamsApi(unittest.TestCase):
     def test_teams_projects_create(self):
         """Test case for teams_projects_create
 
-        Add Project  # noqa: E501
+        Add Project to Team  # noqa: E501
         """
         pass
 
     def test_teams_projects_delete(self):
         """Test case for teams_projects_delete
 
-        Remove Project  # noqa: E501
+        Remove Project from Team  # noqa: E501
         """
         pass
 

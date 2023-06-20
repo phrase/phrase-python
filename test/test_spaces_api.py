@@ -65,21 +65,21 @@ class TestSpacesApi(unittest.TestCase):
     def test_spaces_projects_create(self):
         """Test case for spaces_projects_create
 
-        Add Project  # noqa: E501
+        Add Project to Space  # noqa: E501
         """
         pass
 
     def test_spaces_projects_delete(self):
         """Test case for spaces_projects_delete
 
-        Remove Project  # noqa: E501
+        Remove Project from Space  # noqa: E501
         """
         pass
 
     def test_spaces_projects_list(self):
         """Test case for spaces_projects_list
 
-        List Projects  # noqa: E501
+        List Projects in Space  # noqa: E501
         """
         pass
 

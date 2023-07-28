@@ -35,7 +35,7 @@ class TestGitlabSyncHistory(unittest.TestCase):
         # model = phrase_api.models.gitlab_sync_history.GitlabSyncHistory()  # noqa: E501
         if include_optional :
             return GitlabSyncHistory(
-                status = 56, 
+                status = '0', 
                 action = '0', 
                 errors = [
                     '0'

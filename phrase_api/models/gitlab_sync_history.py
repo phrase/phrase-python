@@ -32,7 +32,7 @@ class GitlabSyncHistory(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'status': 'int',
+        'status': 'str',
         'action': 'str',
         'errors': 'list[str]',
         'date': 'datetime',
@@ -77,7 +77,7 @@ class GitlabSyncHistory(object):
 
 
         :return: The status of this GitlabSyncHistory.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._status
 
@@ -87,7 +87,7 @@ class GitlabSyncHistory(object):
 
 
         :param status: The status of this GitlabSyncHistory.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._status = status

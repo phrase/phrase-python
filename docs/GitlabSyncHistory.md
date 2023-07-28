@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **int** |  | [optional] 
+**status** | **str** |  | [optional] 
 **action** | **str** |  | [optional] 
 **errors** | **list[str]** |  | [optional] 
 **date** | **datetime** |  | [optional] 

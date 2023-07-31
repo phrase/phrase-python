@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **str** |  | [optional] 
 **action** | **str** |  | [optional] 
-**errors** | **list[str]** |  | [optional] 
+**errors** | [**list[GitlabSyncHistoryErrors]**](GitlabSyncHistoryErrors.md) |  | [optional] 
 **date** | **datetime** |  | [optional] 
 **details** | [**object**](.md) |  | [optional] 
 

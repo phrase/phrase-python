@@ -53,6 +53,7 @@ from phrase_api.models.gitlab_sync import GitlabSync
 from phrase_api.models.gitlab_sync_export import GitlabSyncExport
 from phrase_api.models.gitlab_sync_export_parameters import GitlabSyncExportParameters
 from phrase_api.models.gitlab_sync_history import GitlabSyncHistory
+from phrase_api.models.gitlab_sync_history_errors import GitlabSyncHistoryErrors
 from phrase_api.models.gitlab_sync_import_parameters import GitlabSyncImportParameters
 from phrase_api.models.glossary import Glossary
 from phrase_api.models.glossary_create_parameters import GlossaryCreateParameters

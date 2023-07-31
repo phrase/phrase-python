@@ -424,6 +424,7 @@ Class | Method | HTTP request | Description
  - [GitlabSyncExport](docs/GitlabSyncExport.md)
  - [GitlabSyncExportParameters](docs/GitlabSyncExportParameters.md)
  - [GitlabSyncHistory](docs/GitlabSyncHistory.md)
+ - [GitlabSyncHistoryErrors](docs/GitlabSyncHistoryErrors.md)
  - [GitlabSyncImportParameters](docs/GitlabSyncImportParameters.md)
  - [Glossary](docs/Glossary.md)
  - [GlossaryCreateParameters](docs/GlossaryCreateParameters.md)

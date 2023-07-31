@@ -34,7 +34,7 @@ class GitlabSyncHistory(object):
     openapi_types = {
         'status': 'str',
         'action': 'str',
-        'errors': 'list[str]',
+        'errors': 'list[GitlabSyncHistoryErrors]',
         'date': 'datetime',
         'details': 'object'
     }
@@ -119,7 +119,7 @@ class GitlabSyncHistory(object):
 
 
         :return: The errors of this GitlabSyncHistory.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[GitlabSyncHistoryErrors]
         """
         return self._errors
 
@@ -129,7 +129,7 @@ class GitlabSyncHistory(object):
 
 
         :param errors: The errors of this GitlabSyncHistory.  # noqa: E501
-        :type: list[str]
+        :type: list[GitlabSyncHistoryErrors]
         """
 
         self._errors = errors

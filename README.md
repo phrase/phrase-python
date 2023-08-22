@@ -167,6 +167,10 @@ Class | Method | HTTP request | Description
 *BranchesApi* | [**branch_show**](docs/BranchesApi.md#branch_show) | **GET** /projects/{project_id}/branches/{name} | Get a single branch
 *BranchesApi* | [**branch_update**](docs/BranchesApi.md#branch_update) | **PATCH** /projects/{project_id}/branches/{name} | Update a branch
 *BranchesApi* | [**branches_list**](docs/BranchesApi.md#branches_list) | **GET** /projects/{project_id}/branches | List branches
+*CommentReactionsApi* | [**reaction_create**](docs/CommentReactionsApi.md#reaction_create) | **POST** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions | Create a reaction
+*CommentReactionsApi* | [**reaction_delete**](docs/CommentReactionsApi.md#reaction_delete) | **DELETE** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions/{id} | Delete a reaction
+*CommentReactionsApi* | [**reaction_show**](docs/CommentReactionsApi.md#reaction_show) | **GET** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions/{id} | Get a single reaction
+*CommentReactionsApi* | [**reactions_list**](docs/CommentReactionsApi.md#reactions_list) | **GET** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions | List reactions
 *CommentsApi* | [**comment_create**](docs/CommentsApi.md#comment_create) | **POST** /projects/{project_id}/keys/{key_id}/comments | Create a comment
 *CommentsApi* | [**comment_delete**](docs/CommentsApi.md#comment_delete) | **DELETE** /projects/{project_id}/keys/{key_id}/comments/{id} | Delete a comment
 *CommentsApi* | [**comment_mark_check**](docs/CommentsApi.md#comment_mark_check) | **GET** /projects/{project_id}/keys/{key_id}/comments/{id}/read | Check if comment is read
@@ -410,6 +414,7 @@ Class | Method | HTTP request | Description
  - [Comment](docs/Comment.md)
  - [CommentCreateParameters](docs/CommentCreateParameters.md)
  - [CommentMarkReadParameters](docs/CommentMarkReadParameters.md)
+ - [CommentReaction](docs/CommentReaction.md)
  - [CommentUpdateParameters](docs/CommentUpdateParameters.md)
  - [CurrentUser](docs/CurrentUser.md)
  - [Distribution](docs/Distribution.md)

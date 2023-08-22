@@ -8,6 +8,7 @@ from phrase_api.api.authorizations_api import AuthorizationsApi
 from phrase_api.api.bitbucket_sync_api import BitbucketSyncApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
+from phrase_api.api.comment_reactions_api import CommentReactionsApi
 from phrase_api.api.comments_api import CommentsApi
 from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi

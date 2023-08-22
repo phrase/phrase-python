@@ -21,6 +21,7 @@ from phrase_api.api.authorizations_api import AuthorizationsApi
 from phrase_api.api.bitbucket_sync_api import BitbucketSyncApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
+from phrase_api.api.comment_reactions_api import CommentReactionsApi
 from phrase_api.api.comments_api import CommentsApi
 from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
@@ -97,6 +98,7 @@ from phrase_api.models.branch_update_parameters import BranchUpdateParameters
 from phrase_api.models.comment import Comment
 from phrase_api.models.comment_create_parameters import CommentCreateParameters
 from phrase_api.models.comment_mark_read_parameters import CommentMarkReadParameters
+from phrase_api.models.comment_reaction import CommentReaction
 from phrase_api.models.comment_update_parameters import CommentUpdateParameters
 from phrase_api.models.current_user import CurrentUser
 from phrase_api.models.distribution import Distribution

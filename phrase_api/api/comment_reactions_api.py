@@ -50,6 +50,7 @@ class CommentReactionsApi(object):
         :param str comment_id: Comment ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
+        :param str emoji: specify the emoji for the reaction
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -79,6 +80,7 @@ class CommentReactionsApi(object):
         :param str comment_id: Comment ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
+        :param str emoji: specify the emoji for the reaction
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -100,7 +102,8 @@ class CommentReactionsApi(object):
             'key_id',
             'comment_id',
             'x_phrase_app_otp',
-            'branch'
+            'branch',
+            'emoji'
         ]
         all_params.extend(
             [
@@ -145,6 +148,8 @@ class CommentReactionsApi(object):
         query_params = []
         if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
+        if 'emoji' in local_var_params and local_var_params['emoji'] is not None:  # noqa: E501
+            query_params.append(('emoji', local_var_params['emoji']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

@@ -34,22 +34,26 @@ class Comment(object):
     openapi_types = {
         'id': 'str',
         'message': 'str',
+        'has_replies': 'bool',
         'user': 'UserPreview',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'mentioned_users': 'list[UserPreview]'
+        'mentioned_users': 'list[UserPreview]',
+        'locales': 'list[LocalePreview]'
     }
 
     attribute_map = {
         'id': 'id',
         'message': 'message',
+        'has_replies': 'has_replies',
         'user': 'user',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'mentioned_users': 'mentioned_users'
+        'mentioned_users': 'mentioned_users',
+        'locales': 'locales'
     }
 
-    def __init__(self, id=None, message=None, user=None, created_at=None, updated_at=None, mentioned_users=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, message=None, has_replies=None, user=None, created_at=None, updated_at=None, mentioned_users=None, locales=None, local_vars_configuration=None):  # noqa: E501
         """Comment - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,16 +61,20 @@ class Comment(object):
 
         self._id = None
         self._message = None
+        self._has_replies = None
         self._user = None
         self._created_at = None
         self._updated_at = None
         self._mentioned_users = None
+        self._locales = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
         if message is not None:
             self.message = message
+        if has_replies is not None:
+            self.has_replies = has_replies
         if user is not None:
             self.user = user
         if created_at is not None:
@@ -75,6 +83,8 @@ class Comment(object):
             self.updated_at = updated_at
         if mentioned_users is not None:
             self.mentioned_users = mentioned_users
+        if locales is not None:
+            self.locales = locales
 
     @property
     def id(self):
@@ -117,6 +127,27 @@ class Comment(object):
         """
 
         self._message = message
+
+    @property
+    def has_replies(self):
+        """Gets the has_replies of this Comment.  # noqa: E501
+
+
+        :return: The has_replies of this Comment.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_replies
+
+    @has_replies.setter
+    def has_replies(self, has_replies):
+        """Sets the has_replies of this Comment.
+
+
+        :param has_replies: The has_replies of this Comment.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_replies = has_replies
 
     @property
     def user(self):
@@ -201,6 +232,27 @@ class Comment(object):
         """
 
         self._mentioned_users = mentioned_users
+
+    @property
+    def locales(self):
+        """Gets the locales of this Comment.  # noqa: E501
+
+
+        :return: The locales of this Comment.  # noqa: E501
+        :rtype: list[LocalePreview]
+        """
+        return self._locales
+
+    @locales.setter
+    def locales(self, locales):
+        """Sets the locales of this Comment.
+
+
+        :param locales: The locales of this Comment.  # noqa: E501
+        :type: list[LocalePreview]
+        """
+
+        self._locales = locales
 
     def to_dict(self):
         """Returns the model properties as a dict"""

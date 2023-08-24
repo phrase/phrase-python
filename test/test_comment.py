@@ -37,6 +37,7 @@ class TestComment(unittest.TestCase):
             return Comment(
                 id = '0', 
                 message = '0', 
+                has_replies = True, 
                 user = phrase_api.models.user_preview.user_preview(
                     id = '0', 
                     username = '0', 
@@ -50,6 +51,9 @@ class TestComment(unittest.TestCase):
                         username = '0', 
                         name = '0', 
                         gravatar_uid = '0', )
+                    ], 
+                locales = [
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ]
             )
         else :

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **reaction_create**
-> CommentReaction reaction_create(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> CommentReaction reaction_create(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, emoji=emoji)
 
 Create a reaction
 
@@ -39,10 +39,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     comment_id = 'comment_id_example' # str | Comment ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
+    emoji = '👍' # str | specify the emoji for the reaction
 
     try:
         # Create a reaction
-        api_response = api_instance.reaction_create(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        api_response = api_instance.reaction_create(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, emoji=emoji)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentReactionsApi->reaction_create: %s\n" % e)
@@ -58,6 +59,7 @@ Name | Type | Description  | Notes
  **comment_id** | **str**| Comment ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
+ **emoji** | **str**| specify the emoji for the reaction | [optional] 
 
 ### Return type
 

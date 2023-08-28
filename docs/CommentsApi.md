@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **comments_list**
-> list[Comment] comments_list(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> list[Comment] comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters)
 
 List comments
 
@@ -542,14 +542,18 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.CommentsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
+    comments_list_parameters = phrase_api.CommentsListParameters() # CommentsListParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
+    query = 'Some comment content' # str | Search query for comment messages
+    locale_ids = ['[\"someId\"]'] # list[str] | Search comments by their assigned locales
+    filters = ['[\"read\",\"unread\"]'] # list[str] | Specify the filter for the comments
 
     try:
         # List comments
-        api_response = api_instance.comments_list(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+        api_response = api_instance.comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentsApi->comments_list: %s\n" % e)
@@ -562,10 +566,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **key_id** | **str**| Translation Key ID | 
+ **comments_list_parameters** | [**CommentsListParameters**](CommentsListParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
+ **query** | **str**| Search query for comment messages | [optional] 
+ **locale_ids** | [**list[str]**](str.md)| Search comments by their assigned locales | [optional] 
+ **filters** | [**list[str]**](str.md)| Specify the filter for the comments | [optional] 
 
 ### Return type
 
@@ -577,7 +585,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

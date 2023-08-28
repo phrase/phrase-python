@@ -41,6 +41,7 @@ from phrase_api.models.comment_create_parameters import CommentCreateParameters
 from phrase_api.models.comment_mark_read_parameters import CommentMarkReadParameters
 from phrase_api.models.comment_reaction import CommentReaction
 from phrase_api.models.comment_update_parameters import CommentUpdateParameters
+from phrase_api.models.comments_list_parameters import CommentsListParameters
 from phrase_api.models.current_user import CurrentUser
 from phrase_api.models.distribution import Distribution
 from phrase_api.models.distribution_create_parameters import DistributionCreateParameters
@@ -149,6 +150,7 @@ from phrase_api.models.release import Release
 from phrase_api.models.release_create_parameters import ReleaseCreateParameters
 from phrase_api.models.release_preview import ReleasePreview
 from phrase_api.models.release_update_parameters import ReleaseUpdateParameters
+from phrase_api.models.replies_list_parameters import RepliesListParameters
 from phrase_api.models.screenshot import Screenshot
 from phrase_api.models.screenshot_create_parameters import ScreenshotCreateParameters
 from phrase_api.models.screenshot_marker import ScreenshotMarker

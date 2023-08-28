@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **replies_list**
-> list[Comment] replies_list(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> list[Comment] replies_list(project_id, key_id, comment_id, replies_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, filters=filters)
 
 List replies
 
@@ -39,14 +39,17 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     comment_id = 'comment_id_example' # str | Comment ID (required)
+    replies_list_parameters = phrase_api.RepliesListParameters() # RepliesListParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
+    query = 'Some comment content' # str | Search query for comment messages
+    filters = ['[\"read\",\"unread\"]'] # list[str] | Specify the filter for the comments
 
     try:
         # List replies
-        api_response = api_instance.replies_list(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+        api_response = api_instance.replies_list(project_id, key_id, comment_id, replies_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, filters=filters)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentRepliesApi->replies_list: %s\n" % e)
@@ -60,10 +63,13 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **key_id** | **str**| Translation Key ID | 
  **comment_id** | **str**| Comment ID | 
+ **replies_list_parameters** | [**RepliesListParameters**](RepliesListParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
+ **query** | **str**| Search query for comment messages | [optional] 
+ **filters** | [**list[str]**](str.md)| Specify the filter for the comments | [optional] 
 
 ### Return type
 
@@ -75,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

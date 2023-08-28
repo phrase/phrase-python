@@ -13,7 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.11.0"
+__version__ = "1.12.0"
 
 # import apis into sdk package
 from phrase_api.api.accounts_api import AccountsApi

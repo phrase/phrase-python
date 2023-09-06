@@ -176,7 +176,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.LocalesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
+    id = 'id_example' # str | Locale ID or locale name (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
 
@@ -193,7 +193,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
- **id** | **str**| ID | 
+ **id** | **str**| Locale ID or locale name | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
 
@@ -245,7 +245,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.LocalesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
+    id = 'id_example' # str | Locale ID or locale name (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     if_modified_since = 'if_modified_since_example' # str | Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
     if_none_match = 'if_none_match_example' # str | ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
@@ -280,7 +280,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
- **id** | **str**| ID | 
+ **id** | **str**| Locale ID or locale name | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **if_modified_since** | **str**| Last modified condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
  **if_none_match** | **str**| ETag condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
@@ -349,7 +349,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.LocalesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
+    id = 'id_example' # str | Locale ID or locale name (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
 
@@ -367,7 +367,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
- **id** | **str**| ID | 
+ **id** | **str**| Locale ID or locale name | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
 
@@ -419,7 +419,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.LocalesApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    id = 'id_example' # str | ID (required)
+    id = 'id_example' # str | Locale ID or locale name (required)
     locale_update_parameters = phrase_api.LocaleUpdateParameters() # LocaleUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
@@ -437,7 +437,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
- **id** | **str**| ID | 
+ **id** | **str**| Locale ID or locale name | 
  **locale_update_parameters** | [**LocaleUpdateParameters**](LocaleUpdateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 

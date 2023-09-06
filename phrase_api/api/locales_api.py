@@ -307,7 +307,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -335,7 +335,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
@@ -436,7 +436,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
         :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
@@ -481,7 +481,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
         :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
@@ -654,7 +654,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -682,7 +682,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
@@ -787,7 +787,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param LocaleUpdateParameters locale_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -815,7 +815,7 @@ class LocalesApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
-        :param str id: ID (required)
+        :param str id: Locale ID or locale name (required)
         :param LocaleUpdateParameters locale_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code

@@ -49,7 +49,8 @@ class TestUploadCreateParameters(unittest.TestCase):
                 locale_mapping = {"en": "2"}, 
                 format_options = {"foo": "bar"}, 
                 autotranslate = True, 
-                mark_reviewed = True
+                mark_reviewed = True, 
+                tag_only_affected_keys = True
             )
         else :
             return UploadCreateParameters(

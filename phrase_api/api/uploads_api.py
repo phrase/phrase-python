@@ -62,6 +62,7 @@ class UploadsApi(object):
         :param object format_options: Additional options available for specific formats. See our format guide for complete list.
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
+        :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -103,6 +104,7 @@ class UploadsApi(object):
         :param object format_options: Additional options available for specific formats. See our format guide for complete list.
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
+        :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -136,7 +138,8 @@ class UploadsApi(object):
             'locale_mapping',
             'format_options',
             'autotranslate',
-            'mark_reviewed'
+            'mark_reviewed',
+            'tag_only_affected_keys'
         ]
         all_params.extend(
             [
@@ -204,6 +207,8 @@ class UploadsApi(object):
             form_params.append(('autotranslate', local_var_params['autotranslate']))  # noqa: E501
         if 'mark_reviewed' in local_var_params:
             form_params.append(('mark_reviewed', local_var_params['mark_reviewed']))  # noqa: E501
+        if 'tag_only_affected_keys' in local_var_params:
+            form_params.append(('tag_only_affected_keys', local_var_params['tag_only_affected_keys']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

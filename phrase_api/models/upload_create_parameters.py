@@ -46,7 +46,8 @@ class UploadCreateParameters(object):
         'locale_mapping': 'object',
         'format_options': 'object',
         'autotranslate': 'bool',
-        'mark_reviewed': 'bool'
+        'mark_reviewed': 'bool',
+        'tag_only_affected_keys': 'bool'
     }
 
     attribute_map = {
@@ -64,10 +65,11 @@ class UploadCreateParameters(object):
         'locale_mapping': 'locale_mapping',
         'format_options': 'format_options',
         'autotranslate': 'autotranslate',
-        'mark_reviewed': 'mark_reviewed'
+        'mark_reviewed': 'mark_reviewed',
+        'tag_only_affected_keys': 'tag_only_affected_keys'
     }
 
-    def __init__(self, branch=None, file=None, file_format=None, locale_id=None, tags=None, update_translations=None, update_descriptions=None, convert_emoji=None, skip_upload_tags=None, skip_unverification=None, file_encoding=None, locale_mapping=None, format_options=None, autotranslate=None, mark_reviewed=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, file=None, file_format=None, locale_id=None, tags=None, update_translations=None, update_descriptions=None, convert_emoji=None, skip_upload_tags=None, skip_unverification=None, file_encoding=None, locale_mapping=None, format_options=None, autotranslate=None, mark_reviewed=None, tag_only_affected_keys=False, local_vars_configuration=None):  # noqa: E501
         """UploadCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -88,6 +90,7 @@ class UploadCreateParameters(object):
         self._format_options = None
         self._autotranslate = None
         self._mark_reviewed = None
+        self._tag_only_affected_keys = None
         self.discriminator = None
 
         if branch is not None:
@@ -120,6 +123,8 @@ class UploadCreateParameters(object):
             self.autotranslate = autotranslate
         if mark_reviewed is not None:
             self.mark_reviewed = mark_reviewed
+        if tag_only_affected_keys is not None:
+            self.tag_only_affected_keys = tag_only_affected_keys
 
     @property
     def branch(self):
@@ -465,6 +470,29 @@ class UploadCreateParameters(object):
         """
 
         self._mark_reviewed = mark_reviewed
+
+    @property
+    def tag_only_affected_keys(self):
+        """Gets the tag_only_affected_keys of this UploadCreateParameters.  # noqa: E501
+
+        Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`  # noqa: E501
+
+        :return: The tag_only_affected_keys of this UploadCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._tag_only_affected_keys
+
+    @tag_only_affected_keys.setter
+    def tag_only_affected_keys(self, tag_only_affected_keys):
+        """Sets the tag_only_affected_keys of this UploadCreateParameters.
+
+        Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`  # noqa: E501
+
+        :param tag_only_affected_keys: The tag_only_affected_keys of this UploadCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._tag_only_affected_keys = tag_only_affected_keys
 
     def to_dict(self):
         """Returns the model properties as a dict"""

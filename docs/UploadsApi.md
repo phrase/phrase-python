@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **upload_create**
-> Upload upload_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file=file, file_format=file_format, locale_id=locale_id, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed)
+> Upload upload_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file=file, file_format=file_format, locale_id=locale_id, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys)
 
 Upload a new file
 
@@ -50,10 +50,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     format_options = None # object | Additional options available for specific formats. See our format guide for complete list.
     autotranslate = True # bool | If set, translations for the uploaded language will be fetched automatically.
     mark_reviewed = True # bool | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
+    tag_only_affected_keys = False # bool | Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false` (default to False)
 
     try:
         # Upload a new file
-        api_response = api_instance.upload_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file=file, file_format=file_format, locale_id=locale_id, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed)
+        api_response = api_instance.upload_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, file=file, file_format=file_format, locale_id=locale_id, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UploadsApi->upload_create: %s\n" % e)
@@ -81,6 +82,7 @@ Name | Type | Description  | Notes
  **format_options** | [**object**](object.md)| Additional options available for specific formats. See our format guide for complete list. | [optional] 
  **autotranslate** | **bool**| If set, translations for the uploaded language will be fetched automatically. | [optional] 
  **mark_reviewed** | **bool**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project. | [optional] 
+ **tag_only_affected_keys** | **bool**| Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is &#x60;false&#x60; | [optional] [default to False]
 
 ### Return type
 

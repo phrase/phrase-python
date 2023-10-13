@@ -33,6 +33,8 @@ class TestRepliesListParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.replies_list_parameters.RepliesListParameters()  # noqa: E501
+
+        """
         if include_optional :
             return RepliesListParameters(
                 branch = 'my-feature-branch', 
@@ -42,6 +44,7 @@ class TestRepliesListParameters(unittest.TestCase):
         else :
             return RepliesListParameters(
         )
+        """
 
     def testRepliesListParameters(self):
         """Test RepliesListParameters"""

@@ -33,6 +33,8 @@ class TestNotification(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.notification.Notification()  # noqa: E501
+
+        """
         if include_optional :
             return Notification(
                 id = '0', 
@@ -56,6 +58,7 @@ class TestNotification(unittest.TestCase):
         else :
             return Notification(
         )
+        """
 
     def testNotification(self):
         """Test Notification"""

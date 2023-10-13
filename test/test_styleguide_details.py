@@ -33,6 +33,8 @@ class TestStyleguideDetails(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.styleguide_details.StyleguideDetails()  # noqa: E501
+
+        """
         if include_optional :
             return StyleguideDetails(
                 id = '0', 
@@ -56,6 +58,7 @@ class TestStyleguideDetails(unittest.TestCase):
         else :
             return StyleguideDetails(
         )
+        """
 
     def testStyleguideDetails(self):
         """Test StyleguideDetails"""

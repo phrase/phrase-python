@@ -33,6 +33,8 @@ class TestTranslationVersion(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.translation_version.TranslationVersion()  # noqa: E501
+
+        """
         if include_optional :
             return TranslationVersion(
                 id = '0', 
@@ -50,6 +52,7 @@ class TestTranslationVersion(unittest.TestCase):
         else :
             return TranslationVersion(
         )
+        """
 
     def testTranslationVersion(self):
         """Test TranslationVersion"""

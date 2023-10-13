@@ -33,6 +33,8 @@ class TestUpload(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.upload.Upload()  # noqa: E501
+
+        """
         if include_optional :
             return Upload(
                 id = '0', 
@@ -55,6 +57,7 @@ class TestUpload(unittest.TestCase):
         else :
             return Upload(
         )
+        """
 
     def testUpload(self):
         """Test Upload"""

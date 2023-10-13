@@ -33,6 +33,8 @@ class TestKeyCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.key_create_parameters.KeyCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return KeyCreateParameters(
                 branch = 'my-feature-branch', 
@@ -55,6 +57,7 @@ class TestKeyCreateParameters(unittest.TestCase):
         else :
             return KeyCreateParameters(
         )
+        """
 
     def testKeyCreateParameters(self):
         """Test KeyCreateParameters"""

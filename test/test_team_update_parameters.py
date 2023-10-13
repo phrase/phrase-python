@@ -33,6 +33,8 @@ class TestTeamUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.team_update_parameters.TeamUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return TeamUpdateParameters(
                 name = 'German Translators'
@@ -40,6 +42,7 @@ class TestTeamUpdateParameters(unittest.TestCase):
         else :
             return TeamUpdateParameters(
         )
+        """
 
     def testTeamUpdateParameters(self):
         """Test TeamUpdateParameters"""

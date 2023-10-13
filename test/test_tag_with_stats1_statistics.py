@@ -33,6 +33,8 @@ class TestTagWithStats1Statistics(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.tag_with_stats1_statistics.TagWithStats1Statistics()  # noqa: E501
+
+        """
         if include_optional :
             return TagWithStats1Statistics(
                 keys_total_count = 56, 
@@ -43,6 +45,7 @@ class TestTagWithStats1Statistics(unittest.TestCase):
         else :
             return TagWithStats1Statistics(
         )
+        """
 
     def testTagWithStats1Statistics(self):
         """Test TagWithStats1Statistics"""

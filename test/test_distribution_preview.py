@@ -33,6 +33,8 @@ class TestDistributionPreview(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.distribution_preview.DistributionPreview()  # noqa: E501
+
+        """
         if include_optional :
             return DistributionPreview(
                 id = '0', 
@@ -48,6 +50,7 @@ class TestDistributionPreview(unittest.TestCase):
         else :
             return DistributionPreview(
         )
+        """
 
     def testDistributionPreview(self):
         """Test DistributionPreview"""

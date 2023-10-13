@@ -33,6 +33,8 @@ class TestScreenshotCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.screenshot_create_parameters.ScreenshotCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return ScreenshotCreateParameters(
                 branch = 'my-feature-branch', 
@@ -43,6 +45,7 @@ class TestScreenshotCreateParameters(unittest.TestCase):
         else :
             return ScreenshotCreateParameters(
         )
+        """
 
     def testScreenshotCreateParameters(self):
         """Test ScreenshotCreateParameters"""

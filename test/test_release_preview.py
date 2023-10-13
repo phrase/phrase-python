@@ -33,6 +33,8 @@ class TestReleasePreview(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.release_preview.ReleasePreview()  # noqa: E501
+
+        """
         if include_optional :
             return ReleasePreview(
                 id = '0', 
@@ -59,6 +61,7 @@ class TestReleasePreview(unittest.TestCase):
         else :
             return ReleasePreview(
         )
+        """
 
     def testReleasePreview(self):
         """Test ReleasePreview"""

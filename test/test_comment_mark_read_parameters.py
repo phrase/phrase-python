@@ -33,6 +33,8 @@ class TestCommentMarkReadParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.comment_mark_read_parameters.CommentMarkReadParameters()  # noqa: E501
+
+        """
         if include_optional :
             return CommentMarkReadParameters(
                 branch = 'my-feature-branch'
@@ -40,6 +42,7 @@ class TestCommentMarkReadParameters(unittest.TestCase):
         else :
             return CommentMarkReadParameters(
         )
+        """
 
     def testCommentMarkReadParameters(self):
         """Test CommentMarkReadParameters"""

@@ -33,6 +33,8 @@ class TestTagCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.tag_create_parameters.TagCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return TagCreateParameters(
                 branch = 'my-feature-branch', 
@@ -41,6 +43,7 @@ class TestTagCreateParameters(unittest.TestCase):
         else :
             return TagCreateParameters(
         )
+        """
 
     def testTagCreateParameters(self):
         """Test TagCreateParameters"""

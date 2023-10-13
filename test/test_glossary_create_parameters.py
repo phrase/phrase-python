@@ -33,6 +33,8 @@ class TestGlossaryCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.glossary_create_parameters.GlossaryCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return GlossaryCreateParameters(
                 name = 'My glossary', 
@@ -42,6 +44,7 @@ class TestGlossaryCreateParameters(unittest.TestCase):
         else :
             return GlossaryCreateParameters(
         )
+        """
 
     def testGlossaryCreateParameters(self):
         """Test GlossaryCreateParameters"""

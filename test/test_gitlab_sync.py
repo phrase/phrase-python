@@ -33,6 +33,8 @@ class TestGitlabSync(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.gitlab_sync.GitlabSync()  # noqa: E501
+
+        """
         if include_optional :
             return GitlabSync(
                 id = '0', 
@@ -50,6 +52,7 @@ class TestGitlabSync(unittest.TestCase):
         else :
             return GitlabSync(
         )
+        """
 
     def testGitlabSync(self):
         """Test GitlabSync"""

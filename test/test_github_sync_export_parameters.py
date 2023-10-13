@@ -33,6 +33,8 @@ class TestGithubSyncExportParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.github_sync_export_parameters.GithubSyncExportParameters()  # noqa: E501
+
+        """
         if include_optional :
             return GithubSyncExportParameters(
                 project_id = 'abcd1234'
@@ -40,6 +42,7 @@ class TestGithubSyncExportParameters(unittest.TestCase):
         else :
             return GithubSyncExportParameters(
         )
+        """
 
     def testGithubSyncExportParameters(self):
         """Test GithubSyncExportParameters"""

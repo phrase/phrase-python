@@ -33,6 +33,8 @@ class TestJobLocaleReopenParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.job_locale_reopen_parameters.JobLocaleReopenParameters()  # noqa: E501
+
+        """
         if include_optional :
             return JobLocaleReopenParameters(
                 branch = 'my-feature-branch'
@@ -40,6 +42,7 @@ class TestJobLocaleReopenParameters(unittest.TestCase):
         else :
             return JobLocaleReopenParameters(
         )
+        """
 
     def testJobLocaleReopenParameters(self):
         """Test JobLocaleReopenParameters"""

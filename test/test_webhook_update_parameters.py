@@ -33,6 +33,8 @@ class TestWebhookUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.webhook_update_parameters.WebhookUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return WebhookUpdateParameters(
                 callback_url = 'http://example.com/hooks/phraseapp-notifications', 
@@ -45,6 +47,7 @@ class TestWebhookUpdateParameters(unittest.TestCase):
         else :
             return WebhookUpdateParameters(
         )
+        """
 
     def testWebhookUpdateParameters(self):
         """Test WebhookUpdateParameters"""

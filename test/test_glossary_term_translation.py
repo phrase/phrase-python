@@ -33,6 +33,8 @@ class TestGlossaryTermTranslation(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.glossary_term_translation.GlossaryTermTranslation()  # noqa: E501
+
+        """
         if include_optional :
             return GlossaryTermTranslation(
                 id = '0', 
@@ -44,6 +46,7 @@ class TestGlossaryTermTranslation(unittest.TestCase):
         else :
             return GlossaryTermTranslation(
         )
+        """
 
     def testGlossaryTermTranslation(self):
         """Test GlossaryTermTranslation"""

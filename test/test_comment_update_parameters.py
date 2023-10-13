@@ -33,6 +33,8 @@ class TestCommentUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.comment_update_parameters.CommentUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return CommentUpdateParameters(
                 branch = 'my-feature-branch', 
@@ -41,6 +43,7 @@ class TestCommentUpdateParameters(unittest.TestCase):
         else :
             return CommentUpdateParameters(
         )
+        """
 
     def testCommentUpdateParameters(self):
         """Test CommentUpdateParameters"""

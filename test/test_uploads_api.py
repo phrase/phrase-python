@@ -12,6 +12,7 @@
 from __future__ import absolute_import
 
 import unittest
+from unittest.mock import Mock, patch
 
 import phrase_api
 from phrase_api.api.uploads_api import UploadsApi  # noqa: E501
@@ -22,17 +23,34 @@ class TestUploadsApi(unittest.TestCase):
     """UploadsApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.uploads_api.UploadsApi()  # noqa: E501
+        self.configuration = phrase_api.Configuration()
+        self.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        self.configuration.api_key_prefix['Authorization'] = 'token'
 
     def tearDown(self):
         pass
 
-    def test_upload_create(self):
+    @patch('phrase_api.ApiClient.request')
+    def test_upload_create(self, mock_post):
         """Test case for upload_create
 
         Upload a new file  # noqa: E501
         """
-        pass
+        mock_post.return_value = Mock(ok=True)
+        mock_post.return_value.data = '{"id": "upload_id", "format": "simple_json"}'
+
+        project_id = "project_id_example"
+        with phrase_api.ApiClient(self.configuration) as api_client:
+            api_instance = phrase_api.UploadsApi(api_client)
+            api_response = api_instance.upload_create(project_id, file="./README.md", file_format="simple_json")
+
+            self.assertEqual("POST", mock_post.call_args_list[0].args[0])
+            self.assertEqual("https://api.phrase.com/v2/projects/project_id_example/uploads", mock_post.call_args_list[0].args[1])
+
+            self.assertIsNotNone(api_response)
+            self.assertIsInstance(api_response, phrase_api.models.upload.Upload)
+            self.assertEqual("upload_id", api_response.id)
+            self.assertEqual("simple_json", api_response.format)
 
     def test_upload_show(self):
         """Test case for upload_show

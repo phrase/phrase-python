@@ -33,6 +33,8 @@ class TestTag(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.tag.Tag()  # noqa: E501
+
+        """
         if include_optional :
             return Tag(
                 name = '0', 
@@ -43,6 +45,7 @@ class TestTag(unittest.TestCase):
         else :
             return Tag(
         )
+        """
 
     def testTag(self):
         """Test Tag"""

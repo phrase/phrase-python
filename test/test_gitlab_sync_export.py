@@ -33,6 +33,8 @@ class TestGitlabSyncExport(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.gitlab_sync_export.GitlabSyncExport()  # noqa: E501
+
+        """
         if include_optional :
             return GitlabSyncExport(
                 merge_request_id = 56, 
@@ -41,6 +43,7 @@ class TestGitlabSyncExport(unittest.TestCase):
         else :
             return GitlabSyncExport(
         )
+        """
 
     def testGitlabSyncExport(self):
         """Test GitlabSyncExport"""

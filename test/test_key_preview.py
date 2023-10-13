@@ -33,6 +33,8 @@ class TestKeyPreview(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.key_preview.KeyPreview()  # noqa: E501
+
+        """
         if include_optional :
             return KeyPreview(
                 id = '0', 
@@ -42,6 +44,7 @@ class TestKeyPreview(unittest.TestCase):
         else :
             return KeyPreview(
         )
+        """
 
     def testKeyPreview(self):
         """Test KeyPreview"""

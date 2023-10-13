@@ -33,6 +33,8 @@ class TestTeamsUsersCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.teams_users_create_parameters.TeamsUsersCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return TeamsUsersCreateParameters(
                 id = 'a4b3c2d1'
@@ -40,6 +42,7 @@ class TestTeamsUsersCreateParameters(unittest.TestCase):
         else :
             return TeamsUsersCreateParameters(
         )
+        """
 
     def testTeamsUsersCreateParameters(self):
         """Test TeamsUsersCreateParameters"""

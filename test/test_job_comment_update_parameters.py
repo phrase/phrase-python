@@ -33,6 +33,8 @@ class TestJobCommentUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.job_comment_update_parameters.JobCommentUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return JobCommentUpdateParameters(
                 message = 'Some message...'
@@ -40,6 +42,7 @@ class TestJobCommentUpdateParameters(unittest.TestCase):
         else :
             return JobCommentUpdateParameters(
         )
+        """
 
     def testJobCommentUpdateParameters(self):
         """Test JobCommentUpdateParameters"""

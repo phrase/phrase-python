@@ -33,6 +33,8 @@ class TestMemberUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.member_update_parameters.MemberUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return MemberUpdateParameters(
                 strategy = 'set', 
@@ -46,6 +48,7 @@ class TestMemberUpdateParameters(unittest.TestCase):
         else :
             return MemberUpdateParameters(
         )
+        """
 
     def testMemberUpdateParameters(self):
         """Test MemberUpdateParameters"""

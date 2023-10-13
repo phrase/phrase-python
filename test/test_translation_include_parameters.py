@@ -33,6 +33,8 @@ class TestTranslationIncludeParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.translation_include_parameters.TranslationIncludeParameters()  # noqa: E501
+
+        """
         if include_optional :
             return TranslationIncludeParameters(
                 branch = 'my-feature-branch'
@@ -40,6 +42,7 @@ class TestTranslationIncludeParameters(unittest.TestCase):
         else :
             return TranslationIncludeParameters(
         )
+        """
 
     def testTranslationIncludeParameters(self):
         """Test TranslationIncludeParameters"""

@@ -33,6 +33,8 @@ class TestAuthorizationUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.authorization_update_parameters.AuthorizationUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return AuthorizationUpdateParameters(
                 note = 'My Deploy Script', 
@@ -42,6 +44,7 @@ class TestAuthorizationUpdateParameters(unittest.TestCase):
         else :
             return AuthorizationUpdateParameters(
         )
+        """
 
     def testAuthorizationUpdateParameters(self):
         """Test AuthorizationUpdateParameters"""

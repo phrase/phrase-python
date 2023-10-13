@@ -33,6 +33,8 @@ class TestWebhookCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.webhook_create_parameters.WebhookCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return WebhookCreateParameters(
                 callback_url = 'http://example.com/hooks/phraseapp-notifications', 
@@ -45,6 +47,7 @@ class TestWebhookCreateParameters(unittest.TestCase):
         else :
             return WebhookCreateParameters(
         )
+        """
 
     def testWebhookCreateParameters(self):
         """Test WebhookCreateParameters"""

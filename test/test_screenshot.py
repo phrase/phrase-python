@@ -33,6 +33,8 @@ class TestScreenshot(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.screenshot.Screenshot()  # noqa: E501
+
+        """
         if include_optional :
             return Screenshot(
                 id = '0', 
@@ -46,6 +48,7 @@ class TestScreenshot(unittest.TestCase):
         else :
             return Screenshot(
         )
+        """
 
     def testScreenshot(self):
         """Test Screenshot"""

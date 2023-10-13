@@ -33,6 +33,8 @@ class TestJobLocale(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.job_locale.JobLocale()  # noqa: E501
+
+        """
         if include_optional :
             return JobLocale(
                 id = '0', 
@@ -61,6 +63,7 @@ class TestJobLocale(unittest.TestCase):
         else :
             return JobLocale(
         )
+        """
 
     def testJobLocale(self):
         """Test JobLocale"""

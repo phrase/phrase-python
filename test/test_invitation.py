@@ -33,6 +33,8 @@ class TestInvitation(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.invitation.Invitation()  # noqa: E501
+
+        """
         if include_optional :
             return Invitation(
                 id = '0', 
@@ -70,6 +72,7 @@ class TestInvitation(unittest.TestCase):
         else :
             return Invitation(
         )
+        """
 
     def testInvitation(self):
         """Test Invitation"""

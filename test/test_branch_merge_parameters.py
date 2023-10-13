@@ -33,6 +33,8 @@ class TestBranchMergeParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.branch_merge_parameters.BranchMergeParameters()  # noqa: E501
+
+        """
         if include_optional :
             return BranchMergeParameters(
                 strategy = 'use_main'
@@ -40,6 +42,7 @@ class TestBranchMergeParameters(unittest.TestCase):
         else :
             return BranchMergeParameters(
         )
+        """
 
     def testBranchMergeParameters(self):
         """Test BranchMergeParameters"""

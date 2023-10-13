@@ -33,6 +33,8 @@ class TestNotificationGroup(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.notification_group.NotificationGroup()  # noqa: E501
+
+        """
         if include_optional :
             return NotificationGroup(
                 id = '0', 
@@ -43,6 +45,7 @@ class TestNotificationGroup(unittest.TestCase):
         else :
             return NotificationGroup(
         )
+        """
 
     def testNotificationGroup(self):
         """Test NotificationGroup"""

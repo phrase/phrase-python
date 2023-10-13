@@ -33,6 +33,8 @@ class TestCurrentUser(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.current_user.CurrentUser()  # noqa: E501
+
+        """
         if include_optional :
             return CurrentUser(
                 id = '0', 
@@ -47,6 +49,7 @@ class TestCurrentUser(unittest.TestCase):
         else :
             return CurrentUser(
         )
+        """
 
     def testCurrentUser(self):
         """Test CurrentUser"""

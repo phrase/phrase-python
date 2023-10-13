@@ -33,6 +33,8 @@ class TestBranchCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.branch_create_parameters.BranchCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return BranchCreateParameters(
                 name = 'my-branch'
@@ -40,6 +42,7 @@ class TestBranchCreateParameters(unittest.TestCase):
         else :
             return BranchCreateParameters(
         )
+        """
 
     def testBranchCreateParameters(self):
         """Test BranchCreateParameters"""

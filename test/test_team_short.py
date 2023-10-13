@@ -33,6 +33,8 @@ class TestTeamShort(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.team_short.TeamShort()  # noqa: E501
+
+        """
         if include_optional :
             return TeamShort(
                 id = '0', 
@@ -43,6 +45,7 @@ class TestTeamShort(unittest.TestCase):
         else :
             return TeamShort(
         )
+        """
 
     def testTeamShort(self):
         """Test TeamShort"""

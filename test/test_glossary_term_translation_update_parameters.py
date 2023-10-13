@@ -33,6 +33,8 @@ class TestGlossaryTermTranslationUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.glossary_term_translation_update_parameters.GlossaryTermTranslationUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return GlossaryTermTranslationUpdateParameters(
                 locale_code = 'en-US', 
@@ -41,6 +43,7 @@ class TestGlossaryTermTranslationUpdateParameters(unittest.TestCase):
         else :
             return GlossaryTermTranslationUpdateParameters(
         )
+        """
 
     def testGlossaryTermTranslationUpdateParameters(self):
         """Test GlossaryTermTranslationUpdateParameters"""

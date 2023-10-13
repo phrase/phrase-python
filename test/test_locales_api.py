@@ -12,6 +12,8 @@
 from __future__ import absolute_import
 
 import unittest
+from unittest.mock import Mock, patch
+
 
 import phrase_api
 from phrase_api.api.locales_api import LocalesApi  # noqa: E501
@@ -22,7 +24,9 @@ class TestLocalesApi(unittest.TestCase):
     """LocalesApi unit test stubs"""
 
     def setUp(self):
-        self.api = phrase_api.api.locales_api.LocalesApi()  # noqa: E501
+        self.configuration = phrase_api.Configuration()
+        self.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+        self.configuration.api_key_prefix['Authorization'] = 'token'
 
     def tearDown(self):
         pass
@@ -33,6 +37,8 @@ class TestLocalesApi(unittest.TestCase):
         List locales used in account  # noqa: E501
         """
         pass
+
+
 
     def test_locale_create(self):
         """Test case for locale_create
@@ -69,12 +75,27 @@ class TestLocalesApi(unittest.TestCase):
         """
         pass
 
-    def test_locales_list(self):
+    @patch('phrase_api.ApiClient.request')
+    def test_locales_list(self, mock_get):
         """Test case for locales_list
 
         List locales  # noqa: E501
         """
-        pass
+        mock_get.return_value = Mock(ok=True)
+        mock_get.return_value.data = '[{"id":"locale_id","name":"locale_name","code":"locale_code","default":true,"main":true,"rtl":true,"plural_forms":["plural_forms"]}]'
+
+        project_id = "project_id_example"
+        with phrase_api.ApiClient(self.configuration) as api_client:
+            api_instance = phrase_api.api.locales_api.LocalesApi(api_client)
+            api_response = api_instance.locales_list(project_id)
+
+            self.assertIsNotNone(api_response)
+            self.assertEqual(1, len(api_response))
+            self.assertIsInstance(api_response[0], phrase_api.models.locale.Locale)
+            self.assertEqual("locale_id", api_response[0].id)
+            self.assertEqual("locale_id", api_response[0].id)
+            self.assertEqual("locale_name", api_response[0].name)
+
 
 
 if __name__ == '__main__':

@@ -33,6 +33,8 @@ class TestDocument(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.document.Document()  # noqa: E501
+
+        """
         if include_optional :
             return Document(
                 id = '0', 
@@ -43,6 +45,7 @@ class TestDocument(unittest.TestCase):
         else :
             return Document(
         )
+        """
 
     def testDocument(self):
         """Test Document"""

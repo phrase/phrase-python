@@ -33,6 +33,8 @@ class TestAffectedCount(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.affected_count.AffectedCount()  # noqa: E501
+
+        """
         if include_optional :
             return AffectedCount(
                 records_affected = 56
@@ -40,6 +42,7 @@ class TestAffectedCount(unittest.TestCase):
         else :
             return AffectedCount(
         )
+        """
 
     def testAffectedCount(self):
         """Test AffectedCount"""

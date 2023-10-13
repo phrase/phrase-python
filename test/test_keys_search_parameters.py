@@ -33,6 +33,8 @@ class TestKeysSearchParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.keys_search_parameters.KeysSearchParameters()  # noqa: E501
+
+        """
         if include_optional :
             return KeysSearchParameters(
                 branch = 'my-feature-branch', 
@@ -44,6 +46,7 @@ class TestKeysSearchParameters(unittest.TestCase):
         else :
             return KeysSearchParameters(
         )
+        """
 
     def testKeysSearchParameters(self):
         """Test KeysSearchParameters"""

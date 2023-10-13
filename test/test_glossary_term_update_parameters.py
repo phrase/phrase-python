@@ -33,6 +33,8 @@ class TestGlossaryTermUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.glossary_term_update_parameters.GlossaryTermUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return GlossaryTermUpdateParameters(
                 term = 'MyCompany', 
@@ -43,6 +45,7 @@ class TestGlossaryTermUpdateParameters(unittest.TestCase):
         else :
             return GlossaryTermUpdateParameters(
         )
+        """
 
     def testGlossaryTermUpdateParameters(self):
         """Test GlossaryTermUpdateParameters"""

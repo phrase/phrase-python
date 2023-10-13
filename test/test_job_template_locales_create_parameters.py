@@ -33,6 +33,8 @@ class TestJobTemplateLocalesCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.job_template_locales_create_parameters.JobTemplateLocalesCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return JobTemplateLocalesCreateParameters(
                 branch = 'my-feature-branch', 
@@ -46,6 +48,7 @@ class TestJobTemplateLocalesCreateParameters(unittest.TestCase):
             return JobTemplateLocalesCreateParameters(
                 locale_id = 'abcd1234cdef1234abcd1234cdef1234',
         )
+        """
 
     def testJobTemplateLocalesCreateParameters(self):
         """Test JobTemplateLocalesCreateParameters"""

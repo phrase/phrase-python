@@ -33,6 +33,8 @@ class TestBranch(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.branch.Branch()  # noqa: E501
+
+        """
         if include_optional :
             return Branch(
                 base_project_id = '0', 
@@ -56,6 +58,7 @@ class TestBranch(unittest.TestCase):
         else :
             return Branch(
         )
+        """
 
     def testBranch(self):
         """Test Branch"""

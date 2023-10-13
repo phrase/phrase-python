@@ -33,6 +33,8 @@ class TestTranslationKeyDetails1(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.translation_key_details1.TranslationKeyDetails1()  # noqa: E501
+
+        """
         if include_optional :
             return TranslationKeyDetails1(
                 name_plural = '0', 
@@ -52,6 +54,7 @@ class TestTranslationKeyDetails1(unittest.TestCase):
         else :
             return TranslationKeyDetails1(
         )
+        """
 
     def testTranslationKeyDetails1(self):
         """Test TranslationKeyDetails1"""

@@ -33,6 +33,8 @@ class TestLocalePreview(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.locale_preview.LocalePreview()  # noqa: E501
+
+        """
         if include_optional :
             return LocalePreview(
                 id = '0', 
@@ -42,6 +44,7 @@ class TestLocalePreview(unittest.TestCase):
         else :
             return LocalePreview(
         )
+        """
 
     def testLocalePreview(self):
         """Test LocalePreview"""

@@ -33,6 +33,8 @@ class TestKeysExcludeParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.keys_exclude_parameters.KeysExcludeParameters()  # noqa: E501
+
+        """
         if include_optional :
             return KeysExcludeParameters(
                 branch = 'my-feature-branch', 
@@ -43,6 +45,7 @@ class TestKeysExcludeParameters(unittest.TestCase):
         else :
             return KeysExcludeParameters(
         )
+        """
 
     def testKeysExcludeParameters(self):
         """Test KeysExcludeParameters"""

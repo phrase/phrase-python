@@ -33,6 +33,8 @@ class TestBranchName(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.branch_name.BranchName()  # noqa: E501
+
+        """
         if include_optional :
             return BranchName(
                 name = '0'
@@ -40,6 +42,7 @@ class TestBranchName(unittest.TestCase):
         else :
             return BranchName(
         )
+        """
 
     def testBranchName(self):
         """Test BranchName"""

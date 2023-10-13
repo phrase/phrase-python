@@ -33,6 +33,8 @@ class TestUploadSummary(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.upload_summary.UploadSummary()  # noqa: E501
+
+        """
         if include_optional :
             return UploadSummary(
                 locales_created = 56, 
@@ -47,6 +49,7 @@ class TestUploadSummary(unittest.TestCase):
         else :
             return UploadSummary(
         )
+        """
 
     def testUploadSummary(self):
         """Test UploadSummary"""

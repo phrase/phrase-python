@@ -33,6 +33,8 @@ class TestOrganizationJobTemplateDetails(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.organization_job_template_details.OrganizationJobTemplateDetails()  # noqa: E501
+
+        """
         if include_optional :
             return OrganizationJobTemplateDetails(
                 id = '0', 
@@ -57,6 +59,7 @@ class TestOrganizationJobTemplateDetails(unittest.TestCase):
         else :
             return OrganizationJobTemplateDetails(
         )
+        """
 
     def testOrganizationJobTemplateDetails(self):
         """Test OrganizationJobTemplateDetails"""

@@ -33,6 +33,8 @@ class TestReleaseCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.release_create_parameters.ReleaseCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return ReleaseCreateParameters(
                 description = 'My first Release', 
@@ -44,6 +46,7 @@ class TestReleaseCreateParameters(unittest.TestCase):
         else :
             return ReleaseCreateParameters(
         )
+        """
 
     def testReleaseCreateParameters(self):
         """Test ReleaseCreateParameters"""

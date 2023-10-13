@@ -33,6 +33,8 @@ class TestAffectedResources(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.affected_resources.AffectedResources()  # noqa: E501
+
+        """
         if include_optional :
             return AffectedResources(
                 records_affected = 56
@@ -40,6 +42,7 @@ class TestAffectedResources(unittest.TestCase):
         else :
             return AffectedResources(
         )
+        """
 
     def testAffectedResources(self):
         """Test AffectedResources"""

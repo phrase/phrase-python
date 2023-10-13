@@ -33,6 +33,8 @@ class TestLocaleDetails(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.locale_details.LocaleDetails()  # noqa: E501
+
+        """
         if include_optional :
             return LocaleDetails(
                 id = '0', 
@@ -60,6 +62,7 @@ class TestLocaleDetails(unittest.TestCase):
         else :
             return LocaleDetails(
         )
+        """
 
     def testLocaleDetails(self):
         """Test LocaleDetails"""

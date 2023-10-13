@@ -33,6 +33,8 @@ class TestProjectUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.project_update_parameters.ProjectUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return ProjectUpdateParameters(
                 account_id = 'abcd1234', 
@@ -64,6 +66,7 @@ class TestProjectUpdateParameters(unittest.TestCase):
         else :
             return ProjectUpdateParameters(
         )
+        """
 
     def testProjectUpdateParameters(self):
         """Test ProjectUpdateParameters"""

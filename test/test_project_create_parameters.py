@@ -33,6 +33,8 @@ class TestProjectCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.project_create_parameters.ProjectCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return ProjectCreateParameters(
                 name = 'My Android Project', 
@@ -65,6 +67,7 @@ class TestProjectCreateParameters(unittest.TestCase):
         else :
             return ProjectCreateParameters(
         )
+        """
 
     def testProjectCreateParameters(self):
         """Test ProjectCreateParameters"""

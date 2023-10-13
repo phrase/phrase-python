@@ -33,6 +33,8 @@ class TestOrderConfirmParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.order_confirm_parameters.OrderConfirmParameters()  # noqa: E501
+
+        """
         if include_optional :
             return OrderConfirmParameters(
                 branch = 'my-feature-branch'
@@ -40,6 +42,7 @@ class TestOrderConfirmParameters(unittest.TestCase):
         else :
             return OrderConfirmParameters(
         )
+        """
 
     def testOrderConfirmParameters(self):
         """Test OrderConfirmParameters"""

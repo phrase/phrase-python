@@ -33,6 +33,8 @@ class TestAccountSearchResult(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.account_search_result.AccountSearchResult()  # noqa: E501
+
+        """
         if include_optional :
             return AccountSearchResult(
                 query = '0', 
@@ -51,6 +53,7 @@ class TestAccountSearchResult(unittest.TestCase):
         else :
             return AccountSearchResult(
         )
+        """
 
     def testAccountSearchResult(self):
         """Test AccountSearchResult"""

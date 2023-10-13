@@ -33,6 +33,8 @@ class TestBlacklistedKey(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.blacklisted_key.BlacklistedKey()  # noqa: E501
+
+        """
         if include_optional :
             return BlacklistedKey(
                 id = '0', 
@@ -43,6 +45,7 @@ class TestBlacklistedKey(unittest.TestCase):
         else :
             return BlacklistedKey(
         )
+        """
 
     def testBlacklistedKey(self):
         """Test BlacklistedKey"""

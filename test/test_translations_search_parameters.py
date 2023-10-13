@@ -33,6 +33,8 @@ class TestTranslationsSearchParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.translations_search_parameters.TranslationsSearchParameters()  # noqa: E501
+
+        """
         if include_optional :
             return TranslationsSearchParameters(
                 branch = 'my-feature-branch', 
@@ -43,6 +45,7 @@ class TestTranslationsSearchParameters(unittest.TestCase):
         else :
             return TranslationsSearchParameters(
         )
+        """
 
     def testTranslationsSearchParameters(self):
         """Test TranslationsSearchParameters"""

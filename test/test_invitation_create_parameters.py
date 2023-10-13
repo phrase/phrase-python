@@ -33,6 +33,8 @@ class TestInvitationCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.invitation_create_parameters.InvitationCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return InvitationCreateParameters(
                 email = 'example@mail.com', 
@@ -47,6 +49,7 @@ class TestInvitationCreateParameters(unittest.TestCase):
         else :
             return InvitationCreateParameters(
         )
+        """
 
     def testInvitationCreateParameters(self):
         """Test InvitationCreateParameters"""

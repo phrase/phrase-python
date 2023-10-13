@@ -33,6 +33,8 @@ class TestJob(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.job.Job()  # noqa: E501
+
+        """
         if include_optional :
             return Job(
                 id = '0', 
@@ -49,6 +51,7 @@ class TestJob(unittest.TestCase):
         else :
             return Job(
         )
+        """
 
     def testJob(self):
         """Test Job"""

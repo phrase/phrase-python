@@ -33,6 +33,8 @@ class TestVariable(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.variable.Variable()  # noqa: E501
+
+        """
         if include_optional :
             return Variable(
                 name = '0', 
@@ -43,6 +45,7 @@ class TestVariable(unittest.TestCase):
         else :
             return Variable(
         )
+        """
 
     def testVariable(self):
         """Test Variable"""

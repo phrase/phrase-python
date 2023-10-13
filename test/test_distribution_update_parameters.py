@@ -33,6 +33,8 @@ class TestDistributionUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.distribution_update_parameters.DistributionUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return DistributionUpdateParameters(
                 name = 'My Android Distribution', 
@@ -48,6 +50,7 @@ class TestDistributionUpdateParameters(unittest.TestCase):
         else :
             return DistributionUpdateParameters(
         )
+        """
 
     def testDistributionUpdateParameters(self):
         """Test DistributionUpdateParameters"""

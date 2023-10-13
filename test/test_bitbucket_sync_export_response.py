@@ -33,6 +33,8 @@ class TestBitbucketSyncExportResponse(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.bitbucket_sync_export_response.BitbucketSyncExportResponse()  # noqa: E501
+
+        """
         if include_optional :
             return BitbucketSyncExportResponse(
                 status_path = '0'
@@ -40,6 +42,7 @@ class TestBitbucketSyncExportResponse(unittest.TestCase):
         else :
             return BitbucketSyncExportResponse(
         )
+        """
 
     def testBitbucketSyncExportResponse(self):
         """Test BitbucketSyncExportResponse"""

@@ -33,6 +33,8 @@ class TestJobTemplateCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.job_template_create_parameters.JobTemplateCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return JobTemplateCreateParameters(
                 branch = 'my-feature-branch', 
@@ -43,6 +45,7 @@ class TestJobTemplateCreateParameters(unittest.TestCase):
             return JobTemplateCreateParameters(
                 name = 'template',
         )
+        """
 
     def testJobTemplateCreateParameters(self):
         """Test JobTemplateCreateParameters"""

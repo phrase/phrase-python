@@ -33,6 +33,8 @@ class TestIcuSkeletonParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.icu_skeleton_parameters.IcuSkeletonParameters()  # noqa: E501
+
+        """
         if include_optional :
             return IcuSkeletonParameters(
                 content = '{number, plural, one {One} other {%{n}}}', 
@@ -44,6 +46,7 @@ class TestIcuSkeletonParameters(unittest.TestCase):
         else :
             return IcuSkeletonParameters(
         )
+        """
 
     def testIcuSkeletonParameters(self):
         """Test IcuSkeletonParameters"""

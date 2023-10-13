@@ -33,6 +33,8 @@ class TestBitbucketSyncImportParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.bitbucket_sync_import_parameters.BitbucketSyncImportParameters()  # noqa: E501
+
+        """
         if include_optional :
             return BitbucketSyncImportParameters(
                 account_id = 'abcd1234'
@@ -40,6 +42,7 @@ class TestBitbucketSyncImportParameters(unittest.TestCase):
         else :
             return BitbucketSyncImportParameters(
         )
+        """
 
     def testBitbucketSyncImportParameters(self):
         """Test BitbucketSyncImportParameters"""

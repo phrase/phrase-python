@@ -33,6 +33,8 @@ class TestBranchUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.branch_update_parameters.BranchUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return BranchUpdateParameters(
                 name = 'my-branch'
@@ -40,6 +42,7 @@ class TestBranchUpdateParameters(unittest.TestCase):
         else :
             return BranchUpdateParameters(
         )
+        """
 
     def testBranchUpdateParameters(self):
         """Test BranchUpdateParameters"""

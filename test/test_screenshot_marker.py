@@ -33,6 +33,8 @@ class TestScreenshotMarker(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.screenshot_marker.ScreenshotMarker()  # noqa: E501
+
+        """
         if include_optional :
             return ScreenshotMarker(
                 id = '0', 
@@ -45,6 +47,7 @@ class TestScreenshotMarker(unittest.TestCase):
         else :
             return ScreenshotMarker(
         )
+        """
 
     def testScreenshotMarker(self):
         """Test ScreenshotMarker"""

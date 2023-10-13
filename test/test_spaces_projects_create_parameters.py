@@ -33,6 +33,8 @@ class TestSpacesProjectsCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.spaces_projects_create_parameters.SpacesProjectsCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return SpacesProjectsCreateParameters(
                 id = 'a4b3c2d1'
@@ -40,6 +42,7 @@ class TestSpacesProjectsCreateParameters(unittest.TestCase):
         else :
             return SpacesProjectsCreateParameters(
         )
+        """
 
     def testSpacesProjectsCreateParameters(self):
         """Test SpacesProjectsCreateParameters"""

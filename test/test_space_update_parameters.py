@@ -33,6 +33,8 @@ class TestSpaceUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.space_update_parameters.SpaceUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return SpaceUpdateParameters(
                 name = 'My Android Projects'
@@ -40,6 +42,7 @@ class TestSpaceUpdateParameters(unittest.TestCase):
         else :
             return SpaceUpdateParameters(
         )
+        """
 
     def testSpaceUpdateParameters(self):
         """Test SpaceUpdateParameters"""

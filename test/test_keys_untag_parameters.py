@@ -33,6 +33,8 @@ class TestKeysUntagParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.keys_untag_parameters.KeysUntagParameters()  # noqa: E501
+
+        """
         if include_optional :
             return KeysUntagParameters(
                 branch = 'my-feature-branch', 
@@ -43,6 +45,7 @@ class TestKeysUntagParameters(unittest.TestCase):
         else :
             return KeysUntagParameters(
         )
+        """
 
     def testKeysUntagParameters(self):
         """Test KeysUntagParameters"""

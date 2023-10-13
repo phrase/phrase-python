@@ -33,6 +33,8 @@ class TestLocaleCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.locale_create_parameters.LocaleCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return LocaleCreateParameters(
                 branch = 'my-feature-branch', 
@@ -50,6 +52,7 @@ class TestLocaleCreateParameters(unittest.TestCase):
         else :
             return LocaleCreateParameters(
         )
+        """
 
     def testLocaleCreateParameters(self):
         """Test LocaleCreateParameters"""

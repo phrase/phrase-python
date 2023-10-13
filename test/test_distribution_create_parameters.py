@@ -33,6 +33,8 @@ class TestDistributionCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.distribution_create_parameters.DistributionCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return DistributionCreateParameters(
                 name = 'My Android Distribution', 
@@ -48,6 +50,7 @@ class TestDistributionCreateParameters(unittest.TestCase):
         else :
             return DistributionCreateParameters(
         )
+        """
 
     def testDistributionCreateParameters(self):
         """Test DistributionCreateParameters"""

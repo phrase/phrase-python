@@ -33,6 +33,8 @@ class TestBitbucketSync(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.bitbucket_sync.BitbucketSync()  # noqa: E501
+
+        """
         if include_optional :
             return BitbucketSync(
                 id = '0', 
@@ -47,6 +49,7 @@ class TestBitbucketSync(unittest.TestCase):
         else :
             return BitbucketSync(
         )
+        """
 
     def testBitbucketSync(self):
         """Test BitbucketSync"""

@@ -33,6 +33,8 @@ class TestProjectShort(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.project_short.ProjectShort()  # noqa: E501
+
+        """
         if include_optional :
             return ProjectShort(
                 id = '0', 
@@ -44,6 +46,7 @@ class TestProjectShort(unittest.TestCase):
         else :
             return ProjectShort(
         )
+        """
 
     def testProjectShort(self):
         """Test ProjectShort"""

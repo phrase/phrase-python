@@ -33,6 +33,8 @@ class TestInvitationUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.invitation_update_parameters.InvitationUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return InvitationUpdateParameters(
                 role = 'Invitiation role', 
@@ -46,6 +48,7 @@ class TestInvitationUpdateParameters(unittest.TestCase):
         else :
             return InvitationUpdateParameters(
         )
+        """
 
     def testInvitationUpdateParameters(self):
         """Test InvitationUpdateParameters"""

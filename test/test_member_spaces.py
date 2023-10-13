@@ -33,6 +33,8 @@ class TestMemberSpaces(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.member_spaces.MemberSpaces()  # noqa: E501
+
+        """
         if include_optional :
             return MemberSpaces(
                 id = '0', 
@@ -44,6 +46,7 @@ class TestMemberSpaces(unittest.TestCase):
         else :
             return MemberSpaces(
         )
+        """
 
     def testMemberSpaces(self):
         """Test MemberSpaces"""

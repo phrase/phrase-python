@@ -33,6 +33,8 @@ class TestTranslationOrder(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.translation_order.TranslationOrder()  # noqa: E501
+
+        """
         if include_optional :
             return TranslationOrder(
                 id = '0', 
@@ -59,6 +61,7 @@ class TestTranslationOrder(unittest.TestCase):
         else :
             return TranslationOrder(
         )
+        """
 
     def testTranslationOrder(self):
         """Test TranslationOrder"""

@@ -33,6 +33,8 @@ class TestGitlabSyncHistory(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.gitlab_sync_history.GitlabSyncHistory()  # noqa: E501
+
+        """
         if include_optional :
             return GitlabSyncHistory(
                 status = '0', 
@@ -48,6 +50,7 @@ class TestGitlabSyncHistory(unittest.TestCase):
         else :
             return GitlabSyncHistory(
         )
+        """
 
     def testGitlabSyncHistory(self):
         """Test GitlabSyncHistory"""

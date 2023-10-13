@@ -33,6 +33,8 @@ class TestAccountDetails1(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.account_details1.AccountDetails1()  # noqa: E501
+
+        """
         if include_optional :
             return AccountDetails1(
                 subscription = {"is_current":true,"trial_expired":false}, 
@@ -41,6 +43,7 @@ class TestAccountDetails1(unittest.TestCase):
         else :
             return AccountDetails1(
         )
+        """
 
     def testAccountDetails1(self):
         """Test AccountDetails1"""

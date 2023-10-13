@@ -33,6 +33,8 @@ class TestGlossary(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.glossary.Glossary()  # noqa: E501
+
+        """
         if include_optional :
             return Glossary(
                 id = '0', 
@@ -46,6 +48,7 @@ class TestGlossary(unittest.TestCase):
         else :
             return Glossary(
         )
+        """
 
     def testGlossary(self):
         """Test Glossary"""

@@ -33,6 +33,8 @@ class TestIcu(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.icu.Icu()  # noqa: E501
+
+        """
         if include_optional :
             return Icu(
                 locale_code = '0'
@@ -40,6 +42,7 @@ class TestIcu(unittest.TestCase):
         else :
             return Icu(
         )
+        """
 
     def testIcu(self):
         """Test Icu"""

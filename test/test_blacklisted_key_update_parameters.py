@@ -33,6 +33,8 @@ class TestBlacklistedKeyUpdateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.blacklisted_key_update_parameters.BlacklistedKeyUpdateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return BlacklistedKeyUpdateParameters(
                 name = 'date.formats.*'
@@ -40,6 +42,7 @@ class TestBlacklistedKeyUpdateParameters(unittest.TestCase):
         else :
             return BlacklistedKeyUpdateParameters(
         )
+        """
 
     def testBlacklistedKeyUpdateParameters(self):
         """Test BlacklistedKeyUpdateParameters"""

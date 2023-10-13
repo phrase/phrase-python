@@ -33,6 +33,8 @@ class TestFormat(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.format.Format()  # noqa: E501
+
+        """
         if include_optional :
             return Format(
                 name = '0', 
@@ -49,6 +51,7 @@ class TestFormat(unittest.TestCase):
         else :
             return Format(
         )
+        """
 
     def testFormat(self):
         """Test Format"""

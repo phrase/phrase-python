@@ -33,6 +33,8 @@ class TestCommentReaction(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.comment_reaction.CommentReaction()  # noqa: E501
+
+        """
         if include_optional :
             return CommentReaction(
                 id = '0', 
@@ -49,6 +51,7 @@ class TestCommentReaction(unittest.TestCase):
         else :
             return CommentReaction(
         )
+        """
 
     def testCommentReaction(self):
         """Test CommentReaction"""

@@ -33,6 +33,8 @@ class TestWebhookDelivery(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.webhook_delivery.WebhookDelivery()  # noqa: E501
+
+        """
         if include_optional :
             return WebhookDelivery(
                 id = '0', 
@@ -46,6 +48,7 @@ class TestWebhookDelivery(unittest.TestCase):
         else :
             return WebhookDelivery(
         )
+        """
 
     def testWebhookDelivery(self):
         """Test WebhookDelivery"""

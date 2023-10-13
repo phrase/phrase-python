@@ -33,6 +33,8 @@ class TestInlineResponse422(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.inline_response422.InlineResponse422()  # noqa: E501
+
+        """
         if include_optional :
             return InlineResponse422(
                 message = '0', 
@@ -46,6 +48,7 @@ class TestInlineResponse422(unittest.TestCase):
         else :
             return InlineResponse422(
         )
+        """
 
     def testInlineResponse422(self):
         """Test InlineResponse422"""

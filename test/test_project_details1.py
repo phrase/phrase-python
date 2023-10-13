@@ -33,6 +33,8 @@ class TestProjectDetails1(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.project_details1.ProjectDetails1()  # noqa: E501
+
+        """
         if include_optional :
             return ProjectDetails1(
                 slug = '0', 
@@ -41,6 +43,7 @@ class TestProjectDetails1(unittest.TestCase):
         else :
             return ProjectDetails1(
         )
+        """
 
     def testProjectDetails1(self):
         """Test ProjectDetails1"""

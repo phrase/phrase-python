@@ -33,6 +33,8 @@ class TestAuthorizationWithToken(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.authorization_with_token.AuthorizationWithToken()  # noqa: E501
+
+        """
         if include_optional :
             return AuthorizationWithToken(
                 id = '0', 
@@ -50,6 +52,7 @@ class TestAuthorizationWithToken(unittest.TestCase):
         else :
             return AuthorizationWithToken(
         )
+        """
 
     def testAuthorizationWithToken(self):
         """Test AuthorizationWithToken"""

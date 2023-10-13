@@ -33,6 +33,8 @@ class TestGithubSyncImportParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.github_sync_import_parameters.GithubSyncImportParameters()  # noqa: E501
+
+        """
         if include_optional :
             return GithubSyncImportParameters(
                 project_id = 'abcd1234'
@@ -40,6 +42,7 @@ class TestGithubSyncImportParameters(unittest.TestCase):
         else :
             return GithubSyncImportParameters(
         )
+        """
 
     def testGithubSyncImportParameters(self):
         """Test GithubSyncImportParameters"""

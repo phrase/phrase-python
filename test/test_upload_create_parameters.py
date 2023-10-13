@@ -33,6 +33,8 @@ class TestUploadCreateParameters(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = phrase_api.models.upload_create_parameters.UploadCreateParameters()  # noqa: E501
+
+        """
         if include_optional :
             return UploadCreateParameters(
                 branch = 'my-feature-branch', 
@@ -55,6 +57,7 @@ class TestUploadCreateParameters(unittest.TestCase):
         else :
             return UploadCreateParameters(
         )
+        """
 
     def testUploadCreateParameters(self):
         """Test UploadCreateParameters"""

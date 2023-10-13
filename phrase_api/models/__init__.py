@@ -48,6 +48,9 @@ from phrase_api.models.distribution_create_parameters import DistributionCreateP
 from phrase_api.models.distribution_preview import DistributionPreview
 from phrase_api.models.distribution_update_parameters import DistributionUpdateParameters
 from phrase_api.models.document import Document
+from phrase_api.models.figma_attachment import FigmaAttachment
+from phrase_api.models.figma_attachment_create_parameters import FigmaAttachmentCreateParameters
+from phrase_api.models.figma_attachment_update_parameters import FigmaAttachmentUpdateParameters
 from phrase_api.models.format import Format
 from phrase_api.models.github_sync_export_parameters import GithubSyncExportParameters
 from phrase_api.models.github_sync_import_parameters import GithubSyncImportParameters

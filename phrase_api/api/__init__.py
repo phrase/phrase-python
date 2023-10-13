@@ -13,6 +13,7 @@ from phrase_api.api.comment_replies_api import CommentRepliesApi
 from phrase_api.api.comments_api import CommentsApi
 from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
+from phrase_api.api.figma_attachments_api import FigmaAttachmentsApi
 from phrase_api.api.formats_api import FormatsApi
 from phrase_api.api.git_hub_sync_api import GitHubSyncApi
 from phrase_api.api.git_lab_sync_api import GitLabSyncApi
@@ -27,6 +28,7 @@ from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
 from phrase_api.api.job_templates_api import JobTemplatesApi
 from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
+from phrase_api.api.keys_figma_attachments_api import KeysFigmaAttachmentsApi
 from phrase_api.api.locales_api import LocalesApi
 from phrase_api.api.members_api import MembersApi
 from phrase_api.api.notification_groups_api import NotificationGroupsApi

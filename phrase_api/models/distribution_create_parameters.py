@@ -141,7 +141,7 @@ class DistributionCreateParameters(object):
     def platforms(self):
         """Gets the platforms of this DistributionCreateParameters.  # noqa: E501
 
-        List of platforms the distribution should support. Valid values are: * `android` * `ios` * `flutter` * `i18next`  # noqa: E501
+        List of platforms the distribution should support. Valid values are: * `android` * `ios` * `flutter` * `i18next` * `rails`  # noqa: E501
 
         :return: The platforms of this DistributionCreateParameters.  # noqa: E501
         :rtype: list[str]
@@ -152,7 +152,7 @@ class DistributionCreateParameters(object):
     def platforms(self, platforms):
         """Sets the platforms of this DistributionCreateParameters.
 
-        List of platforms the distribution should support. Valid values are: * `android` * `ios` * `flutter` * `i18next`  # noqa: E501
+        List of platforms the distribution should support. Valid values are: * `android` * `ios` * `flutter` * `i18next` * `rails`  # noqa: E501
 
         :param platforms: The platforms of this DistributionCreateParameters.  # noqa: E501
         :type: list[str]

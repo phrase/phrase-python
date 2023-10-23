@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **replies_list**
-> list[Comment] replies_list(project_id, key_id, comment_id, replies_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, filters=filters)
+> list[Comment] replies_list(project_id, key_id, comment_id, replies_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, filters=filters, order=order)
 
 List replies
 
@@ -46,10 +46,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
     query = 'Some comment content' # str | Search query for comment messages
     filters = ['[\"read\",\"unread\"]'] # list[str] | Specify the filter for the comments
+    order = 'desc' # str | Order direction. Can be one of: asc, desc.
 
     try:
         # List replies
-        api_response = api_instance.replies_list(project_id, key_id, comment_id, replies_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, filters=filters)
+        api_response = api_instance.replies_list(project_id, key_id, comment_id, replies_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, filters=filters, order=order)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentRepliesApi->replies_list: %s\n" % e)
@@ -70,6 +71,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| specify the branch to use | [optional] 
  **query** | **str**| Search query for comment messages | [optional] 
  **filters** | [**list[str]**](str.md)| Specify the filter for the comments | [optional] 
+ **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
 
 ### Return type
 

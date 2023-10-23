@@ -39,7 +39,8 @@ class TestRepliesListParameters(unittest.TestCase):
             return RepliesListParameters(
                 branch = 'my-feature-branch', 
                 query = 'Some comment content', 
-                filters = ["read","unread"]
+                filters = ["read","unread"], 
+                order = 'desc'
             )
         else :
             return RepliesListParameters(

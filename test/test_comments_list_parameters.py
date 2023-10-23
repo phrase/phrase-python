@@ -40,7 +40,8 @@ class TestCommentsListParameters(unittest.TestCase):
                 branch = 'my-feature-branch', 
                 query = 'Some comment content', 
                 locale_ids = ["someId","otherId"], 
-                filters = ["read","unread"]
+                filters = ["read","unread"], 
+                order = 'desc'
             )
         else :
             return CommentsListParameters(

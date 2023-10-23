@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **comments_list**
-> list[Comment] comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters)
+> list[Comment] comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters, order=order)
 
 List comments
 
@@ -550,10 +550,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     query = 'Some comment content' # str | Search query for comment messages
     locale_ids = ['[\"someId\"]'] # list[str] | Search comments by their assigned locales
     filters = ['[\"read\",\"unread\"]'] # list[str] | Specify the filter for the comments
+    order = 'desc' # str | Order direction. Can be one of: asc, desc.
 
     try:
         # List comments
-        api_response = api_instance.comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters)
+        api_response = api_instance.comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters, order=order)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentsApi->comments_list: %s\n" % e)
@@ -574,6 +575,7 @@ Name | Type | Description  | Notes
  **query** | **str**| Search query for comment messages | [optional] 
  **locale_ids** | [**list[str]**](str.md)| Search comments by their assigned locales | [optional] 
  **filters** | [**list[str]**](str.md)| Specify the filter for the comments | [optional] 
+ **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
 
 ### Return type
 

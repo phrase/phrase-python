@@ -55,6 +55,7 @@ class CommentRepliesApi(object):
         :param str branch: specify the branch to use
         :param str query: Search query for comment messages
         :param list[str] filters: Specify the filter for the comments
+        :param str order: Order direction. Can be one of: asc, desc.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -89,6 +90,7 @@ class CommentRepliesApi(object):
         :param str branch: specify the branch to use
         :param str query: Search query for comment messages
         :param list[str] filters: Specify the filter for the comments
+        :param str order: Order direction. Can be one of: asc, desc.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -115,7 +117,8 @@ class CommentRepliesApi(object):
             'per_page',
             'branch',
             'query',
-            'filters'
+            'filters',
+            'order'
         ]
         all_params.extend(
             [
@@ -173,6 +176,8 @@ class CommentRepliesApi(object):
         if 'filters' in local_var_params and local_var_params['filters'] is not None:  # noqa: E501
             query_params.append(('filters', local_var_params['filters']))  # noqa: E501
             collection_formats['filters'] = 'multi'  # noqa: E501
+        if 'order' in local_var_params and local_var_params['order'] is not None:  # noqa: E501
+            query_params.append(('order', local_var_params['order']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

@@ -35,17 +35,19 @@ class CommentsListParameters(object):
         'branch': 'str',
         'query': 'str',
         'locale_ids': 'list[str]',
-        'filters': 'list[str]'
+        'filters': 'list[str]',
+        'order': 'str'
     }
 
     attribute_map = {
         'branch': 'branch',
         'query': 'query',
         'locale_ids': 'locale_ids',
-        'filters': 'filters'
+        'filters': 'filters',
+        'order': 'order'
     }
 
-    def __init__(self, branch=None, query=None, locale_ids=None, filters=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, query=None, locale_ids=None, filters=None, order=None, local_vars_configuration=None):  # noqa: E501
         """CommentsListParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class CommentsListParameters(object):
         self._query = None
         self._locale_ids = None
         self._filters = None
+        self._order = None
         self.discriminator = None
 
         if branch is not None:
@@ -65,6 +68,8 @@ class CommentsListParameters(object):
             self.locale_ids = locale_ids
         if filters is not None:
             self.filters = filters
+        if order is not None:
+            self.order = order
 
     @property
     def branch(self):
@@ -157,6 +162,29 @@ class CommentsListParameters(object):
         """
 
         self._filters = filters
+
+    @property
+    def order(self):
+        """Gets the order of this CommentsListParameters.  # noqa: E501
+
+        Specify ordering of comments  # noqa: E501
+
+        :return: The order of this CommentsListParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        """Sets the order of this CommentsListParameters.
+
+        Specify ordering of comments  # noqa: E501
+
+        :param order: The order of this CommentsListParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._order = order
 
     def to_dict(self):
         """Returns the model properties as a dict"""

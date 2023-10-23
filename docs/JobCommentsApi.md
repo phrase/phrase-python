@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_comments_list**
-> list[JobComment] job_comments_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> list[JobComment] job_comments_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, order=order)
 
 List job comments
 
@@ -324,10 +324,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     job_id = 'job_id_example' # str | Job ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
+    order = 'desc' # str | Order direction. Can be one of: asc, desc.
 
     try:
         # List job comments
-        api_response = api_instance.job_comments_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        api_response = api_instance.job_comments_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, order=order)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobCommentsApi->job_comments_list: %s\n" % e)
@@ -342,6 +343,7 @@ Name | Type | Description  | Notes
  **job_id** | **str**| Job ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
+ **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
 
 ### Return type
 

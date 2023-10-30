@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **spaces_list**
-> list[Space] spaces_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Space] spaces_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List Spaces
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Space]**](Space.md)
+[**List[Space]**](Space.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **spaces_projects_list**
-> list[Project] spaces_projects_list(account_id, space_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Project] spaces_projects_list(account_id, space_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List Projects in Space
 
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Project]**](Project.md)
+[**List[Project]**](Project.md)
 
 ### Authorization
 

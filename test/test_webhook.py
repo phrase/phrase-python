@@ -37,11 +37,11 @@ class TestWebhook(unittest.TestCase):
         """
         if include_optional :
             return Webhook(
-                id = '0', 
-                callback_url = '0', 
-                description = '0', 
+                id = '', 
+                callback_url = '', 
+                description = '', 
                 events = [
-                    '0'
+                    ''
                     ], 
                 active = True, 
                 include_branches = True, 

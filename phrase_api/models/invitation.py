@@ -36,17 +36,17 @@ class Invitation(object):
         'email': 'str',
         'role': 'str',
         'state': 'str',
-        'projects': 'list[ProjectShort]',
-        'locales': 'list[LocalePreview]',
-        'teams': 'list[TeamShort]',
-        'default_locale_codes': 'list[str]',
+        'projects': 'List[ProjectShort]',
+        'locales': 'List[LocalePreview]',
+        'teams': 'List[TeamShort]',
+        'default_locale_codes': 'List[str]',
         'permissions': 'object',
-        'locale_ids': 'list[str]',
+        'locale_ids': 'List[str]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'accepted_at': 'datetime',
-        'spaces': 'list[Space]',
-        'project_role': 'list[MemberProjectDetailProjectRoles]'
+        'spaces': 'List[Space]',
+        'project_role': 'List[MemberProjectDetailProjectRolesInner]'
     }
 
     attribute_map = {
@@ -211,7 +211,7 @@ class Invitation(object):
 
 
         :return: The projects of this Invitation.  # noqa: E501
-        :rtype: list[ProjectShort]
+        :rtype: List[ProjectShort]
         """
         return self._projects
 
@@ -221,7 +221,7 @@ class Invitation(object):
 
 
         :param projects: The projects of this Invitation.  # noqa: E501
-        :type: list[ProjectShort]
+        :type: List[ProjectShort]
         """
 
         self._projects = projects
@@ -232,7 +232,7 @@ class Invitation(object):
 
 
         :return: The locales of this Invitation.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -242,7 +242,7 @@ class Invitation(object):
 
 
         :param locales: The locales of this Invitation.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales
@@ -253,7 +253,7 @@ class Invitation(object):
 
 
         :return: The teams of this Invitation.  # noqa: E501
-        :rtype: list[TeamShort]
+        :rtype: List[TeamShort]
         """
         return self._teams
 
@@ -263,7 +263,7 @@ class Invitation(object):
 
 
         :param teams: The teams of this Invitation.  # noqa: E501
-        :type: list[TeamShort]
+        :type: List[TeamShort]
         """
 
         self._teams = teams
@@ -274,7 +274,7 @@ class Invitation(object):
 
 
         :return: The default_locale_codes of this Invitation.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._default_locale_codes
 
@@ -284,7 +284,7 @@ class Invitation(object):
 
 
         :param default_locale_codes: The default_locale_codes of this Invitation.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._default_locale_codes = default_locale_codes
@@ -316,7 +316,7 @@ class Invitation(object):
 
 
         :return: The locale_ids of this Invitation.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_ids
 
@@ -326,7 +326,7 @@ class Invitation(object):
 
 
         :param locale_ids: The locale_ids of this Invitation.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_ids = locale_ids
@@ -400,7 +400,7 @@ class Invitation(object):
 
 
         :return: The spaces of this Invitation.  # noqa: E501
-        :rtype: list[Space]
+        :rtype: List[Space]
         """
         return self._spaces
 
@@ -410,7 +410,7 @@ class Invitation(object):
 
 
         :param spaces: The spaces of this Invitation.  # noqa: E501
-        :type: list[Space]
+        :type: List[Space]
         """
 
         self._spaces = spaces
@@ -421,7 +421,7 @@ class Invitation(object):
 
 
         :return: The project_role of this Invitation.  # noqa: E501
-        :rtype: list[MemberProjectDetailProjectRoles]
+        :rtype: List[MemberProjectDetailProjectRolesInner]
         """
         return self._project_role
 
@@ -431,7 +431,7 @@ class Invitation(object):
 
 
         :param project_role: The project_role of this Invitation.  # noqa: E501
-        :type: list[MemberProjectDetailProjectRoles]
+        :type: List[MemberProjectDetailProjectRolesInner]
         """
 
         self._project_role = project_role

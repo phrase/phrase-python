@@ -38,7 +38,7 @@ class ProjectLocales(object):
         'main_format': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'locales': 'list[LocalePreview]'
+        'locales': 'List[LocalePreview]'
     }
 
     attribute_map = {
@@ -213,7 +213,7 @@ class ProjectLocales(object):
 
 
         :return: The locales of this ProjectLocales.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -223,7 +223,7 @@ class ProjectLocales(object):
 
 
         :param locales: The locales of this ProjectLocales.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales

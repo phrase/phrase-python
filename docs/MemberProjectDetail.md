@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 **email** | **str** |  | [optional] 
 **username** | **str** |  | [optional] 
 **role** | **str** |  | [optional] 
-**projects** | [**list[ProjectLocales]**](ProjectLocales.md) |  | [optional] 
-**permissions** | [**object**](.md) |  | [optional] 
-**locale_ids** | **list[str]** |  | [optional] 
-**default_locale_codes** | **list[str]** |  | [optional] 
-**spaces** | [**list[MemberSpaces]**](MemberSpaces.md) |  | [optional] 
-**project_roles** | [**list[MemberProjectDetailProjectRoles]**](MemberProjectDetailProjectRoles.md) |  | [optional] 
+**projects** | [**List[ProjectLocales]**](ProjectLocales.md) |  | [optional] 
+**permissions** | **object** |  | [optional] 
+**locale_ids** | **List[str]** |  | [optional] 
+**default_locale_codes** | **List[str]** |  | [optional] 
+**spaces** | [**List[MemberSpacesInner]**](MemberSpacesInner.md) |  | [optional] 
+**project_roles** | [**List[MemberProjectDetailProjectRolesInner]**](MemberProjectDetailProjectRolesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **translation_type** | **str** |  | [optional] 
 **progress_percent** | **int** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
-**target_locales** | [**list[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**target_locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
 **tag** | **str** |  | [optional] 
 **styleguide** | [**StyleguidePreview**](StyleguidePreview.md) |  | [optional] 
 **unverify_translations_upon_delivery** | **bool** |  | [optional] 

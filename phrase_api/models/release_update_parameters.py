@@ -33,7 +33,7 @@ class ReleaseUpdateParameters(object):
     """
     openapi_types = {
         'description': 'str',
-        'platforms': 'list[str]',
+        'platforms': 'List[str]',
         'branch': 'str'
     }
 
@@ -91,7 +91,7 @@ class ReleaseUpdateParameters(object):
         List of platforms the release should support.  # noqa: E501
 
         :return: The platforms of this ReleaseUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -102,7 +102,7 @@ class ReleaseUpdateParameters(object):
         List of platforms the release should support.  # noqa: E501
 
         :param platforms: The platforms of this ReleaseUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms

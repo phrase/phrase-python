@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **teams_list**
-> list[Team] teams_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Team] teams_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List Teams
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Team]**](Team.md)
+[**List[Team]**](Team.md)
 
 ### Authorization
 

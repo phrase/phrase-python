@@ -37,14 +37,14 @@ class TestFormat(unittest.TestCase):
         """
         if include_optional :
             return Format(
-                name = '0', 
-                api_name = '0', 
-                description = '0', 
-                extension = '0', 
-                default_encoding = '0', 
+                name = '', 
+                api_name = '', 
+                description = '', 
+                extension = '', 
+                default_encoding = '', 
                 importable = True, 
                 exportable = True, 
-                default_file = '0', 
+                default_file = '', 
                 renders_default_locale = True, 
                 includes_locale_information = True
             )

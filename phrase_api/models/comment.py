@@ -38,8 +38,8 @@ class Comment(object):
         'user': 'UserPreview',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'mentioned_users': 'list[UserPreview]',
-        'locales': 'list[LocalePreview]'
+        'mentioned_users': 'List[UserPreview]',
+        'locales': 'List[LocalePreview]'
     }
 
     attribute_map = {
@@ -218,7 +218,7 @@ class Comment(object):
 
 
         :return: The mentioned_users of this Comment.  # noqa: E501
-        :rtype: list[UserPreview]
+        :rtype: List[UserPreview]
         """
         return self._mentioned_users
 
@@ -228,7 +228,7 @@ class Comment(object):
 
 
         :param mentioned_users: The mentioned_users of this Comment.  # noqa: E501
-        :type: list[UserPreview]
+        :type: List[UserPreview]
         """
 
         self._mentioned_users = mentioned_users
@@ -239,7 +239,7 @@ class Comment(object):
 
 
         :return: The locales of this Comment.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -249,7 +249,7 @@ class Comment(object):
 
 
         :param locales: The locales of this Comment.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales

@@ -37,23 +37,23 @@ class TestJobTemplateDetails(unittest.TestCase):
         """
         if include_optional :
             return JobTemplateDetails(
-                id = '0', 
-                name = '0', 
-                briefing = '0', 
+                id = '', 
+                name = '', 
+                briefing = '', 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 branch = {"name":"new-branch","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","merged_at":"2015-01-28T09:52:53Z","merged_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"created_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"state":"success"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 owner = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 creator = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ]

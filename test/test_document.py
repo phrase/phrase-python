@@ -37,8 +37,8 @@ class TestDocument(unittest.TestCase):
         """
         if include_optional :
             return Document(
-                id = '0', 
-                name = '0', 
+                id = '', 
+                name = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

@@ -37,11 +37,11 @@ class TestDistribution(unittest.TestCase):
         """
         if include_optional :
             return Distribution(
-                id = '0', 
-                name = '0', 
+                id = '', 
+                name = '', 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 platforms = [
-                    '0'
+                    ''
                     ], 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}

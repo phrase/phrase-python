@@ -37,7 +37,7 @@ class TestBranchName(unittest.TestCase):
         """
         if include_optional :
             return BranchName(
-                name = '0'
+                name = ''
             )
         else :
             return BranchName(

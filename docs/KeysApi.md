@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **keys_list**
-> list[TranslationKey] keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q, locale_id=locale_id)
+> List[TranslationKey] keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q, locale_id=locale_id)
 
 List keys
 
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[TranslationKey]**](TranslationKey.md)
+[**List[TranslationKey]**](TranslationKey.md)
 
 ### Authorization
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **keys_search**
-> list[TranslationKey] keys_search(project_id, keys_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[TranslationKey] keys_search(project_id, keys_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 Search keys
 
@@ -633,7 +633,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[TranslationKey]**](TranslationKey.md)
+[**List[TranslationKey]**](TranslationKey.md)
 
 ### Authorization
 

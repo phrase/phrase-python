@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gitlab_sync_history**
-> list[GitlabSyncHistory] gitlab_sync_history(gitlab_sync_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id)
+> List[GitlabSyncHistory] gitlab_sync_history(gitlab_sync_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id)
 
 History of single Sync Setting
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[GitlabSyncHistory]**](GitlabSyncHistory.md)
+[**List[GitlabSyncHistory]**](GitlabSyncHistory.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gitlab_sync_import**
-> list[Upload] gitlab_sync_import(gitlab_sync_id, gitlab_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> List[Upload] gitlab_sync_import(gitlab_sync_id, gitlab_sync_import_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Import from GitLab to Phrase
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Upload]**](Upload.md)
+[**List[Upload]**](Upload.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **gitlab_sync_list**
-> list[GitlabSync] gitlab_sync_list(x_phrase_app_otp=x_phrase_app_otp, account_id=account_id)
+> List[GitlabSync] gitlab_sync_list(x_phrase_app_otp=x_phrase_app_otp, account_id=account_id)
 
 List GitLab syncs
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[GitlabSync]**](GitlabSync.md)
+[**List[GitlabSync]**](GitlabSync.md)
 
 ### Authorization
 

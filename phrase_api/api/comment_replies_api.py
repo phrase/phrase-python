@@ -54,7 +54,7 @@ class CommentRepliesApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param str query: Search query for comment messages
-        :param list[str] filters: Specify the filter for the comments
+        :param List[str] filters: Specify the filter for the comments
         :param str order: Order direction. Can be one of: asc, desc.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -63,7 +63,7 @@ class CommentRepliesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Comment]
+        :return: List[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -89,7 +89,7 @@ class CommentRepliesApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param str query: Search query for comment messages
-        :param list[str] filters: Specify the filter for the comments
+        :param List[str] filters: Specify the filter for the comments
         :param str order: Order direction. Can be one of: asc, desc.
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -100,7 +100,7 @@ class CommentRepliesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Comment], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Comment], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -208,7 +208,7 @@ class CommentRepliesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Comment]',  # noqa: E501
+            response_type='List[Comment]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

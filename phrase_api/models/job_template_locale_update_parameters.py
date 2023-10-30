@@ -34,10 +34,10 @@ class JobTemplateLocaleUpdateParameters(object):
     openapi_types = {
         'branch': 'str',
         'locale_id': 'str',
-        'user_ids': 'list[str]',
-        'reviewer_ids': 'list[str]',
-        'translator_team_ids': 'list[str]',
-        'reviewer_team_ids': 'list[str]'
+        'user_ids': 'List[str]',
+        'reviewer_ids': 'List[str]',
+        'translator_team_ids': 'List[str]',
+        'reviewer_team_ids': 'List[str]'
     }
 
     attribute_map = {
@@ -129,7 +129,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of user ids to be assigned to the job template locale  # noqa: E501
 
         :return: The user_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._user_ids
 
@@ -140,7 +140,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of user ids to be assigned to the job template locale  # noqa: E501
 
         :param user_ids: The user_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._user_ids = user_ids
@@ -152,7 +152,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of reviewer ids to be assigned to the job template locale  # noqa: E501
 
         :return: The reviewer_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._reviewer_ids
 
@@ -163,7 +163,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of reviewer ids to be assigned to the job template locale  # noqa: E501
 
         :param reviewer_ids: The reviewer_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._reviewer_ids = reviewer_ids
@@ -175,7 +175,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of team ids to be assigned to the job locale as translators  # noqa: E501
 
         :return: The translator_team_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._translator_team_ids
 
@@ -186,7 +186,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of team ids to be assigned to the job locale as translators  # noqa: E501
 
         :param translator_team_ids: The translator_team_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._translator_team_ids = translator_team_ids
@@ -198,7 +198,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of team ids to be assigned to the job locale as reviewers  # noqa: E501
 
         :return: The reviewer_team_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._reviewer_team_ids
 
@@ -209,7 +209,7 @@ class JobTemplateLocaleUpdateParameters(object):
         Array of team ids to be assigned to the job locale as reviewers  # noqa: E501
 
         :param reviewer_team_ids: The reviewer_team_ids of this JobTemplateLocaleUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._reviewer_team_ids = reviewer_team_ids

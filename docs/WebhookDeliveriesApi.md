@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **webhook_deliveries_list**
-> list[WebhookDelivery] webhook_deliveries_list(project_id, webhook_id, x_phrase_app_otp=x_phrase_app_otp, response_status_codes=response_status_codes)
+> List[WebhookDelivery] webhook_deliveries_list(project_id, webhook_id, x_phrase_app_otp=x_phrase_app_otp, response_status_codes=response_status_codes)
 
 List webhook deliveries
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[WebhookDelivery]**](WebhookDelivery.md)
+[**List[WebhookDelivery]**](WebhookDelivery.md)
 
 ### Authorization
 

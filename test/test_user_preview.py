@@ -37,10 +37,10 @@ class TestUserPreview(unittest.TestCase):
         """
         if include_optional :
             return UserPreview(
-                id = '0', 
-                username = '0', 
-                name = '0', 
-                gravatar_uid = '0'
+                id = '', 
+                username = '', 
+                name = '', 
+                gravatar_uid = ''
             )
         else :
             return UserPreview(

@@ -38,7 +38,7 @@ class AccountSearchResult(object):
         'locale': 'LocalePreview',
         'project': 'Project',
         'translation': 'Translation',
-        'other_translations': 'list[Translation]'
+        'other_translations': 'List[Translation]'
     }
 
     attribute_map = {
@@ -213,7 +213,7 @@ class AccountSearchResult(object):
 
 
         :return: The other_translations of this AccountSearchResult.  # noqa: E501
-        :rtype: list[Translation]
+        :rtype: List[Translation]
         """
         return self._other_translations
 
@@ -223,7 +223,7 @@ class AccountSearchResult(object):
 
 
         :param other_translations: The other_translations of this AccountSearchResult.  # noqa: E501
-        :type: list[Translation]
+        :type: List[Translation]
         """
 
         self._other_translations = other_translations

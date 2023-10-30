@@ -34,7 +34,7 @@ class GlossaryCreateParameters(object):
     openapi_types = {
         'name': 'str',
         'project_ids': 'str',
-        'space_ids': 'list[str]'
+        'space_ids': 'List[str]'
     }
 
     attribute_map = {
@@ -114,7 +114,7 @@ class GlossaryCreateParameters(object):
         List of space ids the glossary should be assigned to.  # noqa: E501
 
         :return: The space_ids of this GlossaryCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._space_ids
 
@@ -125,7 +125,7 @@ class GlossaryCreateParameters(object):
         List of space ids the glossary should be assigned to.  # noqa: E501
 
         :param space_ids: The space_ids of this GlossaryCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._space_ids = space_ids

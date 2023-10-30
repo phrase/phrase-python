@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **invitations_list**
-> list[Invitation] invitations_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Invitation] invitations_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List invitations
 
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Invitation]**](Invitation.md)
+[**List[Invitation]**](Invitation.md)
 
 ### Authorization
 

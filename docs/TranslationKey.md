@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **name_hash** | **str** |  | [optional] 
 **plural** | **bool** |  | [optional] 
-**tags** | **list[str]** |  | [optional] 
+**tags** | **List[str]** |  | [optional] 
 **data_type** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

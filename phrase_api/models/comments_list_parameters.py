@@ -34,8 +34,8 @@ class CommentsListParameters(object):
     openapi_types = {
         'branch': 'str',
         'query': 'str',
-        'locale_ids': 'list[str]',
-        'filters': 'list[str]',
+        'locale_ids': 'List[str]',
+        'filters': 'List[str]',
         'order': 'str'
     }
 
@@ -124,7 +124,7 @@ class CommentsListParameters(object):
         Search comments by their assigned locales  # noqa: E501
 
         :return: The locale_ids of this CommentsListParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_ids
 
@@ -135,7 +135,7 @@ class CommentsListParameters(object):
         Search comments by their assigned locales  # noqa: E501
 
         :param locale_ids: The locale_ids of this CommentsListParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_ids = locale_ids
@@ -147,7 +147,7 @@ class CommentsListParameters(object):
         Specify filters to find comments by  # noqa: E501
 
         :return: The filters of this CommentsListParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._filters
 
@@ -158,7 +158,7 @@ class CommentsListParameters(object):
         Specify filters to find comments by  # noqa: E501
 
         :param filters: The filters of this CommentsListParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._filters = filters

@@ -36,7 +36,7 @@ class OrderCreateParameters(object):
         'name': 'str',
         'lsp': 'str',
         'source_locale_id': 'str',
-        'target_locale_ids': 'list[str]',
+        'target_locale_ids': 'List[str]',
         'translation_type': 'str',
         'tag': 'str',
         'message': 'str',
@@ -220,7 +220,7 @@ class OrderCreateParameters(object):
         List of target locales you want the source content translate to. Can be the name or public id of the target locales. Preferred is the public id.  # noqa: E501
 
         :return: The target_locale_ids of this OrderCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._target_locale_ids
 
@@ -231,7 +231,7 @@ class OrderCreateParameters(object):
         List of target locales you want the source content translate to. Can be the name or public id of the target locales. Preferred is the public id.  # noqa: E501
 
         :param target_locale_ids: The target_locale_ids of this OrderCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._target_locale_ids = target_locale_ids

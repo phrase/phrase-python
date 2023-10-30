@@ -38,7 +38,7 @@ class ProjectUpdateParameters(object):
         'main_format': 'str',
         'media': 'str',
         'shares_translation_memory': 'bool',
-        'project_image': 'file',
+        'project_image': 'bytearray',
         'remove_project_image': 'bool',
         'workflow': 'str',
         'machine_translation_enabled': 'bool',
@@ -316,7 +316,7 @@ class ProjectUpdateParameters(object):
         (Optional) Image to identify the project  # noqa: E501
 
         :return: The project_image of this ProjectUpdateParameters.  # noqa: E501
-        :rtype: file
+        :rtype: bytearray
         """
         return self._project_image
 
@@ -327,7 +327,7 @@ class ProjectUpdateParameters(object):
         (Optional) Image to identify the project  # noqa: E501
 
         :param project_image: The project_image of this ProjectUpdateParameters.  # noqa: E501
-        :type: file
+        :type: bytearray
         """
 
         self._project_image = project_image

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **default** | **bool** |  | [optional] 
 **main** | **bool** |  | [optional] 
 **rtl** | **bool** |  | [optional] 
-**plural_forms** | **list[str]** |  | [optional] 
+**plural_forms** | **List[str]** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **fallback_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

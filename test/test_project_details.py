@@ -37,19 +37,19 @@ class TestProjectDetails(unittest.TestCase):
         """
         if include_optional :
             return ProjectDetails(
-                id = '0', 
-                name = '0', 
-                slug = '0', 
-                main_format = '0', 
-                project_image_url = '0', 
-                media = '0', 
+                id = '', 
+                name = '', 
+                slug = '', 
+                main_format = '', 
+                project_image_url = '', 
+                media = '', 
                 account = {"id":"abcd1234","name":"Company Account","slug":"company_account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","company_logo_url":"http://assets.example.com/company_logo.png"}, 
                 space = {"id":"2e7574e8f2372906a03110c2a7cfe671","name":"My first space","created_at":"2020-02-25T12:17:25Z","updated_at":"2020-03-13T14:46:57Z","projects_count":2}, 
                 point_of_contact = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 shares_translation_memory = True

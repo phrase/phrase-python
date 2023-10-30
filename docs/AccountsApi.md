@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **accounts_list**
-> list[Account] accounts_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Account] accounts_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List accounts
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Account]**](Account.md)
+[**List[Account]**](Account.md)
 
 ### Authorization
 

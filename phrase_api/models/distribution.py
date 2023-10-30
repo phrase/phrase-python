@@ -35,9 +35,9 @@ class Distribution(object):
         'id': 'str',
         'name': 'str',
         'project': 'ProjectShort',
-        'platforms': 'list[str]',
-        'locales': 'list[LocalePreview]',
-        'releases': 'list[ReleasePreview]',
+        'platforms': 'List[str]',
+        'locales': 'List[LocalePreview]',
+        'releases': 'List[ReleasePreview]',
         'created_at': 'datetime',
         'deleted_at': 'datetime'
     }
@@ -155,7 +155,7 @@ class Distribution(object):
 
 
         :return: The platforms of this Distribution.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -165,7 +165,7 @@ class Distribution(object):
 
 
         :param platforms: The platforms of this Distribution.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms
@@ -176,7 +176,7 @@ class Distribution(object):
 
 
         :return: The locales of this Distribution.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -186,7 +186,7 @@ class Distribution(object):
 
 
         :param locales: The locales of this Distribution.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales
@@ -197,7 +197,7 @@ class Distribution(object):
 
 
         :return: The releases of this Distribution.  # noqa: E501
-        :rtype: list[ReleasePreview]
+        :rtype: List[ReleasePreview]
         """
         return self._releases
 
@@ -207,7 +207,7 @@ class Distribution(object):
 
 
         :param releases: The releases of this Distribution.  # noqa: E501
-        :type: list[ReleasePreview]
+        :type: List[ReleasePreview]
         """
 
         self._releases = releases

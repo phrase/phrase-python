@@ -37,20 +37,20 @@ class TestTranslationOrder(unittest.TestCase):
         """
         if include_optional :
             return TranslationOrder(
-                id = '0', 
-                name = '0', 
-                lsp = '0', 
+                id = '', 
+                name = '', 
+                lsp = '', 
                 amount_in_cents = 56, 
-                currency = '0', 
-                message = '0', 
-                state = '0', 
-                translation_type = '0', 
+                currency = '', 
+                message = '', 
+                state = '', 
+                translation_type = '', 
                 progress_percent = 56, 
                 source_locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 target_locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ], 
-                tag = '0', 
+                tag = '', 
                 styleguide = {"id":"abcd1234cdef1234abcd1234cdef1234","title":"My Style Guide"}, 
                 unverify_translations_upon_delivery = True, 
                 quality = True, 

@@ -33,7 +33,7 @@ class IcuSkeletonParameters(object):
     """
     openapi_types = {
         'content': 'str',
-        'locale_codes': 'list[str]',
+        'locale_codes': 'List[str]',
         'keep_content': 'bool',
         'zero_form_enabled': 'bool',
         'cldr_version': 'str'
@@ -101,7 +101,7 @@ class IcuSkeletonParameters(object):
         Locale codes  # noqa: E501
 
         :return: The locale_codes of this IcuSkeletonParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_codes
 
@@ -112,7 +112,7 @@ class IcuSkeletonParameters(object):
         Locale codes  # noqa: E501
 
         :param locale_codes: The locale_codes of this IcuSkeletonParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_codes = locale_codes

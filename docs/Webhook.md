@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **callback_url** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**events** | **list[str]** |  | [optional] 
+**events** | **List[str]** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **include_branches** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

@@ -41,7 +41,7 @@ class JobTemplateDetails(object):
         'updated_at': 'datetime',
         'owner': 'UserPreview',
         'creator': 'UserPreview',
-        'locales': 'list[LocalePreview]'
+        'locales': 'List[LocalePreview]'
     }
 
     attribute_map = {
@@ -291,7 +291,7 @@ class JobTemplateDetails(object):
 
 
         :return: The locales of this JobTemplateDetails.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -301,7 +301,7 @@ class JobTemplateDetails(object):
 
 
         :param locales: The locales of this JobTemplateDetails.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales

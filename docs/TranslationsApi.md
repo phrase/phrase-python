@@ -582,7 +582,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **translations_by_key**
-> list[Translation] translations_by_key(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+> List[Translation] translations_by_key(project_id, key_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
 
 List translations by key
 
@@ -640,7 +640,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Translation]**](Translation.md)
+[**List[Translation]**](Translation.md)
 
 ### Authorization
 
@@ -662,7 +662,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **translations_by_locale**
-> list[Translation] translations_by_locale(project_id, locale_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+> List[Translation] translations_by_locale(project_id, locale_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
 
 List translations by locale
 
@@ -720,7 +720,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Translation]**](Translation.md)
+[**List[Translation]**](Translation.md)
 
 ### Authorization
 
@@ -878,7 +878,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **translations_list**
-> list[Translation] translations_list(project_id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
+> List[Translation] translations_list(project_id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q)
 
 List all translations
 
@@ -938,7 +938,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Translation]**](Translation.md)
+[**List[Translation]**](Translation.md)
 
 ### Authorization
 
@@ -1028,7 +1028,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **translations_search**
-> list[Translation] translations_search(project_id, translations_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Translation] translations_search(project_id, translations_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 Search translations
 
@@ -1078,7 +1078,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Translation]**](Translation.md)
+[**List[Translation]**](Translation.md)
 
 ### Authorization
 

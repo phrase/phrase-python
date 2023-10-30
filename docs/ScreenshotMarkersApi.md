@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshot_markers_list**
-> list[ScreenshotMarker] screenshot_markers_list(project_id, id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[ScreenshotMarker] screenshot_markers_list(project_id, id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List screenshot markers
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ScreenshotMarker]**](ScreenshotMarker.md)
+[**List[ScreenshotMarker]**](ScreenshotMarker.md)
 
 ### Authorization
 

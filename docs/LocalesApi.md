@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **account_locales**
-> list[LocalePreview1] account_locales(id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[LocalePreview1] account_locales(id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List locales used in account
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[LocalePreview1]**](LocalePreview1.md)
+[**List[LocalePreview1]**](LocalePreview1.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locale_download**
-> file locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id, source_locale_id=source_locale_id)
+> bytearray locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id, source_locale_id=source_locale_id)
 
 Download a locale
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**file**
+**bytearray**
 
 ### Authorization
 
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locales_list**
-> list[Locale] locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch)
+> List[Locale] locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch)
 
 List locales
 
@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Locale]**](Locale.md)
+[**List[Locale]**](Locale.md)
 
 ### Authorization
 

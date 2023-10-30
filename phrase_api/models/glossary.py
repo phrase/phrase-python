@@ -34,7 +34,7 @@ class Glossary(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
-        'projects': 'list[ProjectShort]',
+        'projects': 'List[ProjectShort]',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -119,7 +119,7 @@ class Glossary(object):
 
 
         :return: The projects of this Glossary.  # noqa: E501
-        :rtype: list[ProjectShort]
+        :rtype: List[ProjectShort]
         """
         return self._projects
 
@@ -129,7 +129,7 @@ class Glossary(object):
 
 
         :param projects: The projects of this Glossary.  # noqa: E501
-        :type: list[ProjectShort]
+        :type: List[ProjectShort]
         """
 
         self._projects = projects

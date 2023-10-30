@@ -37,16 +37,16 @@ class TestCommentReaction(unittest.TestCase):
         """
         if include_optional :
             return CommentReaction(
-                id = '0', 
-                emoji = '0', 
+                id = '', 
+                emoji = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 comment = {"id":"abcd1234cdef1234abcd1234cdef1234","message":"Some message...","has_replies":true,"user":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","locales":[{"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}]}, 
                 user = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', )
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', )
             )
         else :
             return CommentReaction(

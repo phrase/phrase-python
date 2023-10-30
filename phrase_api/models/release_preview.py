@@ -37,10 +37,10 @@ class ReleasePreview(object):
         'app_min_version': 'str',
         'app_max_version': 'str',
         'description': 'str',
-        'platforms': 'list[str]',
-        'environments': 'list[str]',
-        'locale_codes': 'list[str]',
-        'tags': 'list[str]',
+        'platforms': 'List[str]',
+        'environments': 'List[str]',
+        'locale_codes': 'List[str]',
+        'tags': 'List[str]',
         'project': 'ProjectShort',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -217,7 +217,7 @@ class ReleasePreview(object):
 
 
         :return: The platforms of this ReleasePreview.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -227,7 +227,7 @@ class ReleasePreview(object):
 
 
         :param platforms: The platforms of this ReleasePreview.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms
@@ -238,7 +238,7 @@ class ReleasePreview(object):
 
 
         :return: The environments of this ReleasePreview.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._environments
 
@@ -248,7 +248,7 @@ class ReleasePreview(object):
 
 
         :param environments: The environments of this ReleasePreview.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._environments = environments
@@ -259,7 +259,7 @@ class ReleasePreview(object):
 
 
         :return: The locale_codes of this ReleasePreview.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_codes
 
@@ -269,7 +269,7 @@ class ReleasePreview(object):
 
 
         :param locale_codes: The locale_codes of this ReleasePreview.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_codes = locale_codes
@@ -280,7 +280,7 @@ class ReleasePreview(object):
 
 
         :return: The tags of this ReleasePreview.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._tags
 
@@ -290,7 +290,7 @@ class ReleasePreview(object):
 
 
         :param tags: The tags of this ReleasePreview.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._tags = tags

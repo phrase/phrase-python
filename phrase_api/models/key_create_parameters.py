@@ -40,7 +40,7 @@ class KeyCreateParameters(object):
         'data_type': 'str',
         'tags': 'str',
         'max_characters_allowed': 'int',
-        'screenshot': 'file',
+        'screenshot': 'bytearray',
         'remove_screenshot': 'bool',
         'unformatted': 'bool',
         'default_translation_content': 'str',
@@ -317,7 +317,7 @@ class KeyCreateParameters(object):
         Screenshot/image for the key. This parameter is deprecated. Please use the Screenshots endpoint instead.  # noqa: E501
 
         :return: The screenshot of this KeyCreateParameters.  # noqa: E501
-        :rtype: file
+        :rtype: bytearray
         """
         return self._screenshot
 
@@ -328,7 +328,7 @@ class KeyCreateParameters(object):
         Screenshot/image for the key. This parameter is deprecated. Please use the Screenshots endpoint instead.  # noqa: E501
 
         :param screenshot: The screenshot of this KeyCreateParameters.  # noqa: E501
-        :type: file
+        :type: bytearray
         """
 
         self._screenshot = screenshot

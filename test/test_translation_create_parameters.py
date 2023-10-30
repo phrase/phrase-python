@@ -41,7 +41,7 @@ class TestTranslationCreateParameters(unittest.TestCase):
                 locale_id = 'abcd1234cdef1234abcd1234cdef1234', 
                 key_id = 'abcd1234cdef1234abcd1234cdef1234', 
                 content = 'My translation', 
-                plural_suffix = '0', 
+                plural_suffix = '', 
                 unverified = True, 
                 excluded = True, 
                 autotranslate = True

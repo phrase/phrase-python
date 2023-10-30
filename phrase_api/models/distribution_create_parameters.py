@@ -34,9 +34,9 @@ class DistributionCreateParameters(object):
     openapi_types = {
         'name': 'str',
         'project_id': 'str',
-        'platforms': 'list[str]',
-        'locale_ids': 'list[str]',
-        'format_options': 'dict(str, str)',
+        'platforms': 'List[str]',
+        'locale_ids': 'List[str]',
+        'format_options': 'Dict[str, str]',
         'fallback_locales_enabled': 'bool',
         'fallback_to_non_regional_locale': 'bool',
         'fallback_to_default_locale': 'bool',
@@ -144,7 +144,7 @@ class DistributionCreateParameters(object):
         List of platforms the distribution should support. Valid values are: * `android` * `ios` * `flutter` * `i18next` * `rails`  # noqa: E501
 
         :return: The platforms of this DistributionCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -155,7 +155,7 @@ class DistributionCreateParameters(object):
         List of platforms the distribution should support. Valid values are: * `android` * `ios` * `flutter` * `i18next` * `rails`  # noqa: E501
 
         :param platforms: The platforms of this DistributionCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms
@@ -167,7 +167,7 @@ class DistributionCreateParameters(object):
         List of locale ids that will be part of distribution releases  # noqa: E501
 
         :return: The locale_ids of this DistributionCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_ids
 
@@ -178,7 +178,7 @@ class DistributionCreateParameters(object):
         List of locale ids that will be part of distribution releases  # noqa: E501
 
         :param locale_ids: The locale_ids of this DistributionCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_ids = locale_ids
@@ -190,7 +190,7 @@ class DistributionCreateParameters(object):
         Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>.  # noqa: E501
 
         :return: The format_options of this DistributionCreateParameters.  # noqa: E501
-        :rtype: dict(str, str)
+        :rtype: Dict[str, str]
         """
         return self._format_options
 
@@ -201,7 +201,7 @@ class DistributionCreateParameters(object):
         Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>.  # noqa: E501
 
         :param format_options: The format_options of this DistributionCreateParameters.  # noqa: E501
-        :type: dict(str, str)
+        :type: Dict[str, str]
         """
 
         self._format_options = format_options

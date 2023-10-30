@@ -37,9 +37,9 @@ class TestGlossaryTerm(unittest.TestCase):
         """
         if include_optional :
             return GlossaryTerm(
-                id = '0', 
-                term = '0', 
-                description = '0', 
+                id = '', 
+                term = '', 
+                description = '', 
                 translatable = True, 
                 case_sensitive = True, 
                 translations = [

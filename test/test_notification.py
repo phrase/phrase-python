@@ -37,8 +37,8 @@ class TestNotification(unittest.TestCase):
         """
         if include_optional :
             return Notification(
-                id = '0', 
-                event_name = '0', 
+                id = '', 
+                event_name = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 delivered_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -47,10 +47,10 @@ class TestNotification(unittest.TestCase):
                 resource = None, 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"de","code":"de-DE","default":true,"main":false,"rtl":false,"plural_forms":["zero","one","other"],"source_locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"en","code":"en-GB"},"fallback_locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"en","code":"en-GB"},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 user = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","slug":"android_project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","space":"space","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 account = {"id":"abcd1234","name":"Company Account","slug":"company_account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","company_logo_url":"http://assets.example.com/company_logo.png"}, 
                 group = {"id":"abcd1234cdef1234abcd1234cdef1234","event_name":"keys:create","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}

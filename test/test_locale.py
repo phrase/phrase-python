@@ -37,14 +37,14 @@ class TestLocale(unittest.TestCase):
         """
         if include_optional :
             return Locale(
-                id = '0', 
-                name = '0', 
-                code = '0', 
+                id = '', 
+                name = '', 
+                code = '', 
                 default = True, 
                 main = True, 
                 rtl = True, 
                 plural_forms = [
-                    '0'
+                    ''
                     ], 
                 source_locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 fallback_locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 

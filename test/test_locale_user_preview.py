@@ -37,10 +37,10 @@ class TestLocaleUserPreview(unittest.TestCase):
         """
         if include_optional :
             return LocaleUserPreview(
-                id = '0', 
-                username = '0', 
-                name = '0', 
-                role = '0'
+                id = '', 
+                username = '', 
+                name = '', 
+                role = ''
             )
         else :
             return LocaleUserPreview(

@@ -33,7 +33,7 @@ class AuthorizationUpdateParameters(object):
     """
     openapi_types = {
         'note': 'str',
-        'scopes': 'list[str]',
+        'scopes': 'List[str]',
         'expires_at': 'datetime'
     }
 
@@ -91,7 +91,7 @@ class AuthorizationUpdateParameters(object):
         A list of scopes that the access can be used for.  # noqa: E501
 
         :return: The scopes of this AuthorizationUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._scopes
 
@@ -102,7 +102,7 @@ class AuthorizationUpdateParameters(object):
         A list of scopes that the access can be used for.  # noqa: E501
 
         :param scopes: The scopes of this AuthorizationUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._scopes = scopes

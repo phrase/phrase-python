@@ -38,7 +38,7 @@ class TestGitlabSyncExport(unittest.TestCase):
         if include_optional :
             return GitlabSyncExport(
                 merge_request_id = 56, 
-                merge_request_web_url = '0'
+                merge_request_web_url = ''
             )
         else :
             return GitlabSyncExport(

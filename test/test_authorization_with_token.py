@@ -37,17 +37,17 @@ class TestAuthorizationWithToken(unittest.TestCase):
         """
         if include_optional :
             return AuthorizationWithToken(
-                id = '0', 
-                note = '0', 
-                token_last_eight = '0', 
-                hashed_token = '0', 
+                id = '', 
+                note = '', 
+                token_last_eight = '', 
+                hashed_token = '', 
                 scopes = [
-                    '0'
+                    ''
                     ], 
                 expires_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                token = '0'
+                token = ''
             )
         else :
             return AuthorizationWithToken(

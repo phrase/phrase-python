@@ -37,9 +37,9 @@ class TestOrganizationJobTemplate(unittest.TestCase):
         """
         if include_optional :
             return OrganizationJobTemplate(
-                id = '0', 
-                name = '0', 
-                briefing = '0', 
+                id = '', 
+                name = '', 
+                briefing = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

@@ -37,22 +37,22 @@ class TestComment(unittest.TestCase):
         """
         if include_optional :
             return Comment(
-                id = '0', 
-                message = '0', 
+                id = '', 
+                message = '', 
                 has_replies = True, 
                 user = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 mentioned_users = [
                     phrase_api.models.user_preview.user_preview(
-                        id = '0', 
-                        username = '0', 
-                        name = '0', 
-                        gravatar_uid = '0', )
+                        id = '', 
+                        username = '', 
+                        name = '', 
+                        gravatar_uid = '', )
                     ], 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}

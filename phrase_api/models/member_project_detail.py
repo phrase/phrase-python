@@ -36,12 +36,12 @@ class MemberProjectDetail(object):
         'email': 'str',
         'username': 'str',
         'role': 'str',
-        'projects': 'list[ProjectLocales]',
+        'projects': 'List[ProjectLocales]',
         'permissions': 'object',
-        'locale_ids': 'list[str]',
-        'default_locale_codes': 'list[str]',
-        'spaces': 'list[MemberSpaces]',
-        'project_roles': 'list[MemberProjectDetailProjectRoles]'
+        'locale_ids': 'List[str]',
+        'default_locale_codes': 'List[str]',
+        'spaces': 'List[MemberSpacesInner]',
+        'project_roles': 'List[MemberProjectDetailProjectRolesInner]'
     }
 
     attribute_map = {
@@ -186,7 +186,7 @@ class MemberProjectDetail(object):
 
 
         :return: The projects of this MemberProjectDetail.  # noqa: E501
-        :rtype: list[ProjectLocales]
+        :rtype: List[ProjectLocales]
         """
         return self._projects
 
@@ -196,7 +196,7 @@ class MemberProjectDetail(object):
 
 
         :param projects: The projects of this MemberProjectDetail.  # noqa: E501
-        :type: list[ProjectLocales]
+        :type: List[ProjectLocales]
         """
 
         self._projects = projects
@@ -228,7 +228,7 @@ class MemberProjectDetail(object):
 
 
         :return: The locale_ids of this MemberProjectDetail.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_ids
 
@@ -238,7 +238,7 @@ class MemberProjectDetail(object):
 
 
         :param locale_ids: The locale_ids of this MemberProjectDetail.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_ids = locale_ids
@@ -249,7 +249,7 @@ class MemberProjectDetail(object):
 
 
         :return: The default_locale_codes of this MemberProjectDetail.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._default_locale_codes
 
@@ -259,7 +259,7 @@ class MemberProjectDetail(object):
 
 
         :param default_locale_codes: The default_locale_codes of this MemberProjectDetail.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._default_locale_codes = default_locale_codes
@@ -270,7 +270,7 @@ class MemberProjectDetail(object):
 
 
         :return: The spaces of this MemberProjectDetail.  # noqa: E501
-        :rtype: list[MemberSpaces]
+        :rtype: List[MemberSpacesInner]
         """
         return self._spaces
 
@@ -280,7 +280,7 @@ class MemberProjectDetail(object):
 
 
         :param spaces: The spaces of this MemberProjectDetail.  # noqa: E501
-        :type: list[MemberSpaces]
+        :type: List[MemberSpacesInner]
         """
 
         self._spaces = spaces
@@ -291,7 +291,7 @@ class MemberProjectDetail(object):
 
 
         :return: The project_roles of this MemberProjectDetail.  # noqa: E501
-        :rtype: list[MemberProjectDetailProjectRoles]
+        :rtype: List[MemberProjectDetailProjectRolesInner]
         """
         return self._project_roles
 
@@ -301,7 +301,7 @@ class MemberProjectDetail(object):
 
 
         :param project_roles: The project_roles of this MemberProjectDetail.  # noqa: E501
-        :type: list[MemberProjectDetailProjectRoles]
+        :type: List[MemberProjectDetailProjectRolesInner]
         """
 
         self._project_roles = project_roles

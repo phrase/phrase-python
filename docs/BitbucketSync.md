@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **last_export_to_bitbucket_at** | **datetime** |  | [optional] 
 **last_import_from_bitbucket_at** | **datetime** |  | [optional] 
 **valid_phraseapp_yaml** | **bool** |  | [optional] 
-**phraseapp_projects** | [**list[ProjectShort]**](ProjectShort.md) |  | [optional] 
+**phraseapp_projects** | [**List[ProjectShort]**](ProjectShort.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

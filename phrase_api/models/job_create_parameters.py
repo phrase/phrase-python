@@ -38,8 +38,8 @@ class JobCreateParameters(object):
         'briefing': 'str',
         'due_date': 'datetime',
         'ticket_url': 'str',
-        'tags': 'list[str]',
-        'translation_key_ids': 'list[str]',
+        'tags': 'List[str]',
+        'translation_key_ids': 'List[str]',
         'job_template_id': 'str'
     }
 
@@ -236,7 +236,7 @@ class JobCreateParameters(object):
         tags of keys that should be included within the job  # noqa: E501
 
         :return: The tags of this JobCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._tags
 
@@ -247,7 +247,7 @@ class JobCreateParameters(object):
         tags of keys that should be included within the job  # noqa: E501
 
         :param tags: The tags of this JobCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._tags = tags
@@ -259,7 +259,7 @@ class JobCreateParameters(object):
         ids of keys that should be included within the job  # noqa: E501
 
         :return: The translation_key_ids of this JobCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._translation_key_ids
 
@@ -270,7 +270,7 @@ class JobCreateParameters(object):
         ids of keys that should be included within the job  # noqa: E501
 
         :param translation_key_ids: The translation_key_ids of this JobCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._translation_key_ids = translation_key_ids

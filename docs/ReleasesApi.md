@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **releases_list**
-> list[ReleasePreview] releases_list(account_id, distribution_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[ReleasePreview] releases_list(account_id, distribution_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List releases
 
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ReleasePreview]**](ReleasePreview.md)
+[**List[ReleasePreview]**](ReleasePreview.md)
 
 ### Authorization
 

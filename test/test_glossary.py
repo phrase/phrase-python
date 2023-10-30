@@ -37,8 +37,8 @@ class TestGlossary(unittest.TestCase):
         """
         if include_optional :
             return Glossary(
-                id = '0', 
-                name = '0', 
+                id = '', 
+                name = '', 
                 projects = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ], 

@@ -37,8 +37,8 @@ class TestFigmaAttachment(unittest.TestCase):
         """
         if include_optional :
             return FigmaAttachment(
-                id = '0', 
-                url = '0', 
+                id = '', 
+                url = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

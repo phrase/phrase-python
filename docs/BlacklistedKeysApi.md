@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **blacklisted_keys_list**
-> list[BlacklistedKey] blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[BlacklistedKey] blacklisted_keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List blocked keys
 
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[BlacklistedKey]**](BlacklistedKey.md)
+[**List[BlacklistedKey]**](BlacklistedKey.md)
 
 ### Authorization
 

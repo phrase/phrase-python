@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **styleguides_list**
-> list[Styleguide] styleguides_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Styleguide] styleguides_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List style guides
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Styleguide]**](Styleguide.md)
+[**List[Styleguide]**](Styleguide.md)
 
 ### Authorization
 

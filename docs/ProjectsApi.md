@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **projects_list**
-> list[Project] projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id, sort_by=sort_by, filters=filters)
+> List[Project] projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id, sort_by=sort_by, filters=filters)
 
 List projects
 
@@ -305,7 +305,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     account_id = 'account_id_example' # str | Filter by Account ID
     sort_by = 'sort_by_example' # str | Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
-    filters = ['favorites'] # list[str] | Filter projects. Valid options are [\"favorites\"].
+    filters = ['favorites'] # List[str] | Filter projects. Valid options are [\"favorites\"].
 
     try:
         # List projects
@@ -325,11 +325,11 @@ Name | Type | Description  | Notes
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **account_id** | **str**| Filter by Account ID | [optional] 
  **sort_by** | **str**| Sort projects. Valid options are \&quot;name_asc\&quot;, \&quot;name_desc\&quot;, \&quot;updated_at_asc\&quot;, \&quot;updated_at_desc\&quot;, \&quot;space_asc\&quot; and \&quot;space_desc\&quot;. | [optional] 
- **filters** | [**list[str]**](str.md)| Filter projects. Valid options are [\&quot;favorites\&quot;]. | [optional] 
+ **filters** | [**List[str]**](str.md)| Filter projects. Valid options are [\&quot;favorites\&quot;]. | [optional] 
 
 ### Return type
 
-[**list[Project]**](Project.md)
+[**List[Project]**](Project.md)
 
 ### Authorization
 

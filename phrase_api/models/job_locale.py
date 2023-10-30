@@ -35,8 +35,8 @@ class JobLocale(object):
         'id': 'str',
         'job': 'JobPreview',
         'locale': 'LocalePreview',
-        'users': 'list[LocaleUserPreview]',
-        'teams': 'list[LocaleTeamPreview]',
+        'users': 'List[LocaleUserPreview]',
+        'teams': 'List[LocaleTeamPreview]',
         'completed': 'bool',
         'translation_completed_at': 'datetime',
         'review_completed_at': 'datetime'
@@ -155,7 +155,7 @@ class JobLocale(object):
 
 
         :return: The users of this JobLocale.  # noqa: E501
-        :rtype: list[LocaleUserPreview]
+        :rtype: List[LocaleUserPreview]
         """
         return self._users
 
@@ -165,7 +165,7 @@ class JobLocale(object):
 
 
         :param users: The users of this JobLocale.  # noqa: E501
-        :type: list[LocaleUserPreview]
+        :type: List[LocaleUserPreview]
         """
 
         self._users = users
@@ -176,7 +176,7 @@ class JobLocale(object):
 
 
         :return: The teams of this JobLocale.  # noqa: E501
-        :rtype: list[LocaleTeamPreview]
+        :rtype: List[LocaleTeamPreview]
         """
         return self._teams
 
@@ -186,7 +186,7 @@ class JobLocale(object):
 
 
         :param teams: The teams of this JobLocale.  # noqa: E501
-        :type: list[LocaleTeamPreview]
+        :type: List[LocaleTeamPreview]
         """
 
         self._teams = teams

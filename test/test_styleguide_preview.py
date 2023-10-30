@@ -37,8 +37,8 @@ class TestStyleguidePreview(unittest.TestCase):
         """
         if include_optional :
             return StyleguidePreview(
-                id = '0', 
-                title = '0'
+                id = '', 
+                title = ''
             )
         else :
             return StyleguidePreview(

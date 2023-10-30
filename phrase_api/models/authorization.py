@@ -36,7 +36,7 @@ class Authorization(object):
         'note': 'str',
         'token_last_eight': 'str',
         'hashed_token': 'str',
-        'scopes': 'list[str]',
+        'scopes': 'List[str]',
         'expires_at': 'datetime',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -176,7 +176,7 @@ class Authorization(object):
 
 
         :return: The scopes of this Authorization.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._scopes
 
@@ -186,7 +186,7 @@ class Authorization(object):
 
 
         :param scopes: The scopes of this Authorization.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._scopes = scopes

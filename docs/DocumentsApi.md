@@ -76,7 +76,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **documents_list**
-> list[Document] documents_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Document] documents_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List documents
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Document]**](Document.md)
+[**List[Document]**](Document.md)
 
 ### Authorization
 

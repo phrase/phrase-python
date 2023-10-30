@@ -39,7 +39,7 @@ class TranslationDetails(object):
         'plural_suffix': 'str',
         'key': 'KeyPreview',
         'locale': 'LocalePreview',
-        'placeholders': 'list[str]',
+        'placeholders': 'List[str]',
         'state': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -264,7 +264,7 @@ class TranslationDetails(object):
 
 
         :return: The placeholders of this TranslationDetails.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._placeholders
 
@@ -274,7 +274,7 @@ class TranslationDetails(object):
 
 
         :param placeholders: The placeholders of this TranslationDetails.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._placeholders = placeholders

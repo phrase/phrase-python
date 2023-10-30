@@ -45,8 +45,8 @@ class JobDetails(object):
         'owner': 'UserPreview',
         'job_tag_name': 'str',
         'source_locale': 'LocalePreview',
-        'locales': 'list[LocalePreview]',
-        'keys': 'list[KeyPreview]'
+        'locales': 'List[LocalePreview]',
+        'keys': 'List[KeyPreview]'
     }
 
     attribute_map = {
@@ -400,7 +400,7 @@ class JobDetails(object):
 
 
         :return: The locales of this JobDetails.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -410,7 +410,7 @@ class JobDetails(object):
 
 
         :param locales: The locales of this JobDetails.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales
@@ -421,7 +421,7 @@ class JobDetails(object):
 
 
         :return: The keys of this JobDetails.  # noqa: E501
-        :rtype: list[KeyPreview]
+        :rtype: List[KeyPreview]
         """
         return self._keys
 
@@ -431,7 +431,7 @@ class JobDetails(object):
 
 
         :param keys: The keys of this JobDetails.  # noqa: E501
-        :type: list[KeyPreview]
+        :type: List[KeyPreview]
         """
 
         self._keys = keys

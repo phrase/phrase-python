@@ -37,23 +37,23 @@ class TestStyleguideDetails(unittest.TestCase):
         """
         if include_optional :
             return StyleguideDetails(
-                id = '0', 
-                title = '0', 
+                id = '', 
+                title = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                public_url = '0', 
-                audience = '0', 
-                target_audience = '0', 
-                grammatical_person = '0', 
-                vocabulary_type = '0', 
-                business = '0', 
-                company_branding = '0', 
-                formatting = '0', 
-                glossary_terms = '0', 
-                grammar_consistency = '0', 
-                literal_translation = '0', 
-                overall_tone = '0', 
-                samples = '0'
+                public_url = '', 
+                audience = '', 
+                target_audience = '', 
+                grammatical_person = '', 
+                vocabulary_type = '', 
+                business = '', 
+                company_branding = '', 
+                formatting = '', 
+                glossary_terms = '', 
+                grammar_consistency = '', 
+                literal_translation = '', 
+                overall_tone = '', 
+                samples = ''
             )
         else :
             return StyleguideDetails(

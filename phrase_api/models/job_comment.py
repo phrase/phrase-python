@@ -38,7 +38,7 @@ class JobComment(object):
         'user': 'UserPreview',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'mentioned_users': 'list[UserPreview]'
+        'mentioned_users': 'List[UserPreview]'
     }
 
     attribute_map = {
@@ -213,7 +213,7 @@ class JobComment(object):
 
 
         :return: The mentioned_users of this JobComment.  # noqa: E501
-        :rtype: list[UserPreview]
+        :rtype: List[UserPreview]
         """
         return self._mentioned_users
 
@@ -223,7 +223,7 @@ class JobComment(object):
 
 
         :param mentioned_users: The mentioned_users of this JobComment.  # noqa: E501
-        :type: list[UserPreview]
+        :type: List[UserPreview]
         """
 
         self._mentioned_users = mentioned_users

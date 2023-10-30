@@ -36,7 +36,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'branch_example' # str | specify the branch to use
-    file = '/path/to/file' # file | File to be imported
+    file = None # bytearray | File to be imported
     file_format = 'file_format_example' # str | File format. Auto-detected when possible and not specified.
     locale_id = 'locale_id_example' # str | Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
     tags = 'tags_example' # str | List of tags separated by comma to be associated with the new keys contained in the upload.
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
- **file** | **file**| File to be imported | [optional] 
+ **file** | **bytearray**| File to be imported | [optional] 
  **file_format** | **str**| File format. Auto-detected when possible and not specified. | [optional] 
  **locale_id** | **str**| Locale of the file&#39;s content. Can be the name or public id of the locale. Preferred is the public id. | [optional] 
  **tags** | **str**| List of tags separated by comma to be associated with the new keys contained in the upload. | [optional] 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **uploads_list**
-> list[Upload] uploads_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[Upload] uploads_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List uploads
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Upload]**](Upload.md)
+[**List[Upload]**](Upload.md)
 
 ### Authorization
 

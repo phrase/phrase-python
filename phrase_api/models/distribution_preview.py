@@ -35,7 +35,7 @@ class DistributionPreview(object):
         'id': 'str',
         'name': 'str',
         'project': 'ProjectShort',
-        'platforms': 'list[str]',
+        'platforms': 'List[str]',
         'release_count': 'int',
         'created_at': 'datetime',
         'deleted_at': 'datetime'
@@ -150,7 +150,7 @@ class DistributionPreview(object):
 
 
         :return: The platforms of this DistributionPreview.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -160,7 +160,7 @@ class DistributionPreview(object):
 
 
         :param platforms: The platforms of this DistributionPreview.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms

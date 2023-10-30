@@ -37,14 +37,14 @@ class TestGitlabSyncHistory(unittest.TestCase):
         """
         if include_optional :
             return GitlabSyncHistory(
-                status = '0', 
-                action = '0', 
+                status = '', 
+                action = '', 
                 errors = [
-                    phrase_api.models.gitlab_sync_history_errors.gitlab_sync_history_errors(
-                        error = '0', 
-                        message = '0', )
+                    phrase_api.models.gitlab_sync_history_errors_inner.gitlab_sync_history_errors_inner(
+                        error = '', 
+                        message = '', )
                     ], 
-                date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                var_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 details = None
             )
         else :

@@ -37,9 +37,9 @@ class TestScreenshotMarker(unittest.TestCase):
         """
         if include_optional :
             return ScreenshotMarker(
-                id = '0', 
-                presentation = '0', 
-                presentation_type = '0', 
+                id = '', 
+                presentation = '', 
+                presentation_type = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 translation_key = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"home.index.headline","description":"My description for this key...","name_hash":"1b31d2580ce324f246f66b3be00ed399","plural":false,"tags":["awesome-feature","needs-proofreading"],"data_type":"string","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}

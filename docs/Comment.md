@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **user** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**mentioned_users** | [**list[UserPreview]**](UserPreview.md) |  | [optional] 
-**locales** | [**list[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**mentioned_users** | [**List[UserPreview]**](UserPreview.md) |  | [optional] 
+**locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

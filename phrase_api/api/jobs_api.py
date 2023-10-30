@@ -592,7 +592,7 @@ class JobsApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param list[str] translation_key_ids: ids of keys that should added to the job
+        :param List[str] translation_key_ids: ids of keys that should added to the job
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -621,7 +621,7 @@ class JobsApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param list[str] translation_key_ids: ids of keys that should added to the job
+        :param List[str] translation_key_ids: ids of keys that should added to the job
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1551,7 +1551,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Job]
+        :return: List[Job]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1584,7 +1584,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Job], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Job], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1663,7 +1663,7 @@ class JobsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Job]',  # noqa: E501
+            response_type='List[Job]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1696,7 +1696,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Job]
+        :return: List[Job]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1730,7 +1730,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Job], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Job], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1812,7 +1812,7 @@ class JobsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Job]',  # noqa: E501
+            response_type='List[Job]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

@@ -43,7 +43,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     comment_create_parameters = phrase_api.CommentCreateParameters() # CommentCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     message = 'some message...' # str | specify the message for the comment
-    locale_ids = ['someId'] # list[str] | specify the locales for the comment
+    locale_ids = ['someId'] # List[str] | specify the locales for the comment
 
     try:
         # Create a comment
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
  **comment_create_parameters** | [**CommentCreateParameters**](CommentCreateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **message** | **str**| specify the message for the comment | [optional] 
- **locale_ids** | [**list[str]**](str.md)| specify the locales for the comment | [optional] 
+ **locale_ids** | [**List[str]**](str.md)| specify the locales for the comment | [optional] 
 
 ### Return type
 
@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **comments_list**
-> list[Comment] comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters, order=order)
+> List[Comment] comments_list(project_id, key_id, comments_list_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, query=query, locale_ids=locale_ids, filters=filters, order=order)
 
 List comments
 
@@ -548,8 +548,8 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     query = 'Some comment content' # str | Search query for comment messages
-    locale_ids = ['[\"someId\"]'] # list[str] | Search comments by their assigned locales
-    filters = ['[\"read\",\"unread\"]'] # list[str] | Specify the filter for the comments
+    locale_ids = ['[\"someId\"]'] # List[str] | Search comments by their assigned locales
+    filters = ['[\"read\",\"unread\"]'] # List[str] | Specify the filter for the comments
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
 
     try:
@@ -573,13 +573,13 @@ Name | Type | Description  | Notes
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **query** | **str**| Search query for comment messages | [optional] 
- **locale_ids** | [**list[str]**](str.md)| Search comments by their assigned locales | [optional] 
- **filters** | [**list[str]**](str.md)| Specify the filter for the comments | [optional] 
+ **locale_ids** | [**List[str]**](str.md)| Search comments by their assigned locales | [optional] 
+ **filters** | [**List[str]**](str.md)| Specify the filter for the comments | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
 
 ### Return type
 
-[**list[Comment]**](Comment.md)
+[**List[Comment]**](Comment.md)
 
 ### Authorization
 

@@ -37,11 +37,11 @@ class TestUpload(unittest.TestCase):
         """
         if include_optional :
             return Upload(
-                id = '0', 
-                filename = '0', 
-                format = '0', 
-                state = '0', 
-                tag = '0', 
+                id = '', 
+                filename = '', 
+                format = '', 
+                state = '', 
+                tag = '', 
                 summary = phrase_api.models.upload_summary.upload_summary(
                     locales_created = 56, 
                     translation_keys_created = 56, 

@@ -37,8 +37,8 @@ class TestKeyPreview(unittest.TestCase):
         """
         if include_optional :
             return KeyPreview(
-                id = '0', 
-                name = '0', 
+                id = '', 
+                name = '', 
                 plural = True
             )
         else :

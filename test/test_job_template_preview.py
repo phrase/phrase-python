@@ -37,8 +37,8 @@ class TestJobTemplatePreview(unittest.TestCase):
         """
         if include_optional :
             return JobTemplatePreview(
-                id = '0', 
-                name = '0'
+                id = '', 
+                name = ''
             )
         else :
             return JobTemplatePreview(

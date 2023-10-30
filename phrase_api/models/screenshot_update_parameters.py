@@ -35,7 +35,7 @@ class ScreenshotUpdateParameters(object):
         'branch': 'str',
         'name': 'str',
         'description': 'str',
-        'filename': 'file'
+        'filename': 'bytearray'
     }
 
     attribute_map = {
@@ -142,7 +142,7 @@ class ScreenshotUpdateParameters(object):
         Screenshot file  # noqa: E501
 
         :return: The filename of this ScreenshotUpdateParameters.  # noqa: E501
-        :rtype: file
+        :rtype: bytearray
         """
         return self._filename
 
@@ -153,7 +153,7 @@ class ScreenshotUpdateParameters(object):
         Screenshot file  # noqa: E501
 
         :param filename: The filename of this ScreenshotUpdateParameters.  # noqa: E501
-        :type: file
+        :type: bytearray
         """
 
         self._filename = filename

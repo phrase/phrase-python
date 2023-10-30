@@ -33,7 +33,7 @@ class MemberUpdateSettingsParameters(object):
     """
     openapi_types = {
         'project_role': 'str',
-        'locale_ids': 'list[str]'
+        'locale_ids': 'List[str]'
     }
 
     attribute_map = {
@@ -86,7 +86,7 @@ class MemberUpdateSettingsParameters(object):
         List of locale ids the user has access to.  # noqa: E501
 
         :return: The locale_ids of this MemberUpdateSettingsParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_ids
 
@@ -97,7 +97,7 @@ class MemberUpdateSettingsParameters(object):
         List of locale ids the user has access to.  # noqa: E501
 
         :param locale_ids: The locale_ids of this MemberUpdateSettingsParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_ids = locale_ids

@@ -37,9 +37,9 @@ class TestGlossaryTermTranslation(unittest.TestCase):
         """
         if include_optional :
             return GlossaryTermTranslation(
-                id = '0', 
-                locale_code = '0', 
-                content = '0', 
+                id = '', 
+                locale_code = '', 
+                content = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

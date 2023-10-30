@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **formats_list**
-> list[Format] formats_list(x_phrase_app_otp=x_phrase_app_otp)
+> List[Format] formats_list(x_phrase_app_otp=x_phrase_app_otp)
 
 List formats
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Format]**](Format.md)
+[**List[Format]**](Format.md)
 
 ### Authorization
 

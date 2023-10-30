@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variables_list**
-> list[Variable] variables_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Variable] variables_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List variables
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Variable]**](Variable.md)
+[**List[Variable]**](Variable.md)
 
 ### Authorization
 

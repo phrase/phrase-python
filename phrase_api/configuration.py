@@ -345,19 +345,19 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         auth = {}
-        if self.username is not None and self.password is not None:
-            auth['Basic'] = {
-                'type': 'basic',
-                'in': 'header',
-                'key': 'Authorization',
-                'value': self.get_basic_auth_token()
-            }
         if 'Authorization' in self.api_key:
             auth['Token'] = {
                 'type': 'api_key',
                 'in': 'header',
                 'key': 'Authorization',
                 'value': self.get_api_key_with_prefix('Authorization')
+            }
+        if self.username is not None and self.password is not None:
+            auth['Basic'] = {
+                'type': 'basic',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': self.get_basic_auth_token()
             }
         return auth
 

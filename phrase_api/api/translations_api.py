@@ -1172,7 +1172,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Translation]
+        :return: List[Translation]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1207,7 +1207,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Translation], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Translation], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1296,7 +1296,7 @@ class TranslationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Translation]',  # noqa: E501
+            response_type='List[Translation]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1330,7 +1330,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Translation]
+        :return: List[Translation]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1365,7 +1365,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Translation], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Translation], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1454,7 +1454,7 @@ class TranslationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Translation]',  # noqa: E501
+            response_type='List[Translation]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1753,7 +1753,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Translation]
+        :return: List[Translation]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1789,7 +1789,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Translation], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Translation], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1877,7 +1877,7 @@ class TranslationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Translation]',  # noqa: E501
+            response_type='List[Translation]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2039,7 +2039,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Translation]
+        :return: List[Translation]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2070,7 +2070,7 @@ class TranslationsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Translation], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Translation], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2151,7 +2151,7 @@ class TranslationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Translation]',  # noqa: E501
+            response_type='List[Translation]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

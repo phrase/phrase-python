@@ -37,30 +37,30 @@ class TestTranslationKeyDetails(unittest.TestCase):
         """
         if include_optional :
             return TranslationKeyDetails(
-                id = '0', 
-                name = '0', 
-                description = '0', 
-                name_hash = '0', 
+                id = '', 
+                name = '', 
+                description = '', 
+                name_hash = '', 
                 plural = True, 
                 tags = [
-                    '0'
+                    ''
                     ], 
-                data_type = '0', 
+                data_type = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                name_plural = '0', 
+                name_plural = '', 
                 comments_count = 56, 
                 max_characters_allowed = 56, 
-                screenshot_url = '0', 
+                screenshot_url = '', 
                 unformatted = True, 
                 xml_space_preserve = True, 
-                original_file = '0', 
-                format_value_type = '0', 
+                original_file = '', 
+                format_value_type = '', 
                 creator = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', )
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', )
             )
         else :
             return TranslationKeyDetails(

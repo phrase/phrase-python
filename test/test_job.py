@@ -37,12 +37,12 @@ class TestJob(unittest.TestCase):
         """
         if include_optional :
             return Job(
-                id = '0', 
-                name = '0', 
-                briefing = '0', 
+                id = '', 
+                name = '', 
+                briefing = '', 
                 due_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                state = '0', 
-                ticket_url = '0', 
+                state = '', 
+                ticket_url = '', 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 branch = {"name":"new-branch"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

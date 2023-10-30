@@ -56,7 +56,7 @@ class LocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[LocalePreview1]
+        :return: List[LocalePreview1]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -86,7 +86,7 @@ class LocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[LocalePreview1], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[LocalePreview1], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -156,7 +156,7 @@ class LocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[LocalePreview1]',  # noqa: E501
+            response_type='List[LocalePreview1]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -463,7 +463,7 @@ class LocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: file
+        :return: bytearray
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -510,7 +510,7 @@ class LocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(file, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(bytearray, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -635,7 +635,7 @@ class LocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='file',  # noqa: E501
+            response_type='bytearray',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -940,7 +940,7 @@ class LocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Locale]
+        :return: List[Locale]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -972,7 +972,7 @@ class LocalesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Locale], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Locale], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1048,7 +1048,7 @@ class LocalesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Locale]',  # noqa: E501
+            response_type='List[Locale]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

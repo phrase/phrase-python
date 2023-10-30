@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **glossaries_list**
-> list[Glossary] glossaries_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Glossary] glossaries_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List term bases
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Glossary]**](Glossary.md)
+[**List[Glossary]**](Glossary.md)
 
 ### Authorization
 

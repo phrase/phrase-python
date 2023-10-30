@@ -38,7 +38,7 @@ class LocaleDetails(object):
         'default': 'bool',
         'main': 'bool',
         'rtl': 'bool',
-        'plural_forms': 'list[str]',
+        'plural_forms': 'List[str]',
         'source_locale': 'LocalePreview',
         'fallback_locale': 'LocalePreview',
         'created_at': 'datetime',
@@ -238,7 +238,7 @@ class LocaleDetails(object):
 
 
         :return: The plural_forms of this LocaleDetails.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._plural_forms
 
@@ -248,7 +248,7 @@ class LocaleDetails(object):
 
 
         :param plural_forms: The plural_forms of this LocaleDetails.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._plural_forms = plural_forms

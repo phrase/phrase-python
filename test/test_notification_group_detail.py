@@ -37,8 +37,8 @@ class TestNotificationGroupDetail(unittest.TestCase):
         """
         if include_optional :
             return NotificationGroupDetail(
-                id = '0', 
-                event_name = '0', 
+                id = '', 
+                event_name = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 notifications_count = 56, 

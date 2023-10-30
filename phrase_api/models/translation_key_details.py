@@ -37,7 +37,7 @@ class TranslationKeyDetails(object):
         'description': 'str',
         'name_hash': 'str',
         'plural': 'bool',
-        'tags': 'list[str]',
+        'tags': 'List[str]',
         'data_type': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -247,7 +247,7 @@ class TranslationKeyDetails(object):
 
 
         :return: The tags of this TranslationKeyDetails.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._tags
 
@@ -257,7 +257,7 @@ class TranslationKeyDetails(object):
 
 
         :param tags: The tags of this TranslationKeyDetails.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._tags = tags

@@ -37,7 +37,7 @@ class GlossaryTerm(object):
         'description': 'str',
         'translatable': 'bool',
         'case_sensitive': 'bool',
-        'translations': 'list[GlossaryTermTranslation]',
+        'translations': 'List[GlossaryTermTranslation]',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -197,7 +197,7 @@ class GlossaryTerm(object):
 
 
         :return: The translations of this GlossaryTerm.  # noqa: E501
-        :rtype: list[GlossaryTermTranslation]
+        :rtype: List[GlossaryTermTranslation]
         """
         return self._translations
 
@@ -207,7 +207,7 @@ class GlossaryTerm(object):
 
 
         :param translations: The translations of this GlossaryTerm.  # noqa: E501
-        :type: list[GlossaryTermTranslation]
+        :type: List[GlossaryTermTranslation]
         """
 
         self._translations = translations

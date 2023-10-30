@@ -37,10 +37,10 @@ class Release(object):
         'app_min_version': 'str',
         'app_max_version': 'str',
         'description': 'str',
-        'platforms': 'list[str]',
-        'environments': 'list[str]',
-        'locales': 'list[LocalePreview]',
-        'tags': 'list[str]',
+        'platforms': 'List[str]',
+        'environments': 'List[str]',
+        'locales': 'List[LocalePreview]',
+        'tags': 'List[str]',
         'project': 'ProjectShort',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -217,7 +217,7 @@ class Release(object):
 
 
         :return: The platforms of this Release.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -227,7 +227,7 @@ class Release(object):
 
 
         :param platforms: The platforms of this Release.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms
@@ -238,7 +238,7 @@ class Release(object):
 
 
         :return: The environments of this Release.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._environments
 
@@ -248,7 +248,7 @@ class Release(object):
 
 
         :param environments: The environments of this Release.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._environments = environments
@@ -259,7 +259,7 @@ class Release(object):
 
 
         :return: The locales of this Release.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._locales
 
@@ -269,7 +269,7 @@ class Release(object):
 
 
         :param locales: The locales of this Release.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._locales = locales
@@ -280,7 +280,7 @@ class Release(object):
 
 
         :return: The tags of this Release.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._tags
 
@@ -290,7 +290,7 @@ class Release(object):
 
 
         :param tags: The tags of this Release.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._tags = tags

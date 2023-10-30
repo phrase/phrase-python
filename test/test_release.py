@@ -37,22 +37,22 @@ class TestRelease(unittest.TestCase):
         """
         if include_optional :
             return Release(
-                id = '0', 
+                id = '', 
                 version = 56, 
-                app_min_version = '0', 
-                app_max_version = '0', 
-                description = '0', 
+                app_min_version = '', 
+                app_max_version = '', 
+                description = '', 
                 platforms = [
-                    '0'
+                    ''
                     ], 
                 environments = [
-                    '0'
+                    ''
                     ], 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ], 
                 tags = [
-                    '0'
+                    ''
                     ], 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

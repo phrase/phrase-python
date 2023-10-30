@@ -309,7 +309,7 @@ class GitLabSyncApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[GitlabSyncHistory]
+        :return: List[GitlabSyncHistory]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -340,7 +340,7 @@ class GitLabSyncApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[GitlabSyncHistory], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[GitlabSyncHistory], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -413,7 +413,7 @@ class GitLabSyncApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[GitlabSyncHistory]',  # noqa: E501
+            response_type='List[GitlabSyncHistory]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -441,7 +441,7 @@ class GitLabSyncApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Upload]
+        :return: List[Upload]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -470,7 +470,7 @@ class GitLabSyncApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Upload], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Upload], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -545,7 +545,7 @@ class GitLabSyncApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Upload]',  # noqa: E501
+            response_type='List[Upload]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -572,7 +572,7 @@ class GitLabSyncApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[GitlabSync]
+        :return: List[GitlabSync]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -600,7 +600,7 @@ class GitLabSyncApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[GitlabSync], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[GitlabSync], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -660,7 +660,7 @@ class GitLabSyncApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[GitlabSync]',  # noqa: E501
+            response_type='List[GitlabSync]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

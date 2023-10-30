@@ -46,7 +46,7 @@ class TestStyleguideUpdateParameters(unittest.TestCase):
                 company_branding = 'ACME Inc. should never be translated.', 
                 formatting = 'Never use capital letters', 
                 glossary_terms = 'Apartment, cabin, loft', 
-                grammar_consistency = '0', 
+                grammar_consistency = '', 
                 literal_translation = 'Neutral', 
                 overall_tone = 'Tone should be fun and light', 
                 samples = 'http://www.myexample.com/my/document/path/to/samples.pdf'

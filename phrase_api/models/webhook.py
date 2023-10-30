@@ -35,7 +35,7 @@ class Webhook(object):
         'id': 'str',
         'callback_url': 'str',
         'description': 'str',
-        'events': 'list[str]',
+        'events': 'List[str]',
         'active': 'bool',
         'include_branches': 'bool',
         'created_at': 'datetime',
@@ -155,7 +155,7 @@ class Webhook(object):
 
 
         :return: The events of this Webhook.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._events
 
@@ -165,7 +165,7 @@ class Webhook(object):
 
 
         :param events: The events of this Webhook.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._events = events

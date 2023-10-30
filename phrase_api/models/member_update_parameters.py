@@ -36,9 +36,9 @@ class MemberUpdateParameters(object):
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
-        'default_locale_codes': 'list[str]',
-        'space_ids': 'list[str]',
-        'permissions': 'dict(str, str)'
+        'default_locale_codes': 'List[str]',
+        'space_ids': 'List[str]',
+        'permissions': 'Dict[str, str]'
     }
 
     attribute_map = {
@@ -180,7 +180,7 @@ class MemberUpdateParameters(object):
         List of default locales for the user.  # noqa: E501
 
         :return: The default_locale_codes of this MemberUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._default_locale_codes
 
@@ -191,7 +191,7 @@ class MemberUpdateParameters(object):
         List of default locales for the user.  # noqa: E501
 
         :param default_locale_codes: The default_locale_codes of this MemberUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._default_locale_codes = default_locale_codes
@@ -203,7 +203,7 @@ class MemberUpdateParameters(object):
         List of spaces the user is assigned to.  # noqa: E501
 
         :return: The space_ids of this MemberUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._space_ids
 
@@ -214,7 +214,7 @@ class MemberUpdateParameters(object):
         List of spaces the user is assigned to.  # noqa: E501
 
         :param space_ids: The space_ids of this MemberUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._space_ids = space_ids
@@ -226,7 +226,7 @@ class MemberUpdateParameters(object):
         Additional permissions depending on member role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
 
         :return: The permissions of this MemberUpdateParameters.  # noqa: E501
-        :rtype: dict(str, str)
+        :rtype: Dict[str, str]
         """
         return self._permissions
 
@@ -237,7 +237,7 @@ class MemberUpdateParameters(object):
         Additional permissions depending on member role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
 
         :param permissions: The permissions of this MemberUpdateParameters.  # noqa: E501
-        :type: dict(str, str)
+        :type: Dict[str, str]
         """
 
         self._permissions = permissions

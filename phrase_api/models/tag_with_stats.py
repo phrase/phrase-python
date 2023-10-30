@@ -36,7 +36,7 @@ class TagWithStats(object):
         'keys_count': 'int',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'statistics': 'list[TagWithStats1Statistics1]'
+        'statistics': 'List[TagWithStats1Statistics1]'
     }
 
     attribute_map = {
@@ -161,7 +161,7 @@ class TagWithStats(object):
 
 
         :return: The statistics of this TagWithStats.  # noqa: E501
-        :rtype: list[TagWithStats1Statistics1]
+        :rtype: List[TagWithStats1Statistics1]
         """
         return self._statistics
 
@@ -171,7 +171,7 @@ class TagWithStats(object):
 
 
         :param statistics: The statistics of this TagWithStats.  # noqa: E501
-        :type: list[TagWithStats1Statistics1]
+        :type: List[TagWithStats1Statistics1]
         """
 
         self._statistics = statistics

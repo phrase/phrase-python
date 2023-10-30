@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **members_list**
-> list[Member] members_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Member] members_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List members
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Member]**](Member.md)
+[**List[Member]**](Member.md)
 
 ### Authorization
 

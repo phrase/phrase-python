@@ -37,8 +37,8 @@ class TestWebhookDelivery(unittest.TestCase):
         """
         if include_optional :
             return WebhookDelivery(
-                id = '0', 
-                webhook_id = '0', 
+                id = '', 
+                webhook_id = '', 
                 response_status_code = 56, 
                 delivered_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 duration_ms = 56, 

@@ -40,7 +40,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'branch_example' # str | specify the branch to use
     name = 'name_example' # str | Name of the screenshot
     description = 'description_example' # str | Description of the screenshot
-    filename = '/path/to/file' # file | Screenshot file
+    filename = None # bytearray | Screenshot file
 
     try:
         # Create a screenshot
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| specify the branch to use | [optional] 
  **name** | **str**| Name of the screenshot | [optional] 
  **description** | **str**| Description of the screenshot | [optional] 
- **filename** | **file**| Screenshot file | [optional] 
+ **filename** | **bytearray**| Screenshot file | [optional] 
 
 ### Return type
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **screenshots_list**
-> list[Screenshot] screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, key_id=key_id)
+> List[Screenshot] screenshots_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, key_id=key_id)
 
 List screenshots
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Screenshot]**](Screenshot.md)
+[**List[Screenshot]**](Screenshot.md)
 
 ### Authorization
 

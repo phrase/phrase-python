@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **translatable** | **bool** |  | [optional] 
 **case_sensitive** | **bool** |  | [optional] 
-**translations** | [**list[GlossaryTermTranslation]**](GlossaryTermTranslation.md) |  | [optional] 
+**translations** | [**List[GlossaryTermTranslation]**](GlossaryTermTranslation.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

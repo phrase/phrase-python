@@ -37,15 +37,15 @@ class TestTranslationKey(unittest.TestCase):
         """
         if include_optional :
             return TranslationKey(
-                id = '0', 
-                name = '0', 
-                description = '0', 
-                name_hash = '0', 
+                id = '', 
+                name = '', 
+                description = '', 
+                name_hash = '', 
                 plural = True, 
                 tags = [
-                    '0'
+                    ''
                     ], 
-                data_type = '0', 
+                data_type = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

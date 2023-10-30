@@ -37,12 +37,12 @@ class TestTranslationVersion(unittest.TestCase):
         """
         if include_optional :
             return TranslationVersion(
-                id = '0', 
-                content = '0', 
-                plural_suffix = '0', 
+                id = '', 
+                content = '', 
+                plural_suffix = '', 
                 key = phrase_api.models.key_preview.key_preview(
-                    id = '0', 
-                    name = '0', 
+                    id = '', 
+                    name = '', 
                     plural = True, ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

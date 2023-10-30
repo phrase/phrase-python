@@ -37,7 +37,7 @@ class TestTagWithStats(unittest.TestCase):
         """
         if include_optional :
             return TagWithStats(
-                name = '0', 
+                name = '', 
                 keys_count = 56, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

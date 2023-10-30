@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **branches_list**
-> list[Branch] branches_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Branch] branches_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List branches
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Branch]**](Branch.md)
+[**List[Branch]**](Branch.md)
 
 ### Authorization
 

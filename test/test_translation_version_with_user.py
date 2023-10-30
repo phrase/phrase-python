@@ -37,22 +37,22 @@ class TestTranslationVersionWithUser(unittest.TestCase):
         """
         if include_optional :
             return TranslationVersionWithUser(
-                id = '0', 
-                content = '0', 
-                plural_suffix = '0', 
+                id = '', 
+                content = '', 
+                plural_suffix = '', 
                 key = phrase_api.models.key_preview.key_preview(
-                    id = '0', 
-                    name = '0', 
+                    id = '', 
+                    name = '', 
                     plural = True, ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 changed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 user = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', )
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', )
             )
         else :
             return TranslationVersionWithUser(

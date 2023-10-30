@@ -48,7 +48,7 @@ class UploadsApi(object):
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param file file: File to be imported
+        :param bytearray file: File to be imported
         :param str file_format: File format. Auto-detected when possible and not specified.
         :param str locale_id: Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
@@ -90,7 +90,7 @@ class UploadsApi(object):
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param file file: File to be imported
+        :param bytearray file: File to be imported
         :param str file_format: File format. Auto-detected when possible and not specified.
         :param str locale_id: Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
@@ -393,7 +393,7 @@ class UploadsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Upload]
+        :return: List[Upload]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -424,7 +424,7 @@ class UploadsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Upload], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Upload], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -497,7 +497,7 @@ class UploadsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Upload]',  # noqa: E501
+            response_type='List[Upload]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

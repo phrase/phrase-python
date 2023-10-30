@@ -145,7 +145,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bitbucket_syncs_list**
-> list[BitbucketSync] bitbucket_syncs_list(x_phrase_app_otp=x_phrase_app_otp, account_id=account_id)
+> List[BitbucketSync] bitbucket_syncs_list(x_phrase_app_otp=x_phrase_app_otp, account_id=account_id)
 
 List Bitbucket syncs
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[BitbucketSync]**](BitbucketSync.md)
+[**List[BitbucketSync]**](BitbucketSync.md)
 
 ### Authorization
 

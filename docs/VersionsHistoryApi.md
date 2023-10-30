@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **versions_list**
-> list[TranslationVersion] versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[TranslationVersion] versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List all versions
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[TranslationVersion]**](TranslationVersion.md)
+[**List[TranslationVersion]**](TranslationVersion.md)
 
 ### Authorization
 

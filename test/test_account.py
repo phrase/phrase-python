@@ -37,13 +37,13 @@ class TestAccount(unittest.TestCase):
         """
         if include_optional :
             return Account(
-                id = '0', 
-                name = '0', 
-                slug = '0', 
-                company = '0', 
+                id = '', 
+                name = '', 
+                slug = '', 
+                company = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                company_logo_url = '0'
+                company_logo_url = ''
             )
         else :
             return Account(

@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 
-**platforms** | **list[str]** |  | [optional] 
-**locales** | [**list[LocalePreview]**](LocalePreview.md) |  | [optional] 
-**releases** | [**list[ReleasePreview]**](ReleasePreview.md) |  | [optional] 
+**platforms** | **List[str]** |  | [optional] 
+**locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**releases** | [**List[ReleasePreview]**](ReleasePreview.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **deleted_at** | **datetime** |  | [optional] 
 

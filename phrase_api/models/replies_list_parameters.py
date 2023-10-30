@@ -34,7 +34,7 @@ class RepliesListParameters(object):
     openapi_types = {
         'branch': 'str',
         'query': 'str',
-        'filters': 'list[str]',
+        'filters': 'List[str]',
         'order': 'str'
     }
 
@@ -119,7 +119,7 @@ class RepliesListParameters(object):
         Specify filters to find comments by  # noqa: E501
 
         :return: The filters of this RepliesListParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._filters
 
@@ -130,7 +130,7 @@ class RepliesListParameters(object):
         Specify filters to find comments by  # noqa: E501
 
         :param filters: The filters of this RepliesListParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._filters = filters

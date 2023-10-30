@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **authorizations_list**
-> list[Authorization] authorizations_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[Authorization] authorizations_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List authorizations
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Authorization]**](Authorization.md)
+[**List[Authorization]**](Authorization.md)
 
 ### Authorization
 

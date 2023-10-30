@@ -37,23 +37,23 @@ class TestBranch(unittest.TestCase):
         """
         if include_optional :
             return Branch(
-                base_project_id = '0', 
-                branch_project_id = '0', 
-                name = '0', 
+                base_project_id = '', 
+                branch_project_id = '', 
+                name = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 merged_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 merged_by = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 created_by = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
-                state = '0'
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
+                state = ''
             )
         else :
             return Branch(

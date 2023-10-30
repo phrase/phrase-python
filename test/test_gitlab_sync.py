@@ -37,17 +37,17 @@ class TestGitlabSync(unittest.TestCase):
         """
         if include_optional :
             return GitlabSync(
-                id = '0', 
-                project_id = '0', 
+                id = '', 
+                project_id = '', 
                 gitlab_project_id = 56, 
-                gitlab_branch_name = '0', 
+                gitlab_branch_name = '', 
                 auto_import = True, 
-                auto_import_secret = '0', 
-                auto_import_url = '0', 
-                self_hosted_api_url = '0', 
+                auto_import_secret = '', 
+                auto_import_url = '', 
+                self_hosted_api_url = '', 
                 last_exported_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 last_imported_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                last_status = '0'
+                last_status = ''
             )
         else :
             return GitlabSync(

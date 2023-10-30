@@ -37,9 +37,9 @@ class TestProjectShort(unittest.TestCase):
         """
         if include_optional :
             return ProjectShort(
-                id = '0', 
-                name = '0', 
-                main_format = '0', 
+                id = '', 
+                name = '', 
+                main_format = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

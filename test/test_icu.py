@@ -37,7 +37,7 @@ class TestIcu(unittest.TestCase):
         """
         if include_optional :
             return Icu(
-                locale_code = '0'
+                locale_code = ''
             )
         else :
             return Icu(

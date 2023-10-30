@@ -37,7 +37,7 @@ class Space(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'projects_count': 'int',
-        'projects': 'list[Project]'
+        'projects': 'List[Project]'
     }
 
     attribute_map = {
@@ -187,7 +187,7 @@ class Space(object):
 
 
         :return: The projects of this Space.  # noqa: E501
-        :rtype: list[Project]
+        :rtype: List[Project]
         """
         return self._projects
 
@@ -197,7 +197,7 @@ class Space(object):
 
 
         :param projects: The projects of this Space.  # noqa: E501
-        :type: list[Project]
+        :type: List[Project]
         """
 
         self._projects = projects

@@ -37,9 +37,9 @@ class TestLocaleTeamPreview(unittest.TestCase):
         """
         if include_optional :
             return LocaleTeamPreview(
-                id = '0', 
-                name = '0', 
-                role = '0'
+                id = '', 
+                name = '', 
+                role = ''
             )
         else :
             return LocaleTeamPreview(

@@ -37,9 +37,9 @@ class TestLocalePreview(unittest.TestCase):
         """
         if include_optional :
             return LocalePreview(
-                id = '0', 
-                name = '0', 
-                code = '0'
+                id = '', 
+                name = '', 
+                code = ''
             )
         else :
             return LocalePreview(

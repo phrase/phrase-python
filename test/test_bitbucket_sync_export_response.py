@@ -37,7 +37,7 @@ class TestBitbucketSyncExportResponse(unittest.TestCase):
         """
         if include_optional :
             return BitbucketSyncExportResponse(
-                status_path = '0'
+                status_path = ''
             )
         else :
             return BitbucketSyncExportResponse(

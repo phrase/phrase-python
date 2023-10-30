@@ -37,8 +37,8 @@ class TestTeam(unittest.TestCase):
         """
         if include_optional :
             return Team(
-                id = '0', 
-                name = '0', 
+                id = '', 
+                name = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 projects = [
@@ -49,10 +49,10 @@ class TestTeam(unittest.TestCase):
                     ], 
                 users = [
                     phrase_api.models.user_preview.user_preview(
-                        id = '0', 
-                        username = '0', 
-                        name = '0', 
-                        gravatar_uid = '0', )
+                        id = '', 
+                        username = '', 
+                        name = '', 
+                        gravatar_uid = '', )
                     ]
             )
         else :

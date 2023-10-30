@@ -516,7 +516,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_locales_list**
-> list[JobLocale] job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[JobLocale] job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List job target locales
 
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[JobLocale]**](JobLocale.md)
+[**List[JobLocale]**](JobLocale.md)
 
 ### Authorization
 

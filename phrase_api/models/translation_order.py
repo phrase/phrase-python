@@ -42,7 +42,7 @@ class TranslationOrder(object):
         'translation_type': 'str',
         'progress_percent': 'int',
         'source_locale': 'LocalePreview',
-        'target_locales': 'list[LocalePreview]',
+        'target_locales': 'List[LocalePreview]',
         'tag': 'str',
         'styleguide': 'StyleguidePreview',
         'unverify_translations_upon_delivery': 'bool',
@@ -352,7 +352,7 @@ class TranslationOrder(object):
 
 
         :return: The target_locales of this TranslationOrder.  # noqa: E501
-        :rtype: list[LocalePreview]
+        :rtype: List[LocalePreview]
         """
         return self._target_locales
 
@@ -362,7 +362,7 @@ class TranslationOrder(object):
 
 
         :param target_locales: The target_locales of this TranslationOrder.  # noqa: E501
-        :type: list[LocalePreview]
+        :type: List[LocalePreview]
         """
 
         self._target_locales = target_locales

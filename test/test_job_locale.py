@@ -37,24 +37,24 @@ class TestJobLocale(unittest.TestCase):
         """
         if include_optional :
             return JobLocale(
-                id = '0', 
+                id = '', 
                 job = phrase_api.models.job_preview.job_preview(
-                    id = '0', 
-                    name = '0', 
-                    state = '0', ), 
+                    id = '', 
+                    name = '', 
+                    state = '', ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 users = [
                     phrase_api.models.locale_user_preview.locale_user_preview(
-                        id = '0', 
-                        username = '0', 
-                        name = '0', 
-                        role = '0', )
+                        id = '', 
+                        username = '', 
+                        name = '', 
+                        role = '', )
                     ], 
                 teams = [
                     phrase_api.models.locale_team_preview.locale_team_preview(
-                        id = '0', 
-                        name = '0', 
-                        role = '0', )
+                        id = '', 
+                        name = '', 
+                        role = '', )
                     ], 
                 completed = True, 
                 translation_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

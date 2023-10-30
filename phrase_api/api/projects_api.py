@@ -539,7 +539,7 @@ class ProjectsApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
-        :param list[str] filters: Filter projects. Valid options are [\"favorites\"].
+        :param List[str] filters: Filter projects. Valid options are [\"favorites\"].
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -547,7 +547,7 @@ class ProjectsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Project]
+        :return: List[Project]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -569,7 +569,7 @@ class ProjectsApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str account_id: Filter by Account ID
         :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
-        :param list[str] filters: Filter projects. Valid options are [\"favorites\"].
+        :param List[str] filters: Filter projects. Valid options are [\"favorites\"].
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -579,7 +579,7 @@ class ProjectsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Project], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Project], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -652,7 +652,7 @@ class ProjectsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Project]',  # noqa: E501
+            response_type='List[Project]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

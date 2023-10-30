@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reactions_list**
-> list[CommentReaction] reactions_list(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[CommentReaction] reactions_list(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
 
 List reactions
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[CommentReaction]**](CommentReaction.md)
+[**List[CommentReaction]**](CommentReaction.md)
 
 ### Authorization
 

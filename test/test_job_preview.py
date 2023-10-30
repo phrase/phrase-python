@@ -37,9 +37,9 @@ class TestJobPreview(unittest.TestCase):
         """
         if include_optional :
             return JobPreview(
-                id = '0', 
-                name = '0', 
-                state = '0'
+                id = '', 
+                name = '', 
+                state = ''
             )
         else :
             return JobPreview(

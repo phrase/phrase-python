@@ -581,7 +581,7 @@ class SpacesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Space]
+        :return: List[Space]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -611,7 +611,7 @@ class SpacesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Space], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Space], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -681,7 +681,7 @@ class SpacesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Space]',  # noqa: E501
+            response_type='List[Space]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -981,7 +981,7 @@ class SpacesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Project]
+        :return: List[Project]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1012,7 +1012,7 @@ class SpacesApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Project], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Project], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1089,7 +1089,7 @@ class SpacesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Project]',  # noqa: E501
+            response_type='List[Project]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

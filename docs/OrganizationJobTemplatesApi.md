@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organization_job_templates_list**
-> list[OrganizationJobTemplate] organization_job_templates_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[OrganizationJobTemplate] organization_job_templates_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List organization job templates
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[OrganizationJobTemplate]**](OrganizationJobTemplate.md)
+[**List[OrganizationJobTemplate]**](OrganizationJobTemplate.md)
 
 ### Authorization
 

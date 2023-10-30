@@ -33,7 +33,7 @@ class JobKeysCreateParameters(object):
     """
     openapi_types = {
         'branch': 'str',
-        'translation_key_ids': 'list[str]'
+        'translation_key_ids': 'List[str]'
     }
 
     attribute_map = {
@@ -86,7 +86,7 @@ class JobKeysCreateParameters(object):
         ids of keys that should added to the job  # noqa: E501
 
         :return: The translation_key_ids of this JobKeysCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._translation_key_ids
 
@@ -97,7 +97,7 @@ class JobKeysCreateParameters(object):
         ids of keys that should added to the job  # noqa: E501
 
         :param translation_key_ids: The translation_key_ids of this JobKeysCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._translation_key_ids = translation_key_ids

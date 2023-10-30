@@ -34,8 +34,8 @@ class GitlabSyncHistory(object):
     openapi_types = {
         'status': 'str',
         'action': 'str',
-        'errors': 'list[GitlabSyncHistoryErrors]',
-        'date': 'datetime',
+        'errors': 'List[GitlabSyncHistoryErrorsInner]',
+        'var_date': 'datetime',
         'details': 'object'
     }
 
@@ -43,11 +43,11 @@ class GitlabSyncHistory(object):
         'status': 'status',
         'action': 'action',
         'errors': 'errors',
-        'date': 'date',
+        'var_date': 'date',
         'details': 'details'
     }
 
-    def __init__(self, status=None, action=None, errors=None, date=None, details=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, status=None, action=None, errors=None, var_date=None, details=None, local_vars_configuration=None):  # noqa: E501
         """GitlabSyncHistory - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,7 +56,7 @@ class GitlabSyncHistory(object):
         self._status = None
         self._action = None
         self._errors = None
-        self._date = None
+        self._var_date = None
         self._details = None
         self.discriminator = None
 
@@ -66,8 +66,8 @@ class GitlabSyncHistory(object):
             self.action = action
         if errors is not None:
             self.errors = errors
-        if date is not None:
-            self.date = date
+        if var_date is not None:
+            self.var_date = var_date
         if details is not None:
             self.details = details
 
@@ -119,7 +119,7 @@ class GitlabSyncHistory(object):
 
 
         :return: The errors of this GitlabSyncHistory.  # noqa: E501
-        :rtype: list[GitlabSyncHistoryErrors]
+        :rtype: List[GitlabSyncHistoryErrorsInner]
         """
         return self._errors
 
@@ -129,31 +129,31 @@ class GitlabSyncHistory(object):
 
 
         :param errors: The errors of this GitlabSyncHistory.  # noqa: E501
-        :type: list[GitlabSyncHistoryErrors]
+        :type: List[GitlabSyncHistoryErrorsInner]
         """
 
         self._errors = errors
 
     @property
-    def date(self):
-        """Gets the date of this GitlabSyncHistory.  # noqa: E501
+    def var_date(self):
+        """Gets the var_date of this GitlabSyncHistory.  # noqa: E501
 
 
-        :return: The date of this GitlabSyncHistory.  # noqa: E501
+        :return: The var_date of this GitlabSyncHistory.  # noqa: E501
         :rtype: datetime
         """
-        return self._date
+        return self._var_date
 
-    @date.setter
-    def date(self, date):
-        """Sets the date of this GitlabSyncHistory.
+    @var_date.setter
+    def var_date(self, var_date):
+        """Sets the var_date of this GitlabSyncHistory.
 
 
-        :param date: The date of this GitlabSyncHistory.  # noqa: E501
+        :param var_date: The var_date of this GitlabSyncHistory.  # noqa: E501
         :type: datetime
         """
 
-        self._date = date
+        self._var_date = var_date
 
     @property
     def details(self):

@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organization_job_template_locales_list**
-> list[JobTemplateLocales] organization_job_template_locales_list(account_id, job_template_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[JobTemplateLocales] organization_job_template_locales_list(account_id, job_template_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 List organization job template locales
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[JobTemplateLocales]**](JobTemplateLocales.md)
+[**List[JobTemplateLocales]**](JobTemplateLocales.md)
 
 ### Authorization
 

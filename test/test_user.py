@@ -37,10 +37,10 @@ class TestUser(unittest.TestCase):
         """
         if include_optional :
             return User(
-                id = '0', 
-                username = '0', 
-                name = '0', 
-                position = '0', 
+                id = '', 
+                username = '', 
+                name = '', 
+                position = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

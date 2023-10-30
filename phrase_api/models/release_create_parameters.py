@@ -33,9 +33,9 @@ class ReleaseCreateParameters(object):
     """
     openapi_types = {
         'description': 'str',
-        'platforms': 'list[str]',
-        'locale_ids': 'list[str]',
-        'tags': 'list[str]',
+        'platforms': 'List[str]',
+        'locale_ids': 'List[str]',
+        'tags': 'List[str]',
         'branch': 'str'
     }
 
@@ -101,7 +101,7 @@ class ReleaseCreateParameters(object):
         List of platforms the release should support.  # noqa: E501
 
         :return: The platforms of this ReleaseCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._platforms
 
@@ -112,7 +112,7 @@ class ReleaseCreateParameters(object):
         List of platforms the release should support.  # noqa: E501
 
         :param platforms: The platforms of this ReleaseCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._platforms = platforms
@@ -124,7 +124,7 @@ class ReleaseCreateParameters(object):
         List of locale ids that will be included in the release. If empty, distribution locales will be used  # noqa: E501
 
         :return: The locale_ids of this ReleaseCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._locale_ids
 
@@ -135,7 +135,7 @@ class ReleaseCreateParameters(object):
         List of locale ids that will be included in the release. If empty, distribution locales will be used  # noqa: E501
 
         :param locale_ids: The locale_ids of this ReleaseCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._locale_ids = locale_ids
@@ -147,7 +147,7 @@ class ReleaseCreateParameters(object):
         Only include tagged keys in the release. For a key to be included it must be tagged with all tags provided  # noqa: E501
 
         :return: The tags of this ReleaseCreateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._tags
 
@@ -158,7 +158,7 @@ class ReleaseCreateParameters(object):
         Only include tagged keys in the release. For a key to be included it must be tagged with all tags provided  # noqa: E501
 
         :param tags: The tags of this ReleaseCreateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._tags = tags

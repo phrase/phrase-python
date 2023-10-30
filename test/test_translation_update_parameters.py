@@ -39,7 +39,7 @@ class TestTranslationUpdateParameters(unittest.TestCase):
             return TranslationUpdateParameters(
                 branch = 'my-feature-branch', 
                 content = 'My translation', 
-                plural_suffix = '0', 
+                plural_suffix = '', 
                 unverified = True, 
                 excluded = True, 
                 autotranslate = True

@@ -38,11 +38,11 @@ class Member(object):
         'created_at': 'datetime',
         'last_activity_at': 'datetime',
         'role': 'str',
-        'projects': 'list[ProjectLocales]',
+        'projects': 'List[ProjectLocales]',
         'permissions': 'object',
-        'default_locale_codes': 'list[str]',
-        'teams': 'list[TeamShort]',
-        'spaces': 'list[MemberSpaces]'
+        'default_locale_codes': 'List[str]',
+        'teams': 'List[TeamShort]',
+        'spaces': 'List[MemberSpacesInner]'
     }
 
     attribute_map = {
@@ -233,7 +233,7 @@ class Member(object):
 
 
         :return: The projects of this Member.  # noqa: E501
-        :rtype: list[ProjectLocales]
+        :rtype: List[ProjectLocales]
         """
         return self._projects
 
@@ -243,7 +243,7 @@ class Member(object):
 
 
         :param projects: The projects of this Member.  # noqa: E501
-        :type: list[ProjectLocales]
+        :type: List[ProjectLocales]
         """
 
         self._projects = projects
@@ -275,7 +275,7 @@ class Member(object):
 
 
         :return: The default_locale_codes of this Member.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._default_locale_codes
 
@@ -285,7 +285,7 @@ class Member(object):
 
 
         :param default_locale_codes: The default_locale_codes of this Member.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._default_locale_codes = default_locale_codes
@@ -296,7 +296,7 @@ class Member(object):
 
 
         :return: The teams of this Member.  # noqa: E501
-        :rtype: list[TeamShort]
+        :rtype: List[TeamShort]
         """
         return self._teams
 
@@ -306,7 +306,7 @@ class Member(object):
 
 
         :param teams: The teams of this Member.  # noqa: E501
-        :type: list[TeamShort]
+        :type: List[TeamShort]
         """
 
         self._teams = teams
@@ -317,7 +317,7 @@ class Member(object):
 
 
         :return: The spaces of this Member.  # noqa: E501
-        :rtype: list[MemberSpaces]
+        :rtype: List[MemberSpacesInner]
         """
         return self._spaces
 
@@ -327,7 +327,7 @@ class Member(object):
 
 
         :param spaces: The spaces of this Member.  # noqa: E501
-        :type: list[MemberSpaces]
+        :type: List[MemberSpacesInner]
         """
 
         self._spaces = spaces

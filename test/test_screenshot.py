@@ -37,10 +37,10 @@ class TestScreenshot(unittest.TestCase):
         """
         if include_optional :
             return Screenshot(
-                id = '0', 
-                name = '0', 
-                description = '0', 
-                screenshot_url = '0', 
+                id = '', 
+                name = '', 
+                description = '', 
+                screenshot_url = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 markers_count = 56

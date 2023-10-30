@@ -36,9 +36,9 @@ class Team(object):
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'projects': 'list[Project]',
-        'spaces': 'list[Space]',
-        'users': 'list[UserPreview]'
+        'projects': 'List[Project]',
+        'spaces': 'List[Space]',
+        'users': 'List[UserPreview]'
     }
 
     attribute_map = {
@@ -171,7 +171,7 @@ class Team(object):
 
 
         :return: The projects of this Team.  # noqa: E501
-        :rtype: list[Project]
+        :rtype: List[Project]
         """
         return self._projects
 
@@ -181,7 +181,7 @@ class Team(object):
 
 
         :param projects: The projects of this Team.  # noqa: E501
-        :type: list[Project]
+        :type: List[Project]
         """
 
         self._projects = projects
@@ -192,7 +192,7 @@ class Team(object):
 
 
         :return: The spaces of this Team.  # noqa: E501
-        :rtype: list[Space]
+        :rtype: List[Space]
         """
         return self._spaces
 
@@ -202,7 +202,7 @@ class Team(object):
 
 
         :param spaces: The spaces of this Team.  # noqa: E501
-        :type: list[Space]
+        :type: List[Space]
         """
 
         self._spaces = spaces
@@ -213,7 +213,7 @@ class Team(object):
 
 
         :return: The users of this Team.  # noqa: E501
-        :rtype: list[UserPreview]
+        :rtype: List[UserPreview]
         """
         return self._users
 
@@ -223,7 +223,7 @@ class Team(object):
 
 
         :param users: The users of this Team.  # noqa: E501
-        :type: list[UserPreview]
+        :type: List[UserPreview]
         """
 
         self._users = users

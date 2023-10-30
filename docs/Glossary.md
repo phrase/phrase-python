@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**projects** | [**list[ProjectShort]**](ProjectShort.md) |  | [optional] 
+**projects** | [**List[ProjectShort]**](ProjectShort.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

@@ -37,22 +37,22 @@ class TestJobComment(unittest.TestCase):
         """
         if include_optional :
             return JobComment(
-                id = '0', 
-                message = '0', 
-                job_id = '0', 
+                id = '', 
+                message = '', 
+                job_id = '', 
                 user = phrase_api.models.user_preview.user_preview(
-                    id = '0', 
-                    username = '0', 
-                    name = '0', 
-                    gravatar_uid = '0', ), 
+                    id = '', 
+                    username = '', 
+                    name = '', 
+                    gravatar_uid = '', ), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 mentioned_users = [
                     phrase_api.models.user_preview.user_preview(
-                        id = '0', 
-                        username = '0', 
-                        name = '0', 
-                        gravatar_uid = '0', )
+                        id = '', 
+                        username = '', 
+                        name = '', 
+                        gravatar_uid = '', )
                     ]
             )
         else :

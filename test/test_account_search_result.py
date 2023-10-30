@@ -37,11 +37,11 @@ class TestAccountSearchResult(unittest.TestCase):
         """
         if include_optional :
             return AccountSearchResult(
-                query = '0', 
-                excerpt = '0', 
+                query = '', 
+                excerpt = '', 
                 key = phrase_api.models.key_preview.key_preview(
-                    id = '0', 
-                    name = '0', 
+                    id = '', 
+                    name = '', 
                     plural = True, ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","slug":"android_project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","space":"space","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 

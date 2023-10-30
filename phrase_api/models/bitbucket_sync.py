@@ -37,7 +37,7 @@ class BitbucketSync(object):
         'last_export_to_bitbucket_at': 'datetime',
         'last_import_from_bitbucket_at': 'datetime',
         'valid_phraseapp_yaml': 'bool',
-        'phraseapp_projects': 'list[ProjectShort]'
+        'phraseapp_projects': 'List[ProjectShort]'
     }
 
     attribute_map = {
@@ -187,7 +187,7 @@ class BitbucketSync(object):
 
 
         :return: The phraseapp_projects of this BitbucketSync.  # noqa: E501
-        :rtype: list[ProjectShort]
+        :rtype: List[ProjectShort]
         """
         return self._phraseapp_projects
 
@@ -197,7 +197,7 @@ class BitbucketSync(object):
 
 
         :param phraseapp_projects: The phraseapp_projects of this BitbucketSync.  # noqa: E501
-        :type: list[ProjectShort]
+        :type: List[ProjectShort]
         """
 
         self._phraseapp_projects = phraseapp_projects

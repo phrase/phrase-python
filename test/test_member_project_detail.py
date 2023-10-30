@@ -37,32 +37,32 @@ class TestMemberProjectDetail(unittest.TestCase):
         """
         if include_optional :
             return MemberProjectDetail(
-                id = '0', 
-                email = '0', 
-                username = '0', 
-                role = '0', 
+                id = '', 
+                email = '', 
+                username = '', 
+                role = '', 
                 projects = [
                     null
                     ], 
                 permissions = None, 
                 locale_ids = [
-                    '0'
+                    ''
                     ], 
                 default_locale_codes = [
-                    '0'
+                    ''
                     ], 
                 spaces = [
-                    phrase_api.models.member_spaces.member_spaces(
-                        id = '0', 
-                        name = '0', 
+                    phrase_api.models.member_spaces_inner.member_spaces_inner(
+                        id = '', 
+                        name = '', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         projects_count = 56, )
                     ], 
                 project_roles = [
-                    phrase_api.models.member_project_detail_project_roles.member_project_detail_project_roles(
-                        project_id = '0', 
-                        role = '0', )
+                    phrase_api.models.member_project_detail_project_roles_inner.member_project_detail_project_roles_inner(
+                        project_id = '', 
+                        role = '', )
                     ]
             )
         else :

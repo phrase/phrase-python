@@ -324,7 +324,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
-    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # list[str] | ids of keys that should added to the job
+    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | ids of keys that should added to the job
 
     try:
         # Remove keys from job
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
- **translation_key_ids** | [**list[str]**](str.md)| ids of keys that should added to the job | [optional] 
+ **translation_key_ids** | [**List[str]**](str.md)| ids of keys that should added to the job | [optional] 
 
 ### Return type
 
@@ -786,7 +786,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **jobs_by_account**
-> list[Job] jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state)
+> List[Job] jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state)
 
 List account jobs
 
@@ -840,7 +840,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Job]**](Job.md)
+[**List[Job]**](Job.md)
 
 ### Authorization
 
@@ -862,7 +862,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **jobs_list**
-> list[Job] jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state)
+> List[Job] jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state)
 
 List jobs
 
@@ -918,7 +918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Job]**](Job.md)
+[**List[Job]**](Job.md)
 
 ### Authorization
 

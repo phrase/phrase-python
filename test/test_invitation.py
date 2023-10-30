@@ -37,10 +37,10 @@ class TestInvitation(unittest.TestCase):
         """
         if include_optional :
             return Invitation(
-                id = '0', 
-                email = '0', 
-                role = '0', 
-                state = '0', 
+                id = '', 
+                email = '', 
+                role = '', 
+                state = '', 
                 projects = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ], 
@@ -51,11 +51,11 @@ class TestInvitation(unittest.TestCase):
                     {"id":"2e7574e8f2372906a03110c2a7cfe671","name":"My first Team","created_at":"2020-02-25T12:17:25Z","updated_at":"2020-03-13T14:46:57Z"}
                     ], 
                 default_locale_codes = [
-                    '0'
+                    ''
                     ], 
                 permissions = None, 
                 locale_ids = [
-                    '0'
+                    ''
                     ], 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -64,9 +64,9 @@ class TestInvitation(unittest.TestCase):
                     {"id":"2e7574e8f2372906a03110c2a7cfe671","name":"My first space","created_at":"2020-02-25T12:17:25Z","updated_at":"2020-03-13T14:46:57Z","projects_count":2,"projects":[{"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"},{"id":"abcd11231fadef1234adacd1234cdef1234","name":"My IOS Project","main_format":"yml","project_image_url":"http://assets.example.com/project2.png","account":"account","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}]}
                     ], 
                 project_role = [
-                    phrase_api.models.member_project_detail_project_roles.member_project_detail_project_roles(
-                        project_id = '0', 
-                        role = '0', )
+                    phrase_api.models.member_project_detail_project_roles_inner.member_project_detail_project_roles_inner(
+                        project_id = '', 
+                        role = '', )
                     ]
             )
         else :

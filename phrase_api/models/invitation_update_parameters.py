@@ -35,10 +35,10 @@ class InvitationUpdateParameters(object):
         'role': 'str',
         'project_ids': 'str',
         'locale_ids': 'str',
-        'space_ids': 'list[str]',
-        'team_ids': 'list[str]',
-        'default_locale_codes': 'list[str]',
-        'permissions': 'dict(str, str)'
+        'space_ids': 'List[str]',
+        'team_ids': 'List[str]',
+        'default_locale_codes': 'List[str]',
+        'permissions': 'Dict[str, str]'
     }
 
     attribute_map = {
@@ -157,7 +157,7 @@ class InvitationUpdateParameters(object):
         List of spaces the user is assigned to.  # noqa: E501
 
         :return: The space_ids of this InvitationUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._space_ids
 
@@ -168,7 +168,7 @@ class InvitationUpdateParameters(object):
         List of spaces the user is assigned to.  # noqa: E501
 
         :param space_ids: The space_ids of this InvitationUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._space_ids = space_ids
@@ -180,7 +180,7 @@ class InvitationUpdateParameters(object):
         List of teams the user is assigned to.  # noqa: E501
 
         :return: The team_ids of this InvitationUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._team_ids
 
@@ -191,7 +191,7 @@ class InvitationUpdateParameters(object):
         List of teams the user is assigned to.  # noqa: E501
 
         :param team_ids: The team_ids of this InvitationUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._team_ids = team_ids
@@ -203,7 +203,7 @@ class InvitationUpdateParameters(object):
         List of default locales for the user.  # noqa: E501
 
         :return: The default_locale_codes of this InvitationUpdateParameters.  # noqa: E501
-        :rtype: list[str]
+        :rtype: List[str]
         """
         return self._default_locale_codes
 
@@ -214,7 +214,7 @@ class InvitationUpdateParameters(object):
         List of default locales for the user.  # noqa: E501
 
         :param default_locale_codes: The default_locale_codes of this InvitationUpdateParameters.  # noqa: E501
-        :type: list[str]
+        :type: List[str]
         """
 
         self._default_locale_codes = default_locale_codes
@@ -226,7 +226,7 @@ class InvitationUpdateParameters(object):
         Additional permissions depending on invitation role.  # noqa: E501
 
         :return: The permissions of this InvitationUpdateParameters.  # noqa: E501
-        :rtype: dict(str, str)
+        :rtype: Dict[str, str]
         """
         return self._permissions
 
@@ -237,7 +237,7 @@ class InvitationUpdateParameters(object):
         Additional permissions depending on invitation role.  # noqa: E501
 
         :param permissions: The permissions of this InvitationUpdateParameters.  # noqa: E501
-        :type: dict(str, str)
+        :type: Dict[str, str]
         """
 
         self._permissions = permissions

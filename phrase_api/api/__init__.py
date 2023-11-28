@@ -38,6 +38,7 @@ from phrase_api.api.organization_job_template_locales_api import OrganizationJob
 from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
+from phrase_api.api.reports_api import ReportsApi
 from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi
 from phrase_api.api.screenshots_api import ScreenshotsApi
 from phrase_api.api.search_api import SearchApi

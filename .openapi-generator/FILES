@@ -131,6 +131,7 @@ docs/LocaleCreateParameters.md
 docs/LocaleDetails.md
 docs/LocalePreview.md
 docs/LocalePreview1.md
+docs/LocaleReport.md
 docs/LocaleStatistics.md
 docs/LocaleTeamPreview.md
 docs/LocaleUpdateParameters.md
@@ -163,6 +164,7 @@ docs/Project.md
 docs/ProjectCreateParameters.md
 docs/ProjectDetails.md
 docs/ProjectLocales.md
+docs/ProjectReport.md
 docs/ProjectShort.md
 docs/ProjectUpdateParameters.md
 docs/ProjectsApi.md
@@ -172,6 +174,7 @@ docs/ReleasePreview.md
 docs/ReleaseUpdateParameters.md
 docs/ReleasesApi.md
 docs/RepliesListParameters.md
+docs/ReportsApi.md
 docs/Screenshot.md
 docs/ScreenshotMarker.md
 docs/ScreenshotMarkerCreateParameters.md
@@ -285,6 +288,7 @@ phrase_api/api/organization_job_template_locales_api.py
 phrase_api/api/organization_job_templates_api.py
 phrase_api/api/projects_api.py
 phrase_api/api/releases_api.py
+phrase_api/api/reports_api.py
 phrase_api/api/screenshot_markers_api.py
 phrase_api/api/screenshots_api.py
 phrase_api/api/search_api.py
@@ -405,6 +409,7 @@ phrase_api/models/locale_create_parameters.py
 phrase_api/models/locale_details.py
 phrase_api/models/locale_preview.py
 phrase_api/models/locale_preview1.py
+phrase_api/models/locale_report.py
 phrase_api/models/locale_statistics.py
 phrase_api/models/locale_team_preview.py
 phrase_api/models/locale_update_parameters.py
@@ -430,6 +435,7 @@ phrase_api/models/project.py
 phrase_api/models/project_create_parameters.py
 phrase_api/models/project_details.py
 phrase_api/models/project_locales.py
+phrase_api/models/project_report.py
 phrase_api/models/project_short.py
 phrase_api/models/project_update_parameters.py
 phrase_api/models/release.py
@@ -633,6 +639,7 @@ test/test_locale_create_parameters.py
 test/test_locale_details.py
 test/test_locale_preview.py
 test/test_locale_preview1.py
+test/test_locale_report.py
 test/test_locale_statistics.py
 test/test_locale_team_preview.py
 test/test_locale_update_parameters.py
@@ -664,6 +671,7 @@ test/test_project.py
 test/test_project_create_parameters.py
 test/test_project_details.py
 test/test_project_locales.py
+test/test_project_report.py
 test/test_project_short.py
 test/test_project_update_parameters.py
 test/test_projects_api.py
@@ -673,6 +681,7 @@ test/test_release_preview.py
 test/test_release_update_parameters.py
 test/test_releases_api.py
 test/test_replies_list_parameters.py
+test/test_reports_api.py
 test/test_screenshot.py
 test/test_screenshot_marker.py
 test/test_screenshot_marker_create_parameters.py

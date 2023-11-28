@@ -321,6 +321,8 @@ Class | Method | HTTP request | Description
 *ReleasesApi* | [**release_show**](docs/ReleasesApi.md#release_show) | **GET** /accounts/{account_id}/distributions/{distribution_id}/releases/{id} | Get a single release
 *ReleasesApi* | [**release_update**](docs/ReleasesApi.md#release_update) | **PATCH** /accounts/{account_id}/distributions/{distribution_id}/releases/{id} | Update a release
 *ReleasesApi* | [**releases_list**](docs/ReleasesApi.md#releases_list) | **GET** /accounts/{account_id}/distributions/{distribution_id}/releases | List releases
+*ReportsApi* | [**report_locales_list**](docs/ReportsApi.md#report_locales_list) | **GET** /projects/{project_id}/report/locales | List Locale Reports
+*ReportsApi* | [**report_show**](docs/ReportsApi.md#report_show) | **GET** /projects/{project_id}/report | Get Project Report
 *ScreenshotMarkersApi* | [**screenshot_marker_create**](docs/ScreenshotMarkersApi.md#screenshot_marker_create) | **POST** /projects/{project_id}/screenshots/{screenshot_id}/markers | Create a screenshot marker
 *ScreenshotMarkersApi* | [**screenshot_marker_delete**](docs/ScreenshotMarkersApi.md#screenshot_marker_delete) | **DELETE** /projects/{project_id}/screenshots/{screenshot_id}/markers | Delete a screenshot marker
 *ScreenshotMarkersApi* | [**screenshot_marker_show**](docs/ScreenshotMarkersApi.md#screenshot_marker_show) | **GET** /projects/{project_id}/screenshots/{screenshot_id}/markers/{id} | Get a single screenshot marker
@@ -502,6 +504,7 @@ Class | Method | HTTP request | Description
  - [LocaleDetails](docs/LocaleDetails.md)
  - [LocalePreview](docs/LocalePreview.md)
  - [LocalePreview1](docs/LocalePreview1.md)
+ - [LocaleReport](docs/LocaleReport.md)
  - [LocaleStatistics](docs/LocaleStatistics.md)
  - [LocaleTeamPreview](docs/LocaleTeamPreview.md)
  - [LocaleUpdateParameters](docs/LocaleUpdateParameters.md)
@@ -527,6 +530,7 @@ Class | Method | HTTP request | Description
  - [ProjectCreateParameters](docs/ProjectCreateParameters.md)
  - [ProjectDetails](docs/ProjectDetails.md)
  - [ProjectLocales](docs/ProjectLocales.md)
+ - [ProjectReport](docs/ProjectReport.md)
  - [ProjectShort](docs/ProjectShort.md)
  - [ProjectUpdateParameters](docs/ProjectUpdateParameters.md)
  - [Release](docs/Release.md)

@@ -51,6 +51,7 @@ from phrase_api.api.organization_job_template_locales_api import OrganizationJob
 from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.releases_api import ReleasesApi
+from phrase_api.api.reports_api import ReportsApi
 from phrase_api.api.screenshot_markers_api import ScreenshotMarkersApi
 from phrase_api.api.screenshots_api import ScreenshotsApi
 from phrase_api.api.search_api import SearchApi
@@ -176,6 +177,7 @@ from phrase_api.models.locale_create_parameters import LocaleCreateParameters
 from phrase_api.models.locale_details import LocaleDetails
 from phrase_api.models.locale_preview import LocalePreview
 from phrase_api.models.locale_preview1 import LocalePreview1
+from phrase_api.models.locale_report import LocaleReport
 from phrase_api.models.locale_statistics import LocaleStatistics
 from phrase_api.models.locale_team_preview import LocaleTeamPreview
 from phrase_api.models.locale_update_parameters import LocaleUpdateParameters
@@ -201,6 +203,7 @@ from phrase_api.models.project import Project
 from phrase_api.models.project_create_parameters import ProjectCreateParameters
 from phrase_api.models.project_details import ProjectDetails
 from phrase_api.models.project_locales import ProjectLocales
+from phrase_api.models.project_report import ProjectReport
 from phrase_api.models.project_short import ProjectShort
 from phrase_api.models.project_update_parameters import ProjectUpdateParameters
 from phrase_api.models.release import Release

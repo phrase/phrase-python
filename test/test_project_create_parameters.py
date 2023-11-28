@@ -41,7 +41,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@6d919a4', 
+                project_image = '[B@7b779c7b', 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 point_of_contact = 'abcd1234', 

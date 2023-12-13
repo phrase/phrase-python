@@ -46,7 +46,8 @@ class KeyUpdateParameters(object):
         'xml_space_preserve': 'bool',
         'original_file': 'str',
         'localized_format_string': 'str',
-        'localized_format_key': 'str'
+        'localized_format_key': 'str',
+        'custom_metadata': 'object'
     }
 
     attribute_map = {
@@ -64,10 +65,11 @@ class KeyUpdateParameters(object):
         'xml_space_preserve': 'xml_space_preserve',
         'original_file': 'original_file',
         'localized_format_string': 'localized_format_string',
-        'localized_format_key': 'localized_format_key'
+        'localized_format_key': 'localized_format_key',
+        'custom_metadata': 'custom_metadata'
     }
 
-    def __init__(self, branch=None, name=None, description=None, plural=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, description=None, plural=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
         """KeyUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -88,6 +90,7 @@ class KeyUpdateParameters(object):
         self._original_file = None
         self._localized_format_string = None
         self._localized_format_key = None
+        self._custom_metadata = None
         self.discriminator = None
 
         if branch is not None:
@@ -120,6 +123,8 @@ class KeyUpdateParameters(object):
             self.localized_format_string = localized_format_string
         if localized_format_key is not None:
             self.localized_format_key = localized_format_key
+        if custom_metadata is not None:
+            self.custom_metadata = custom_metadata
 
     @property
     def branch(self):
@@ -465,6 +470,29 @@ class KeyUpdateParameters(object):
         """
 
         self._localized_format_key = localized_format_key
+
+    @property
+    def custom_metadata(self):
+        """Gets the custom_metadata of this KeyUpdateParameters.  # noqa: E501
+
+        Updates/Creates custom metadata property name and value pairs to be associated with key. If you want to delete a custom metadata property, you can set its value to null. If you want to update a custom metadata property, you can set its value to the new value.  # noqa: E501
+
+        :return: The custom_metadata of this KeyUpdateParameters.  # noqa: E501
+        :rtype: object
+        """
+        return self._custom_metadata
+
+    @custom_metadata.setter
+    def custom_metadata(self, custom_metadata):
+        """Sets the custom_metadata of this KeyUpdateParameters.
+
+        Updates/Creates custom metadata property name and value pairs to be associated with key. If you want to delete a custom metadata property, you can set its value to null. If you want to update a custom metadata property, you can set its value to the new value.  # noqa: E501
+
+        :param custom_metadata: The custom_metadata of this KeyUpdateParameters.  # noqa: E501
+        :type: object
+        """
+
+        self._custom_metadata = custom_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

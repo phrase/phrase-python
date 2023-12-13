@@ -45,13 +45,14 @@ class TestKeyUpdateParameters(unittest.TestCase):
                 data_type = 'number', 
                 tags = 'awesome-feature,needs-proofreading', 
                 max_characters_allowed = 140, 
-                screenshot = '[B@25bb5bf9', 
+                screenshot = '[B@585cbbde', 
                 remove_screenshot = True, 
                 unformatted = True, 
                 xml_space_preserve = True, 
                 original_file = '', 
                 localized_format_string = '', 
-                localized_format_key = ''
+                localized_format_key = '', 
+                custom_metadata = {"fruit":"Apple","vegetable":"Tomato"}
             )
         else :
             return KeyUpdateParameters(

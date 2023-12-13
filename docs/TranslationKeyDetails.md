@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **original_file** | **str** |  | [optional] 
 **format_value_type** | **str** |  | [optional] 
 **creator** | [**UserPreview**](UserPreview.md) |  | [optional] 
+**custom_metadata** | **Dict[str, str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

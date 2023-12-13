@@ -49,7 +49,8 @@ class TranslationKeyDetails(object):
         'xml_space_preserve': 'bool',
         'original_file': 'str',
         'format_value_type': 'str',
-        'creator': 'UserPreview'
+        'creator': 'UserPreview',
+        'custom_metadata': 'Dict[str, str]'
     }
 
     attribute_map = {
@@ -70,10 +71,11 @@ class TranslationKeyDetails(object):
         'xml_space_preserve': 'xml_space_preserve',
         'original_file': 'original_file',
         'format_value_type': 'format_value_type',
-        'creator': 'creator'
+        'creator': 'creator',
+        'custom_metadata': 'custom_metadata'
     }
 
-    def __init__(self, id=None, name=None, description=None, name_hash=None, plural=None, tags=None, data_type=None, created_at=None, updated_at=None, name_plural=None, comments_count=None, max_characters_allowed=None, screenshot_url=None, unformatted=None, xml_space_preserve=None, original_file=None, format_value_type=None, creator=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, name_hash=None, plural=None, tags=None, data_type=None, created_at=None, updated_at=None, name_plural=None, comments_count=None, max_characters_allowed=None, screenshot_url=None, unformatted=None, xml_space_preserve=None, original_file=None, format_value_type=None, creator=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
         """TranslationKeyDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -97,6 +99,7 @@ class TranslationKeyDetails(object):
         self._original_file = None
         self._format_value_type = None
         self._creator = None
+        self._custom_metadata = None
         self.discriminator = None
 
         if id is not None:
@@ -135,6 +138,8 @@ class TranslationKeyDetails(object):
             self.format_value_type = format_value_type
         if creator is not None:
             self.creator = creator
+        if custom_metadata is not None:
+            self.custom_metadata = custom_metadata
 
     @property
     def id(self):
@@ -513,6 +518,27 @@ class TranslationKeyDetails(object):
         """
 
         self._creator = creator
+
+    @property
+    def custom_metadata(self):
+        """Gets the custom_metadata of this TranslationKeyDetails.  # noqa: E501
+
+
+        :return: The custom_metadata of this TranslationKeyDetails.  # noqa: E501
+        :rtype: Dict[str, str]
+        """
+        return self._custom_metadata
+
+    @custom_metadata.setter
+    def custom_metadata(self, custom_metadata):
+        """Sets the custom_metadata of this TranslationKeyDetails.
+
+
+        :param custom_metadata: The custom_metadata of this TranslationKeyDetails.  # noqa: E501
+        :type: Dict[str, str]
+        """
+
+        self._custom_metadata = custom_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

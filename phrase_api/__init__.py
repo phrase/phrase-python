@@ -24,6 +24,7 @@ from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi
 from phrase_api.api.comment_replies_api import CommentRepliesApi
 from phrase_api.api.comments_api import CommentsApi
+from phrase_api.api.custom_metadata_api import CustomMetadataApi
 from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
 from phrase_api.api.figma_attachments_api import FigmaAttachmentsApi
@@ -104,6 +105,10 @@ from phrase_api.models.comment_reaction import CommentReaction
 from phrase_api.models.comment_update_parameters import CommentUpdateParameters
 from phrase_api.models.comments_list_parameters import CommentsListParameters
 from phrase_api.models.current_user import CurrentUser
+from phrase_api.models.custom_metadata_data_type import CustomMetadataDataType
+from phrase_api.models.custom_metadata_property import CustomMetadataProperty
+from phrase_api.models.custom_metadata_property_create422_response import CustomMetadataPropertyCreate422Response
+from phrase_api.models.custom_metadata_property_create422_response_errors_inner import CustomMetadataPropertyCreate422ResponseErrorsInner
 from phrase_api.models.distribution import Distribution
 from phrase_api.models.distribution_create_parameters import DistributionCreateParameters
 from phrase_api.models.distribution_preview import DistributionPreview
@@ -133,8 +138,6 @@ from phrase_api.models.glossary_update_parameters import GlossaryUpdateParameter
 from phrase_api.models.icu import Icu
 from phrase_api.models.icu_skeleton_parameters import IcuSkeletonParameters
 from phrase_api.models.invitation import Invitation
-from phrase_api.models.invitation_create422_response import InvitationCreate422Response
-from phrase_api.models.invitation_create422_response_errors_inner import InvitationCreate422ResponseErrorsInner
 from phrase_api.models.invitation_create_parameters import InvitationCreateParameters
 from phrase_api.models.invitation_update_parameters import InvitationUpdateParameters
 from phrase_api.models.invitation_update_settings_parameters import InvitationUpdateSettingsParameters

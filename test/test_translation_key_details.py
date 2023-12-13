@@ -60,7 +60,10 @@ class TestTranslationKeyDetails(unittest.TestCase):
                     id = '', 
                     username = '', 
                     name = '', 
-                    gravatar_uid = '', )
+                    gravatar_uid = '', ), 
+                custom_metadata = {
+                    'key' : ''
+                    }
             )
         else :
             return TranslationKeyDetails(

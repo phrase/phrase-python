@@ -11,6 +11,7 @@ from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi
 from phrase_api.api.comment_replies_api import CommentRepliesApi
 from phrase_api.api.comments_api import CommentsApi
+from phrase_api.api.custom_metadata_api import CustomMetadataApi
 from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
 from phrase_api.api.figma_attachments_api import FigmaAttachmentsApi

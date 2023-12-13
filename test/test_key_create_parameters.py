@@ -45,14 +45,15 @@ class TestKeyCreateParameters(unittest.TestCase):
                 data_type = 'number', 
                 tags = 'awesome-feature,needs-proofreading', 
                 max_characters_allowed = 140, 
-                screenshot = '[B@37a26221', 
+                screenshot = '[B@d9fe131', 
                 remove_screenshot = True, 
                 unformatted = True, 
                 default_translation_content = 'Default translation content', 
                 xml_space_preserve = True, 
                 original_file = '', 
                 localized_format_string = '', 
-                localized_format_key = ''
+                localized_format_key = '', 
+                custom_metadata = {"fruit":"Apple","vegetable":"Tomato"}
             )
         else :
             return KeyCreateParameters(

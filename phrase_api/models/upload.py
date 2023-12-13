@@ -37,6 +37,7 @@ class Upload(object):
         'format': 'str',
         'state': 'str',
         'tag': 'str',
+        'url': 'str',
         'summary': 'UploadSummary',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -48,12 +49,13 @@ class Upload(object):
         'format': 'format',
         'state': 'state',
         'tag': 'tag',
+        'url': 'url',
         'summary': 'summary',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, url=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Upload - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +66,7 @@ class Upload(object):
         self._format = None
         self._state = None
         self._tag = None
+        self._url = None
         self._summary = None
         self._created_at = None
         self._updated_at = None
@@ -79,6 +82,8 @@ class Upload(object):
             self.state = state
         if tag is not None:
             self.tag = tag
+        if url is not None:
+            self.url = url
         if summary is not None:
             self.summary = summary
         if created_at is not None:
@@ -190,6 +195,29 @@ class Upload(object):
         """
 
         self._tag = tag
+
+    @property
+    def url(self):
+        """Gets the url of this Upload.  # noqa: E501
+
+        The URL to the upload in Phrase Strings app.   # noqa: E501
+
+        :return: The url of this Upload.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this Upload.
+
+        The URL to the upload in Phrase Strings app.   # noqa: E501
+
+        :param url: The url of this Upload.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     @property
     def summary(self):

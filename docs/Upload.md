@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **format** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
 **tag** | **str** |  | [optional] 
+**url** | **str** | The URL to the upload in Phrase Strings app.  | [optional] 
 **summary** | [**UploadSummary**](UploadSummary.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

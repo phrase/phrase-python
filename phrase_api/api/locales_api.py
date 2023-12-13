@@ -456,6 +456,7 @@ class LocalesApi(object):
         :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow is enabled for the project.
         :param str fallback_locale_id: If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.
         :param str source_locale_id: Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a <code>tag</code> parameter indicating a specific job.
+        :param object custom_metadata_filters: Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -501,6 +502,7 @@ class LocalesApi(object):
         :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow is enabled for the project.
         :param str fallback_locale_id: If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the public ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.
         :param str source_locale_id: Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a <code>tag</code> parameter indicating a specific job.
+        :param object custom_metadata_filters: Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -538,7 +540,8 @@ class LocalesApi(object):
             'include_unverified_translations',
             'use_last_reviewed_version',
             'fallback_locale_id',
-            'source_locale_id'
+            'source_locale_id',
+            'custom_metadata_filters'
         ]
         all_params.extend(
             [
@@ -607,6 +610,8 @@ class LocalesApi(object):
             query_params.append(('fallback_locale_id', local_var_params['fallback_locale_id']))  # noqa: E501
         if 'source_locale_id' in local_var_params and local_var_params['source_locale_id'] is not None:  # noqa: E501
             query_params.append(('source_locale_id', local_var_params['source_locale_id']))  # noqa: E501
+        if 'custom_metadata_filters' in local_var_params and local_var_params['custom_metadata_filters'] is not None:  # noqa: E501
+            query_params.append(('custom_metadata_filters', local_var_params['custom_metadata_filters']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

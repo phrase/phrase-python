@@ -42,6 +42,8 @@ docs/CommentsListParameters.md
 docs/CurrentUser.md
 docs/CustomMetadataApi.md
 docs/CustomMetadataDataType.md
+docs/CustomMetadataPropertiesCreateParameters.md
+docs/CustomMetadataPropertiesUpdateParameters.md
 docs/CustomMetadataProperty.md
 docs/CustomMetadataPropertyCreate422Response.md
 docs/CustomMetadataPropertyCreate422ResponseErrorsInner.md
@@ -341,6 +343,8 @@ phrase_api/models/comment_update_parameters.py
 phrase_api/models/comments_list_parameters.py
 phrase_api/models/current_user.py
 phrase_api/models/custom_metadata_data_type.py
+phrase_api/models/custom_metadata_properties_create_parameters.py
+phrase_api/models/custom_metadata_properties_update_parameters.py
 phrase_api/models/custom_metadata_property.py
 phrase_api/models/custom_metadata_property_create422_response.py
 phrase_api/models/custom_metadata_property_create422_response_errors_inner.py
@@ -556,6 +560,8 @@ test/test_comments_list_parameters.py
 test/test_current_user.py
 test/test_custom_metadata_api.py
 test/test_custom_metadata_data_type.py
+test/test_custom_metadata_properties_create_parameters.py
+test/test_custom_metadata_properties_update_parameters.py
 test/test_custom_metadata_property.py
 test/test_custom_metadata_property_create422_response.py
 test/test_custom_metadata_property_create422_response_errors_inner.py

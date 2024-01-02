@@ -1,5 +1,6 @@
 # CustomMetadataDataType
 
+data type of the property
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

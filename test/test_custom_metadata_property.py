@@ -40,7 +40,7 @@ class TestCustomMetadataProperty(unittest.TestCase):
                 id = '', 
                 name = '', 
                 description = '', 
-                data_type = 'boolean', 
+                data_type = 'string', 
                 user = phrase_api.models.user_preview.user_preview(
                     id = '', 
                     username = '', 

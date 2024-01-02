@@ -308,23 +308,19 @@ class CustomMetadataApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def custom_metadata_property_create(self, account_id, name, data_type, **kwargs):  # noqa: E501
+    def custom_metadata_property_create(self, account_id, custom_metadata_properties_create_parameters, **kwargs):  # noqa: E501
         """Create a property  # noqa: E501
 
         Create a new custom metadata property.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.custom_metadata_property_create(account_id, name, data_type, async_req=True)
+        >>> thread = api.custom_metadata_property_create(account_id, custom_metadata_properties_create_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str name: name of the property (required)
-        :param CustomMetadataDataType data_type: Data Type of Custom Metadata Property (required)
+        :param CustomMetadataPropertiesCreateParameters custom_metadata_properties_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str description: description of property
-        :param List[str] project_ids: ids of projects that the property belongs to
-        :param List[str] value_options: value options of property (only applies to single or multi select properties)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -337,25 +333,21 @@ class CustomMetadataApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.custom_metadata_property_create_with_http_info(account_id, name, data_type, **kwargs)  # noqa: E501
+        return self.custom_metadata_property_create_with_http_info(account_id, custom_metadata_properties_create_parameters, **kwargs)  # noqa: E501
 
-    def custom_metadata_property_create_with_http_info(self, account_id, name, data_type, **kwargs):  # noqa: E501
+    def custom_metadata_property_create_with_http_info(self, account_id, custom_metadata_properties_create_parameters, **kwargs):  # noqa: E501
         """Create a property  # noqa: E501
 
         Create a new custom metadata property.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.custom_metadata_property_create_with_http_info(account_id, name, data_type, async_req=True)
+        >>> thread = api.custom_metadata_property_create_with_http_info(account_id, custom_metadata_properties_create_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str name: name of the property (required)
-        :param CustomMetadataDataType data_type: Data Type of Custom Metadata Property (required)
+        :param CustomMetadataPropertiesCreateParameters custom_metadata_properties_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str description: description of property
-        :param List[str] project_ids: ids of projects that the property belongs to
-        :param List[str] value_options: value options of property (only applies to single or multi select properties)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -374,12 +366,8 @@ class CustomMetadataApi(object):
 
         all_params = [
             'account_id',
-            'name',
-            'data_type',
-            'x_phrase_app_otp',
-            'description',
-            'project_ids',
-            'value_options'
+            'custom_metadata_properties_create_parameters',
+            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -402,14 +390,10 @@ class CustomMetadataApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `custom_metadata_property_create`")  # noqa: E501
-        # verify the required parameter 'name' is set
-        if self.api_client.client_side_validation and ('name' not in local_var_params or  # noqa: E501
-                                                        local_var_params['name'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `name` when calling `custom_metadata_property_create`")  # noqa: E501
-        # verify the required parameter 'data_type' is set
-        if self.api_client.client_side_validation and ('data_type' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data_type'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data_type` when calling `custom_metadata_property_create`")  # noqa: E501
+        # verify the required parameter 'custom_metadata_properties_create_parameters' is set
+        if self.api_client.client_side_validation and ('custom_metadata_properties_create_parameters' not in local_var_params or  # noqa: E501
+                                                        local_var_params['custom_metadata_properties_create_parameters'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `custom_metadata_properties_create_parameters` when calling `custom_metadata_property_create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -418,18 +402,6 @@ class CustomMetadataApi(object):
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
 
         query_params = []
-        if 'name' in local_var_params and local_var_params['name'] is not None:  # noqa: E501
-            query_params.append(('name', local_var_params['name']))  # noqa: E501
-        if 'data_type' in local_var_params and local_var_params['data_type'] is not None:  # noqa: E501
-            query_params.append(('data_type', local_var_params['data_type']))  # noqa: E501
-        if 'description' in local_var_params and local_var_params['description'] is not None:  # noqa: E501
-            query_params.append(('description', local_var_params['description']))  # noqa: E501
-        if 'project_ids' in local_var_params and local_var_params['project_ids'] is not None:  # noqa: E501
-            query_params.append(('project_ids', local_var_params['project_ids']))  # noqa: E501
-            collection_formats['project_ids'] = 'multi'  # noqa: E501
-        if 'value_options' in local_var_params and local_var_params['value_options'] is not None:  # noqa: E501
-            query_params.append(('value_options', local_var_params['value_options']))  # noqa: E501
-            collection_formats['value_options'] = 'multi'  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -439,8 +411,14 @@ class CustomMetadataApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'custom_metadata_properties_create_parameters' in local_var_params:
+            body_params = local_var_params['custom_metadata_properties_create_parameters']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
@@ -590,23 +568,20 @@ class CustomMetadataApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def custom_metadata_property_update(self, account_id, id, **kwargs):  # noqa: E501
+    def custom_metadata_property_update(self, account_id, id, custom_metadata_properties_update_parameters, **kwargs):  # noqa: E501
         """Update a property  # noqa: E501
 
         Update an existing custom metadata property.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.custom_metadata_property_update(account_id, id, async_req=True)
+        >>> thread = api.custom_metadata_property_update(account_id, id, custom_metadata_properties_update_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
         :param str id: ID (required)
+        :param CustomMetadataPropertiesUpdateParameters custom_metadata_properties_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str name: name of the property
-        :param str description: description of property
-        :param List[str] project_ids: ids of projects that the property belongs to
-        :param List[str] value_options: value options of property (only applies to single or multi select properties)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -619,25 +594,22 @@ class CustomMetadataApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.custom_metadata_property_update_with_http_info(account_id, id, **kwargs)  # noqa: E501
+        return self.custom_metadata_property_update_with_http_info(account_id, id, custom_metadata_properties_update_parameters, **kwargs)  # noqa: E501
 
-    def custom_metadata_property_update_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
+    def custom_metadata_property_update_with_http_info(self, account_id, id, custom_metadata_properties_update_parameters, **kwargs):  # noqa: E501
         """Update a property  # noqa: E501
 
         Update an existing custom metadata property.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.custom_metadata_property_update_with_http_info(account_id, id, async_req=True)
+        >>> thread = api.custom_metadata_property_update_with_http_info(account_id, id, custom_metadata_properties_update_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
         :param str id: ID (required)
+        :param CustomMetadataPropertiesUpdateParameters custom_metadata_properties_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str name: name of the property
-        :param str description: description of property
-        :param List[str] project_ids: ids of projects that the property belongs to
-        :param List[str] value_options: value options of property (only applies to single or multi select properties)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -657,11 +629,8 @@ class CustomMetadataApi(object):
         all_params = [
             'account_id',
             'id',
-            'x_phrase_app_otp',
-            'name',
-            'description',
-            'project_ids',
-            'value_options'
+            'custom_metadata_properties_update_parameters',
+            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -688,6 +657,10 @@ class CustomMetadataApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `custom_metadata_property_update`")  # noqa: E501
+        # verify the required parameter 'custom_metadata_properties_update_parameters' is set
+        if self.api_client.client_side_validation and ('custom_metadata_properties_update_parameters' not in local_var_params or  # noqa: E501
+                                                        local_var_params['custom_metadata_properties_update_parameters'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `custom_metadata_properties_update_parameters` when calling `custom_metadata_property_update`")  # noqa: E501
 
         collection_formats = {}
 
@@ -698,16 +671,6 @@ class CustomMetadataApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
-        if 'name' in local_var_params and local_var_params['name'] is not None:  # noqa: E501
-            query_params.append(('name', local_var_params['name']))  # noqa: E501
-        if 'description' in local_var_params and local_var_params['description'] is not None:  # noqa: E501
-            query_params.append(('description', local_var_params['description']))  # noqa: E501
-        if 'project_ids' in local_var_params and local_var_params['project_ids'] is not None:  # noqa: E501
-            query_params.append(('project_ids', local_var_params['project_ids']))  # noqa: E501
-            collection_formats['project_ids'] = 'multi'  # noqa: E501
-        if 'value_options' in local_var_params and local_var_params['value_options'] is not None:  # noqa: E501
-            query_params.append(('value_options', local_var_params['value_options']))  # noqa: E501
-            collection_formats['value_options'] = 'multi'  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -717,8 +680,14 @@ class CustomMetadataApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'custom_metadata_properties_update_parameters' in local_var_params:
+            body_params = local_var_params['custom_metadata_properties_update_parameters']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting

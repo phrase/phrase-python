@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **custom_metadata_property_create**
-> CustomMetadataProperty custom_metadata_property_create(account_id, name, data_type, x_phrase_app_otp=x_phrase_app_otp, description=description, project_ids=project_ids, value_options=value_options)
+> CustomMetadataProperty custom_metadata_property_create(account_id, custom_metadata_properties_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a property
 
@@ -181,16 +181,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.CustomMetadataApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    name = '[\"Fruit\"]' # str | name of the property (required)
-    data_type = phrase_api.CustomMetadataDataType() # CustomMetadataDataType | Data Type of Custom Metadata Property (required)
+    custom_metadata_properties_create_parameters = phrase_api.CustomMetadataPropertiesCreateParameters() # CustomMetadataPropertiesCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    description = '[\"A healthy snack for all ages\"]' # str | description of property
-    project_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | ids of projects that the property belongs to
-    value_options = ['[\"Apple\",\"Banana\",\"Coconut\"]'] # List[str] | value options of property (only applies to single or multi select properties)
 
     try:
         # Create a property
-        api_response = api_instance.custom_metadata_property_create(account_id, name, data_type, x_phrase_app_otp=x_phrase_app_otp, description=description, project_ids=project_ids, value_options=value_options)
+        api_response = api_instance.custom_metadata_property_create(account_id, custom_metadata_properties_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomMetadataApi->custom_metadata_property_create: %s\n" % e)
@@ -202,12 +198,8 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **name** | **str**| name of the property | 
- **data_type** | [**CustomMetadataDataType**](.md)| Data Type of Custom Metadata Property | 
+ **custom_metadata_properties_create_parameters** | [**CustomMetadataPropertiesCreateParameters**](CustomMetadataPropertiesCreateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **description** | **str**| description of property | [optional] 
- **project_ids** | [**List[str]**](str.md)| ids of projects that the property belongs to | [optional] 
- **value_options** | [**List[str]**](str.md)| value options of property (only applies to single or multi select properties) | [optional] 
 
 ### Return type
 
@@ -219,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -302,7 +294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **custom_metadata_property_update**
-> CustomMetadataProperty custom_metadata_property_update(account_id, id, x_phrase_app_otp=x_phrase_app_otp, name=name, description=description, project_ids=project_ids, value_options=value_options)
+> CustomMetadataProperty custom_metadata_property_update(account_id, id, custom_metadata_properties_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Update a property
 
@@ -327,15 +319,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.CustomMetadataApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     id = 'id_example' # str | ID (required)
+    custom_metadata_properties_update_parameters = phrase_api.CustomMetadataPropertiesUpdateParameters() # CustomMetadataPropertiesUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    name = '[\"Fruit\"]' # str | name of the property
-    description = '[\"A healthy snack for all ages\"]' # str | description of property
-    project_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | ids of projects that the property belongs to
-    value_options = ['[\"Apple\",\"Banana\",\"Coconut\"]'] # List[str] | value options of property (only applies to single or multi select properties)
 
     try:
         # Update a property
-        api_response = api_instance.custom_metadata_property_update(account_id, id, x_phrase_app_otp=x_phrase_app_otp, name=name, description=description, project_ids=project_ids, value_options=value_options)
+        api_response = api_instance.custom_metadata_property_update(account_id, id, custom_metadata_properties_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomMetadataApi->custom_metadata_property_update: %s\n" % e)
@@ -348,11 +337,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
  **id** | **str**| ID | 
+ **custom_metadata_properties_update_parameters** | [**CustomMetadataPropertiesUpdateParameters**](CustomMetadataPropertiesUpdateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **name** | **str**| name of the property | [optional] 
- **description** | **str**| description of property | [optional] 
- **project_ids** | [**List[str]**](str.md)| ids of projects that the property belongs to | [optional] 
- **value_options** | [**List[str]**](str.md)| value options of property (only applies to single or multi select properties) | [optional] 
 
 ### Return type
 
@@ -364,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

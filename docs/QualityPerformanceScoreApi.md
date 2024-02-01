@@ -4,15 +4,15 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**projects_quality_performance_score**](QualityPerformanceScoreApi.md#projects_quality_performance_score) | **POST** /projects/{id}/quality_performance_score | Get project&#39;s translations&#39; quality performance scores
+[**projects_quality_performance_score**](QualityPerformanceScoreApi.md#projects_quality_performance_score) | **POST** /projects/{project_id}/quality_performance_score | Get Translation Quality
 
 
 # **projects_quality_performance_score**
-> ProjectsQualityPerformanceScore200Response projects_quality_performance_score(id, projects_quality_performance_score_request, x_phrase_app_otp=x_phrase_app_otp)
+> ProjectsQualityPerformanceScore200Response projects_quality_performance_score(project_id, projects_quality_performance_score_request, x_phrase_app_otp=x_phrase_app_otp)
 
-Get project's translations' quality performance scores
+Get Translation Quality
 
-Get project's translations' quality performance scores
+Retrieves the quality scores for your Strings translations. Returns a score, measured by Phrase QPS
 
 ### Example
 
@@ -31,13 +31,13 @@ configuration.api_key_prefix['Authorization'] = 'token'
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.QualityPerformanceScoreApi(api_client)
-    id = 'id_example' # str | ID (required)
+    project_id = 'project_id_example' # str | Project ID (required)
     projects_quality_performance_score_request = phrase_api.ProjectsQualityPerformanceScoreRequest() # ProjectsQualityPerformanceScoreRequest |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Get project's translations' quality performance scores
-        api_response = api_instance.projects_quality_performance_score(id, projects_quality_performance_score_request, x_phrase_app_otp=x_phrase_app_otp)
+        # Get Translation Quality
+        api_response = api_instance.projects_quality_performance_score(project_id, projects_quality_performance_score_request, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling QualityPerformanceScoreApi->projects_quality_performance_score: %s\n" % e)
@@ -48,7 +48,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| ID | 
+ **project_id** | **str**| Project ID | 
  **projects_quality_performance_score_request** | [**ProjectsQualityPerformanceScoreRequest**](ProjectsQualityPerformanceScoreRequest.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 

@@ -107,7 +107,7 @@ class ProjectsQualityPerformanceScore200Response(object):
     def errors(self):
         """Gets the errors of this ProjectsQualityPerformanceScore200Response.  # noqa: E501
 
-        Array of errors for any failing translation ids  # noqa: E501
+        Array of errors for any failing translation IDs  # noqa: E501
 
         :return: The errors of this ProjectsQualityPerformanceScore200Response.  # noqa: E501
         :rtype: List[ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner]
@@ -118,7 +118,7 @@ class ProjectsQualityPerformanceScore200Response(object):
     def errors(self, errors):
         """Sets the errors of this ProjectsQualityPerformanceScore200Response.
 
-        Array of errors for any failing translation ids  # noqa: E501
+        Array of errors for any failing translation IDs  # noqa: E501
 
         :param errors: The errors of this ProjectsQualityPerformanceScore200Response.  # noqa: E501
         :type: List[ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner]

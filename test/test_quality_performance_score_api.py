@@ -30,7 +30,7 @@ class TestQualityPerformanceScoreApi(unittest.TestCase):
     def test_projects_quality_performance_score(self):
         """Test case for projects_quality_performance_score
 
-        Get project's translations' quality performance scores  # noqa: E501
+        Get Translation Quality  # noqa: E501
         """
         pass
 

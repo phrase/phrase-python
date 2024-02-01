@@ -35,17 +35,17 @@ class QualityPerformanceScoreApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def projects_quality_performance_score(self, id, projects_quality_performance_score_request, **kwargs):  # noqa: E501
-        """Get project's translations' quality performance scores  # noqa: E501
+    def projects_quality_performance_score(self, project_id, projects_quality_performance_score_request, **kwargs):  # noqa: E501
+        """Get Translation Quality  # noqa: E501
 
-        Get project's translations' quality performance scores  # noqa: E501
+        Retrieves the quality scores for your Strings translations. Returns a score, measured by Phrase QPS  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.projects_quality_performance_score(id, projects_quality_performance_score_request, async_req=True)
+        >>> thread = api.projects_quality_performance_score(project_id, projects_quality_performance_score_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str id: ID (required)
+        :param str project_id: Project ID (required)
         :param ProjectsQualityPerformanceScoreRequest projects_quality_performance_score_request: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -60,19 +60,19 @@ class QualityPerformanceScoreApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.projects_quality_performance_score_with_http_info(id, projects_quality_performance_score_request, **kwargs)  # noqa: E501
+        return self.projects_quality_performance_score_with_http_info(project_id, projects_quality_performance_score_request, **kwargs)  # noqa: E501
 
-    def projects_quality_performance_score_with_http_info(self, id, projects_quality_performance_score_request, **kwargs):  # noqa: E501
-        """Get project's translations' quality performance scores  # noqa: E501
+    def projects_quality_performance_score_with_http_info(self, project_id, projects_quality_performance_score_request, **kwargs):  # noqa: E501
+        """Get Translation Quality  # noqa: E501
 
-        Get project's translations' quality performance scores  # noqa: E501
+        Retrieves the quality scores for your Strings translations. Returns a score, measured by Phrase QPS  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.projects_quality_performance_score_with_http_info(id, projects_quality_performance_score_request, async_req=True)
+        >>> thread = api.projects_quality_performance_score_with_http_info(project_id, projects_quality_performance_score_request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str id: ID (required)
+        :param str project_id: Project ID (required)
         :param ProjectsQualityPerformanceScoreRequest projects_quality_performance_score_request: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
@@ -92,7 +92,7 @@ class QualityPerformanceScoreApi(object):
         local_var_params = locals()
 
         all_params = [
-            'id',
+            'project_id',
             'projects_quality_performance_score_request',
             'x_phrase_app_otp'
         ]
@@ -113,10 +113,10 @@ class QualityPerformanceScoreApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `projects_quality_performance_score`")  # noqa: E501
+        # verify the required parameter 'project_id' is set
+        if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `projects_quality_performance_score`")  # noqa: E501
         # verify the required parameter 'projects_quality_performance_score_request' is set
         if self.api_client.client_side_validation and ('projects_quality_performance_score_request' not in local_var_params or  # noqa: E501
                                                         local_var_params['projects_quality_performance_score_request'] is None):  # noqa: E501
@@ -125,8 +125,8 @@ class QualityPerformanceScoreApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'project_id' in local_var_params:
+            path_params['project_id'] = local_var_params['project_id']  # noqa: E501
 
         query_params = []
 
@@ -152,7 +152,7 @@ class QualityPerformanceScoreApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/projects/{id}/quality_performance_score', 'POST',
+            '/projects/{project_id}/quality_performance_score', 'POST',
             path_params,
             query_params,
             header_params,

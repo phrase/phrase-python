@@ -81,8 +81,7 @@ class Job(object):
             self.name = name
         if briefing is not None:
             self.briefing = briefing
-        if due_date is not None:
-            self.due_date = due_date
+        self.due_date = due_date
         if state is not None:
             self.state = state
         if ticket_url is not None:

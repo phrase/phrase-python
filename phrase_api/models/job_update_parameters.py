@@ -66,8 +66,7 @@ class JobUpdateParameters(object):
             self.name = name
         if briefing is not None:
             self.briefing = briefing
-        if due_date is not None:
-            self.due_date = due_date
+        self.due_date = due_date
         if ticket_url is not None:
             self.ticket_url = ticket_url
 

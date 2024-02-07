@@ -175,6 +175,7 @@ class CustomMetadataApi(object):
         :param str project_id: id of project that the properties belong to
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
+        :param str q: query to find a property by name
         :param str sort: Sort criteria. Can be one of: name, data_type, created_at.
         :param str order: Order direction. Can be one of: asc, desc.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -207,6 +208,7 @@ class CustomMetadataApi(object):
         :param str project_id: id of project that the properties belong to
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
+        :param str q: query to find a property by name
         :param str sort: Sort criteria. Can be one of: name, data_type, created_at.
         :param str order: Order direction. Can be one of: asc, desc.
         :param _return_http_data_only: response data without head status code
@@ -232,6 +234,7 @@ class CustomMetadataApi(object):
             'project_id',
             'page',
             'per_page',
+            'q',
             'sort',
             'order'
         ]
@@ -272,6 +275,8 @@ class CustomMetadataApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'q' in local_var_params and local_var_params['q'] is not None:  # noqa: E501
+            query_params.append(('q', local_var_params['q']))  # noqa: E501
         if 'sort' in local_var_params and local_var_params['sort'] is not None:  # noqa: E501
             query_params.append(('sort', local_var_params['sort']))  # noqa: E501
         if 'order' in local_var_params and local_var_params['order'] is not None:  # noqa: E501

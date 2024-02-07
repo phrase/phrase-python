@@ -79,7 +79,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **custom_metadata_properties_list**
-> List[CustomMetadataProperty] custom_metadata_properties_list(account_id, x_phrase_app_otp=x_phrase_app_otp, data_type=data_type, project_id=project_id, page=page, per_page=per_page, sort=sort, order=order)
+> List[CustomMetadataProperty] custom_metadata_properties_list(account_id, x_phrase_app_otp=x_phrase_app_otp, data_type=data_type, project_id=project_id, page=page, per_page=per_page, q=q, sort=sort, order=order)
 
 List properties
 
@@ -108,12 +108,13 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'abcd1234cdef1234abcd1234cdef1234' # str | id of project that the properties belong to
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
+    q = 'character_name' # str | query to find a property by name
     sort = 'updated_at' # str | Sort criteria. Can be one of: name, data_type, created_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
 
     try:
         # List properties
-        api_response = api_instance.custom_metadata_properties_list(account_id, x_phrase_app_otp=x_phrase_app_otp, data_type=data_type, project_id=project_id, page=page, per_page=per_page, sort=sort, order=order)
+        api_response = api_instance.custom_metadata_properties_list(account_id, x_phrase_app_otp=x_phrase_app_otp, data_type=data_type, project_id=project_id, page=page, per_page=per_page, q=q, sort=sort, order=order)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CustomMetadataApi->custom_metadata_properties_list: %s\n" % e)
@@ -130,6 +131,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| id of project that the properties belong to | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
+ **q** | **str**| query to find a property by name | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: name, data_type, created_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
 

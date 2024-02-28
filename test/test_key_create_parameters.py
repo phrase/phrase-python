@@ -45,7 +45,7 @@ class TestKeyCreateParameters(unittest.TestCase):
                 data_type = 'number', 
                 tags = 'awesome-feature,needs-proofreading', 
                 max_characters_allowed = 140, 
-                screenshot = '[B@6fd33f5a', 
+                screenshot = '[B@53b52f30', 
                 remove_screenshot = True, 
                 unformatted = True, 
                 default_translation_content = 'Default translation content', 

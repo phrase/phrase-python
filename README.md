@@ -282,6 +282,10 @@ Class | Method | HTTP request | Description
 *KeysApi* | [**keys_untag**](docs/KeysApi.md#keys_untag) | **PATCH** /projects/{project_id}/keys/untag | Remove tags from collection of keys
 *KeysFigmaAttachmentsApi* | [**figma_attachment_attach_to_key**](docs/KeysFigmaAttachmentsApi.md#figma_attachment_attach_to_key) | **POST** /projects/{project_id}/figma_attachments/{figma_attachment_id}/keys | Attach the Figma attachment to a key
 *KeysFigmaAttachmentsApi* | [**figma_attachment_detach_from_key**](docs/KeysFigmaAttachmentsApi.md#figma_attachment_detach_from_key) | **DELETE** /projects/{project_id}/figma_attachments/{figma_attachment_id}/keys/{id} | Detach the Figma attachment from a key
+*LinkedKeysApi* | [**key_links_batch_destroy**](docs/LinkedKeysApi.md#key_links_batch_destroy) | **DELETE** /projects/{project_id}/keys/{id}/key_links | Batch unlink child keys from a parent key
+*LinkedKeysApi* | [**key_links_create**](docs/LinkedKeysApi.md#key_links_create) | **POST** /projects/{project_id}/keys/{id}/key_links | Link child keys to a parent key
+*LinkedKeysApi* | [**key_links_destroy**](docs/LinkedKeysApi.md#key_links_destroy) | **DELETE** /projects/{project_id}/keys/{id}/key_links/{child_key_id} | Unlink a child key from a parent key
+*LinkedKeysApi* | [**key_links_index**](docs/LinkedKeysApi.md#key_links_index) | **GET** /projects/{project_id}/keys/{id}/key_links | Retrieve all child keys linked to a specific parent key
 *LocalesApi* | [**account_locales**](docs/LocalesApi.md#account_locales) | **GET** /accounts/{id}/locales | List locales used in account
 *LocalesApi* | [**locale_create**](docs/LocalesApi.md#locale_create) | **POST** /projects/{project_id}/locales | Create a locale
 *LocalesApi* | [**locale_delete**](docs/LocalesApi.md#locale_delete) | **DELETE** /projects/{project_id}/locales/{id} | Delete a locale
@@ -504,6 +508,10 @@ Class | Method | HTTP request | Description
  - [JobTemplateUpdateParameters](docs/JobTemplateUpdateParameters.md)
  - [JobUpdateParameters](docs/JobUpdateParameters.md)
  - [KeyCreateParameters](docs/KeyCreateParameters.md)
+ - [KeyLink](docs/KeyLink.md)
+ - [KeyLinksBatchDestroyParameters](docs/KeyLinksBatchDestroyParameters.md)
+ - [KeyLinksCreateParameters](docs/KeyLinksCreateParameters.md)
+ - [KeyLinksIndex400Response](docs/KeyLinksIndex400Response.md)
  - [KeyPreview](docs/KeyPreview.md)
  - [KeyUpdateParameters](docs/KeyUpdateParameters.md)
  - [KeysExcludeParameters](docs/KeysExcludeParameters.md)

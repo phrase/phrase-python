@@ -124,6 +124,10 @@ docs/JobTemplatesApi.md
 docs/JobUpdateParameters.md
 docs/JobsApi.md
 docs/KeyCreateParameters.md
+docs/KeyLink.md
+docs/KeyLinksBatchDestroyParameters.md
+docs/KeyLinksCreateParameters.md
+docs/KeyLinksIndex400Response.md
 docs/KeyPreview.md
 docs/KeyUpdateParameters.md
 docs/KeysApi.md
@@ -133,6 +137,7 @@ docs/KeysIncludeParameters.md
 docs/KeysSearchParameters.md
 docs/KeysTagParameters.md
 docs/KeysUntagParameters.md
+docs/LinkedKeysApi.md
 docs/Locale.md
 docs/LocaleCreateParameters.md
 docs/LocaleDetails.md
@@ -294,6 +299,7 @@ phrase_api/api/job_templates_api.py
 phrase_api/api/jobs_api.py
 phrase_api/api/keys_api.py
 phrase_api/api/keys_figma_attachments_api.py
+phrase_api/api/linked_keys_api.py
 phrase_api/api/locales_api.py
 phrase_api/api/members_api.py
 phrase_api/api/notification_groups_api.py
@@ -419,6 +425,10 @@ phrase_api/models/job_template_preview.py
 phrase_api/models/job_template_update_parameters.py
 phrase_api/models/job_update_parameters.py
 phrase_api/models/key_create_parameters.py
+phrase_api/models/key_link.py
+phrase_api/models/key_links_batch_destroy_parameters.py
+phrase_api/models/key_links_create_parameters.py
+phrase_api/models/key_links_index400_response.py
 phrase_api/models/key_preview.py
 phrase_api/models/key_update_parameters.py
 phrase_api/models/keys_exclude_parameters.py
@@ -660,6 +670,10 @@ test/test_job_templates_api.py
 test/test_job_update_parameters.py
 test/test_jobs_api.py
 test/test_key_create_parameters.py
+test/test_key_link.py
+test/test_key_links_batch_destroy_parameters.py
+test/test_key_links_create_parameters.py
+test/test_key_links_index400_response.py
 test/test_key_preview.py
 test/test_key_update_parameters.py
 test/test_keys_api.py
@@ -669,6 +683,7 @@ test/test_keys_include_parameters.py
 test/test_keys_search_parameters.py
 test/test_keys_tag_parameters.py
 test/test_keys_untag_parameters.py
+test/test_linked_keys_api.py
 test/test_locale.py
 test/test_locale_create_parameters.py
 test/test_locale_details.py

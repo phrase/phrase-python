@@ -30,6 +30,7 @@ from phrase_api.api.job_templates_api import JobTemplatesApi
 from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.keys_figma_attachments_api import KeysFigmaAttachmentsApi
+from phrase_api.api.linked_keys_api import LinkedKeysApi
 from phrase_api.api.locales_api import LocalesApi
 from phrase_api.api.members_api import MembersApi
 from phrase_api.api.notification_groups_api import NotificationGroupsApi

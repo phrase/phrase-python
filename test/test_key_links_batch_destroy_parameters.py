@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters  # noqa: E501
+from phrase_api.models.key_links_batch_destroy_parameters import KeyLinksBatchDestroyParameters  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestScreenshotUpdateParameters(unittest.TestCase):
-    """ScreenshotUpdateParameters unit test stubs"""
+class TestKeyLinksBatchDestroyParameters(unittest.TestCase):
+    """KeyLinksBatchDestroyParameters unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,27 +28,25 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ScreenshotUpdateParameters
+        """Test KeyLinksBatchDestroyParameters
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.screenshot_update_parameters.ScreenshotUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.key_links_batch_destroy_parameters.KeyLinksBatchDestroyParameters()  # noqa: E501
 
         """
         if include_optional :
-            return ScreenshotUpdateParameters(
-                branch = 'my-feature-branch', 
-                name = 'A screenshot name', 
-                description = 'A screenshot description', 
-                filename = '[B@7a50482c'
+            return KeyLinksBatchDestroyParameters(
+                child_key_ids = ["child_key_id1","child_key_id2"]
             )
         else :
-            return ScreenshotUpdateParameters(
+            return KeyLinksBatchDestroyParameters(
+                child_key_ids = ["child_key_id1","child_key_id2"],
         )
         """
 
-    def testScreenshotUpdateParameters(self):
-        """Test ScreenshotUpdateParameters"""
+    def testKeyLinksBatchDestroyParameters(self):
+        """Test KeyLinksBatchDestroyParameters"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

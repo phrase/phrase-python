@@ -35,17 +35,18 @@ class LinkedKeysApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def key_links_batch_destroy(self, account_id, key_links_batch_destroy_parameters, **kwargs):  # noqa: E501
+    def key_links_batch_destroy(self, project_id, id, key_links_batch_destroy_parameters, **kwargs):  # noqa: E501
         """Batch unlink child keys from a parent key  # noqa: E501
 
         Unlinks multiple child keys from a given parent key in a single operation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_batch_destroy(account_id, key_links_batch_destroy_parameters, async_req=True)
+        >>> thread = api.key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param KeyLinksBatchDestroyParameters key_links_batch_destroy_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param bool unlink_parent: Whether to unlink the parent key as well and unmark it as linked-key.
@@ -61,19 +62,20 @@ class LinkedKeysApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.key_links_batch_destroy_with_http_info(account_id, key_links_batch_destroy_parameters, **kwargs)  # noqa: E501
+        return self.key_links_batch_destroy_with_http_info(project_id, id, key_links_batch_destroy_parameters, **kwargs)  # noqa: E501
 
-    def key_links_batch_destroy_with_http_info(self, account_id, key_links_batch_destroy_parameters, **kwargs):  # noqa: E501
+    def key_links_batch_destroy_with_http_info(self, project_id, id, key_links_batch_destroy_parameters, **kwargs):  # noqa: E501
         """Batch unlink child keys from a parent key  # noqa: E501
 
         Unlinks multiple child keys from a given parent key in a single operation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_batch_destroy_with_http_info(account_id, key_links_batch_destroy_parameters, async_req=True)
+        >>> thread = api.key_links_batch_destroy_with_http_info(project_id, id, key_links_batch_destroy_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param KeyLinksBatchDestroyParameters key_links_batch_destroy_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param bool unlink_parent: Whether to unlink the parent key as well and unmark it as linked-key.
@@ -94,7 +96,8 @@ class LinkedKeysApi(object):
         local_var_params = locals()
 
         all_params = [
-            'account_id',
+            'project_id',
+            'id',
             'key_links_batch_destroy_parameters',
             'x_phrase_app_otp',
             'unlink_parent'
@@ -116,10 +119,14 @@ class LinkedKeysApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'account_id' is set
-        if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['account_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `account_id` when calling `key_links_batch_destroy`")  # noqa: E501
+        # verify the required parameter 'project_id' is set
+        if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `key_links_batch_destroy`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `key_links_batch_destroy`")  # noqa: E501
         # verify the required parameter 'key_links_batch_destroy_parameters' is set
         if self.api_client.client_side_validation and ('key_links_batch_destroy_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['key_links_batch_destroy_parameters'] is None):  # noqa: E501
@@ -128,8 +135,10 @@ class LinkedKeysApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'account_id' in local_var_params:
-            path_params['account_id'] = local_var_params['account_id']  # noqa: E501
+        if 'project_id' in local_var_params:
+            path_params['project_id'] = local_var_params['project_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
         if 'unlink_parent' in local_var_params and local_var_params['unlink_parent'] is not None:  # noqa: E501
@@ -172,17 +181,18 @@ class LinkedKeysApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def key_links_create(self, account_id, key_links_create_parameters, **kwargs):  # noqa: E501
+    def key_links_create(self, project_id, id, key_links_create_parameters, **kwargs):  # noqa: E501
         """Link child keys to a parent key  # noqa: E501
 
         Creates links between a given parent key and one or more child keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_create(account_id, key_links_create_parameters, async_req=True)
+        >>> thread = api.key_links_create(project_id, id, key_links_create_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param KeyLinksCreateParameters key_links_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -197,19 +207,20 @@ class LinkedKeysApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.key_links_create_with_http_info(account_id, key_links_create_parameters, **kwargs)  # noqa: E501
+        return self.key_links_create_with_http_info(project_id, id, key_links_create_parameters, **kwargs)  # noqa: E501
 
-    def key_links_create_with_http_info(self, account_id, key_links_create_parameters, **kwargs):  # noqa: E501
+    def key_links_create_with_http_info(self, project_id, id, key_links_create_parameters, **kwargs):  # noqa: E501
         """Link child keys to a parent key  # noqa: E501
 
         Creates links between a given parent key and one or more child keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_create_with_http_info(account_id, key_links_create_parameters, async_req=True)
+        >>> thread = api.key_links_create_with_http_info(project_id, id, key_links_create_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param KeyLinksCreateParameters key_links_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
@@ -229,7 +240,8 @@ class LinkedKeysApi(object):
         local_var_params = locals()
 
         all_params = [
-            'account_id',
+            'project_id',
+            'id',
             'key_links_create_parameters',
             'x_phrase_app_otp'
         ]
@@ -250,10 +262,14 @@ class LinkedKeysApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'account_id' is set
-        if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['account_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `account_id` when calling `key_links_create`")  # noqa: E501
+        # verify the required parameter 'project_id' is set
+        if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `key_links_create`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `key_links_create`")  # noqa: E501
         # verify the required parameter 'key_links_create_parameters' is set
         if self.api_client.client_side_validation and ('key_links_create_parameters' not in local_var_params or  # noqa: E501
                                                         local_var_params['key_links_create_parameters'] is None):  # noqa: E501
@@ -262,8 +278,10 @@ class LinkedKeysApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'account_id' in local_var_params:
-            path_params['account_id'] = local_var_params['account_id']  # noqa: E501
+        if 'project_id' in local_var_params:
+            path_params['project_id'] = local_var_params['project_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -304,17 +322,18 @@ class LinkedKeysApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def key_links_destroy(self, account_id, child_key_id, **kwargs):  # noqa: E501
+    def key_links_destroy(self, project_id, id, child_key_id, **kwargs):  # noqa: E501
         """Unlink a child key from a parent key  # noqa: E501
 
         Unlinks a single child key from a given parent key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_destroy(account_id, child_key_id, async_req=True)
+        >>> thread = api.key_links_destroy(project_id, id, child_key_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param str child_key_id: The ID of the child key to unlink. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -329,19 +348,20 @@ class LinkedKeysApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.key_links_destroy_with_http_info(account_id, child_key_id, **kwargs)  # noqa: E501
+        return self.key_links_destroy_with_http_info(project_id, id, child_key_id, **kwargs)  # noqa: E501
 
-    def key_links_destroy_with_http_info(self, account_id, child_key_id, **kwargs):  # noqa: E501
+    def key_links_destroy_with_http_info(self, project_id, id, child_key_id, **kwargs):  # noqa: E501
         """Unlink a child key from a parent key  # noqa: E501
 
         Unlinks a single child key from a given parent key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_destroy_with_http_info(account_id, child_key_id, async_req=True)
+        >>> thread = api.key_links_destroy_with_http_info(project_id, id, child_key_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param str child_key_id: The ID of the child key to unlink. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
@@ -361,7 +381,8 @@ class LinkedKeysApi(object):
         local_var_params = locals()
 
         all_params = [
-            'account_id',
+            'project_id',
+            'id',
             'child_key_id',
             'x_phrase_app_otp'
         ]
@@ -382,10 +403,14 @@ class LinkedKeysApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'account_id' is set
-        if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['account_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `account_id` when calling `key_links_destroy`")  # noqa: E501
+        # verify the required parameter 'project_id' is set
+        if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `key_links_destroy`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `key_links_destroy`")  # noqa: E501
         # verify the required parameter 'child_key_id' is set
         if self.api_client.client_side_validation and ('child_key_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['child_key_id'] is None):  # noqa: E501
@@ -394,8 +419,10 @@ class LinkedKeysApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'account_id' in local_var_params:
-            path_params['account_id'] = local_var_params['account_id']  # noqa: E501
+        if 'project_id' in local_var_params:
+            path_params['project_id'] = local_var_params['project_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
         if 'child_key_id' in local_var_params:
             path_params['child_key_id'] = local_var_params['child_key_id']  # noqa: E501
 
@@ -432,17 +459,18 @@ class LinkedKeysApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def key_links_index(self, account_id, **kwargs):  # noqa: E501
+    def key_links_index(self, project_id, id, **kwargs):  # noqa: E501
         """Retrieve all child keys linked to a specific parent key  # noqa: E501
 
         Returns detailed information about a parent key, including its linked child keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_index(account_id, async_req=True)
+        >>> thread = api.key_links_index(project_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -456,19 +484,20 @@ class LinkedKeysApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.key_links_index_with_http_info(account_id, **kwargs)  # noqa: E501
+        return self.key_links_index_with_http_info(project_id, id, **kwargs)  # noqa: E501
 
-    def key_links_index_with_http_info(self, account_id, **kwargs):  # noqa: E501
+    def key_links_index_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
         """Retrieve all child keys linked to a specific parent key  # noqa: E501
 
         Returns detailed information about a parent key, including its linked child keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.key_links_index_with_http_info(account_id, async_req=True)
+        >>> thread = api.key_links_index_with_http_info(project_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str account_id: Account ID (required)
+        :param str project_id: Project ID (required)
+        :param str id: Parent Translation Key ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -487,7 +516,8 @@ class LinkedKeysApi(object):
         local_var_params = locals()
 
         all_params = [
-            'account_id',
+            'project_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -507,16 +537,22 @@ class LinkedKeysApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'account_id' is set
-        if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['account_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `account_id` when calling `key_links_index`")  # noqa: E501
+        # verify the required parameter 'project_id' is set
+        if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_id` when calling `key_links_index`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `key_links_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'account_id' in local_var_params:
-            path_params['account_id'] = local_var_params['account_id']  # noqa: E501
+        if 'project_id' in local_var_params:
+            path_params['project_id'] = local_var_params['project_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 

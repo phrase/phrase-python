@@ -193,6 +193,12 @@ docs/ReleasePreview.md
 docs/ReleaseUpdateParameters.md
 docs/ReleasesApi.md
 docs/RepliesListParameters.md
+docs/RepoSync.md
+docs/RepoSyncEvent.md
+docs/RepoSyncEventErrorsInner.md
+docs/RepoSyncExport.md
+docs/RepoSyncImport.md
+docs/RepoSyncsApi.md
 docs/ReportsApi.md
 docs/Screenshot.md
 docs/ScreenshotMarker.md
@@ -310,6 +316,7 @@ phrase_api/api/organization_job_templates_api.py
 phrase_api/api/projects_api.py
 phrase_api/api/quality_performance_score_api.py
 phrase_api/api/releases_api.py
+phrase_api/api/repo_syncs_api.py
 phrase_api/api/reports_api.py
 phrase_api/api/screenshot_markers_api.py
 phrase_api/api/screenshots_api.py
@@ -481,6 +488,11 @@ phrase_api/models/release_create_parameters.py
 phrase_api/models/release_preview.py
 phrase_api/models/release_update_parameters.py
 phrase_api/models/replies_list_parameters.py
+phrase_api/models/repo_sync.py
+phrase_api/models/repo_sync_event.py
+phrase_api/models/repo_sync_event_errors_inner.py
+phrase_api/models/repo_sync_export.py
+phrase_api/models/repo_sync_import.py
 phrase_api/models/screenshot.py
 phrase_api/models/screenshot_marker.py
 phrase_api/models/screenshot_marker_create_parameters.py
@@ -738,6 +750,12 @@ test/test_release_preview.py
 test/test_release_update_parameters.py
 test/test_releases_api.py
 test/test_replies_list_parameters.py
+test/test_repo_sync.py
+test/test_repo_sync_event.py
+test/test_repo_sync_event_errors_inner.py
+test/test_repo_sync_export.py
+test/test_repo_sync_import.py
+test/test_repo_syncs_api.py
 test/test_reports_api.py
 test/test_screenshot.py
 test/test_screenshot_marker.py

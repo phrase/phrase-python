@@ -58,7 +58,8 @@ class TestTranslationDetails(unittest.TestCase):
                     username = '', 
                     name = '', 
                     gravatar_uid = '', ), 
-                word_count = 56
+                word_count = 56, 
+                linked_translation = {"id":"abcd1234cdef1234abcd1234cdef1234","content":"My parent translation"}
             )
         else :
             return TranslationDetails(

@@ -614,6 +614,7 @@ Class | Method | HTTP request | Description
  - [TranslationKey](docs/TranslationKey.md)
  - [TranslationKeyDetails](docs/TranslationKeyDetails.md)
  - [TranslationOrder](docs/TranslationOrder.md)
+ - [TranslationParent](docs/TranslationParent.md)
  - [TranslationReviewParameters](docs/TranslationReviewParameters.md)
  - [TranslationUnverifyParameters](docs/TranslationUnverifyParameters.md)
  - [TranslationUpdateParameters](docs/TranslationUpdateParameters.md)

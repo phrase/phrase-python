@@ -207,6 +207,7 @@ from phrase_api.models.translation_include_parameters import TranslationIncludeP
 from phrase_api.models.translation_key import TranslationKey
 from phrase_api.models.translation_key_details import TranslationKeyDetails
 from phrase_api.models.translation_order import TranslationOrder
+from phrase_api.models.translation_parent import TranslationParent
 from phrase_api.models.translation_review_parameters import TranslationReviewParameters
 from phrase_api.models.translation_unverify_parameters import TranslationUnverifyParameters
 from phrase_api.models.translation_update_parameters import TranslationUpdateParameters

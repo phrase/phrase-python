@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **user** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **word_count** | **int** |  | [optional] 
+**linked_translation** | [**TranslationParent**](TranslationParent.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -41,6 +41,7 @@ class TestTeamsSpacesCreateParameters(unittest.TestCase):
             )
         else :
             return TeamsSpacesCreateParameters(
+                id = 'a4b3c2d1',
         )
         """
 

@@ -42,6 +42,7 @@ class TestVariableCreateParameters(unittest.TestCase):
             )
         else :
             return VariableCreateParameters(
+                name = 'MY_VARIABLE',
         )
         """
 

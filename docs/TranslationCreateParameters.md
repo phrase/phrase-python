@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **branch** | **str** | specify the branch to use | [optional] 
-**locale_id** | **str** | Locale. Can be the name or public id of the locale. Preferred is the public id. | [optional] 
+**locale_id** | **str** | Locale. Can be the name or id of the locale. Preferred is id | [optional] 
 **key_id** | **str** | Key | [optional] 
 **content** | **str** | Translation content | [optional] 
 **plural_suffix** | **str** | Plural suffix. Can be one of: zero, one, two, few, many, other. Must be specified if the key associated to the translation is pluralized. | [optional] 

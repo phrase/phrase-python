@@ -43,6 +43,7 @@ class TestGlossaryCreateParameters(unittest.TestCase):
             )
         else :
             return GlossaryCreateParameters(
+                name = 'My glossary',
         )
         """
 

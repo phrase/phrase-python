@@ -42,6 +42,8 @@ class TestGlossaryTermTranslationCreateParameters(unittest.TestCase):
             )
         else :
             return GlossaryTermTranslationCreateParameters(
+                locale_code = 'en-US',
+                content = 'My translated term',
         )
         """
 

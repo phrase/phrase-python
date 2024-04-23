@@ -48,6 +48,8 @@ class TestInvitationCreateParameters(unittest.TestCase):
             )
         else :
             return InvitationCreateParameters(
+                email = 'example@mail.com',
+                role = 'Developer',
         )
         """
 

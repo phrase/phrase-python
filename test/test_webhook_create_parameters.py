@@ -46,6 +46,7 @@ class TestWebhookCreateParameters(unittest.TestCase):
             )
         else :
             return WebhookCreateParameters(
+                callback_url = 'http://example.com/hooks/phraseapp-notifications',
         )
         """
 

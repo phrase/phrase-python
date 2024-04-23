@@ -54,8 +54,7 @@ class GlossaryCreateParameters(object):
         self._space_ids = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        self.name = name
         if project_ids is not None:
             self.project_ids = project_ids
         if space_ids is not None:
@@ -81,6 +80,8 @@ class GlossaryCreateParameters(object):
         :param name: The name of this GlossaryCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

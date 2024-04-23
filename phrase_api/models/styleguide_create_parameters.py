@@ -84,8 +84,7 @@ class StyleguideCreateParameters(object):
         self._samples = None
         self.discriminator = None
 
-        if title is not None:
-            self.title = title
+        self.title = title
         if audience is not None:
             self.audience = audience
         if target_audience is not None:
@@ -131,6 +130,8 @@ class StyleguideCreateParameters(object):
         :param title: The title of this StyleguideCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and title is None:  # noqa: E501
+            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
 
         self._title = title
 

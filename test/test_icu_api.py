@@ -30,7 +30,7 @@ class TestICUApi(unittest.TestCase):
     def test_icu_skeleton(self):
         """Test case for icu_skeleton
 
-        Build icu skeletons  # noqa: E501
+        Build ICU skeletons  # noqa: E501
         """
         pass
 

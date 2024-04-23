@@ -66,13 +66,20 @@ class KeyLink(object):
         self._children = None
         self.discriminator = None
 
-        self.created_at = created_at
-        self.updated_at = updated_at
-        self.created_by = created_by
-        self.updated_by = updated_by
-        self.account = account
-        self.parent = parent
-        self.children = children
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        if created_by is not None:
+            self.created_by = created_by
+        if updated_by is not None:
+            self.updated_by = updated_by
+        if account is not None:
+            self.account = account
+        if parent is not None:
+            self.parent = parent
+        if children is not None:
+            self.children = children
 
     @property
     def created_at(self):
@@ -94,8 +101,6 @@ class KeyLink(object):
         :param created_at: The created_at of this KeyLink.  # noqa: E501
         :type: datetime
         """
-        if self.local_vars_configuration.client_side_validation and created_at is None:  # noqa: E501
-            raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
 
@@ -119,8 +124,6 @@ class KeyLink(object):
         :param updated_at: The updated_at of this KeyLink.  # noqa: E501
         :type: datetime
         """
-        if self.local_vars_configuration.client_side_validation and updated_at is None:  # noqa: E501
-            raise ValueError("Invalid value for `updated_at`, must not be `None`")  # noqa: E501
 
         self._updated_at = updated_at
 
@@ -142,8 +145,6 @@ class KeyLink(object):
         :param created_by: The created_by of this KeyLink.  # noqa: E501
         :type: UserPreview
         """
-        if self.local_vars_configuration.client_side_validation and created_by is None:  # noqa: E501
-            raise ValueError("Invalid value for `created_by`, must not be `None`")  # noqa: E501
 
         self._created_by = created_by
 
@@ -165,8 +166,6 @@ class KeyLink(object):
         :param updated_by: The updated_by of this KeyLink.  # noqa: E501
         :type: UserPreview
         """
-        if self.local_vars_configuration.client_side_validation and updated_by is None:  # noqa: E501
-            raise ValueError("Invalid value for `updated_by`, must not be `None`")  # noqa: E501
 
         self._updated_by = updated_by
 
@@ -188,8 +187,6 @@ class KeyLink(object):
         :param account: The account of this KeyLink.  # noqa: E501
         :type: Account
         """
-        if self.local_vars_configuration.client_side_validation and account is None:  # noqa: E501
-            raise ValueError("Invalid value for `account`, must not be `None`")  # noqa: E501
 
         self._account = account
 
@@ -211,8 +208,6 @@ class KeyLink(object):
         :param parent: The parent of this KeyLink.  # noqa: E501
         :type: KeyPreview
         """
-        if self.local_vars_configuration.client_side_validation and parent is None:  # noqa: E501
-            raise ValueError("Invalid value for `parent`, must not be `None`")  # noqa: E501
 
         self._parent = parent
 
@@ -236,8 +231,6 @@ class KeyLink(object):
         :param children: The children of this KeyLink.  # noqa: E501
         :type: List[KeyPreview]
         """
-        if self.local_vars_configuration.client_side_validation and children is None:  # noqa: E501
-            raise ValueError("Invalid value for `children`, must not be `None`")  # noqa: E501
 
         self._children = children
 

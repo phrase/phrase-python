@@ -51,6 +51,8 @@ class TestLocaleCreateParameters(unittest.TestCase):
             )
         else :
             return LocaleCreateParameters(
+                name = 'de',
+                code = 'de-DE',
         )
         """
 

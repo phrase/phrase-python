@@ -243,7 +243,7 @@ class LocaleUpdateParameters(object):
     def source_locale_id(self):
         """Gets the source_locale_id of this LocaleUpdateParameters.  # noqa: E501
 
-        Source locale. Can be the name or public id of the locale. Preferred is the public id.  # noqa: E501
+        Source locale. Can be the name or id of the locale. Preferred is id.  # noqa: E501
 
         :return: The source_locale_id of this LocaleUpdateParameters.  # noqa: E501
         :rtype: str
@@ -254,7 +254,7 @@ class LocaleUpdateParameters(object):
     def source_locale_id(self, source_locale_id):
         """Sets the source_locale_id of this LocaleUpdateParameters.
 
-        Source locale. Can be the name or public id of the locale. Preferred is the public id.  # noqa: E501
+        Source locale. Can be the name or id of the locale. Preferred is id.  # noqa: E501
 
         :param source_locale_id: The source_locale_id of this LocaleUpdateParameters.  # noqa: E501
         :type: str

@@ -72,10 +72,8 @@ class DistributionCreateParameters(object):
         self._use_last_reviewed_version = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if project_id is not None:
-            self.project_id = project_id
+        self.name = name
+        self.project_id = project_id
         if platforms is not None:
             self.platforms = platforms
         if locale_ids is not None:
@@ -111,6 +109,8 @@ class DistributionCreateParameters(object):
         :param name: The name of this DistributionCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -134,6 +134,8 @@ class DistributionCreateParameters(object):
         :param project_id: The project_id of this DistributionCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and project_id is None:  # noqa: E501
+            raise ValueError("Invalid value for `project_id`, must not be `None`")  # noqa: E501
 
         self._project_id = project_id
 

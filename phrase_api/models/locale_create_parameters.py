@@ -80,10 +80,8 @@ class LocaleCreateParameters(object):
 
         if branch is not None:
             self.branch = branch
-        if name is not None:
-            self.name = name
-        if code is not None:
-            self.code = code
+        self.name = name
+        self.code = code
         if default is not None:
             self.default = default
         if main is not None:
@@ -144,6 +142,8 @@ class LocaleCreateParameters(object):
         :param name: The name of this LocaleCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -167,6 +167,8 @@ class LocaleCreateParameters(object):
         :param code: The code of this LocaleCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and code is None:  # noqa: E501
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
         self._code = code
 
@@ -243,7 +245,7 @@ class LocaleCreateParameters(object):
     def source_locale_id(self):
         """Gets the source_locale_id of this LocaleCreateParameters.  # noqa: E501
 
-        Source locale. Can be the name or public id of the locale. Preferred is the public id.  # noqa: E501
+        Source locale. Can be the name or id of the locale. Preferred is id.  # noqa: E501
 
         :return: The source_locale_id of this LocaleCreateParameters.  # noqa: E501
         :rtype: str
@@ -254,7 +256,7 @@ class LocaleCreateParameters(object):
     def source_locale_id(self, source_locale_id):
         """Sets the source_locale_id of this LocaleCreateParameters.
 
-        Source locale. Can be the name or public id of the locale. Preferred is the public id.  # noqa: E501
+        Source locale. Can be the name or id of the locale. Preferred is id.  # noqa: E501
 
         :param source_locale_id: The source_locale_id of this LocaleCreateParameters.  # noqa: E501
         :type: str

@@ -42,6 +42,7 @@ class TestTagCreateParameters(unittest.TestCase):
             )
         else :
             return TagCreateParameters(
+                name = 'my-feature',
         )
         """
 

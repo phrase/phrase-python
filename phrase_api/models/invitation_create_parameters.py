@@ -69,10 +69,8 @@ class InvitationCreateParameters(object):
         self._permissions = None
         self.discriminator = None
 
-        if email is not None:
-            self.email = email
-        if role is not None:
-            self.role = role
+        self.email = email
+        self.role = role
         if project_ids is not None:
             self.project_ids = project_ids
         if locale_ids is not None:
@@ -106,6 +104,8 @@ class InvitationCreateParameters(object):
         :param email: The email of this InvitationCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
+            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
 
         self._email = email
 
@@ -129,6 +129,8 @@ class InvitationCreateParameters(object):
         :param role: The role of this InvitationCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and role is None:  # noqa: E501
+            raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
 
         self._role = role
 

@@ -55,6 +55,8 @@ class TestOrderCreateParameters(unittest.TestCase):
             )
         else :
             return OrderCreateParameters(
+                name = 'Welcome message translations',
+                lsp = 'textmaster',
         )
         """
 

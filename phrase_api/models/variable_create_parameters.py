@@ -51,8 +51,7 @@ class VariableCreateParameters(object):
         self._value = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        self.name = name
         if value is not None:
             self.value = value
 
@@ -76,6 +75,8 @@ class VariableCreateParameters(object):
         :param name: The name of this VariableCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

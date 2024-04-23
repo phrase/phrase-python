@@ -51,7 +51,7 @@ class TestLinkedKeysApi(unittest.TestCase):
     def test_key_links_index(self):
         """Test case for key_links_index
 
-        Retrieve all child keys linked to a specific parent key  # noqa: E501
+        List child keys of a parent key  # noqa: E501
         """
         pass
 

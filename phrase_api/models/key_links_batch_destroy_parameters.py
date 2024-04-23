@@ -32,23 +32,28 @@ class KeyLinksBatchDestroyParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'child_key_ids': 'List[str]'
+        'child_key_ids': 'List[str]',
+        'unlink_parent': 'bool'
     }
 
     attribute_map = {
-        'child_key_ids': 'child_key_ids'
+        'child_key_ids': 'child_key_ids',
+        'unlink_parent': 'unlink_parent'
     }
 
-    def __init__(self, child_key_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, child_key_ids=None, unlink_parent=False, local_vars_configuration=None):  # noqa: E501
         """KeyLinksBatchDestroyParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._child_key_ids = None
+        self._unlink_parent = None
         self.discriminator = None
 
         self.child_key_ids = child_key_ids
+        if unlink_parent is not None:
+            self.unlink_parent = unlink_parent
 
     @property
     def child_key_ids(self):
@@ -74,6 +79,29 @@ class KeyLinksBatchDestroyParameters(object):
             raise ValueError("Invalid value for `child_key_ids`, must not be `None`")  # noqa: E501
 
         self._child_key_ids = child_key_ids
+
+    @property
+    def unlink_parent(self):
+        """Gets the unlink_parent of this KeyLinksBatchDestroyParameters.  # noqa: E501
+
+        Whether to unlink the parent key as well and unmark it as linked-key.  # noqa: E501
+
+        :return: The unlink_parent of this KeyLinksBatchDestroyParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._unlink_parent
+
+    @unlink_parent.setter
+    def unlink_parent(self, unlink_parent):
+        """Sets the unlink_parent of this KeyLinksBatchDestroyParameters.
+
+        Whether to unlink the parent key as well and unmark it as linked-key.  # noqa: E501
+
+        :param unlink_parent: The unlink_parent of this KeyLinksBatchDestroyParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._unlink_parent = unlink_parent
 
     def to_dict(self):
         """Returns the model properties as a dict"""

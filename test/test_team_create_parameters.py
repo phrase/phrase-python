@@ -41,6 +41,7 @@ class TestTeamCreateParameters(unittest.TestCase):
             )
         else :
             return TeamCreateParameters(
+                name = 'German Translators',
         )
         """
 

@@ -4,15 +4,15 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**icu_skeleton**](ICUApi.md#icu_skeleton) | **POST** /icu/skeleton | Build icu skeletons
+[**icu_skeleton**](ICUApi.md#icu_skeleton) | **POST** /icu/skeleton | Build ICU skeletons
 
 
 # **icu_skeleton**
 > Icu icu_skeleton(icu_skeleton_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
-Build icu skeletons
+Build ICU skeletons
 
-Returns icu skeletons for multiple locale codes based on a source content.
+Returns ICU skeletons for multiple locale codes based on a source content.
 
 ### Example
 
@@ -35,7 +35,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Build icu skeletons
+        # Build ICU skeletons
         api_response = api_instance.icu_skeleton(icu_skeleton_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:

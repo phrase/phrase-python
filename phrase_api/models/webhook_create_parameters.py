@@ -63,8 +63,7 @@ class WebhookCreateParameters(object):
         self._include_branches = None
         self.discriminator = None
 
-        if callback_url is not None:
-            self.callback_url = callback_url
+        self.callback_url = callback_url
         if secret is not None:
             self.secret = secret
         if description is not None:
@@ -96,6 +95,8 @@ class WebhookCreateParameters(object):
         :param callback_url: The callback_url of this WebhookCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and callback_url is None:  # noqa: E501
+            raise ValueError("Invalid value for `callback_url`, must not be `None`")  # noqa: E501
 
         self._callback_url = callback_url
 

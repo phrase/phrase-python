@@ -123,8 +123,7 @@ class ProjectCreateParameters(object):
         self._smart_suggest_use_machine_translation = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        self.name = name
         if main_format is not None:
             self.main_format = main_format
         if media is not None:
@@ -196,6 +195,8 @@ class ProjectCreateParameters(object):
         :param name: The name of this ProjectCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

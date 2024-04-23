@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **str** | The email of the invited user. The &lt;code&gt;email&lt;/code&gt; can not be updated once created. Create a new invitation for each unique email. | [optional] 
-**role** | **str** | Invitiation role, can be any of Manager, Developer, Translator. | [optional] 
+**email** | **str** | The email of the invited user. The &lt;code&gt;email&lt;/code&gt; can not be updated once created. Create a new invitation for each unique email. | 
+**role** | **str** | Invitiation role, can be any of Manager, Developer, Translator. | 
 **project_ids** | **str** | List of project ids the invited user has access to. | [optional] 
 **locale_ids** | **str** | List of locale ids the invited user has access to. | [optional] 
 **space_ids** | **List[str]** | List of spaces the user is assigned to. | [optional] 

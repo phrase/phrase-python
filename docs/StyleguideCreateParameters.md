@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **str** | Style guide title | [optional] 
+**title** | **str** | Style guide title | 
 **audience** | **str** | Audience description | [optional] 
 **target_audience** | **str** | Can be one of: not_specified, children, teenager, young_adults, adults, old_adults. | [optional] 
 **grammatical_person** | **str** | Can be one of: not_specified, first_person_singular, second_person_singular, third_person_singular_masculine, third_person_singular_feminine, third_person_singular_neuter, first_person_plural, second_person_plural, third_person_plural. | [optional] 

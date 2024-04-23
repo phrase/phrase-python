@@ -48,8 +48,7 @@ class TeamsSpacesCreateParameters(object):
         self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
+        self.id = id
 
     @property
     def id(self):
@@ -71,6 +70,8 @@ class TeamsSpacesCreateParameters(object):
         :param id: The id of this TeamsSpacesCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 

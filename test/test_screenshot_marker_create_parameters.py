@@ -43,6 +43,7 @@ class TestScreenshotMarkerCreateParameters(unittest.TestCase):
             )
         else :
             return ScreenshotMarkerCreateParameters(
+                key_id = 'abcd1234abcd1234abcd1234abcd1234',
         )
         """
 

@@ -48,8 +48,7 @@ class BranchCreateParameters(object):
         self._name = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        self.name = name
 
     @property
     def name(self):
@@ -71,6 +70,8 @@ class BranchCreateParameters(object):
         :param name: The name of this BranchCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

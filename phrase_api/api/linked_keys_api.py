@@ -49,7 +49,6 @@ class LinkedKeysApi(object):
         :param str id: Parent Translation Key ID (required)
         :param KeyLinksBatchDestroyParameters key_links_batch_destroy_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param bool unlink_parent: Whether to unlink the parent key as well and unmark it as linked-key.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -78,7 +77,6 @@ class LinkedKeysApi(object):
         :param str id: Parent Translation Key ID (required)
         :param KeyLinksBatchDestroyParameters key_links_batch_destroy_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param bool unlink_parent: Whether to unlink the parent key as well and unmark it as linked-key.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -99,8 +97,7 @@ class LinkedKeysApi(object):
             'project_id',
             'id',
             'key_links_batch_destroy_parameters',
-            'x_phrase_app_otp',
-            'unlink_parent'
+            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -141,8 +138,6 @@ class LinkedKeysApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
-        if 'unlink_parent' in local_var_params and local_var_params['unlink_parent'] is not None:  # noqa: E501
-            query_params.append(('unlink_parent', local_var_params['unlink_parent']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -460,7 +455,7 @@ class LinkedKeysApi(object):
             collection_formats=collection_formats)
 
     def key_links_index(self, project_id, id, **kwargs):  # noqa: E501
-        """Retrieve all child keys linked to a specific parent key  # noqa: E501
+        """List child keys of a parent key  # noqa: E501
 
         Returns detailed information about a parent key, including its linked child keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -487,7 +482,7 @@ class LinkedKeysApi(object):
         return self.key_links_index_with_http_info(project_id, id, **kwargs)  # noqa: E501
 
     def key_links_index_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
-        """Retrieve all child keys linked to a specific parent key  # noqa: E501
+        """List child keys of a parent key  # noqa: E501
 
         Returns detailed information about a parent key, including its linked child keys.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

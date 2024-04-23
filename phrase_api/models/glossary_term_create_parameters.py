@@ -57,8 +57,7 @@ class GlossaryTermCreateParameters(object):
         self._case_sensitive = None
         self.discriminator = None
 
-        if term is not None:
-            self.term = term
+        self.term = term
         if description is not None:
             self.description = description
         if translatable is not None:
@@ -86,6 +85,8 @@ class GlossaryTermCreateParameters(object):
         :param term: The term of this GlossaryTermCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and term is None:  # noqa: E501
+            raise ValueError("Invalid value for `term`, must not be `None`")  # noqa: E501
 
         self._term = term
 

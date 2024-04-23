@@ -42,6 +42,7 @@ class TestFigmaAttachmentCreateParameters(unittest.TestCase):
             )
         else :
             return FigmaAttachmentCreateParameters(
+                url = 'https://figma.com/file/xxxxx/sample',
         )
         """
 

@@ -54,8 +54,7 @@ class AuthorizationCreateParameters(object):
         self._expires_at = None
         self.discriminator = None
 
-        if note is not None:
-            self.note = note
+        self.note = note
         if scopes is not None:
             self.scopes = scopes
         if expires_at is not None:
@@ -81,6 +80,8 @@ class AuthorizationCreateParameters(object):
         :param note: The note of this AuthorizationCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and note is None:  # noqa: E501
+            raise ValueError("Invalid value for `note`, must not be `None`")  # noqa: E501
 
         self._note = note
 

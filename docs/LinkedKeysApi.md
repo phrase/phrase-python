@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**key_links_batch_destroy**](LinkedKeysApi.md#key_links_batch_destroy) | **DELETE** /projects/{project_id}/keys/{id}/key_links | Batch unlink child keys from a parent key
 [**key_links_create**](LinkedKeysApi.md#key_links_create) | **POST** /projects/{project_id}/keys/{id}/key_links | Link child keys to a parent key
 [**key_links_destroy**](LinkedKeysApi.md#key_links_destroy) | **DELETE** /projects/{project_id}/keys/{id}/key_links/{child_key_id} | Unlink a child key from a parent key
-[**key_links_index**](LinkedKeysApi.md#key_links_index) | **GET** /projects/{project_id}/keys/{id}/key_links | Retrieve all child keys linked to a specific parent key
+[**key_links_index**](LinkedKeysApi.md#key_links_index) | **GET** /projects/{project_id}/keys/{id}/key_links | List child keys of a parent key
 
 
 # **key_links_batch_destroy**
-> key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, x_phrase_app_otp=x_phrase_app_otp, unlink_parent=unlink_parent)
+> key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Batch unlink child keys from a parent key
 
@@ -38,11 +38,10 @@ with phrase_api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | Parent Translation Key ID (required)
     key_links_batch_destroy_parameters = phrase_api.KeyLinksBatchDestroyParameters() # KeyLinksBatchDestroyParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    unlink_parent = True # bool | Whether to unlink the parent key as well and unmark it as linked-key.
 
     try:
         # Batch unlink child keys from a parent key
-        api_instance.key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, x_phrase_app_otp=x_phrase_app_otp, unlink_parent=unlink_parent)
+        api_instance.key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling LinkedKeysApi->key_links_batch_destroy: %s\n" % e)
 ```
@@ -56,7 +55,6 @@ Name | Type | Description  | Notes
  **id** | **str**| Parent Translation Key ID | 
  **key_links_batch_destroy_parameters** | [**KeyLinksBatchDestroyParameters**](KeyLinksBatchDestroyParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **unlink_parent** | **bool**| Whether to unlink the parent key as well and unmark it as linked-key. | [optional] 
 
 ### Return type
 
@@ -217,7 +215,7 @@ void (empty response body)
 # **key_links_index**
 > KeyLink key_links_index(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
-Retrieve all child keys linked to a specific parent key
+List child keys of a parent key
 
 Returns detailed information about a parent key, including its linked child keys.
 
@@ -243,7 +241,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
-        # Retrieve all child keys linked to a specific parent key
+        # List child keys of a parent key
         api_response = api_instance.key_links_index(project_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:

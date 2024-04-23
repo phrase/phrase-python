@@ -49,6 +49,7 @@ class TestJobCreateParameters(unittest.TestCase):
             )
         else :
             return JobCreateParameters(
+                name = 'de',
         )
         """
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **branch** | **str** | specify the branch to use | [optional] 
-**name** | **str** | Key name | [optional] 
+**name** | **str** | Key name | 
 **description** | **str** | Key description (usually includes contextual information for translators) | [optional] 
 **plural** | **bool** | Indicates whether key supports pluralization | [optional] 
 **name_plural** | **str** | Plural name for the key (used in some file formats, e.g. Gettext) | [optional] 

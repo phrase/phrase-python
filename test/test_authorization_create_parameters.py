@@ -43,6 +43,7 @@ class TestAuthorizationCreateParameters(unittest.TestCase):
             )
         else :
             return AuthorizationCreateParameters(
+                note = 'My Deploy Script',
         )
         """
 

@@ -53,8 +53,7 @@ class FigmaAttachmentCreateParameters(object):
 
         if branch is not None:
             self.branch = branch
-        if url is not None:
-            self.url = url
+        self.url = url
 
     @property
     def branch(self):
@@ -99,6 +98,8 @@ class FigmaAttachmentCreateParameters(object):
         :param url: The url of this FigmaAttachmentCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and url is None:  # noqa: E501
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 

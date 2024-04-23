@@ -41,6 +41,7 @@ class TestBlacklistedKeyCreateParameters(unittest.TestCase):
             )
         else :
             return BlacklistedKeyCreateParameters(
+                name = 'date.formats.*',
         )
         """
 

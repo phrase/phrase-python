@@ -51,10 +51,8 @@ class GlossaryTermTranslationCreateParameters(object):
         self._content = None
         self.discriminator = None
 
-        if locale_code is not None:
-            self.locale_code = locale_code
-        if content is not None:
-            self.content = content
+        self.locale_code = locale_code
+        self.content = content
 
     @property
     def locale_code(self):
@@ -76,6 +74,8 @@ class GlossaryTermTranslationCreateParameters(object):
         :param locale_code: The locale_code of this GlossaryTermTranslationCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and locale_code is None:  # noqa: E501
+            raise ValueError("Invalid value for `locale_code`, must not be `None`")  # noqa: E501
 
         self._locale_code = locale_code
 
@@ -99,6 +99,8 @@ class GlossaryTermTranslationCreateParameters(object):
         :param content: The content of this GlossaryTermTranslationCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and content is None:  # noqa: E501
+            raise ValueError("Invalid value for `content`, must not be `None`")  # noqa: E501
 
         self._content = content
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**term** | **str** | Glossary term | [optional] 
+**term** | **str** | Glossary term | 
 **description** | **str** | Description of term | [optional] 
 **translatable** | **bool** | Indicates whether the term should be used for all languages or can be translated | [optional] 
 **case_sensitive** | **bool** | Indicates whether the term is case sensitive | [optional] 

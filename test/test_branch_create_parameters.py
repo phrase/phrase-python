@@ -41,6 +41,7 @@ class TestBranchCreateParameters(unittest.TestCase):
             )
         else :
             return BranchCreateParameters(
+                name = 'my-branch',
         )
         """
 

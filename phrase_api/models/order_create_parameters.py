@@ -92,10 +92,8 @@ class OrderCreateParameters(object):
 
         if branch is not None:
             self.branch = branch
-        if name is not None:
-            self.name = name
-        if lsp is not None:
-            self.lsp = lsp
+        self.name = name
+        self.lsp = lsp
         if source_locale_id is not None:
             self.source_locale_id = source_locale_id
         if target_locale_ids is not None:
@@ -164,6 +162,8 @@ class OrderCreateParameters(object):
         :param name: The name of this OrderCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -187,6 +187,8 @@ class OrderCreateParameters(object):
         :param lsp: The lsp of this OrderCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and lsp is None:  # noqa: E501
+            raise ValueError("Invalid value for `lsp`, must not be `None`")  # noqa: E501
 
         self._lsp = lsp
 
@@ -194,7 +196,7 @@ class OrderCreateParameters(object):
     def source_locale_id(self):
         """Gets the source_locale_id of this OrderCreateParameters.  # noqa: E501
 
-        Source locale for the order. Can be the name or public id of the source locale. Preferred is the public id.  # noqa: E501
+        Source locale for the order. Can be the name or id of the source locale. Preferred is id.  # noqa: E501
 
         :return: The source_locale_id of this OrderCreateParameters.  # noqa: E501
         :rtype: str
@@ -205,7 +207,7 @@ class OrderCreateParameters(object):
     def source_locale_id(self, source_locale_id):
         """Sets the source_locale_id of this OrderCreateParameters.
 
-        Source locale for the order. Can be the name or public id of the source locale. Preferred is the public id.  # noqa: E501
+        Source locale for the order. Can be the name or id of the source locale. Preferred is id.  # noqa: E501
 
         :param source_locale_id: The source_locale_id of this OrderCreateParameters.  # noqa: E501
         :type: str
@@ -217,7 +219,7 @@ class OrderCreateParameters(object):
     def target_locale_ids(self):
         """Gets the target_locale_ids of this OrderCreateParameters.  # noqa: E501
 
-        List of target locales you want the source content translate to. Can be the name or public id of the target locales. Preferred is the public id.  # noqa: E501
+        List of target locales you want the source content translate to. Can be the name or id of the target locales. Preferred is id.  # noqa: E501
 
         :return: The target_locale_ids of this OrderCreateParameters.  # noqa: E501
         :rtype: List[str]
@@ -228,7 +230,7 @@ class OrderCreateParameters(object):
     def target_locale_ids(self, target_locale_ids):
         """Sets the target_locale_ids of this OrderCreateParameters.
 
-        List of target locales you want the source content translate to. Can be the name or public id of the target locales. Preferred is the public id.  # noqa: E501
+        List of target locales you want the source content translate to. Can be the name or id of the target locales. Preferred is id.  # noqa: E501
 
         :param target_locale_ids: The target_locale_ids of this OrderCreateParameters.  # noqa: E501
         :type: List[str]

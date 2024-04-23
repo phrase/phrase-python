@@ -53,6 +53,7 @@ class TestStyleguideCreateParameters(unittest.TestCase):
             )
         else :
             return StyleguideCreateParameters(
+                title = 'Web application style guide',
         )
         """
 

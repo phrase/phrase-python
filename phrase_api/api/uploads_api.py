@@ -35,22 +35,22 @@ class UploadsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def upload_create(self, project_id, **kwargs):  # noqa: E501
+    def upload_create(self, project_id, file, file_format, locale_id, **kwargs):  # noqa: E501
         """Upload a new file  # noqa: E501
 
         Upload a new language file. Creates necessary resources in your project.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.upload_create(project_id, async_req=True)
+        >>> thread = api.upload_create(project_id, file, file_format, locale_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
+        :param bytearray file: File to be imported (required)
+        :param str file_format: File format. Auto-detected when possible and not specified. (required)
+        :param str locale_id: Locale of the file's content. Can be the name or id of the locale. Preferred is id. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param bytearray file: File to be imported
-        :param str file_format: File format. Auto-detected when possible and not specified.
-        :param str locale_id: Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
@@ -58,7 +58,7 @@ class UploadsApi(object):
         :param bool skip_upload_tags: Indicates whether the upload should not create upload tags.
         :param bool skip_unverification: Indicates whether the upload should unverify updated translations.
         :param str file_encoding: Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
-        :param object locale_mapping: Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.
+        :param object locale_mapping: Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
         :param object format_options: Additional options available for specific formats. See our format guide for complete list.
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
@@ -75,24 +75,24 @@ class UploadsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.upload_create_with_http_info(project_id, **kwargs)  # noqa: E501
+        return self.upload_create_with_http_info(project_id, file, file_format, locale_id, **kwargs)  # noqa: E501
 
-    def upload_create_with_http_info(self, project_id, **kwargs):  # noqa: E501
+    def upload_create_with_http_info(self, project_id, file, file_format, locale_id, **kwargs):  # noqa: E501
         """Upload a new file  # noqa: E501
 
         Upload a new language file. Creates necessary resources in your project.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.upload_create_with_http_info(project_id, async_req=True)
+        >>> thread = api.upload_create_with_http_info(project_id, file, file_format, locale_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
+        :param bytearray file: File to be imported (required)
+        :param str file_format: File format. Auto-detected when possible and not specified. (required)
+        :param str locale_id: Locale of the file's content. Can be the name or id of the locale. Preferred is id. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param bytearray file: File to be imported
-        :param str file_format: File format. Auto-detected when possible and not specified.
-        :param str locale_id: Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
@@ -100,7 +100,7 @@ class UploadsApi(object):
         :param bool skip_upload_tags: Indicates whether the upload should not create upload tags.
         :param bool skip_unverification: Indicates whether the upload should unverify updated translations.
         :param str file_encoding: Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
-        :param object locale_mapping: Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.
+        :param object locale_mapping: Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
         :param object format_options: Additional options available for specific formats. See our format guide for complete list.
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
@@ -123,11 +123,11 @@ class UploadsApi(object):
 
         all_params = [
             'project_id',
-            'x_phrase_app_otp',
-            'branch',
             'file',
             'file_format',
             'locale_id',
+            'x_phrase_app_otp',
+            'branch',
             'tags',
             'update_translations',
             'update_descriptions',
@@ -162,6 +162,18 @@ class UploadsApi(object):
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_id` when calling `upload_create`")  # noqa: E501
+        # verify the required parameter 'file' is set
+        if self.api_client.client_side_validation and ('file' not in local_var_params or  # noqa: E501
+                                                        local_var_params['file'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `file` when calling `upload_create`")  # noqa: E501
+        # verify the required parameter 'file_format' is set
+        if self.api_client.client_side_validation and ('file_format' not in local_var_params or  # noqa: E501
+                                                        local_var_params['file_format'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `file_format` when calling `upload_create`")  # noqa: E501
+        # verify the required parameter 'locale_id' is set
+        if self.api_client.client_side_validation and ('locale_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['locale_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `locale_id` when calling `upload_create`")  # noqa: E501
 
         collection_formats = {}
 

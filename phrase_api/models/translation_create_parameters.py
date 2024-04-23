@@ -113,7 +113,7 @@ class TranslationCreateParameters(object):
     def locale_id(self):
         """Gets the locale_id of this TranslationCreateParameters.  # noqa: E501
 
-        Locale. Can be the name or public id of the locale. Preferred is the public id.  # noqa: E501
+        Locale. Can be the name or id of the locale. Preferred is id  # noqa: E501
 
         :return: The locale_id of this TranslationCreateParameters.  # noqa: E501
         :rtype: str
@@ -124,7 +124,7 @@ class TranslationCreateParameters(object):
     def locale_id(self, locale_id):
         """Sets the locale_id of this TranslationCreateParameters.
 
-        Locale. Can be the name or public id of the locale. Preferred is the public id.  # noqa: E501
+        Locale. Can be the name or id of the locale. Preferred is id  # noqa: E501
 
         :param locale_id: The locale_id of this TranslationCreateParameters.  # noqa: E501
         :type: str

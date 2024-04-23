@@ -44,6 +44,7 @@ class TestGlossaryTermCreateParameters(unittest.TestCase):
             )
         else :
             return GlossaryTermCreateParameters(
+                term = 'MyCompany',
         )
         """
 

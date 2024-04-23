@@ -36,9 +36,9 @@ class ICUApi(object):
         self.api_client = api_client
 
     def icu_skeleton(self, icu_skeleton_parameters, **kwargs):  # noqa: E501
-        """Build icu skeletons  # noqa: E501
+        """Build ICU skeletons  # noqa: E501
 
-        Returns icu skeletons for multiple locale codes based on a source content.  # noqa: E501
+        Returns ICU skeletons for multiple locale codes based on a source content.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.icu_skeleton(icu_skeleton_parameters, async_req=True)
@@ -62,9 +62,9 @@ class ICUApi(object):
         return self.icu_skeleton_with_http_info(icu_skeleton_parameters, **kwargs)  # noqa: E501
 
     def icu_skeleton_with_http_info(self, icu_skeleton_parameters, **kwargs):  # noqa: E501
-        """Build icu skeletons  # noqa: E501
+        """Build ICU skeletons  # noqa: E501
 
-        Returns icu skeletons for multiple locale codes based on a source content.  # noqa: E501
+        Returns ICU skeletons for multiple locale codes based on a source content.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.icu_skeleton_with_http_info(icu_skeleton_parameters, async_req=True)

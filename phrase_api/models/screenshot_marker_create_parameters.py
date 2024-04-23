@@ -56,8 +56,7 @@ class ScreenshotMarkerCreateParameters(object):
 
         if branch is not None:
             self.branch = branch
-        if key_id is not None:
-            self.key_id = key_id
+        self.key_id = key_id
         if presentation is not None:
             self.presentation = presentation
 
@@ -104,6 +103,8 @@ class ScreenshotMarkerCreateParameters(object):
         :param key_id: The key_id of this ScreenshotMarkerCreateParameters.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and key_id is None:  # noqa: E501
+            raise ValueError("Invalid value for `key_id`, must not be `None`")  # noqa: E501
 
         self._key_id = key_id
 

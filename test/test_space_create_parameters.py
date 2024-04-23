@@ -41,6 +41,7 @@ class TestSpaceCreateParameters(unittest.TestCase):
             )
         else :
             return SpaceCreateParameters(
+                name = 'My Android Projects',
         )
         """
 

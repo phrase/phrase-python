@@ -49,6 +49,8 @@ class TestDistributionCreateParameters(unittest.TestCase):
             )
         else :
             return DistributionCreateParameters(
+                name = 'My Android Distribution',
+                project_id = 'abcd1234abcd1234abcd1234',
         )
         """
 

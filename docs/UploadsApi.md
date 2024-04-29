@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **upload_create**
-> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys)
+> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_translation_keys=update_translation_keys, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys)
 
 Upload a new file
 
@@ -41,6 +41,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'branch_example' # str | specify the branch to use
     tags = 'tags_example' # str | List of tags separated by comma to be associated with the new keys contained in the upload.
     update_translations = True # bool | Indicates whether existing translations should be updated with the file content.
+    update_translation_keys = True # bool | Pass `false` here to prevent new keys from being created and existing keys updated. (default to True)
     update_descriptions = True # bool | Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
     convert_emoji = True # bool | This option is obsolete. Providing the option will cause a bad request error.
     skip_upload_tags = True # bool | Indicates whether the upload should not create upload tags.
@@ -54,7 +55,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Upload a new file
-        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys)
+        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_translation_keys=update_translation_keys, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UploadsApi->upload_create: %s\n" % e)
@@ -73,6 +74,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| specify the branch to use | [optional] 
  **tags** | **str**| List of tags separated by comma to be associated with the new keys contained in the upload. | [optional] 
  **update_translations** | **bool**| Indicates whether existing translations should be updated with the file content. | [optional] 
+ **update_translation_keys** | **bool**| Pass &#x60;false&#x60; here to prevent new keys from being created and existing keys updated. | [optional] [default to True]
  **update_descriptions** | **bool**| Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions. | [optional] 
  **convert_emoji** | **bool**| This option is obsolete. Providing the option will cause a bad request error. | [optional] 
  **skip_upload_tags** | **bool**| Indicates whether the upload should not create upload tags. | [optional] 

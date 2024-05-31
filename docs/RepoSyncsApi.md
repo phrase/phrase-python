@@ -4,17 +4,17 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**repo_sync_activate**](RepoSyncsApi.md#repo_sync_activate) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/activate | Activate a Repo Sync
-[**repo_sync_deactivate**](RepoSyncsApi.md#repo_sync_deactivate) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/deactivate | Deactivate a Repo Sync
-[**repo_sync_events**](RepoSyncsApi.md#repo_sync_events) | **GET** /accounts/{account_id}/repo_syncs/{repo_sync_id}/events | Repository Syncs History
-[**repo_sync_export**](RepoSyncsApi.md#repo_sync_export) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/export | Export to code repository
-[**repo_sync_import**](RepoSyncsApi.md#repo_sync_import) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/import | Import from code repository
+[**repo_sync_activate**](RepoSyncsApi.md#repo_sync_activate) | **POST** /accounts/{account_id}/repo_syncs/{id}/activate | Activate a Repo Sync
+[**repo_sync_deactivate**](RepoSyncsApi.md#repo_sync_deactivate) | **POST** /accounts/{account_id}/repo_syncs/{id}/deactivate | Deactivate a Repo Sync
+[**repo_sync_events**](RepoSyncsApi.md#repo_sync_events) | **GET** /accounts/{account_id}/repo_syncs/{id}/events | Repository Syncs History
+[**repo_sync_export**](RepoSyncsApi.md#repo_sync_export) | **POST** /accounts/{account_id}/repo_syncs/{id}/export | Export to code repository
+[**repo_sync_import**](RepoSyncsApi.md#repo_sync_import) | **POST** /accounts/{account_id}/repo_syncs/{id}/import | Import from code repository
 [**repo_sync_list**](RepoSyncsApi.md#repo_sync_list) | **GET** /accounts/{account_id}/repo_syncs | Get Repo Syncs
-[**repo_sync_show**](RepoSyncsApi.md#repo_sync_show) | **GET** /accounts/{account_id}/repo_syncs/{repo_sync_id} | Get a single Repo Sync
+[**repo_sync_show**](RepoSyncsApi.md#repo_sync_show) | **GET** /accounts/{account_id}/repo_syncs/{id} | Get a single Repo Sync
 
 
 # **repo_sync_activate**
-> RepoSync repo_sync_activate(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSync repo_sync_activate(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Activate a Repo Sync
 
@@ -38,12 +38,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Activate a Repo Sync
-        api_response = api_instance.repo_sync_activate(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_activate(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_activate: %s\n" % e)
@@ -55,7 +55,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_deactivate**
-> RepoSync repo_sync_deactivate(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSync repo_sync_deactivate(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Deactivate a Repo Sync
 
@@ -106,12 +106,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Deactivate a Repo Sync
-        api_response = api_instance.repo_sync_deactivate(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_deactivate(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_deactivate: %s\n" % e)
@@ -123,7 +123,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_events**
-> List[RepoSyncEvent] repo_sync_events(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+> List[RepoSyncEvent] repo_sync_events(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Repository Syncs History
 
@@ -174,12 +174,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Repository Syncs History
-        api_response = api_instance.repo_sync_events(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_events(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_events: %s\n" % e)
@@ -191,7 +191,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_export**
-> RepoSyncExport repo_sync_export(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSyncExport repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Export to code repository
 
@@ -242,12 +242,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Export to code repository
-        api_response = api_instance.repo_sync_export(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_export: %s\n" % e)
@@ -259,7 +259,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_import**
-> RepoSyncImport repo_sync_import(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSyncImport repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Import from code repository
 
@@ -310,12 +310,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Import from code repository
-        api_response = api_instance.repo_sync_import(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_import: %s\n" % e)
@@ -327,7 +327,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_show**
-> RepoSync repo_sync_show(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSync repo_sync_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Get a single Repo Sync
 
@@ -444,12 +444,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
-    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Get a single Repo Sync
-        api_response = api_instance.repo_sync_show(account_id, repo_sync_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_show(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_show: %s\n" % e)
@@ -461,7 +461,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
- **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type

@@ -331,13 +331,13 @@ Class | Method | HTTP request | Description
 *ReleasesApi* | [**release_show**](docs/ReleasesApi.md#release_show) | **GET** /accounts/{account_id}/distributions/{distribution_id}/releases/{id} | Get a single release
 *ReleasesApi* | [**release_update**](docs/ReleasesApi.md#release_update) | **PATCH** /accounts/{account_id}/distributions/{distribution_id}/releases/{id} | Update a release
 *ReleasesApi* | [**releases_list**](docs/ReleasesApi.md#releases_list) | **GET** /accounts/{account_id}/distributions/{distribution_id}/releases | List releases
-*RepoSyncsApi* | [**repo_sync_activate**](docs/RepoSyncsApi.md#repo_sync_activate) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/activate | Activate a Repo Sync
-*RepoSyncsApi* | [**repo_sync_deactivate**](docs/RepoSyncsApi.md#repo_sync_deactivate) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/deactivate | Deactivate a Repo Sync
-*RepoSyncsApi* | [**repo_sync_events**](docs/RepoSyncsApi.md#repo_sync_events) | **GET** /accounts/{account_id}/repo_syncs/{repo_sync_id}/events | Repository Syncs History
-*RepoSyncsApi* | [**repo_sync_export**](docs/RepoSyncsApi.md#repo_sync_export) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/export | Export to code repository
-*RepoSyncsApi* | [**repo_sync_import**](docs/RepoSyncsApi.md#repo_sync_import) | **POST** /accounts/{account_id}/repo_syncs/{repo_sync_id}/import | Import from code repository
+*RepoSyncsApi* | [**repo_sync_activate**](docs/RepoSyncsApi.md#repo_sync_activate) | **POST** /accounts/{account_id}/repo_syncs/{id}/activate | Activate a Repo Sync
+*RepoSyncsApi* | [**repo_sync_deactivate**](docs/RepoSyncsApi.md#repo_sync_deactivate) | **POST** /accounts/{account_id}/repo_syncs/{id}/deactivate | Deactivate a Repo Sync
+*RepoSyncsApi* | [**repo_sync_events**](docs/RepoSyncsApi.md#repo_sync_events) | **GET** /accounts/{account_id}/repo_syncs/{id}/events | Repository Syncs History
+*RepoSyncsApi* | [**repo_sync_export**](docs/RepoSyncsApi.md#repo_sync_export) | **POST** /accounts/{account_id}/repo_syncs/{id}/export | Export to code repository
+*RepoSyncsApi* | [**repo_sync_import**](docs/RepoSyncsApi.md#repo_sync_import) | **POST** /accounts/{account_id}/repo_syncs/{id}/import | Import from code repository
 *RepoSyncsApi* | [**repo_sync_list**](docs/RepoSyncsApi.md#repo_sync_list) | **GET** /accounts/{account_id}/repo_syncs | Get Repo Syncs
-*RepoSyncsApi* | [**repo_sync_show**](docs/RepoSyncsApi.md#repo_sync_show) | **GET** /accounts/{account_id}/repo_syncs/{repo_sync_id} | Get a single Repo Sync
+*RepoSyncsApi* | [**repo_sync_show**](docs/RepoSyncsApi.md#repo_sync_show) | **GET** /accounts/{account_id}/repo_syncs/{id} | Get a single Repo Sync
 *ReportsApi* | [**report_locales_list**](docs/ReportsApi.md#report_locales_list) | **GET** /projects/{project_id}/report/locales | List Locale Reports
 *ReportsApi* | [**report_show**](docs/ReportsApi.md#report_show) | **GET** /projects/{project_id}/report | Get Project Report
 *ScreenshotMarkersApi* | [**screenshot_marker_create**](docs/ScreenshotMarkersApi.md#screenshot_marker_create) | **POST** /projects/{project_id}/screenshots/{screenshot_id}/markers | Create a screenshot marker

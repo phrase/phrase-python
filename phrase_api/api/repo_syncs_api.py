@@ -35,18 +35,18 @@ class RepoSyncsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def repo_sync_activate(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_activate(self, account_id, id, **kwargs):  # noqa: E501
         """Activate a Repo Sync  # noqa: E501
 
         Activate a deactivated Repo Sync. Active syncs can be used to import and export translations, and imports to Phrase are automatically triggered by pushes to the repository, if configured.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_activate(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_activate(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -60,20 +60,20 @@ class RepoSyncsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.repo_sync_activate_with_http_info(account_id, repo_sync_id, **kwargs)  # noqa: E501
+        return self.repo_sync_activate_with_http_info(account_id, id, **kwargs)  # noqa: E501
 
-    def repo_sync_activate_with_http_info(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_activate_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Activate a Repo Sync  # noqa: E501
 
         Activate a deactivated Repo Sync. Active syncs can be used to import and export translations, and imports to Phrase are automatically triggered by pushes to the repository, if configured.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_activate_with_http_info(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_activate_with_http_info(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -93,7 +93,7 @@ class RepoSyncsApi(object):
 
         all_params = [
             'account_id',
-            'repo_sync_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -117,18 +117,18 @@ class RepoSyncsApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `repo_sync_activate`")  # noqa: E501
-        # verify the required parameter 'repo_sync_id' is set
-        if self.api_client.client_side_validation and ('repo_sync_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['repo_sync_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `repo_sync_id` when calling `repo_sync_activate`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `repo_sync_activate`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'account_id' in local_var_params:
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
-        if 'repo_sync_id' in local_var_params:
-            path_params['repo_sync_id'] = local_var_params['repo_sync_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -148,7 +148,7 @@ class RepoSyncsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/repo_syncs/{repo_sync_id}/activate', 'POST',
+            '/accounts/{account_id}/repo_syncs/{id}/activate', 'POST',
             path_params,
             query_params,
             header_params,
@@ -163,18 +163,18 @@ class RepoSyncsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def repo_sync_deactivate(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_deactivate(self, account_id, id, **kwargs):  # noqa: E501
         """Deactivate a Repo Sync  # noqa: E501
 
         Deactivate an active Repo Sync. Import and export can't be performed on deactivated syncs and the pushes to the repository won't trigger the import to Phrase.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_deactivate(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_deactivate(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -188,20 +188,20 @@ class RepoSyncsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.repo_sync_deactivate_with_http_info(account_id, repo_sync_id, **kwargs)  # noqa: E501
+        return self.repo_sync_deactivate_with_http_info(account_id, id, **kwargs)  # noqa: E501
 
-    def repo_sync_deactivate_with_http_info(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_deactivate_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Deactivate a Repo Sync  # noqa: E501
 
         Deactivate an active Repo Sync. Import and export can't be performed on deactivated syncs and the pushes to the repository won't trigger the import to Phrase.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_deactivate_with_http_info(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_deactivate_with_http_info(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -221,7 +221,7 @@ class RepoSyncsApi(object):
 
         all_params = [
             'account_id',
-            'repo_sync_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -245,18 +245,18 @@ class RepoSyncsApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `repo_sync_deactivate`")  # noqa: E501
-        # verify the required parameter 'repo_sync_id' is set
-        if self.api_client.client_side_validation and ('repo_sync_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['repo_sync_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `repo_sync_id` when calling `repo_sync_deactivate`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `repo_sync_deactivate`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'account_id' in local_var_params:
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
-        if 'repo_sync_id' in local_var_params:
-            path_params['repo_sync_id'] = local_var_params['repo_sync_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -276,7 +276,7 @@ class RepoSyncsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/repo_syncs/{repo_sync_id}/deactivate', 'POST',
+            '/accounts/{account_id}/repo_syncs/{id}/deactivate', 'POST',
             path_params,
             query_params,
             header_params,
@@ -291,18 +291,18 @@ class RepoSyncsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def repo_sync_events(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_events(self, account_id, id, **kwargs):  # noqa: E501
         """Repository Syncs History  # noqa: E501
 
         Get the history of a single Repo Sync. The history includes all imports and exports performed by the Repo Sync.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_events(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_events(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -316,20 +316,20 @@ class RepoSyncsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.repo_sync_events_with_http_info(account_id, repo_sync_id, **kwargs)  # noqa: E501
+        return self.repo_sync_events_with_http_info(account_id, id, **kwargs)  # noqa: E501
 
-    def repo_sync_events_with_http_info(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_events_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Repository Syncs History  # noqa: E501
 
         Get the history of a single Repo Sync. The history includes all imports and exports performed by the Repo Sync.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_events_with_http_info(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_events_with_http_info(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -349,7 +349,7 @@ class RepoSyncsApi(object):
 
         all_params = [
             'account_id',
-            'repo_sync_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -373,18 +373,18 @@ class RepoSyncsApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `repo_sync_events`")  # noqa: E501
-        # verify the required parameter 'repo_sync_id' is set
-        if self.api_client.client_side_validation and ('repo_sync_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['repo_sync_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `repo_sync_id` when calling `repo_sync_events`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `repo_sync_events`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'account_id' in local_var_params:
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
-        if 'repo_sync_id' in local_var_params:
-            path_params['repo_sync_id'] = local_var_params['repo_sync_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -404,7 +404,7 @@ class RepoSyncsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/repo_syncs/{repo_sync_id}/events', 'GET',
+            '/accounts/{account_id}/repo_syncs/{id}/events', 'GET',
             path_params,
             query_params,
             header_params,
@@ -419,18 +419,18 @@ class RepoSyncsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def repo_sync_export(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_export(self, account_id, id, **kwargs):  # noqa: E501
         """Export to code repository  # noqa: E501
 
         > Beta: this feature will change in the future.  Export translations from Phrase Strings to repository provider according to the .phrase.yml file within the code repository.  *Export is done asynchronously and may take several seconds depending on the project size.*  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_export(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_export(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -444,20 +444,20 @@ class RepoSyncsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.repo_sync_export_with_http_info(account_id, repo_sync_id, **kwargs)  # noqa: E501
+        return self.repo_sync_export_with_http_info(account_id, id, **kwargs)  # noqa: E501
 
-    def repo_sync_export_with_http_info(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_export_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Export to code repository  # noqa: E501
 
         > Beta: this feature will change in the future.  Export translations from Phrase Strings to repository provider according to the .phrase.yml file within the code repository.  *Export is done asynchronously and may take several seconds depending on the project size.*  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_export_with_http_info(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_export_with_http_info(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -477,7 +477,7 @@ class RepoSyncsApi(object):
 
         all_params = [
             'account_id',
-            'repo_sync_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -501,18 +501,18 @@ class RepoSyncsApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `repo_sync_export`")  # noqa: E501
-        # verify the required parameter 'repo_sync_id' is set
-        if self.api_client.client_side_validation and ('repo_sync_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['repo_sync_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `repo_sync_id` when calling `repo_sync_export`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `repo_sync_export`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'account_id' in local_var_params:
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
-        if 'repo_sync_id' in local_var_params:
-            path_params['repo_sync_id'] = local_var_params['repo_sync_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -532,7 +532,7 @@ class RepoSyncsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/repo_syncs/{repo_sync_id}/export', 'POST',
+            '/accounts/{account_id}/repo_syncs/{id}/export', 'POST',
             path_params,
             query_params,
             header_params,
@@ -547,18 +547,18 @@ class RepoSyncsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def repo_sync_import(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_import(self, account_id, id, **kwargs):  # noqa: E501
         """Import from code repository  # noqa: E501
 
         > Beta: this feature will change in the future.  Import translations from repository provider to Phrase Strings according to the .phrase.yml file within the code repository.  _Import is done asynchronously and may take several seconds depending on the project size._  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_import(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_import(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -572,20 +572,20 @@ class RepoSyncsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.repo_sync_import_with_http_info(account_id, repo_sync_id, **kwargs)  # noqa: E501
+        return self.repo_sync_import_with_http_info(account_id, id, **kwargs)  # noqa: E501
 
-    def repo_sync_import_with_http_info(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_import_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Import from code repository  # noqa: E501
 
         > Beta: this feature will change in the future.  Import translations from repository provider to Phrase Strings according to the .phrase.yml file within the code repository.  _Import is done asynchronously and may take several seconds depending on the project size._  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_import_with_http_info(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_import_with_http_info(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -605,7 +605,7 @@ class RepoSyncsApi(object):
 
         all_params = [
             'account_id',
-            'repo_sync_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -629,18 +629,18 @@ class RepoSyncsApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `repo_sync_import`")  # noqa: E501
-        # verify the required parameter 'repo_sync_id' is set
-        if self.api_client.client_side_validation and ('repo_sync_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['repo_sync_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `repo_sync_id` when calling `repo_sync_import`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `repo_sync_import`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'account_id' in local_var_params:
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
-        if 'repo_sync_id' in local_var_params:
-            path_params['repo_sync_id'] = local_var_params['repo_sync_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -660,7 +660,7 @@ class RepoSyncsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/repo_syncs/{repo_sync_id}/import', 'POST',
+            '/accounts/{account_id}/repo_syncs/{id}/import', 'POST',
             path_params,
             query_params,
             header_params,
@@ -794,18 +794,18 @@ class RepoSyncsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def repo_sync_show(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_show(self, account_id, id, **kwargs):  # noqa: E501
         """Get a single Repo Sync  # noqa: E501
 
         Shows a single Repo Sync setting.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_show(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_show(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -819,20 +819,20 @@ class RepoSyncsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.repo_sync_show_with_http_info(account_id, repo_sync_id, **kwargs)  # noqa: E501
+        return self.repo_sync_show_with_http_info(account_id, id, **kwargs)  # noqa: E501
 
-    def repo_sync_show_with_http_info(self, account_id, repo_sync_id, **kwargs):  # noqa: E501
+    def repo_sync_show_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Get a single Repo Sync  # noqa: E501
 
         Shows a single Repo Sync setting.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repo_sync_show_with_http_info(account_id, repo_sync_id, async_req=True)
+        >>> thread = api.repo_sync_show_with_http_info(account_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str account_id: Account ID (required)
-        :param str repo_sync_id: Repo Sync ID (required)
+        :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -852,7 +852,7 @@ class RepoSyncsApi(object):
 
         all_params = [
             'account_id',
-            'repo_sync_id',
+            'id',
             'x_phrase_app_otp'
         ]
         all_params.extend(
@@ -876,18 +876,18 @@ class RepoSyncsApi(object):
         if self.api_client.client_side_validation and ('account_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['account_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `account_id` when calling `repo_sync_show`")  # noqa: E501
-        # verify the required parameter 'repo_sync_id' is set
-        if self.api_client.client_side_validation and ('repo_sync_id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['repo_sync_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `repo_sync_id` when calling `repo_sync_show`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `repo_sync_show`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'account_id' in local_var_params:
             path_params['account_id'] = local_var_params['account_id']  # noqa: E501
-        if 'repo_sync_id' in local_var_params:
-            path_params['repo_sync_id'] = local_var_params['repo_sync_id']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -907,7 +907,7 @@ class RepoSyncsApi(object):
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/accounts/{account_id}/repo_syncs/{repo_sync_id}', 'GET',
+            '/accounts/{account_id}/repo_syncs/{id}', 'GET',
             path_params,
             query_params,
             header_params,

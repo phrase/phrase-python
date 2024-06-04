@@ -33,10 +33,10 @@ class LocaleReport(object):
     """
     openapi_types = {
         'keys_count': 'int',
-        'translated_translations_percentage': 'int',
-        'unverified_translations_percentage': 'int',
-        'reviewed_translations_percentage': 'int',
-        'untranslated_keys_percentage': 'int',
+        'translated_translations_percentage': 'float',
+        'unverified_translations_percentage': 'float',
+        'reviewed_translations_percentage': 'float',
+        'untranslated_keys_percentage': 'float',
         'completed_translations_count': 'int',
         'untranslated_keys_count': 'int',
         'unverified_translations_count': 'int',
@@ -143,7 +143,7 @@ class LocaleReport(object):
 
 
         :return: The translated_translations_percentage of this LocaleReport.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._translated_translations_percentage
 
@@ -153,7 +153,7 @@ class LocaleReport(object):
 
 
         :param translated_translations_percentage: The translated_translations_percentage of this LocaleReport.  # noqa: E501
-        :type: int
+        :type: float
         """
 
         self._translated_translations_percentage = translated_translations_percentage
@@ -164,7 +164,7 @@ class LocaleReport(object):
 
 
         :return: The unverified_translations_percentage of this LocaleReport.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unverified_translations_percentage
 
@@ -174,7 +174,7 @@ class LocaleReport(object):
 
 
         :param unverified_translations_percentage: The unverified_translations_percentage of this LocaleReport.  # noqa: E501
-        :type: int
+        :type: float
         """
 
         self._unverified_translations_percentage = unverified_translations_percentage
@@ -185,7 +185,7 @@ class LocaleReport(object):
 
 
         :return: The reviewed_translations_percentage of this LocaleReport.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._reviewed_translations_percentage
 
@@ -195,7 +195,7 @@ class LocaleReport(object):
 
 
         :param reviewed_translations_percentage: The reviewed_translations_percentage of this LocaleReport.  # noqa: E501
-        :type: int
+        :type: float
         """
 
         self._reviewed_translations_percentage = reviewed_translations_percentage
@@ -206,7 +206,7 @@ class LocaleReport(object):
 
 
         :return: The untranslated_keys_percentage of this LocaleReport.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._untranslated_keys_percentage
 
@@ -216,7 +216,7 @@ class LocaleReport(object):
 
 
         :param untranslated_keys_percentage: The untranslated_keys_percentage of this LocaleReport.  # noqa: E501
-        :type: int
+        :type: float
         """
 
         self._untranslated_keys_percentage = untranslated_keys_percentage

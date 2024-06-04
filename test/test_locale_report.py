@@ -38,10 +38,10 @@ class TestLocaleReport(unittest.TestCase):
         if include_optional :
             return LocaleReport(
                 keys_count = 56, 
-                translated_translations_percentage = 56, 
-                unverified_translations_percentage = 56, 
-                reviewed_translations_percentage = 56, 
-                untranslated_keys_percentage = 56, 
+                translated_translations_percentage = 1.337, 
+                unverified_translations_percentage = 1.337, 
+                reviewed_translations_percentage = 1.337, 
+                untranslated_keys_percentage = 1.337, 
                 completed_translations_count = 56, 
                 untranslated_keys_count = 56, 
                 unverified_translations_count = 56, 

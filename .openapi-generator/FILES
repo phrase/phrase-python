@@ -189,8 +189,12 @@ docs/ProjectsQualityPerformanceScoreRequest.md
 docs/QualityPerformanceScoreApi.md
 docs/Release.md
 docs/ReleaseCreateParameters.md
+docs/ReleaseCreateParameters1.md
 docs/ReleasePreview.md
+docs/ReleaseTrigger.md
+docs/ReleaseTriggersApi.md
 docs/ReleaseUpdateParameters.md
+docs/ReleaseUpdateParameters1.md
 docs/ReleasesApi.md
 docs/RepliesListParameters.md
 docs/RepoSync.md
@@ -316,6 +320,7 @@ phrase_api/api/organization_job_template_locales_api.py
 phrase_api/api/organization_job_templates_api.py
 phrase_api/api/projects_api.py
 phrase_api/api/quality_performance_score_api.py
+phrase_api/api/release_triggers_api.py
 phrase_api/api/releases_api.py
 phrase_api/api/repo_syncs_api.py
 phrase_api/api/reports_api.py
@@ -486,8 +491,11 @@ phrase_api/models/projects_quality_performance_score200_response_any_of_errors_i
 phrase_api/models/projects_quality_performance_score_request.py
 phrase_api/models/release.py
 phrase_api/models/release_create_parameters.py
+phrase_api/models/release_create_parameters1.py
 phrase_api/models/release_preview.py
+phrase_api/models/release_trigger.py
 phrase_api/models/release_update_parameters.py
+phrase_api/models/release_update_parameters1.py
 phrase_api/models/replies_list_parameters.py
 phrase_api/models/repo_sync.py
 phrase_api/models/repo_sync_event.py
@@ -748,8 +756,12 @@ test/test_projects_quality_performance_score_request.py
 test/test_quality_performance_score_api.py
 test/test_release.py
 test/test_release_create_parameters.py
+test/test_release_create_parameters1.py
 test/test_release_preview.py
+test/test_release_trigger.py
+test/test_release_triggers_api.py
 test/test_release_update_parameters.py
+test/test_release_update_parameters1.py
 test/test_releases_api.py
 test/test_replies_list_parameters.py
 test/test_repo_sync.py

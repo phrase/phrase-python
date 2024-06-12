@@ -53,6 +53,7 @@ from phrase_api.api.organization_job_template_locales_api import OrganizationJob
 from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.quality_performance_score_api import QualityPerformanceScoreApi
+from phrase_api.api.release_triggers_api import ReleaseTriggersApi
 from phrase_api.api.releases_api import ReleasesApi
 from phrase_api.api.repo_syncs_api import RepoSyncsApi
 from phrase_api.api.reports_api import ReportsApi
@@ -228,8 +229,11 @@ from phrase_api.models.projects_quality_performance_score200_response_any_of_err
 from phrase_api.models.projects_quality_performance_score_request import ProjectsQualityPerformanceScoreRequest
 from phrase_api.models.release import Release
 from phrase_api.models.release_create_parameters import ReleaseCreateParameters
+from phrase_api.models.release_create_parameters1 import ReleaseCreateParameters1
 from phrase_api.models.release_preview import ReleasePreview
+from phrase_api.models.release_trigger import ReleaseTrigger
 from phrase_api.models.release_update_parameters import ReleaseUpdateParameters
+from phrase_api.models.release_update_parameters1 import ReleaseUpdateParameters1
 from phrase_api.models.replies_list_parameters import RepliesListParameters
 from phrase_api.models.repo_sync import RepoSync
 from phrase_api.models.repo_sync_event import RepoSyncEvent

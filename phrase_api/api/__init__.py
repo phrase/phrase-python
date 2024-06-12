@@ -40,6 +40,7 @@ from phrase_api.api.organization_job_template_locales_api import OrganizationJob
 from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.quality_performance_score_api import QualityPerformanceScoreApi
+from phrase_api.api.release_triggers_api import ReleaseTriggersApi
 from phrase_api.api.releases_api import ReleasesApi
 from phrase_api.api.repo_syncs_api import RepoSyncsApi
 from phrase_api.api.reports_api import ReportsApi

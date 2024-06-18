@@ -39,6 +39,8 @@ class TestReleaseUpdateParameters(unittest.TestCase):
             return ReleaseUpdateParameters(
                 description = 'My first Release', 
                 platforms = ["android","ios"], 
+                app_min_version = '2.5.0', 
+                app_max_version = '3.0.0', 
                 branch = 'my-feature-branch'
             )
         else :

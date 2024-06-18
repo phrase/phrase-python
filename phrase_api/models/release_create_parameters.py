@@ -36,6 +36,8 @@ class ReleaseCreateParameters(object):
         'platforms': 'List[str]',
         'locale_ids': 'List[str]',
         'tags': 'List[str]',
+        'app_min_version': 'str',
+        'app_max_version': 'str',
         'branch': 'str'
     }
 
@@ -44,10 +46,12 @@ class ReleaseCreateParameters(object):
         'platforms': 'platforms',
         'locale_ids': 'locale_ids',
         'tags': 'tags',
+        'app_min_version': 'app_min_version',
+        'app_max_version': 'app_max_version',
         'branch': 'branch'
     }
 
-    def __init__(self, description=None, platforms=None, locale_ids=None, tags=None, branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, description=None, platforms=None, locale_ids=None, tags=None, app_min_version=None, app_max_version=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """ReleaseCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +61,8 @@ class ReleaseCreateParameters(object):
         self._platforms = None
         self._locale_ids = None
         self._tags = None
+        self._app_min_version = None
+        self._app_max_version = None
         self._branch = None
         self.discriminator = None
 
@@ -68,6 +74,10 @@ class ReleaseCreateParameters(object):
             self.locale_ids = locale_ids
         if tags is not None:
             self.tags = tags
+        if app_min_version is not None:
+            self.app_min_version = app_min_version
+        if app_max_version is not None:
+            self.app_max_version = app_max_version
         if branch is not None:
             self.branch = branch
 
@@ -162,6 +172,52 @@ class ReleaseCreateParameters(object):
         """
 
         self._tags = tags
+
+    @property
+    def app_min_version(self):
+        """Gets the app_min_version of this ReleaseCreateParameters.  # noqa: E501
+
+        Minimum version of the app that the release supports in semver format  # noqa: E501
+
+        :return: The app_min_version of this ReleaseCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_min_version
+
+    @app_min_version.setter
+    def app_min_version(self, app_min_version):
+        """Sets the app_min_version of this ReleaseCreateParameters.
+
+        Minimum version of the app that the release supports in semver format  # noqa: E501
+
+        :param app_min_version: The app_min_version of this ReleaseCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._app_min_version = app_min_version
+
+    @property
+    def app_max_version(self):
+        """Gets the app_max_version of this ReleaseCreateParameters.  # noqa: E501
+
+        Maximum version of the app that the release supports in semver format  # noqa: E501
+
+        :return: The app_max_version of this ReleaseCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_max_version
+
+    @app_max_version.setter
+    def app_max_version(self, app_max_version):
+        """Sets the app_max_version of this ReleaseCreateParameters.
+
+        Maximum version of the app that the release supports in semver format  # noqa: E501
+
+        :param app_max_version: The app_max_version of this ReleaseCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._app_max_version = app_max_version
 
     @property
     def branch(self):

@@ -41,6 +41,8 @@ class TestReleaseCreateParameters(unittest.TestCase):
                 platforms = ["android","ios"], 
                 locale_ids = ["abcd1234cdef1234abcd1234cdef1234","fff565db236400772368235db2c6117e"], 
                 tags = ["android","feature1"], 
+                app_min_version = '2.5.0', 
+                app_max_version = '3.0.0', 
                 branch = 'my-feature-branch'
             )
         else :

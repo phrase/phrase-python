@@ -122,6 +122,10 @@ from phrase_api.models.keys_untag_parameters import KeysUntagParameters
 from phrase_api.models.locale import Locale
 from phrase_api.models.locale_create_parameters import LocaleCreateParameters
 from phrase_api.models.locale_details import LocaleDetails
+from phrase_api.models.locale_download import LocaleDownload
+from phrase_api.models.locale_download_create_parameters import LocaleDownloadCreateParameters
+from phrase_api.models.locale_download_params import LocaleDownloadParams
+from phrase_api.models.locale_download_result import LocaleDownloadResult
 from phrase_api.models.locale_preview import LocalePreview
 from phrase_api.models.locale_preview1 import LocalePreview1
 from phrase_api.models.locale_report import LocaleReport

@@ -141,6 +141,11 @@ docs/LinkedKeysApi.md
 docs/Locale.md
 docs/LocaleCreateParameters.md
 docs/LocaleDetails.md
+docs/LocaleDownload.md
+docs/LocaleDownloadCreateParameters.md
+docs/LocaleDownloadParams.md
+docs/LocaleDownloadResult.md
+docs/LocaleDownloadsApi.md
 docs/LocalePreview.md
 docs/LocalePreview1.md
 docs/LocaleReport.md
@@ -311,6 +316,7 @@ phrase_api/api/jobs_api.py
 phrase_api/api/keys_api.py
 phrase_api/api/keys_figma_attachments_api.py
 phrase_api/api/linked_keys_api.py
+phrase_api/api/locale_downloads_api.py
 phrase_api/api/locales_api.py
 phrase_api/api/members_api.py
 phrase_api/api/notification_groups_api.py
@@ -452,6 +458,10 @@ phrase_api/models/keys_untag_parameters.py
 phrase_api/models/locale.py
 phrase_api/models/locale_create_parameters.py
 phrase_api/models/locale_details.py
+phrase_api/models/locale_download.py
+phrase_api/models/locale_download_create_parameters.py
+phrase_api/models/locale_download_params.py
+phrase_api/models/locale_download_result.py
 phrase_api/models/locale_preview.py
 phrase_api/models/locale_preview1.py
 phrase_api/models/locale_report.py
@@ -709,6 +719,11 @@ test/test_linked_keys_api.py
 test/test_locale.py
 test/test_locale_create_parameters.py
 test/test_locale_details.py
+test/test_locale_download.py
+test/test_locale_download_create_parameters.py
+test/test_locale_download_params.py
+test/test_locale_download_result.py
+test/test_locale_downloads_api.py
 test/test_locale_preview.py
 test/test_locale_preview1.py
 test/test_locale_report.py

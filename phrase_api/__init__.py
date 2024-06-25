@@ -44,6 +44,7 @@ from phrase_api.api.jobs_api import JobsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.keys_figma_attachments_api import KeysFigmaAttachmentsApi
 from phrase_api.api.linked_keys_api import LinkedKeysApi
+from phrase_api.api.locale_downloads_api import LocaleDownloadsApi
 from phrase_api.api.locales_api import LocalesApi
 from phrase_api.api.members_api import MembersApi
 from phrase_api.api.notification_groups_api import NotificationGroupsApi
@@ -190,6 +191,10 @@ from phrase_api.models.keys_untag_parameters import KeysUntagParameters
 from phrase_api.models.locale import Locale
 from phrase_api.models.locale_create_parameters import LocaleCreateParameters
 from phrase_api.models.locale_details import LocaleDetails
+from phrase_api.models.locale_download import LocaleDownload
+from phrase_api.models.locale_download_create_parameters import LocaleDownloadCreateParameters
+from phrase_api.models.locale_download_params import LocaleDownloadParams
+from phrase_api.models.locale_download_result import LocaleDownloadResult
 from phrase_api.models.locale_preview import LocalePreview
 from phrase_api.models.locale_preview1 import LocalePreview1
 from phrase_api.models.locale_report import LocaleReport

@@ -32,6 +32,7 @@ class RepoSyncEvent(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'id': 'str',
         'event_type': 'str',
         'created_at': 'datetime',
         'status': 'str',
@@ -41,6 +42,7 @@ class RepoSyncEvent(object):
     }
 
     attribute_map = {
+        'id': 'id',
         'event_type': 'event_type',
         'created_at': 'created_at',
         'status': 'status',
@@ -49,12 +51,13 @@ class RepoSyncEvent(object):
         'errors': 'errors'
     }
 
-    def __init__(self, event_type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, event_type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncEvent - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._id = None
         self._event_type = None
         self._created_at = None
         self._status = None
@@ -63,6 +66,8 @@ class RepoSyncEvent(object):
         self._errors = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         if event_type is not None:
             self.event_type = event_type
         if created_at is not None:
@@ -75,6 +80,27 @@ class RepoSyncEvent(object):
             self.auto_import = auto_import
         if errors is not None:
             self.errors = errors
+
+    @property
+    def id(self):
+        """Gets the id of this RepoSyncEvent.  # noqa: E501
+
+
+        :return: The id of this RepoSyncEvent.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this RepoSyncEvent.
+
+
+        :param id: The id of this RepoSyncEvent.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def event_type(self):

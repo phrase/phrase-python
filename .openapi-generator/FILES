@@ -205,8 +205,6 @@ docs/RepliesListParameters.md
 docs/RepoSync.md
 docs/RepoSyncEvent.md
 docs/RepoSyncEventErrorsInner.md
-docs/RepoSyncExport.md
-docs/RepoSyncImport.md
 docs/RepoSyncsApi.md
 docs/ReportsApi.md
 docs/Screenshot.md
@@ -510,8 +508,6 @@ phrase_api/models/replies_list_parameters.py
 phrase_api/models/repo_sync.py
 phrase_api/models/repo_sync_event.py
 phrase_api/models/repo_sync_event_errors_inner.py
-phrase_api/models/repo_sync_export.py
-phrase_api/models/repo_sync_import.py
 phrase_api/models/screenshot.py
 phrase_api/models/screenshot_marker.py
 phrase_api/models/screenshot_marker_create_parameters.py
@@ -782,8 +778,6 @@ test/test_replies_list_parameters.py
 test/test_repo_sync.py
 test/test_repo_sync_event.py
 test/test_repo_sync_event_errors_inner.py
-test/test_repo_sync_export.py
-test/test_repo_sync_import.py
 test/test_repo_syncs_api.py
 test/test_reports_api.py
 test/test_screenshot.py

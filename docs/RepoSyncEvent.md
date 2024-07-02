@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **str** |  | [optional] 
 **event_type** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **status** | **str** |  | [optional] 

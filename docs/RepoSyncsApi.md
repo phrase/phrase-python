@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**repo_sync_activate**](RepoSyncsApi.md#repo_sync_activate) | **POST** /accounts/{account_id}/repo_syncs/{id}/activate | Activate a Repo Sync
 [**repo_sync_deactivate**](RepoSyncsApi.md#repo_sync_deactivate) | **POST** /accounts/{account_id}/repo_syncs/{id}/deactivate | Deactivate a Repo Sync
+[**repo_sync_event_show**](RepoSyncsApi.md#repo_sync_event_show) | **GET** /accounts/{account_id}/repo_syncs/{repo_sync_id}/events/{id} | Get a single Repo Sync Event
 [**repo_sync_events**](RepoSyncsApi.md#repo_sync_events) | **GET** /accounts/{account_id}/repo_syncs/{id}/events | Repository Syncs History
 [**repo_sync_export**](RepoSyncsApi.md#repo_sync_export) | **POST** /accounts/{account_id}/repo_syncs/{id}/export | Export to code repository
 [**repo_sync_import**](RepoSyncsApi.md#repo_sync_import) | **POST** /accounts/{account_id}/repo_syncs/{id}/import | Import from code repository
@@ -149,6 +150,76 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **repo_sync_event_show**
+> RepoSyncEvent repo_sync_event_show(account_id, repo_sync_id, id, x_phrase_app_otp=x_phrase_app_otp)
+
+Get a single Repo Sync Event
+
+Shows a single Repo Sync event.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.RepoSyncsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID (required)
+    repo_sync_id = 'repo_sync_id_example' # str | Repo Sync ID (required)
+    id = 'id_example' # str | ID (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+
+    try:
+        # Get a single Repo Sync Event
+        api_response = api_instance.repo_sync_event_show(account_id, repo_sync_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling RepoSyncsApi->repo_sync_event_show: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **repo_sync_id** | **str**| Repo Sync ID | 
+ **id** | **str**| ID | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**RepoSyncEvent**](RepoSyncEvent.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **repo_sync_events**
 > List[RepoSyncEvent] repo_sync_events(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
@@ -218,7 +289,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_export**
-> RepoSyncExport repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSyncEvent repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Export to code repository
 
@@ -264,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RepoSyncExport**](RepoSyncExport.md)
+[**RepoSyncEvent**](RepoSyncEvent.md)
 
 ### Authorization
 
@@ -286,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_import**
-> RepoSyncImport repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSyncEvent repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
 
 Import from code repository
 
@@ -332,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RepoSyncImport**](RepoSyncImport.md)
+[**RepoSyncEvent**](RepoSyncEvent.md)
 
 ### Authorization
 

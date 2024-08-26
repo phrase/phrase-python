@@ -54,6 +54,7 @@ class UploadsApi(object):
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
         :param bool update_translation_keys: Pass `false` here to prevent new keys from being created and existing keys updated.
+        :param bool update_translations_on_source_match: Update target translations only if the source translations of the uploaded multilingual file match the stored translations.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
         :param bool convert_emoji: This option is obsolete. Providing the option will cause a bad request error.
         :param bool skip_upload_tags: Indicates whether the upload should not create upload tags.
@@ -97,6 +98,7 @@ class UploadsApi(object):
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
         :param bool update_translation_keys: Pass `false` here to prevent new keys from being created and existing keys updated.
+        :param bool update_translations_on_source_match: Update target translations only if the source translations of the uploaded multilingual file match the stored translations.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
         :param bool convert_emoji: This option is obsolete. Providing the option will cause a bad request error.
         :param bool skip_upload_tags: Indicates whether the upload should not create upload tags.
@@ -133,6 +135,7 @@ class UploadsApi(object):
             'tags',
             'update_translations',
             'update_translation_keys',
+            'update_translations_on_source_match',
             'update_descriptions',
             'convert_emoji',
             'skip_upload_tags',
@@ -206,6 +209,8 @@ class UploadsApi(object):
             form_params.append(('update_translations', local_var_params['update_translations']))  # noqa: E501
         if 'update_translation_keys' in local_var_params:
             form_params.append(('update_translation_keys', local_var_params['update_translation_keys']))  # noqa: E501
+        if 'update_translations_on_source_match' in local_var_params:
+            form_params.append(('update_translations_on_source_match', local_var_params['update_translations_on_source_match']))  # noqa: E501
         if 'update_descriptions' in local_var_params:
             form_params.append(('update_descriptions', local_var_params['update_descriptions']))  # noqa: E501
         if 'convert_emoji' in local_var_params:

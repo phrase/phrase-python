@@ -48,6 +48,7 @@ class TestLocaleDownloadCreateParameters(unittest.TestCase):
                 encoding = 'UTF-8', 
                 include_unverified_translations = True, 
                 use_last_reviewed_version = True, 
+                locale_ids = ["de","en"], 
                 fallback_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 source_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 custom_metadata_filters = None

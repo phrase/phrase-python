@@ -43,6 +43,7 @@ class LocaleDownloadCreateParameters(object):
         'encoding': 'str',
         'include_unverified_translations': 'bool',
         'use_last_reviewed_version': 'bool',
+        'locale_ids': 'List[str]',
         'fallback_locale_id': 'str',
         'source_locale_id': 'str',
         'custom_metadata_filters': 'object'
@@ -60,12 +61,13 @@ class LocaleDownloadCreateParameters(object):
         'encoding': 'encoding',
         'include_unverified_translations': 'include_unverified_translations',
         'use_last_reviewed_version': 'use_last_reviewed_version',
+        'locale_ids': 'locale_ids',
         'fallback_locale_id': 'fallback_locale_id',
         'source_locale_id': 'source_locale_id',
         'custom_metadata_filters': 'custom_metadata_filters'
     }
 
-    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, fallback_locale_id=None, source_locale_id=None, custom_metadata_filters=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, source_locale_id=None, custom_metadata_filters=None, local_vars_configuration=None):  # noqa: E501
         """LocaleDownloadCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -82,6 +84,7 @@ class LocaleDownloadCreateParameters(object):
         self._encoding = None
         self._include_unverified_translations = None
         self._use_last_reviewed_version = None
+        self._locale_ids = None
         self._fallback_locale_id = None
         self._source_locale_id = None
         self._custom_metadata_filters = None
@@ -108,6 +111,8 @@ class LocaleDownloadCreateParameters(object):
             self.include_unverified_translations = include_unverified_translations
         if use_last_reviewed_version is not None:
             self.use_last_reviewed_version = use_last_reviewed_version
+        if locale_ids is not None:
+            self.locale_ids = locale_ids
         if fallback_locale_id is not None:
             self.fallback_locale_id = fallback_locale_id
         if source_locale_id is not None:
@@ -369,6 +374,29 @@ class LocaleDownloadCreateParameters(object):
         """
 
         self._use_last_reviewed_version = use_last_reviewed_version
+
+    @property
+    def locale_ids(self):
+        """Gets the locale_ids of this LocaleDownloadCreateParameters.  # noqa: E501
+
+        Locale IDs or locale names  # noqa: E501
+
+        :return: The locale_ids of this LocaleDownloadCreateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._locale_ids
+
+    @locale_ids.setter
+    def locale_ids(self, locale_ids):
+        """Sets the locale_ids of this LocaleDownloadCreateParameters.
+
+        Locale IDs or locale names  # noqa: E501
+
+        :param locale_ids: The locale_ids of this LocaleDownloadCreateParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._locale_ids = locale_ids
 
     @property
     def fallback_locale_id(self):

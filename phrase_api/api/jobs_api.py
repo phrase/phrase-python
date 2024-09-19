@@ -592,7 +592,7 @@ class JobsApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param List[str] translation_key_ids: ids of keys that should added to the job
+        :param List[str] translation_key_ids: ids of keys that should be removed from the job
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -621,7 +621,7 @@ class JobsApi(object):
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param List[str] translation_key_ids: ids of keys that should added to the job
+        :param List[str] translation_key_ids: ids of keys that should be removed from the job
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **point_of_contact** | **str** | (Optional) User ID of the point of contact for the project. | [optional] 
 **source_project_id** | **str** | When a source project ID is given, a clone of that project will be created, including all locales, keys and translations as well as the main project settings if they are not defined otherwise through the params. | [optional] 
 **workflow** | **str** | (Optional) Review Workflow. \&quot;simple\&quot; / \&quot;review\&quot;. &lt;a href&#x3D;\&quot;https://support.phrase.com/hc/en-us/articles/5784094755484\&quot;&gt;Read more&lt;/a&gt; | [optional] 
-**machine_translation_enabled** | **bool** | (Optional) Enable machine translation support in the project. Required for Autopilot and Smart Suggest | [optional] 
+**machine_translation_enabled** | **bool** | (Optional) Enable machine translation support in the project. Required for Pre-Translation | [optional] 
 **enable_branching** | **bool** | (Optional) Enable branching in the project | [optional] 
 **protect_master_branch** | **bool** | (Optional) Protect the master branch in project where branching is enabled | [optional] 
 **enable_all_data_type_translation_keys_for_translators** | **bool** | (Optional) Otherwise, translators are not allowed to edit translations other than strings | [optional] 
@@ -26,9 +26,6 @@ Name | Type | Description | Notes
 **autotranslate_mark_as_unverified** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
 **autotranslate_use_machine_translation** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
 **autotranslate_use_translation_memory** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
-**smart_suggest_enabled** | **bool** | (Optional) Smart Suggest, requires machine_translation_enabled | [optional] 
-**smart_suggest_use_glossary** | **bool** | (Optional) Requires smart_suggest_enabled to be true | [optional] 
-**smart_suggest_use_machine_translation** | **bool** | (Optional) Requires smart_suggest_enabled to be true | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

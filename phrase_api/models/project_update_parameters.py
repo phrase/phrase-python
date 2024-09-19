@@ -53,10 +53,7 @@ class ProjectUpdateParameters(object):
         'autotranslate_check_new_locales': 'bool',
         'autotranslate_mark_as_unverified': 'bool',
         'autotranslate_use_machine_translation': 'bool',
-        'autotranslate_use_translation_memory': 'bool',
-        'smart_suggest_enabled': 'bool',
-        'smart_suggest_use_glossary': 'bool',
-        'smart_suggest_use_machine_translation': 'bool'
+        'autotranslate_use_translation_memory': 'bool'
     }
 
     attribute_map = {
@@ -81,13 +78,10 @@ class ProjectUpdateParameters(object):
         'autotranslate_check_new_locales': 'autotranslate_check_new_locales',
         'autotranslate_mark_as_unverified': 'autotranslate_mark_as_unverified',
         'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
-        'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
-        'smart_suggest_enabled': 'smart_suggest_enabled',
-        'smart_suggest_use_glossary': 'smart_suggest_use_glossary',
-        'smart_suggest_use_machine_translation': 'smart_suggest_use_machine_translation'
+        'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory'
     }
 
-    def __init__(self, account_id=None, name=None, point_of_contact=None, main_format=None, media=None, shares_translation_memory=None, project_image=None, remove_project_image=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, account_id=None, name=None, point_of_contact=None, main_format=None, media=None, shares_translation_memory=None, project_image=None, remove_project_image=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, local_vars_configuration=None):  # noqa: E501
         """ProjectUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -115,9 +109,6 @@ class ProjectUpdateParameters(object):
         self._autotranslate_mark_as_unverified = None
         self._autotranslate_use_machine_translation = None
         self._autotranslate_use_translation_memory = None
-        self._smart_suggest_enabled = None
-        self._smart_suggest_use_glossary = None
-        self._smart_suggest_use_machine_translation = None
         self.discriminator = None
 
         if account_id is not None:
@@ -164,12 +155,6 @@ class ProjectUpdateParameters(object):
             self.autotranslate_use_machine_translation = autotranslate_use_machine_translation
         if autotranslate_use_translation_memory is not None:
             self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
-        if smart_suggest_enabled is not None:
-            self.smart_suggest_enabled = smart_suggest_enabled
-        if smart_suggest_use_glossary is not None:
-            self.smart_suggest_use_glossary = smart_suggest_use_glossary
-        if smart_suggest_use_machine_translation is not None:
-            self.smart_suggest_use_machine_translation = smart_suggest_use_machine_translation
 
     @property
     def account_id(self):
@@ -382,7 +367,7 @@ class ProjectUpdateParameters(object):
     def machine_translation_enabled(self):
         """Gets the machine_translation_enabled of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) Enable machine translation support in the project. Required for Autopilot and Smart Suggest  # noqa: E501
+        (Optional) Enable machine translation support in the project. Required for Pre-Translation  # noqa: E501
 
         :return: The machine_translation_enabled of this ProjectUpdateParameters.  # noqa: E501
         :rtype: bool
@@ -393,7 +378,7 @@ class ProjectUpdateParameters(object):
     def machine_translation_enabled(self, machine_translation_enabled):
         """Sets the machine_translation_enabled of this ProjectUpdateParameters.
 
-        (Optional) Enable machine translation support in the project. Required for Autopilot and Smart Suggest  # noqa: E501
+        (Optional) Enable machine translation support in the project. Required for Pre-Translation  # noqa: E501
 
         :param machine_translation_enabled: The machine_translation_enabled of this ProjectUpdateParameters.  # noqa: E501
         :type: bool
@@ -676,75 +661,6 @@ class ProjectUpdateParameters(object):
         """
 
         self._autotranslate_use_translation_memory = autotranslate_use_translation_memory
-
-    @property
-    def smart_suggest_enabled(self):
-        """Gets the smart_suggest_enabled of this ProjectUpdateParameters.  # noqa: E501
-
-        (Optional) Smart Suggest, requires machine_translation_enabled  # noqa: E501
-
-        :return: The smart_suggest_enabled of this ProjectUpdateParameters.  # noqa: E501
-        :rtype: bool
-        """
-        return self._smart_suggest_enabled
-
-    @smart_suggest_enabled.setter
-    def smart_suggest_enabled(self, smart_suggest_enabled):
-        """Sets the smart_suggest_enabled of this ProjectUpdateParameters.
-
-        (Optional) Smart Suggest, requires machine_translation_enabled  # noqa: E501
-
-        :param smart_suggest_enabled: The smart_suggest_enabled of this ProjectUpdateParameters.  # noqa: E501
-        :type: bool
-        """
-
-        self._smart_suggest_enabled = smart_suggest_enabled
-
-    @property
-    def smart_suggest_use_glossary(self):
-        """Gets the smart_suggest_use_glossary of this ProjectUpdateParameters.  # noqa: E501
-
-        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
-
-        :return: The smart_suggest_use_glossary of this ProjectUpdateParameters.  # noqa: E501
-        :rtype: bool
-        """
-        return self._smart_suggest_use_glossary
-
-    @smart_suggest_use_glossary.setter
-    def smart_suggest_use_glossary(self, smart_suggest_use_glossary):
-        """Sets the smart_suggest_use_glossary of this ProjectUpdateParameters.
-
-        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
-
-        :param smart_suggest_use_glossary: The smart_suggest_use_glossary of this ProjectUpdateParameters.  # noqa: E501
-        :type: bool
-        """
-
-        self._smart_suggest_use_glossary = smart_suggest_use_glossary
-
-    @property
-    def smart_suggest_use_machine_translation(self):
-        """Gets the smart_suggest_use_machine_translation of this ProjectUpdateParameters.  # noqa: E501
-
-        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
-
-        :return: The smart_suggest_use_machine_translation of this ProjectUpdateParameters.  # noqa: E501
-        :rtype: bool
-        """
-        return self._smart_suggest_use_machine_translation
-
-    @smart_suggest_use_machine_translation.setter
-    def smart_suggest_use_machine_translation(self, smart_suggest_use_machine_translation):
-        """Sets the smart_suggest_use_machine_translation of this ProjectUpdateParameters.
-
-        (Optional) Requires smart_suggest_enabled to be true  # noqa: E501
-
-        :param smart_suggest_use_machine_translation: The smart_suggest_use_machine_translation of this ProjectUpdateParameters.  # noqa: E501
-        :type: bool
-        """
-
-        self._smart_suggest_use_machine_translation = smart_suggest_use_machine_translation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

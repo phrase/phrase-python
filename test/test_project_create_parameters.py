@@ -41,7 +41,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@6622f6b4', 
+                project_image = '[B@1a593fc7', 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 point_of_contact = 'abcd1234', 
@@ -59,10 +59,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 autotranslate_check_new_locales = True, 
                 autotranslate_mark_as_unverified = True, 
                 autotranslate_use_machine_translation = True, 
-                autotranslate_use_translation_memory = True, 
-                smart_suggest_enabled = True, 
-                smart_suggest_use_glossary = True, 
-                smart_suggest_use_machine_translation = True
+                autotranslate_use_translation_memory = True
             )
         else :
             return ProjectCreateParameters(

@@ -324,7 +324,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | specify the branch to use
-    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | ids of keys that should added to the job
+    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | ids of keys that should be removed from the job
 
     try:
         # Remove keys from job
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
- **translation_key_ids** | [**List[str]**](str.md)| ids of keys that should added to the job | [optional] 
+ **translation_key_ids** | [**List[str]**](str.md)| ids of keys that should be removed from the job | [optional] 
 
 ### Return type
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **formats_list**
-> List[Format] formats_list(x_phrase_app_otp=x_phrase_app_otp)
+> List[Format] formats_list()
 
 List formats
 
@@ -31,11 +31,10 @@ configuration.api_key_prefix['Authorization'] = 'token'
 with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.FormatsApi(api_client)
-    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # List formats
-        api_response = api_instance.formats_list(x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.formats_list()
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling FormatsApi->formats_list: %s\n" % e)
@@ -43,10 +42,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -64,10 +60,8 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  * Pagination -  <br>  |
+**200** | OK |  -  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
-**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
-**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

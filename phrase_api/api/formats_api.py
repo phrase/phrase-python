@@ -45,7 +45,6 @@ class FormatsApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -70,7 +69,6 @@ class FormatsApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -88,7 +86,6 @@ class FormatsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -115,8 +112,6 @@ class FormatsApi(object):
         query_params = []
 
         header_params = {}
-        if 'x_phrase_app_otp' in local_var_params:
-            header_params['X-PhraseApp-OTP'] = local_var_params['x_phrase_app_otp']  # noqa: E501
 
         form_params = []
         local_var_files = {}

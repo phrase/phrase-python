@@ -44,6 +44,7 @@ class KeyCreateParameters(object):
         'remove_screenshot': 'bool',
         'unformatted': 'bool',
         'default_translation_content': 'str',
+        'autotranslate': 'bool',
         'xml_space_preserve': 'bool',
         'original_file': 'str',
         'localized_format_string': 'str',
@@ -64,6 +65,7 @@ class KeyCreateParameters(object):
         'remove_screenshot': 'remove_screenshot',
         'unformatted': 'unformatted',
         'default_translation_content': 'default_translation_content',
+        'autotranslate': 'autotranslate',
         'xml_space_preserve': 'xml_space_preserve',
         'original_file': 'original_file',
         'localized_format_string': 'localized_format_string',
@@ -71,7 +73,7 @@ class KeyCreateParameters(object):
         'custom_metadata': 'custom_metadata'
     }
 
-    def __init__(self, branch=None, name=None, description=None, plural=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, default_translation_content=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, description=None, plural=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, default_translation_content=None, autotranslate=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
         """KeyCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -89,6 +91,7 @@ class KeyCreateParameters(object):
         self._remove_screenshot = None
         self._unformatted = None
         self._default_translation_content = None
+        self._autotranslate = None
         self._xml_space_preserve = None
         self._original_file = None
         self._localized_format_string = None
@@ -119,6 +122,8 @@ class KeyCreateParameters(object):
             self.unformatted = unformatted
         if default_translation_content is not None:
             self.default_translation_content = default_translation_content
+        if autotranslate is not None:
+            self.autotranslate = autotranslate
         if xml_space_preserve is not None:
             self.xml_space_preserve = xml_space_preserve
         if original_file is not None:
@@ -407,6 +412,29 @@ class KeyCreateParameters(object):
         """
 
         self._default_translation_content = default_translation_content
+
+    @property
+    def autotranslate(self):
+        """Gets the autotranslate of this KeyCreateParameters.  # noqa: E501
+
+        Indicates whether the key should be autotranslated to other locales based on the copy provided in `default_translation_content`.  # noqa: E501
+
+        :return: The autotranslate of this KeyCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate
+
+    @autotranslate.setter
+    def autotranslate(self, autotranslate):
+        """Sets the autotranslate of this KeyCreateParameters.
+
+        Indicates whether the key should be autotranslated to other locales based on the copy provided in `default_translation_content`.  # noqa: E501
+
+        :param autotranslate: The autotranslate of this KeyCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate = autotranslate
 
     @property
     def xml_space_preserve(self):

@@ -61,7 +61,7 @@ class UploadsApi(object):
         :param bool skip_unverification: Indicates whether the upload should unverify updated translations.
         :param str file_encoding: Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
         :param object locale_mapping: Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
-        :param object format_options: Additional options available for specific formats. See our format guide for complete list.
+        :param object format_options: Additional options available for specific formats. See our format guide for the [complete list](https://support.phrase.com/hc/en-us/articles/9652464547740-List-of-Supported-File-Types-Strings).
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
         :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
@@ -106,7 +106,7 @@ class UploadsApi(object):
         :param bool skip_unverification: Indicates whether the upload should unverify updated translations.
         :param str file_encoding: Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
         :param object locale_mapping: Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
-        :param object format_options: Additional options available for specific formats. See our format guide for complete list.
+        :param object format_options: Additional options available for specific formats. See our format guide for the [complete list](https://support.phrase.com/hc/en-us/articles/9652464547740-List-of-Supported-File-Types-Strings).
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
         :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`

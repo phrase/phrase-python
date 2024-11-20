@@ -49,8 +49,6 @@ class CommentsApi(object):
         :param str key_id: Translation Key ID (required)
         :param CommentCreateParameters comment_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str message: specify the message for the comment
-        :param List[str] locale_ids: specify the locales for the comment
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -79,8 +77,6 @@ class CommentsApi(object):
         :param str key_id: Translation Key ID (required)
         :param CommentCreateParameters comment_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str message: specify the message for the comment
-        :param List[str] locale_ids: specify the locales for the comment
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -101,9 +97,7 @@ class CommentsApi(object):
             'project_id',
             'key_id',
             'comment_create_parameters',
-            'x_phrase_app_otp',
-            'message',
-            'locale_ids'
+            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -144,11 +138,6 @@ class CommentsApi(object):
             path_params['key_id'] = local_var_params['key_id']  # noqa: E501
 
         query_params = []
-        if 'message' in local_var_params and local_var_params['message'] is not None:  # noqa: E501
-            query_params.append(('message', local_var_params['message']))  # noqa: E501
-        if 'locale_ids' in local_var_params and local_var_params['locale_ids'] is not None:  # noqa: E501
-            query_params.append(('locale_ids', local_var_params['locale_ids']))  # noqa: E501
-            collection_formats['locale_ids'] = 'multi'  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

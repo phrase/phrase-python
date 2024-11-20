@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reply_create**
-> Comment reply_create(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, message=message)
+> Comment reply_create(project_id, key_id, comment_id, comment_create_parameters1, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a reply
 
@@ -124,13 +124,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     key_id = 'key_id_example' # str | Translation Key ID (required)
     comment_id = 'comment_id_example' # str | Comment ID (required)
+    comment_create_parameters1 = phrase_api.CommentCreateParameters1() # CommentCreateParameters1 |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-    message = 'some message...' # str | specify the message for the comment
 
     try:
         # Create a reply
-        api_response = api_instance.reply_create(project_id, key_id, comment_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, message=message)
+        api_response = api_instance.reply_create(project_id, key_id, comment_id, comment_create_parameters1, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentRepliesApi->reply_create: %s\n" % e)
@@ -144,9 +143,8 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **key_id** | **str**| Translation Key ID | 
  **comment_id** | **str**| Comment ID | 
+ **comment_create_parameters1** | [**CommentCreateParameters1**](CommentCreateParameters1.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
- **message** | **str**| specify the message for the comment | [optional] 
 
 ### Return type
 
@@ -158,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

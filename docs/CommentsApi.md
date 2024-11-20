@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **comment_create**
-> Comment comment_create(project_id, key_id, comment_create_parameters, x_phrase_app_otp=x_phrase_app_otp, message=message, locale_ids=locale_ids)
+> Comment comment_create(project_id, key_id, comment_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Create a comment
 
@@ -42,12 +42,10 @@ with phrase_api.ApiClient(configuration) as api_client:
     key_id = 'key_id_example' # str | Translation Key ID (required)
     comment_create_parameters = phrase_api.CommentCreateParameters() # CommentCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    message = 'some message...' # str | specify the message for the comment
-    locale_ids = ['someId'] # List[str] | specify the locales for the comment
 
     try:
         # Create a comment
-        api_response = api_instance.comment_create(project_id, key_id, comment_create_parameters, x_phrase_app_otp=x_phrase_app_otp, message=message, locale_ids=locale_ids)
+        api_response = api_instance.comment_create(project_id, key_id, comment_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CommentsApi->comment_create: %s\n" % e)
@@ -62,8 +60,6 @@ Name | Type | Description  | Notes
  **key_id** | **str**| Translation Key ID | 
  **comment_create_parameters** | [**CommentCreateParameters**](CommentCreateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **message** | **str**| specify the message for the comment | [optional] 
- **locale_ids** | [**List[str]**](str.md)| specify the locales for the comment | [optional] 
 
 ### Return type
 

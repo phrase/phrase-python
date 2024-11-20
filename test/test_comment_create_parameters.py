@@ -37,11 +37,13 @@ class TestCommentCreateParameters(unittest.TestCase):
         """
         if include_optional :
             return CommentCreateParameters(
+                message = 'Some message...', 
                 branch = 'my-feature-branch', 
-                message = 'Some message...'
+                locale_ids = ["someId","someOtherId"]
             )
         else :
             return CommentCreateParameters(
+                message = 'Some message...',
         )
         """
 

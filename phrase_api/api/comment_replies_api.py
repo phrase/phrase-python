@@ -216,22 +216,21 @@ class CommentRepliesApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def reply_create(self, project_id, key_id, comment_id, **kwargs):  # noqa: E501
+    def reply_create(self, project_id, key_id, comment_id, comment_create_parameters1, **kwargs):  # noqa: E501
         """Create a reply  # noqa: E501
 
         Create a new reply for a comment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.reply_create(project_id, key_id, comment_id, async_req=True)
+        >>> thread = api.reply_create(project_id, key_id, comment_id, comment_create_parameters1, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str key_id: Translation Key ID (required)
         :param str comment_id: Comment ID (required)
+        :param CommentCreateParameters1 comment_create_parameters1: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str branch: specify the branch to use
-        :param str message: specify the message for the comment
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -244,24 +243,23 @@ class CommentRepliesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.reply_create_with_http_info(project_id, key_id, comment_id, **kwargs)  # noqa: E501
+        return self.reply_create_with_http_info(project_id, key_id, comment_id, comment_create_parameters1, **kwargs)  # noqa: E501
 
-    def reply_create_with_http_info(self, project_id, key_id, comment_id, **kwargs):  # noqa: E501
+    def reply_create_with_http_info(self, project_id, key_id, comment_id, comment_create_parameters1, **kwargs):  # noqa: E501
         """Create a reply  # noqa: E501
 
         Create a new reply for a comment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.reply_create_with_http_info(project_id, key_id, comment_id, async_req=True)
+        >>> thread = api.reply_create_with_http_info(project_id, key_id, comment_id, comment_create_parameters1, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str key_id: Translation Key ID (required)
         :param str comment_id: Comment ID (required)
+        :param CommentCreateParameters1 comment_create_parameters1: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str branch: specify the branch to use
-        :param str message: specify the message for the comment
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -282,9 +280,8 @@ class CommentRepliesApi(object):
             'project_id',
             'key_id',
             'comment_id',
-            'x_phrase_app_otp',
-            'branch',
-            'message'
+            'comment_create_parameters1',
+            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -315,6 +312,10 @@ class CommentRepliesApi(object):
         if self.api_client.client_side_validation and ('comment_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['comment_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `comment_id` when calling `reply_create`")  # noqa: E501
+        # verify the required parameter 'comment_create_parameters1' is set
+        if self.api_client.client_side_validation and ('comment_create_parameters1' not in local_var_params or  # noqa: E501
+                                                        local_var_params['comment_create_parameters1'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `comment_create_parameters1` when calling `reply_create`")  # noqa: E501
 
         collection_formats = {}
 
@@ -327,10 +328,6 @@ class CommentRepliesApi(object):
             path_params['comment_id'] = local_var_params['comment_id']  # noqa: E501
 
         query_params = []
-        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
-            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
-        if 'message' in local_var_params and local_var_params['message'] is not None:  # noqa: E501
-            query_params.append(('message', local_var_params['message']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -340,8 +337,14 @@ class CommentRepliesApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'comment_create_parameters1' in local_var_params:
+            body_params = local_var_params['comment_create_parameters1']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting

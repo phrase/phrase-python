@@ -32,6 +32,7 @@ docs/BranchUpdateParameters.md
 docs/BranchesApi.md
 docs/Comment.md
 docs/CommentCreateParameters.md
+docs/CommentCreateParameters1.md
 docs/CommentMarkReadParameters.md
 docs/CommentReaction.md
 docs/CommentReactionsApi.md
@@ -370,6 +371,7 @@ phrase_api/models/branch_name.py
 phrase_api/models/branch_update_parameters.py
 phrase_api/models/comment.py
 phrase_api/models/comment_create_parameters.py
+phrase_api/models/comment_create_parameters1.py
 phrase_api/models/comment_mark_read_parameters.py
 phrase_api/models/comment_reaction.py
 phrase_api/models/comment_update_parameters.py
@@ -606,6 +608,7 @@ test/test_branch_update_parameters.py
 test/test_branches_api.py
 test/test_comment.py
 test/test_comment_create_parameters.py
+test/test_comment_create_parameters1.py
 test/test_comment_mark_read_parameters.py
 test/test_comment_reaction.py
 test/test_comment_reactions_api.py

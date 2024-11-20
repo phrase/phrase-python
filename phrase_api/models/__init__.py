@@ -36,6 +36,7 @@ from phrase_api.models.branch_name import BranchName
 from phrase_api.models.branch_update_parameters import BranchUpdateParameters
 from phrase_api.models.comment import Comment
 from phrase_api.models.comment_create_parameters import CommentCreateParameters
+from phrase_api.models.comment_create_parameters1 import CommentCreateParameters1
 from phrase_api.models.comment_mark_read_parameters import CommentMarkReadParameters
 from phrase_api.models.comment_reaction import CommentReaction
 from phrase_api.models.comment_update_parameters import CommentUpdateParameters

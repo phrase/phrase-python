@@ -32,24 +32,29 @@ class JobCommentCreateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'message': 'str'
+        'message': 'str',
+        'branch': 'str'
     }
 
     attribute_map = {
-        'message': 'message'
+        'message': 'message',
+        'branch': 'branch'
     }
 
-    def __init__(self, message=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, message=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """JobCommentCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._message = None
+        self._branch = None
         self.discriminator = None
 
         if message is not None:
             self.message = message
+        if branch is not None:
+            self.branch = branch
 
     @property
     def message(self):
@@ -73,6 +78,29 @@ class JobCommentCreateParameters(object):
         """
 
         self._message = message
+
+    @property
+    def branch(self):
+        """Gets the branch of this JobCommentCreateParameters.  # noqa: E501
+
+        Branch name for the job  # noqa: E501
+
+        :return: The branch of this JobCommentCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this JobCommentCreateParameters.
+
+        Branch name for the job  # noqa: E501
+
+        :param branch: The branch of this JobCommentCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._branch = branch
 
     def to_dict(self):
         """Returns the model properties as a dict"""

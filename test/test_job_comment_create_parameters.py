@@ -37,7 +37,8 @@ class TestJobCommentCreateParameters(unittest.TestCase):
         """
         if include_optional :
             return JobCommentCreateParameters(
-                message = 'Some message...'
+                message = 'Some message...', 
+                branch = 'my-feature-branch'
             )
         else :
             return JobCommentCreateParameters(

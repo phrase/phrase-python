@@ -186,7 +186,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     job_id = 'job_id_example' # str | Job ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
 
     try:
         # Remove a target locale from a job
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
  **job_id** | **str**| Job ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
 
 ### Return type
 
@@ -329,7 +329,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     job_id = 'job_id_example' # str | Job ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
 
     try:
         # Show single job target locale
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
  **job_id** | **str**| Job ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
 
 ### Return type
 
@@ -544,7 +544,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
 
     try:
         # List job target locales
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
 
 ### Return type
 

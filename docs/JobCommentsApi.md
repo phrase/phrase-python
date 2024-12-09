@@ -109,7 +109,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     job_id = 'job_id_example' # str | Job ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
 
     try:
         # Delete a job comment
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
  **job_id** | **str**| Job ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
 
 ### Return type
 
@@ -180,7 +180,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     job_id = 'job_id_example' # str | Job ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
 
     try:
         # Get a single job comment
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
  **job_id** | **str**| Job ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
 
 ### Return type
 
@@ -323,7 +323,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     job_id = 'job_id_example' # str | Job ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
 
     try:
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **job_id** | **str**| Job ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
 
 ### Return type

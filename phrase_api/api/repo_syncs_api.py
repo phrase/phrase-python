@@ -559,7 +559,7 @@ class RepoSyncsApi(object):
     def repo_sync_export(self, account_id, id, **kwargs):  # noqa: E501
         """Export to code repository  # noqa: E501
 
-        > Beta: this feature will change in the future.  Export translations from Phrase Strings to repository provider according to the .phrase.yml file within the code repository.  *Export is done asynchronously and may take several seconds depending on the project size.*  # noqa: E501
+        Export translations from Phrase Strings to repository provider according to the .phrase.yml file within the code repository.  *Export is done asynchronously and may take several seconds depending on the project size.*  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.repo_sync_export(account_id, id, async_req=True)
@@ -586,7 +586,7 @@ class RepoSyncsApi(object):
     def repo_sync_export_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Export to code repository  # noqa: E501
 
-        > Beta: this feature will change in the future.  Export translations from Phrase Strings to repository provider according to the .phrase.yml file within the code repository.  *Export is done asynchronously and may take several seconds depending on the project size.*  # noqa: E501
+        Export translations from Phrase Strings to repository provider according to the .phrase.yml file within the code repository.  *Export is done asynchronously and may take several seconds depending on the project size.*  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.repo_sync_export_with_http_info(account_id, id, async_req=True)
@@ -687,7 +687,7 @@ class RepoSyncsApi(object):
     def repo_sync_import(self, account_id, id, **kwargs):  # noqa: E501
         """Import from code repository  # noqa: E501
 
-        > Beta: this feature will change in the future.  Import translations from repository provider to Phrase Strings according to the .phrase.yml file within the code repository.  _Import is done asynchronously and may take several seconds depending on the project size._  # noqa: E501
+        Import translations from repository provider to Phrase Strings according to the .phrase.yml file within the code repository.  _Import is done asynchronously and may take several seconds depending on the project size._  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.repo_sync_import(account_id, id, async_req=True)
@@ -714,7 +714,7 @@ class RepoSyncsApi(object):
     def repo_sync_import_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Import from code repository  # noqa: E501
 
-        > Beta: this feature will change in the future.  Import translations from repository provider to Phrase Strings according to the .phrase.yml file within the code repository.  _Import is done asynchronously and may take several seconds depending on the project size._  # noqa: E501
+        Import translations from repository provider to Phrase Strings according to the .phrase.yml file within the code repository.  _Import is done asynchronously and may take several seconds depending on the project size._  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.repo_sync_import_with_http_info(account_id, id, async_req=True)

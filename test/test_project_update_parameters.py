@@ -43,7 +43,7 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@4d2cd74', 
+                project_image = '[B@49e335a5', 
                 remove_project_image = False, 
                 workflow = 'review', 
                 machine_translation_enabled = True, 
@@ -58,7 +58,8 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 autotranslate_check_new_locales = True, 
                 autotranslate_mark_as_unverified = True, 
                 autotranslate_use_machine_translation = True, 
-                autotranslate_use_translation_memory = True
+                autotranslate_use_translation_memory = True, 
+                default_encoding = 'UTF-8'
             )
         else :
             return ProjectUpdateParameters(

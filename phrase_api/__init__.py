@@ -18,7 +18,6 @@ __version__ = "2.6.1"
 # import apis into sdk package
 from phrase_api.api.accounts_api import AccountsApi
 from phrase_api.api.authorizations_api import AuthorizationsApi
-from phrase_api.api.bitbucket_sync_api import BitbucketSyncApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi
@@ -29,8 +28,6 @@ from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
 from phrase_api.api.figma_attachments_api import FigmaAttachmentsApi
 from phrase_api.api.formats_api import FormatsApi
-from phrase_api.api.git_hub_sync_api import GitHubSyncApi
-from phrase_api.api.git_lab_sync_api import GitLabSyncApi
 from phrase_api.api.glossaries_api import GlossariesApi
 from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslationsApi
 from phrase_api.api.glossary_terms_api import GlossaryTermsApi
@@ -91,10 +88,6 @@ from phrase_api.models.authorization import Authorization
 from phrase_api.models.authorization_create_parameters import AuthorizationCreateParameters
 from phrase_api.models.authorization_update_parameters import AuthorizationUpdateParameters
 from phrase_api.models.authorization_with_token import AuthorizationWithToken
-from phrase_api.models.bitbucket_sync import BitbucketSync
-from phrase_api.models.bitbucket_sync_export_parameters import BitbucketSyncExportParameters
-from phrase_api.models.bitbucket_sync_export_response import BitbucketSyncExportResponse
-from phrase_api.models.bitbucket_sync_import_parameters import BitbucketSyncImportParameters
 from phrase_api.models.blacklisted_key import BlacklistedKey
 from phrase_api.models.blacklisted_key_create_parameters import BlacklistedKeyCreateParameters
 from phrase_api.models.blacklisted_key_update_parameters import BlacklistedKeyUpdateParameters
@@ -128,14 +121,6 @@ from phrase_api.models.figma_attachment import FigmaAttachment
 from phrase_api.models.figma_attachment_create_parameters import FigmaAttachmentCreateParameters
 from phrase_api.models.figma_attachment_update_parameters import FigmaAttachmentUpdateParameters
 from phrase_api.models.format import Format
-from phrase_api.models.github_sync_export_parameters import GithubSyncExportParameters
-from phrase_api.models.github_sync_import_parameters import GithubSyncImportParameters
-from phrase_api.models.gitlab_sync import GitlabSync
-from phrase_api.models.gitlab_sync_export import GitlabSyncExport
-from phrase_api.models.gitlab_sync_export_parameters import GitlabSyncExportParameters
-from phrase_api.models.gitlab_sync_history import GitlabSyncHistory
-from phrase_api.models.gitlab_sync_history_errors_inner import GitlabSyncHistoryErrorsInner
-from phrase_api.models.gitlab_sync_import_parameters import GitlabSyncImportParameters
 from phrase_api.models.glossary import Glossary
 from phrase_api.models.glossary_create_parameters import GlossaryCreateParameters
 from phrase_api.models.glossary_term import GlossaryTerm

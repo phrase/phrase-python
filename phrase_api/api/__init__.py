@@ -5,7 +5,6 @@ from __future__ import absolute_import
 # import apis into api package
 from phrase_api.api.accounts_api import AccountsApi
 from phrase_api.api.authorizations_api import AuthorizationsApi
-from phrase_api.api.bitbucket_sync_api import BitbucketSyncApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi
@@ -16,8 +15,6 @@ from phrase_api.api.distributions_api import DistributionsApi
 from phrase_api.api.documents_api import DocumentsApi
 from phrase_api.api.figma_attachments_api import FigmaAttachmentsApi
 from phrase_api.api.formats_api import FormatsApi
-from phrase_api.api.git_hub_sync_api import GitHubSyncApi
-from phrase_api.api.git_lab_sync_api import GitLabSyncApi
 from phrase_api.api.glossaries_api import GlossariesApi
 from phrase_api.api.glossary_term_translations_api import GlossaryTermTranslationsApi
 from phrase_api.api.glossary_terms_api import GlossaryTermsApi

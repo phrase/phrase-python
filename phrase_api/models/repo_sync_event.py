@@ -38,7 +38,7 @@ class RepoSyncEvent(object):
         'status': 'str',
         'pull_request_url': 'str',
         'auto_import': 'bool',
-        'errors': 'List[RepoSyncEventErrorsInner]'
+        'errors': 'List[str]'
     }
 
     attribute_map = {
@@ -230,7 +230,7 @@ class RepoSyncEvent(object):
         List of error messages, in case of failure  # noqa: E501
 
         :return: The errors of this RepoSyncEvent.  # noqa: E501
-        :rtype: List[RepoSyncEventErrorsInner]
+        :rtype: List[str]
         """
         return self._errors
 
@@ -241,7 +241,7 @@ class RepoSyncEvent(object):
         List of error messages, in case of failure  # noqa: E501
 
         :param errors: The errors of this RepoSyncEvent.  # noqa: E501
-        :type: List[RepoSyncEventErrorsInner]
+        :type: List[str]
         """
 
         self._errors = errors

@@ -44,7 +44,7 @@ class TestRepoSyncEvent(unittest.TestCase):
                 pull_request_url = '', 
                 auto_import = True, 
                 errors = [
-                    null
+                    ''
                     ]
             )
         else :

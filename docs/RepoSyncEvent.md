@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**event_type** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **status** | **str** |  | [optional] 
 **pull_request_url** | **str** | URL of the pull request created on export | [optional] 

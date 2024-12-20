@@ -191,6 +191,7 @@ docs/RepliesListParameters.md
 docs/RepoSync.md
 docs/RepoSyncEvent.md
 docs/RepoSyncEventErrorsInner.md
+docs/RepoSyncEventsApi.md
 docs/RepoSyncsApi.md
 docs/ReportsApi.md
 docs/Screenshot.md
@@ -309,6 +310,7 @@ phrase_api/api/projects_api.py
 phrase_api/api/quality_performance_score_api.py
 phrase_api/api/release_triggers_api.py
 phrase_api/api/releases_api.py
+phrase_api/api/repo_sync_events_api.py
 phrase_api/api/repo_syncs_api.py
 phrase_api/api/reports_api.py
 phrase_api/api/screenshot_markers_api.py
@@ -736,6 +738,7 @@ test/test_replies_list_parameters.py
 test/test_repo_sync.py
 test/test_repo_sync_event.py
 test/test_repo_sync_event_errors_inner.py
+test/test_repo_sync_events_api.py
 test/test_repo_syncs_api.py
 test/test_reports_api.py
 test/test_screenshot.py

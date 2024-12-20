@@ -33,7 +33,7 @@ class RepoSyncEvent(object):
     """
     openapi_types = {
         'id': 'str',
-        'event_type': 'str',
+        'type': 'str',
         'created_at': 'datetime',
         'status': 'str',
         'pull_request_url': 'str',
@@ -43,7 +43,7 @@ class RepoSyncEvent(object):
 
     attribute_map = {
         'id': 'id',
-        'event_type': 'event_type',
+        'type': 'type',
         'created_at': 'created_at',
         'status': 'status',
         'pull_request_url': 'pull_request_url',
@@ -51,14 +51,14 @@ class RepoSyncEvent(object):
         'errors': 'errors'
     }
 
-    def __init__(self, id=None, event_type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncEvent - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
-        self._event_type = None
+        self._type = None
         self._created_at = None
         self._status = None
         self._pull_request_url = None
@@ -68,8 +68,8 @@ class RepoSyncEvent(object):
 
         if id is not None:
             self.id = id
-        if event_type is not None:
-            self.event_type = event_type
+        if type is not None:
+            self.type = type
         if created_at is not None:
             self.created_at = created_at
         if status is not None:
@@ -103,31 +103,31 @@ class RepoSyncEvent(object):
         self._id = id
 
     @property
-    def event_type(self):
-        """Gets the event_type of this RepoSyncEvent.  # noqa: E501
+    def type(self):
+        """Gets the type of this RepoSyncEvent.  # noqa: E501
 
 
-        :return: The event_type of this RepoSyncEvent.  # noqa: E501
+        :return: The type of this RepoSyncEvent.  # noqa: E501
         :rtype: str
         """
-        return self._event_type
+        return self._type
 
-    @event_type.setter
-    def event_type(self, event_type):
-        """Sets the event_type of this RepoSyncEvent.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this RepoSyncEvent.
 
 
-        :param event_type: The event_type of this RepoSyncEvent.  # noqa: E501
+        :param type: The type of this RepoSyncEvent.  # noqa: E501
         :type: str
         """
         allowed_values = ["import", "export"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and event_type not in allowed_values:  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
             raise ValueError(
-                "Invalid value for `event_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(event_type, allowed_values)
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
             )
 
-        self._event_type = event_type
+        self._type = type
 
     @property
     def created_at(self):

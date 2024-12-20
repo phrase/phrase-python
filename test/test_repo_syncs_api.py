@@ -41,20 +41,6 @@ class TestRepoSyncsApi(unittest.TestCase):
         """
         pass
 
-    def test_repo_sync_event_show(self):
-        """Test case for repo_sync_event_show
-
-        Get a single Repo Sync Event  # noqa: E501
-        """
-        pass
-
-    def test_repo_sync_events(self):
-        """Test case for repo_sync_events
-
-        Repository Syncs History  # noqa: E501
-        """
-        pass
-
     def test_repo_sync_export(self):
         """Test case for repo_sync_export
 

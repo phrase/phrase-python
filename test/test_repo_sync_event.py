@@ -38,7 +38,7 @@ class TestRepoSyncEvent(unittest.TestCase):
         if include_optional :
             return RepoSyncEvent(
                 id = '', 
-                event_type = 'import', 
+                type = 'import', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 status = 'running', 
                 pull_request_url = '', 

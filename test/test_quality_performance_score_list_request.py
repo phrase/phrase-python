@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.projects_quality_performance_score_request import ProjectsQualityPerformanceScoreRequest  # noqa: E501
+from phrase_api.models.quality_performance_score_list_request import QualityPerformanceScoreListRequest  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestProjectsQualityPerformanceScoreRequest(unittest.TestCase):
-    """ProjectsQualityPerformanceScoreRequest unit test stubs"""
+class TestQualityPerformanceScoreListRequest(unittest.TestCase):
+    """QualityPerformanceScoreListRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,26 +28,26 @@ class TestProjectsQualityPerformanceScoreRequest(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ProjectsQualityPerformanceScoreRequest
+        """Test QualityPerformanceScoreListRequest
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.projects_quality_performance_score_request.ProjectsQualityPerformanceScoreRequest()  # noqa: E501
+        # model = phrase_api.models.quality_performance_score_list_request.QualityPerformanceScoreListRequest()  # noqa: E501
 
         """
         if include_optional :
-            return ProjectsQualityPerformanceScoreRequest(
+            return QualityPerformanceScoreListRequest(
                 translation_ids = [
                     'translation_id_1'
                     ]
             )
         else :
-            return ProjectsQualityPerformanceScoreRequest(
+            return QualityPerformanceScoreListRequest(
         )
         """
 
-    def testProjectsQualityPerformanceScoreRequest(self):
-        """Test ProjectsQualityPerformanceScoreRequest"""
+    def testQualityPerformanceScoreListRequest(self):
+        """Test QualityPerformanceScoreListRequest"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

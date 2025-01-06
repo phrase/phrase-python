@@ -4,11 +4,11 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**projects_quality_performance_score**](QualityPerformanceScoreApi.md#projects_quality_performance_score) | **POST** /projects/{project_id}/quality_performance_score | Get Translation Quality
+[**quality_performance_score_list**](QualityPerformanceScoreApi.md#quality_performance_score_list) | **POST** /projects/{project_id}/quality_performance_score | Get Translation Quality
 
 
-# **projects_quality_performance_score**
-> ProjectsQualityPerformanceScore200Response projects_quality_performance_score(project_id, projects_quality_performance_score_request, x_phrase_app_otp=x_phrase_app_otp)
+# **quality_performance_score_list**
+> QualityPerformanceScoreList200Response quality_performance_score_list(project_id, quality_performance_score_list_request, x_phrase_app_otp=x_phrase_app_otp)
 
 Get Translation Quality
 
@@ -32,15 +32,15 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.QualityPerformanceScoreApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
-    projects_quality_performance_score_request = phrase_api.ProjectsQualityPerformanceScoreRequest() # ProjectsQualityPerformanceScoreRequest |  (required)
+    quality_performance_score_list_request = phrase_api.QualityPerformanceScoreListRequest() # QualityPerformanceScoreListRequest |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
         # Get Translation Quality
-        api_response = api_instance.projects_quality_performance_score(project_id, projects_quality_performance_score_request, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.quality_performance_score_list(project_id, quality_performance_score_list_request, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling QualityPerformanceScoreApi->projects_quality_performance_score: %s\n" % e)
+        print("Exception when calling QualityPerformanceScoreApi->quality_performance_score_list: %s\n" % e)
 ```
 
 
@@ -49,12 +49,12 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
- **projects_quality_performance_score_request** | [**ProjectsQualityPerformanceScoreRequest**](ProjectsQualityPerformanceScoreRequest.md)|  | 
+ **quality_performance_score_list_request** | [**QualityPerformanceScoreListRequest**](QualityPerformanceScoreListRequest.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
 
-[**ProjectsQualityPerformanceScore200Response**](ProjectsQualityPerformanceScore200Response.md)
+[**QualityPerformanceScoreList200Response**](QualityPerformanceScoreList200Response.md)
 
 ### Authorization
 

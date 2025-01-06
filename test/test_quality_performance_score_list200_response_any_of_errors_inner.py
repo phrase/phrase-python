@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.projects_quality_performance_score200_response_any_of_errors_inner import ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner  # noqa: E501
+from phrase_api.models.quality_performance_score_list200_response_any_of_errors_inner import QualityPerformanceScoreList200ResponseAnyOfErrorsInner  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner(unittest.TestCase):
-    """ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner unit test stubs"""
+class TestQualityPerformanceScoreList200ResponseAnyOfErrorsInner(unittest.TestCase):
+    """QualityPerformanceScoreList200ResponseAnyOfErrorsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,26 +28,26 @@ class TestProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner(unittest.Te
         pass
 
     def make_instance(self, include_optional):
-        """Test ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner
+        """Test QualityPerformanceScoreList200ResponseAnyOfErrorsInner
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.projects_quality_performance_score200_response_any_of_errors_inner.ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner()  # noqa: E501
+        # model = phrase_api.models.quality_performance_score_list200_response_any_of_errors_inner.QualityPerformanceScoreList200ResponseAnyOfErrorsInner()  # noqa: E501
 
         """
         if include_optional :
-            return ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner(
+            return QualityPerformanceScoreList200ResponseAnyOfErrorsInner(
                 message = '', 
                 code = '', 
                 id = ''
             )
         else :
-            return ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner(
+            return QualityPerformanceScoreList200ResponseAnyOfErrorsInner(
         )
         """
 
-    def testProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner(self):
-        """Test ProjectsQualityPerformanceScore200ResponseAnyOfErrorsInner"""
+    def testQualityPerformanceScoreList200ResponseAnyOfErrorsInner(self):
+        """Test QualityPerformanceScoreList200ResponseAnyOfErrorsInner"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.projects_quality_performance_score200_response_any_of_data import ProjectsQualityPerformanceScore200ResponseAnyOfData  # noqa: E501
+from phrase_api.models.quality_performance_score_list200_response_any_of_data import QualityPerformanceScoreList200ResponseAnyOfData  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestProjectsQualityPerformanceScore200ResponseAnyOfData(unittest.TestCase):
-    """ProjectsQualityPerformanceScore200ResponseAnyOfData unit test stubs"""
+class TestQualityPerformanceScoreList200ResponseAnyOfData(unittest.TestCase):
+    """QualityPerformanceScoreList200ResponseAnyOfData unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,29 +28,29 @@ class TestProjectsQualityPerformanceScore200ResponseAnyOfData(unittest.TestCase)
         pass
 
     def make_instance(self, include_optional):
-        """Test ProjectsQualityPerformanceScore200ResponseAnyOfData
+        """Test QualityPerformanceScoreList200ResponseAnyOfData
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.projects_quality_performance_score200_response_any_of_data.ProjectsQualityPerformanceScore200ResponseAnyOfData()  # noqa: E501
+        # model = phrase_api.models.quality_performance_score_list200_response_any_of_data.QualityPerformanceScoreList200ResponseAnyOfData()  # noqa: E501
 
         """
         if include_optional :
-            return ProjectsQualityPerformanceScore200ResponseAnyOfData(
+            return QualityPerformanceScoreList200ResponseAnyOfData(
                 translations = [
-                    phrase_api.models.projects_quality_performance_score_200_response_any_of_data_translations_inner.projects_quality_performance_score_200_response_anyOf_data_translations_inner(
+                    phrase_api.models.quality_performance_score_list_200_response_any_of_data_translations_inner.quality_performance_score_list_200_response_anyOf_data_translations_inner(
                         engine = '', 
                         score = 1.337, 
                         id = '', )
                     ]
             )
         else :
-            return ProjectsQualityPerformanceScore200ResponseAnyOfData(
+            return QualityPerformanceScoreList200ResponseAnyOfData(
         )
         """
 
-    def testProjectsQualityPerformanceScore200ResponseAnyOfData(self):
-        """Test ProjectsQualityPerformanceScore200ResponseAnyOfData"""
+    def testQualityPerformanceScoreList200ResponseAnyOfData(self):
+        """Test QualityPerformanceScoreList200ResponseAnyOfData"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

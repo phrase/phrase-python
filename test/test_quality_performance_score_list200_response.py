@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.projects_quality_performance_score200_response import ProjectsQualityPerformanceScore200Response  # noqa: E501
+from phrase_api.models.quality_performance_score_list200_response import QualityPerformanceScoreList200Response  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestProjectsQualityPerformanceScore200Response(unittest.TestCase):
-    """ProjectsQualityPerformanceScore200Response unit test stubs"""
+class TestQualityPerformanceScoreList200Response(unittest.TestCase):
+    """QualityPerformanceScoreList200Response unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,39 +28,39 @@ class TestProjectsQualityPerformanceScore200Response(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ProjectsQualityPerformanceScore200Response
+        """Test QualityPerformanceScoreList200Response
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.projects_quality_performance_score200_response.ProjectsQualityPerformanceScore200Response()  # noqa: E501
+        # model = phrase_api.models.quality_performance_score_list200_response.QualityPerformanceScoreList200Response()  # noqa: E501
 
         """
         if include_optional :
-            return ProjectsQualityPerformanceScore200Response(
+            return QualityPerformanceScoreList200Response(
                 error = phrase_api.models.error_error.error_error(
                     message = '', 
                     code = '', ), 
-                data = phrase_api.models.projects_quality_performance_score_200_response_any_of_data.projects_quality_performance_score_200_response_anyOf_data(
+                data = phrase_api.models.quality_performance_score_list_200_response_any_of_data.quality_performance_score_list_200_response_anyOf_data(
                     translations = [
-                        phrase_api.models.projects_quality_performance_score_200_response_any_of_data_translations_inner.projects_quality_performance_score_200_response_anyOf_data_translations_inner(
+                        phrase_api.models.quality_performance_score_list_200_response_any_of_data_translations_inner.quality_performance_score_list_200_response_anyOf_data_translations_inner(
                             engine = '', 
                             score = 1.337, 
                             id = '', )
                         ], ), 
                 errors = [
-                    phrase_api.models.projects_quality_performance_score_200_response_any_of_errors_inner.projects_quality_performance_score_200_response_anyOf_errors_inner(
+                    phrase_api.models.quality_performance_score_list_200_response_any_of_errors_inner.quality_performance_score_list_200_response_anyOf_errors_inner(
                         message = '', 
                         code = '', 
                         id = '', )
                     ]
             )
         else :
-            return ProjectsQualityPerformanceScore200Response(
+            return QualityPerformanceScoreList200Response(
         )
         """
 
-    def testProjectsQualityPerformanceScore200Response(self):
-        """Test ProjectsQualityPerformanceScore200Response"""
+    def testQualityPerformanceScoreList200Response(self):
+        """Test QualityPerformanceScoreList200Response"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

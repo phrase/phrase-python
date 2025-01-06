@@ -27,8 +27,8 @@ class TestQualityPerformanceScoreApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_projects_quality_performance_score(self):
-        """Test case for projects_quality_performance_score
+    def test_quality_performance_score_list(self):
+        """Test case for quality_performance_score_list
 
         Get Translation Quality  # noqa: E501
         """

@@ -78,6 +78,7 @@ from phrase_api.models.job_complete_parameters import JobCompleteParameters
 from phrase_api.models.job_create_parameters import JobCreateParameters
 from phrase_api.models.job_details import JobDetails
 from phrase_api.models.job_keys_create_parameters import JobKeysCreateParameters
+from phrase_api.models.job_keys_delete_parameters import JobKeysDeleteParameters
 from phrase_api.models.job_locale import JobLocale
 from phrase_api.models.job_locale_complete_parameters import JobLocaleCompleteParameters
 from phrase_api.models.job_locale_complete_review_parameters import JobLocaleCompleteReviewParameters

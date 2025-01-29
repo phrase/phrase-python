@@ -481,6 +481,7 @@ Class | Method | HTTP request | Description
  - [JobCreateParameters](docs/JobCreateParameters.md)
  - [JobDetails](docs/JobDetails.md)
  - [JobKeysCreateParameters](docs/JobKeysCreateParameters.md)
+ - [JobKeysDeleteParameters](docs/JobKeysDeleteParameters.md)
  - [JobLocale](docs/JobLocale.md)
  - [JobLocaleCompleteParameters](docs/JobLocaleCompleteParameters.md)
  - [JobLocaleCompleteReviewParameters](docs/JobLocaleCompleteReviewParameters.md)

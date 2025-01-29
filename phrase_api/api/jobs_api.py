@@ -578,21 +578,20 @@ class JobsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def job_keys_delete(self, project_id, id, **kwargs):  # noqa: E501
+    def job_keys_delete(self, project_id, id, job_keys_delete_parameters, **kwargs):  # noqa: E501
         """Remove keys from job  # noqa: E501
 
         Remove multiple keys from existing job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.job_keys_delete(project_id, id, async_req=True)
+        >>> thread = api.job_keys_delete(project_id, id, job_keys_delete_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str id: ID (required)
+        :param JobKeysDeleteParameters job_keys_delete_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str branch: specify the branch to use
-        :param List[str] translation_key_ids: ids of keys that should be removed from the job
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -605,23 +604,22 @@ class JobsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.job_keys_delete_with_http_info(project_id, id, **kwargs)  # noqa: E501
+        return self.job_keys_delete_with_http_info(project_id, id, job_keys_delete_parameters, **kwargs)  # noqa: E501
 
-    def job_keys_delete_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
+    def job_keys_delete_with_http_info(self, project_id, id, job_keys_delete_parameters, **kwargs):  # noqa: E501
         """Remove keys from job  # noqa: E501
 
         Remove multiple keys from existing job.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.job_keys_delete_with_http_info(project_id, id, async_req=True)
+        >>> thread = api.job_keys_delete_with_http_info(project_id, id, job_keys_delete_parameters, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str id: ID (required)
+        :param JobKeysDeleteParameters job_keys_delete_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str branch: specify the branch to use
-        :param List[str] translation_key_ids: ids of keys that should be removed from the job
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -641,9 +639,8 @@ class JobsApi(object):
         all_params = [
             'project_id',
             'id',
-            'x_phrase_app_otp',
-            'branch',
-            'translation_key_ids'
+            'job_keys_delete_parameters',
+            'x_phrase_app_otp'
         ]
         all_params.extend(
             [
@@ -670,6 +667,10 @@ class JobsApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `job_keys_delete`")  # noqa: E501
+        # verify the required parameter 'job_keys_delete_parameters' is set
+        if self.api_client.client_side_validation and ('job_keys_delete_parameters' not in local_var_params or  # noqa: E501
+                                                        local_var_params['job_keys_delete_parameters'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `job_keys_delete_parameters` when calling `job_keys_delete`")  # noqa: E501
 
         collection_formats = {}
 
@@ -680,11 +681,6 @@ class JobsApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
-        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
-            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
-        if 'translation_key_ids' in local_var_params and local_var_params['translation_key_ids'] is not None:  # noqa: E501
-            query_params.append(('translation_key_ids', local_var_params['translation_key_ids']))  # noqa: E501
-            collection_formats['translation_key_ids'] = 'multi'  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -694,6 +690,12 @@ class JobsApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'job_keys_delete_parameters' in local_var_params:
+            body_params = local_var_params['job_keys_delete_parameters']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 

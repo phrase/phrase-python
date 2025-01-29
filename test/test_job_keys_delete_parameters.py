@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters  # noqa: E501
+from phrase_api.models.job_keys_delete_parameters import JobKeysDeleteParameters  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestScreenshotUpdateParameters(unittest.TestCase):
-    """ScreenshotUpdateParameters unit test stubs"""
+class TestJobKeysDeleteParameters(unittest.TestCase):
+    """JobKeysDeleteParameters unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,27 +28,26 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ScreenshotUpdateParameters
+        """Test JobKeysDeleteParameters
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.screenshot_update_parameters.ScreenshotUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.job_keys_delete_parameters.JobKeysDeleteParameters()  # noqa: E501
 
         """
         if include_optional :
-            return ScreenshotUpdateParameters(
+            return JobKeysDeleteParameters(
                 branch = 'my-feature-branch', 
-                name = 'A screenshot name', 
-                description = 'A screenshot description', 
-                filename = '[B@309ea91f'
+                translation_key_ids = ["abcd1234cdef1234abcd1234cdef1234"]
             )
         else :
-            return ScreenshotUpdateParameters(
+            return JobKeysDeleteParameters(
+                translation_key_ids = ["abcd1234cdef1234abcd1234cdef1234"],
         )
         """
 
-    def testScreenshotUpdateParameters(self):
-        """Test ScreenshotUpdateParameters"""
+    def testJobKeysDeleteParameters(self):
+        """Test JobKeysDeleteParameters"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

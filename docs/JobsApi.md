@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_keys_delete**
-> job_keys_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, translation_key_ids=translation_key_ids)
+> job_keys_delete(project_id, id, job_keys_delete_parameters, x_phrase_app_otp=x_phrase_app_otp)
 
 Remove keys from job
 
@@ -322,13 +322,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.JobsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
+    job_keys_delete_parameters = phrase_api.JobKeysDeleteParameters() # JobKeysDeleteParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
-    translation_key_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | ids of keys that should be removed from the job
 
     try:
         # Remove keys from job
-        api_instance.job_keys_delete(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, translation_key_ids=translation_key_ids)
+        api_instance.job_keys_delete(project_id, id, job_keys_delete_parameters, x_phrase_app_otp=x_phrase_app_otp)
     except ApiException as e:
         print("Exception when calling JobsApi->job_keys_delete: %s\n" % e)
 ```
@@ -340,9 +339,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
+ **job_keys_delete_parameters** | [**JobKeysDeleteParameters**](JobKeysDeleteParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
- **translation_key_ids** | [**List[str]**](str.md)| ids of keys that should be removed from the job | [optional] 
 
 ### Return type
 
@@ -354,7 +352,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details

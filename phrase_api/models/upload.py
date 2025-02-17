@@ -37,6 +37,7 @@ class Upload(object):
         'format': 'str',
         'state': 'str',
         'tag': 'str',
+        'tags': 'List[str]',
         'url': 'str',
         'summary': 'UploadSummary',
         'created_at': 'datetime',
@@ -49,13 +50,14 @@ class Upload(object):
         'format': 'format',
         'state': 'state',
         'tag': 'tag',
+        'tags': 'tags',
         'url': 'url',
         'summary': 'summary',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, url=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, tags=None, url=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Upload - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class Upload(object):
         self._format = None
         self._state = None
         self._tag = None
+        self._tags = None
         self._url = None
         self._summary = None
         self._created_at = None
@@ -82,6 +85,8 @@ class Upload(object):
             self.state = state
         if tag is not None:
             self.tag = tag
+        if tags is not None:
+            self.tags = tags
         if url is not None:
             self.url = url
         if summary is not None:
@@ -179,6 +184,7 @@ class Upload(object):
     def tag(self):
         """Gets the tag of this Upload.  # noqa: E501
 
+        Unique tag of the upload   # noqa: E501
 
         :return: The tag of this Upload.  # noqa: E501
         :rtype: str
@@ -189,12 +195,36 @@ class Upload(object):
     def tag(self, tag):
         """Sets the tag of this Upload.
 
+        Unique tag of the upload   # noqa: E501
 
         :param tag: The tag of this Upload.  # noqa: E501
         :type: str
         """
 
         self._tag = tag
+
+    @property
+    def tags(self):
+        """Gets the tags of this Upload.  # noqa: E501
+
+        List of tags that were assigned to the uploaded keys   # noqa: E501
+
+        :return: The tags of this Upload.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this Upload.
+
+        List of tags that were assigned to the uploaded keys   # noqa: E501
+
+        :param tags: The tags of this Upload.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._tags = tags
 
     @property
     def url(self):

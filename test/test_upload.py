@@ -42,6 +42,9 @@ class TestUpload(unittest.TestCase):
                 format = '', 
                 state = '', 
                 tag = '', 
+                tags = [
+                    ''
+                    ], 
                 url = '', 
                 summary = phrase_api.models.upload_summary.upload_summary(
                     locales_created = 56, 

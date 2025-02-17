@@ -44,6 +44,7 @@ class JobDetails(object):
         'updated_at': 'datetime',
         'owner': 'UserPreview',
         'job_tag_name': 'str',
+        'source_translations_updated_at': 'datetime',
         'source_locale': 'LocalePreview',
         'locales': 'List[LocalePreview]',
         'keys': 'List[KeyPreview]'
@@ -62,12 +63,13 @@ class JobDetails(object):
         'updated_at': 'updated_at',
         'owner': 'owner',
         'job_tag_name': 'job_tag_name',
+        'source_translations_updated_at': 'source_translations_updated_at',
         'source_locale': 'source_locale',
         'locales': 'locales',
         'keys': 'keys'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, source_locale=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
         """JobDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -85,6 +87,7 @@ class JobDetails(object):
         self._updated_at = None
         self._owner = None
         self._job_tag_name = None
+        self._source_translations_updated_at = None
         self._source_locale = None
         self._locales = None
         self._keys = None
@@ -113,6 +116,8 @@ class JobDetails(object):
             self.owner = owner
         if job_tag_name is not None:
             self.job_tag_name = job_tag_name
+        if source_translations_updated_at is not None:
+            self.source_translations_updated_at = source_translations_updated_at
         if source_locale is not None:
             self.source_locale = source_locale
         if locales is not None:
@@ -371,6 +376,27 @@ class JobDetails(object):
         """
 
         self._job_tag_name = job_tag_name
+
+    @property
+    def source_translations_updated_at(self):
+        """Gets the source_translations_updated_at of this JobDetails.  # noqa: E501
+
+
+        :return: The source_translations_updated_at of this JobDetails.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._source_translations_updated_at
+
+    @source_translations_updated_at.setter
+    def source_translations_updated_at(self, source_translations_updated_at):
+        """Sets the source_translations_updated_at of this JobDetails.
+
+
+        :param source_translations_updated_at: The source_translations_updated_at of this JobDetails.  # noqa: E501
+        :type: datetime
+        """
+
+        self._source_translations_updated_at = source_translations_updated_at
 
     @property
     def source_locale(self):

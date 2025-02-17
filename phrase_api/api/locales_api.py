@@ -459,6 +459,7 @@ class LocalesApi(object):
         :param str translation_key_prefix: Download all translation keys, and remove the specified prefix where possible. Warning: this may create duplicate key names if other keys share the same name after the prefix is removed.
         :param bool filter_by_prefix: Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
         :param object custom_metadata_filters: Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
+        :param List[str] locale_ids: Locale IDs or locale names
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -507,6 +508,7 @@ class LocalesApi(object):
         :param str translation_key_prefix: Download all translation keys, and remove the specified prefix where possible. Warning: this may create duplicate key names if other keys share the same name after the prefix is removed.
         :param bool filter_by_prefix: Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
         :param object custom_metadata_filters: Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
+        :param List[str] locale_ids: Locale IDs or locale names
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -547,7 +549,8 @@ class LocalesApi(object):
             'source_locale_id',
             'translation_key_prefix',
             'filter_by_prefix',
-            'custom_metadata_filters'
+            'custom_metadata_filters',
+            'locale_ids'
         ]
         all_params.extend(
             [
@@ -622,6 +625,9 @@ class LocalesApi(object):
             query_params.append(('filter_by_prefix', local_var_params['filter_by_prefix']))  # noqa: E501
         if 'custom_metadata_filters' in local_var_params and local_var_params['custom_metadata_filters'] is not None:  # noqa: E501
             query_params.append(('custom_metadata_filters', local_var_params['custom_metadata_filters']))  # noqa: E501
+        if 'locale_ids' in local_var_params and local_var_params['locale_ids'] is not None:  # noqa: E501
+            query_params.append(('locale_ids', local_var_params['locale_ids']))  # noqa: E501
+            collection_formats['locale_ids'] = 'multi'  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

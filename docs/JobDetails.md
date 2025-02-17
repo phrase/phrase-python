@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **owner** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **job_tag_name** | **str** |  | [optional] 
+**source_translations_updated_at** | **datetime** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
 **keys** | [**List[KeyPreview]**](KeyPreview.md) |  | [optional] 

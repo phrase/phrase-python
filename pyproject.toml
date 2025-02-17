@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "phrase_api"
-version = "3.1.0"
+version = "3.2.0"
 description = "Phrase Strings API Reference"
 authors = ["Phrase Support <support@phrase.com>"]
 license = "MIT"

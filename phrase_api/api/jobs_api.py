@@ -1545,7 +1545,8 @@ class JobsApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str updated_since: filter by jobs updated since given date
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1576,7 +1577,8 @@ class JobsApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str updated_since: filter by jobs updated since given date
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1600,7 +1602,8 @@ class JobsApi(object):
             'per_page',
             'owned_by',
             'assigned_to',
-            'state'
+            'state',
+            'updated_since'
         ]
         all_params.extend(
             [
@@ -1641,6 +1644,8 @@ class JobsApi(object):
             query_params.append(('assigned_to', local_var_params['assigned_to']))  # noqa: E501
         if 'state' in local_var_params and local_var_params['state'] is not None:  # noqa: E501
             query_params.append(('state', local_var_params['state']))  # noqa: E501
+        if 'updated_since' in local_var_params and local_var_params['updated_since'] is not None:  # noqa: E501
+            query_params.append(('updated_since', local_var_params['updated_since']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -1687,10 +1692,11 @@ class JobsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
-        :param str branch: specify the branch to use
+        :param str branch: Branch to use
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str updated_since: filter by jobs updated since given date
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1719,10 +1725,11 @@ class JobsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
-        :param str branch: specify the branch to use
+        :param str branch: Branch to use
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str updated_since: filter by jobs updated since given date
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1747,7 +1754,8 @@ class JobsApi(object):
             'branch',
             'owned_by',
             'assigned_to',
-            'state'
+            'state',
+            'updated_since'
         ]
         all_params.extend(
             [
@@ -1790,6 +1798,8 @@ class JobsApi(object):
             query_params.append(('assigned_to', local_var_params['assigned_to']))  # noqa: E501
         if 'state' in local_var_params and local_var_params['state'] is not None:  # noqa: E501
             query_params.append(('state', local_var_params['state']))  # noqa: E501
+        if 'updated_since' in local_var_params and local_var_params['updated_since'] is not None:  # noqa: E501
+            query_params.append(('updated_since', local_var_params['updated_since']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

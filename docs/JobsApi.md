@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **jobs_by_account**
-> List[Job] jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state)
+> List[Job] jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state, updated_since=updated_since)
 
 List account jobs
 
@@ -813,11 +813,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
-    state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+    state = 'completed' # str | filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+    updated_since = '2013-02-21T00:00:00.000Z' # str | filter by jobs updated since given date
 
     try:
         # List account jobs
-        api_response = api_instance.jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state)
+        api_response = api_instance.jobs_by_account(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, owned_by=owned_by, assigned_to=assigned_to, state=state, updated_since=updated_since)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobsApi->jobs_by_account: %s\n" % e)
@@ -834,7 +835,8 @@ Name | Type | Description  | Notes
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **owned_by** | **str**| filter by user owning job | [optional] 
  **assigned_to** | **str**| filter by user assigned to job | [optional] 
- **state** | **str**| filter by state of job Valid states are &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+ **state** | **str**| filter by state of job; valid states are: &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+ **updated_since** | **str**| filter by jobs updated since given date | [optional] 
 
 ### Return type
 
@@ -860,7 +862,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **jobs_list**
-> List[Job] jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state)
+> List[Job] jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state, updated_since=updated_since)
 
 List jobs
 
@@ -887,14 +889,15 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
-    state = 'completed' # str | filter by state of job Valid states are <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+    state = 'completed' # str | filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+    updated_since = '2013-02-21T00:00:00.000Z' # str | filter by jobs updated since given date
 
     try:
         # List jobs
-        api_response = api_instance.jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state)
+        api_response = api_instance.jobs_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, owned_by=owned_by, assigned_to=assigned_to, state=state, updated_since=updated_since)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobsApi->jobs_list: %s\n" % e)
@@ -909,10 +912,11 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
  **owned_by** | **str**| filter by user owning job | [optional] 
  **assigned_to** | **str**| filter by user assigned to job | [optional] 
- **state** | **str**| filter by state of job Valid states are &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+ **state** | **str**| filter by state of job; valid states are: &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+ **updated_since** | **str**| filter by jobs updated since given date | [optional] 
 
 ### Return type
 

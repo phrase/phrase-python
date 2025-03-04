@@ -44,7 +44,10 @@ class TestAccountDetails(unittest.TestCase):
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 company_logo_url = '', 
-                subscription = {"is_current":true,"trial_expired":false}
+                subscription = {"is_current":true,"trial_expired":false}, 
+                roles = [
+                    ''
+                    ]
             )
         else :
             return AccountDetails(

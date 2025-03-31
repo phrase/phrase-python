@@ -35,20 +35,19 @@ class CommentRepliesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def replies_list(self, project_id, key_id, comment_id, replies_list_parameters, **kwargs):  # noqa: E501
+    def replies_list(self, project_id, key_id, comment_id, **kwargs):  # noqa: E501
         """List replies  # noqa: E501
 
         List all replies for a comment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.replies_list(project_id, key_id, comment_id, replies_list_parameters, async_req=True)
+        >>> thread = api.replies_list(project_id, key_id, comment_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str key_id: Translation Key ID (required)
         :param str comment_id: Comment ID (required)
-        :param RepliesListParameters replies_list_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
@@ -68,22 +67,21 @@ class CommentRepliesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.replies_list_with_http_info(project_id, key_id, comment_id, replies_list_parameters, **kwargs)  # noqa: E501
+        return self.replies_list_with_http_info(project_id, key_id, comment_id, **kwargs)  # noqa: E501
 
-    def replies_list_with_http_info(self, project_id, key_id, comment_id, replies_list_parameters, **kwargs):  # noqa: E501
+    def replies_list_with_http_info(self, project_id, key_id, comment_id, **kwargs):  # noqa: E501
         """List replies  # noqa: E501
 
         List all replies for a comment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.replies_list_with_http_info(project_id, key_id, comment_id, replies_list_parameters, async_req=True)
+        >>> thread = api.replies_list_with_http_info(project_id, key_id, comment_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str key_id: Translation Key ID (required)
         :param str comment_id: Comment ID (required)
-        :param RepliesListParameters replies_list_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
@@ -111,7 +109,6 @@ class CommentRepliesApi(object):
             'project_id',
             'key_id',
             'comment_id',
-            'replies_list_parameters',
             'x_phrase_app_otp',
             'page',
             'per_page',
@@ -149,10 +146,6 @@ class CommentRepliesApi(object):
         if self.api_client.client_side_validation and ('comment_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['comment_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `comment_id` when calling `replies_list`")  # noqa: E501
-        # verify the required parameter 'replies_list_parameters' is set
-        if self.api_client.client_side_validation and ('replies_list_parameters' not in local_var_params or  # noqa: E501
-                                                        local_var_params['replies_list_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `replies_list_parameters` when calling `replies_list`")  # noqa: E501
 
         collection_formats = {}
 
@@ -187,14 +180,8 @@ class CommentRepliesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'replies_list_parameters' in local_var_params:
-            body_params = local_var_params['replies_list_parameters']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting

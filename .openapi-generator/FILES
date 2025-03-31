@@ -34,7 +34,6 @@ docs/CommentReactionsApi.md
 docs/CommentRepliesApi.md
 docs/CommentUpdateParameters.md
 docs/CommentsApi.md
-docs/CommentsListParameters.md
 docs/CurrentUser.md
 docs/CustomMetadataApi.md
 docs/CustomMetadataDataType.md
@@ -188,7 +187,6 @@ docs/ReleaseTriggersApi.md
 docs/ReleaseUpdateParameters.md
 docs/ReleaseUpdateParameters1.md
 docs/ReleasesApi.md
-docs/RepliesListParameters.md
 docs/RepoSync.md
 docs/RepoSyncEvent.md
 docs/RepoSyncEventsApi.md
@@ -355,7 +353,6 @@ phrase_api/models/comment_create_parameters1.py
 phrase_api/models/comment_mark_read_parameters.py
 phrase_api/models/comment_reaction.py
 phrase_api/models/comment_update_parameters.py
-phrase_api/models/comments_list_parameters.py
 phrase_api/models/current_user.py
 phrase_api/models/custom_metadata_data_type.py
 phrase_api/models/custom_metadata_properties_create_parameters.py
@@ -479,7 +476,6 @@ phrase_api/models/release_preview.py
 phrase_api/models/release_trigger.py
 phrase_api/models/release_update_parameters.py
 phrase_api/models/release_update_parameters1.py
-phrase_api/models/replies_list_parameters.py
 phrase_api/models/repo_sync.py
 phrase_api/models/repo_sync_event.py
 phrase_api/models/screenshot.py
@@ -582,7 +578,6 @@ test/test_comment_reactions_api.py
 test/test_comment_replies_api.py
 test/test_comment_update_parameters.py
 test/test_comments_api.py
-test/test_comments_list_parameters.py
 test/test_current_user.py
 test/test_custom_metadata_api.py
 test/test_custom_metadata_data_type.py
@@ -735,7 +730,6 @@ test/test_release_triggers_api.py
 test/test_release_update_parameters.py
 test/test_release_update_parameters1.py
 test/test_releases_api.py
-test/test_replies_list_parameters.py
 test/test_repo_sync.py
 test/test_repo_sync_event.py
 test/test_repo_sync_events_api.py

@@ -1028,19 +1028,18 @@ class CommentsApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def comments_list(self, project_id, key_id, comments_list_parameters, **kwargs):  # noqa: E501
+    def comments_list(self, project_id, key_id, **kwargs):  # noqa: E501
         """List comments  # noqa: E501
 
         List all comments for a key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.comments_list(project_id, key_id, comments_list_parameters, async_req=True)
+        >>> thread = api.comments_list(project_id, key_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str key_id: Translation Key ID (required)
-        :param CommentsListParameters comments_list_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
@@ -1061,21 +1060,20 @@ class CommentsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.comments_list_with_http_info(project_id, key_id, comments_list_parameters, **kwargs)  # noqa: E501
+        return self.comments_list_with_http_info(project_id, key_id, **kwargs)  # noqa: E501
 
-    def comments_list_with_http_info(self, project_id, key_id, comments_list_parameters, **kwargs):  # noqa: E501
+    def comments_list_with_http_info(self, project_id, key_id, **kwargs):  # noqa: E501
         """List comments  # noqa: E501
 
         List all comments for a key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.comments_list_with_http_info(project_id, key_id, comments_list_parameters, async_req=True)
+        >>> thread = api.comments_list_with_http_info(project_id, key_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str key_id: Translation Key ID (required)
-        :param CommentsListParameters comments_list_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
@@ -1103,7 +1101,6 @@ class CommentsApi(object):
         all_params = [
             'project_id',
             'key_id',
-            'comments_list_parameters',
             'x_phrase_app_otp',
             'page',
             'per_page',
@@ -1138,10 +1135,6 @@ class CommentsApi(object):
         if self.api_client.client_side_validation and ('key_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['key_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `key_id` when calling `comments_list`")  # noqa: E501
-        # verify the required parameter 'comments_list_parameters' is set
-        if self.api_client.client_side_validation and ('comments_list_parameters' not in local_var_params or  # noqa: E501
-                                                        local_var_params['comments_list_parameters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `comments_list_parameters` when calling `comments_list`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1177,14 +1170,8 @@ class CommentsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'comments_list_parameters' in local_var_params:
-            body_params = local_var_params['comments_list_parameters']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting

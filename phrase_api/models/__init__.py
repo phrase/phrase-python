@@ -36,7 +36,6 @@ from phrase_api.models.comment_create_parameters1 import CommentCreateParameters
 from phrase_api.models.comment_mark_read_parameters import CommentMarkReadParameters
 from phrase_api.models.comment_reaction import CommentReaction
 from phrase_api.models.comment_update_parameters import CommentUpdateParameters
-from phrase_api.models.comments_list_parameters import CommentsListParameters
 from phrase_api.models.current_user import CurrentUser
 from phrase_api.models.custom_metadata_data_type import CustomMetadataDataType
 from phrase_api.models.custom_metadata_properties_create_parameters import CustomMetadataPropertiesCreateParameters
@@ -160,7 +159,6 @@ from phrase_api.models.release_preview import ReleasePreview
 from phrase_api.models.release_trigger import ReleaseTrigger
 from phrase_api.models.release_update_parameters import ReleaseUpdateParameters
 from phrase_api.models.release_update_parameters1 import ReleaseUpdateParameters1
-from phrase_api.models.replies_list_parameters import RepliesListParameters
 from phrase_api.models.repo_sync import RepoSync
 from phrase_api.models.repo_sync_event import RepoSyncEvent
 from phrase_api.models.screenshot import Screenshot

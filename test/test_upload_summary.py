@@ -44,7 +44,9 @@ class TestUploadSummary(unittest.TestCase):
                 translations_created = 56, 
                 translations_updated = 56, 
                 tags_created = 56, 
-                translation_keys_ignored = 56
+                translation_keys_ignored = 56, 
+                processed_translations = 56, 
+                upload_total_translations = 56
             )
         else :
             return UploadSummary(

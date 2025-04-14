@@ -54,7 +54,9 @@ class TestUpload(unittest.TestCase):
                     translations_created = 56, 
                     translations_updated = 56, 
                     tags_created = 56, 
-                    translation_keys_ignored = 56, ), 
+                    translation_keys_ignored = 56, 
+                    processed_translations = 56, 
+                    upload_total_translations = 56, ), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

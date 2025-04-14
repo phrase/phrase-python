@@ -39,7 +39,9 @@ class UploadSummary(object):
         'translations_created': 'int',
         'translations_updated': 'int',
         'tags_created': 'int',
-        'translation_keys_ignored': 'int'
+        'translation_keys_ignored': 'int',
+        'processed_translations': 'int',
+        'upload_total_translations': 'int'
     }
 
     attribute_map = {
@@ -50,10 +52,12 @@ class UploadSummary(object):
         'translations_created': 'translations_created',
         'translations_updated': 'translations_updated',
         'tags_created': 'tags_created',
-        'translation_keys_ignored': 'translation_keys_ignored'
+        'translation_keys_ignored': 'translation_keys_ignored',
+        'processed_translations': 'processed_translations',
+        'upload_total_translations': 'upload_total_translations'
     }
 
-    def __init__(self, locales_created=None, translation_keys_created=None, translation_keys_updated=None, translation_keys_unmentioned=None, translations_created=None, translations_updated=None, tags_created=None, translation_keys_ignored=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, locales_created=None, translation_keys_created=None, translation_keys_updated=None, translation_keys_unmentioned=None, translations_created=None, translations_updated=None, tags_created=None, translation_keys_ignored=None, processed_translations=None, upload_total_translations=None, local_vars_configuration=None):  # noqa: E501
         """UploadSummary - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +71,8 @@ class UploadSummary(object):
         self._translations_updated = None
         self._tags_created = None
         self._translation_keys_ignored = None
+        self._processed_translations = None
+        self._upload_total_translations = None
         self.discriminator = None
 
         if locales_created is not None:
@@ -85,6 +91,10 @@ class UploadSummary(object):
             self.tags_created = tags_created
         if translation_keys_ignored is not None:
             self.translation_keys_ignored = translation_keys_ignored
+        if processed_translations is not None:
+            self.processed_translations = processed_translations
+        if upload_total_translations is not None:
+            self.upload_total_translations = upload_total_translations
 
     @property
     def locales_created(self):
@@ -253,6 +263,48 @@ class UploadSummary(object):
         """
 
         self._translation_keys_ignored = translation_keys_ignored
+
+    @property
+    def processed_translations(self):
+        """Gets the processed_translations of this UploadSummary.  # noqa: E501
+
+
+        :return: The processed_translations of this UploadSummary.  # noqa: E501
+        :rtype: int
+        """
+        return self._processed_translations
+
+    @processed_translations.setter
+    def processed_translations(self, processed_translations):
+        """Sets the processed_translations of this UploadSummary.
+
+
+        :param processed_translations: The processed_translations of this UploadSummary.  # noqa: E501
+        :type: int
+        """
+
+        self._processed_translations = processed_translations
+
+    @property
+    def upload_total_translations(self):
+        """Gets the upload_total_translations of this UploadSummary.  # noqa: E501
+
+
+        :return: The upload_total_translations of this UploadSummary.  # noqa: E501
+        :rtype: int
+        """
+        return self._upload_total_translations
+
+    @upload_total_translations.setter
+    def upload_total_translations(self, upload_total_translations):
+        """Sets the upload_total_translations of this UploadSummary.
+
+
+        :param upload_total_translations: The upload_total_translations of this UploadSummary.  # noqa: E501
+        :type: int
+        """
+
+        self._upload_total_translations = upload_total_translations
 
     def to_dict(self):
         """Returns the model properties as a dict"""

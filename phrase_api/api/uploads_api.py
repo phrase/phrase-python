@@ -63,6 +63,7 @@ class UploadsApi(object):
         :param object locale_mapping: Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
         :param object format_options: Additional options available for specific formats. See our format guide for the [complete list](https://support.phrase.com/hc/en-us/articles/9652464547740-List-of-Supported-File-Types-Strings).
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
+        :param bool verify_mentioned_translations: Indicates whether all translations mentioned in the upload should be verified.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
         :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
         :param str translation_key_prefix: This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized.
@@ -108,6 +109,7 @@ class UploadsApi(object):
         :param object locale_mapping: Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
         :param object format_options: Additional options available for specific formats. See our format guide for the [complete list](https://support.phrase.com/hc/en-us/articles/9652464547740-List-of-Supported-File-Types-Strings).
         :param bool autotranslate: If set, translations for the uploaded language will be fetched automatically.
+        :param bool verify_mentioned_translations: Indicates whether all translations mentioned in the upload should be verified.
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
         :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
         :param str translation_key_prefix: This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized.
@@ -146,6 +148,7 @@ class UploadsApi(object):
             'locale_mapping',
             'format_options',
             'autotranslate',
+            'verify_mentioned_translations',
             'mark_reviewed',
             'tag_only_affected_keys',
             'translation_key_prefix'
@@ -230,6 +233,8 @@ class UploadsApi(object):
             form_params.append(('format_options', local_var_params['format_options']))  # noqa: E501
         if 'autotranslate' in local_var_params:
             form_params.append(('autotranslate', local_var_params['autotranslate']))  # noqa: E501
+        if 'verify_mentioned_translations' in local_var_params:
+            form_params.append(('verify_mentioned_translations', local_var_params['verify_mentioned_translations']))  # noqa: E501
         if 'mark_reviewed' in local_var_params:
             form_params.append(('mark_reviewed', local_var_params['mark_reviewed']))  # noqa: E501
         if 'tag_only_affected_keys' in local_var_params:

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **upload_create**
-> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
+> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
 
 Upload a new file
 
@@ -51,13 +51,14 @@ with phrase_api.ApiClient(configuration) as api_client:
     locale_mapping = None # object | Mapping between locale names and translation columns. Required in some formats like CSV or XLSX.
     format_options = None # object | Additional options available for specific formats. See our format guide for the [complete list](https://support.phrase.com/hc/en-us/articles/9652464547740-List-of-Supported-File-Types-Strings).
     autotranslate = True # bool | If set, translations for the uploaded language will be fetched automatically.
+    verify_mentioned_translations = False # bool | Indicates whether all translations mentioned in the upload should be verified. (default to False)
     mark_reviewed = True # bool | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
     tag_only_affected_keys = False # bool | Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false` (default to False)
     translation_key_prefix = 'translation_key_prefix_example' # str | This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized.
 
     try:
         # Upload a new file
-        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
+        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UploadsApi->upload_create: %s\n" % e)
@@ -86,6 +87,7 @@ Name | Type | Description  | Notes
  **locale_mapping** | [**object**](object.md)| Mapping between locale names and translation columns. Required in some formats like CSV or XLSX. | [optional] 
  **format_options** | [**object**](object.md)| Additional options available for specific formats. See our format guide for the [complete list](https://support.phrase.com/hc/en-us/articles/9652464547740-List-of-Supported-File-Types-Strings). | [optional] 
  **autotranslate** | **bool**| If set, translations for the uploaded language will be fetched automatically. | [optional] 
+ **verify_mentioned_translations** | **bool**| Indicates whether all translations mentioned in the upload should be verified. | [optional] [default to False]
  **mark_reviewed** | **bool**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project. | [optional] 
  **tag_only_affected_keys** | **bool**| Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is &#x60;false&#x60; | [optional] [default to False]
  **translation_key_prefix** | **str**| This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized. | [optional] 

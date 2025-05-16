@@ -62,6 +62,13 @@ class TestTranslationsApi(unittest.TestCase):
         """
         pass
 
+    def test_translation_unreview(self):
+        """Test case for translation_unreview
+
+        Unreview a translation  # noqa: E501
+        """
+        pass
+
     def test_translation_unverify(self):
         """Test case for translation_unverify
 
@@ -129,6 +136,13 @@ class TestTranslationsApi(unittest.TestCase):
         """Test case for translations_search
 
         Search translations  # noqa: E501
+        """
+        pass
+
+    def test_translations_unreview_collection(self):
+        """Test case for translations_unreview_collection
+
+        Unreview translations selected by query  # noqa: E501
         """
         pass
 

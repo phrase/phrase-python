@@ -239,6 +239,7 @@ docs/TranslationKeyDetails.md
 docs/TranslationOrder.md
 docs/TranslationParent.md
 docs/TranslationReviewParameters.md
+docs/TranslationUnreviewParameters.md
 docs/TranslationUnverifyParameters.md
 docs/TranslationUpdateParameters.md
 docs/TranslationVerifyParameters.md
@@ -249,6 +250,7 @@ docs/TranslationsExcludeParameters.md
 docs/TranslationsIncludeParameters.md
 docs/TranslationsReviewParameters.md
 docs/TranslationsSearchParameters.md
+docs/TranslationsUnreviewParameters.md
 docs/TranslationsUnverifyParameters.md
 docs/TranslationsVerifyParameters.md
 docs/Upload.md
@@ -518,6 +520,7 @@ phrase_api/models/translation_key_details.py
 phrase_api/models/translation_order.py
 phrase_api/models/translation_parent.py
 phrase_api/models/translation_review_parameters.py
+phrase_api/models/translation_unreview_parameters.py
 phrase_api/models/translation_unverify_parameters.py
 phrase_api/models/translation_update_parameters.py
 phrase_api/models/translation_verify_parameters.py
@@ -527,6 +530,7 @@ phrase_api/models/translations_exclude_parameters.py
 phrase_api/models/translations_include_parameters.py
 phrase_api/models/translations_review_parameters.py
 phrase_api/models/translations_search_parameters.py
+phrase_api/models/translations_unreview_parameters.py
 phrase_api/models/translations_unverify_parameters.py
 phrase_api/models/translations_verify_parameters.py
 phrase_api/models/upload.py
@@ -782,6 +786,7 @@ test/test_translation_key_details.py
 test/test_translation_order.py
 test/test_translation_parent.py
 test/test_translation_review_parameters.py
+test/test_translation_unreview_parameters.py
 test/test_translation_unverify_parameters.py
 test/test_translation_update_parameters.py
 test/test_translation_verify_parameters.py
@@ -792,6 +797,7 @@ test/test_translations_exclude_parameters.py
 test/test_translations_include_parameters.py
 test/test_translations_review_parameters.py
 test/test_translations_search_parameters.py
+test/test_translations_unreview_parameters.py
 test/test_translations_unverify_parameters.py
 test/test_translations_verify_parameters.py
 test/test_upload.py

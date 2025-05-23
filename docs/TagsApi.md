@@ -148,7 +148,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tag_show**
-> TagWithStats tag_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> TagWithStats tag_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp, omit_statistics=omit_statistics, branch=branch)
 
 Get a single tag
 
@@ -174,11 +174,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     name = 'name_example' # str | name (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    omit_statistics = true # bool | omit statistics in the response
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
         # Get a single tag
-        api_response = api_instance.tag_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        api_response = api_instance.tag_show(project_id, name, x_phrase_app_otp=x_phrase_app_otp, omit_statistics=omit_statistics, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling TagsApi->tag_show: %s\n" % e)
@@ -192,6 +193,7 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **name** | **str**| name | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **omit_statistics** | **bool**| omit statistics in the response | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
 
 ### Return type

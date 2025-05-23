@@ -309,6 +309,7 @@ class TagsApi(object):
         :param str project_id: Project ID (required)
         :param str name: name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param bool omit_statistics: omit statistics in the response
         :param str branch: specify the branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -337,6 +338,7 @@ class TagsApi(object):
         :param str project_id: Project ID (required)
         :param str name: name (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param bool omit_statistics: omit statistics in the response
         :param str branch: specify the branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -358,6 +360,7 @@ class TagsApi(object):
             'project_id',
             'name',
             'x_phrase_app_otp',
+            'omit_statistics',
             'branch'
         ]
         all_params.extend(
@@ -395,6 +398,8 @@ class TagsApi(object):
             path_params['name'] = local_var_params['name']  # noqa: E501
 
         query_params = []
+        if 'omit_statistics' in local_var_params and local_var_params['omit_statistics'] is not None:  # noqa: E501
+            query_params.append(('omit_statistics', local_var_params['omit_statistics']))  # noqa: E501
         if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 

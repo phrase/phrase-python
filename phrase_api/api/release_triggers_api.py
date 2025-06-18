@@ -312,7 +312,7 @@ class ReleaseTriggersApi(object):
     def release_triggers_list(self, account_id, distribution_id, **kwargs):  # noqa: E501
         """List release triggers  # noqa: E501
 
-        List all release triggers for the given distribution.<br> Note: Currently only one release trigger can exist per distribution.   # noqa: E501
+        List all release triggers for the given distribution.  Note: Currently only one release trigger can exist per distribution.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.release_triggers_list(account_id, distribution_id, async_req=True)
@@ -339,7 +339,7 @@ class ReleaseTriggersApi(object):
     def release_triggers_list_with_http_info(self, account_id, distribution_id, **kwargs):  # noqa: E501
         """List release triggers  # noqa: E501
 
-        List all release triggers for the given distribution.<br> Note: Currently only one release trigger can exist per distribution.   # noqa: E501
+        List all release triggers for the given distribution.  Note: Currently only one release trigger can exist per distribution.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.release_triggers_list_with_http_info(account_id, distribution_id, async_req=True)

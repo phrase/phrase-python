@@ -813,7 +813,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
-    state = 'completed' # str | filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+    state = 'completed' # str | filter by state of job; valid states are: `draft`, `in_progress`, `completed`
     updated_since = '2013-02-21T00:00:00.000Z' # str | filter by jobs updated since given date
 
     try:
@@ -835,7 +835,7 @@ Name | Type | Description  | Notes
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **owned_by** | **str**| filter by user owning job | [optional] 
  **assigned_to** | **str**| filter by user assigned to job | [optional] 
- **state** | **str**| filter by state of job; valid states are: &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+ **state** | **str**| filter by state of job; valid states are: &#x60;draft&#x60;, &#x60;in_progress&#x60;, &#x60;completed&#x60; | [optional] 
  **updated_since** | **str**| filter by jobs updated since given date | [optional] 
 
 ### Return type
@@ -892,7 +892,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | Branch to use
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
-    state = 'completed' # str | filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+    state = 'completed' # str | filter by state of job; valid states are: `draft`, `in_progress`, `completed`
     updated_since = '2013-02-21T00:00:00.000Z' # str | filter by jobs updated since given date
 
     try:
@@ -915,7 +915,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| Branch to use | [optional] 
  **owned_by** | **str**| filter by user owning job | [optional] 
  **assigned_to** | **str**| filter by user assigned to job | [optional] 
- **state** | **str**| filter by state of job; valid states are: &lt;code&gt;draft&lt;/code&gt;, &lt;code&gt;in_progress&lt;/code&gt;, &lt;code&gt;completed&lt;/code&gt; | [optional] 
+ **state** | **str**| filter by state of job; valid states are: &#x60;draft&#x60;, &#x60;in_progress&#x60;, &#x60;completed&#x60; | [optional] 
  **updated_since** | **str**| filter by jobs updated since given date | [optional] 
 
 ### Return type

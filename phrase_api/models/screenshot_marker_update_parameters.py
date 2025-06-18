@@ -111,7 +111,7 @@ class ScreenshotMarkerUpdateParameters(object):
     def presentation(self):
         """Gets the presentation of this ScreenshotMarkerUpdateParameters.  # noqa: E501
 
-        Presentation details of the screenshot marker in JSON format.<br/><br/>Each Screenshot Marker is represented as a rectangular shaped highlight box with the name of the specified Key attached. You can specify the marker position on the screenshot (<code>x</code>-axis and <code>y</code>-axis in pixels) from the top left corner of the screenshot and the dimensions of the marker itself (<code>w</code> and <code>h</code> in pixels).  # noqa: E501
+        Presentation details of the screenshot marker in JSON format.  Each Screenshot Marker is represented as a rectangular shaped highlight box with the name of the specified Key attached. You can specify the marker position on the screenshot (`x`-axis and `y`-axis in pixels) from the top left corner of the screenshot and the dimensions of the marker itself (`w` and `h` in pixels).   # noqa: E501
 
         :return: The presentation of this ScreenshotMarkerUpdateParameters.  # noqa: E501
         :rtype: str
@@ -122,7 +122,7 @@ class ScreenshotMarkerUpdateParameters(object):
     def presentation(self, presentation):
         """Sets the presentation of this ScreenshotMarkerUpdateParameters.
 
-        Presentation details of the screenshot marker in JSON format.<br/><br/>Each Screenshot Marker is represented as a rectangular shaped highlight box with the name of the specified Key attached. You can specify the marker position on the screenshot (<code>x</code>-axis and <code>y</code>-axis in pixels) from the top left corner of the screenshot and the dimensions of the marker itself (<code>w</code> and <code>h</code> in pixels).  # noqa: E501
+        Presentation details of the screenshot marker in JSON format.  Each Screenshot Marker is represented as a rectangular shaped highlight box with the name of the specified Key attached. You can specify the marker position on the screenshot (`x`-axis and `y`-axis in pixels) from the top left corner of the screenshot and the dimensions of the marker itself (`w` and `h` in pixels).   # noqa: E501
 
         :param presentation: The presentation of this ScreenshotMarkerUpdateParameters.  # noqa: E501
         :type: str

@@ -189,7 +189,7 @@ class DistributionCreateParameters(object):
     def format_options(self):
         """Gets the format_options of this DistributionCreateParameters.  # noqa: E501
 
-        Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>.  # noqa: E501
+        Additional formatting and render options. Only `enclose_in_cdata` is available for platform `android`.   # noqa: E501
 
         :return: The format_options of this DistributionCreateParameters.  # noqa: E501
         :rtype: Dict[str, str]
@@ -200,7 +200,7 @@ class DistributionCreateParameters(object):
     def format_options(self, format_options):
         """Sets the format_options of this DistributionCreateParameters.
 
-        Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>.  # noqa: E501
+        Additional formatting and render options. Only `enclose_in_cdata` is available for platform `android`.   # noqa: E501
 
         :param format_options: The format_options of this DistributionCreateParameters.  # noqa: E501
         :type: Dict[str, str]

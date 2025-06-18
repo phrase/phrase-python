@@ -88,7 +88,7 @@ class InvitationCreateParameters(object):
     def email(self):
         """Gets the email of this InvitationCreateParameters.  # noqa: E501
 
-        The email of the invited user. The <code>email</code> can not be updated once created. Create a new invitation for each unique email.  # noqa: E501
+        The email of the invited user. The `email` can not be updated once created. Create a new invitation for each unique email.  # noqa: E501
 
         :return: The email of this InvitationCreateParameters.  # noqa: E501
         :rtype: str
@@ -99,7 +99,7 @@ class InvitationCreateParameters(object):
     def email(self, email):
         """Sets the email of this InvitationCreateParameters.
 
-        The email of the invited user. The <code>email</code> can not be updated once created. Create a new invitation for each unique email.  # noqa: E501
+        The email of the invited user. The `email` can not be updated once created. Create a new invitation for each unique email.  # noqa: E501
 
         :param email: The email of this InvitationCreateParameters.  # noqa: E501
         :type: str
@@ -253,7 +253,7 @@ class InvitationCreateParameters(object):
     def permissions(self):
         """Gets the permissions of this InvitationCreateParameters.  # noqa: E501
 
-        Additional permissions depending on invitation role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
+        Additional permissions depending on invitation role. Available permissions are `create_upload` and `review_translations`  # noqa: E501
 
         :return: The permissions of this InvitationCreateParameters.  # noqa: E501
         :rtype: Dict[str, str]
@@ -264,7 +264,7 @@ class InvitationCreateParameters(object):
     def permissions(self, permissions):
         """Sets the permissions of this InvitationCreateParameters.
 
-        Additional permissions depending on invitation role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
+        Additional permissions depending on invitation role. Available permissions are `create_upload` and `review_translations`  # noqa: E501
 
         :param permissions: The permissions of this InvitationCreateParameters.  # noqa: E501
         :type: Dict[str, str]

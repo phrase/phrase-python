@@ -38,7 +38,7 @@ class MembersApi(object):
     def member_delete(self, account_id, id, **kwargs):  # noqa: E501
         """Remove a user from the account  # noqa: E501
 
-        Remove a user from the account. The user will be removed from the account but not deleted from Phrase. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Remove a user from the account. The user will be removed from the account but not deleted from Phrase. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_delete(account_id, id, async_req=True)
@@ -65,7 +65,7 @@ class MembersApi(object):
     def member_delete_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Remove a user from the account  # noqa: E501
 
-        Remove a user from the account. The user will be removed from the account but not deleted from Phrase. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Remove a user from the account. The user will be removed from the account but not deleted from Phrase. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_delete_with_http_info(account_id, id, async_req=True)
@@ -162,7 +162,7 @@ class MembersApi(object):
     def member_show(self, account_id, id, **kwargs):  # noqa: E501
         """Get single member  # noqa: E501
 
-        Get details on a single user in the account. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Get details on a single user in the account. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_show(account_id, id, async_req=True)
@@ -189,7 +189,7 @@ class MembersApi(object):
     def member_show_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Get single member  # noqa: E501
 
-        Get details on a single user in the account. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Get details on a single user in the account. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_show_with_http_info(account_id, id, async_req=True)
@@ -290,7 +290,7 @@ class MembersApi(object):
     def member_update(self, account_id, id, member_update_parameters, **kwargs):  # noqa: E501
         """Update a member  # noqa: E501
 
-        Update user permissions in the account. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update user permissions in the account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_update(account_id, id, member_update_parameters, async_req=True)
@@ -318,7 +318,7 @@ class MembersApi(object):
     def member_update_with_http_info(self, account_id, id, member_update_parameters, **kwargs):  # noqa: E501
         """Update a member  # noqa: E501
 
-        Update user permissions in the account. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update user permissions in the account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_update_with_http_info(account_id, id, member_update_parameters, async_req=True)
@@ -431,7 +431,7 @@ class MembersApi(object):
     def member_update_settings(self, project_id, id, member_update_settings_parameters, **kwargs):  # noqa: E501
         """Update a member's project settings  # noqa: E501
 
-        Update user settings in the project. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update user settings in the project. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_update_settings(project_id, id, member_update_settings_parameters, async_req=True)
@@ -459,7 +459,7 @@ class MembersApi(object):
     def member_update_settings_with_http_info(self, project_id, id, member_update_settings_parameters, **kwargs):  # noqa: E501
         """Update a member's project settings  # noqa: E501
 
-        Update user settings in the project. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update user settings in the project. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_update_settings_with_http_info(project_id, id, member_update_settings_parameters, async_req=True)
@@ -572,7 +572,7 @@ class MembersApi(object):
     def members_list(self, account_id, **kwargs):  # noqa: E501
         """List members  # noqa: E501
 
-        Get all users active in the account. It also lists resources like projects and locales the member has access to. In case nothing is shown the default access from the role is used. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Get all users active in the account. It also lists resources like projects and locales the member has access to. In case nothing is shown the default access from the role is used. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.members_list(account_id, async_req=True)
@@ -600,7 +600,7 @@ class MembersApi(object):
     def members_list_with_http_info(self, account_id, **kwargs):  # noqa: E501
         """List members  # noqa: E501
 
-        Get all users active in the account. It also lists resources like projects and locales the member has access to. In case nothing is shown the default access from the role is used. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Get all users active in the account. It also lists resources like projects and locales the member has access to. In case nothing is shown the default access from the role is used. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.members_list_with_http_info(account_id, async_req=True)

@@ -36,8 +36,8 @@ with phrase_api.ApiClient(configuration) as api_client:
     locale_id = 'locale_id_example' # str | Locale ID (required)
     locale_download_create_parameters = phrase_api.LocaleDownloadCreateParameters() # LocaleDownloadCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    if_modified_since = 'if_modified_since_example' # str | Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-    if_none_match = 'if_none_match_example' # str | ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+    if_modified_since = 'if_modified_since_example' # str | Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+    if_none_match = 'if_none_match_example' # str | ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
 
     try:
         # Initiate async download of a locale
@@ -56,8 +56,8 @@ Name | Type | Description  | Notes
  **locale_id** | **str**| Locale ID | 
  **locale_download_create_parameters** | [**LocaleDownloadCreateParameters**](LocaleDownloadCreateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **if_modified_since** | **str**| Last modified condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
- **if_none_match** | **str**| ETag condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
+ **if_modified_since** | **str**| Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional) | [optional] 
+ **if_none_match** | **str**| ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional) | [optional] 
 
 ### Return type
 
@@ -110,8 +110,8 @@ with phrase_api.ApiClient(configuration) as api_client:
     locale_id = 'locale_id_example' # str | Locale ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    if_modified_since = 'if_modified_since_example' # str | Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-    if_none_match = 'if_none_match_example' # str | ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+    if_modified_since = 'if_modified_since_example' # str | Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+    if_none_match = 'if_none_match_example' # str | ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
 
     try:
         # Show status of an async locale download
@@ -130,8 +130,8 @@ Name | Type | Description  | Notes
  **locale_id** | **str**| Locale ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **if_modified_since** | **str**| Last modified condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
- **if_none_match** | **str**| ETag condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
+ **if_modified_since** | **str**| Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional) | [optional] 
+ **if_none_match** | **str**| ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional) | [optional] 
 
 ### Return type
 

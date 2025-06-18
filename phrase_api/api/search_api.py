@@ -38,7 +38,7 @@ class SearchApi(object):
     def search_in_account(self, account_id, search_in_account_parameters, **kwargs):  # noqa: E501
         """Search across projects  # noqa: E501
 
-        Search for keys and translations in all account projects <br><br><i>Note: Search is limited to 10000 results and may not include recently updated data depending on the project sizes.</i>  # noqa: E501
+        Search for keys and translations in all account projects  *Note: Search is limited to 10000 results and may not include recently updated data depending on the project sizes.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.search_in_account(account_id, search_in_account_parameters, async_req=True)
@@ -65,7 +65,7 @@ class SearchApi(object):
     def search_in_account_with_http_info(self, account_id, search_in_account_parameters, **kwargs):  # noqa: E501
         """Search across projects  # noqa: E501
 
-        Search for keys and translations in all account projects <br><br><i>Note: Search is limited to 10000 results and may not include recently updated data depending on the project sizes.</i>  # noqa: E501
+        Search for keys and translations in all account projects  *Note: Search is limited to 10000 results and may not include recently updated data depending on the project sizes.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.search_in_account_with_http_info(account_id, search_in_account_parameters, async_req=True)

@@ -1305,7 +1305,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `unverified:{true|false}` for verification status * `tags:XYZ` for tags on the translation * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1338,7 +1338,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `unverified:{true|false}` for verification status * `tags:XYZ` for tags on the translation * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1448,7 +1448,7 @@ class TranslationsApi(object):
     def translations_by_locale(self, project_id, locale_id, **kwargs):  # noqa: E501
         """List translations by locale  # noqa: E501
 
-        List translations for a specific locale. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.  # noqa: E501
+        List translations for a specific locale. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_by_locale(project_id, locale_id, async_req=True)
@@ -1463,7 +1463,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: - `id:translation_id,...` for queries on a comma-separated list of ids - `unverified:{true|false}` for verification status - `tags:XYZ` for tags on the translation - `excluded:{true|false}` for exclusion status - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1481,7 +1481,7 @@ class TranslationsApi(object):
     def translations_by_locale_with_http_info(self, project_id, locale_id, **kwargs):  # noqa: E501
         """List translations by locale  # noqa: E501
 
-        List translations for a specific locale. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.  # noqa: E501
+        List translations for a specific locale. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_by_locale_with_http_info(project_id, locale_id, async_req=True)
@@ -1496,7 +1496,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: - `id:translation_id,...` for queries on a comma-separated list of ids - `unverified:{true|false}` for verification status - `tags:XYZ` for tags on the translation - `excluded:{true|false}` for exclusion status - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1870,7 +1870,7 @@ class TranslationsApi(object):
     def translations_list(self, project_id, **kwargs):  # noqa: E501
         """List all translations  # noqa: E501
 
-        List translations for the given project. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.  # noqa: E501
+        List translations for the given project. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_list(project_id, async_req=True)
@@ -1879,14 +1879,14 @@ class TranslationsApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_modified_since: Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+        :param str if_none_match: ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li>   <li><code>reviewed_after:2013-02-21T00:00:00Z</code> for fetching translations that were reviewed after the given timestamp</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1904,7 +1904,7 @@ class TranslationsApi(object):
     def translations_list_with_http_info(self, project_id, **kwargs):  # noqa: E501
         """List all translations  # noqa: E501
 
-        List translations for the given project. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.  # noqa: E501
+        List translations for the given project. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_list_with_http_info(project_id, async_req=True)
@@ -1913,14 +1913,14 @@ class TranslationsApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_modified_since: Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+        :param str if_none_match: ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li>   <li><code>reviewed_after:2013-02-21T00:00:00Z</code> for fetching translations that were reviewed after the given timestamp</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2161,7 +2161,7 @@ class TranslationsApi(object):
     def translations_search(self, project_id, translations_search_parameters, **kwargs):  # noqa: E501
         """Search translations  # noqa: E501
 
-        Search translations for the given project. Provides the same search interface as <code>translations#index</code> but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.  # noqa: E501
+        Search translations for the given project. Provides the same search interface as `translations#index` but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_search(project_id, translations_search_parameters, async_req=True)
@@ -2190,7 +2190,7 @@ class TranslationsApi(object):
     def translations_search_with_http_info(self, project_id, translations_search_parameters, **kwargs):  # noqa: E501
         """Search translations  # noqa: E501
 
-        Search translations for the given project. Provides the same search interface as <code>translations#index</code> but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.  # noqa: E501
+        Search translations for the given project. Provides the same search interface as `translations#index` but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_search_with_http_info(project_id, translations_search_parameters, async_req=True)

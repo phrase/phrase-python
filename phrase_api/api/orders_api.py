@@ -179,7 +179,7 @@ class OrdersApi(object):
     def order_create(self, project_id, order_create_parameters, **kwargs):  # noqa: E501
         """Create a new order  # noqa: E501
 
-        Create a new order. Access token scope must include <code>orders.create</code>.  # noqa: E501
+        Create a new order. Access token scope must include `orders.create`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.order_create(project_id, order_create_parameters, async_req=True)
@@ -206,7 +206,7 @@ class OrdersApi(object):
     def order_create_with_http_info(self, project_id, order_create_parameters, **kwargs):  # noqa: E501
         """Create a new order  # noqa: E501
 
-        Create a new order. Access token scope must include <code>orders.create</code>.  # noqa: E501
+        Create a new order. Access token scope must include `orders.create`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.order_create_with_http_info(project_id, order_create_parameters, async_req=True)

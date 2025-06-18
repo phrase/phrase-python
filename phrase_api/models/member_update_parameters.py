@@ -223,7 +223,7 @@ class MemberUpdateParameters(object):
     def permissions(self):
         """Gets the permissions of this MemberUpdateParameters.  # noqa: E501
 
-        Additional permissions depending on member role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
+        Additional permissions depending on member role. Available permissions are `create_upload` and `review_translations`  # noqa: E501
 
         :return: The permissions of this MemberUpdateParameters.  # noqa: E501
         :rtype: Dict[str, str]
@@ -234,7 +234,7 @@ class MemberUpdateParameters(object):
     def permissions(self, permissions):
         """Sets the permissions of this MemberUpdateParameters.
 
-        Additional permissions depending on member role. Available permissions are <code>create_upload</code> and <code>review_translations</code>  # noqa: E501
+        Additional permissions depending on member role. Available permissions are `create_upload` and `review_translations`  # noqa: E501
 
         :param permissions: The permissions of this MemberUpdateParameters.  # noqa: E501
         :type: Dict[str, str]

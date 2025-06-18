@@ -124,7 +124,7 @@ class LocaleDownloadCreateParameters(object):
     def file_format(self):
         """Gets the file_format of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        File format name. See the <a href=\"https://support.phrase.com/hc/en-us/sections/6111343326364\">format guide</a> for all supported file formats.  # noqa: E501
+        File format name. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for all supported file formats.  # noqa: E501
 
         :return: The file_format of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: str
@@ -135,7 +135,7 @@ class LocaleDownloadCreateParameters(object):
     def file_format(self, file_format):
         """Sets the file_format of this LocaleDownloadCreateParameters.
 
-        File format name. See the <a href=\"https://support.phrase.com/hc/en-us/sections/6111343326364\">format guide</a> for all supported file formats.  # noqa: E501
+        File format name. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for all supported file formats.  # noqa: E501
 
         :param file_format: The file_format of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: str
@@ -287,7 +287,7 @@ class LocaleDownloadCreateParameters(object):
     def format_options(self):
         """Gets the format_options of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        Additional formatting and render options. See the <a href=\"https://support.phrase.com/hc/en-us/sections/6111343326364\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>  # noqa: E501
+        Additional formatting and render options. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for a list of options available for each format. Specify format options like this: `...&format_options[foo]=bar`  # noqa: E501
 
         :return: The format_options of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: object
@@ -298,7 +298,7 @@ class LocaleDownloadCreateParameters(object):
     def format_options(self, format_options):
         """Sets the format_options of this LocaleDownloadCreateParameters.
 
-        Additional formatting and render options. See the <a href=\"https://support.phrase.com/hc/en-us/sections/6111343326364\">format guide</a> for a list of options available for each format. Specify format options like this: <code>...&format_options[foo]=bar</code>  # noqa: E501
+        Additional formatting and render options. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for a list of options available for each format. Specify format options like this: `...&format_options[foo]=bar`  # noqa: E501
 
         :param format_options: The format_options of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: object
@@ -402,7 +402,7 @@ class LocaleDownloadCreateParameters(object):
     def fallback_locale_id(self):
         """Gets the fallback_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.  # noqa: E501
+        If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to `true`.  # noqa: E501
 
         :return: The fallback_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: str
@@ -413,7 +413,7 @@ class LocaleDownloadCreateParameters(object):
     def fallback_locale_id(self, fallback_locale_id):
         """Sets the fallback_locale_id of this LocaleDownloadCreateParameters.
 
-        If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to <code>true</code>.  # noqa: E501
+        If a key has no translation in the locale being downloaded the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires include_empty_translations to be set to `true`.  # noqa: E501
 
         :param fallback_locale_id: The fallback_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: str
@@ -425,7 +425,7 @@ class LocaleDownloadCreateParameters(object):
     def source_locale_id(self):
         """Gets the source_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a <code>tag</code> parameter indicating a specific job.  # noqa: E501
+        Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a `tag` parameter indicating a specific job.  # noqa: E501
 
         :return: The source_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: str
@@ -436,7 +436,7 @@ class LocaleDownloadCreateParameters(object):
     def source_locale_id(self, source_locale_id):
         """Sets the source_locale_id of this LocaleDownloadCreateParameters.
 
-        Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a <code>tag</code> parameter indicating a specific job.  # noqa: E501
+        Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a `tag` parameter indicating a specific job.  # noqa: E501
 
         :param source_locale_id: The source_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: str

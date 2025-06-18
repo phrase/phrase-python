@@ -49,8 +49,8 @@ class LocaleDownloadsApi(object):
         :param str locale_id: Locale ID (required)
         :param LocaleDownloadCreateParameters locale_download_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_modified_since: Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+        :param str if_none_match: ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -79,8 +79,8 @@ class LocaleDownloadsApi(object):
         :param str locale_id: Locale ID (required)
         :param LocaleDownloadCreateParameters locale_download_create_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_modified_since: Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+        :param str if_none_match: ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -200,8 +200,8 @@ class LocaleDownloadsApi(object):
         :param str locale_id: Locale ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_modified_since: Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+        :param str if_none_match: ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -230,8 +230,8 @@ class LocaleDownloadsApi(object):
         :param str locale_id: Locale ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str if_modified_since: Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-        :param str if_none_match: ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+        :param str if_modified_since: Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+        :param str if_none_match: ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

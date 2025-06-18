@@ -685,7 +685,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
     sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
-    q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+    q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | Specify a query to find translations by content (including wildcards).  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `unverified:{true|false}` for verification status * `tags:XYZ` for tags on the translation * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
 
     try:
         # List translations by key
@@ -708,7 +708,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| specify the branch to use | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
- **q** | **str**| Specify a query to find translations by content (including wildcards).&lt;br&gt;&lt;br&gt; The following qualifiers are supported in the query:&lt;br&gt; &lt;ul&gt;   &lt;li&gt;&lt;code&gt;id:translation_id,...&lt;/code&gt; for queries on a comma-separated list of ids&lt;/li&gt;   &lt;li&gt;&lt;code&gt;unverified:{true|false}&lt;/code&gt; for verification status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;tags:XYZ&lt;/code&gt; for tags on the translation&lt;/li&gt;   &lt;li&gt;&lt;code&gt;excluded:{true|false}&lt;/code&gt; for exclusion status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&lt;/code&gt; for date range queries&lt;/li&gt; &lt;/ul&gt; Find more examples &lt;a href&#x3D;\&quot;#overview--usage-examples\&quot;&gt;here&lt;/a&gt;.  | [optional] 
+ **q** | **str**| Specify a query to find translations by content (including wildcards).  The following qualifiers are supported in the query:  * &#x60;id:translation_id,...&#x60; for queries on a comma-separated list of ids * &#x60;unverified:{true|false}&#x60; for verification status * &#x60;tags:XYZ&#x60; for tags on the translation * &#x60;excluded:{true|false}&#x60; for exclusion status * &#x60;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&#x60; for date range queries  Find more examples [here](/en/api/strings/usage-examples).  | [optional] 
 
 ### Return type
 
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
 
 List translations by locale
 
-List translations for a specific locale. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.
+List translations for a specific locale. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint. 
 
 ### Example
 
@@ -765,7 +765,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
     sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
-    q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+    q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: - `id:translation_id,...` for queries on a comma-separated list of ids - `unverified:{true|false}` for verification status - `tags:XYZ` for tags on the translation - `excluded:{true|false}` for exclusion status - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
 
     try:
         # List translations by locale
@@ -788,7 +788,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| specify the branch to use | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
- **q** | **str**| Specify a query to find translations by content (including wildcards).&lt;br&gt;&lt;br&gt; &lt;i&gt;Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).&lt;/i&gt;&lt;br&gt; The following qualifiers are supported in the query:&lt;br&gt; &lt;ul&gt;   &lt;li&gt;&lt;code&gt;id:translation_id,...&lt;/code&gt; for queries on a comma-separated list of ids&lt;/li&gt;   &lt;li&gt;&lt;code&gt;unverified:{true|false}&lt;/code&gt; for verification status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;tags:XYZ&lt;/code&gt; for tags on the translation&lt;/li&gt;   &lt;li&gt;&lt;code&gt;excluded:{true|false}&lt;/code&gt; for exclusion status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&lt;/code&gt; for date range queries&lt;/li&gt; &lt;/ul&gt; Find more examples &lt;a href&#x3D;\&quot;#overview--usage-examples\&quot;&gt;here&lt;/a&gt;.  | [optional] 
+ **q** | **str**| Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: - &#x60;id:translation_id,...&#x60; for queries on a comma-separated list of ids - &#x60;unverified:{true|false}&#x60; for verification status - &#x60;tags:XYZ&#x60; for tags on the translation - &#x60;excluded:{true|false}&#x60; for exclusion status - &#x60;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&#x60; for date range queries  Find more examples [here](/en/api/strings/usage-examples).  | [optional] 
 
 ### Return type
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 List all translations
 
-List translations for the given project. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.
+List translations for the given project. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint. 
 
 ### Example
 
@@ -975,14 +975,14 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.TranslationsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    if_modified_since = 'if_modified_since_example' # str | Last modified condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
-    if_none_match = 'if_none_match_example' # str | ETag condition, see <a href=\"#overview--conditional-get-requests--http-caching\">Conditional GET requests / HTTP Caching</a> (optional)
+    if_modified_since = 'if_modified_since_example' # str | Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
+    if_none_match = 'if_none_match_example' # str | ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional)
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
     sort = 'updated_at' # str | Sort criteria. Can be one of: key_name, created_at, updated_at.
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
-    q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | Specify a query to find translations by content (including wildcards).<br><br> <i>Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).</i><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li>   <li><code>reviewed_after:2013-02-21T00:00:00Z</code> for fetching translations that were reviewed after the given timestamp</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
+    q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center' # str | Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
 
     try:
         # List all translations
@@ -999,14 +999,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **if_modified_since** | **str**| Last modified condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
- **if_none_match** | **str**| ETag condition, see &lt;a href&#x3D;\&quot;#overview--conditional-get-requests--http-caching\&quot;&gt;Conditional GET requests / HTTP Caching&lt;/a&gt; (optional) | [optional] 
+ **if_modified_since** | **str**| Last modified condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional) | [optional] 
+ **if_none_match** | **str**| ETag condition, see [Conditional GET requests / HTTP Caching](/en/api/strings/pagination#conditional-get-requests-%2F-http-caching) (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
  **sort** | **str**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional] 
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
- **q** | **str**| Specify a query to find translations by content (including wildcards).&lt;br&gt;&lt;br&gt; &lt;i&gt;Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).&lt;/i&gt;&lt;br&gt; The following qualifiers are supported in the query:&lt;br&gt; &lt;ul&gt;   &lt;li&gt;&lt;code&gt;id:translation_id,...&lt;/code&gt; for queries on a comma-separated list of ids&lt;/li&gt;   &lt;li&gt;&lt;code&gt;tags:XYZ&lt;/code&gt; for tags on the translation&lt;/li&gt;   &lt;li&gt;&lt;code&gt;unverified:{true|false}&lt;/code&gt; for verification status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;excluded:{true|false}&lt;/code&gt; for exclusion status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&lt;/code&gt; for date range queries&lt;/li&gt;   &lt;li&gt;&lt;code&gt;reviewed_after:2013-02-21T00:00:00Z&lt;/code&gt; for fetching translations that were reviewed after the given timestamp&lt;/li&gt; &lt;/ul&gt; Find more examples &lt;a href&#x3D;\&quot;#overview--usage-examples\&quot;&gt;here&lt;/a&gt;.  | [optional] 
+ **q** | **str**| Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query:  * &#x60;id:translation_id,...&#x60; for queries on a comma-separated list of ids * &#x60;tags:XYZ&#x60; for tags on the translation * &#x60;unverified:{true|false}&#x60; for verification status * &#x60;excluded:{true|false}&#x60; for exclusion status * &#x60;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&#x60; for date range queries * &#x60;reviewed_after:2013-02-21T00:00:00Z&#x60; for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples).  | [optional] 
 
 ### Return type
 
@@ -1104,7 +1104,7 @@ Name | Type | Description  | Notes
 
 Search translations
 
-Search translations for the given project. Provides the same search interface as <code>translations#index</code> but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the <code>locales#download</code> endpoint.
+Search translations for the given project. Provides the same search interface as `translations#index` but allows POST requests to avoid limitations imposed by GET requests. If you want to download all translations for one locale we recommend to use the `locales#download` endpoint.
 
 ### Example
 

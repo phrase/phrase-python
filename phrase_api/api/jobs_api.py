@@ -1545,7 +1545,7 @@ class JobsApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: `draft`, `in_progress`, `completed`
         :param str updated_since: filter by jobs updated since given date
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1577,7 +1577,7 @@ class JobsApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: `draft`, `in_progress`, `completed`
         :param str updated_since: filter by jobs updated since given date
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1695,7 +1695,7 @@ class JobsApi(object):
         :param str branch: Branch to use
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: `draft`, `in_progress`, `completed`
         :param str updated_since: filter by jobs updated since given date
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1728,7 +1728,7 @@ class JobsApi(object):
         :param str branch: Branch to use
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
-        :param str state: filter by state of job; valid states are: <code>draft</code>, <code>in_progress</code>, <code>completed</code>
+        :param str state: filter by state of job; valid states are: `draft`, `in_progress`, `completed`
         :param str updated_since: filter by jobs updated since given date
         :param _return_http_data_only: response data without head status code
                                        and headers

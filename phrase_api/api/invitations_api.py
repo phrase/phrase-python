@@ -38,7 +38,7 @@ class InvitationsApi(object):
     def invitation_create(self, account_id, invitation_create_parameters, **kwargs):  # noqa: E501
         """Create a new invitation  # noqa: E501
 
-        Invite a person to an account. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Invite a person to an account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_create(account_id, invitation_create_parameters, async_req=True)
@@ -65,7 +65,7 @@ class InvitationsApi(object):
     def invitation_create_with_http_info(self, account_id, invitation_create_parameters, **kwargs):  # noqa: E501
         """Create a new invitation  # noqa: E501
 
-        Invite a person to an account. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Invite a person to an account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_create_with_http_info(account_id, invitation_create_parameters, async_req=True)
@@ -170,7 +170,7 @@ class InvitationsApi(object):
     def invitation_delete(self, account_id, id, **kwargs):  # noqa: E501
         """Delete an invitation  # noqa: E501
 
-        Delete an existing invitation (must not be accepted yet). Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Delete an existing invitation (must not be accepted yet). Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_delete(account_id, id, async_req=True)
@@ -197,7 +197,7 @@ class InvitationsApi(object):
     def invitation_delete_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Delete an invitation  # noqa: E501
 
-        Delete an existing invitation (must not be accepted yet). Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Delete an existing invitation (must not be accepted yet). Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_delete_with_http_info(account_id, id, async_req=True)
@@ -294,7 +294,7 @@ class InvitationsApi(object):
     def invitation_resend(self, account_id, id, **kwargs):  # noqa: E501
         """Resend an invitation  # noqa: E501
 
-        Resend the invitation email (must not be accepted yet). Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Resend the invitation email (must not be accepted yet). Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_resend(account_id, id, async_req=True)
@@ -321,7 +321,7 @@ class InvitationsApi(object):
     def invitation_resend_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Resend an invitation  # noqa: E501
 
-        Resend the invitation email (must not be accepted yet). Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Resend the invitation email (must not be accepted yet). Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_resend_with_http_info(account_id, id, async_req=True)
@@ -422,7 +422,7 @@ class InvitationsApi(object):
     def invitation_show(self, account_id, id, **kwargs):  # noqa: E501
         """Get a single invitation  # noqa: E501
 
-        Get details on a single invitation. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Get details on a single invitation. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_show(account_id, id, async_req=True)
@@ -449,7 +449,7 @@ class InvitationsApi(object):
     def invitation_show_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Get a single invitation  # noqa: E501
 
-        Get details on a single invitation. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Get details on a single invitation. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_show_with_http_info(account_id, id, async_req=True)
@@ -550,7 +550,7 @@ class InvitationsApi(object):
     def invitation_update(self, account_id, id, invitation_update_parameters, **kwargs):  # noqa: E501
         """Update an invitation  # noqa: E501
 
-        Update an existing invitation (must not be accepted yet). The <code>email</code> cannot be updated. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update an existing invitation (must not be accepted yet). The `email` cannot be updated. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_update(account_id, id, invitation_update_parameters, async_req=True)
@@ -578,7 +578,7 @@ class InvitationsApi(object):
     def invitation_update_with_http_info(self, account_id, id, invitation_update_parameters, **kwargs):  # noqa: E501
         """Update an invitation  # noqa: E501
 
-        Update an existing invitation (must not be accepted yet). The <code>email</code> cannot be updated. Developers and translators need <code>project_ids</code> and <code>locale_ids</code> assigned to access them. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update an existing invitation (must not be accepted yet). The `email` cannot be updated. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_update_with_http_info(account_id, id, invitation_update_parameters, async_req=True)
@@ -691,7 +691,7 @@ class InvitationsApi(object):
     def invitation_update_settings(self, project_id, id, invitation_update_settings_parameters, **kwargs):  # noqa: E501
         """Update a member's invitation access  # noqa: E501
 
-        Update member's settings in the invitations. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update member's settings in the invitations. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_update_settings(project_id, id, invitation_update_settings_parameters, async_req=True)
@@ -719,7 +719,7 @@ class InvitationsApi(object):
     def invitation_update_settings_with_http_info(self, project_id, id, invitation_update_settings_parameters, **kwargs):  # noqa: E501
         """Update a member's invitation access  # noqa: E501
 
-        Update member's settings in the invitations. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        Update member's settings in the invitations. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitation_update_settings_with_http_info(project_id, id, invitation_update_settings_parameters, async_req=True)
@@ -832,7 +832,7 @@ class InvitationsApi(object):
     def invitations_list(self, account_id, **kwargs):  # noqa: E501
         """List invitations  # noqa: E501
 
-        List invitations for an account. It will also list the accessible resources like projects and locales the invited user has access to. In case nothing is shown the default access from the role is used. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        List invitations for an account. It will also list the accessible resources like projects and locales the invited user has access to. In case nothing is shown the default access from the role is used. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitations_list(account_id, async_req=True)
@@ -860,7 +860,7 @@ class InvitationsApi(object):
     def invitations_list_with_http_info(self, account_id, **kwargs):  # noqa: E501
         """List invitations  # noqa: E501
 
-        List invitations for an account. It will also list the accessible resources like projects and locales the invited user has access to. In case nothing is shown the default access from the role is used. Access token scope must include <code>team.manage</code>.  # noqa: E501
+        List invitations for an account. It will also list the accessible resources like projects and locales the invited user has access to. In case nothing is shown the default access from the role is used. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invitations_list_with_http_info(account_id, async_req=True)

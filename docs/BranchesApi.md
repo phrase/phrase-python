@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Compare branches
 
-Compare branch with main branch. <br><br><i>Note: Comparing a branch may take several minutes depending on the project size.</i>
+Compare branch with main branch.   *Note: Comparing a branch may take several minutes depending on the project size.* 
 
 ### Example
 
@@ -85,7 +85,7 @@ void (empty response body)
 
 Create a branch
 
-Create a new branch. <br><br><i>Note: Creating a new branch may take several minutes depending on the project size.</i>
+Create a new branch.  *Note: Creating a new branch may take several minutes depending on the project size.* 
 
 ### Example
 
@@ -220,7 +220,7 @@ void (empty response body)
 
 Merge a branch
 
-Merge an existing branch. <br><br><i>Note: Merging a branch may take several minutes depending on diff size.</i>
+Merge an existing branch.   *Note: Merging a branch may take several minutes depending on diff size.* 
 
 ### Example
 

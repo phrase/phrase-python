@@ -205,7 +205,7 @@ class TranslationCreateParameters(object):
     def unverified(self):
         """Gets the unverified of this TranslationCreateParameters.  # noqa: E501
 
-        Indicates whether translation is unverified. Part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
+        Indicates whether translation is unverified. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature.  # noqa: E501
 
         :return: The unverified of this TranslationCreateParameters.  # noqa: E501
         :rtype: bool
@@ -216,7 +216,7 @@ class TranslationCreateParameters(object):
     def unverified(self, unverified):
         """Sets the unverified of this TranslationCreateParameters.
 
-        Indicates whether translation is unverified. Part of the <a href=\"https://support.phrase.com/hc/en-us/articles/5784094755484\" target=\"_blank\">Advanced Workflows</a> feature.  # noqa: E501
+        Indicates whether translation is unverified. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature.  # noqa: E501
 
         :param unverified: The unverified of this TranslationCreateParameters.  # noqa: E501
         :type: bool

@@ -51,7 +51,8 @@ class TestLocaleDownloadCreateParameters(unittest.TestCase):
                 locale_ids = ["de","en"], 
                 fallback_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 source_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
-                custom_metadata_filters = None
+                custom_metadata_filters = None, 
+                updated_since = ''
             )
         else :
             return LocaleDownloadCreateParameters(

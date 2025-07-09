@@ -460,6 +460,7 @@ class LocalesApi(object):
         :param bool filter_by_prefix: Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
         :param object custom_metadata_filters: Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
         :param List[str] locale_ids: Locale IDs or locale names
+        :param str updated_since: Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -509,6 +510,7 @@ class LocalesApi(object):
         :param bool filter_by_prefix: Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
         :param object custom_metadata_filters: Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
         :param List[str] locale_ids: Locale IDs or locale names
+        :param str updated_since: Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -550,7 +552,8 @@ class LocalesApi(object):
             'translation_key_prefix',
             'filter_by_prefix',
             'custom_metadata_filters',
-            'locale_ids'
+            'locale_ids',
+            'updated_since'
         ]
         all_params.extend(
             [
@@ -628,6 +631,8 @@ class LocalesApi(object):
         if 'locale_ids' in local_var_params and local_var_params['locale_ids'] is not None:  # noqa: E501
             query_params.append(('locale_ids', local_var_params['locale_ids']))  # noqa: E501
             collection_formats['locale_ids'] = 'multi'  # noqa: E501
+        if 'updated_since' in local_var_params and local_var_params['updated_since'] is not None:  # noqa: E501
+            query_params.append(('updated_since', local_var_params['updated_since']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

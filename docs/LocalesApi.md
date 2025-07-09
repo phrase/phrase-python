@@ -221,7 +221,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locale_download**
-> bytearray locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id, source_locale_id=source_locale_id, translation_key_prefix=translation_key_prefix, filter_by_prefix=filter_by_prefix, custom_metadata_filters=custom_metadata_filters, locale_ids=locale_ids)
+> bytearray locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id, source_locale_id=source_locale_id, translation_key_prefix=translation_key_prefix, filter_by_prefix=filter_by_prefix, custom_metadata_filters=custom_metadata_filters, locale_ids=locale_ids, updated_since=updated_since)
 
 Download a locale
 
@@ -269,10 +269,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     filter_by_prefix = True # bool | Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
     custom_metadata_filters = None # object | Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
     locale_ids = ['[\"de\",\"en\"]'] # List[str] | Locale IDs or locale names
+    updated_since = '2023-01-01T00:00:00Z' # str | Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`). 
 
     try:
         # Download a locale
-        api_response = api_instance.locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id, source_locale_id=source_locale_id, translation_key_prefix=translation_key_prefix, filter_by_prefix=filter_by_prefix, custom_metadata_filters=custom_metadata_filters, locale_ids=locale_ids)
+        api_response = api_instance.locale_download(project_id, id, x_phrase_app_otp=x_phrase_app_otp, if_modified_since=if_modified_since, if_none_match=if_none_match, branch=branch, file_format=file_format, tags=tags, tag=tag, include_empty_translations=include_empty_translations, exclude_empty_zero_forms=exclude_empty_zero_forms, include_translated_keys=include_translated_keys, keep_notranslate_tags=keep_notranslate_tags, convert_emoji=convert_emoji, format_options=format_options, encoding=encoding, skip_unverified_translations=skip_unverified_translations, include_unverified_translations=include_unverified_translations, use_last_reviewed_version=use_last_reviewed_version, fallback_locale_id=fallback_locale_id, source_locale_id=source_locale_id, translation_key_prefix=translation_key_prefix, filter_by_prefix=filter_by_prefix, custom_metadata_filters=custom_metadata_filters, locale_ids=locale_ids, updated_since=updated_since)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocalesApi->locale_download: %s\n" % e)
@@ -308,6 +309,7 @@ Name | Type | Description  | Notes
  **filter_by_prefix** | **bool**| Only download translation keys containing the specified prefix, and remove the prefix from the generated file. | [optional] 
  **custom_metadata_filters** | [**object**](.md)| Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download.  | [optional] 
  **locale_ids** | [**List[str]**](str.md)| Locale IDs or locale names | [optional] 
+ **updated_since** | **str**| Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., &#x60;2023-01-01T00:00:00Z&#x60;).  | [optional] 
 
 ### Return type
 

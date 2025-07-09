@@ -46,7 +46,8 @@ class LocaleDownloadCreateParameters(object):
         'locale_ids': 'List[str]',
         'fallback_locale_id': 'str',
         'source_locale_id': 'str',
-        'custom_metadata_filters': 'object'
+        'custom_metadata_filters': 'object',
+        'updated_since': 'str'
     }
 
     attribute_map = {
@@ -64,10 +65,11 @@ class LocaleDownloadCreateParameters(object):
         'locale_ids': 'locale_ids',
         'fallback_locale_id': 'fallback_locale_id',
         'source_locale_id': 'source_locale_id',
-        'custom_metadata_filters': 'custom_metadata_filters'
+        'custom_metadata_filters': 'custom_metadata_filters',
+        'updated_since': 'updated_since'
     }
 
-    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, source_locale_id=None, custom_metadata_filters=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, source_locale_id=None, custom_metadata_filters=None, updated_since=None, local_vars_configuration=None):  # noqa: E501
         """LocaleDownloadCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -88,6 +90,7 @@ class LocaleDownloadCreateParameters(object):
         self._fallback_locale_id = None
         self._source_locale_id = None
         self._custom_metadata_filters = None
+        self._updated_since = None
         self.discriminator = None
 
         self.file_format = file_format
@@ -119,6 +122,8 @@ class LocaleDownloadCreateParameters(object):
             self.source_locale_id = source_locale_id
         if custom_metadata_filters is not None:
             self.custom_metadata_filters = custom_metadata_filters
+        if updated_since is not None:
+            self.updated_since = updated_since
 
     @property
     def file_format(self):
@@ -466,6 +471,29 @@ class LocaleDownloadCreateParameters(object):
         """
 
         self._custom_metadata_filters = custom_metadata_filters
+
+    @property
+    def updated_since(self):
+        """Gets the updated_since of this LocaleDownloadCreateParameters.  # noqa: E501
+
+        Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`).   # noqa: E501
+
+        :return: The updated_since of this LocaleDownloadCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_since
+
+    @updated_since.setter
+    def updated_since(self, updated_since):
+        """Sets the updated_since of this LocaleDownloadCreateParameters.
+
+        Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`).   # noqa: E501
+
+        :param updated_since: The updated_since of this LocaleDownloadCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._updated_since = updated_since
 
     def to_dict(self):
         """Returns the model properties as a dict"""

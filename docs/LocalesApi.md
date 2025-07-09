@@ -269,7 +269,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     filter_by_prefix = True # bool | Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
     custom_metadata_filters = None # object | Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download. 
     locale_ids = ['[\"de\",\"en\"]'] # List[str] | Locale IDs or locale names
-    updated_since = '2023-01-01T00:00:00Z' # str | Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`). 
+    updated_since = '2023-01-01T00:00:00Z' # str | Only include translations and keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`). 
 
     try:
         # Download a locale
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
  **filter_by_prefix** | **bool**| Only download translation keys containing the specified prefix, and remove the prefix from the generated file. | [optional] 
  **custom_metadata_filters** | [**object**](.md)| Custom metadata filters. Provide the name of the metadata field and the value to filter by. Only keys with matching metadata will be included in the download.  | [optional] 
  **locale_ids** | [**List[str]**](str.md)| Locale IDs or locale names | [optional] 
- **updated_since** | **str**| Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., &#x60;2023-01-01T00:00:00Z&#x60;).  | [optional] 
+ **updated_since** | **str**| Only include translations and keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., &#x60;2023-01-01T00:00:00Z&#x60;).  | [optional] 
 
 ### Return type
 

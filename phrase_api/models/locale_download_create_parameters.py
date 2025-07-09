@@ -476,7 +476,7 @@ class LocaleDownloadCreateParameters(object):
     def updated_since(self):
         """Gets the updated_since of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`).   # noqa: E501
+        Only include translations and keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`).   # noqa: E501
 
         :return: The updated_since of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: str
@@ -487,7 +487,7 @@ class LocaleDownloadCreateParameters(object):
     def updated_since(self, updated_since):
         """Sets the updated_since of this LocaleDownloadCreateParameters.
 
-        Only include keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`).   # noqa: E501
+        Only include translations and keys that have been updated since the given date. The date must be in ISO 8601 format (e.g., `2023-01-01T00:00:00Z`).   # noqa: E501
 
         :param updated_since: The updated_since of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: str

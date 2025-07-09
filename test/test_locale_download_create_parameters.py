@@ -52,7 +52,7 @@ class TestLocaleDownloadCreateParameters(unittest.TestCase):
                 fallback_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 source_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 custom_metadata_filters = None, 
-                updated_since = ''
+                updated_since = '2023-01-01T00:00:00Z'
             )
         else :
             return LocaleDownloadCreateParameters(

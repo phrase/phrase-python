@@ -42,7 +42,8 @@ class TestAccountSearchResult(unittest.TestCase):
                 key = phrase_api.models.key_preview.key_preview(
                     id = '', 
                     name = '', 
-                    plural = True, ), 
+                    plural = True, 
+                    use_ordinal_rules = True, ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","slug":"android_project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","space":"space","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 translation = {"id":"abcd1234cdef1234abcd1234cdef1234","content":"My translation","unverified":false,"excluded":false,"plural_suffix":"","key":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"home.index.headline","plural":false,"use_ordinal_rules":false},"locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"de","code":"de-DE"},"placeholders":["%{count}"],"state":"translated","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 

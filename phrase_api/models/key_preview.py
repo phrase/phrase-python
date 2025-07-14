@@ -34,16 +34,18 @@ class KeyPreview(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
-        'plural': 'bool'
+        'plural': 'bool',
+        'use_ordinal_rules': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
-        'plural': 'plural'
+        'plural': 'plural',
+        'use_ordinal_rules': 'use_ordinal_rules'
     }
 
-    def __init__(self, id=None, name=None, plural=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, plural=None, use_ordinal_rules=None, local_vars_configuration=None):  # noqa: E501
         """KeyPreview - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -52,6 +54,7 @@ class KeyPreview(object):
         self._id = None
         self._name = None
         self._plural = None
+        self._use_ordinal_rules = None
         self.discriminator = None
 
         if id is not None:
@@ -60,6 +63,8 @@ class KeyPreview(object):
             self.name = name
         if plural is not None:
             self.plural = plural
+        if use_ordinal_rules is not None:
+            self.use_ordinal_rules = use_ordinal_rules
 
     @property
     def id(self):
@@ -123,6 +128,27 @@ class KeyPreview(object):
         """
 
         self._plural = plural
+
+    @property
+    def use_ordinal_rules(self):
+        """Gets the use_ordinal_rules of this KeyPreview.  # noqa: E501
+
+
+        :return: The use_ordinal_rules of this KeyPreview.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_ordinal_rules
+
+    @use_ordinal_rules.setter
+    def use_ordinal_rules(self, use_ordinal_rules):
+        """Sets the use_ordinal_rules of this KeyPreview.
+
+
+        :param use_ordinal_rules: The use_ordinal_rules of this KeyPreview.  # noqa: E501
+        :type: bool
+        """
+
+        self._use_ordinal_rules = use_ordinal_rules
 
     def to_dict(self):
         """Returns the model properties as a dict"""

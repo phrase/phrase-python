@@ -36,6 +36,7 @@ class KeyCreateParameters(object):
         'name': 'str',
         'description': 'str',
         'plural': 'bool',
+        'use_ordinal_rules': 'bool',
         'name_plural': 'str',
         'data_type': 'str',
         'tags': 'str',
@@ -57,6 +58,7 @@ class KeyCreateParameters(object):
         'name': 'name',
         'description': 'description',
         'plural': 'plural',
+        'use_ordinal_rules': 'use_ordinal_rules',
         'name_plural': 'name_plural',
         'data_type': 'data_type',
         'tags': 'tags',
@@ -73,7 +75,7 @@ class KeyCreateParameters(object):
         'custom_metadata': 'custom_metadata'
     }
 
-    def __init__(self, branch=None, name=None, description=None, plural=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, default_translation_content=None, autotranslate=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, description=None, plural=None, use_ordinal_rules=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, default_translation_content=None, autotranslate=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
         """KeyCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -83,6 +85,7 @@ class KeyCreateParameters(object):
         self._name = None
         self._description = None
         self._plural = None
+        self._use_ordinal_rules = None
         self._name_plural = None
         self._data_type = None
         self._tags = None
@@ -106,6 +109,8 @@ class KeyCreateParameters(object):
             self.description = description
         if plural is not None:
             self.plural = plural
+        if use_ordinal_rules is not None:
+            self.use_ordinal_rules = use_ordinal_rules
         if name_plural is not None:
             self.name_plural = name_plural
         if data_type is not None:
@@ -228,6 +233,29 @@ class KeyCreateParameters(object):
         """
 
         self._plural = plural
+
+    @property
+    def use_ordinal_rules(self):
+        """Gets the use_ordinal_rules of this KeyCreateParameters.  # noqa: E501
+
+        Indicates whether key uses ordinal rules for pluralization  # noqa: E501
+
+        :return: The use_ordinal_rules of this KeyCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_ordinal_rules
+
+    @use_ordinal_rules.setter
+    def use_ordinal_rules(self, use_ordinal_rules):
+        """Sets the use_ordinal_rules of this KeyCreateParameters.
+
+        Indicates whether key uses ordinal rules for pluralization  # noqa: E501
+
+        :param use_ordinal_rules: The use_ordinal_rules of this KeyCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._use_ordinal_rules = use_ordinal_rules
 
     @property
     def name_plural(self):

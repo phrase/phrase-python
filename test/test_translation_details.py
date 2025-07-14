@@ -45,7 +45,8 @@ class TestTranslationDetails(unittest.TestCase):
                 key = phrase_api.models.key_preview.key_preview(
                     id = '', 
                     name = '', 
-                    plural = True, ), 
+                    plural = True, 
+                    use_ordinal_rules = True, ), 
                 locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
                 placeholders = [
                     ''

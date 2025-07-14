@@ -39,7 +39,8 @@ class TestKeyPreview(unittest.TestCase):
             return KeyPreview(
                 id = '', 
                 name = '', 
-                plural = True
+                plural = True, 
+                use_ordinal_rules = True
             )
         else :
             return KeyPreview(

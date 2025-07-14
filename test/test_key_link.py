@@ -53,12 +53,14 @@ class TestKeyLink(unittest.TestCase):
                 parent = phrase_api.models.key_preview.key_preview(
                     id = '', 
                     name = '', 
-                    plural = True, ), 
+                    plural = True, 
+                    use_ordinal_rules = True, ), 
                 children = [
                     phrase_api.models.key_preview.key_preview(
                         id = '', 
                         name = '', 
-                        plural = True, )
+                        plural = True, 
+                        use_ordinal_rules = True, )
                     ]
             )
         else :

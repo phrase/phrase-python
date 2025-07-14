@@ -42,6 +42,7 @@ class TestTranslationKeyDetails(unittest.TestCase):
                 description = '', 
                 name_hash = '', 
                 plural = True, 
+                use_ordinal_rules = True, 
                 tags = [
                     ''
                     ], 

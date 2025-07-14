@@ -37,6 +37,7 @@ class TranslationKey(object):
         'description': 'str',
         'name_hash': 'str',
         'plural': 'bool',
+        'use_ordinal_rules': 'bool',
         'tags': 'List[str]',
         'data_type': 'str',
         'created_at': 'datetime',
@@ -49,13 +50,14 @@ class TranslationKey(object):
         'description': 'description',
         'name_hash': 'name_hash',
         'plural': 'plural',
+        'use_ordinal_rules': 'use_ordinal_rules',
         'tags': 'tags',
         'data_type': 'data_type',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, description=None, name_hash=None, plural=None, tags=None, data_type=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, name_hash=None, plural=None, use_ordinal_rules=None, tags=None, data_type=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """TranslationKey - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class TranslationKey(object):
         self._description = None
         self._name_hash = None
         self._plural = None
+        self._use_ordinal_rules = None
         self._tags = None
         self._data_type = None
         self._created_at = None
@@ -82,6 +85,8 @@ class TranslationKey(object):
             self.name_hash = name_hash
         if plural is not None:
             self.plural = plural
+        if use_ordinal_rules is not None:
+            self.use_ordinal_rules = use_ordinal_rules
         if tags is not None:
             self.tags = tags
         if data_type is not None:
@@ -195,6 +200,27 @@ class TranslationKey(object):
         """
 
         self._plural = plural
+
+    @property
+    def use_ordinal_rules(self):
+        """Gets the use_ordinal_rules of this TranslationKey.  # noqa: E501
+
+
+        :return: The use_ordinal_rules of this TranslationKey.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_ordinal_rules
+
+    @use_ordinal_rules.setter
+    def use_ordinal_rules(self, use_ordinal_rules):
+        """Sets the use_ordinal_rules of this TranslationKey.
+
+
+        :param use_ordinal_rules: The use_ordinal_rules of this TranslationKey.  # noqa: E501
+        :type: bool
+        """
+
+        self._use_ordinal_rules = use_ordinal_rules
 
     @property
     def tags(self):

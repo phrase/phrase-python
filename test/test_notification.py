@@ -45,7 +45,7 @@ class TestNotification(unittest.TestCase):
                 seen_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 data = None, 
                 resource = None, 
-                locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"de","code":"de-DE","default":true,"main":false,"rtl":false,"plural_forms":["zero","one","other"],"source_locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"en","code":"en-GB"},"fallback_locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"en","code":"en-GB"},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
+                locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"de","code":"de-DE","default":true,"main":false,"rtl":false,"plural_forms":["zero","one","other"],"ordinal_plural_forms":["zero","other"],"source_locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"en","code":"en-GB"},"fallback_locale":{"id":"abcd1234cdef1234abcd1234cdef1234","name":"en","code":"en-GB"},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 user = phrase_api.models.user_preview.user_preview(
                     id = '', 
                     username = '', 

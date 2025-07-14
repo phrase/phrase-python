@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **main** | **bool** |  | [optional] 
 **rtl** | **bool** |  | [optional] 
 **plural_forms** | **List[str]** |  | [optional] 
+**ordinal_plural_forms** | **List[str]** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **fallback_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

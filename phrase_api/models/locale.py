@@ -39,6 +39,7 @@ class Locale(object):
         'main': 'bool',
         'rtl': 'bool',
         'plural_forms': 'List[str]',
+        'ordinal_plural_forms': 'List[str]',
         'source_locale': 'LocalePreview',
         'fallback_locale': 'LocalePreview',
         'created_at': 'datetime',
@@ -53,13 +54,14 @@ class Locale(object):
         'main': 'main',
         'rtl': 'rtl',
         'plural_forms': 'plural_forms',
+        'ordinal_plural_forms': 'ordinal_plural_forms',
         'source_locale': 'source_locale',
         'fallback_locale': 'fallback_locale',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, source_locale=None, fallback_locale=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, ordinal_plural_forms=None, source_locale=None, fallback_locale=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Locale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -72,6 +74,7 @@ class Locale(object):
         self._main = None
         self._rtl = None
         self._plural_forms = None
+        self._ordinal_plural_forms = None
         self._source_locale = None
         self._fallback_locale = None
         self._created_at = None
@@ -92,6 +95,8 @@ class Locale(object):
             self.rtl = rtl
         if plural_forms is not None:
             self.plural_forms = plural_forms
+        if ordinal_plural_forms is not None:
+            self.ordinal_plural_forms = ordinal_plural_forms
         if source_locale is not None:
             self.source_locale = source_locale
         if fallback_locale is not None:
@@ -247,6 +252,27 @@ class Locale(object):
         """
 
         self._plural_forms = plural_forms
+
+    @property
+    def ordinal_plural_forms(self):
+        """Gets the ordinal_plural_forms of this Locale.  # noqa: E501
+
+
+        :return: The ordinal_plural_forms of this Locale.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._ordinal_plural_forms
+
+    @ordinal_plural_forms.setter
+    def ordinal_plural_forms(self, ordinal_plural_forms):
+        """Sets the ordinal_plural_forms of this Locale.
+
+
+        :param ordinal_plural_forms: The ordinal_plural_forms of this Locale.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._ordinal_plural_forms = ordinal_plural_forms
 
     @property
     def source_locale(self):

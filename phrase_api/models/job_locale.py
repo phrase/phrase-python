@@ -39,7 +39,8 @@ class JobLocale(object):
         'teams': 'List[LocaleTeamPreview]',
         'completed': 'bool',
         'translation_completed_at': 'datetime',
-        'review_completed_at': 'datetime'
+        'review_completed_at': 'datetime',
+        'annotations': 'List[JobAnnotationShort]'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class JobLocale(object):
         'teams': 'teams',
         'completed': 'completed',
         'translation_completed_at': 'translation_completed_at',
-        'review_completed_at': 'review_completed_at'
+        'review_completed_at': 'review_completed_at',
+        'annotations': 'annotations'
     }
 
-    def __init__(self, id=None, job=None, locale=None, users=None, teams=None, completed=None, translation_completed_at=None, review_completed_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, job=None, locale=None, users=None, teams=None, completed=None, translation_completed_at=None, review_completed_at=None, annotations=None, local_vars_configuration=None):  # noqa: E501
         """JobLocale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +69,7 @@ class JobLocale(object):
         self._completed = None
         self._translation_completed_at = None
         self._review_completed_at = None
+        self._annotations = None
         self.discriminator = None
 
         if id is not None:
@@ -85,6 +88,8 @@ class JobLocale(object):
             self.translation_completed_at = translation_completed_at
         if review_completed_at is not None:
             self.review_completed_at = review_completed_at
+        if annotations is not None:
+            self.annotations = annotations
 
     @property
     def id(self):
@@ -253,6 +258,27 @@ class JobLocale(object):
         """
 
         self._review_completed_at = review_completed_at
+
+    @property
+    def annotations(self):
+        """Gets the annotations of this JobLocale.  # noqa: E501
+
+
+        :return: The annotations of this JobLocale.  # noqa: E501
+        :rtype: List[JobAnnotationShort]
+        """
+        return self._annotations
+
+    @annotations.setter
+    def annotations(self, annotations):
+        """Sets the annotations of this JobLocale.
+
+
+        :param annotations: The annotations of this JobLocale.  # noqa: E501
+        :type: List[JobAnnotationShort]
+        """
+
+        self._annotations = annotations
 
     def to_dict(self):
         """Returns the model properties as a dict"""

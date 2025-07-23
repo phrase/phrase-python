@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **completed** | **bool** |  | [optional] 
 **translation_completed_at** | **datetime** |  | [optional] 
 **review_completed_at** | **datetime** |  | [optional] 
+**annotations** | [**List[JobAnnotationShort]**](JobAnnotationShort.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

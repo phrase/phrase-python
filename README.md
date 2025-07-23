@@ -221,6 +221,12 @@ Class | Method | HTTP request | Description
 *InvitationsApi* | [**invitation_update**](docs/InvitationsApi.md#invitation_update) | **PATCH** /accounts/{account_id}/invitations/{id} | Update an invitation
 *InvitationsApi* | [**invitation_update_settings**](docs/InvitationsApi.md#invitation_update_settings) | **PATCH** /projects/{project_id}/invitations/{id} | Update a member&#39;s invitation access
 *InvitationsApi* | [**invitations_list**](docs/InvitationsApi.md#invitations_list) | **GET** /accounts/{account_id}/invitations | List invitations
+*JobAnnotationsApi* | [**job_annotation_delete**](docs/JobAnnotationsApi.md#job_annotation_delete) | **DELETE** /projects/{project_id}/jobs/{job_id}/annotations/{id} | Delete a job annotation
+*JobAnnotationsApi* | [**job_annotation_update**](docs/JobAnnotationsApi.md#job_annotation_update) | **PATCH** /projects/{project_id}/jobs/{job_id}/annotations/{id} | Create/Update a job annotation
+*JobAnnotationsApi* | [**job_annotations_list**](docs/JobAnnotationsApi.md#job_annotations_list) | **GET** /projects/{project_id}/jobs/{job_id}/annotations | List job annotations
+*JobAnnotationsApi* | [**job_locale_annotation_delete**](docs/JobAnnotationsApi.md#job_locale_annotation_delete) | **DELETE** /projects/{project_id}/jobs/{job_id}/locales/{job_locale_id}/annotations/{id} | Delete a job locale annotation
+*JobAnnotationsApi* | [**job_locale_annotation_update**](docs/JobAnnotationsApi.md#job_locale_annotation_update) | **PATCH** /projects/{project_id}/jobs/{job_id}/locales/{job_locale_id}/annotations/{id} | Create/Update a job locale annotation
+*JobAnnotationsApi* | [**job_locale_annotations_list**](docs/JobAnnotationsApi.md#job_locale_annotations_list) | **GET** /projects/{project_id}/jobs/{job_id}/locales/{job_locale_id}/annotations | List job locale annotations
 *JobCommentsApi* | [**job_comment_create**](docs/JobCommentsApi.md#job_comment_create) | **POST** /projects/{project_id}/jobs/{job_id}/comments | Create a job comment
 *JobCommentsApi* | [**job_comment_delete**](docs/JobCommentsApi.md#job_comment_delete) | **DELETE** /projects/{project_id}/jobs/{job_id}/comments/{id} | Delete a job comment
 *JobCommentsApi* | [**job_comment_show**](docs/JobCommentsApi.md#job_comment_show) | **GET** /projects/{project_id}/jobs/{job_id}/comments/{id} | Get a single job comment
@@ -475,6 +481,9 @@ Class | Method | HTTP request | Description
  - [InvitationUpdateParameters](docs/InvitationUpdateParameters.md)
  - [InvitationUpdateSettingsParameters](docs/InvitationUpdateSettingsParameters.md)
  - [Job](docs/Job.md)
+ - [JobAnnotation](docs/JobAnnotation.md)
+ - [JobAnnotationShort](docs/JobAnnotationShort.md)
+ - [JobAnnotationUpdateParameters](docs/JobAnnotationUpdateParameters.md)
  - [JobComment](docs/JobComment.md)
  - [JobCommentCreateParameters](docs/JobCommentCreateParameters.md)
  - [JobCommentUpdateParameters](docs/JobCommentUpdateParameters.md)

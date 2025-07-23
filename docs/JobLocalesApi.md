@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_locale_show**
-> JobLocale job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> JobLocale job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations)
 
 Show single job target locale
 
@@ -330,10 +330,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | Branch to use
+    include_annotations = False # bool | Include job-locale annotations in the response (default to False)
 
     try:
         # Show single job target locale
-        api_response = api_instance.job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        api_response = api_instance.job_locale_show(project_id, job_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobLocalesApi->job_locale_show: %s\n" % e)
@@ -349,6 +350,7 @@ Name | Type | Description  | Notes
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| Branch to use | [optional] 
+ **include_annotations** | **bool**| Include job-locale annotations in the response | [optional] [default to False]
 
 ### Return type
 
@@ -516,7 +518,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_locales_list**
-> List[JobLocale] job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[JobLocale] job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, include_annotations=include_annotations)
 
 List job target locales
 
@@ -545,10 +547,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | Branch to use
+    include_annotations = False # bool | Include job-locale annotations in the response (default to False)
 
     try:
         # List job target locales
-        api_response = api_instance.job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+        api_response = api_instance.job_locales_list(project_id, job_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, include_annotations=include_annotations)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobLocalesApi->job_locales_list: %s\n" % e)
@@ -565,6 +568,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| Branch to use | [optional] 
+ **include_annotations** | **bool**| Include job-locale annotations in the response | [optional] [default to False]
 
 ### Return type
 

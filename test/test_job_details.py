@@ -64,6 +64,9 @@ class TestJobDetails(unittest.TestCase):
                         name = '', 
                         plural = True, 
                         use_ordinal_rules = True, )
+                    ], 
+                annotations = [
+                    {"name":"priority","value":"high"}
                     ]
             )
         else :

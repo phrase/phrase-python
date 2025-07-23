@@ -78,6 +78,10 @@ docs/InvitationUpdateParameters.md
 docs/InvitationUpdateSettingsParameters.md
 docs/InvitationsApi.md
 docs/Job.md
+docs/JobAnnotation.md
+docs/JobAnnotationShort.md
+docs/JobAnnotationUpdateParameters.md
+docs/JobAnnotationsApi.md
 docs/JobComment.md
 docs/JobCommentCreateParameters.md
 docs/JobCommentUpdateParameters.md
@@ -290,6 +294,7 @@ phrase_api/api/glossary_term_translations_api.py
 phrase_api/api/glossary_terms_api.py
 phrase_api/api/icu_api.py
 phrase_api/api/invitations_api.py
+phrase_api/api/job_annotations_api.py
 phrase_api/api/job_comments_api.py
 phrase_api/api/job_locales_api.py
 phrase_api/api/job_template_locales_api.py
@@ -389,6 +394,9 @@ phrase_api/models/invitation_create_parameters.py
 phrase_api/models/invitation_update_parameters.py
 phrase_api/models/invitation_update_settings_parameters.py
 phrase_api/models/job.py
+phrase_api/models/job_annotation.py
+phrase_api/models/job_annotation_short.py
+phrase_api/models/job_annotation_update_parameters.py
 phrase_api/models/job_comment.py
 phrase_api/models/job_comment_create_parameters.py
 phrase_api/models/job_comment_update_parameters.py
@@ -626,6 +634,10 @@ test/test_invitation_update_parameters.py
 test/test_invitation_update_settings_parameters.py
 test/test_invitations_api.py
 test/test_job.py
+test/test_job_annotation.py
+test/test_job_annotation_short.py
+test/test_job_annotation_update_parameters.py
+test/test_job_annotations_api.py
 test/test_job_comment.py
 test/test_job_comment_create_parameters.py
 test/test_job_comment_update_parameters.py

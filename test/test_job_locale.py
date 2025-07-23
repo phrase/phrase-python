@@ -58,7 +58,10 @@ class TestJobLocale(unittest.TestCase):
                     ], 
                 completed = True, 
                 translation_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                review_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
+                review_completed_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                annotations = [
+                    {"name":"priority","value":"high"}
+                    ]
             )
         else :
             return JobLocale(

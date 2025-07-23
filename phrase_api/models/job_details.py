@@ -47,7 +47,8 @@ class JobDetails(object):
         'source_translations_updated_at': 'datetime',
         'source_locale': 'LocalePreview',
         'locales': 'List[LocalePreview]',
-        'keys': 'List[KeyPreview]'
+        'keys': 'List[KeyPreview]',
+        'annotations': 'List[JobAnnotationShort]'
     }
 
     attribute_map = {
@@ -66,10 +67,11 @@ class JobDetails(object):
         'source_translations_updated_at': 'source_translations_updated_at',
         'source_locale': 'source_locale',
         'locales': 'locales',
-        'keys': 'keys'
+        'keys': 'keys',
+        'annotations': 'annotations'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, annotations=None, local_vars_configuration=None):  # noqa: E501
         """JobDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -91,6 +93,7 @@ class JobDetails(object):
         self._source_locale = None
         self._locales = None
         self._keys = None
+        self._annotations = None
         self.discriminator = None
 
         if id is not None:
@@ -124,6 +127,8 @@ class JobDetails(object):
             self.locales = locales
         if keys is not None:
             self.keys = keys
+        if annotations is not None:
+            self.annotations = annotations
 
     @property
     def id(self):
@@ -460,6 +465,27 @@ class JobDetails(object):
         """
 
         self._keys = keys
+
+    @property
+    def annotations(self):
+        """Gets the annotations of this JobDetails.  # noqa: E501
+
+
+        :return: The annotations of this JobDetails.  # noqa: E501
+        :rtype: List[JobAnnotationShort]
+        """
+        return self._annotations
+
+    @annotations.setter
+    def annotations(self, annotations):
+        """Sets the annotations of this JobDetails.
+
+
+        :param annotations: The annotations of this JobDetails.  # noqa: E501
+        :type: List[JobAnnotationShort]
+        """
+
+        self._annotations = annotations
 
     def to_dict(self):
         """Returns the model properties as a dict"""

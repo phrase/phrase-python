@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
 **keys** | [**List[KeyPreview]**](KeyPreview.md) |  | [optional] 
+**annotations** | [**List[JobAnnotationShort]**](JobAnnotationShort.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

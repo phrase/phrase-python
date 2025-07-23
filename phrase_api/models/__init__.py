@@ -70,6 +70,9 @@ from phrase_api.models.invitation_create_parameters import InvitationCreateParam
 from phrase_api.models.invitation_update_parameters import InvitationUpdateParameters
 from phrase_api.models.invitation_update_settings_parameters import InvitationUpdateSettingsParameters
 from phrase_api.models.job import Job
+from phrase_api.models.job_annotation import JobAnnotation
+from phrase_api.models.job_annotation_short import JobAnnotationShort
+from phrase_api.models.job_annotation_update_parameters import JobAnnotationUpdateParameters
 from phrase_api.models.job_comment import JobComment
 from phrase_api.models.job_comment_create_parameters import JobCommentCreateParameters
 from phrase_api.models.job_comment_update_parameters import JobCommentUpdateParameters

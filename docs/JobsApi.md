@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_show**
-> JobDetails job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+> JobDetails job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations)
 
 Get a single job
 
@@ -531,11 +531,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    branch = 'my-feature-branch' # str | specify the branch to use
+    branch = 'my-feature-branch' # str | Branch to use
+    include_annotations = False # bool | Include job-locale annotations in the response (default to False)
 
     try:
         # Get a single job
-        api_response = api_instance.job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
+        api_response = api_instance.job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobsApi->job_show: %s\n" % e)
@@ -549,7 +550,8 @@ Name | Type | Description  | Notes
  **project_id** | **str**| Project ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **branch** | **str**| specify the branch to use | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
+ **include_annotations** | **bool**| Include job-locale annotations in the response | [optional] [default to False]
 
 ### Return type
 

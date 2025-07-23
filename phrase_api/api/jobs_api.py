@@ -998,7 +998,8 @@ class JobsApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str branch: specify the branch to use
+        :param str branch: Branch to use
+        :param bool include_annotations: Include job-locale annotations in the response
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1026,7 +1027,8 @@ class JobsApi(object):
         :param str project_id: Project ID (required)
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
-        :param str branch: specify the branch to use
+        :param str branch: Branch to use
+        :param bool include_annotations: Include job-locale annotations in the response
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1047,7 +1049,8 @@ class JobsApi(object):
             'project_id',
             'id',
             'x_phrase_app_otp',
-            'branch'
+            'branch',
+            'include_annotations'
         ]
         all_params.extend(
             [
@@ -1086,6 +1089,8 @@ class JobsApi(object):
         query_params = []
         if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
+        if 'include_annotations' in local_var_params and local_var_params['include_annotations'] is not None:  # noqa: E501
+            query_params.append(('include_annotations', local_var_params['include_annotations']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

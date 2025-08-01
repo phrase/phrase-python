@@ -53,6 +53,7 @@ class UploadsApi(object):
         :param str branch: specify the branch to use
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
+        :param bool update_custom_metadata: Indicates whether existing custom metadata properties should be updated with the file content
         :param bool update_translation_keys: Pass `false` here to prevent new keys from being created and existing keys updated.
         :param bool update_translations_on_source_match: Update target translations only if the source translations of the uploaded multilingual file match the stored translations.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
@@ -99,6 +100,7 @@ class UploadsApi(object):
         :param str branch: specify the branch to use
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
+        :param bool update_custom_metadata: Indicates whether existing custom metadata properties should be updated with the file content
         :param bool update_translation_keys: Pass `false` here to prevent new keys from being created and existing keys updated.
         :param bool update_translations_on_source_match: Update target translations only if the source translations of the uploaded multilingual file match the stored translations.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
@@ -138,6 +140,7 @@ class UploadsApi(object):
             'branch',
             'tags',
             'update_translations',
+            'update_custom_metadata',
             'update_translation_keys',
             'update_translations_on_source_match',
             'update_descriptions',
@@ -213,6 +216,8 @@ class UploadsApi(object):
             form_params.append(('tags', local_var_params['tags']))  # noqa: E501
         if 'update_translations' in local_var_params:
             form_params.append(('update_translations', local_var_params['update_translations']))  # noqa: E501
+        if 'update_custom_metadata' in local_var_params:
+            form_params.append(('update_custom_metadata', local_var_params['update_custom_metadata']))  # noqa: E501
         if 'update_translation_keys' in local_var_params:
             form_params.append(('update_translation_keys', local_var_params['update_translation_keys']))  # noqa: E501
         if 'update_translations_on_source_match' in local_var_params:

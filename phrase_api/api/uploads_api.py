@@ -53,7 +53,7 @@ class UploadsApi(object):
         :param str branch: specify the branch to use
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
-        :param bool update_custom_metadata: Indicates whether existing custom metadata properties should be updated with the file content
+        :param bool update_custom_metadata: Determines whether to update custom metadata values when uploading a file. If set to true, existing metadata can be changed or removed. Passing an empty value deletes the corresponding metadata property.
         :param bool update_translation_keys: Pass `false` here to prevent new keys from being created and existing keys updated.
         :param bool update_translations_on_source_match: Update target translations only if the source translations of the uploaded multilingual file match the stored translations.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
@@ -100,7 +100,7 @@ class UploadsApi(object):
         :param str branch: specify the branch to use
         :param str tags: List of tags separated by comma to be associated with the new keys contained in the upload.
         :param bool update_translations: Indicates whether existing translations should be updated with the file content.
-        :param bool update_custom_metadata: Indicates whether existing custom metadata properties should be updated with the file content
+        :param bool update_custom_metadata: Determines whether to update custom metadata values when uploading a file. If set to true, existing metadata can be changed or removed. Passing an empty value deletes the corresponding metadata property.
         :param bool update_translation_keys: Pass `false` here to prevent new keys from being created and existing keys updated.
         :param bool update_translations_on_source_match: Update target translations only if the source translations of the uploaded multilingual file match the stored translations.
         :param bool update_descriptions: Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.

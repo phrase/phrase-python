@@ -41,7 +41,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'branch_example' # str | specify the branch to use
     tags = 'tags_example' # str | List of tags separated by comma to be associated with the new keys contained in the upload.
     update_translations = True # bool | Indicates whether existing translations should be updated with the file content.
-    update_custom_metadata = True # bool | Indicates whether existing custom metadata properties should be updated with the file content (default to True)
+    update_custom_metadata = True # bool | Determines whether to update custom metadata values when uploading a file. If set to true, existing metadata can be changed or removed. Passing an empty value deletes the corresponding metadata property. (default to True)
     update_translation_keys = True # bool | Pass `false` here to prevent new keys from being created and existing keys updated. (default to True)
     update_translations_on_source_match = False # bool | Update target translations only if the source translations of the uploaded multilingual file match the stored translations. (default to False)
     update_descriptions = True # bool | Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
  **branch** | **str**| specify the branch to use | [optional] 
  **tags** | **str**| List of tags separated by comma to be associated with the new keys contained in the upload. | [optional] 
  **update_translations** | **bool**| Indicates whether existing translations should be updated with the file content. | [optional] 
- **update_custom_metadata** | **bool**| Indicates whether existing custom metadata properties should be updated with the file content | [optional] [default to True]
+ **update_custom_metadata** | **bool**| Determines whether to update custom metadata values when uploading a file. If set to true, existing metadata can be changed or removed. Passing an empty value deletes the corresponding metadata property. | [optional] [default to True]
  **update_translation_keys** | **bool**| Pass &#x60;false&#x60; here to prevent new keys from being created and existing keys updated. | [optional] [default to True]
  **update_translations_on_source_match** | **bool**| Update target translations only if the source translations of the uploaded multilingual file match the stored translations. | [optional] [default to False]
  **update_descriptions** | **bool**| Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions. | [optional] 

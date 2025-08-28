@@ -37,7 +37,8 @@ class TranslationUpdateParameters(object):
         'plural_suffix': 'str',
         'unverified': 'bool',
         'excluded': 'bool',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'reviewed': 'bool'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class TranslationUpdateParameters(object):
         'plural_suffix': 'plural_suffix',
         'unverified': 'unverified',
         'excluded': 'excluded',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'reviewed': 'reviewed'
     }
 
-    def __init__(self, branch=None, content=None, plural_suffix=None, unverified=None, excluded=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, content=None, plural_suffix=None, unverified=None, excluded=None, autotranslate=None, reviewed=None, local_vars_configuration=None):  # noqa: E501
         """TranslationUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class TranslationUpdateParameters(object):
         self._unverified = None
         self._excluded = None
         self._autotranslate = None
+        self._reviewed = None
         self.discriminator = None
 
         if branch is not None:
@@ -75,6 +78,8 @@ class TranslationUpdateParameters(object):
             self.excluded = excluded
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if reviewed is not None:
+            self.reviewed = reviewed
 
     @property
     def branch(self):
@@ -213,6 +218,29 @@ class TranslationUpdateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def reviewed(self):
+        """Gets the reviewed of this TranslationUpdateParameters.  # noqa: E501
+
+        When set to `true`, the translation will be marked as reviewed.  # noqa: E501
+
+        :return: The reviewed of this TranslationUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._reviewed
+
+    @reviewed.setter
+    def reviewed(self, reviewed):
+        """Sets the reviewed of this TranslationUpdateParameters.
+
+        When set to `true`, the translation will be marked as reviewed.  # noqa: E501
+
+        :param reviewed: The reviewed of this TranslationUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._reviewed = reviewed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

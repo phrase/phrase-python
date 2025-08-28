@@ -42,7 +42,8 @@ class TestTranslationUpdateParameters(unittest.TestCase):
                 plural_suffix = '', 
                 unverified = True, 
                 excluded = True, 
-                autotranslate = True
+                autotranslate = True, 
+                reviewed = True
             )
         else :
             return TranslationUpdateParameters(

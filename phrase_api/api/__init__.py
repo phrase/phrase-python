@@ -5,6 +5,7 @@ from __future__ import absolute_import
 # import apis into api package
 from phrase_api.api.accounts_api import AccountsApi
 from phrase_api.api.authorizations_api import AuthorizationsApi
+from phrase_api.api.automations_api import AutomationsApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi

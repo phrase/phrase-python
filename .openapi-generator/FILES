@@ -15,6 +15,10 @@ docs/AuthorizationCreateParameters.md
 docs/AuthorizationUpdateParameters.md
 docs/AuthorizationWithToken.md
 docs/AuthorizationsApi.md
+docs/Automation.md
+docs/AutomationsApi.md
+docs/AutomationsCreateParameters.md
+docs/AutomationsCreateParameters1.md
 docs/BlacklistedKey.md
 docs/BlacklistedKeyCreateParameters.md
 docs/BlacklistedKeyUpdateParameters.md
@@ -279,6 +283,7 @@ phrase_api/__init__.py
 phrase_api/api/__init__.py
 phrase_api/api/accounts_api.py
 phrase_api/api/authorizations_api.py
+phrase_api/api/automations_api.py
 phrase_api/api/blacklisted_keys_api.py
 phrase_api/api/branches_api.py
 phrase_api/api/comment_reactions_api.py
@@ -346,6 +351,9 @@ phrase_api/models/authorization.py
 phrase_api/models/authorization_create_parameters.py
 phrase_api/models/authorization_update_parameters.py
 phrase_api/models/authorization_with_token.py
+phrase_api/models/automation.py
+phrase_api/models/automations_create_parameters.py
+phrase_api/models/automations_create_parameters1.py
 phrase_api/models/blacklisted_key.py
 phrase_api/models/blacklisted_key_create_parameters.py
 phrase_api/models/blacklisted_key_update_parameters.py
@@ -571,6 +579,10 @@ test/test_authorization_create_parameters.py
 test/test_authorization_update_parameters.py
 test/test_authorization_with_token.py
 test/test_authorizations_api.py
+test/test_automation.py
+test/test_automations_api.py
+test/test_automations_create_parameters.py
+test/test_automations_create_parameters1.py
 test/test_blacklisted_key.py
 test/test_blacklisted_key_create_parameters.py
 test/test_blacklisted_key_update_parameters.py

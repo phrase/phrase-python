@@ -27,6 +27,7 @@ docs/Branch.md
 docs/BranchCreateParameters.md
 docs/BranchMergeParameters.md
 docs/BranchName.md
+docs/BranchSyncParameters.md
 docs/BranchUpdateParameters.md
 docs/BranchesApi.md
 docs/Comment.md
@@ -361,6 +362,7 @@ phrase_api/models/branch.py
 phrase_api/models/branch_create_parameters.py
 phrase_api/models/branch_merge_parameters.py
 phrase_api/models/branch_name.py
+phrase_api/models/branch_sync_parameters.py
 phrase_api/models/branch_update_parameters.py
 phrase_api/models/comment.py
 phrase_api/models/comment_create_parameters.py
@@ -591,6 +593,7 @@ test/test_branch.py
 test/test_branch_create_parameters.py
 test/test_branch_merge_parameters.py
 test/test_branch_name.py
+test/test_branch_sync_parameters.py
 test/test_branch_update_parameters.py
 test/test_branches_api.py
 test/test_comment.py

@@ -101,6 +101,7 @@ from phrase_api.models.branch import Branch
 from phrase_api.models.branch_create_parameters import BranchCreateParameters
 from phrase_api.models.branch_merge_parameters import BranchMergeParameters
 from phrase_api.models.branch_name import BranchName
+from phrase_api.models.branch_sync_parameters import BranchSyncParameters
 from phrase_api.models.branch_update_parameters import BranchUpdateParameters
 from phrase_api.models.comment import Comment
 from phrase_api.models.comment_create_parameters import CommentCreateParameters

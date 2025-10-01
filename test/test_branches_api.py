@@ -62,6 +62,13 @@ class TestBranchesApi(unittest.TestCase):
         """
         pass
 
+    def test_branch_sync(self):
+        """Test case for branch_sync
+
+        Sync a branch  # noqa: E501
+        """
+        pass
+
     def test_branch_update(self):
         """Test case for branch_update
 

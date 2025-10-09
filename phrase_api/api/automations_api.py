@@ -38,6 +38,7 @@ class AutomationsApi(object):
     def automation_activate(self, account_id, id, **kwargs):  # noqa: E501
         """Activate an automation  # noqa: E501
 
+        Activate an automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_activate(account_id, id, async_req=True)
@@ -64,6 +65,7 @@ class AutomationsApi(object):
     def automation_activate_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Activate an automation  # noqa: E501
 
+        Activate an automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_activate_with_http_info(account_id, id, async_req=True)
@@ -164,7 +166,7 @@ class AutomationsApi(object):
     def automation_create(self, account_id, automations_create_parameters, **kwargs):  # noqa: E501
         """Create an automation  # noqa: E501
 
-        Create a new automation.  # noqa: E501
+        Create a new automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_create(account_id, automations_create_parameters, async_req=True)
@@ -191,7 +193,7 @@ class AutomationsApi(object):
     def automation_create_with_http_info(self, account_id, automations_create_parameters, **kwargs):  # noqa: E501
         """Create an automation  # noqa: E501
 
-        Create a new automation.  # noqa: E501
+        Create a new automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_create_with_http_info(account_id, automations_create_parameters, async_req=True)
@@ -296,6 +298,7 @@ class AutomationsApi(object):
     def automation_deactivate(self, account_id, id, **kwargs):  # noqa: E501
         """Deactivate an automation  # noqa: E501
 
+        Deactivate an automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_deactivate(account_id, id, async_req=True)
@@ -322,6 +325,7 @@ class AutomationsApi(object):
     def automation_deactivate_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Deactivate an automation  # noqa: E501
 
+        Deactivate an automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_deactivate_with_http_info(account_id, id, async_req=True)
@@ -422,7 +426,7 @@ class AutomationsApi(object):
     def automation_delete(self, account_id, id, **kwargs):  # noqa: E501
         """Destroy automation  # noqa: E501
 
-        Destroy an automation of an account.  This endpoint is only available to accounts with advanced plans or above.   # noqa: E501
+        Destroy an automation of an account.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_delete(account_id, id, async_req=True)
@@ -449,7 +453,7 @@ class AutomationsApi(object):
     def automation_delete_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Destroy automation  # noqa: E501
 
-        Destroy an automation of an account.  This endpoint is only available to accounts with advanced plans or above.   # noqa: E501
+        Destroy an automation of an account.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_delete_with_http_info(account_id, id, async_req=True)
@@ -546,7 +550,7 @@ class AutomationsApi(object):
     def automation_show(self, account_id, id, **kwargs):  # noqa: E501
         """Get a single automation  # noqa: E501
 
-        Get details of a single automation.  # noqa: E501
+        Get details of a single automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_show(account_id, id, async_req=True)
@@ -573,7 +577,7 @@ class AutomationsApi(object):
     def automation_show_with_http_info(self, account_id, id, **kwargs):  # noqa: E501
         """Get a single automation  # noqa: E501
 
-        Get details of a single automation.  # noqa: E501
+        Get details of a single automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_show_with_http_info(account_id, id, async_req=True)
@@ -674,7 +678,7 @@ class AutomationsApi(object):
     def automation_update(self, account_id, id, automations_create_parameters1, **kwargs):  # noqa: E501
         """Update an automation  # noqa: E501
 
-        Update an existing automation.  # noqa: E501
+        Update an existing automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_update(account_id, id, automations_create_parameters1, async_req=True)
@@ -702,7 +706,7 @@ class AutomationsApi(object):
     def automation_update_with_http_info(self, account_id, id, automations_create_parameters1, **kwargs):  # noqa: E501
         """Update an automation  # noqa: E501
 
-        Update an existing automation.  # noqa: E501
+        Update an existing automation.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automation_update_with_http_info(account_id, id, automations_create_parameters1, async_req=True)
@@ -815,7 +819,7 @@ class AutomationsApi(object):
     def automations_list(self, account_id, **kwargs):  # noqa: E501
         """List automations  # noqa: E501
 
-        List all automations for an account.  This endpoint is only available to accounts with advanced plans or above.   # noqa: E501
+        List all automations for an account.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automations_list(account_id, async_req=True)
@@ -843,7 +847,7 @@ class AutomationsApi(object):
     def automations_list_with_http_info(self, account_id, **kwargs):  # noqa: E501
         """List automations  # noqa: E501
 
-        List all automations for an account.  This endpoint is only available to accounts with advanced plans or above.   # noqa: E501
+        List all automations for an account.  For feature availability, see [Jobs (Strings)](https://support.phrase.com/hc/en-us/articles/5784100517788-Jobs-Strings).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.automations_list_with_http_info(account_id, async_req=True)

@@ -40,7 +40,8 @@ class Branch(object):
         'merged_at': 'datetime',
         'merged_by': 'UserPreview',
         'created_by': 'UserPreview',
-        'state': 'str'
+        'state': 'str',
+        'child_branches': 'List[str]'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class Branch(object):
         'merged_at': 'merged_at',
         'merged_by': 'merged_by',
         'created_by': 'created_by',
-        'state': 'state'
+        'state': 'state',
+        'child_branches': 'child_branches'
     }
 
-    def __init__(self, base_project_id=None, branch_project_id=None, name=None, created_at=None, updated_at=None, merged_at=None, merged_by=None, created_by=None, state=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, base_project_id=None, branch_project_id=None, name=None, created_at=None, updated_at=None, merged_at=None, merged_by=None, created_by=None, state=None, child_branches=None, local_vars_configuration=None):  # noqa: E501
         """Branch - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class Branch(object):
         self._merged_by = None
         self._created_by = None
         self._state = None
+        self._child_branches = None
         self.discriminator = None
 
         if base_project_id is not None:
@@ -90,6 +93,8 @@ class Branch(object):
             self.created_by = created_by
         if state is not None:
             self.state = state
+        if child_branches is not None:
+            self.child_branches = child_branches
 
     @property
     def base_project_id(self):
@@ -279,6 +284,27 @@ class Branch(object):
         """
 
         self._state = state
+
+    @property
+    def child_branches(self):
+        """Gets the child_branches of this Branch.  # noqa: E501
+
+
+        :return: The child_branches of this Branch.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._child_branches
+
+    @child_branches.setter
+    def child_branches(self, child_branches):
+        """Sets the child_branches of this Branch.
+
+
+        :param child_branches: The child_branches of this Branch.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._child_branches = child_branches
 
     def to_dict(self):
         """Returns the model properties as a dict"""

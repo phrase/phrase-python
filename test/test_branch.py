@@ -53,7 +53,10 @@ class TestBranch(unittest.TestCase):
                     username = '', 
                     name = '', 
                     gravatar_uid = '', ), 
-                state = ''
+                state = '', 
+                child_branches = [
+                    ''
+                    ]
             )
         else :
             return Branch(

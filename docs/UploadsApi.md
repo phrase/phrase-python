@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **upload_create**
-> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
+> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, source_locale_id=source_locale_id, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
 
 Upload a new file
 
@@ -44,6 +44,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     update_custom_metadata = True # bool | Determines whether to update custom metadata values when uploading a file. If set to true, existing metadata can be changed or removed. Passing an empty value deletes the corresponding metadata property. (default to True)
     update_translation_keys = True # bool | Pass `false` here to prevent new keys from being created and existing keys updated. (default to True)
     update_translations_on_source_match = False # bool | Update target translations only if the source translations of the uploaded multilingual file match the stored translations. (default to False)
+    source_locale_id = 'source_locale_id_example' # str | Specifies the source locale for multilingual files. Can be the name or id of the locale. Preferred is id.
     update_descriptions = True # bool | Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
     convert_emoji = True # bool | This option is obsolete. Providing the option will cause a bad request error.
     skip_upload_tags = True # bool | Indicates whether the upload should not create upload tags.
@@ -59,7 +60,7 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Upload a new file
-        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
+        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, source_locale_id=source_locale_id, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UploadsApi->upload_create: %s\n" % e)
@@ -81,6 +82,7 @@ Name | Type | Description  | Notes
  **update_custom_metadata** | **bool**| Determines whether to update custom metadata values when uploading a file. If set to true, existing metadata can be changed or removed. Passing an empty value deletes the corresponding metadata property. | [optional] [default to True]
  **update_translation_keys** | **bool**| Pass &#x60;false&#x60; here to prevent new keys from being created and existing keys updated. | [optional] [default to True]
  **update_translations_on_source_match** | **bool**| Update target translations only if the source translations of the uploaded multilingual file match the stored translations. | [optional] [default to False]
+ **source_locale_id** | **str**| Specifies the source locale for multilingual files. Can be the name or id of the locale. Preferred is id. | [optional] 
  **update_descriptions** | **bool**| Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions. | [optional] 
  **convert_emoji** | **bool**| This option is obsolete. Providing the option will cause a bad request error. | [optional] 
  **skip_upload_tags** | **bool**| Indicates whether the upload should not create upload tags. | [optional] 

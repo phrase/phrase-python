@@ -116,7 +116,7 @@ class KeysExcludeParameters(object):
     def target_locale_id(self):
         """Gets the target_locale_id of this KeysExcludeParameters.  # noqa: E501
 
-        Locale used to exlcude or include keys.  # noqa: E501
+        Exclude translations in locale  # noqa: E501
 
         :return: The target_locale_id of this KeysExcludeParameters.  # noqa: E501
         :rtype: str
@@ -127,7 +127,7 @@ class KeysExcludeParameters(object):
     def target_locale_id(self, target_locale_id):
         """Sets the target_locale_id of this KeysExcludeParameters.
 
-        Locale used to exlcude or include keys.  # noqa: E501
+        Exclude translations in locale  # noqa: E501
 
         :param target_locale_id: The target_locale_id of this KeysExcludeParameters.  # noqa: E501
         :type: str

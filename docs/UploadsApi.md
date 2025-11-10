@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Upload a new file
 
-Upload a new language file. Creates necessary resources in your project.
+Upload a new language file. Creates necessary resources in your project.  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0). 
 
 ### Example
 

@@ -163,6 +163,7 @@ class UploadSummary(object):
     def translation_keys_unmentioned(self):
         """Gets the translation_keys_unmentioned of this UploadSummary.  # noqa: E501
 
+        The number of translation keys in the project that were not mentioned in the upload.  Note: this field is not calculated (and shows 0) if the upload contains more than 10,000 keys.   # noqa: E501
 
         :return: The translation_keys_unmentioned of this UploadSummary.  # noqa: E501
         :rtype: int
@@ -173,6 +174,7 @@ class UploadSummary(object):
     def translation_keys_unmentioned(self, translation_keys_unmentioned):
         """Sets the translation_keys_unmentioned of this UploadSummary.
 
+        The number of translation keys in the project that were not mentioned in the upload.  Note: this field is not calculated (and shows 0) if the upload contains more than 10,000 keys.   # noqa: E501
 
         :param translation_keys_unmentioned: The translation_keys_unmentioned of this UploadSummary.  # noqa: E501
         :type: int

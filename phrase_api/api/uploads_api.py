@@ -38,7 +38,7 @@ class UploadsApi(object):
     def upload_create(self, project_id, file, file_format, locale_id, **kwargs):  # noqa: E501
         """Upload a new file  # noqa: E501
 
-        Upload a new language file. Creates necessary resources in your project.  # noqa: E501
+        Upload a new language file. Creates necessary resources in your project.  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.upload_create(project_id, file, file_format, locale_id, async_req=True)
@@ -86,7 +86,7 @@ class UploadsApi(object):
     def upload_create_with_http_info(self, project_id, file, file_format, locale_id, **kwargs):  # noqa: E501
         """Upload a new file  # noqa: E501
 
-        Upload a new language file. Creates necessary resources in your project.  # noqa: E501
+        Upload a new language file. Creates necessary resources in your project.  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.upload_create_with_http_info(project_id, file, file_format, locale_id, async_req=True)

@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_show**
-> JobDetails job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations)
+> JobDetails job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations, omit_translation_keys=omit_translation_keys)
 
 Get a single job
 
@@ -533,10 +533,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'my-feature-branch' # str | Branch to use
     include_annotations = False # bool | Include job-locale annotations in the response (default to False)
+    omit_translation_keys = False # bool | Omit translation keys in the response to reduce payload size for bigger jobs (default to False)
 
     try:
         # Get a single job
-        api_response = api_instance.job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations)
+        api_response = api_instance.job_show(project_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, include_annotations=include_annotations, omit_translation_keys=omit_translation_keys)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobsApi->job_show: %s\n" % e)
@@ -552,6 +553,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| Branch to use | [optional] 
  **include_annotations** | **bool**| Include job-locale annotations in the response | [optional] [default to False]
+ **omit_translation_keys** | **bool**| Omit translation keys in the response to reduce payload size for bigger jobs | [optional] [default to False]
 
 ### Return type
 

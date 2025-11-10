@@ -46,7 +46,7 @@ class TestKeyUpdateParameters(unittest.TestCase):
                 data_type = 'number', 
                 tags = 'awesome-feature,needs-proofreading', 
                 max_characters_allowed = 140, 
-                screenshot = '[B@70143ee4', 
+                screenshot = '[B@460306ab', 
                 remove_screenshot = True, 
                 unformatted = True, 
                 xml_space_preserve = True, 

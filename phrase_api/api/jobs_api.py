@@ -1000,6 +1000,7 @@ class JobsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: Branch to use
         :param bool include_annotations: Include job-locale annotations in the response
+        :param bool omit_translation_keys: Omit translation keys in the response to reduce payload size for bigger jobs
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1029,6 +1030,7 @@ class JobsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: Branch to use
         :param bool include_annotations: Include job-locale annotations in the response
+        :param bool omit_translation_keys: Omit translation keys in the response to reduce payload size for bigger jobs
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1050,7 +1052,8 @@ class JobsApi(object):
             'id',
             'x_phrase_app_otp',
             'branch',
-            'include_annotations'
+            'include_annotations',
+            'omit_translation_keys'
         ]
         all_params.extend(
             [
@@ -1091,6 +1094,8 @@ class JobsApi(object):
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
         if 'include_annotations' in local_var_params and local_var_params['include_annotations'] is not None:  # noqa: E501
             query_params.append(('include_annotations', local_var_params['include_annotations']))  # noqa: E501
+        if 'omit_translation_keys' in local_var_params and local_var_params['omit_translation_keys'] is not None:  # noqa: E501
+            query_params.append(('omit_translation_keys', local_var_params['omit_translation_keys']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

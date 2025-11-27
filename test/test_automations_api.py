@@ -62,6 +62,13 @@ class TestAutomationsApi(unittest.TestCase):
         """
         pass
 
+    def test_automation_trigger(self):
+        """Test case for automation_trigger
+
+        Trigger an automation  # noqa: E501
+        """
+        pass
+
     def test_automation_update(self):
         """Test case for automation_update
 

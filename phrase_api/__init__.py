@@ -98,6 +98,7 @@ from phrase_api.models.blacklisted_key import BlacklistedKey
 from phrase_api.models.blacklisted_key_create_parameters import BlacklistedKeyCreateParameters
 from phrase_api.models.blacklisted_key_update_parameters import BlacklistedKeyUpdateParameters
 from phrase_api.models.branch import Branch
+from phrase_api.models.branch_create_comparison_parameters import BranchCreateComparisonParameters
 from phrase_api.models.branch_create_parameters import BranchCreateParameters
 from phrase_api.models.branch_merge_parameters import BranchMergeParameters
 from phrase_api.models.branch_name import BranchName

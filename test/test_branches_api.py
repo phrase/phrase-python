@@ -34,6 +34,13 @@ class TestBranchesApi(unittest.TestCase):
         """
         pass
 
+    def test_branch_comparison_create(self):
+        """Test case for branch_comparison_create
+
+        Create comparison (async.)  # noqa: E501
+        """
+        pass
+
     def test_branch_create(self):
         """Test case for branch_create
 

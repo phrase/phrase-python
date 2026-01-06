@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **code** | **str** |  | [optional] 
 **project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 

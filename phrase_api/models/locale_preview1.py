@@ -32,60 +32,34 @@ class LocalePreview1(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
         'name': 'str',
         'code': 'str',
         'project': 'ProjectShort'
     }
 
     attribute_map = {
-        'id': 'id',
         'name': 'name',
         'code': 'code',
         'project': 'project'
     }
 
-    def __init__(self, id=None, name=None, code=None, project=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, code=None, project=None, local_vars_configuration=None):  # noqa: E501
         """LocalePreview1 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
         self._name = None
         self._code = None
         self._project = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
         if name is not None:
             self.name = name
         if code is not None:
             self.code = code
         if project is not None:
             self.project = project
-
-    @property
-    def id(self):
-        """Gets the id of this LocalePreview1.  # noqa: E501
-
-
-        :return: The id of this LocalePreview1.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this LocalePreview1.
-
-
-        :param id: The id of this LocalePreview1.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def name(self):

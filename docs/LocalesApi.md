@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **account_locales**
-> List[LocalePreview1] account_locales(id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[LocalePreview1] account_locales(id, x_phrase_app_otp=x_phrase_app_otp)
 
 List locales used in account
 
@@ -39,12 +39,10 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.LocalesApi(api_client)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
-    page = 1 # int | Page number
-    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
 
     try:
         # List locales used in account
-        api_response = api_instance.account_locales(id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.account_locales(id, x_phrase_app_otp=x_phrase_app_otp)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocalesApi->account_locales: %s\n" % e)
@@ -57,8 +55,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
- **page** | **int**| Page number | [optional] 
- **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
 
 ### Return type
 

@@ -52,7 +52,21 @@ class TestProjectDetails(unittest.TestCase):
                     gravatar_uid = '', ), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                shares_translation_memory = True
+                shares_translation_memory = True, 
+                machine_translation_enabled = True, 
+                zero_plural_form_enabled = True, 
+                enable_all_data_type_translation_keys_for_translators = False, 
+                enable_icu_message_format = False, 
+                enable_branching = False, 
+                protect_master_branch = False, 
+                autotranslate_enabled = False, 
+                autotranslate_check_new_translation_keys = False, 
+                autotranslate_check_new_uploads = False, 
+                autotranslate_check_new_locales = False, 
+                autotranslate_mark_as_unverified = False, 
+                autotranslate_use_machine_translation = False, 
+                autotranslate_use_translation_memory = True, 
+                default_encoding = 'UTF-8'
             )
         else :
             return ProjectDetails(

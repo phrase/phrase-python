@@ -43,7 +43,21 @@ class ProjectDetails(object):
         'point_of_contact': 'UserPreview',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'shares_translation_memory': 'bool'
+        'shares_translation_memory': 'bool',
+        'machine_translation_enabled': 'bool',
+        'zero_plural_form_enabled': 'bool',
+        'enable_all_data_type_translation_keys_for_translators': 'bool',
+        'enable_icu_message_format': 'bool',
+        'enable_branching': 'bool',
+        'protect_master_branch': 'bool',
+        'autotranslate_enabled': 'bool',
+        'autotranslate_check_new_translation_keys': 'bool',
+        'autotranslate_check_new_uploads': 'bool',
+        'autotranslate_check_new_locales': 'bool',
+        'autotranslate_mark_as_unverified': 'bool',
+        'autotranslate_use_machine_translation': 'bool',
+        'autotranslate_use_translation_memory': 'bool',
+        'default_encoding': 'str'
     }
 
     attribute_map = {
@@ -58,10 +72,24 @@ class ProjectDetails(object):
         'point_of_contact': 'point_of_contact',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'shares_translation_memory': 'shares_translation_memory'
+        'shares_translation_memory': 'shares_translation_memory',
+        'machine_translation_enabled': 'machine_translation_enabled',
+        'zero_plural_form_enabled': 'zero_plural_form_enabled',
+        'enable_all_data_type_translation_keys_for_translators': 'enable_all_data_type_translation_keys_for_translators',
+        'enable_icu_message_format': 'enable_icu_message_format',
+        'enable_branching': 'enable_branching',
+        'protect_master_branch': 'protect_master_branch',
+        'autotranslate_enabled': 'autotranslate_enabled',
+        'autotranslate_check_new_translation_keys': 'autotranslate_check_new_translation_keys',
+        'autotranslate_check_new_uploads': 'autotranslate_check_new_uploads',
+        'autotranslate_check_new_locales': 'autotranslate_check_new_locales',
+        'autotranslate_mark_as_unverified': 'autotranslate_mark_as_unverified',
+        'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
+        'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
+        'default_encoding': 'default_encoding'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, default_encoding=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -79,6 +107,20 @@ class ProjectDetails(object):
         self._created_at = None
         self._updated_at = None
         self._shares_translation_memory = None
+        self._machine_translation_enabled = None
+        self._zero_plural_form_enabled = None
+        self._enable_all_data_type_translation_keys_for_translators = None
+        self._enable_icu_message_format = None
+        self._enable_branching = None
+        self._protect_master_branch = None
+        self._autotranslate_enabled = None
+        self._autotranslate_check_new_translation_keys = None
+        self._autotranslate_check_new_uploads = None
+        self._autotranslate_check_new_locales = None
+        self._autotranslate_mark_as_unverified = None
+        self._autotranslate_use_machine_translation = None
+        self._autotranslate_use_translation_memory = None
+        self._default_encoding = None
         self.discriminator = None
 
         if id is not None:
@@ -105,6 +147,34 @@ class ProjectDetails(object):
             self.updated_at = updated_at
         if shares_translation_memory is not None:
             self.shares_translation_memory = shares_translation_memory
+        if machine_translation_enabled is not None:
+            self.machine_translation_enabled = machine_translation_enabled
+        if zero_plural_form_enabled is not None:
+            self.zero_plural_form_enabled = zero_plural_form_enabled
+        if enable_all_data_type_translation_keys_for_translators is not None:
+            self.enable_all_data_type_translation_keys_for_translators = enable_all_data_type_translation_keys_for_translators
+        if enable_icu_message_format is not None:
+            self.enable_icu_message_format = enable_icu_message_format
+        if enable_branching is not None:
+            self.enable_branching = enable_branching
+        if protect_master_branch is not None:
+            self.protect_master_branch = protect_master_branch
+        if autotranslate_enabled is not None:
+            self.autotranslate_enabled = autotranslate_enabled
+        if autotranslate_check_new_translation_keys is not None:
+            self.autotranslate_check_new_translation_keys = autotranslate_check_new_translation_keys
+        if autotranslate_check_new_uploads is not None:
+            self.autotranslate_check_new_uploads = autotranslate_check_new_uploads
+        if autotranslate_check_new_locales is not None:
+            self.autotranslate_check_new_locales = autotranslate_check_new_locales
+        if autotranslate_mark_as_unverified is not None:
+            self.autotranslate_mark_as_unverified = autotranslate_mark_as_unverified
+        if autotranslate_use_machine_translation is not None:
+            self.autotranslate_use_machine_translation = autotranslate_use_machine_translation
+        if autotranslate_use_translation_memory is not None:
+            self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
+        if default_encoding is not None:
+            self.default_encoding = default_encoding
 
     @property
     def id(self):
@@ -357,6 +427,300 @@ class ProjectDetails(object):
         """
 
         self._shares_translation_memory = shares_translation_memory
+
+    @property
+    def machine_translation_enabled(self):
+        """Gets the machine_translation_enabled of this ProjectDetails.  # noqa: E501
+
+
+        :return: The machine_translation_enabled of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._machine_translation_enabled
+
+    @machine_translation_enabled.setter
+    def machine_translation_enabled(self, machine_translation_enabled):
+        """Sets the machine_translation_enabled of this ProjectDetails.
+
+
+        :param machine_translation_enabled: The machine_translation_enabled of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._machine_translation_enabled = machine_translation_enabled
+
+    @property
+    def zero_plural_form_enabled(self):
+        """Gets the zero_plural_form_enabled of this ProjectDetails.  # noqa: E501
+
+
+        :return: The zero_plural_form_enabled of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._zero_plural_form_enabled
+
+    @zero_plural_form_enabled.setter
+    def zero_plural_form_enabled(self, zero_plural_form_enabled):
+        """Sets the zero_plural_form_enabled of this ProjectDetails.
+
+
+        :param zero_plural_form_enabled: The zero_plural_form_enabled of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._zero_plural_form_enabled = zero_plural_form_enabled
+
+    @property
+    def enable_all_data_type_translation_keys_for_translators(self):
+        """Gets the enable_all_data_type_translation_keys_for_translators of this ProjectDetails.  # noqa: E501
+
+
+        :return: The enable_all_data_type_translation_keys_for_translators of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_all_data_type_translation_keys_for_translators
+
+    @enable_all_data_type_translation_keys_for_translators.setter
+    def enable_all_data_type_translation_keys_for_translators(self, enable_all_data_type_translation_keys_for_translators):
+        """Sets the enable_all_data_type_translation_keys_for_translators of this ProjectDetails.
+
+
+        :param enable_all_data_type_translation_keys_for_translators: The enable_all_data_type_translation_keys_for_translators of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_all_data_type_translation_keys_for_translators = enable_all_data_type_translation_keys_for_translators
+
+    @property
+    def enable_icu_message_format(self):
+        """Gets the enable_icu_message_format of this ProjectDetails.  # noqa: E501
+
+
+        :return: The enable_icu_message_format of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_icu_message_format
+
+    @enable_icu_message_format.setter
+    def enable_icu_message_format(self, enable_icu_message_format):
+        """Sets the enable_icu_message_format of this ProjectDetails.
+
+
+        :param enable_icu_message_format: The enable_icu_message_format of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_icu_message_format = enable_icu_message_format
+
+    @property
+    def enable_branching(self):
+        """Gets the enable_branching of this ProjectDetails.  # noqa: E501
+
+
+        :return: The enable_branching of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_branching
+
+    @enable_branching.setter
+    def enable_branching(self, enable_branching):
+        """Sets the enable_branching of this ProjectDetails.
+
+
+        :param enable_branching: The enable_branching of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_branching = enable_branching
+
+    @property
+    def protect_master_branch(self):
+        """Gets the protect_master_branch of this ProjectDetails.  # noqa: E501
+
+
+        :return: The protect_master_branch of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._protect_master_branch
+
+    @protect_master_branch.setter
+    def protect_master_branch(self, protect_master_branch):
+        """Sets the protect_master_branch of this ProjectDetails.
+
+
+        :param protect_master_branch: The protect_master_branch of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._protect_master_branch = protect_master_branch
+
+    @property
+    def autotranslate_enabled(self):
+        """Gets the autotranslate_enabled of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_enabled of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_enabled
+
+    @autotranslate_enabled.setter
+    def autotranslate_enabled(self, autotranslate_enabled):
+        """Sets the autotranslate_enabled of this ProjectDetails.
+
+
+        :param autotranslate_enabled: The autotranslate_enabled of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_enabled = autotranslate_enabled
+
+    @property
+    def autotranslate_check_new_translation_keys(self):
+        """Gets the autotranslate_check_new_translation_keys of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_check_new_translation_keys of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_check_new_translation_keys
+
+    @autotranslate_check_new_translation_keys.setter
+    def autotranslate_check_new_translation_keys(self, autotranslate_check_new_translation_keys):
+        """Sets the autotranslate_check_new_translation_keys of this ProjectDetails.
+
+
+        :param autotranslate_check_new_translation_keys: The autotranslate_check_new_translation_keys of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_check_new_translation_keys = autotranslate_check_new_translation_keys
+
+    @property
+    def autotranslate_check_new_uploads(self):
+        """Gets the autotranslate_check_new_uploads of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_check_new_uploads of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_check_new_uploads
+
+    @autotranslate_check_new_uploads.setter
+    def autotranslate_check_new_uploads(self, autotranslate_check_new_uploads):
+        """Sets the autotranslate_check_new_uploads of this ProjectDetails.
+
+
+        :param autotranslate_check_new_uploads: The autotranslate_check_new_uploads of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_check_new_uploads = autotranslate_check_new_uploads
+
+    @property
+    def autotranslate_check_new_locales(self):
+        """Gets the autotranslate_check_new_locales of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_check_new_locales of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_check_new_locales
+
+    @autotranslate_check_new_locales.setter
+    def autotranslate_check_new_locales(self, autotranslate_check_new_locales):
+        """Sets the autotranslate_check_new_locales of this ProjectDetails.
+
+
+        :param autotranslate_check_new_locales: The autotranslate_check_new_locales of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_check_new_locales = autotranslate_check_new_locales
+
+    @property
+    def autotranslate_mark_as_unverified(self):
+        """Gets the autotranslate_mark_as_unverified of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_mark_as_unverified of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_mark_as_unverified
+
+    @autotranslate_mark_as_unverified.setter
+    def autotranslate_mark_as_unverified(self, autotranslate_mark_as_unverified):
+        """Sets the autotranslate_mark_as_unverified of this ProjectDetails.
+
+
+        :param autotranslate_mark_as_unverified: The autotranslate_mark_as_unverified of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_mark_as_unverified = autotranslate_mark_as_unverified
+
+    @property
+    def autotranslate_use_machine_translation(self):
+        """Gets the autotranslate_use_machine_translation of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_use_machine_translation of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_use_machine_translation
+
+    @autotranslate_use_machine_translation.setter
+    def autotranslate_use_machine_translation(self, autotranslate_use_machine_translation):
+        """Sets the autotranslate_use_machine_translation of this ProjectDetails.
+
+
+        :param autotranslate_use_machine_translation: The autotranslate_use_machine_translation of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_use_machine_translation = autotranslate_use_machine_translation
+
+    @property
+    def autotranslate_use_translation_memory(self):
+        """Gets the autotranslate_use_translation_memory of this ProjectDetails.  # noqa: E501
+
+
+        :return: The autotranslate_use_translation_memory of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_use_translation_memory
+
+    @autotranslate_use_translation_memory.setter
+    def autotranslate_use_translation_memory(self, autotranslate_use_translation_memory):
+        """Sets the autotranslate_use_translation_memory of this ProjectDetails.
+
+
+        :param autotranslate_use_translation_memory: The autotranslate_use_translation_memory of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_use_translation_memory = autotranslate_use_translation_memory
+
+    @property
+    def default_encoding(self):
+        """Gets the default_encoding of this ProjectDetails.  # noqa: E501
+
+
+        :return: The default_encoding of this ProjectDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_encoding
+
+    @default_encoding.setter
+    def default_encoding(self, default_encoding):
+        """Sets the default_encoding of this ProjectDetails.
+
+
+        :param default_encoding: The default_encoding of this ProjectDetails.  # noqa: E501
+        :type: str
+        """
+
+        self._default_encoding = default_encoding
 
     def to_dict(self):
         """Returns the model properties as a dict"""

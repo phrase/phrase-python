@@ -53,7 +53,8 @@ class TestTranslation(unittest.TestCase):
                     ], 
                 state = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                linked_translation = {"id":"abcd1234cdef1234abcd1234cdef1234","content":"My parent translation"}
             )
         else :
             return Translation(

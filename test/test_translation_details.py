@@ -54,13 +54,13 @@ class TestTranslationDetails(unittest.TestCase):
                 state = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                linked_translation = {"id":"abcd1234cdef1234abcd1234cdef1234","content":"My parent translation"}, 
                 user = phrase_api.models.user_preview.user_preview(
                     id = '', 
                     username = '', 
                     name = '', 
                     gravatar_uid = '', ), 
-                word_count = 56, 
-                linked_translation = {"id":"abcd1234cdef1234abcd1234cdef1234","content":"My parent translation"}
+                word_count = 56
             )
         else :
             return TranslationDetails(

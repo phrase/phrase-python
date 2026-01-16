@@ -43,9 +43,9 @@ class TranslationDetails(object):
         'state': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
+        'linked_translation': 'TranslationParent',
         'user': 'UserPreview',
-        'word_count': 'int',
-        'linked_translation': 'TranslationParent'
+        'word_count': 'int'
     }
 
     attribute_map = {
@@ -60,12 +60,12 @@ class TranslationDetails(object):
         'state': 'state',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
+        'linked_translation': 'linked_translation',
         'user': 'user',
-        'word_count': 'word_count',
-        'linked_translation': 'linked_translation'
+        'word_count': 'word_count'
     }
 
-    def __init__(self, id=None, content=None, unverified=None, excluded=None, plural_suffix=None, key=None, locale=None, placeholders=None, state=None, created_at=None, updated_at=None, user=None, word_count=None, linked_translation=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, content=None, unverified=None, excluded=None, plural_suffix=None, key=None, locale=None, placeholders=None, state=None, created_at=None, updated_at=None, linked_translation=None, user=None, word_count=None, local_vars_configuration=None):  # noqa: E501
         """TranslationDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -82,9 +82,9 @@ class TranslationDetails(object):
         self._state = None
         self._created_at = None
         self._updated_at = None
+        self._linked_translation = None
         self._user = None
         self._word_count = None
-        self._linked_translation = None
         self.discriminator = None
 
         if id is not None:
@@ -109,12 +109,12 @@ class TranslationDetails(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if linked_translation is not None:
+            self.linked_translation = linked_translation
         if user is not None:
             self.user = user
         if word_count is not None:
             self.word_count = word_count
-        if linked_translation is not None:
-            self.linked_translation = linked_translation
 
     @property
     def id(self):
@@ -348,6 +348,27 @@ class TranslationDetails(object):
         self._updated_at = updated_at
 
     @property
+    def linked_translation(self):
+        """Gets the linked_translation of this TranslationDetails.  # noqa: E501
+
+
+        :return: The linked_translation of this TranslationDetails.  # noqa: E501
+        :rtype: TranslationParent
+        """
+        return self._linked_translation
+
+    @linked_translation.setter
+    def linked_translation(self, linked_translation):
+        """Sets the linked_translation of this TranslationDetails.
+
+
+        :param linked_translation: The linked_translation of this TranslationDetails.  # noqa: E501
+        :type: TranslationParent
+        """
+
+        self._linked_translation = linked_translation
+
+    @property
     def user(self):
         """Gets the user of this TranslationDetails.  # noqa: E501
 
@@ -388,27 +409,6 @@ class TranslationDetails(object):
         """
 
         self._word_count = word_count
-
-    @property
-    def linked_translation(self):
-        """Gets the linked_translation of this TranslationDetails.  # noqa: E501
-
-
-        :return: The linked_translation of this TranslationDetails.  # noqa: E501
-        :rtype: TranslationParent
-        """
-        return self._linked_translation
-
-    @linked_translation.setter
-    def linked_translation(self, linked_translation):
-        """Sets the linked_translation of this TranslationDetails.
-
-
-        :param linked_translation: The linked_translation of this TranslationDetails.  # noqa: E501
-        :type: TranslationParent
-        """
-
-        self._linked_translation = linked_translation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

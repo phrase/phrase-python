@@ -33,17 +33,15 @@ class LocalePreview1(object):
     """
     openapi_types = {
         'name': 'str',
-        'code': 'str',
-        'project': 'ProjectShort'
+        'code': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'code': 'code',
-        'project': 'project'
+        'code': 'code'
     }
 
-    def __init__(self, name=None, code=None, project=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, code=None, local_vars_configuration=None):  # noqa: E501
         """LocalePreview1 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -51,15 +49,12 @@ class LocalePreview1(object):
 
         self._name = None
         self._code = None
-        self._project = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
         if code is not None:
             self.code = code
-        if project is not None:
-            self.project = project
 
     @property
     def name(self):
@@ -102,27 +97,6 @@ class LocalePreview1(object):
         """
 
         self._code = code
-
-    @property
-    def project(self):
-        """Gets the project of this LocalePreview1.  # noqa: E501
-
-
-        :return: The project of this LocalePreview1.  # noqa: E501
-        :rtype: ProjectShort
-        """
-        return self._project
-
-    @project.setter
-    def project(self, project):
-        """Sets the project of this LocalePreview1.
-
-
-        :param project: The project of this LocalePreview1.  # noqa: E501
-        :type: ProjectShort
-        """
-
-        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

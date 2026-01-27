@@ -57,11 +57,7 @@ class TestTranslationKeyDetails(unittest.TestCase):
                 xml_space_preserve = True, 
                 original_file = '', 
                 format_value_type = '', 
-                creator = phrase_api.models.user_preview.user_preview(
-                    id = '', 
-                    username = '', 
-                    name = '', 
-                    gravatar_uid = '', ), 
+                creator = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 custom_metadata = {
                     'key' : ''
                     }

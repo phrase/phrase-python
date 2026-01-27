@@ -48,11 +48,7 @@ class TestTeam(unittest.TestCase):
                     {"id":"2e7574e8f2372906a03110c2a7cfe671","name":"My first space","created_at":"2020-02-25T12:17:25Z","updated_at":"2020-03-13T14:46:57Z","projects_count":2,"projects":[{"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","project_image_url":"http://assets.example.com/project.png","account":"account","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"},{"id":"abcd11231fadef1234adacd1234cdef1234","name":"My IOS Project","main_format":"yml","project_image_url":"http://assets.example.com/project2.png","account":"account","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}]}
                     ], 
                 users = [
-                    phrase_api.models.user_preview.user_preview(
-                        id = '', 
-                        username = '', 
-                        name = '', 
-                        gravatar_uid = '', )
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}
                     ]
             )
         else :

@@ -39,16 +39,8 @@ class TestKeyLink(unittest.TestCase):
             return KeyLink(
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                created_by = phrase_api.models.user_preview.user_preview(
-                    id = '', 
-                    username = '', 
-                    name = '', 
-                    gravatar_uid = '', ), 
-                updated_by = phrase_api.models.user_preview.user_preview(
-                    id = '', 
-                    username = '', 
-                    name = '', 
-                    gravatar_uid = '', ), 
+                created_by = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
+                updated_by = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 account = {"id":"abcd1234","name":"Company Account","slug":"company_account","company":"My Awesome Company","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","company_logo_url":"http://assets.example.com/company_logo.png"}, 
                 parent = phrase_api.models.key_preview.key_preview(
                     id = '', 

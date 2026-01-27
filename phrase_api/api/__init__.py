@@ -53,6 +53,7 @@ from phrase_api.api.style_guides_api import StyleGuidesApi
 from phrase_api.api.tags_api import TagsApi
 from phrase_api.api.teams_api import TeamsApi
 from phrase_api.api.translations_api import TranslationsApi
+from phrase_api.api.upload_batches_api import UploadBatchesApi
 from phrase_api.api.uploads_api import UploadsApi
 from phrase_api.api.users_api import UsersApi
 from phrase_api.api.variables_api import VariablesApi

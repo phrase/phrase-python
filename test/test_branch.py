@@ -43,16 +43,8 @@ class TestBranch(unittest.TestCase):
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 merged_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                merged_by = phrase_api.models.user_preview.user_preview(
-                    id = '', 
-                    username = '', 
-                    name = '', 
-                    gravatar_uid = '', ), 
-                created_by = phrase_api.models.user_preview.user_preview(
-                    id = '', 
-                    username = '', 
-                    name = '', 
-                    gravatar_uid = '', ), 
+                merged_by = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
+                created_by = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 state = '', 
                 child_branches = [
                     ''

@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.translation_details import TranslationDetails  # noqa: E501
+from phrase_api.models.upload_batch import UploadBatch  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestTranslationDetails(unittest.TestCase):
-    """TranslationDetails unit test stubs"""
+class TestUploadBatch(unittest.TestCase):
+    """UploadBatch unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,43 +28,32 @@ class TestTranslationDetails(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test TranslationDetails
+        """Test UploadBatch
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.translation_details.TranslationDetails()  # noqa: E501
+        # model = phrase_api.models.upload_batch.UploadBatch()  # noqa: E501
 
         """
         if include_optional :
-            return TranslationDetails(
-                id = '', 
-                content = '', 
-                unverified = True, 
-                excluded = True, 
-                plural_suffix = '', 
-                key = phrase_api.models.key_preview.key_preview(
-                    id = '', 
-                    name = '', 
-                    plural = True, 
-                    use_ordinal_rules = True, ), 
-                locale = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}, 
-                placeholders = [
-                    ''
-                    ], 
-                state = '', 
+            return UploadBatch(
+                state = 'started', 
+                delete_unmentioned_keys = True, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                linked_translation = {"id":"abcd1234cdef1234abcd1234cdef1234","content":"My parent translation"}, 
+                project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 user = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
-                word_count = 56
+                uploads = [
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","filename":"example.json","format":"json","state":"success","tag":"tag","summary":{"locales_created":2,"translation_keys_created":162,"translation_keys_updated":10,"translation_keys_unmentioned":0,"translations_created":291,"translations_updated":3,"tags_created":2,"translation_keys_ignored":0},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
+                    ]
             )
         else :
-            return TranslationDetails(
+            return UploadBatch(
         )
         """
 
-    def testTranslationDetails(self):
-        """Test TranslationDetails"""
+    def testUploadBatch(self):
+        """Test UploadBatch"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

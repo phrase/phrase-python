@@ -224,6 +224,8 @@ from phrase_api.models.translations_unreview_parameters import TranslationsUnrev
 from phrase_api.models.translations_unverify_parameters import TranslationsUnverifyParameters
 from phrase_api.models.translations_verify_parameters import TranslationsVerifyParameters
 from phrase_api.models.upload import Upload
+from phrase_api.models.upload_batch import UploadBatch
+from phrase_api.models.upload_batches_create_parameters import UploadBatchesCreateParameters
 from phrase_api.models.upload_summary import UploadSummary
 from phrase_api.models.user import User
 from phrase_api.models.user_preview import UserPreview

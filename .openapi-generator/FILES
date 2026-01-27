@@ -265,6 +265,9 @@ docs/TranslationsUnreviewParameters.md
 docs/TranslationsUnverifyParameters.md
 docs/TranslationsVerifyParameters.md
 docs/Upload.md
+docs/UploadBatch.md
+docs/UploadBatchesApi.md
+docs/UploadBatchesCreateParameters.md
 docs/UploadSummary.md
 docs/UploadsApi.md
 docs/User.md
@@ -334,6 +337,7 @@ phrase_api/api/style_guides_api.py
 phrase_api/api/tags_api.py
 phrase_api/api/teams_api.py
 phrase_api/api/translations_api.py
+phrase_api/api/upload_batches_api.py
 phrase_api/api/uploads_api.py
 phrase_api/api/users_api.py
 phrase_api/api/variables_api.py
@@ -556,6 +560,8 @@ phrase_api/models/translations_unreview_parameters.py
 phrase_api/models/translations_unverify_parameters.py
 phrase_api/models/translations_verify_parameters.py
 phrase_api/models/upload.py
+phrase_api/models/upload_batch.py
+phrase_api/models/upload_batches_create_parameters.py
 phrase_api/models/upload_summary.py
 phrase_api/models/user.py
 phrase_api/models/user_preview.py
@@ -834,6 +840,9 @@ test/test_translations_unreview_parameters.py
 test/test_translations_unverify_parameters.py
 test/test_translations_verify_parameters.py
 test/test_upload.py
+test/test_upload_batch.py
+test/test_upload_batches_api.py
+test/test_upload_batches_create_parameters.py
 test/test_upload_summary.py
 test/test_user.py
 test/test_user_preview.py

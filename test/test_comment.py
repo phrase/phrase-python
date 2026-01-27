@@ -40,19 +40,11 @@ class TestComment(unittest.TestCase):
                 id = '', 
                 message = '', 
                 has_replies = True, 
-                user = phrase_api.models.user_preview.user_preview(
-                    id = '', 
-                    username = '', 
-                    name = '', 
-                    gravatar_uid = '', ), 
+                user = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 mentioned_users = [
-                    phrase_api.models.user_preview.user_preview(
-                        id = '', 
-                        username = '', 
-                        name = '', 
-                        gravatar_uid = '', )
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}
                     ], 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}

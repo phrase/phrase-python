@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters  # noqa: E501
+from phrase_api.models.upload_batches_create_parameters import UploadBatchesCreateParameters  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestScreenshotUpdateParameters(unittest.TestCase):
-    """ScreenshotUpdateParameters unit test stubs"""
+class TestUploadBatchesCreateParameters(unittest.TestCase):
+    """UploadBatchesCreateParameters unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,27 +28,27 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ScreenshotUpdateParameters
+        """Test UploadBatchesCreateParameters
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.screenshot_update_parameters.ScreenshotUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.upload_batches_create_parameters.UploadBatchesCreateParameters()  # noqa: E501
 
         """
         if include_optional :
-            return ScreenshotUpdateParameters(
+            return UploadBatchesCreateParameters(
                 branch = 'my-feature-branch', 
-                name = 'A screenshot name', 
-                description = 'A screenshot description', 
-                filename = '[B@18b0bbc3'
+                delete_unmentioned_keys = True, 
+                upload_ids = ["abcd1234cdef1234abcd1234cdef1234","bcde2345defg2345bcde2345defg2345"]
             )
         else :
-            return ScreenshotUpdateParameters(
+            return UploadBatchesCreateParameters(
+                upload_ids = ["abcd1234cdef1234abcd1234cdef1234","bcde2345defg2345bcde2345defg2345"],
         )
         """
 
-    def testScreenshotUpdateParameters(self):
-        """Test ScreenshotUpdateParameters"""
+    def testUploadBatchesCreateParameters(self):
+        """Test UploadBatchesCreateParameters"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -410,6 +410,7 @@ Class | Method | HTTP request | Description
 *TranslationsApi* | [**translations_unreview_collection**](docs/TranslationsApi.md#translations_unreview_collection) | **PATCH** /projects/{project_id}/translations/unreview | Unreview translations selected by query
 *TranslationsApi* | [**translations_unverify_collection**](docs/TranslationsApi.md#translations_unverify_collection) | **PATCH** /projects/{project_id}/translations/unverify | Unverify translations by query
 *TranslationsApi* | [**translations_verify_collection**](docs/TranslationsApi.md#translations_verify_collection) | **PATCH** /projects/{project_id}/translations/verify | Verify translations by query
+*UploadBatchesApi* | [**upload_batches_create**](docs/UploadBatchesApi.md#upload_batches_create) | **POST** /projects/{project_id}/upload_batches | Create upload batch
 *UploadsApi* | [**upload_create**](docs/UploadsApi.md#upload_create) | **POST** /projects/{project_id}/uploads | Upload a new file
 *UploadsApi* | [**upload_show**](docs/UploadsApi.md#upload_show) | **GET** /projects/{project_id}/uploads/{id} | Get a single upload
 *UploadsApi* | [**uploads_list**](docs/UploadsApi.md#uploads_list) | **GET** /projects/{project_id}/uploads | List uploads
@@ -645,6 +646,8 @@ Class | Method | HTTP request | Description
  - [TranslationsUnverifyParameters](docs/TranslationsUnverifyParameters.md)
  - [TranslationsVerifyParameters](docs/TranslationsVerifyParameters.md)
  - [Upload](docs/Upload.md)
+ - [UploadBatch](docs/UploadBatch.md)
+ - [UploadBatchesCreateParameters](docs/UploadBatchesCreateParameters.md)
  - [UploadSummary](docs/UploadSummary.md)
  - [User](docs/User.md)
  - [UserPreview](docs/UserPreview.md)

@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_import**
-> RepoSyncEvent repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp, repo_sync_import_parameters=repo_sync_import_parameters)
+> RepoSyncEvent repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, repo_sync_import_parameters=repo_sync_import_parameters)
 
 Import from code repository
 
@@ -243,11 +243,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     account_id = 'account_id_example' # str | Account ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | Branch to use
     repo_sync_import_parameters = phrase_api.RepoSyncImportParameters() # RepoSyncImportParameters | 
 
     try:
         # Import from code repository
-        api_response = api_instance.repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp, repo_sync_import_parameters=repo_sync_import_parameters)
+        api_response = api_instance.repo_sync_import(account_id, id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, repo_sync_import_parameters=repo_sync_import_parameters)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_import: %s\n" % e)
@@ -261,6 +262,7 @@ Name | Type | Description  | Notes
  **account_id** | **str**| Account ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
  **repo_sync_import_parameters** | [**RepoSyncImportParameters**](RepoSyncImportParameters.md)|  | [optional] 
 
 ### Return type

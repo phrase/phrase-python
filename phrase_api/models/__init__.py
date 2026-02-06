@@ -169,6 +169,7 @@ from phrase_api.models.release_update_parameters import ReleaseUpdateParameters
 from phrase_api.models.release_update_parameters1 import ReleaseUpdateParameters1
 from phrase_api.models.repo_sync import RepoSync
 from phrase_api.models.repo_sync_event import RepoSyncEvent
+from phrase_api.models.repo_sync_export_parameters import RepoSyncExportParameters
 from phrase_api.models.repo_sync_import_parameters import RepoSyncImportParameters
 from phrase_api.models.screenshot import Screenshot
 from phrase_api.models.screenshot_marker import ScreenshotMarker

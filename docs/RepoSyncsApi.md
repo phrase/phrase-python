@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_export**
-> RepoSyncEvent repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+> RepoSyncEvent repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp, repo_sync_export_parameters=repo_sync_export_parameters)
 
 Export to code repository
 
@@ -175,10 +175,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     account_id = 'account_id_example' # str | Account ID (required)
     id = 'id_example' # str | ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    repo_sync_export_parameters = phrase_api.RepoSyncExportParameters() # RepoSyncExportParameters | 
 
     try:
         # Export to code repository
-        api_response = api_instance.repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_export(account_id, id, x_phrase_app_otp=x_phrase_app_otp, repo_sync_export_parameters=repo_sync_export_parameters)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_export: %s\n" % e)
@@ -192,6 +193,7 @@ Name | Type | Description  | Notes
  **account_id** | **str**| Account ID | 
  **id** | **str**| ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **repo_sync_export_parameters** | [**RepoSyncExportParameters**](RepoSyncExportParameters.md)|  | [optional] 
 
 ### Return type
 
@@ -203,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

@@ -591,6 +591,7 @@ Class | Method | HTTP request | Description
  - [ReleaseUpdateParameters1](docs/ReleaseUpdateParameters1.md)
  - [RepoSync](docs/RepoSync.md)
  - [RepoSyncEvent](docs/RepoSyncEvent.md)
+ - [RepoSyncExportParameters](docs/RepoSyncExportParameters.md)
  - [RepoSyncImportParameters](docs/RepoSyncImportParameters.md)
  - [Screenshot](docs/Screenshot.md)
  - [ScreenshotMarker](docs/ScreenshotMarker.md)

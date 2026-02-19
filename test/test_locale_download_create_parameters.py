@@ -44,7 +44,7 @@ class TestLocaleDownloadCreateParameters(unittest.TestCase):
                 exclude_empty_zero_forms = True, 
                 include_translated_keys = True, 
                 keep_notranslate_tags = True, 
-                format_options = None, 
+                format_options = {"format_options":{"foo":"bar"}}, 
                 encoding = 'UTF-8', 
                 include_unverified_translations = True, 
                 use_last_reviewed_version = True, 

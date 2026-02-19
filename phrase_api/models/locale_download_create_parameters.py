@@ -297,7 +297,7 @@ class LocaleDownloadCreateParameters(object):
     def format_options(self):
         """Gets the format_options of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        Additional formatting and render options. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for a list of options available for each format. Specify format options like this: `...&format_options[foo]=bar`  # noqa: E501
+        Additional formatting and render options. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for a list of options available for each format. Pass format options as a JSON object with key-value pairs corresponding to the option name and value. For example, to include comments in a Gettext file, pass `{\"include_comments\": true}`.   # noqa: E501
 
         :return: The format_options of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: object
@@ -308,7 +308,7 @@ class LocaleDownloadCreateParameters(object):
     def format_options(self, format_options):
         """Sets the format_options of this LocaleDownloadCreateParameters.
 
-        Additional formatting and render options. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for a list of options available for each format. Specify format options like this: `...&format_options[foo]=bar`  # noqa: E501
+        Additional formatting and render options. See the [format guide](https://support.phrase.com/hc/en-us/sections/6111343326364) for a list of options available for each format. Pass format options as a JSON object with key-value pairs corresponding to the option name and value. For example, to include comments in a Gettext file, pass `{\"include_comments\": true}`.   # noqa: E501
 
         :param format_options: The format_options of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: object

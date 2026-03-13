@@ -193,6 +193,7 @@ class VersionsHistoryApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
+        :param bool only_content_updates: Indicates whether only content updates should be returned
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -200,7 +201,7 @@ class VersionsHistoryApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: List[TranslationVersion]
+        :return: List[TranslationVersionWithUser]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -223,6 +224,7 @@ class VersionsHistoryApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
+        :param bool only_content_updates: Indicates whether only content updates should be returned
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -232,7 +234,7 @@ class VersionsHistoryApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(List[TranslationVersion], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[TranslationVersionWithUser], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -245,7 +247,8 @@ class VersionsHistoryApi(object):
             'x_phrase_app_otp',
             'page',
             'per_page',
-            'branch'
+            'branch',
+            'only_content_updates'
         ]
         all_params.extend(
             [
@@ -288,6 +291,8 @@ class VersionsHistoryApi(object):
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
         if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
+        if 'only_content_updates' in local_var_params and local_var_params['only_content_updates'] is not None:  # noqa: E501
+            query_params.append(('only_content_updates', local_var_params['only_content_updates']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -312,7 +317,7 @@ class VersionsHistoryApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='List[TranslationVersion]',  # noqa: E501
+            response_type='List[TranslationVersionWithUser]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

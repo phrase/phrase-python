@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **versions_list**
-> List[TranslationVersion] versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+> List[TranslationVersionWithUser] versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, only_content_updates=only_content_updates)
 
 List all versions
 
@@ -110,10 +110,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     branch = 'my-feature-branch' # str | specify the branch to use
+    only_content_updates = False # bool | Indicates whether only content updates should be returned (default to False)
 
     try:
         # List all versions
-        api_response = api_instance.versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch)
+        api_response = api_instance.versions_list(project_id, translation_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, only_content_updates=only_content_updates)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VersionsHistoryApi->versions_list: %s\n" % e)
@@ -130,10 +131,11 @@ Name | Type | Description  | Notes
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
+ **only_content_updates** | **bool**| Indicates whether only content updates should be returned | [optional] [default to False]
 
 ### Return type
 
-[**List[TranslationVersion]**](TranslationVersion.md)
+[**List[TranslationVersionWithUser]**](TranslationVersionWithUser.md)
 
 ### Authorization
 

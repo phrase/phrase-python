@@ -41,7 +41,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@12d644a6', 
+                project_image = '[B@494e502c', 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 point_of_contact = 'abcd1234', 
@@ -59,7 +59,8 @@ class TestProjectCreateParameters(unittest.TestCase):
                 autotranslate_check_new_locales = True, 
                 autotranslate_mark_as_unverified = True, 
                 autotranslate_use_machine_translation = True, 
-                autotranslate_use_translation_memory = True
+                autotranslate_use_translation_memory = True, 
+                placeholder_styles = ["angular","iOS"]
             )
         else :
             return ProjectCreateParameters(

@@ -57,7 +57,10 @@ class ProjectDetails(object):
         'autotranslate_mark_as_unverified': 'bool',
         'autotranslate_use_machine_translation': 'bool',
         'autotranslate_use_translation_memory': 'bool',
-        'default_encoding': 'str'
+        'default_encoding': 'str',
+        'cldr_version': 'str',
+        'job_locking_enabled': 'bool',
+        'placeholder_styles': 'List[str]'
     }
 
     attribute_map = {
@@ -86,10 +89,13 @@ class ProjectDetails(object):
         'autotranslate_mark_as_unverified': 'autotranslate_mark_as_unverified',
         'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
         'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
-        'default_encoding': 'default_encoding'
+        'default_encoding': 'default_encoding',
+        'cldr_version': 'cldr_version',
+        'job_locking_enabled': 'job_locking_enabled',
+        'placeholder_styles': 'placeholder_styles'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, default_encoding=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, default_encoding=None, cldr_version=None, job_locking_enabled=None, placeholder_styles=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -121,6 +127,9 @@ class ProjectDetails(object):
         self._autotranslate_use_machine_translation = None
         self._autotranslate_use_translation_memory = None
         self._default_encoding = None
+        self._cldr_version = None
+        self._job_locking_enabled = None
+        self._placeholder_styles = None
         self.discriminator = None
 
         if id is not None:
@@ -175,6 +184,12 @@ class ProjectDetails(object):
             self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
         if default_encoding is not None:
             self.default_encoding = default_encoding
+        if cldr_version is not None:
+            self.cldr_version = cldr_version
+        if job_locking_enabled is not None:
+            self.job_locking_enabled = job_locking_enabled
+        if placeholder_styles is not None:
+            self.placeholder_styles = placeholder_styles
 
     @property
     def id(self):
@@ -721,6 +736,69 @@ class ProjectDetails(object):
         """
 
         self._default_encoding = default_encoding
+
+    @property
+    def cldr_version(self):
+        """Gets the cldr_version of this ProjectDetails.  # noqa: E501
+
+
+        :return: The cldr_version of this ProjectDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._cldr_version
+
+    @cldr_version.setter
+    def cldr_version(self, cldr_version):
+        """Sets the cldr_version of this ProjectDetails.
+
+
+        :param cldr_version: The cldr_version of this ProjectDetails.  # noqa: E501
+        :type: str
+        """
+
+        self._cldr_version = cldr_version
+
+    @property
+    def job_locking_enabled(self):
+        """Gets the job_locking_enabled of this ProjectDetails.  # noqa: E501
+
+
+        :return: The job_locking_enabled of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._job_locking_enabled
+
+    @job_locking_enabled.setter
+    def job_locking_enabled(self, job_locking_enabled):
+        """Sets the job_locking_enabled of this ProjectDetails.
+
+
+        :param job_locking_enabled: The job_locking_enabled of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._job_locking_enabled = job_locking_enabled
+
+    @property
+    def placeholder_styles(self):
+        """Gets the placeholder_styles of this ProjectDetails.  # noqa: E501
+
+
+        :return: The placeholder_styles of this ProjectDetails.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._placeholder_styles
+
+    @placeholder_styles.setter
+    def placeholder_styles(self, placeholder_styles):
+        """Sets the placeholder_styles of this ProjectDetails.
+
+
+        :param placeholder_styles: The placeholder_styles of this ProjectDetails.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._placeholder_styles = placeholder_styles
 
     def to_dict(self):
         """Returns the model properties as a dict"""

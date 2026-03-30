@@ -29,6 +29,9 @@ Name | Type | Description | Notes
 **autotranslate_use_machine_translation** | **bool** |  | [optional] 
 **autotranslate_use_translation_memory** | **bool** |  | [optional] 
 **default_encoding** | **str** |  | [optional] 
+**cldr_version** | **str** |  | [optional] 
+**job_locking_enabled** | **bool** |  | [optional] 
+**placeholder_styles** | **List[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

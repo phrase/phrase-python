@@ -62,7 +62,10 @@ class TestProjectDetails(unittest.TestCase):
                 autotranslate_mark_as_unverified = False, 
                 autotranslate_use_machine_translation = False, 
                 autotranslate_use_translation_memory = True, 
-                default_encoding = 'UTF-8'
+                default_encoding = 'UTF-8', 
+                cldr_version = 'legacy', 
+                job_locking_enabled = False, 
+                placeholder_styles = ["angular","iOS"]
             )
         else :
             return ProjectDetails(

@@ -37,7 +37,8 @@ class TestRepoSyncExportParameters(unittest.TestCase):
         """
         if include_optional :
             return RepoSyncExportParameters(
-                pr_branch = 'my-feature-branch'
+                pr_branch = 'my-feature-branch', 
+                branch = 'my-strings-branch'
             )
         else :
             return RepoSyncExportParameters(

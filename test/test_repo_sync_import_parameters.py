@@ -37,7 +37,8 @@ class TestRepoSyncImportParameters(unittest.TestCase):
         """
         if include_optional :
             return RepoSyncImportParameters(
-                repository_branch = 'my-feature-branch'
+                repository_branch = 'my-feature-branch', 
+                branch = 'my-strings-branch'
             )
         else :
             return RepoSyncImportParameters(

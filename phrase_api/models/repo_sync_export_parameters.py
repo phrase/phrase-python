@@ -32,24 +32,29 @@ class RepoSyncExportParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'pr_branch': 'str'
+        'pr_branch': 'str',
+        'branch': 'str'
     }
 
     attribute_map = {
-        'pr_branch': 'pr_branch'
+        'pr_branch': 'pr_branch',
+        'branch': 'branch'
     }
 
-    def __init__(self, pr_branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, pr_branch=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncExportParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._pr_branch = None
+        self._branch = None
         self.discriminator = None
 
         if pr_branch is not None:
             self.pr_branch = pr_branch
+        if branch is not None:
+            self.branch = branch
 
     @property
     def pr_branch(self):
@@ -73,6 +78,29 @@ class RepoSyncExportParameters(object):
         """
 
         self._pr_branch = pr_branch
+
+    @property
+    def branch(self):
+        """Gets the branch of this RepoSyncExportParameters.  # noqa: E501
+
+        Strings branch to export from  # noqa: E501
+
+        :return: The branch of this RepoSyncExportParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this RepoSyncExportParameters.
+
+        Strings branch to export from  # noqa: E501
+
+        :param branch: The branch of this RepoSyncExportParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._branch = branch
 
     def to_dict(self):
         """Returns the model properties as a dict"""

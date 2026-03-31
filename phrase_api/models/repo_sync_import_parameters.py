@@ -32,24 +32,29 @@ class RepoSyncImportParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'repository_branch': 'str'
+        'repository_branch': 'str',
+        'branch': 'str'
     }
 
     attribute_map = {
-        'repository_branch': 'repository_branch'
+        'repository_branch': 'repository_branch',
+        'branch': 'branch'
     }
 
-    def __init__(self, repository_branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, repository_branch=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncImportParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._repository_branch = None
+        self._branch = None
         self.discriminator = None
 
         if repository_branch is not None:
             self.repository_branch = repository_branch
+        if branch is not None:
+            self.branch = branch
 
     @property
     def repository_branch(self):
@@ -73,6 +78,29 @@ class RepoSyncImportParameters(object):
         """
 
         self._repository_branch = repository_branch
+
+    @property
+    def branch(self):
+        """Gets the branch of this RepoSyncImportParameters.  # noqa: E501
+
+        Strings branch to import to  # noqa: E501
+
+        :return: The branch of this RepoSyncImportParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this RepoSyncImportParameters.
+
+        Strings branch to import to  # noqa: E501
+
+        :param branch: The branch of this RepoSyncImportParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._branch = branch
 
     def to_dict(self):
         """Returns the model properties as a dict"""

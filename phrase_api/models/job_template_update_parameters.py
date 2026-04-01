@@ -34,16 +34,18 @@ class JobTemplateUpdateParameters(object):
     openapi_types = {
         'branch': 'str',
         'name': 'str',
-        'briefing': 'str'
+        'briefing': 'str',
+        'autotranslate': 'bool'
     }
 
     attribute_map = {
         'branch': 'branch',
         'name': 'name',
-        'briefing': 'briefing'
+        'briefing': 'briefing',
+        'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplateUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -52,6 +54,7 @@ class JobTemplateUpdateParameters(object):
         self._branch = None
         self._name = None
         self._briefing = None
+        self._autotranslate = None
         self.discriminator = None
 
         if branch is not None:
@@ -59,6 +62,8 @@ class JobTemplateUpdateParameters(object):
         self.name = name
         if briefing is not None:
             self.briefing = briefing
+        if autotranslate is not None:
+            self.autotranslate = autotranslate
 
     @property
     def branch(self):
@@ -130,6 +135,29 @@ class JobTemplateUpdateParameters(object):
         """
 
         self._briefing = briefing
+
+    @property
+    def autotranslate(self):
+        """Gets the autotranslate of this JobTemplateUpdateParameters.  # noqa: E501
+
+        Automatically translate the job using machine translation.  # noqa: E501
+
+        :return: The autotranslate of this JobTemplateUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate
+
+    @autotranslate.setter
+    def autotranslate(self, autotranslate):
+        """Sets the autotranslate of this JobTemplateUpdateParameters.
+
+        Automatically translate the job using machine translation.  # noqa: E501
+
+        :param autotranslate: The autotranslate of this JobTemplateUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate = autotranslate
 
     def to_dict(self):
         """Returns the model properties as a dict"""

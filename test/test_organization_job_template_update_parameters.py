@@ -38,7 +38,8 @@ class TestOrganizationJobTemplateUpdateParameters(unittest.TestCase):
         if include_optional :
             return OrganizationJobTemplateUpdateParameters(
                 name = 'template', 
-                briefing = 'text'
+                briefing = 'text', 
+                autotranslate = True
             )
         else :
             return OrganizationJobTemplateUpdateParameters(

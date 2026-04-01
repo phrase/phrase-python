@@ -41,7 +41,8 @@ class TestJobUpdateParameters(unittest.TestCase):
                 name = 'de', 
                 briefing = 'de-DE', 
                 due_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                ticket_url = 'https://example.atlassian.net/browse/FOO'
+                ticket_url = 'https://example.atlassian.net/browse/FOO', 
+                autotranslate = True
             )
         else :
             return JobUpdateParameters(

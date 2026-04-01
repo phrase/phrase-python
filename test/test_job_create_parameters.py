@@ -45,7 +45,8 @@ class TestJobCreateParameters(unittest.TestCase):
                 ticket_url = 'https://example.atlassian.net/browse/FOO', 
                 tags = ["myUploadTag"], 
                 translation_key_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
-                job_template_id = 'abcd1234cdef1234abcd1234cdef1234'
+                job_template_id = 'abcd1234cdef1234abcd1234cdef1234', 
+                autotranslate = True
             )
         else :
             return JobCreateParameters(

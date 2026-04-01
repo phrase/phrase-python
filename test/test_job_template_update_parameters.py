@@ -39,7 +39,8 @@ class TestJobTemplateUpdateParameters(unittest.TestCase):
             return JobTemplateUpdateParameters(
                 branch = 'my-feature-branch', 
                 name = 'template', 
-                briefing = 'text'
+                briefing = 'text', 
+                autotranslate = True
             )
         else :
             return JobTemplateUpdateParameters(

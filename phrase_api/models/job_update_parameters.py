@@ -36,7 +36,8 @@ class JobUpdateParameters(object):
         'name': 'str',
         'briefing': 'str',
         'due_date': 'datetime',
-        'ticket_url': 'str'
+        'ticket_url': 'str',
+        'autotranslate': 'bool'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class JobUpdateParameters(object):
         'name': 'name',
         'briefing': 'briefing',
         'due_date': 'due_date',
-        'ticket_url': 'ticket_url'
+        'ticket_url': 'ticket_url',
+        'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,6 +60,7 @@ class JobUpdateParameters(object):
         self._briefing = None
         self._due_date = None
         self._ticket_url = None
+        self._autotranslate = None
         self.discriminator = None
 
         if branch is not None:
@@ -69,6 +72,8 @@ class JobUpdateParameters(object):
         self.due_date = due_date
         if ticket_url is not None:
             self.ticket_url = ticket_url
+        if autotranslate is not None:
+            self.autotranslate = autotranslate
 
     @property
     def branch(self):
@@ -184,6 +189,29 @@ class JobUpdateParameters(object):
         """
 
         self._ticket_url = ticket_url
+
+    @property
+    def autotranslate(self):
+        """Gets the autotranslate of this JobUpdateParameters.  # noqa: E501
+
+        Automatically translate the job using machine translation  # noqa: E501
+
+        :return: The autotranslate of this JobUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate
+
+    @autotranslate.setter
+    def autotranslate(self, autotranslate):
+        """Sets the autotranslate of this JobUpdateParameters.
+
+        Automatically translate the job using machine translation  # noqa: E501
+
+        :param autotranslate: The autotranslate of this JobUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate = autotranslate
 
     def to_dict(self):
         """Returns the model properties as a dict"""

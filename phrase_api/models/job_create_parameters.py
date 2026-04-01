@@ -40,7 +40,8 @@ class JobCreateParameters(object):
         'ticket_url': 'str',
         'tags': 'List[str]',
         'translation_key_ids': 'List[str]',
-        'job_template_id': 'str'
+        'job_template_id': 'str',
+        'autotranslate': 'bool'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class JobCreateParameters(object):
         'ticket_url': 'ticket_url',
         'tags': 'tags',
         'translation_key_ids': 'translation_key_ids',
-        'job_template_id': 'job_template_id'
+        'job_template_id': 'job_template_id',
+        'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, job_template_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, job_template_id=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class JobCreateParameters(object):
         self._tags = None
         self._translation_key_ids = None
         self._job_template_id = None
+        self._autotranslate = None
         self.discriminator = None
 
         if branch is not None:
@@ -88,6 +91,8 @@ class JobCreateParameters(object):
             self.translation_key_ids = translation_key_ids
         if job_template_id is not None:
             self.job_template_id = job_template_id
+        if autotranslate is not None:
+            self.autotranslate = autotranslate
 
     @property
     def branch(self):
@@ -297,6 +302,29 @@ class JobCreateParameters(object):
         """
 
         self._job_template_id = job_template_id
+
+    @property
+    def autotranslate(self):
+        """Gets the autotranslate of this JobCreateParameters.  # noqa: E501
+
+        Automatically translate the job using machine translation.  # noqa: E501
+
+        :return: The autotranslate of this JobCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate
+
+    @autotranslate.setter
+    def autotranslate(self, autotranslate):
+        """Sets the autotranslate of this JobCreateParameters.
+
+        Automatically translate the job using machine translation.  # noqa: E501
+
+        :param autotranslate: The autotranslate of this JobCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate = autotranslate
 
     def to_dict(self):
         """Returns the model properties as a dict"""

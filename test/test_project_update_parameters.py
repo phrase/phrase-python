@@ -43,7 +43,7 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@15c5c99', 
+                project_image = '[B@4b2b2757', 
                 remove_project_image = False, 
                 workflow = 'review', 
                 machine_translation_enabled = True, 

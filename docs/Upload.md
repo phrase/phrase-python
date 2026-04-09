@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **tag** | **str** | Unique tag of the upload  | [optional] 
 **tags** | **List[str]** | List of tags that were assigned to the uploaded keys  | [optional] 
 **url** | **str** | The URL to the upload in Phrase Strings app.  | [optional] 
+**user** | [**UserPreview**](.md) |  | [optional] 
 **summary** | [**UploadSummary**](UploadSummary.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

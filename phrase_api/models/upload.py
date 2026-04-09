@@ -39,6 +39,7 @@ class Upload(object):
         'tag': 'str',
         'tags': 'List[str]',
         'url': 'str',
+        'user': 'UserPreview',
         'summary': 'UploadSummary',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -52,12 +53,13 @@ class Upload(object):
         'tag': 'tag',
         'tags': 'tags',
         'url': 'url',
+        'user': 'user',
         'summary': 'summary',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, tags=None, url=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, tags=None, url=None, user=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Upload - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class Upload(object):
         self._tag = None
         self._tags = None
         self._url = None
+        self._user = None
         self._summary = None
         self._created_at = None
         self._updated_at = None
@@ -89,6 +92,8 @@ class Upload(object):
             self.tags = tags
         if url is not None:
             self.url = url
+        if user is not None:
+            self.user = user
         if summary is not None:
             self.summary = summary
         if created_at is not None:
@@ -248,6 +253,27 @@ class Upload(object):
         """
 
         self._url = url
+
+    @property
+    def user(self):
+        """Gets the user of this Upload.  # noqa: E501
+
+
+        :return: The user of this Upload.  # noqa: E501
+        :rtype: UserPreview
+        """
+        return self._user
+
+    @user.setter
+    def user(self, user):
+        """Sets the user of this Upload.
+
+
+        :param user: The user of this Upload.  # noqa: E501
+        :type: UserPreview
+        """
+
+        self._user = user
 
     @property
     def summary(self):

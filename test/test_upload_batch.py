@@ -44,7 +44,7 @@ class TestUploadBatch(unittest.TestCase):
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 user = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 uploads = [
-                    {"id":"abcd1234cdef1234abcd1234cdef1234","filename":"example.json","format":"json","state":"success","tag":"tag","summary":{"locales_created":2,"translation_keys_created":162,"translation_keys_updated":10,"translation_keys_unmentioned":0,"translations_created":291,"translations_updated":3,"tags_created":2,"translation_keys_ignored":0},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
+                    {"id":"abcd1234cdef1234abcd1234cdef1234","filename":"example.json","format":"json","state":"success","tag":"tag","summary":{"locales_created":2,"translation_keys_created":162,"translation_keys_updated":10,"translation_keys_unmentioned":0,"translations_created":291,"translations_updated":3,"tags_created":2,"translation_keys_ignored":0},"user":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"},"created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ]
             )
         else :

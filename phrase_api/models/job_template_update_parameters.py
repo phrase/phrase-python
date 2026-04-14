@@ -35,17 +35,19 @@ class JobTemplateUpdateParameters(object):
         'branch': 'str',
         'name': 'str',
         'briefing': 'str',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'source_locale_id': 'str'
     }
 
     attribute_map = {
         'branch': 'branch',
         'name': 'name',
         'briefing': 'briefing',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'source_locale_id': 'source_locale_id'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, autotranslate=None, source_locale_id=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplateUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class JobTemplateUpdateParameters(object):
         self._name = None
         self._briefing = None
         self._autotranslate = None
+        self._source_locale_id = None
         self.discriminator = None
 
         if branch is not None:
@@ -64,6 +67,8 @@ class JobTemplateUpdateParameters(object):
             self.briefing = briefing
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if source_locale_id is not None:
+            self.source_locale_id = source_locale_id
 
     @property
     def branch(self):
@@ -158,6 +163,29 @@ class JobTemplateUpdateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def source_locale_id(self):
+        """Gets the source_locale_id of this JobTemplateUpdateParameters.  # noqa: E501
+
+        The API id of the source language. This locale will be set as source locale for the job template. If not provided, the project default locale will be used.  # noqa: E501
+
+        :return: The source_locale_id of this JobTemplateUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_locale_id
+
+    @source_locale_id.setter
+    def source_locale_id(self, source_locale_id):
+        """Sets the source_locale_id of this JobTemplateUpdateParameters.
+
+        The API id of the source language. This locale will be set as source locale for the job template. If not provided, the project default locale will be used.  # noqa: E501
+
+        :param source_locale_id: The source_locale_id of this JobTemplateUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._source_locale_id = source_locale_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -40,7 +40,8 @@ class TestJobTemplateUpdateParameters(unittest.TestCase):
                 branch = 'my-feature-branch', 
                 name = 'template', 
                 briefing = 'text', 
-                autotranslate = True
+                autotranslate = True, 
+                source_locale_id = 'abcd1234cdef1234abcd1234cdef1234'
             )
         else :
             return JobTemplateUpdateParameters(

@@ -198,6 +198,7 @@ docs/ReleaseUpdateParameters.md
 docs/ReleaseUpdateParameters1.md
 docs/ReleasesApi.md
 docs/RepoSync.md
+docs/RepoSyncCreateParameters.md
 docs/RepoSyncEvent.md
 docs/RepoSyncEventsApi.md
 docs/RepoSyncExportParameters.md
@@ -505,6 +506,7 @@ phrase_api/models/release_trigger.py
 phrase_api/models/release_update_parameters.py
 phrase_api/models/release_update_parameters1.py
 phrase_api/models/repo_sync.py
+phrase_api/models/repo_sync_create_parameters.py
 phrase_api/models/repo_sync_event.py
 phrase_api/models/repo_sync_export_parameters.py
 phrase_api/models/repo_sync_import_parameters.py
@@ -775,6 +777,7 @@ test/test_release_update_parameters.py
 test/test_release_update_parameters1.py
 test/test_releases_api.py
 test/test_repo_sync.py
+test/test_repo_sync_create_parameters.py
 test/test_repo_sync_event.py
 test/test_repo_sync_events_api.py
 test/test_repo_sync_export_parameters.py

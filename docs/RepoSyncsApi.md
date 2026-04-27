@@ -5,6 +5,7 @@ All URIs are relative to *https://api.phrase.com/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**repo_sync_activate**](RepoSyncsApi.md#repo_sync_activate) | **POST** /accounts/{account_id}/repo_syncs/{id}/activate | Activate a Repo Sync
+[**repo_sync_create**](RepoSyncsApi.md#repo_sync_create) | **POST** /accounts/{account_id}/repo_syncs | Create a Repo Sync
 [**repo_sync_deactivate**](RepoSyncsApi.md#repo_sync_deactivate) | **POST** /accounts/{account_id}/repo_syncs/{id}/deactivate | Deactivate a Repo Sync
 [**repo_sync_export**](RepoSyncsApi.md#repo_sync_export) | **POST** /accounts/{account_id}/repo_syncs/{id}/export | Export to code repository
 [**repo_sync_import**](RepoSyncsApi.md#repo_sync_import) | **POST** /accounts/{account_id}/repo_syncs/{id}/import | Import from code repository
@@ -76,6 +77,75 @@ Name | Type | Description  | Notes
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **repo_sync_create**
+> RepoSync repo_sync_create(account_id, repo_sync_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+
+Create a Repo Sync
+
+Create a new Repo Sync.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import phrase_api
+from phrase_api.rest import ApiException
+from pprint import pprint
+
+configuration = phrase_api.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'token'
+
+# Enter a context with an instance of the API client
+with phrase_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = phrase_api.RepoSyncsApi(api_client)
+    account_id = 'account_id_example' # str | Account ID (required)
+    repo_sync_create_parameters = phrase_api.RepoSyncCreateParameters() # RepoSyncCreateParameters |  (required)
+    x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+
+    try:
+        # Create a Repo Sync
+        api_response = api_instance.repo_sync_create(account_id, repo_sync_create_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling RepoSyncsApi->repo_sync_create: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **account_id** | **str**| Account ID | 
+ **repo_sync_create_parameters** | [**RepoSyncCreateParameters**](RepoSyncCreateParameters.md)|  | 
+ **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+
+### Return type
+
+[**RepoSync**](RepoSync.md)
+
+### Authorization
+
+[Basic](../README.md#Basic), [Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**422** | Unprocessable entity |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

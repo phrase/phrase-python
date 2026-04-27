@@ -34,6 +34,13 @@ class TestRepoSyncsApi(unittest.TestCase):
         """
         pass
 
+    def test_repo_sync_create(self):
+        """Test case for repo_sync_create
+
+        Create a Repo Sync  # noqa: E501
+        """
+        pass
+
     def test_repo_sync_deactivate(self):
         """Test case for repo_sync_deactivate
 

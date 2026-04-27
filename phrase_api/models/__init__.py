@@ -168,6 +168,7 @@ from phrase_api.models.release_trigger import ReleaseTrigger
 from phrase_api.models.release_update_parameters import ReleaseUpdateParameters
 from phrase_api.models.release_update_parameters1 import ReleaseUpdateParameters1
 from phrase_api.models.repo_sync import RepoSync
+from phrase_api.models.repo_sync_create_parameters import RepoSyncCreateParameters
 from phrase_api.models.repo_sync_event import RepoSyncEvent
 from phrase_api.models.repo_sync_export_parameters import RepoSyncExportParameters
 from phrase_api.models.repo_sync_import_parameters import RepoSyncImportParameters

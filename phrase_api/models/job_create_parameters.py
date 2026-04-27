@@ -40,6 +40,7 @@ class JobCreateParameters(object):
         'ticket_url': 'str',
         'tags': 'List[str]',
         'translation_key_ids': 'List[str]',
+        'target_locale_ids': 'List[str]',
         'job_template_id': 'str',
         'autotranslate': 'bool'
     }
@@ -53,11 +54,12 @@ class JobCreateParameters(object):
         'ticket_url': 'ticket_url',
         'tags': 'tags',
         'translation_key_ids': 'translation_key_ids',
+        'target_locale_ids': 'target_locale_ids',
         'job_template_id': 'job_template_id',
         'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, job_template_id=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, target_locale_ids=None, job_template_id=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -71,6 +73,7 @@ class JobCreateParameters(object):
         self._ticket_url = None
         self._tags = None
         self._translation_key_ids = None
+        self._target_locale_ids = None
         self._job_template_id = None
         self._autotranslate = None
         self.discriminator = None
@@ -89,6 +92,8 @@ class JobCreateParameters(object):
             self.tags = tags
         if translation_key_ids is not None:
             self.translation_key_ids = translation_key_ids
+        if target_locale_ids is not None:
+            self.target_locale_ids = target_locale_ids
         if job_template_id is not None:
             self.job_template_id = job_template_id
         if autotranslate is not None:
@@ -281,10 +286,33 @@ class JobCreateParameters(object):
         self._translation_key_ids = translation_key_ids
 
     @property
+    def target_locale_ids(self):
+        """Gets the target_locale_ids of this JobCreateParameters.  # noqa: E501
+
+        List of target locales for the job. Mutually exclusive with `job_template_id`.  # noqa: E501
+
+        :return: The target_locale_ids of this JobCreateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._target_locale_ids
+
+    @target_locale_ids.setter
+    def target_locale_ids(self, target_locale_ids):
+        """Sets the target_locale_ids of this JobCreateParameters.
+
+        List of target locales for the job. Mutually exclusive with `job_template_id`.  # noqa: E501
+
+        :param target_locale_ids: The target_locale_ids of this JobCreateParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._target_locale_ids = target_locale_ids
+
+    @property
     def job_template_id(self):
         """Gets the job_template_id of this JobCreateParameters.  # noqa: E501
 
-        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes.  # noqa: E501
+        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with `target_locale_ids`.  # noqa: E501
 
         :return: The job_template_id of this JobCreateParameters.  # noqa: E501
         :rtype: str
@@ -295,7 +323,7 @@ class JobCreateParameters(object):
     def job_template_id(self, job_template_id):
         """Sets the job_template_id of this JobCreateParameters.
 
-        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes.  # noqa: E501
+        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with `target_locale_ids`.  # noqa: E501
 
         :param job_template_id: The job_template_id of this JobCreateParameters.  # noqa: E501
         :type: str

@@ -42,6 +42,7 @@ class TestJobUpdateParameters(unittest.TestCase):
                 briefing = 'de-DE', 
                 due_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 ticket_url = 'https://example.atlassian.net/browse/FOO', 
+                target_locale_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
                 autotranslate = True
             )
         else :

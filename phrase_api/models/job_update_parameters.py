@@ -37,6 +37,7 @@ class JobUpdateParameters(object):
         'briefing': 'str',
         'due_date': 'datetime',
         'ticket_url': 'str',
+        'target_locale_ids': 'List[str]',
         'autotranslate': 'bool'
     }
 
@@ -46,10 +47,11 @@ class JobUpdateParameters(object):
         'briefing': 'briefing',
         'due_date': 'due_date',
         'ticket_url': 'ticket_url',
+        'target_locale_ids': 'target_locale_ids',
         'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class JobUpdateParameters(object):
         self._briefing = None
         self._due_date = None
         self._ticket_url = None
+        self._target_locale_ids = None
         self._autotranslate = None
         self.discriminator = None
 
@@ -72,6 +75,8 @@ class JobUpdateParameters(object):
         self.due_date = due_date
         if ticket_url is not None:
             self.ticket_url = ticket_url
+        if target_locale_ids is not None:
+            self.target_locale_ids = target_locale_ids
         if autotranslate is not None:
             self.autotranslate = autotranslate
 
@@ -189,6 +194,29 @@ class JobUpdateParameters(object):
         """
 
         self._ticket_url = ticket_url
+
+    @property
+    def target_locale_ids(self):
+        """Gets the target_locale_ids of this JobUpdateParameters.  # noqa: E501
+
+        List of target locales for the job.  # noqa: E501
+
+        :return: The target_locale_ids of this JobUpdateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._target_locale_ids
+
+    @target_locale_ids.setter
+    def target_locale_ids(self, target_locale_ids):
+        """Sets the target_locale_ids of this JobUpdateParameters.
+
+        List of target locales for the job.  # noqa: E501
+
+        :param target_locale_ids: The target_locale_ids of this JobUpdateParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._target_locale_ids = target_locale_ids
 
     @property
     def autotranslate(self):

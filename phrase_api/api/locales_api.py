@@ -954,6 +954,7 @@ class LocalesApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str sort_by: Sort locales. Valid options are \"name_asc\", \"name_desc\", \"default_asc\", \"default_desc\".
         :param str branch: specify the branch to use
+        :param str q: Specify a query to filter locales. Currently supports `name` argument, filtering only locales with names starting with the given string.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -984,6 +985,7 @@ class LocalesApi(object):
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str sort_by: Sort locales. Valid options are \"name_asc\", \"name_desc\", \"default_asc\", \"default_desc\".
         :param str branch: specify the branch to use
+        :param str q: Specify a query to filter locales. Currently supports `name` argument, filtering only locales with names starting with the given string.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1006,7 +1008,8 @@ class LocalesApi(object):
             'page',
             'per_page',
             'sort_by',
-            'branch'
+            'branch',
+            'q'
         ]
         all_params.extend(
             [
@@ -1045,6 +1048,8 @@ class LocalesApi(object):
             query_params.append(('sort_by', local_var_params['sort_by']))  # noqa: E501
         if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
+        if 'q' in local_var_params and local_var_params['q'] is not None:  # noqa: E501
+            query_params.append(('q', local_var_params['q']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

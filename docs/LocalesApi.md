@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **locales_list**
-> List[Locale] locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch)
+> List[Locale] locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch, q=q)
 
 List locales
 
@@ -502,10 +502,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     sort_by = 'sort_by_example' # str | Sort locales. Valid options are \"name_asc\", \"name_desc\", \"default_asc\", \"default_desc\".
     branch = 'my-feature-branch' # str | specify the branch to use
+    q = 'name:en' # str | Specify a query to filter locales. Currently supports `name` argument, filtering only locales with names starting with the given string.
 
     try:
         # List locales
-        api_response = api_instance.locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch)
+        api_response = api_instance.locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, sort_by=sort_by, branch=branch, q=q)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocalesApi->locales_list: %s\n" % e)
@@ -522,6 +523,7 @@ Name | Type | Description  | Notes
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **sort_by** | **str**| Sort locales. Valid options are \&quot;name_asc\&quot;, \&quot;name_desc\&quot;, \&quot;default_asc\&quot;, \&quot;default_desc\&quot;. | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
+ **q** | **str**| Specify a query to filter locales. Currently supports &#x60;name&#x60; argument, filtering only locales with names starting with the given string. | [optional] 
 
 ### Return type
 

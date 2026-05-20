@@ -299,7 +299,7 @@ class BranchesApi(object):
     def branch_create(self, project_id, branch_create_parameters, **kwargs):  # noqa: E501
         """Create a branch  # noqa: E501
 
-        Create a new branch.  *Note: Creating a new branch may take several minutes depending on the project size.*   # noqa: E501
+        Create a new branch.  Branch project provisioning runs asynchronously, so the newly created branch is returned in a transitional state (typically `creating_branch`) and only reaches `success` once the underlying project has been set up. Poll the branch resource until its `state` becomes `success` before performing further operations on it.  Requires the Branching feature to be enabled on the account.  *Note: Creating a new branch may take several minutes depending on the project size.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_create(project_id, branch_create_parameters, async_req=True)
@@ -326,7 +326,7 @@ class BranchesApi(object):
     def branch_create_with_http_info(self, project_id, branch_create_parameters, **kwargs):  # noqa: E501
         """Create a branch  # noqa: E501
 
-        Create a new branch.  *Note: Creating a new branch may take several minutes depending on the project size.*   # noqa: E501
+        Create a new branch.  Branch project provisioning runs asynchronously, so the newly created branch is returned in a transitional state (typically `creating_branch`) and only reaches `success` once the underlying project has been set up. Poll the branch resource until its `state` becomes `success` before performing further operations on it.  Requires the Branching feature to be enabled on the account.  *Note: Creating a new branch may take several minutes depending on the project size.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_create_with_http_info(project_id, branch_create_parameters, async_req=True)
@@ -431,7 +431,7 @@ class BranchesApi(object):
     def branch_delete(self, project_id, name, **kwargs):  # noqa: E501
         """Delete a branch  # noqa: E501
 
-        Delete an existing branch.  # noqa: E501
+        Delete an existing branch.  A branch cannot be deleted while it still has open jobs or open translation orders attached to its branch project — in that case the request is rejected with `409 Conflict`. A branch whose current `state` does not allow deletion (for example, while a merge or sync is in progress) is rejected with `422 Unprocessable Entity`.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_delete(project_id, name, async_req=True)
@@ -458,7 +458,7 @@ class BranchesApi(object):
     def branch_delete_with_http_info(self, project_id, name, **kwargs):  # noqa: E501
         """Delete a branch  # noqa: E501
 
-        Delete an existing branch.  # noqa: E501
+        Delete an existing branch.  A branch cannot be deleted while it still has open jobs or open translation orders attached to its branch project — in that case the request is rejected with `409 Conflict`. A branch whose current `state` does not allow deletion (for example, while a merge or sync is in progress) is rejected with `422 Unprocessable Entity`.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_delete_with_http_info(project_id, name, async_req=True)
@@ -533,6 +533,10 @@ class BranchesApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -555,7 +559,7 @@ class BranchesApi(object):
     def branch_merge(self, project_id, name, branch_merge_parameters, **kwargs):  # noqa: E501
         """Merge a branch  # noqa: E501
 
-        Merge an existing branch.  *Note: Merging a branch may take several minutes depending on diff size.*   # noqa: E501
+        Merge an existing branch back into its base branch.  The merge runs asynchronously. The branch transitions to `merging_branch` and settles in `merged`, `merge_error`, or `merge_conflict` once the background job completes; the response body for this request is empty. Poll the branch resource to observe the final state.  A branch cannot be merged while it still has open jobs or open translation orders attached to its branch project — in that case the request is rejected with `409 Conflict`. A branch whose current `state` does not allow a merge is rejected with `422 Unprocessable Entity`.  Requires the Branching feature to be enabled on the account.  *Note: Merging a branch may take several minutes depending on diff size.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_merge(project_id, name, branch_merge_parameters, async_req=True)
@@ -583,7 +587,7 @@ class BranchesApi(object):
     def branch_merge_with_http_info(self, project_id, name, branch_merge_parameters, **kwargs):  # noqa: E501
         """Merge a branch  # noqa: E501
 
-        Merge an existing branch.  *Note: Merging a branch may take several minutes depending on diff size.*   # noqa: E501
+        Merge an existing branch back into its base branch.  The merge runs asynchronously. The branch transitions to `merging_branch` and settles in `merged`, `merge_error`, or `merge_conflict` once the background job completes; the response body for this request is empty. Poll the branch resource to observe the final state.  A branch cannot be merged while it still has open jobs or open translation orders attached to its branch project — in that case the request is rejected with `409 Conflict`. A branch whose current `state` does not allow a merge is rejected with `422 Unprocessable Entity`.  Requires the Branching feature to be enabled on the account.  *Note: Merging a branch may take several minutes depending on diff size.*   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_merge_with_http_info(project_id, name, branch_merge_parameters, async_req=True)
@@ -666,6 +670,10 @@ class BranchesApi(object):
         body_params = None
         if 'branch_merge_parameters' in local_var_params:
             body_params = local_var_params['branch_merge_parameters']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
@@ -692,7 +700,7 @@ class BranchesApi(object):
     def branch_show(self, project_id, name, **kwargs):  # noqa: E501
         """Get a single branch  # noqa: E501
 
-        Get details on a single branch for a given project.  # noqa: E501
+        Get details on a single branch for a given project.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_show(project_id, name, async_req=True)
@@ -719,7 +727,7 @@ class BranchesApi(object):
     def branch_show_with_http_info(self, project_id, name, **kwargs):  # noqa: E501
         """Get a single branch  # noqa: E501
 
-        Get details on a single branch for a given project.  # noqa: E501
+        Get details on a single branch for a given project.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_show_with_http_info(project_id, name, async_req=True)
@@ -820,7 +828,7 @@ class BranchesApi(object):
     def branch_sync(self, project_id, name, branch_sync_parameters, **kwargs):  # noqa: E501
         """Sync a branch  # noqa: E501
 
-        Sync an existing branch.  *Note: Only available for branches created with new branching.*   # noqa: E501
+        Pull changes from the base branch into this branch, applying the chosen conflict-resolution strategy.  The sync runs asynchronously. The branch transitions to `syncing_branch` and settles back into `success` (or `merge_conflict` / `branch_error`) once the background job completes; the response body for this request is empty. Poll the branch resource to observe the final state.  Only branches created with the newer branching system can be synced. Requests against branches from the older system, or against branches whose current state does not allow a sync, are rejected with `422 Unprocessable Entity` and an empty body.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_sync(project_id, name, branch_sync_parameters, async_req=True)
@@ -848,7 +856,7 @@ class BranchesApi(object):
     def branch_sync_with_http_info(self, project_id, name, branch_sync_parameters, **kwargs):  # noqa: E501
         """Sync a branch  # noqa: E501
 
-        Sync an existing branch.  *Note: Only available for branches created with new branching.*   # noqa: E501
+        Pull changes from the base branch into this branch, applying the chosen conflict-resolution strategy.  The sync runs asynchronously. The branch transitions to `syncing_branch` and settles back into `success` (or `merge_conflict` / `branch_error`) once the background job completes; the response body for this request is empty. Poll the branch resource to observe the final state.  Only branches created with the newer branching system can be synced. Requests against branches from the older system, or against branches whose current state does not allow a sync, are rejected with `422 Unprocessable Entity` and an empty body.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_sync_with_http_info(project_id, name, branch_sync_parameters, async_req=True)
@@ -931,6 +939,10 @@ class BranchesApi(object):
         body_params = None
         if 'branch_sync_parameters' in local_var_params:
             body_params = local_var_params['branch_sync_parameters']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
@@ -957,7 +969,7 @@ class BranchesApi(object):
     def branch_update(self, project_id, name, branch_update_parameters, **kwargs):  # noqa: E501
         """Update a branch  # noqa: E501
 
-        Update an existing branch.  # noqa: E501
+        Update an existing branch. Only the branch name can be changed.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_update(project_id, name, branch_update_parameters, async_req=True)
@@ -985,7 +997,7 @@ class BranchesApi(object):
     def branch_update_with_http_info(self, project_id, name, branch_update_parameters, **kwargs):  # noqa: E501
         """Update a branch  # noqa: E501
 
-        Update an existing branch.  # noqa: E501
+        Update an existing branch. Only the branch name can be changed.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branch_update_with_http_info(project_id, name, branch_update_parameters, async_req=True)
@@ -1098,7 +1110,7 @@ class BranchesApi(object):
     def branches_list(self, project_id, **kwargs):  # noqa: E501
         """List branches  # noqa: E501
 
-        List all branches the of the current project.  # noqa: E501
+        List all branches of the current project.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branches_list(project_id, async_req=True)
@@ -1126,7 +1138,7 @@ class BranchesApi(object):
     def branches_list_with_http_info(self, project_id, **kwargs):  # noqa: E501
         """List branches  # noqa: E501
 
-        List all branches the of the current project.  # noqa: E501
+        List all branches of the current project.  Requires the Branching feature to be enabled on the account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.branches_list_with_http_info(project_id, async_req=True)

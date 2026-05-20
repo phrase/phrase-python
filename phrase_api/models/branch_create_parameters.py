@@ -32,23 +32,28 @@ class BranchCreateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'str'
+        'name': 'str',
+        'base': 'str'
     }
 
     attribute_map = {
-        'name': 'name'
+        'name': 'name',
+        'base': 'base'
     }
 
-    def __init__(self, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, base=None, local_vars_configuration=None):  # noqa: E501
         """BranchCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._name = None
+        self._base = None
         self.discriminator = None
 
         self.name = name
+        if base is not None:
+            self.base = base
 
     @property
     def name(self):
@@ -74,6 +79,29 @@ class BranchCreateParameters(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def base(self):
+        """Gets the base of this BranchCreateParameters.  # noqa: E501
+
+        Name of an existing branch to use as the base for the new branch.  # noqa: E501
+
+        :return: The base of this BranchCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._base
+
+    @base.setter
+    def base(self, base):
+        """Sets the base of this BranchCreateParameters.
+
+        Name of an existing branch to use as the base for the new branch.  # noqa: E501
+
+        :param base: The base of this BranchCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._base = base
 
     def to_dict(self):
         """Returns the model properties as a dict"""

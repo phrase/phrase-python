@@ -37,7 +37,8 @@ class TestBranchCreateParameters(unittest.TestCase):
         """
         if include_optional :
             return BranchCreateParameters(
-                name = 'my-branch'
+                name = 'my-branch', 
+                base = 'parent-branch'
             )
         else :
             return BranchCreateParameters(

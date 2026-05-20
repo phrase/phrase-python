@@ -35,6 +35,7 @@ class Branch(object):
         'base_project_id': 'str',
         'branch_project_id': 'str',
         'name': 'str',
+        'base': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'merged_at': 'datetime',
@@ -48,6 +49,7 @@ class Branch(object):
         'base_project_id': 'base_project_id',
         'branch_project_id': 'branch_project_id',
         'name': 'name',
+        'base': 'base',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'merged_at': 'merged_at',
@@ -57,7 +59,7 @@ class Branch(object):
         'child_branches': 'child_branches'
     }
 
-    def __init__(self, base_project_id=None, branch_project_id=None, name=None, created_at=None, updated_at=None, merged_at=None, merged_by=None, created_by=None, state=None, child_branches=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, base_project_id=None, branch_project_id=None, name=None, base=None, created_at=None, updated_at=None, merged_at=None, merged_by=None, created_by=None, state=None, child_branches=None, local_vars_configuration=None):  # noqa: E501
         """Branch - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class Branch(object):
         self._base_project_id = None
         self._branch_project_id = None
         self._name = None
+        self._base = None
         self._created_at = None
         self._updated_at = None
         self._merged_at = None
@@ -81,6 +84,7 @@ class Branch(object):
             self.branch_project_id = branch_project_id
         if name is not None:
             self.name = name
+        self.base = base
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -158,6 +162,29 @@ class Branch(object):
         """
 
         self._name = name
+
+    @property
+    def base(self):
+        """Gets the base of this Branch.  # noqa: E501
+
+        Name of the base branch this branch was created from. Only present for branches created with the newer branching system.  # noqa: E501
+
+        :return: The base of this Branch.  # noqa: E501
+        :rtype: str
+        """
+        return self._base
+
+    @base.setter
+    def base(self, base):
+        """Sets the base of this Branch.
+
+        Name of the base branch this branch was created from. Only present for branches created with the newer branching system.  # noqa: E501
+
+        :param base: The base of this Branch.  # noqa: E501
+        :type: str
+        """
+
+        self._base = base
 
     @property
     def created_at(self):
@@ -282,6 +309,12 @@ class Branch(object):
         :param state: The state of this Branch.  # noqa: E501
         :type: str
         """
+        allowed_values = ["creating_branch", "merging_branch", "syncing_branch", "merged", "success", "branch_error", "merge_conflict"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and state not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501
+                .format(state, allowed_values)
+            )
 
         self._state = state
 

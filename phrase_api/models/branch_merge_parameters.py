@@ -55,7 +55,7 @@ class BranchMergeParameters(object):
     def strategy(self):
         """Gets the strategy of this BranchMergeParameters.  # noqa: E501
 
-        strategy used for merge conflicts, use_main or use_branch  # noqa: E501
+        Conflict resolution strategy applied when the branch and its base have diverged. `use_main` keeps the values from the base branch; `use_branch` keeps the values from the branch being merged.   # noqa: E501
 
         :return: The strategy of this BranchMergeParameters.  # noqa: E501
         :rtype: str
@@ -66,11 +66,17 @@ class BranchMergeParameters(object):
     def strategy(self, strategy):
         """Sets the strategy of this BranchMergeParameters.
 
-        strategy used for merge conflicts, use_main or use_branch  # noqa: E501
+        Conflict resolution strategy applied when the branch and its base have diverged. `use_main` keeps the values from the base branch; `use_branch` keeps the values from the branch being merged.   # noqa: E501
 
         :param strategy: The strategy of this BranchMergeParameters.  # noqa: E501
         :type: str
         """
+        allowed_values = ["use_main", "use_branch"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and strategy not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `strategy` ({0}), must be one of {1}"  # noqa: E501
+                .format(strategy, allowed_values)
+            )
 
         self._strategy = strategy
 

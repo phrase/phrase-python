@@ -37,6 +37,7 @@ class JobTemplate(object):
         'briefing': 'str',
         'project': 'ProjectShort',
         'branch': 'Branch',
+        'autotranslate_enabled': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -47,11 +48,12 @@ class JobTemplate(object):
         'briefing': 'briefing',
         'project': 'project',
         'branch': 'branch',
+        'autotranslate_enabled': 'autotranslate_enabled',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, project=None, branch=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, project=None, branch=None, autotranslate_enabled=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplate - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +64,7 @@ class JobTemplate(object):
         self._briefing = None
         self._project = None
         self._branch = None
+        self._autotranslate_enabled = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -76,6 +79,8 @@ class JobTemplate(object):
             self.project = project
         if branch is not None:
             self.branch = branch
+        if autotranslate_enabled is not None:
+            self.autotranslate_enabled = autotranslate_enabled
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -185,6 +190,29 @@ class JobTemplate(object):
         """
 
         self._branch = branch
+
+    @property
+    def autotranslate_enabled(self):
+        """Gets the autotranslate_enabled of this JobTemplate.  # noqa: E501
+
+        When `true`, jobs created from this template are auto-translated on creation.   # noqa: E501
+
+        :return: The autotranslate_enabled of this JobTemplate.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_enabled
+
+    @autotranslate_enabled.setter
+    def autotranslate_enabled(self, autotranslate_enabled):
+        """Sets the autotranslate_enabled of this JobTemplate.
+
+        When `true`, jobs created from this template are auto-translated on creation.   # noqa: E501
+
+        :param autotranslate_enabled: The autotranslate_enabled of this JobTemplate.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_enabled = autotranslate_enabled
 
     @property
     def created_at(self):

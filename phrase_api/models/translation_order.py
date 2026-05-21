@@ -43,7 +43,7 @@ class TranslationOrder(object):
         'progress_percent': 'int',
         'source_locale': 'LocalePreview',
         'target_locales': 'List[LocalePreview]',
-        'tag': 'str',
+        'tag_name': 'str',
         'styleguide': 'StyleguidePreview',
         'unverify_translations_upon_delivery': 'bool',
         'quality': 'bool',
@@ -64,7 +64,7 @@ class TranslationOrder(object):
         'progress_percent': 'progress_percent',
         'source_locale': 'source_locale',
         'target_locales': 'target_locales',
-        'tag': 'tag',
+        'tag_name': 'tag_name',
         'styleguide': 'styleguide',
         'unverify_translations_upon_delivery': 'unverify_translations_upon_delivery',
         'quality': 'quality',
@@ -73,7 +73,7 @@ class TranslationOrder(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, lsp=None, amount_in_cents=None, currency=None, message=None, state=None, translation_type=None, progress_percent=None, source_locale=None, target_locales=None, tag=None, styleguide=None, unverify_translations_upon_delivery=None, quality=None, priority=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, lsp=None, amount_in_cents=None, currency=None, message=None, state=None, translation_type=None, progress_percent=None, source_locale=None, target_locales=None, tag_name=None, styleguide=None, unverify_translations_upon_delivery=None, quality=None, priority=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """TranslationOrder - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -90,7 +90,7 @@ class TranslationOrder(object):
         self._progress_percent = None
         self._source_locale = None
         self._target_locales = None
-        self._tag = None
+        self._tag_name = None
         self._styleguide = None
         self._unverify_translations_upon_delivery = None
         self._quality = None
@@ -121,8 +121,8 @@ class TranslationOrder(object):
             self.source_locale = source_locale
         if target_locales is not None:
             self.target_locales = target_locales
-        if tag is not None:
-            self.tag = tag
+        if tag_name is not None:
+            self.tag_name = tag_name
         if styleguide is not None:
             self.styleguide = styleguide
         if unverify_translations_upon_delivery is not None:
@@ -368,25 +368,27 @@ class TranslationOrder(object):
         self._target_locales = target_locales
 
     @property
-    def tag(self):
-        """Gets the tag of this TranslationOrder.  # noqa: E501
+    def tag_name(self):
+        """Gets the tag_name of this TranslationOrder.  # noqa: E501
 
+        Name of the tag whose keys are included in the order.  # noqa: E501
 
-        :return: The tag of this TranslationOrder.  # noqa: E501
+        :return: The tag_name of this TranslationOrder.  # noqa: E501
         :rtype: str
         """
-        return self._tag
+        return self._tag_name
 
-    @tag.setter
-    def tag(self, tag):
-        """Sets the tag of this TranslationOrder.
+    @tag_name.setter
+    def tag_name(self, tag_name):
+        """Sets the tag_name of this TranslationOrder.
 
+        Name of the tag whose keys are included in the order.  # noqa: E501
 
-        :param tag: The tag of this TranslationOrder.  # noqa: E501
+        :param tag_name: The tag_name of this TranslationOrder.  # noqa: E501
         :type: str
         """
 
-        self._tag = tag
+        self._tag_name = tag_name
 
     @property
     def styleguide(self):

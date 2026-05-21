@@ -38,7 +38,11 @@ class TestScreenshotMarker(unittest.TestCase):
         if include_optional :
             return ScreenshotMarker(
                 id = '', 
-                presentation = '', 
+                presentation = phrase_api.models.screenshot_marker_presentation.screenshot_marker_presentation(
+                    x = 56, 
+                    y = 56, 
+                    w = 56, 
+                    h = 56, ), 
                 presentation_type = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

@@ -42,6 +42,7 @@ class TestJobTemplateDetails(unittest.TestCase):
                 briefing = '', 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 
                 branch = {"name":"new-branch","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","merged_at":"2015-01-28T09:52:53Z","merged_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"created_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"state":"success","child_branches":["feature_2","feature_3"]}, 
+                autotranslate_enabled = True, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 owner = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 

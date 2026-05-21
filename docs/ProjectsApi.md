@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Create a project
 
-Create a new project.
+Create a new project in the given account.  When `source_project_id` is supplied, the new project is created as a clone of that project. All locales, keys, and translations are copied asynchronously after the response is returned, so they may not be available immediately. Settings from the source project are inherited unless explicitly overridden in the request; in clone mode, the `shares_translation_memory` field is ignored and inherited from the source.  `shares_translation_memory` defaults to `true` when omitted on a non-clone create. 
 
 ### Example
 
@@ -72,7 +72,10 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**422** | Unprocessable entity |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -82,7 +85,7 @@ Name | Type | Description  | Notes
 
 Delete a project
 
-Delete an existing project.
+Delete an existing project. Associated repository syncs and OTA distributions are removed. A `project:delete` event is dispatched. 
 
 ### Example
 
@@ -130,14 +133,17 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** | The resource was deleted successfully. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**422** | Unprocessable entity |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -203,6 +209,8 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
@@ -271,17 +279,20 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**422** | Unprocessable entity |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **projects_list**
-> List[Project] projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id, sort_by=sort_by, filters=filters)
+> List[Project] projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id, sort_by=sort_by, filters=filters, q=q)
 
 List projects
 
-List all projects the current user has access to.
+List all projects the current user has access to.  When the `account_id` query parameter is omitted, the response includes projects across every account the user is a member of. Pass `account_id` to scope the results to a single account. 
 
 ### Example
 
@@ -304,12 +315,13 @@ with phrase_api.ApiClient(configuration) as api_client:
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     account_id = 'account_id_example' # str | Filter by Account ID
-    sort_by = 'sort_by_example' # str | Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
-    filters = ['favorites'] # List[str] | Filter projects. Valid options are [\"favorites\"].
+    sort_by = 'sort_by_example' # str | Sort projects. Valid values are `name_asc`, `name_desc`, `updated_at_asc`, `updated_at_desc`, `space_asc`, and `space_desc`. The trailing direction segment is optional; if omitted or invalid, projects are sorted ascending. Any other value is ignored and the default ordering is returned.
+    filters = ['favorites'] # List[str] | Filter projects. The only supported value is `favorites`, which restricts the results to projects the current user has starred.
+    q = 'name:android' # str | Search query. The only supported syntax is `name:<text>` — for example `name:android` returns projects whose name matches `android` (case-insensitive substring). Any value that does not match the `name:` prefix is ignored.
 
     try:
         # List projects
-        api_response = api_instance.projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id, sort_by=sort_by, filters=filters)
+        api_response = api_instance.projects_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, account_id=account_id, sort_by=sort_by, filters=filters, q=q)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ProjectsApi->projects_list: %s\n" % e)
@@ -324,8 +336,9 @@ Name | Type | Description  | Notes
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **account_id** | **str**| Filter by Account ID | [optional] 
- **sort_by** | **str**| Sort projects. Valid options are \&quot;name_asc\&quot;, \&quot;name_desc\&quot;, \&quot;updated_at_asc\&quot;, \&quot;updated_at_desc\&quot;, \&quot;space_asc\&quot; and \&quot;space_desc\&quot;. | [optional] 
- **filters** | [**List[str]**](str.md)| Filter projects. Valid options are [\&quot;favorites\&quot;]. | [optional] 
+ **sort_by** | **str**| Sort projects. Valid values are &#x60;name_asc&#x60;, &#x60;name_desc&#x60;, &#x60;updated_at_asc&#x60;, &#x60;updated_at_desc&#x60;, &#x60;space_asc&#x60;, and &#x60;space_desc&#x60;. The trailing direction segment is optional; if omitted or invalid, projects are sorted ascending. Any other value is ignored and the default ordering is returned. | [optional] 
+ **filters** | [**List[str]**](str.md)| Filter projects. The only supported value is &#x60;favorites&#x60;, which restricts the results to projects the current user has starred. | [optional] 
+ **q** | **str**| Search query. The only supported syntax is &#x60;name:&lt;text&gt;&#x60; — for example &#x60;name:android&#x60; returns projects whose name matches &#x60;android&#x60; (case-insensitive substring). Any value that does not match the &#x60;name:&#x60; prefix is ignored. | [optional] 
 
 ### Return type
 
@@ -345,6 +358,8 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  * Pagination -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 

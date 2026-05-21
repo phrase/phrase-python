@@ -35,6 +35,7 @@ class Glossary(object):
         'id': 'str',
         'name': 'str',
         'projects': 'List[ProjectShort]',
+        'spaces': 'List[Space]',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -43,11 +44,12 @@ class Glossary(object):
         'id': 'id',
         'name': 'name',
         'projects': 'projects',
+        'spaces': 'spaces',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, projects=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, projects=None, spaces=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Glossary - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,6 +58,7 @@ class Glossary(object):
         self._id = None
         self._name = None
         self._projects = None
+        self._spaces = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -66,6 +69,8 @@ class Glossary(object):
             self.name = name
         if projects is not None:
             self.projects = projects
+        if spaces is not None:
+            self.spaces = spaces
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -133,6 +138,27 @@ class Glossary(object):
         """
 
         self._projects = projects
+
+    @property
+    def spaces(self):
+        """Gets the spaces of this Glossary.  # noqa: E501
+
+
+        :return: The spaces of this Glossary.  # noqa: E501
+        :rtype: List[Space]
+        """
+        return self._spaces
+
+    @spaces.setter
+    def spaces(self, spaces):
+        """Sets the spaces of this Glossary.
+
+
+        :param spaces: The spaces of this Glossary.  # noqa: E501
+        :type: List[Space]
+        """
+
+        self._spaces = spaces
 
     @property
     def created_at(self):

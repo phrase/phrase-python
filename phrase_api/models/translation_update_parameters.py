@@ -38,7 +38,8 @@ class TranslationUpdateParameters(object):
         'unverified': 'bool',
         'excluded': 'bool',
         'autotranslate': 'bool',
-        'reviewed': 'bool'
+        'reviewed': 'bool',
+        'minor_change': 'bool'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class TranslationUpdateParameters(object):
         'unverified': 'unverified',
         'excluded': 'excluded',
         'autotranslate': 'autotranslate',
-        'reviewed': 'reviewed'
+        'reviewed': 'reviewed',
+        'minor_change': 'minor_change'
     }
 
-    def __init__(self, branch=None, content=None, plural_suffix=None, unverified=None, excluded=None, autotranslate=None, reviewed=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, content=None, plural_suffix=None, unverified=None, excluded=None, autotranslate=None, reviewed=None, minor_change=None, local_vars_configuration=None):  # noqa: E501
         """TranslationUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +66,7 @@ class TranslationUpdateParameters(object):
         self._excluded = None
         self._autotranslate = None
         self._reviewed = None
+        self._minor_change = None
         self.discriminator = None
 
         if branch is not None:
@@ -80,6 +83,8 @@ class TranslationUpdateParameters(object):
             self.autotranslate = autotranslate
         if reviewed is not None:
             self.reviewed = reviewed
+        if minor_change is not None:
+            self.minor_change = minor_change
 
     @property
     def branch(self):
@@ -241,6 +246,29 @@ class TranslationUpdateParameters(object):
         """
 
         self._reviewed = reviewed
+
+    @property
+    def minor_change(self):
+        """Gets the minor_change of this TranslationUpdateParameters.  # noqa: E501
+
+        When `true`, the update is treated as a minor edit and does not trigger downstream re-verification on the linked locales' translations.   # noqa: E501
+
+        :return: The minor_change of this TranslationUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._minor_change
+
+    @minor_change.setter
+    def minor_change(self, minor_change):
+        """Sets the minor_change of this TranslationUpdateParameters.
+
+        When `true`, the update is treated as a minor edit and does not trigger downstream re-verification on the linked locales' translations.   # noqa: E501
+
+        :param minor_change: The minor_change of this TranslationUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._minor_change = minor_change
 
     def to_dict(self):
         """Returns the model properties as a dict"""

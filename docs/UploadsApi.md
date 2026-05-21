@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **upload_create**
-> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, source_locale_id=source_locale_id, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
+> Upload upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, source_locale_id=source_locale_id, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix, skip_automated_job_creation=skip_automated_job_creation)
 
 Upload a new file
 
@@ -57,10 +57,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     mark_reviewed = True # bool | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
     tag_only_affected_keys = False # bool | Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false` (default to False)
     translation_key_prefix = 'translation_key_prefix_example' # str | This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized.
+    skip_automated_job_creation = False # bool | When `true`, the automation rules for the project will not fire for this upload, so no jobs are created as a side effect of importing this file. Defaults to `false`.  (default to False)
 
     try:
         # Upload a new file
-        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, source_locale_id=source_locale_id, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix)
+        api_response = api_instance.upload_create(project_id, file, file_format, locale_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, tags=tags, update_translations=update_translations, update_custom_metadata=update_custom_metadata, update_translation_keys=update_translation_keys, update_translations_on_source_match=update_translations_on_source_match, source_locale_id=source_locale_id, update_descriptions=update_descriptions, convert_emoji=convert_emoji, skip_upload_tags=skip_upload_tags, skip_unverification=skip_unverification, file_encoding=file_encoding, locale_mapping=locale_mapping, format_options=format_options, autotranslate=autotranslate, verify_mentioned_translations=verify_mentioned_translations, mark_reviewed=mark_reviewed, tag_only_affected_keys=tag_only_affected_keys, translation_key_prefix=translation_key_prefix, skip_automated_job_creation=skip_automated_job_creation)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UploadsApi->upload_create: %s\n" % e)
@@ -95,6 +96,7 @@ Name | Type | Description  | Notes
  **mark_reviewed** | **bool**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project. | [optional] 
  **tag_only_affected_keys** | **bool**| Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is &#x60;false&#x60; | [optional] [default to False]
  **translation_key_prefix** | **str**| This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized. | [optional] 
+ **skip_automated_job_creation** | **bool**| When &#x60;true&#x60;, the automation rules for the project will not fire for this upload, so no jobs are created as a side effect of importing this file. Defaults to &#x60;false&#x60;.  | [optional] [default to False]
 
 ### Return type
 
@@ -114,7 +116,10 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **201** | Created |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**422** | Unprocessable entity |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -184,6 +189,8 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
@@ -256,6 +263,8 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  * Pagination -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 

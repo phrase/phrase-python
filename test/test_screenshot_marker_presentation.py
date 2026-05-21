@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.translation_update_parameters import TranslationUpdateParameters  # noqa: E501
+from phrase_api.models.screenshot_marker_presentation import ScreenshotMarkerPresentation  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestTranslationUpdateParameters(unittest.TestCase):
-    """TranslationUpdateParameters unit test stubs"""
+class TestScreenshotMarkerPresentation(unittest.TestCase):
+    """ScreenshotMarkerPresentation unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,31 +28,27 @@ class TestTranslationUpdateParameters(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test TranslationUpdateParameters
+        """Test ScreenshotMarkerPresentation
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.translation_update_parameters.TranslationUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.screenshot_marker_presentation.ScreenshotMarkerPresentation()  # noqa: E501
 
         """
         if include_optional :
-            return TranslationUpdateParameters(
-                branch = 'my-feature-branch', 
-                content = 'My translation', 
-                plural_suffix = '', 
-                unverified = True, 
-                excluded = True, 
-                autotranslate = True, 
-                reviewed = True, 
-                minor_change = False
+            return ScreenshotMarkerPresentation(
+                x = 56, 
+                y = 56, 
+                w = 56, 
+                h = 56
             )
         else :
-            return TranslationUpdateParameters(
+            return ScreenshotMarkerPresentation(
         )
         """
 
-    def testTranslationUpdateParameters(self):
-        """Test TranslationUpdateParameters"""
+    def testScreenshotMarkerPresentation(self):
+        """Test ScreenshotMarkerPresentation"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

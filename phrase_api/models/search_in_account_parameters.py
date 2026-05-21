@@ -35,17 +35,19 @@ class SearchInAccountParameters(object):
         'query': 'str',
         'locale_code': 'str',
         'page': 'int',
-        'per_page': 'int'
+        'per_page': 'int',
+        'project_ids': 'List[str]'
     }
 
     attribute_map = {
         'query': 'query',
         'locale_code': 'locale_code',
         'page': 'page',
-        'per_page': 'per_page'
+        'per_page': 'per_page',
+        'project_ids': 'project_ids'
     }
 
-    def __init__(self, query=None, locale_code=None, page=None, per_page=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, query=None, locale_code=None, page=None, per_page=None, project_ids=None, local_vars_configuration=None):  # noqa: E501
         """SearchInAccountParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class SearchInAccountParameters(object):
         self._locale_code = None
         self._page = None
         self._per_page = None
+        self._project_ids = None
         self.discriminator = None
 
         if query is not None:
@@ -65,6 +68,8 @@ class SearchInAccountParameters(object):
             self.page = page
         if per_page is not None:
             self.per_page = per_page
+        if project_ids is not None:
+            self.project_ids = project_ids
 
     @property
     def query(self):
@@ -157,6 +162,29 @@ class SearchInAccountParameters(object):
         """
 
         self._per_page = per_page
+
+    @property
+    def project_ids(self):
+        """Gets the project_ids of this SearchInAccountParameters.  # noqa: E501
+
+        Limit the search to the given project codes. When omitted, the search spans every project the user can access in this account.   # noqa: E501
+
+        :return: The project_ids of this SearchInAccountParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._project_ids
+
+    @project_ids.setter
+    def project_ids(self, project_ids):
+        """Sets the project_ids of this SearchInAccountParameters.
+
+        Limit the search to the given project codes. When omitted, the search spans every project the user can access in this account.   # noqa: E501
+
+        :param project_ids: The project_ids of this SearchInAccountParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._project_ids = project_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

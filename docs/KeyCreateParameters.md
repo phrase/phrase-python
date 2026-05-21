@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **localized_format_string** | **str** | NSStringLocalizedFormatKey attribute. Used in .stringsdict format. | [optional] 
 **localized_format_key** | **str** | NSStringLocalizedFormatKey attribute. Used in .stringsdict format. | [optional] 
 **custom_metadata** | **object** | Custom metadata property name and value pairs to be associated with key. | [optional] 
+**excluded_in_locales** | **List[str]** | Locales for which translations of this key are excluded from exports. Pass an empty array to clear exclusions.  | [optional] 
+**format_value_type** | **str** | Override of the value type for the key in the export. Most useful for formats like Android XML that distinguish string vs. plural resources.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

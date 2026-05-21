@@ -39,7 +39,9 @@ class TranslationCreateParameters(object):
         'plural_suffix': 'str',
         'unverified': 'bool',
         'excluded': 'bool',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'minor_change': 'bool',
+        'reviewed': 'bool'
     }
 
     attribute_map = {
@@ -50,10 +52,12 @@ class TranslationCreateParameters(object):
         'plural_suffix': 'plural_suffix',
         'unverified': 'unverified',
         'excluded': 'excluded',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'minor_change': 'minor_change',
+        'reviewed': 'reviewed'
     }
 
-    def __init__(self, branch=None, locale_id=None, key_id=None, content=None, plural_suffix=None, unverified=None, excluded=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, locale_id=None, key_id=None, content=None, plural_suffix=None, unverified=None, excluded=None, autotranslate=None, minor_change=None, reviewed=None, local_vars_configuration=None):  # noqa: E501
         """TranslationCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +71,8 @@ class TranslationCreateParameters(object):
         self._unverified = None
         self._excluded = None
         self._autotranslate = None
+        self._minor_change = None
+        self._reviewed = None
         self.discriminator = None
 
         if branch is not None:
@@ -85,6 +91,10 @@ class TranslationCreateParameters(object):
             self.excluded = excluded
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if minor_change is not None:
+            self.minor_change = minor_change
+        if reviewed is not None:
+            self.reviewed = reviewed
 
     @property
     def branch(self):
@@ -269,6 +279,52 @@ class TranslationCreateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def minor_change(self):
+        """Gets the minor_change of this TranslationCreateParameters.  # noqa: E501
+
+        When `true`, the translation is marked as a minor edit and does not trigger downstream re-verification on the linked locales' translations.   # noqa: E501
+
+        :return: The minor_change of this TranslationCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._minor_change
+
+    @minor_change.setter
+    def minor_change(self, minor_change):
+        """Sets the minor_change of this TranslationCreateParameters.
+
+        When `true`, the translation is marked as a minor edit and does not trigger downstream re-verification on the linked locales' translations.   # noqa: E501
+
+        :param minor_change: The minor_change of this TranslationCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._minor_change = minor_change
+
+    @property
+    def reviewed(self):
+        """Gets the reviewed of this TranslationCreateParameters.  # noqa: E501
+
+        When `true` and the project's review workflow is enabled, the translation is created in the `reviewed` state.   # noqa: E501
+
+        :return: The reviewed of this TranslationCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._reviewed
+
+    @reviewed.setter
+    def reviewed(self, reviewed):
+        """Sets the reviewed of this TranslationCreateParameters.
+
+        When `true` and the project's review workflow is enabled, the translation is created in the `reviewed` state.   # noqa: E501
+
+        :param reviewed: The reviewed of this TranslationCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._reviewed = reviewed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

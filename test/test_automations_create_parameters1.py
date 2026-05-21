@@ -46,7 +46,9 @@ class TestAutomationsCreateParameters1(unittest.TestCase):
                     ], 
                 tags = ["myTag"], 
                 cron_schedule = '00 13 * * 1,2', 
-                time_zone = 'GMT'
+                time_zone = 'GMT', 
+                job_owner_id = 'abcd1234abcd1234abcd1234abcd1234', 
+                include_only_updated_locales = False
             )
         else :
             return AutomationsCreateParameters1(

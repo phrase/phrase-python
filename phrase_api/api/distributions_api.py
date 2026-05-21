@@ -55,7 +55,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Distribution
+        :return: DistributionDetails
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -84,7 +84,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Distribution, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(DistributionDetails, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -159,7 +159,7 @@ class DistributionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Distribution',  # noqa: E501
+            response_type='DistributionDetails',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -272,6 +272,10 @@ class DistributionsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -311,7 +315,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Distribution
+        :return: DistributionDetails
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -340,7 +344,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Distribution, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(DistributionDetails, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -411,7 +415,7 @@ class DistributionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Distribution',  # noqa: E501
+            response_type='DistributionDetails',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -440,7 +444,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Distribution
+        :return: DistributionDetails
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -470,7 +474,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Distribution, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(DistributionDetails, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -552,7 +556,7 @@ class DistributionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Distribution',  # noqa: E501
+            response_type='DistributionDetails',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -581,7 +585,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: List[DistributionPreview]
+        :return: List[Distribution]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -611,7 +615,7 @@ class DistributionsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(List[DistributionPreview], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(List[Distribution], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -681,7 +685,7 @@ class DistributionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='List[DistributionPreview]',  # noqa: E501
+            response_type='List[Distribution]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

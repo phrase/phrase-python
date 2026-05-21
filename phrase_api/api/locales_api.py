@@ -47,6 +47,8 @@ class LocalesApi(object):
         :param async_req bool: execute request asynchronously
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param int page: Page number
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -73,6 +75,8 @@ class LocalesApi(object):
         :param async_req bool: execute request asynchronously
         :param str id: ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param int page: Page number
+        :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -91,7 +95,9 @@ class LocalesApi(object):
 
         all_params = [
             'id',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'page',
+            'per_page'
         ]
         all_params.extend(
             [
@@ -122,6 +128,10 @@ class LocalesApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'page' in local_var_params and local_var_params['page'] is not None:  # noqa: E501
+            query_params.append(('page', local_var_params['page']))  # noqa: E501
+        if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
+            query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -396,6 +406,10 @@ class LocalesApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 

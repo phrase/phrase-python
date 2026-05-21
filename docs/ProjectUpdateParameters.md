@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account_id** | **str** | Required if the requesting user is a member of multiple accounts. Account ID to specify the actual account the project should be created in. | [optional] 
+**account_id** | **str** | (Optional) ID of an account the requesting user belongs to. Used only to disambiguate the request context; the project itself cannot be moved between accounts through this endpoint.  | [optional] 
 **name** | **str** | (Optional) Name of the project | [optional] 
 **point_of_contact** | **str** | (Optional) User ID of the point of contact for the project. Pass &#x60;null&#x60; to unset. | [optional] 
 **main_format** | **str** | (Optional) Main file format specified by its API Extension name. Used for locale downloads if no format is specified. For API Extension names of available file formats see [Format Guide](https://support.phrase.com/hc/en-us/sections/6111343326364) or our [Formats API Endpoint](#formats). | [optional] 
@@ -28,6 +28,13 @@ Name | Type | Description | Notes
 **autotranslate_overwrite_unverified_translations** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
 **default_encoding** | **str** | (Optional) Sets the default encoding for Uploads. If you leave it empty, we will try to guess it automatically for you when you Upload a file. You can still override this value by setting the [&#x60;file_encoding&#x60;](/en/api/strings/uploads/upload-a-new-file) parameter for Uploads. | [optional] 
 **placeholder_styles** | **List[str]** | (Optional) List of placeholder styles enabled for the project. | [optional] 
+**autocomplete_job_enabled** | **bool** | (Optional) Enable autocomplete-job behavior so that newly created keys and locales are automatically added to in-progress jobs. | [optional] 
+**job_locking_enabled** | **bool** | (Optional) When enabled, translations are locked once a job moves into review. | [optional] 
+**smart_suggest_enabled** | **bool** | (Optional) Enable Smart Suggest for the project. | [optional] 
+**smart_suggest_use_glossary** | **bool** | (Optional) Allow Smart Suggest to source suggestions from the project glossary. | [optional] 
+**smart_suggest_use_machine_translation** | **bool** | (Optional) Allow Smart Suggest to source suggestions from machine translation. | [optional] 
+**translation_keys_sort_collation** | **str** | (Optional) Collation used when sorting translation keys alphabetically. | [optional] 
+**cldr_version** | **str** | (Optional) CLDR plural-rule version used by the project. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

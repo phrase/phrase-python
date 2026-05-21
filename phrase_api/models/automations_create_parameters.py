@@ -39,7 +39,9 @@ class AutomationsCreateParameters(object):
         'status_filters': 'List[str]',
         'tags': 'List[str]',
         'cron_schedule': 'str',
-        'time_zone': 'str'
+        'time_zone': 'str',
+        'job_owner_id': 'str',
+        'include_only_updated_locales': 'bool'
     }
 
     attribute_map = {
@@ -50,10 +52,12 @@ class AutomationsCreateParameters(object):
         'status_filters': 'status_filters',
         'tags': 'tags',
         'cron_schedule': 'cron_schedule',
-        'time_zone': 'time_zone'
+        'time_zone': 'time_zone',
+        'job_owner_id': 'job_owner_id',
+        'include_only_updated_locales': 'include_only_updated_locales'
     }
 
-    def __init__(self, name=None, trigger=None, project_ids=None, job_template_id=None, status_filters=None, tags=None, cron_schedule=None, time_zone=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, trigger=None, project_ids=None, job_template_id=None, status_filters=None, tags=None, cron_schedule=None, time_zone=None, job_owner_id=None, include_only_updated_locales=None, local_vars_configuration=None):  # noqa: E501
         """AutomationsCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +71,8 @@ class AutomationsCreateParameters(object):
         self._tags = None
         self._cron_schedule = None
         self._time_zone = None
+        self._job_owner_id = None
+        self._include_only_updated_locales = None
         self.discriminator = None
 
         self.name = name
@@ -81,6 +87,10 @@ class AutomationsCreateParameters(object):
             self.cron_schedule = cron_schedule
         if time_zone is not None:
             self.time_zone = time_zone
+        if job_owner_id is not None:
+            self.job_owner_id = job_owner_id
+        if include_only_updated_locales is not None:
+            self.include_only_updated_locales = include_only_updated_locales
 
     @property
     def name(self):
@@ -285,6 +295,52 @@ class AutomationsCreateParameters(object):
         """
 
         self._time_zone = time_zone
+
+    @property
+    def job_owner_id(self):
+        """Gets the job_owner_id of this AutomationsCreateParameters.  # noqa: E501
+
+        User ID of the job owner that newly created jobs are assigned to.   # noqa: E501
+
+        :return: The job_owner_id of this AutomationsCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._job_owner_id
+
+    @job_owner_id.setter
+    def job_owner_id(self, job_owner_id):
+        """Sets the job_owner_id of this AutomationsCreateParameters.
+
+        User ID of the job owner that newly created jobs are assigned to.   # noqa: E501
+
+        :param job_owner_id: The job_owner_id of this AutomationsCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._job_owner_id = job_owner_id
+
+    @property
+    def include_only_updated_locales(self):
+        """Gets the include_only_updated_locales of this AutomationsCreateParameters.  # noqa: E501
+
+        When `true`, the automation only acts on locales that changed since its last run. Defaults to `false`.   # noqa: E501
+
+        :return: The include_only_updated_locales of this AutomationsCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_only_updated_locales
+
+    @include_only_updated_locales.setter
+    def include_only_updated_locales(self, include_only_updated_locales):
+        """Sets the include_only_updated_locales of this AutomationsCreateParameters.
+
+        When `true`, the automation only acts on locales that changed since its last run. Defaults to `false`.   # noqa: E501
+
+        :param include_only_updated_locales: The include_only_updated_locales of this AutomationsCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_only_updated_locales = include_only_updated_locales
 
     def to_dict(self):
         """Returns the model properties as a dict"""

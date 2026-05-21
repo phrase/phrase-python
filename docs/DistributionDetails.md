@@ -1,4 +1,4 @@
-# DistributionPreview
+# DistributionDetails
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +9,10 @@ Name | Type | Description | Notes
 **platforms** | **List[str]** |  | [optional] 
 **release_count** | **int** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
 **deleted_at** | **datetime** |  | [optional] 
+**locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**releases** | [**List[ReleasePreview]**](ReleasePreview.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

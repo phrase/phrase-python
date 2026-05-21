@@ -1,10 +1,11 @@
-# CustomMetadataPropertyCreate422Response
+# DocumentDelete422ResponseErrorsInner
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**resource** | **str** |  | [optional] 
+**field** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 
-**errors** | [**List[CustomMetadataPropertyCreate422ResponseErrorsInner]**](CustomMetadataPropertyCreate422ResponseErrorsInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

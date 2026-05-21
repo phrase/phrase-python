@@ -32,8 +32,9 @@ class UploadBatch(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'state': 'str',
+        'status': 'str',
         'delete_unmentioned_keys': 'bool',
+        'uploads_count': 'int',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'project': 'ProjectShort',
@@ -42,8 +43,9 @@ class UploadBatch(object):
     }
 
     attribute_map = {
-        'state': 'state',
+        'status': 'status',
         'delete_unmentioned_keys': 'delete_unmentioned_keys',
+        'uploads_count': 'uploads_count',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'project': 'project',
@@ -51,14 +53,15 @@ class UploadBatch(object):
         'uploads': 'uploads'
     }
 
-    def __init__(self, state=None, delete_unmentioned_keys=None, created_at=None, updated_at=None, project=None, user=None, uploads=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, status=None, delete_unmentioned_keys=None, uploads_count=None, created_at=None, updated_at=None, project=None, user=None, uploads=None, local_vars_configuration=None):  # noqa: E501
         """UploadBatch - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._state = None
+        self._status = None
         self._delete_unmentioned_keys = None
+        self._uploads_count = None
         self._created_at = None
         self._updated_at = None
         self._project = None
@@ -66,10 +69,12 @@ class UploadBatch(object):
         self._uploads = None
         self.discriminator = None
 
-        if state is not None:
-            self.state = state
+        if status is not None:
+            self.status = status
         if delete_unmentioned_keys is not None:
             self.delete_unmentioned_keys = delete_unmentioned_keys
+        if uploads_count is not None:
+            self.uploads_count = uploads_count
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -82,33 +87,33 @@ class UploadBatch(object):
             self.uploads = uploads
 
     @property
-    def state(self):
-        """Gets the state of this UploadBatch.  # noqa: E501
+    def status(self):
+        """Gets the status of this UploadBatch.  # noqa: E501
 
         Processing state of the upload batch  # noqa: E501
 
-        :return: The state of this UploadBatch.  # noqa: E501
+        :return: The status of this UploadBatch.  # noqa: E501
         :rtype: str
         """
-        return self._state
+        return self._status
 
-    @state.setter
-    def state(self, state):
-        """Sets the state of this UploadBatch.
+    @status.setter
+    def status(self, status):
+        """Sets the status of this UploadBatch.
 
         Processing state of the upload batch  # noqa: E501
 
-        :param state: The state of this UploadBatch.  # noqa: E501
+        :param status: The status of this UploadBatch.  # noqa: E501
         :type: str
         """
         allowed_values = ["started", "done"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and state not in allowed_values:  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and status not in allowed_values:  # noqa: E501
             raise ValueError(
-                "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501
-                .format(state, allowed_values)
+                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
+                .format(status, allowed_values)
             )
 
-        self._state = state
+        self._status = status
 
     @property
     def delete_unmentioned_keys(self):
@@ -132,6 +137,29 @@ class UploadBatch(object):
         """
 
         self._delete_unmentioned_keys = delete_unmentioned_keys
+
+    @property
+    def uploads_count(self):
+        """Gets the uploads_count of this UploadBatch.  # noqa: E501
+
+        Number of uploads attached to this batch.  # noqa: E501
+
+        :return: The uploads_count of this UploadBatch.  # noqa: E501
+        :rtype: int
+        """
+        return self._uploads_count
+
+    @uploads_count.setter
+    def uploads_count(self, uploads_count):
+        """Sets the uploads_count of this UploadBatch.
+
+        Number of uploads attached to this batch.  # noqa: E501
+
+        :param uploads_count: The uploads_count of this UploadBatch.  # noqa: E501
+        :type: int
+        """
+
+        self._uploads_count = uploads_count
 
     @property
     def created_at(self):

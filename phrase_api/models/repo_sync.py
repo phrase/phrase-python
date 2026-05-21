@@ -38,6 +38,7 @@ class RepoSync(object):
         'enabled': 'bool',
         'auto_import': 'bool',
         'repo_name': 'str',
+        'pr_branch': 'str',
         'created_at': 'datetime',
         'last_import_at': 'datetime',
         'last_export_at': 'datetime'
@@ -50,12 +51,13 @@ class RepoSync(object):
         'enabled': 'enabled',
         'auto_import': 'auto_import',
         'repo_name': 'repo_name',
+        'pr_branch': 'pr_branch',
         'created_at': 'created_at',
         'last_import_at': 'last_import_at',
         'last_export_at': 'last_export_at'
     }
 
-    def __init__(self, id=None, project=None, provider=None, enabled=None, auto_import=None, repo_name=None, created_at=None, last_import_at=None, last_export_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, project=None, provider=None, enabled=None, auto_import=None, repo_name=None, pr_branch=None, created_at=None, last_import_at=None, last_export_at=None, local_vars_configuration=None):  # noqa: E501
         """RepoSync - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +69,7 @@ class RepoSync(object):
         self._enabled = None
         self._auto_import = None
         self._repo_name = None
+        self._pr_branch = None
         self._created_at = None
         self._last_import_at = None
         self._last_export_at = None
@@ -84,6 +87,7 @@ class RepoSync(object):
             self.auto_import = auto_import
         if repo_name is not None:
             self.repo_name = repo_name
+        self.pr_branch = pr_branch
         if created_at is not None:
             self.created_at = created_at
         if last_import_at is not None:
@@ -216,6 +220,29 @@ class RepoSync(object):
         """
 
         self._repo_name = repo_name
+
+    @property
+    def pr_branch(self):
+        """Gets the pr_branch of this RepoSync.  # noqa: E501
+
+        Branch used as the source of exports/PRs. May be `null` when the sync is configured to push directly to `base_branch`.   # noqa: E501
+
+        :return: The pr_branch of this RepoSync.  # noqa: E501
+        :rtype: str
+        """
+        return self._pr_branch
+
+    @pr_branch.setter
+    def pr_branch(self, pr_branch):
+        """Sets the pr_branch of this RepoSync.
+
+        Branch used as the source of exports/PRs. May be `null` when the sync is configured to push directly to `base_branch`.   # noqa: E501
+
+        :param pr_branch: The pr_branch of this RepoSync.  # noqa: E501
+        :type: str
+        """
+
+        self._pr_branch = pr_branch
 
     @property
     def created_at(self):

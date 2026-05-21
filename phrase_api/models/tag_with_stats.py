@@ -34,6 +34,7 @@ class TagWithStats(object):
     openapi_types = {
         'name': 'str',
         'keys_count': 'int',
+        'system_tag': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'statistics': 'List[TagWithStats1Statistics1]'
@@ -42,12 +43,13 @@ class TagWithStats(object):
     attribute_map = {
         'name': 'name',
         'keys_count': 'keys_count',
+        'system_tag': 'system_tag',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'statistics': 'statistics'
     }
 
-    def __init__(self, name=None, keys_count=None, created_at=None, updated_at=None, statistics=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, keys_count=None, system_tag=None, created_at=None, updated_at=None, statistics=None, local_vars_configuration=None):  # noqa: E501
         """TagWithStats - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class TagWithStats(object):
 
         self._name = None
         self._keys_count = None
+        self._system_tag = None
         self._created_at = None
         self._updated_at = None
         self._statistics = None
@@ -64,6 +67,8 @@ class TagWithStats(object):
             self.name = name
         if keys_count is not None:
             self.keys_count = keys_count
+        if system_tag is not None:
+            self.system_tag = system_tag
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -112,6 +117,29 @@ class TagWithStats(object):
         """
 
         self._keys_count = keys_count
+
+    @property
+    def system_tag(self):
+        """Gets the system_tag of this TagWithStats.  # noqa: E501
+
+        `true` when the tag was created automatically by the system (e.g. for jobs, uploads, or Figma attachments) rather than by a user.   # noqa: E501
+
+        :return: The system_tag of this TagWithStats.  # noqa: E501
+        :rtype: bool
+        """
+        return self._system_tag
+
+    @system_tag.setter
+    def system_tag(self, system_tag):
+        """Sets the system_tag of this TagWithStats.
+
+        `true` when the tag was created automatically by the system (e.g. for jobs, uploads, or Figma attachments) rather than by a user.   # noqa: E501
+
+        :param system_tag: The system_tag of this TagWithStats.  # noqa: E501
+        :type: bool
+        """
+
+        self._system_tag = system_tag
 
     @property
     def created_at(self):

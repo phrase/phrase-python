@@ -33,6 +33,7 @@ class IcuSkeletonParameters(object):
     """
     openapi_types = {
         'content': 'str',
+        'id': 'str',
         'locale_codes': 'List[str]',
         'keep_content': 'bool',
         'zero_form_enabled': 'bool',
@@ -41,19 +42,21 @@ class IcuSkeletonParameters(object):
 
     attribute_map = {
         'content': 'content',
+        'id': 'id',
         'locale_codes': 'locale_codes',
         'keep_content': 'keep_content',
         'zero_form_enabled': 'zero_form_enabled',
         'cldr_version': 'cldr_version'
     }
 
-    def __init__(self, content=None, locale_codes=None, keep_content=None, zero_form_enabled=None, cldr_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, content=None, id=None, locale_codes=None, keep_content=None, zero_form_enabled=None, cldr_version=None, local_vars_configuration=None):  # noqa: E501
         """IcuSkeletonParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._content = None
+        self._id = None
         self._locale_codes = None
         self._keep_content = None
         self._zero_form_enabled = None
@@ -62,6 +65,8 @@ class IcuSkeletonParameters(object):
 
         if content is not None:
             self.content = content
+        if id is not None:
+            self.id = id
         if locale_codes is not None:
             self.locale_codes = locale_codes
         if keep_content is not None:
@@ -75,7 +80,7 @@ class IcuSkeletonParameters(object):
     def content(self):
         """Gets the content of this IcuSkeletonParameters.  # noqa: E501
 
-        Source content  # noqa: E501
+        Source content to derive skeletons from. Mutually exclusive with `id`; exactly one of the two must be provided.   # noqa: E501
 
         :return: The content of this IcuSkeletonParameters.  # noqa: E501
         :rtype: str
@@ -86,13 +91,36 @@ class IcuSkeletonParameters(object):
     def content(self, content):
         """Sets the content of this IcuSkeletonParameters.
 
-        Source content  # noqa: E501
+        Source content to derive skeletons from. Mutually exclusive with `id`; exactly one of the two must be provided.   # noqa: E501
 
         :param content: The content of this IcuSkeletonParameters.  # noqa: E501
         :type: str
         """
 
         self._content = content
+
+    @property
+    def id(self):
+        """Gets the id of this IcuSkeletonParameters.  # noqa: E501
+
+        Translation code to source content from. Mutually exclusive with `content`; exactly one of the two must be provided.   # noqa: E501
+
+        :return: The id of this IcuSkeletonParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this IcuSkeletonParameters.
+
+        Translation code to source content from. Mutually exclusive with `content`; exactly one of the two must be provided.   # noqa: E501
+
+        :param id: The id of this IcuSkeletonParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def locale_codes(self):

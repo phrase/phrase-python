@@ -272,6 +272,10 @@ class WebhooksApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -422,7 +426,7 @@ class WebhooksApi(object):
     def webhook_test(self, project_id, id, **kwargs):  # noqa: E501
         """Test a webhook  # noqa: E501
 
-        Perform a test request for a webhook.  # noqa: E501
+        Perform a test request for a webhook. Sends a synthetic `test:event` payload to the webhook's `callback_url` and returns the webhook resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.webhook_test(project_id, id, async_req=True)
@@ -439,7 +443,7 @@ class WebhooksApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: Webhook
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -449,7 +453,7 @@ class WebhooksApi(object):
     def webhook_test_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
         """Test a webhook  # noqa: E501
 
-        Perform a test request for a webhook.  # noqa: E501
+        Perform a test request for a webhook. Sends a synthetic `test:event` payload to the webhook's `callback_url` and returns the webhook resource.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.webhook_test_with_http_info(project_id, id, async_req=True)
@@ -468,7 +472,7 @@ class WebhooksApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(Webhook, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -524,6 +528,10 @@ class WebhooksApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -535,7 +543,7 @@ class WebhooksApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='Webhook',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

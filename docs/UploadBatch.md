@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**state** | **str** | Processing state of the upload batch | [optional] 
+**status** | **str** | Processing state of the upload batch | [optional] 
 **delete_unmentioned_keys** | **bool** | Indicates whether unmentioned keys will be deleted after processing all uploads in the batch | [optional] 
+**uploads_count** | **int** | Number of uploads attached to this batch. | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **project** | [**ProjectShort**](.md) |  | [optional] 

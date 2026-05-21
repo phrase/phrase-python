@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **projects** | [**List[ProjectShort]**](ProjectShort.md) |  | [optional] 
+**spaces** | [**List[Space]**](Space.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

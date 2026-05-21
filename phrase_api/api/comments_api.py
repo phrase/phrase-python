@@ -295,6 +295,10 @@ class CommentsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -575,6 +579,10 @@ class CommentsApi(object):
         body_params = None
         if 'comment_mark_read_parameters' in local_var_params:
             body_params = local_var_params['comment_mark_read_parameters']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
@@ -717,6 +725,10 @@ class CommentsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -1046,8 +1058,8 @@ class CommentsApi(object):
         :param str branch: specify the branch to use
         :param str query: Search query for comment messages
         :param List[str] locale_ids: Search comments by their assigned locales
-        :param List[str] filters: Specify the filter for the comments
-        :param str order: Order direction. Can be one of: asc, desc.
+        :param List[str] filters: Specify the filter for the comments. Supported values are `read` and `unread`. Combine both to return all comments (read + unread) without filtering.
+        :param str order: Order direction. Defaults to `desc`. Values other than `asc` and `desc` fall back to `desc`.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1080,8 +1092,8 @@ class CommentsApi(object):
         :param str branch: specify the branch to use
         :param str query: Search query for comment messages
         :param List[str] locale_ids: Search comments by their assigned locales
-        :param List[str] filters: Specify the filter for the comments
-        :param str order: Order direction. Can be one of: asc, desc.
+        :param List[str] filters: Specify the filter for the comments. Supported values are `read` and `unread`. Combine both to return all comments (read + unread) without filtering.
+        :param str order: Order direction. Defaults to `desc`. Values other than `asc` and `desc` fall back to `desc`.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

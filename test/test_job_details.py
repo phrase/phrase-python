@@ -63,7 +63,8 @@ class TestJobDetails(unittest.TestCase):
                     ], 
                 annotations = [
                     {"name":"priority","value":"high"}
-                    ]
+                    ], 
+                locked = True
             )
         else :
             return JobDetails(

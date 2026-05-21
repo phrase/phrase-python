@@ -37,8 +37,9 @@ class TestUploadBatch(unittest.TestCase):
         """
         if include_optional :
             return UploadBatch(
-                state = 'started', 
+                status = 'started', 
                 delete_unmentioned_keys = True, 
+                uploads_count = 56, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 project = {"id":"abcd1234cdef1234abcd1234cdef1234","name":"My Android Project","main_format":"xml","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}, 

@@ -36,9 +36,9 @@ class Distribution(object):
         'name': 'str',
         'project': 'ProjectShort',
         'platforms': 'List[str]',
-        'locales': 'List[LocalePreview]',
-        'releases': 'List[ReleasePreview]',
+        'release_count': 'int',
         'created_at': 'datetime',
+        'updated_at': 'datetime',
         'deleted_at': 'datetime'
     }
 
@@ -47,13 +47,13 @@ class Distribution(object):
         'name': 'name',
         'project': 'project',
         'platforms': 'platforms',
-        'locales': 'locales',
-        'releases': 'releases',
+        'release_count': 'release_count',
         'created_at': 'created_at',
+        'updated_at': 'updated_at',
         'deleted_at': 'deleted_at'
     }
 
-    def __init__(self, id=None, name=None, project=None, platforms=None, locales=None, releases=None, created_at=None, deleted_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, project=None, platforms=None, release_count=None, created_at=None, updated_at=None, deleted_at=None, local_vars_configuration=None):  # noqa: E501
         """Distribution - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -63,9 +63,9 @@ class Distribution(object):
         self._name = None
         self._project = None
         self._platforms = None
-        self._locales = None
-        self._releases = None
+        self._release_count = None
         self._created_at = None
+        self._updated_at = None
         self._deleted_at = None
         self.discriminator = None
 
@@ -77,14 +77,13 @@ class Distribution(object):
             self.project = project
         if platforms is not None:
             self.platforms = platforms
-        if locales is not None:
-            self.locales = locales
-        if releases is not None:
-            self.releases = releases
+        if release_count is not None:
+            self.release_count = release_count
         if created_at is not None:
             self.created_at = created_at
-        if deleted_at is not None:
-            self.deleted_at = deleted_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        self.deleted_at = deleted_at
 
     @property
     def id(self):
@@ -171,46 +170,25 @@ class Distribution(object):
         self._platforms = platforms
 
     @property
-    def locales(self):
-        """Gets the locales of this Distribution.  # noqa: E501
+    def release_count(self):
+        """Gets the release_count of this Distribution.  # noqa: E501
 
 
-        :return: The locales of this Distribution.  # noqa: E501
-        :rtype: List[LocalePreview]
+        :return: The release_count of this Distribution.  # noqa: E501
+        :rtype: int
         """
-        return self._locales
+        return self._release_count
 
-    @locales.setter
-    def locales(self, locales):
-        """Sets the locales of this Distribution.
-
-
-        :param locales: The locales of this Distribution.  # noqa: E501
-        :type: List[LocalePreview]
-        """
-
-        self._locales = locales
-
-    @property
-    def releases(self):
-        """Gets the releases of this Distribution.  # noqa: E501
+    @release_count.setter
+    def release_count(self, release_count):
+        """Sets the release_count of this Distribution.
 
 
-        :return: The releases of this Distribution.  # noqa: E501
-        :rtype: List[ReleasePreview]
-        """
-        return self._releases
-
-    @releases.setter
-    def releases(self, releases):
-        """Sets the releases of this Distribution.
-
-
-        :param releases: The releases of this Distribution.  # noqa: E501
-        :type: List[ReleasePreview]
+        :param release_count: The release_count of this Distribution.  # noqa: E501
+        :type: int
         """
 
-        self._releases = releases
+        self._release_count = release_count
 
     @property
     def created_at(self):
@@ -232,6 +210,27 @@ class Distribution(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this Distribution.  # noqa: E501
+
+
+        :return: The updated_at of this Distribution.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this Distribution.
+
+
+        :param updated_at: The updated_at of this Distribution.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
 
     @property
     def deleted_at(self):

@@ -45,7 +45,12 @@ class TestAutomation(unittest.TestCase):
                     'unverified'
                     ], 
                 project_id = '', 
+                project_ids = [
+                    ''
+                    ], 
                 job_template_id = '', 
+                job_owner_id = '', 
+                include_only_updated_locales = True, 
                 tags = [
                     ''
                     ], 

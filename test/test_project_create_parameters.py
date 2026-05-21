@@ -41,7 +41,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@fba5072', 
+                project_image = '[B@1ed8d18c', 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 point_of_contact = 'abcd1234', 
@@ -61,6 +61,14 @@ class TestProjectCreateParameters(unittest.TestCase):
                 autotranslate_use_machine_translation = True, 
                 autotranslate_use_translation_memory = True, 
                 autotranslate_overwrite_unverified_translations = True, 
+                autocomplete_job_enabled = False, 
+                job_locking_enabled = False, 
+                smart_suggest_enabled = True, 
+                smart_suggest_use_glossary = True, 
+                smart_suggest_use_machine_translation = True, 
+                translation_keys_sort_collation = 'unicode_ci', 
+                default_encoding = 'UTF-8', 
+                cldr_version = 'cldr48', 
                 placeholder_styles = ["angular","iOS"]
             )
         else :

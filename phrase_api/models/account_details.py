@@ -263,6 +263,7 @@ class AccountDetails(object):
     def roles(self):
         """Gets the roles of this AccountDetails.  # noqa: E501
 
+        Roles the requesting user holds in the account.   # noqa: E501
 
         :return: The roles of this AccountDetails.  # noqa: E501
         :rtype: List[str]
@@ -273,6 +274,7 @@ class AccountDetails(object):
     def roles(self, roles):
         """Sets the roles of this AccountDetails.
 
+        Roles the requesting user holds in the account.   # noqa: E501
 
         :param roles: The roles of this AccountDetails.  # noqa: E501
         :type: List[str]

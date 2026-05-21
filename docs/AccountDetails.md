@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **company_logo_url** | **str** |  | [optional] 
 **subscription** | [**Subscription**](Subscription.md) |  | [optional] 
-**roles** | **List[str]** |  | [optional] 
+**roles** | **List[str]** | Roles the requesting user holds in the account.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

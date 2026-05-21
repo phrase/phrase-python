@@ -35,6 +35,8 @@ class OrganizationJobTemplateDetails(object):
         'id': 'str',
         'name': 'str',
         'briefing': 'str',
+        'autotranslate_enabled': 'bool',
+        'source_locale_id': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'owner': 'UserPreview',
@@ -46,6 +48,8 @@ class OrganizationJobTemplateDetails(object):
         'id': 'id',
         'name': 'name',
         'briefing': 'briefing',
+        'autotranslate_enabled': 'autotranslate_enabled',
+        'source_locale_id': 'source_locale_id',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'owner': 'owner',
@@ -53,7 +57,7 @@ class OrganizationJobTemplateDetails(object):
         'locales': 'locales'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, created_at=None, updated_at=None, owner=None, creator=None, locales=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, autotranslate_enabled=None, source_locale_id=None, created_at=None, updated_at=None, owner=None, creator=None, locales=None, local_vars_configuration=None):  # noqa: E501
         """OrganizationJobTemplateDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +66,8 @@ class OrganizationJobTemplateDetails(object):
         self._id = None
         self._name = None
         self._briefing = None
+        self._autotranslate_enabled = None
+        self._source_locale_id = None
         self._created_at = None
         self._updated_at = None
         self._owner = None
@@ -75,6 +81,9 @@ class OrganizationJobTemplateDetails(object):
             self.name = name
         if briefing is not None:
             self.briefing = briefing
+        if autotranslate_enabled is not None:
+            self.autotranslate_enabled = autotranslate_enabled
+        self.source_locale_id = source_locale_id
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -148,6 +157,52 @@ class OrganizationJobTemplateDetails(object):
         """
 
         self._briefing = briefing
+
+    @property
+    def autotranslate_enabled(self):
+        """Gets the autotranslate_enabled of this OrganizationJobTemplateDetails.  # noqa: E501
+
+        When `true`, jobs created from this template are auto-translated on creation. Maps to the `autotranslate` field on the request body.   # noqa: E501
+
+        :return: The autotranslate_enabled of this OrganizationJobTemplateDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autotranslate_enabled
+
+    @autotranslate_enabled.setter
+    def autotranslate_enabled(self, autotranslate_enabled):
+        """Sets the autotranslate_enabled of this OrganizationJobTemplateDetails.
+
+        When `true`, jobs created from this template are auto-translated on creation. Maps to the `autotranslate` field on the request body.   # noqa: E501
+
+        :param autotranslate_enabled: The autotranslate_enabled of this OrganizationJobTemplateDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._autotranslate_enabled = autotranslate_enabled
+
+    @property
+    def source_locale_id(self):
+        """Gets the source_locale_id of this OrganizationJobTemplateDetails.  # noqa: E501
+
+        Optional. ID of the source locale used by jobs created from this template. When omitted, the project's default source locale is used.   # noqa: E501
+
+        :return: The source_locale_id of this OrganizationJobTemplateDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_locale_id
+
+    @source_locale_id.setter
+    def source_locale_id(self, source_locale_id):
+        """Sets the source_locale_id of this OrganizationJobTemplateDetails.
+
+        Optional. ID of the source locale used by jobs created from this template. When omitted, the project's default source locale is used.   # noqa: E501
+
+        :param source_locale_id: The source_locale_id of this OrganizationJobTemplateDetails.  # noqa: E501
+        :type: str
+        """
+
+        self._source_locale_id = source_locale_id
 
     @property
     def created_at(self):

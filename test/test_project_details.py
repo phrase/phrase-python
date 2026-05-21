@@ -62,10 +62,13 @@ class TestProjectDetails(unittest.TestCase):
                 autotranslate_mark_as_unverified = False, 
                 autotranslate_use_machine_translation = False, 
                 autotranslate_use_translation_memory = True, 
+                autotranslate_overwrite_unverified_translations = False, 
+                autocomplete_job_enabled = False, 
                 default_encoding = 'UTF-8', 
                 cldr_version = 'legacy', 
                 job_locking_enabled = False, 
-                placeholder_styles = ["angular","iOS"]
+                placeholder_styles = ["angular","iOS"], 
+                branch = {"name":"new-branch","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","merged_at":"2015-01-28T09:52:53Z","merged_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"created_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"state":"success","child_branches":["feature_2","feature_3"]}
             )
         else :
             return ProjectDetails(

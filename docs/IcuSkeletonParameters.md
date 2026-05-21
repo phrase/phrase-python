@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **str** | Source content | [optional] 
+**content** | **str** | Source content to derive skeletons from. Mutually exclusive with &#x60;id&#x60;; exactly one of the two must be provided.  | [optional] 
+**id** | **str** | Translation code to source content from. Mutually exclusive with &#x60;content&#x60;; exactly one of the two must be provided.  | [optional] 
 **locale_codes** | **List[str]** | Locale codes | [optional] 
 **keep_content** | **bool** | Keep the content and add missing plural forms for each locale | [optional] 
 **zero_form_enabled** | **bool** | Indicates whether the zero form should be included or excluded in the returned skeletons | [optional] 

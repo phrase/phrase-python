@@ -38,6 +38,7 @@ class TestIcuSkeletonParameters(unittest.TestCase):
         if include_optional :
             return IcuSkeletonParameters(
                 content = '{number, plural, one {One} other {%{n}}}', 
+                id = 'abcd1234abcd1234abcd1234abcd1234', 
                 locale_codes = ["en"], 
                 keep_content = True, 
                 zero_form_enabled = True, 

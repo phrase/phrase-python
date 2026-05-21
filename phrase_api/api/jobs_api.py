@@ -418,6 +418,10 @@ class JobsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -736,7 +740,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: JobDetails
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -766,7 +770,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(JobDetails, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -825,6 +829,10 @@ class JobsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -836,7 +844,7 @@ class JobsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='JobDetails',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1290,7 +1298,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: JobDetails
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1320,7 +1328,7 @@ class JobsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(JobDetails, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1379,6 +1387,10 @@ class JobsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -1390,7 +1402,7 @@ class JobsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='JobDetails',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1706,6 +1718,8 @@ class JobsApi(object):
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
         :param str state: filter by state of job; valid states are: `draft`, `in_progress`, `completed`
+        :param List[str] states: Filter by multiple job states at once. Accepted values are the same as `state`. When supplied, `state` is ignored. Rejected with `400 Bad Request` if any value is unknown.
+        :param str key_id: Filter to jobs that include the translation key identified by this code (matches via the job's tags).
         :param str updated_since: filter by jobs updated since given date
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1739,6 +1753,8 @@ class JobsApi(object):
         :param str owned_by: filter by user owning job
         :param str assigned_to: filter by user assigned to job
         :param str state: filter by state of job; valid states are: `draft`, `in_progress`, `completed`
+        :param List[str] states: Filter by multiple job states at once. Accepted values are the same as `state`. When supplied, `state` is ignored. Rejected with `400 Bad Request` if any value is unknown.
+        :param str key_id: Filter to jobs that include the translation key identified by this code (matches via the job's tags).
         :param str updated_since: filter by jobs updated since given date
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1765,6 +1781,8 @@ class JobsApi(object):
             'owned_by',
             'assigned_to',
             'state',
+            'states',
+            'key_id',
             'updated_since'
         ]
         all_params.extend(
@@ -1808,6 +1826,11 @@ class JobsApi(object):
             query_params.append(('assigned_to', local_var_params['assigned_to']))  # noqa: E501
         if 'state' in local_var_params and local_var_params['state'] is not None:  # noqa: E501
             query_params.append(('state', local_var_params['state']))  # noqa: E501
+        if 'states' in local_var_params and local_var_params['states'] is not None:  # noqa: E501
+            query_params.append(('states', local_var_params['states']))  # noqa: E501
+            collection_formats['states'] = 'multi'  # noqa: E501
+        if 'key_id' in local_var_params and local_var_params['key_id'] is not None:  # noqa: E501
+            query_params.append(('key_id', local_var_params['key_id']))  # noqa: E501
         if 'updated_since' in local_var_params and local_var_params['updated_since'] is not None:  # noqa: E501
             query_params.append(('updated_since', local_var_params['updated_since']))  # noqa: E501
 

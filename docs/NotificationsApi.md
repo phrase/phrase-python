@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **notifications_list**
-> List[Notification] notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen)
+> List[Notification] notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen, last_days=last_days)
 
 List notifications
 
@@ -37,10 +37,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
     unseen = true # bool | Include only unseen notifications
+    last_days = 7 # int | Restrict the results to notifications created within the last N days. Coerced to integer; non-numeric values resolve to 0 (returning nothing).
 
     try:
         # List notifications
-        api_response = api_instance.notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen)
+        api_response = api_instance.notifications_list(x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, unseen=unseen, last_days=last_days)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NotificationsApi->notifications_list: %s\n" % e)
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
  **unseen** | **bool**| Include only unseen notifications | [optional] 
+ **last_days** | **int**| Restrict the results to notifications created within the last N days. Coerced to integer; non-numeric values resolve to 0 (returning nothing). | [optional] 
 
 ### Return type
 
@@ -74,6 +76,8 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  * Link -  <br>  * Pagination -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 
@@ -138,6 +142,8 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | OK |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
+**401** | Unauthorized |  -  |
+**403** | Forbidden |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **404** | Not Found |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **429** | Rate Limiting |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 

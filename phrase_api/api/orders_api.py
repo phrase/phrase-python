@@ -418,6 +418,10 @@ class OrdersApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -585,6 +589,7 @@ class OrdersApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
+        :param str translation_id: Filter the result to orders that include the given translation. When supplied with a translation code that does not exist, an empty list is returned.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -614,6 +619,7 @@ class OrdersApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str branch: specify the branch to use
+        :param str translation_id: Filter the result to orders that include the given translation. When supplied with a translation code that does not exist, an empty list is returned.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -635,7 +641,8 @@ class OrdersApi(object):
             'x_phrase_app_otp',
             'page',
             'per_page',
-            'branch'
+            'branch',
+            'translation_id'
         ]
         all_params.extend(
             [
@@ -672,6 +679,8 @@ class OrdersApi(object):
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
         if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
             query_params.append(('branch', local_var_params['branch']))  # noqa: E501
+        if 'translation_id' in local_var_params and local_var_params['translation_id'] is not None:  # noqa: E501
+            query_params.append(('translation_id', local_var_params['translation_id']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

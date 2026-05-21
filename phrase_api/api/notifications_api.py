@@ -49,6 +49,7 @@ class NotificationsApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param bool unseen: Include only unseen notifications
+        :param int last_days: Restrict the results to notifications created within the last N days. Coerced to integer; non-numeric values resolve to 0 (returning nothing).
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -77,6 +78,7 @@ class NotificationsApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param bool unseen: Include only unseen notifications
+        :param int last_days: Restrict the results to notifications created within the last N days. Coerced to integer; non-numeric values resolve to 0 (returning nothing).
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -97,7 +99,8 @@ class NotificationsApi(object):
             'x_phrase_app_otp',
             'page',
             'per_page',
-            'unseen'
+            'unseen',
+            'last_days'
         ]
         all_params.extend(
             [
@@ -128,6 +131,8 @@ class NotificationsApi(object):
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
         if 'unseen' in local_var_params and local_var_params['unseen'] is not None:  # noqa: E501
             query_params.append(('unseen', local_var_params['unseen']))  # noqa: E501
+        if 'last_days' in local_var_params and local_var_params['last_days'] is not None:  # noqa: E501
+            query_params.append(('last_days', local_var_params['last_days']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

@@ -38,7 +38,10 @@ class Automation(object):
         'trigger': 'str',
         'status_filters': 'List[str]',
         'project_id': 'str',
+        'project_ids': 'List[str]',
         'job_template_id': 'str',
+        'job_owner_id': 'str',
+        'include_only_updated_locales': 'bool',
         'tags': 'List[str]',
         'cron_schedule': 'str',
         'time_zone': 'str',
@@ -54,7 +57,10 @@ class Automation(object):
         'trigger': 'trigger',
         'status_filters': 'status_filters',
         'project_id': 'project_id',
+        'project_ids': 'project_ids',
         'job_template_id': 'job_template_id',
+        'job_owner_id': 'job_owner_id',
+        'include_only_updated_locales': 'include_only_updated_locales',
         'tags': 'tags',
         'cron_schedule': 'cron_schedule',
         'time_zone': 'time_zone',
@@ -63,7 +69,7 @@ class Automation(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, status=None, trigger=None, status_filters=None, project_id=None, job_template_id=None, tags=None, cron_schedule=None, time_zone=None, account=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, status=None, trigger=None, status_filters=None, project_id=None, project_ids=None, job_template_id=None, job_owner_id=None, include_only_updated_locales=None, tags=None, cron_schedule=None, time_zone=None, account=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Automation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,7 +81,10 @@ class Automation(object):
         self._trigger = None
         self._status_filters = None
         self._project_id = None
+        self._project_ids = None
         self._job_template_id = None
+        self._job_owner_id = None
+        self._include_only_updated_locales = None
         self._tags = None
         self._cron_schedule = None
         self._time_zone = None
@@ -96,8 +105,13 @@ class Automation(object):
             self.status_filters = status_filters
         if project_id is not None:
             self.project_id = project_id
+        if project_ids is not None:
+            self.project_ids = project_ids
         if job_template_id is not None:
             self.job_template_id = job_template_id
+        self.job_owner_id = job_owner_id
+        if include_only_updated_locales is not None:
+            self.include_only_updated_locales = include_only_updated_locales
         if tags is not None:
             self.tags = tags
         if cron_schedule is not None:
@@ -260,6 +274,29 @@ class Automation(object):
         self._project_id = project_id
 
     @property
+    def project_ids(self):
+        """Gets the project_ids of this Automation.  # noqa: E501
+
+        All project IDs the automation applies to. Returned alongside the singular `project_id` for backwards compatibility.  # noqa: E501
+
+        :return: The project_ids of this Automation.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._project_ids
+
+    @project_ids.setter
+    def project_ids(self, project_ids):
+        """Sets the project_ids of this Automation.
+
+        All project IDs the automation applies to. Returned alongside the singular `project_id` for backwards compatibility.  # noqa: E501
+
+        :param project_ids: The project_ids of this Automation.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._project_ids = project_ids
+
+    @property
     def job_template_id(self):
         """Gets the job_template_id of this Automation.  # noqa: E501
 
@@ -279,6 +316,52 @@ class Automation(object):
         """
 
         self._job_template_id = job_template_id
+
+    @property
+    def job_owner_id(self):
+        """Gets the job_owner_id of this Automation.  # noqa: E501
+
+        User ID of the job owner that newly created jobs are assigned to.  # noqa: E501
+
+        :return: The job_owner_id of this Automation.  # noqa: E501
+        :rtype: str
+        """
+        return self._job_owner_id
+
+    @job_owner_id.setter
+    def job_owner_id(self, job_owner_id):
+        """Sets the job_owner_id of this Automation.
+
+        User ID of the job owner that newly created jobs are assigned to.  # noqa: E501
+
+        :param job_owner_id: The job_owner_id of this Automation.  # noqa: E501
+        :type: str
+        """
+
+        self._job_owner_id = job_owner_id
+
+    @property
+    def include_only_updated_locales(self):
+        """Gets the include_only_updated_locales of this Automation.  # noqa: E501
+
+        When `true`, the automation only acts on locales that changed since its last run.  # noqa: E501
+
+        :return: The include_only_updated_locales of this Automation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_only_updated_locales
+
+    @include_only_updated_locales.setter
+    def include_only_updated_locales(self, include_only_updated_locales):
+        """Sets the include_only_updated_locales of this Automation.
+
+        When `true`, the automation only acts on locales that changed since its last run.  # noqa: E501
+
+        :param include_only_updated_locales: The include_only_updated_locales of this Automation.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_only_updated_locales = include_only_updated_locales
 
     @property
     def tags(self):

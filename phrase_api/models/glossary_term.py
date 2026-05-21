@@ -38,6 +38,7 @@ class GlossaryTerm(object):
         'translatable': 'bool',
         'case_sensitive': 'bool',
         'translations': 'List[GlossaryTermTranslation]',
+        'glossary': 'GlossaryTermGlossary',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -49,11 +50,12 @@ class GlossaryTerm(object):
         'translatable': 'translatable',
         'case_sensitive': 'case_sensitive',
         'translations': 'translations',
+        'glossary': 'glossary',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, term=None, description=None, translatable=None, case_sensitive=None, translations=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, term=None, description=None, translatable=None, case_sensitive=None, translations=None, glossary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """GlossaryTerm - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,6 +67,7 @@ class GlossaryTerm(object):
         self._translatable = None
         self._case_sensitive = None
         self._translations = None
+        self._glossary = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -81,6 +84,8 @@ class GlossaryTerm(object):
             self.case_sensitive = case_sensitive
         if translations is not None:
             self.translations = translations
+        if glossary is not None:
+            self.glossary = glossary
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -211,6 +216,27 @@ class GlossaryTerm(object):
         """
 
         self._translations = translations
+
+    @property
+    def glossary(self):
+        """Gets the glossary of this GlossaryTerm.  # noqa: E501
+
+
+        :return: The glossary of this GlossaryTerm.  # noqa: E501
+        :rtype: GlossaryTermGlossary
+        """
+        return self._glossary
+
+    @glossary.setter
+    def glossary(self, glossary):
+        """Sets the glossary of this GlossaryTerm.
+
+
+        :param glossary: The glossary of this GlossaryTerm.  # noqa: E501
+        :type: GlossaryTermGlossary
+        """
+
+        self._glossary = glossary
 
     @property
     def created_at(self):

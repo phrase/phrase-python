@@ -105,6 +105,14 @@ class AuthorizationCreateParameters(object):
         :param scopes: The scopes of this AuthorizationCreateParameters.  # noqa: E501
         :type: List[str]
         """
+        allowed_values = ["read", "write", "orders.create", "team.manage"]  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                not set(scopes).issubset(set(allowed_values))):  # noqa: E501
+            raise ValueError(
+                "Invalid values for `scopes` [{0}], must be a subset of [{1}]"  # noqa: E501
+                .format(", ".join(map(str, set(scopes) - set(allowed_values))),  # noqa: E501
+                        ", ".join(map(str, allowed_values)))
+            )
 
         self._scopes = scopes
 

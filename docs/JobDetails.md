@@ -19,7 +19,8 @@ Name | Type | Description | Notes
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
 **keys** | [**List[KeyPreview]**](KeyPreview.md) |  | [optional] 
-**annotations** | [**List[JobAnnotationShort]**](JobAnnotationShort.md) |  | [optional] 
+**annotations** | [**List[JobAnnotationShort]**](JobAnnotationShort.md) | Returned only when &#x60;include_annotations&#x3D;true&#x60; is supplied on the request. | [optional] 
+**locked** | **bool** | &#x60;true&#x60; if the job has been locked by the project&#39;s job-locking workflow (translations attached to the job are read-only until the job advances).  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

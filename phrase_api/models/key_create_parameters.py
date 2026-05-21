@@ -50,7 +50,9 @@ class KeyCreateParameters(object):
         'original_file': 'str',
         'localized_format_string': 'str',
         'localized_format_key': 'str',
-        'custom_metadata': 'object'
+        'custom_metadata': 'object',
+        'excluded_in_locales': 'List[str]',
+        'format_value_type': 'str'
     }
 
     attribute_map = {
@@ -72,10 +74,12 @@ class KeyCreateParameters(object):
         'original_file': 'original_file',
         'localized_format_string': 'localized_format_string',
         'localized_format_key': 'localized_format_key',
-        'custom_metadata': 'custom_metadata'
+        'custom_metadata': 'custom_metadata',
+        'excluded_in_locales': 'excluded_in_locales',
+        'format_value_type': 'format_value_type'
     }
 
-    def __init__(self, branch=None, name=None, description=None, plural=None, use_ordinal_rules=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, default_translation_content=None, autotranslate=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, description=None, plural=None, use_ordinal_rules=None, name_plural=None, data_type=None, tags=None, max_characters_allowed=None, screenshot=None, remove_screenshot=None, unformatted=None, default_translation_content=None, autotranslate=None, xml_space_preserve=None, original_file=None, localized_format_string=None, localized_format_key=None, custom_metadata=None, excluded_in_locales=None, format_value_type=None, local_vars_configuration=None):  # noqa: E501
         """KeyCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -100,6 +104,8 @@ class KeyCreateParameters(object):
         self._localized_format_string = None
         self._localized_format_key = None
         self._custom_metadata = None
+        self._excluded_in_locales = None
+        self._format_value_type = None
         self.discriminator = None
 
         if branch is not None:
@@ -139,6 +145,10 @@ class KeyCreateParameters(object):
             self.localized_format_key = localized_format_key
         if custom_metadata is not None:
             self.custom_metadata = custom_metadata
+        if excluded_in_locales is not None:
+            self.excluded_in_locales = excluded_in_locales
+        if format_value_type is not None:
+            self.format_value_type = format_value_type
 
     @property
     def branch(self):
@@ -578,6 +588,52 @@ class KeyCreateParameters(object):
         """
 
         self._custom_metadata = custom_metadata
+
+    @property
+    def excluded_in_locales(self):
+        """Gets the excluded_in_locales of this KeyCreateParameters.  # noqa: E501
+
+        Locales for which translations of this key are excluded from exports. Pass an empty array to clear exclusions.   # noqa: E501
+
+        :return: The excluded_in_locales of this KeyCreateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._excluded_in_locales
+
+    @excluded_in_locales.setter
+    def excluded_in_locales(self, excluded_in_locales):
+        """Sets the excluded_in_locales of this KeyCreateParameters.
+
+        Locales for which translations of this key are excluded from exports. Pass an empty array to clear exclusions.   # noqa: E501
+
+        :param excluded_in_locales: The excluded_in_locales of this KeyCreateParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._excluded_in_locales = excluded_in_locales
+
+    @property
+    def format_value_type(self):
+        """Gets the format_value_type of this KeyCreateParameters.  # noqa: E501
+
+        Override of the value type for the key in the export. Most useful for formats like Android XML that distinguish string vs. plural resources.   # noqa: E501
+
+        :return: The format_value_type of this KeyCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._format_value_type
+
+    @format_value_type.setter
+    def format_value_type(self, format_value_type):
+        """Sets the format_value_type of this KeyCreateParameters.
+
+        Override of the value type for the key in the export. Most useful for formats like Android XML that distinguish string vs. plural resources.   # noqa: E501
+
+        :param format_value_type: The format_value_type of this KeyCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._format_value_type = format_value_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

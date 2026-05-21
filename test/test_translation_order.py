@@ -50,7 +50,7 @@ class TestTranslationOrder(unittest.TestCase):
                 target_locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
                     ], 
-                tag = '', 
+                tag_name = '', 
                 styleguide = {"id":"abcd1234cdef1234abcd1234cdef1234","title":"My Style Guide"}, 
                 unverify_translations_upon_delivery = True, 
                 quality = True, 

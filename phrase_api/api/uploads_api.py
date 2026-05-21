@@ -69,6 +69,7 @@ class UploadsApi(object):
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
         :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
         :param str translation_key_prefix: This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized.
+        :param bool skip_automated_job_creation: When `true`, the automation rules for the project will not fire for this upload, so no jobs are created as a side effect of importing this file. Defaults to `false`. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -117,6 +118,7 @@ class UploadsApi(object):
         :param bool mark_reviewed: Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow is enabled for the project.
         :param bool tag_only_affected_keys: Indicates whether only keys affected (created or updated) by the upload should be tagged. The default is `false`
         :param str translation_key_prefix: This prefix will be added to all uploaded translation key names to prevent collisions. Use a meaningful prefix related to your project or file to keep key names organized.
+        :param bool skip_automated_job_creation: When `true`, the automation rules for the project will not fire for this upload, so no jobs are created as a side effect of importing this file. Defaults to `false`. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -157,7 +159,8 @@ class UploadsApi(object):
             'verify_mentioned_translations',
             'mark_reviewed',
             'tag_only_affected_keys',
-            'translation_key_prefix'
+            'translation_key_prefix',
+            'skip_automated_job_creation'
         ]
         all_params.extend(
             [
@@ -251,6 +254,8 @@ class UploadsApi(object):
             form_params.append(('tag_only_affected_keys', local_var_params['tag_only_affected_keys']))  # noqa: E501
         if 'translation_key_prefix' in local_var_params:
             form_params.append(('translation_key_prefix', local_var_params['translation_key_prefix']))  # noqa: E501
+        if 'skip_automated_job_creation' in local_var_params:
+            form_params.append(('skip_automated_job_creation', local_var_params['skip_automated_job_creation']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

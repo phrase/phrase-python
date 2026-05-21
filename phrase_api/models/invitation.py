@@ -46,7 +46,7 @@ class Invitation(object):
         'updated_at': 'datetime',
         'accepted_at': 'datetime',
         'spaces': 'List[Space]',
-        'project_role': 'List[MemberProjectDetailProjectRolesInner]'
+        'project_roles': 'List[MemberProjectDetailProjectRolesInner]'
     }
 
     attribute_map = {
@@ -64,10 +64,10 @@ class Invitation(object):
         'updated_at': 'updated_at',
         'accepted_at': 'accepted_at',
         'spaces': 'spaces',
-        'project_role': 'project_role'
+        'project_roles': 'project_roles'
     }
 
-    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, teams=None, default_locale_codes=None, permissions=None, locale_ids=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, project_role=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, role=None, state=None, projects=None, locales=None, teams=None, default_locale_codes=None, permissions=None, locale_ids=None, created_at=None, updated_at=None, accepted_at=None, spaces=None, project_roles=None, local_vars_configuration=None):  # noqa: E501
         """Invitation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -87,7 +87,7 @@ class Invitation(object):
         self._updated_at = None
         self._accepted_at = None
         self._spaces = None
-        self._project_role = None
+        self._project_roles = None
         self.discriminator = None
 
         if id is not None:
@@ -118,8 +118,8 @@ class Invitation(object):
             self.accepted_at = accepted_at
         if spaces is not None:
             self.spaces = spaces
-        if project_role is not None:
-            self.project_role = project_role
+        if project_roles is not None:
+            self.project_roles = project_roles
 
     @property
     def id(self):
@@ -416,25 +416,27 @@ class Invitation(object):
         self._spaces = spaces
 
     @property
-    def project_role(self):
-        """Gets the project_role of this Invitation.  # noqa: E501
+    def project_roles(self):
+        """Gets the project_roles of this Invitation.  # noqa: E501
 
+        Per-project roles assigned to the invitee.   # noqa: E501
 
-        :return: The project_role of this Invitation.  # noqa: E501
+        :return: The project_roles of this Invitation.  # noqa: E501
         :rtype: List[MemberProjectDetailProjectRolesInner]
         """
-        return self._project_role
+        return self._project_roles
 
-    @project_role.setter
-    def project_role(self, project_role):
-        """Sets the project_role of this Invitation.
+    @project_roles.setter
+    def project_roles(self, project_roles):
+        """Sets the project_roles of this Invitation.
 
+        Per-project roles assigned to the invitee.   # noqa: E501
 
-        :param project_role: The project_role of this Invitation.  # noqa: E501
+        :param project_roles: The project_roles of this Invitation.  # noqa: E501
         :type: List[MemberProjectDetailProjectRolesInner]
         """
 
-        self._project_role = project_role
+        self._project_roles = project_roles
 
     def to_dict(self):
         """Returns the model properties as a dict"""

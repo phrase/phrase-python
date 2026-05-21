@@ -48,7 +48,8 @@ class JobDetails(object):
         'source_locale': 'LocalePreview',
         'locales': 'List[LocalePreview]',
         'keys': 'List[KeyPreview]',
-        'annotations': 'List[JobAnnotationShort]'
+        'annotations': 'List[JobAnnotationShort]',
+        'locked': 'bool'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class JobDetails(object):
         'source_locale': 'source_locale',
         'locales': 'locales',
         'keys': 'keys',
-        'annotations': 'annotations'
+        'annotations': 'annotations',
+        'locked': 'locked'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, annotations=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, annotations=None, locked=None, local_vars_configuration=None):  # noqa: E501
         """JobDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -94,6 +96,7 @@ class JobDetails(object):
         self._locales = None
         self._keys = None
         self._annotations = None
+        self._locked = None
         self.discriminator = None
 
         if id is not None:
@@ -129,6 +132,8 @@ class JobDetails(object):
             self.keys = keys
         if annotations is not None:
             self.annotations = annotations
+        if locked is not None:
+            self.locked = locked
 
     @property
     def id(self):
@@ -470,6 +475,7 @@ class JobDetails(object):
     def annotations(self):
         """Gets the annotations of this JobDetails.  # noqa: E501
 
+        Returned only when `include_annotations=true` is supplied on the request.  # noqa: E501
 
         :return: The annotations of this JobDetails.  # noqa: E501
         :rtype: List[JobAnnotationShort]
@@ -480,12 +486,36 @@ class JobDetails(object):
     def annotations(self, annotations):
         """Sets the annotations of this JobDetails.
 
+        Returned only when `include_annotations=true` is supplied on the request.  # noqa: E501
 
         :param annotations: The annotations of this JobDetails.  # noqa: E501
         :type: List[JobAnnotationShort]
         """
 
         self._annotations = annotations
+
+    @property
+    def locked(self):
+        """Gets the locked of this JobDetails.  # noqa: E501
+
+        `true` if the job has been locked by the project's job-locking workflow (translations attached to the job are read-only until the job advances).   # noqa: E501
+
+        :return: The locked of this JobDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._locked
+
+    @locked.setter
+    def locked(self, locked):
+        """Sets the locked of this JobDetails.
+
+        `true` if the job has been locked by the project's job-locking workflow (translations attached to the job are read-only until the job advances).   # noqa: E501
+
+        :param locked: The locked of this JobDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._locked = locked
 
     def to_dict(self):
         """Returns the model properties as a dict"""

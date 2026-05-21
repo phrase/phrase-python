@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | **str** | Style guide title | 
 **audience** | **str** | Audience description | [optional] 
-**target_audience** | **str** | Can be one of: not_specified, children, teenager, young_adults, adults, old_adults. | [optional] 
-**grammatical_person** | **str** | Can be one of: not_specified, first_person_singular, second_person_singular, third_person_singular_masculine, third_person_singular_feminine, third_person_singular_neuter, first_person_plural, second_person_plural, third_person_plural. | [optional] 
-**vocabulary_type** | **str** | Can be one of: not_specified, popular, technical, fictional. | [optional] 
+**target_audience** | **str** | Target audience for the translations. | [optional] 
+**grammatical_person** | **str** | Preferred grammatical person. | [optional] 
+**vocabulary_type** | **str** | Vocabulary register the translations should use. | [optional] 
 **business** | **str** | Description of the business | [optional] 
 **company_branding** | **str** | Company branding to remain consistent. | [optional] 
 **formatting** | **str** | Formatting requirements and character limitations. | [optional] 

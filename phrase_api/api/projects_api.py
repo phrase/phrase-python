@@ -38,7 +38,7 @@ class ProjectsApi(object):
     def project_create(self, project_create_parameters, **kwargs):  # noqa: E501
         """Create a project  # noqa: E501
 
-        Create a new project.  # noqa: E501
+        Create a new project in the given account.  When `source_project_id` is supplied, the new project is created as a clone of that project. All locales, keys, and translations are copied asynchronously after the response is returned, so they may not be available immediately. Settings from the source project are inherited unless explicitly overridden in the request; in clone mode, the `shares_translation_memory` field is ignored and inherited from the source.  `shares_translation_memory` defaults to `true` when omitted on a non-clone create.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_create(project_create_parameters, async_req=True)
@@ -64,7 +64,7 @@ class ProjectsApi(object):
     def project_create_with_http_info(self, project_create_parameters, **kwargs):  # noqa: E501
         """Create a project  # noqa: E501
 
-        Create a new project.  # noqa: E501
+        Create a new project in the given account.  When `source_project_id` is supplied, the new project is created as a clone of that project. All locales, keys, and translations are copied asynchronously after the response is returned, so they may not be available immediately. Settings from the source project are inherited unless explicitly overridden in the request; in clone mode, the `shares_translation_memory` field is ignored and inherited from the source.  `shares_translation_memory` defaults to `true` when omitted on a non-clone create.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_create_with_http_info(project_create_parameters, async_req=True)
@@ -161,7 +161,7 @@ class ProjectsApi(object):
     def project_delete(self, id, **kwargs):  # noqa: E501
         """Delete a project  # noqa: E501
 
-        Delete an existing project.  # noqa: E501
+        Delete an existing project. Associated repository syncs and OTA distributions are removed. A `project:delete` event is dispatched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_delete(id, async_req=True)
@@ -187,7 +187,7 @@ class ProjectsApi(object):
     def project_delete_with_http_info(self, id, **kwargs):  # noqa: E501
         """Delete a project  # noqa: E501
 
-        Delete an existing project.  # noqa: E501
+        Delete an existing project. Associated repository syncs and OTA distributions are removed. A `project:delete` event is dispatched.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_delete_with_http_info(id, async_req=True)
@@ -254,6 +254,10 @@ class ProjectsApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Basic', 'Token']  # noqa: E501
 
@@ -527,7 +531,7 @@ class ProjectsApi(object):
     def projects_list(self, **kwargs):  # noqa: E501
         """List projects  # noqa: E501
 
-        List all projects the current user has access to.  # noqa: E501
+        List all projects the current user has access to.  When the `account_id` query parameter is omitted, the response includes projects across every account the user is a member of. Pass `account_id` to scope the results to a single account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.projects_list(async_req=True)
@@ -538,8 +542,9 @@ class ProjectsApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str account_id: Filter by Account ID
-        :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
-        :param List[str] filters: Filter projects. Valid options are [\"favorites\"].
+        :param str sort_by: Sort projects. Valid values are `name_asc`, `name_desc`, `updated_at_asc`, `updated_at_desc`, `space_asc`, and `space_desc`. The trailing direction segment is optional; if omitted or invalid, projects are sorted ascending. Any other value is ignored and the default ordering is returned.
+        :param List[str] filters: Filter projects. The only supported value is `favorites`, which restricts the results to projects the current user has starred.
+        :param str q: Search query. The only supported syntax is `name:<text>` — for example `name:android` returns projects whose name matches `android` (case-insensitive substring). Any value that does not match the `name:` prefix is ignored.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -557,7 +562,7 @@ class ProjectsApi(object):
     def projects_list_with_http_info(self, **kwargs):  # noqa: E501
         """List projects  # noqa: E501
 
-        List all projects the current user has access to.  # noqa: E501
+        List all projects the current user has access to.  When the `account_id` query parameter is omitted, the response includes projects across every account the user is a member of. Pass `account_id` to scope the results to a single account.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.projects_list_with_http_info(async_req=True)
@@ -568,8 +573,9 @@ class ProjectsApi(object):
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
         :param str account_id: Filter by Account ID
-        :param str sort_by: Sort projects. Valid options are \"name_asc\", \"name_desc\", \"updated_at_asc\", \"updated_at_desc\", \"space_asc\" and \"space_desc\".
-        :param List[str] filters: Filter projects. Valid options are [\"favorites\"].
+        :param str sort_by: Sort projects. Valid values are `name_asc`, `name_desc`, `updated_at_asc`, `updated_at_desc`, `space_asc`, and `space_desc`. The trailing direction segment is optional; if omitted or invalid, projects are sorted ascending. Any other value is ignored and the default ordering is returned.
+        :param List[str] filters: Filter projects. The only supported value is `favorites`, which restricts the results to projects the current user has starred.
+        :param str q: Search query. The only supported syntax is `name:<text>` — for example `name:android` returns projects whose name matches `android` (case-insensitive substring). Any value that does not match the `name:` prefix is ignored.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -592,7 +598,8 @@ class ProjectsApi(object):
             'per_page',
             'account_id',
             'sort_by',
-            'filters'
+            'filters',
+            'q'
         ]
         all_params.extend(
             [
@@ -628,6 +635,8 @@ class ProjectsApi(object):
         if 'filters' in local_var_params and local_var_params['filters'] is not None:  # noqa: E501
             query_params.append(('filters', local_var_params['filters']))  # noqa: E501
             collection_formats['filters'] = 'multi'  # noqa: E501
+        if 'q' in local_var_params and local_var_params['q'] is not None:  # noqa: E501
+            query_params.append(('q', local_var_params['q']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

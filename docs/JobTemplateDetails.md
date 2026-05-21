@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **briefing** | **str** |  | [optional] 
 **project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 
 **branch** | [**Branch**](Branch.md) |  | [optional] 
+**autotranslate_enabled** | **bool** | When &#x60;true&#x60;, jobs created from this template are auto-translated on creation.  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **owner** | [**UserPreview**](UserPreview.md) |  | [optional] 

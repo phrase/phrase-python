@@ -46,7 +46,7 @@ class TestKeyCreateParameters(unittest.TestCase):
                 data_type = 'number', 
                 tags = 'awesome-feature,needs-proofreading', 
                 max_characters_allowed = 140, 
-                screenshot = '[B@6f854741', 
+                screenshot = '[B@10ea88c7', 
                 remove_screenshot = True, 
                 unformatted = True, 
                 default_translation_content = 'Default translation content', 
@@ -55,7 +55,9 @@ class TestKeyCreateParameters(unittest.TestCase):
                 original_file = '', 
                 localized_format_string = '', 
                 localized_format_key = '', 
-                custom_metadata = {"fruit":"Apple","vegetable":"Tomato"}
+                custom_metadata = {"fruit":"Apple","vegetable":"Tomato"}, 
+                excluded_in_locales = ["de","fr"], 
+                format_value_type = 'string'
             )
         else :
             return KeyCreateParameters(

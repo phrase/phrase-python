@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **translatable** | **bool** |  | [optional] 
 **case_sensitive** | **bool** |  | [optional] 
 **translations** | [**List[GlossaryTermTranslation]**](GlossaryTermTranslation.md) |  | [optional] 
+**glossary** | [**GlossaryTermGlossary**](GlossaryTermGlossary.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

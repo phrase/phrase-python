@@ -41,6 +41,7 @@ class Release(object):
         'environments': 'List[str]',
         'locales': 'List[LocalePreview]',
         'tags': 'List[str]',
+        'state': 'str',
         'project': 'ProjectShort',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -56,12 +57,13 @@ class Release(object):
         'environments': 'environments',
         'locales': 'locales',
         'tags': 'tags',
+        'state': 'state',
         'project': 'project',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, version=None, app_min_version=None, app_max_version=None, description=None, platforms=None, environments=None, locales=None, tags=None, project=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, version=None, app_min_version=None, app_max_version=None, description=None, platforms=None, environments=None, locales=None, tags=None, state=None, project=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Release - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -76,6 +78,7 @@ class Release(object):
         self._environments = None
         self._locales = None
         self._tags = None
+        self._state = None
         self._project = None
         self._created_at = None
         self._updated_at = None
@@ -99,6 +102,8 @@ class Release(object):
             self.locales = locales
         if tags is not None:
             self.tags = tags
+        if state is not None:
+            self.state = state
         if project is not None:
             self.project = project
         if created_at is not None:
@@ -294,6 +299,27 @@ class Release(object):
         """
 
         self._tags = tags
+
+    @property
+    def state(self):
+        """Gets the state of this Release.  # noqa: E501
+
+
+        :return: The state of this Release.  # noqa: E501
+        :rtype: str
+        """
+        return self._state
+
+    @state.setter
+    def state(self, state):
+        """Sets the state of this Release.
+
+
+        :param state: The state of this Release.  # noqa: E501
+        :type: str
+        """
+
+        self._state = state
 
     @property
     def project(self):

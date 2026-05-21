@@ -43,7 +43,7 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 main_format = 'yml', 
                 media = 'Python', 
                 shares_translation_memory = True, 
-                project_image = '[B@2a94a702', 
+                project_image = '[B@2e7d71d9', 
                 remove_project_image = False, 
                 workflow = 'review', 
                 machine_translation_enabled = True, 
@@ -61,7 +61,14 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 autotranslate_use_translation_memory = True, 
                 autotranslate_overwrite_unverified_translations = True, 
                 default_encoding = 'UTF-8', 
-                placeholder_styles = ["angular","iOS"]
+                placeholder_styles = ["angular","iOS"], 
+                autocomplete_job_enabled = False, 
+                job_locking_enabled = False, 
+                smart_suggest_enabled = True, 
+                smart_suggest_use_glossary = True, 
+                smart_suggest_use_machine_translation = True, 
+                translation_keys_sort_collation = 'unicode_ci', 
+                cldr_version = 'legacy'
             )
         else :
             return ProjectUpdateParameters(

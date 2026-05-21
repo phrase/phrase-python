@@ -43,6 +43,7 @@ class TestRepoSync(unittest.TestCase):
                 enabled = True, 
                 auto_import = True, 
                 repo_name = '', 
+                pr_branch = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 last_import_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 last_export_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')

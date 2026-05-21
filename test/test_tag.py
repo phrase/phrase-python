@@ -39,6 +39,7 @@ class TestTag(unittest.TestCase):
             return Tag(
                 name = '', 
                 keys_count = 56, 
+                system_tag = True, 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **progress_percent** | **int** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **target_locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
-**tag** | **str** |  | [optional] 
+**tag_name** | **str** | Name of the tag whose keys are included in the order. | [optional] 
 **styleguide** | [**StyleguidePreview**](StyleguidePreview.md) |  | [optional] 
 **unverify_translations_upon_delivery** | **bool** |  | [optional] 
 **quality** | **bool** |  | [optional] 

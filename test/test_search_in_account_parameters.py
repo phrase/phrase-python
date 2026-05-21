@@ -40,7 +40,8 @@ class TestSearchInAccountParameters(unittest.TestCase):
                 query = 'keyword', 
                 locale_code = 'de_DE', 
                 page = 1, 
-                per_page = 25
+                per_page = 25, 
+                project_ids = ["abcd1234abcd1234abcd1234abcd1234"]
             )
         else :
             return SearchInAccountParameters(

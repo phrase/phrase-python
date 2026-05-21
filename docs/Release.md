@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **environments** | **List[str]** |  | [optional] 
 **locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
 **tags** | **List[str]** |  | [optional] 
+**state** | **str** |  | [optional] 
 **project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

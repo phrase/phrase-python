@@ -33,7 +33,7 @@ class ScreenshotMarker(object):
     """
     openapi_types = {
         'id': 'str',
-        'presentation': 'str',
+        'presentation': 'ScreenshotMarkerPresentation',
         'presentation_type': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -103,7 +103,7 @@ class ScreenshotMarker(object):
 
 
         :return: The presentation of this ScreenshotMarker.  # noqa: E501
-        :rtype: str
+        :rtype: ScreenshotMarkerPresentation
         """
         return self._presentation
 
@@ -113,7 +113,7 @@ class ScreenshotMarker(object):
 
 
         :param presentation: The presentation of this ScreenshotMarker.  # noqa: E501
-        :type: str
+        :type: ScreenshotMarkerPresentation
         """
 
         self._presentation = presentation
@@ -122,6 +122,7 @@ class ScreenshotMarker(object):
     def presentation_type(self):
         """Gets the presentation_type of this ScreenshotMarker.  # noqa: E501
 
+        Marker presentation style. The default value is `default`.   # noqa: E501
 
         :return: The presentation_type of this ScreenshotMarker.  # noqa: E501
         :rtype: str
@@ -132,6 +133,7 @@ class ScreenshotMarker(object):
     def presentation_type(self, presentation_type):
         """Sets the presentation_type of this ScreenshotMarker.
 
+        Marker presentation style. The default value is `default`.   # noqa: E501
 
         :param presentation_type: The presentation_type of this ScreenshotMarker.  # noqa: E501
         :type: str

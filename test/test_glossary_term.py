@@ -45,6 +45,9 @@ class TestGlossaryTerm(unittest.TestCase):
                 translations = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","locale_code":"en-US","content":"Save","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z"}
                     ], 
+                glossary = phrase_api.models.glossary_term_glossary.glossary_term_glossary(
+                    id = '', 
+                    name = '', ), 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

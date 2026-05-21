@@ -56,6 +56,14 @@ class ProjectCreateParameters(object):
         'autotranslate_use_machine_translation': 'bool',
         'autotranslate_use_translation_memory': 'bool',
         'autotranslate_overwrite_unverified_translations': 'bool',
+        'autocomplete_job_enabled': 'bool',
+        'job_locking_enabled': 'bool',
+        'smart_suggest_enabled': 'bool',
+        'smart_suggest_use_glossary': 'bool',
+        'smart_suggest_use_machine_translation': 'bool',
+        'translation_keys_sort_collation': 'str',
+        'default_encoding': 'str',
+        'cldr_version': 'str',
         'placeholder_styles': 'List[str]'
     }
 
@@ -84,10 +92,18 @@ class ProjectCreateParameters(object):
         'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
         'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
         'autotranslate_overwrite_unverified_translations': 'autotranslate_overwrite_unverified_translations',
+        'autocomplete_job_enabled': 'autocomplete_job_enabled',
+        'job_locking_enabled': 'job_locking_enabled',
+        'smart_suggest_enabled': 'smart_suggest_enabled',
+        'smart_suggest_use_glossary': 'smart_suggest_use_glossary',
+        'smart_suggest_use_machine_translation': 'smart_suggest_use_machine_translation',
+        'translation_keys_sort_collation': 'translation_keys_sort_collation',
+        'default_encoding': 'default_encoding',
+        'cldr_version': 'cldr_version',
         'placeholder_styles': 'placeholder_styles'
     }
 
-    def __init__(self, name=None, main_format=None, media=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, point_of_contact=None, source_project_id=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, placeholder_styles=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, main_format=None, media=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, point_of_contact=None, source_project_id=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, autocomplete_job_enabled=None, job_locking_enabled=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, translation_keys_sort_collation=None, default_encoding=None, cldr_version=None, placeholder_styles=None, local_vars_configuration=None):  # noqa: E501
         """ProjectCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -117,6 +133,14 @@ class ProjectCreateParameters(object):
         self._autotranslate_use_machine_translation = None
         self._autotranslate_use_translation_memory = None
         self._autotranslate_overwrite_unverified_translations = None
+        self._autocomplete_job_enabled = None
+        self._job_locking_enabled = None
+        self._smart_suggest_enabled = None
+        self._smart_suggest_use_glossary = None
+        self._smart_suggest_use_machine_translation = None
+        self._translation_keys_sort_collation = None
+        self._default_encoding = None
+        self._cldr_version = None
         self._placeholder_styles = None
         self.discriminator = None
 
@@ -167,6 +191,22 @@ class ProjectCreateParameters(object):
             self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
         if autotranslate_overwrite_unverified_translations is not None:
             self.autotranslate_overwrite_unverified_translations = autotranslate_overwrite_unverified_translations
+        if autocomplete_job_enabled is not None:
+            self.autocomplete_job_enabled = autocomplete_job_enabled
+        if job_locking_enabled is not None:
+            self.job_locking_enabled = job_locking_enabled
+        if smart_suggest_enabled is not None:
+            self.smart_suggest_enabled = smart_suggest_enabled
+        if smart_suggest_use_glossary is not None:
+            self.smart_suggest_use_glossary = smart_suggest_use_glossary
+        if smart_suggest_use_machine_translation is not None:
+            self.smart_suggest_use_machine_translation = smart_suggest_use_machine_translation
+        if translation_keys_sort_collation is not None:
+            self.translation_keys_sort_collation = translation_keys_sort_collation
+        if default_encoding is not None:
+            self.default_encoding = default_encoding
+        if cldr_version is not None:
+            self.cldr_version = cldr_version
         if placeholder_styles is not None:
             self.placeholder_styles = placeholder_styles
 
@@ -723,6 +763,196 @@ class ProjectCreateParameters(object):
         """
 
         self._autotranslate_overwrite_unverified_translations = autotranslate_overwrite_unverified_translations
+
+    @property
+    def autocomplete_job_enabled(self):
+        """Gets the autocomplete_job_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Enable autocomplete-job behavior so that newly created keys and locales are automatically added to in-progress jobs.  # noqa: E501
+
+        :return: The autocomplete_job_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._autocomplete_job_enabled
+
+    @autocomplete_job_enabled.setter
+    def autocomplete_job_enabled(self, autocomplete_job_enabled):
+        """Sets the autocomplete_job_enabled of this ProjectCreateParameters.
+
+        (Optional) Enable autocomplete-job behavior so that newly created keys and locales are automatically added to in-progress jobs.  # noqa: E501
+
+        :param autocomplete_job_enabled: The autocomplete_job_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._autocomplete_job_enabled = autocomplete_job_enabled
+
+    @property
+    def job_locking_enabled(self):
+        """Gets the job_locking_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) When enabled, translations are locked once a job moves into review.  # noqa: E501
+
+        :return: The job_locking_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._job_locking_enabled
+
+    @job_locking_enabled.setter
+    def job_locking_enabled(self, job_locking_enabled):
+        """Sets the job_locking_enabled of this ProjectCreateParameters.
+
+        (Optional) When enabled, translations are locked once a job moves into review.  # noqa: E501
+
+        :param job_locking_enabled: The job_locking_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._job_locking_enabled = job_locking_enabled
+
+    @property
+    def smart_suggest_enabled(self):
+        """Gets the smart_suggest_enabled of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Enable Smart Suggest for the project. Defaults to `true` when omitted.  # noqa: E501
+
+        :return: The smart_suggest_enabled of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._smart_suggest_enabled
+
+    @smart_suggest_enabled.setter
+    def smart_suggest_enabled(self, smart_suggest_enabled):
+        """Sets the smart_suggest_enabled of this ProjectCreateParameters.
+
+        (Optional) Enable Smart Suggest for the project. Defaults to `true` when omitted.  # noqa: E501
+
+        :param smart_suggest_enabled: The smart_suggest_enabled of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._smart_suggest_enabled = smart_suggest_enabled
+
+    @property
+    def smart_suggest_use_glossary(self):
+        """Gets the smart_suggest_use_glossary of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Allow Smart Suggest to source suggestions from the project glossary. Defaults to `true` when omitted.  # noqa: E501
+
+        :return: The smart_suggest_use_glossary of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._smart_suggest_use_glossary
+
+    @smart_suggest_use_glossary.setter
+    def smart_suggest_use_glossary(self, smart_suggest_use_glossary):
+        """Sets the smart_suggest_use_glossary of this ProjectCreateParameters.
+
+        (Optional) Allow Smart Suggest to source suggestions from the project glossary. Defaults to `true` when omitted.  # noqa: E501
+
+        :param smart_suggest_use_glossary: The smart_suggest_use_glossary of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._smart_suggest_use_glossary = smart_suggest_use_glossary
+
+    @property
+    def smart_suggest_use_machine_translation(self):
+        """Gets the smart_suggest_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Allow Smart Suggest to source suggestions from machine translation. Defaults to `true` when omitted.  # noqa: E501
+
+        :return: The smart_suggest_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._smart_suggest_use_machine_translation
+
+    @smart_suggest_use_machine_translation.setter
+    def smart_suggest_use_machine_translation(self, smart_suggest_use_machine_translation):
+        """Sets the smart_suggest_use_machine_translation of this ProjectCreateParameters.
+
+        (Optional) Allow Smart Suggest to source suggestions from machine translation. Defaults to `true` when omitted.  # noqa: E501
+
+        :param smart_suggest_use_machine_translation: The smart_suggest_use_machine_translation of this ProjectCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._smart_suggest_use_machine_translation = smart_suggest_use_machine_translation
+
+    @property
+    def translation_keys_sort_collation(self):
+        """Gets the translation_keys_sort_collation of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Collation used when sorting translation keys alphabetically. Defaults to `unicode_ci` when omitted.  # noqa: E501
+
+        :return: The translation_keys_sort_collation of this ProjectCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._translation_keys_sort_collation
+
+    @translation_keys_sort_collation.setter
+    def translation_keys_sort_collation(self, translation_keys_sort_collation):
+        """Sets the translation_keys_sort_collation of this ProjectCreateParameters.
+
+        (Optional) Collation used when sorting translation keys alphabetically. Defaults to `unicode_ci` when omitted.  # noqa: E501
+
+        :param translation_keys_sort_collation: The translation_keys_sort_collation of this ProjectCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._translation_keys_sort_collation = translation_keys_sort_collation
+
+    @property
+    def default_encoding(self):
+        """Gets the default_encoding of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) Sets the default encoding for Uploads. If you leave it empty, we will try to guess it automatically for you when you Upload a file. You can still override this value by setting the [`file_encoding`](/en/api/strings/uploads/upload-a-new-file) parameter for Uploads.  # noqa: E501
+
+        :return: The default_encoding of this ProjectCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_encoding
+
+    @default_encoding.setter
+    def default_encoding(self, default_encoding):
+        """Sets the default_encoding of this ProjectCreateParameters.
+
+        (Optional) Sets the default encoding for Uploads. If you leave it empty, we will try to guess it automatically for you when you Upload a file. You can still override this value by setting the [`file_encoding`](/en/api/strings/uploads/upload-a-new-file) parameter for Uploads.  # noqa: E501
+
+        :param default_encoding: The default_encoding of this ProjectCreateParameters.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["UTF-8", "UTF-16", "UTF-16BE", "UTF-16LE", "ISO-8859-1"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and default_encoding not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `default_encoding` ({0}), must be one of {1}"  # noqa: E501
+                .format(default_encoding, allowed_values)
+            )
+
+        self._default_encoding = default_encoding
+
+    @property
+    def cldr_version(self):
+        """Gets the cldr_version of this ProjectCreateParameters.  # noqa: E501
+
+        (Optional) CLDR plural-rule version used by the project.  # noqa: E501
+
+        :return: The cldr_version of this ProjectCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._cldr_version
+
+    @cldr_version.setter
+    def cldr_version(self, cldr_version):
+        """Sets the cldr_version of this ProjectCreateParameters.
+
+        (Optional) CLDR plural-rule version used by the project.  # noqa: E501
+
+        :param cldr_version: The cldr_version of this ProjectCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._cldr_version = cldr_version
 
     @property
     def placeholder_styles(self):

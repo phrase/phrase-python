@@ -27,6 +27,14 @@ Name | Type | Description | Notes
 **autotranslate_use_machine_translation** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
 **autotranslate_use_translation_memory** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
 **autotranslate_overwrite_unverified_translations** | **bool** | (Optional) Requires autotranslate_enabled to be true | [optional] 
+**autocomplete_job_enabled** | **bool** | (Optional) Enable autocomplete-job behavior so that newly created keys and locales are automatically added to in-progress jobs. | [optional] 
+**job_locking_enabled** | **bool** | (Optional) When enabled, translations are locked once a job moves into review. | [optional] 
+**smart_suggest_enabled** | **bool** | (Optional) Enable Smart Suggest for the project. Defaults to &#x60;true&#x60; when omitted. | [optional] 
+**smart_suggest_use_glossary** | **bool** | (Optional) Allow Smart Suggest to source suggestions from the project glossary. Defaults to &#x60;true&#x60; when omitted. | [optional] 
+**smart_suggest_use_machine_translation** | **bool** | (Optional) Allow Smart Suggest to source suggestions from machine translation. Defaults to &#x60;true&#x60; when omitted. | [optional] 
+**translation_keys_sort_collation** | **str** | (Optional) Collation used when sorting translation keys alphabetically. Defaults to &#x60;unicode_ci&#x60; when omitted. | [optional] 
+**default_encoding** | **str** | (Optional) Sets the default encoding for Uploads. If you leave it empty, we will try to guess it automatically for you when you Upload a file. You can still override this value by setting the [&#x60;file_encoding&#x60;](/en/api/strings/uploads/upload-a-new-file) parameter for Uploads. | [optional] 
+**cldr_version** | **str** | (Optional) CLDR plural-rule version used by the project. | [optional] 
 **placeholder_styles** | **List[str]** | (Optional) List of placeholder styles enabled for the project. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

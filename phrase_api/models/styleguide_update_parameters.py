@@ -161,7 +161,7 @@ class StyleguideUpdateParameters(object):
     def target_audience(self):
         """Gets the target_audience of this StyleguideUpdateParameters.  # noqa: E501
 
-        Can be one of: not_specified, children, teenager, young_adults, adults, old_adults.  # noqa: E501
+        Target audience for the translations.  # noqa: E501
 
         :return: The target_audience of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -172,11 +172,17 @@ class StyleguideUpdateParameters(object):
     def target_audience(self, target_audience):
         """Sets the target_audience of this StyleguideUpdateParameters.
 
-        Can be one of: not_specified, children, teenager, young_adults, adults, old_adults.  # noqa: E501
+        Target audience for the translations.  # noqa: E501
 
         :param target_audience: The target_audience of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
         """
+        allowed_values = ["not_specified", "children", "teenager", "young_adults", "adults", "old_adults"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and target_audience not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `target_audience` ({0}), must be one of {1}"  # noqa: E501
+                .format(target_audience, allowed_values)
+            )
 
         self._target_audience = target_audience
 
@@ -184,7 +190,7 @@ class StyleguideUpdateParameters(object):
     def grammatical_person(self):
         """Gets the grammatical_person of this StyleguideUpdateParameters.  # noqa: E501
 
-        Can be one of: not_specified, first_person_singular, second_person_singular, third_person_singular_masculine, third_person_singular_feminine, third_person_singular_neuter, first_person_plural, second_person_plural, third_person_plural.  # noqa: E501
+        Preferred grammatical person.  # noqa: E501
 
         :return: The grammatical_person of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -195,11 +201,17 @@ class StyleguideUpdateParameters(object):
     def grammatical_person(self, grammatical_person):
         """Sets the grammatical_person of this StyleguideUpdateParameters.
 
-        Can be one of: not_specified, first_person_singular, second_person_singular, third_person_singular_masculine, third_person_singular_feminine, third_person_singular_neuter, first_person_plural, second_person_plural, third_person_plural.  # noqa: E501
+        Preferred grammatical person.  # noqa: E501
 
         :param grammatical_person: The grammatical_person of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
         """
+        allowed_values = ["not_specified", "first_person_singular", "second_person_singular", "third_person_singular_masculine", "third_person_singular_feminine", "third_person_singular_neuter", "first_person_plural", "second_person_plural", "third_person_plural"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and grammatical_person not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `grammatical_person` ({0}), must be one of {1}"  # noqa: E501
+                .format(grammatical_person, allowed_values)
+            )
 
         self._grammatical_person = grammatical_person
 
@@ -207,7 +219,7 @@ class StyleguideUpdateParameters(object):
     def vocabulary_type(self):
         """Gets the vocabulary_type of this StyleguideUpdateParameters.  # noqa: E501
 
-        Can be one of: not_specified, popular, technical, fictional.  # noqa: E501
+        Vocabulary register the translations should use.  # noqa: E501
 
         :return: The vocabulary_type of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -218,11 +230,17 @@ class StyleguideUpdateParameters(object):
     def vocabulary_type(self, vocabulary_type):
         """Sets the vocabulary_type of this StyleguideUpdateParameters.
 
-        Can be one of: not_specified, popular, technical, fictional.  # noqa: E501
+        Vocabulary register the translations should use.  # noqa: E501
 
         :param vocabulary_type: The vocabulary_type of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
         """
+        allowed_values = ["not_specified", "popular", "technical", "fictional"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and vocabulary_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `vocabulary_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(vocabulary_type, allowed_values)
+            )
 
         self._vocabulary_type = vocabulary_type
 

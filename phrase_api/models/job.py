@@ -41,7 +41,9 @@ class Job(object):
         'project': 'ProjectShort',
         'branch': 'BranchName',
         'created_at': 'datetime',
-        'updated_at': 'datetime'
+        'updated_at': 'datetime',
+        'automation_id': 'str',
+        'job_template_id': 'str'
     }
 
     attribute_map = {
@@ -54,10 +56,12 @@ class Job(object):
         'project': 'project',
         'branch': 'branch',
         'created_at': 'created_at',
-        'updated_at': 'updated_at'
+        'updated_at': 'updated_at',
+        'automation_id': 'automation_id',
+        'job_template_id': 'job_template_id'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, automation_id=None, job_template_id=None, local_vars_configuration=None):  # noqa: E501
         """Job - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,6 +77,8 @@ class Job(object):
         self._branch = None
         self._created_at = None
         self._updated_at = None
+        self._automation_id = None
+        self._job_template_id = None
         self.discriminator = None
 
         if id is not None:
@@ -94,6 +100,8 @@ class Job(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        self.automation_id = automation_id
+        self.job_template_id = job_template_id
 
     @property
     def id(self):
@@ -304,6 +312,52 @@ class Job(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def automation_id(self):
+        """Gets the automation_id of this Job.  # noqa: E501
+
+        The ID of the automation that created this job, or null if the job was created manually.  # noqa: E501
+
+        :return: The automation_id of this Job.  # noqa: E501
+        :rtype: str
+        """
+        return self._automation_id
+
+    @automation_id.setter
+    def automation_id(self, automation_id):
+        """Sets the automation_id of this Job.
+
+        The ID of the automation that created this job, or null if the job was created manually.  # noqa: E501
+
+        :param automation_id: The automation_id of this Job.  # noqa: E501
+        :type: str
+        """
+
+        self._automation_id = automation_id
+
+    @property
+    def job_template_id(self):
+        """Gets the job_template_id of this Job.  # noqa: E501
+
+        The ID of the job template this job was created from, or null if no template was used.  # noqa: E501
+
+        :return: The job_template_id of this Job.  # noqa: E501
+        :rtype: str
+        """
+        return self._job_template_id
+
+    @job_template_id.setter
+    def job_template_id(self, job_template_id):
+        """Sets the job_template_id of this Job.
+
+        The ID of the job template this job was created from, or null if no template was used.  # noqa: E501
+
+        :param job_template_id: The job_template_id of this Job.  # noqa: E501
+        :type: str
+        """
+
+        self._job_template_id = job_template_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

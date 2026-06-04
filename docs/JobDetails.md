@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **branch** | [**BranchName**](BranchName.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
+**automation_id** | **str** | The ID of the automation that created this job, or null if the job was created manually. | [optional] 
+**job_template_id** | **str** | The ID of the job template this job was created from, or null if no template was used. | [optional] 
 **owner** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **job_tag_name** | **str** |  | [optional] 
 **source_translations_updated_at** | **datetime** |  | [optional] 

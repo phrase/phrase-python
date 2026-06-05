@@ -458,8 +458,9 @@ class LocalesApi(object):
         :param bool skip_unverified_translations: Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with `include_unverified_translations`.
         :param bool include_unverified_translations: if set to false unverified translations are excluded
         :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow is enabled for the project.
-        :param str fallback_locale_id: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `use_locale_fallback`. 
-        :param bool use_locale_fallback: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `fallback_locale_id`. 
+        :param str fallback_locale_id: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `use_locale_fallback`. 
+        :param bool use_locale_fallback: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `fallback_locale_id`. 
+        :param bool fallback_for_unverified_translations: If set to `true`, translations in a non-final state are replaced by the fallback locale's translation at export time. In the simple workflow, \"non-final\" means `unverified`. In the review workflow, it additionally includes `translated` (awaiting review). No stored translations are modified. Requires `fallback_locale_id` or `use_locale_fallback` to be set; a `422` validation error is returned otherwise. 
         :param str source_locale_id: Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a `tag` parameter indicating a specific job.
         :param str translation_key_prefix: Download all translation keys, and remove the specified prefix where possible. Warning: this may create duplicate key names if other keys share the same name after the prefix is removed.
         :param bool filter_by_prefix: Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
@@ -509,8 +510,9 @@ class LocalesApi(object):
         :param bool skip_unverified_translations: Indicates whether the locale file should skip all unverified translations. This parameter is deprecated and should be replaced with `include_unverified_translations`.
         :param bool include_unverified_translations: if set to false unverified translations are excluded
         :param bool use_last_reviewed_version: If set to true the last reviewed version of a translation is used. This is only available if the review workflow is enabled for the project.
-        :param str fallback_locale_id: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `use_locale_fallback`. 
-        :param bool use_locale_fallback: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `fallback_locale_id`. 
+        :param str fallback_locale_id: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `use_locale_fallback`. 
+        :param bool use_locale_fallback: If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `fallback_locale_id`. 
+        :param bool fallback_for_unverified_translations: If set to `true`, translations in a non-final state are replaced by the fallback locale's translation at export time. In the simple workflow, \"non-final\" means `unverified`. In the review workflow, it additionally includes `translated` (awaiting review). No stored translations are modified. Requires `fallback_locale_id` or `use_locale_fallback` to be set; a `422` validation error is returned otherwise. 
         :param str source_locale_id: Provides the source language of a corresponding job as the source language of the generated locale file. This parameter will be ignored unless used in combination with a `tag` parameter indicating a specific job.
         :param str translation_key_prefix: Download all translation keys, and remove the specified prefix where possible. Warning: this may create duplicate key names if other keys share the same name after the prefix is removed.
         :param bool filter_by_prefix: Only download translation keys containing the specified prefix, and remove the prefix from the generated file.
@@ -555,6 +557,7 @@ class LocalesApi(object):
             'use_last_reviewed_version',
             'fallback_locale_id',
             'use_locale_fallback',
+            'fallback_for_unverified_translations',
             'source_locale_id',
             'translation_key_prefix',
             'filter_by_prefix',
@@ -629,6 +632,8 @@ class LocalesApi(object):
             query_params.append(('fallback_locale_id', local_var_params['fallback_locale_id']))  # noqa: E501
         if 'use_locale_fallback' in local_var_params and local_var_params['use_locale_fallback'] is not None:  # noqa: E501
             query_params.append(('use_locale_fallback', local_var_params['use_locale_fallback']))  # noqa: E501
+        if 'fallback_for_unverified_translations' in local_var_params and local_var_params['fallback_for_unverified_translations'] is not None:  # noqa: E501
+            query_params.append(('fallback_for_unverified_translations', local_var_params['fallback_for_unverified_translations']))  # noqa: E501
         if 'source_locale_id' in local_var_params and local_var_params['source_locale_id'] is not None:  # noqa: E501
             query_params.append(('source_locale_id', local_var_params['source_locale_id']))  # noqa: E501
         if 'translation_key_prefix' in local_var_params and local_var_params['translation_key_prefix'] is not None:  # noqa: E501

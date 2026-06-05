@@ -46,6 +46,7 @@ class LocaleDownloadCreateParameters(object):
         'locale_ids': 'List[str]',
         'fallback_locale_id': 'str',
         'use_locale_fallback': 'bool',
+        'fallback_for_unverified_translations': 'bool',
         'source_locale_id': 'str',
         'custom_metadata_filters': 'object',
         'updated_since': 'str'
@@ -66,12 +67,13 @@ class LocaleDownloadCreateParameters(object):
         'locale_ids': 'locale_ids',
         'fallback_locale_id': 'fallback_locale_id',
         'use_locale_fallback': 'use_locale_fallback',
+        'fallback_for_unverified_translations': 'fallback_for_unverified_translations',
         'source_locale_id': 'source_locale_id',
         'custom_metadata_filters': 'custom_metadata_filters',
         'updated_since': 'updated_since'
     }
 
-    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, use_locale_fallback=None, source_locale_id=None, custom_metadata_filters=None, updated_since=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, use_locale_fallback=None, fallback_for_unverified_translations=None, source_locale_id=None, custom_metadata_filters=None, updated_since=None, local_vars_configuration=None):  # noqa: E501
         """LocaleDownloadCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -91,6 +93,7 @@ class LocaleDownloadCreateParameters(object):
         self._locale_ids = None
         self._fallback_locale_id = None
         self._use_locale_fallback = None
+        self._fallback_for_unverified_translations = None
         self._source_locale_id = None
         self._custom_metadata_filters = None
         self._updated_since = None
@@ -123,6 +126,8 @@ class LocaleDownloadCreateParameters(object):
             self.fallback_locale_id = fallback_locale_id
         if use_locale_fallback is not None:
             self.use_locale_fallback = use_locale_fallback
+        if fallback_for_unverified_translations is not None:
+            self.fallback_for_unverified_translations = fallback_for_unverified_translations
         if source_locale_id is not None:
             self.source_locale_id = source_locale_id
         if custom_metadata_filters is not None:
@@ -412,7 +417,7 @@ class LocaleDownloadCreateParameters(object):
     def fallback_locale_id(self):
         """Gets the fallback_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `use_locale_fallback`.   # noqa: E501
+        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `use_locale_fallback`.   # noqa: E501
 
         :return: The fallback_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: str
@@ -423,7 +428,7 @@ class LocaleDownloadCreateParameters(object):
     def fallback_locale_id(self, fallback_locale_id):
         """Sets the fallback_locale_id of this LocaleDownloadCreateParameters.
 
-        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `use_locale_fallback`.   # noqa: E501
+        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Provide the ID of the locale that should be used as the fallback. Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `use_locale_fallback`.   # noqa: E501
 
         :param fallback_locale_id: The fallback_locale_id of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: str
@@ -435,7 +440,7 @@ class LocaleDownloadCreateParameters(object):
     def use_locale_fallback(self):
         """Gets the use_locale_fallback of this LocaleDownloadCreateParameters.  # noqa: E501
 
-        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `fallback_locale_id`.   # noqa: E501
+        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `fallback_locale_id`.   # noqa: E501
 
         :return: The use_locale_fallback of this LocaleDownloadCreateParameters.  # noqa: E501
         :rtype: bool
@@ -446,13 +451,36 @@ class LocaleDownloadCreateParameters(object):
     def use_locale_fallback(self, use_locale_fallback):
         """Sets the use_locale_fallback of this LocaleDownloadCreateParameters.
 
-        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true`. Mutually exclusive with `fallback_locale_id`.   # noqa: E501
+        If a key has no translation in the locale being downloaded, the translation in the fallback locale will be used. Fallback locale is defined in [locale's settings](/en/api/strings/locales/update-a-locale#body-fallback-locale-id). Requires `include_empty_translations` to be set to `true` unless `fallback_for_unverified_translations` is also set to `true`. Mutually exclusive with `fallback_locale_id`.   # noqa: E501
 
         :param use_locale_fallback: The use_locale_fallback of this LocaleDownloadCreateParameters.  # noqa: E501
         :type: bool
         """
 
         self._use_locale_fallback = use_locale_fallback
+
+    @property
+    def fallback_for_unverified_translations(self):
+        """Gets the fallback_for_unverified_translations of this LocaleDownloadCreateParameters.  # noqa: E501
+
+        If set to `true`, translations in a non-final state are replaced by the fallback locale's translation at export time. In the simple workflow, \"non-final\" means `unverified`. In the review workflow, it additionally includes `translated` (awaiting review). No stored translations are modified. Requires `fallback_locale_id` or `use_locale_fallback` to be set; a `422` validation error is returned otherwise.   # noqa: E501
+
+        :return: The fallback_for_unverified_translations of this LocaleDownloadCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._fallback_for_unverified_translations
+
+    @fallback_for_unverified_translations.setter
+    def fallback_for_unverified_translations(self, fallback_for_unverified_translations):
+        """Sets the fallback_for_unverified_translations of this LocaleDownloadCreateParameters.
+
+        If set to `true`, translations in a non-final state are replaced by the fallback locale's translation at export time. In the simple workflow, \"non-final\" means `unverified`. In the review workflow, it additionally includes `translated` (awaiting review). No stored translations are modified. Requires `fallback_locale_id` or `use_locale_fallback` to be set; a `422` validation error is returned otherwise.   # noqa: E501
+
+        :param fallback_for_unverified_translations: The fallback_for_unverified_translations of this LocaleDownloadCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._fallback_for_unverified_translations = fallback_for_unverified_translations
 
     @property
     def source_locale_id(self):

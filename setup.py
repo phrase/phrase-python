@@ -12,7 +12,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "phrase-api"
-VERSION = "3.23.0"
+VERSION = "3.24.0"
 # To install the library, run the following
 #
 # python setup.py install

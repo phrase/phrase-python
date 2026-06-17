@@ -75,31 +75,22 @@ class Format(object):
         self._includes_locale_information = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if api_name is not None:
-            self.api_name = api_name
-        if description is not None:
-            self.description = description
-        if extension is not None:
-            self.extension = extension
-        if default_encoding is not None:
-            self.default_encoding = default_encoding
-        if importable is not None:
-            self.importable = importable
-        if exportable is not None:
-            self.exportable = exportable
-        if default_file is not None:
-            self.default_file = default_file
-        if renders_default_locale is not None:
-            self.renders_default_locale = renders_default_locale
-        if includes_locale_information is not None:
-            self.includes_locale_information = includes_locale_information
+        self.name = name
+        self.api_name = api_name
+        self.description = description
+        self.extension = extension
+        self.default_encoding = default_encoding
+        self.importable = importable
+        self.exportable = exportable
+        self.default_file = default_file
+        self.renders_default_locale = renders_default_locale
+        self.includes_locale_information = includes_locale_information
 
     @property
     def name(self):
         """Gets the name of this Format.  # noqa: E501
 
+        Human-readable display name of the format.  # noqa: E501
 
         :return: The name of this Format.  # noqa: E501
         :rtype: str
@@ -110,10 +101,13 @@ class Format(object):
     def name(self, name):
         """Sets the name of this Format.
 
+        Human-readable display name of the format.  # noqa: E501
 
         :param name: The name of this Format.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -121,6 +115,7 @@ class Format(object):
     def api_name(self):
         """Gets the api_name of this Format.  # noqa: E501
 
+        Identifier used to reference this format in API requests, such as the file_format parameter on the uploads and downloads endpoints.  # noqa: E501
 
         :return: The api_name of this Format.  # noqa: E501
         :rtype: str
@@ -131,10 +126,13 @@ class Format(object):
     def api_name(self, api_name):
         """Sets the api_name of this Format.
 
+        Identifier used to reference this format in API requests, such as the file_format parameter on the uploads and downloads endpoints.  # noqa: E501
 
         :param api_name: The api_name of this Format.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and api_name is None:  # noqa: E501
+            raise ValueError("Invalid value for `api_name`, must not be `None`")  # noqa: E501
 
         self._api_name = api_name
 
@@ -142,6 +140,7 @@ class Format(object):
     def description(self):
         """Gets the description of this Format.  # noqa: E501
 
+        Human-readable summary of the format and its typical use case.  # noqa: E501
 
         :return: The description of this Format.  # noqa: E501
         :rtype: str
@@ -152,10 +151,13 @@ class Format(object):
     def description(self, description):
         """Sets the description of this Format.
 
+        Human-readable summary of the format and its typical use case.  # noqa: E501
 
         :param description: The description of this Format.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and description is None:  # noqa: E501
+            raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
 
         self._description = description
 
@@ -163,6 +165,7 @@ class Format(object):
     def extension(self):
         """Gets the extension of this Format.  # noqa: E501
 
+        Default file extension associated with this format.  # noqa: E501
 
         :return: The extension of this Format.  # noqa: E501
         :rtype: str
@@ -173,10 +176,13 @@ class Format(object):
     def extension(self, extension):
         """Sets the extension of this Format.
 
+        Default file extension associated with this format.  # noqa: E501
 
         :param extension: The extension of this Format.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and extension is None:  # noqa: E501
+            raise ValueError("Invalid value for `extension`, must not be `None`")  # noqa: E501
 
         self._extension = extension
 
@@ -184,6 +190,7 @@ class Format(object):
     def default_encoding(self):
         """Gets the default_encoding of this Format.  # noqa: E501
 
+        Default character encoding used when reading or writing files in this format.  # noqa: E501
 
         :return: The default_encoding of this Format.  # noqa: E501
         :rtype: str
@@ -194,10 +201,13 @@ class Format(object):
     def default_encoding(self, default_encoding):
         """Sets the default_encoding of this Format.
 
+        Default character encoding used when reading or writing files in this format.  # noqa: E501
 
         :param default_encoding: The default_encoding of this Format.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and default_encoding is None:  # noqa: E501
+            raise ValueError("Invalid value for `default_encoding`, must not be `None`")  # noqa: E501
 
         self._default_encoding = default_encoding
 
@@ -205,6 +215,7 @@ class Format(object):
     def importable(self):
         """Gets the importable of this Format.  # noqa: E501
 
+        Whether locale files can be imported using this format.  # noqa: E501
 
         :return: The importable of this Format.  # noqa: E501
         :rtype: bool
@@ -215,10 +226,13 @@ class Format(object):
     def importable(self, importable):
         """Sets the importable of this Format.
 
+        Whether locale files can be imported using this format.  # noqa: E501
 
         :param importable: The importable of this Format.  # noqa: E501
         :type: bool
         """
+        if self.local_vars_configuration.client_side_validation and importable is None:  # noqa: E501
+            raise ValueError("Invalid value for `importable`, must not be `None`")  # noqa: E501
 
         self._importable = importable
 
@@ -226,6 +240,7 @@ class Format(object):
     def exportable(self):
         """Gets the exportable of this Format.  # noqa: E501
 
+        Whether locale files can be exported using this format.  # noqa: E501
 
         :return: The exportable of this Format.  # noqa: E501
         :rtype: bool
@@ -236,10 +251,13 @@ class Format(object):
     def exportable(self, exportable):
         """Sets the exportable of this Format.
 
+        Whether locale files can be exported using this format.  # noqa: E501
 
         :param exportable: The exportable of this Format.  # noqa: E501
         :type: bool
         """
+        if self.local_vars_configuration.client_side_validation and exportable is None:  # noqa: E501
+            raise ValueError("Invalid value for `exportable`, must not be `None`")  # noqa: E501
 
         self._exportable = exportable
 
@@ -247,6 +265,7 @@ class Format(object):
     def default_file(self):
         """Gets the default_file of this Format.  # noqa: E501
 
+        Conventional file path pattern for this format. Contains locale_name as a placeholder for the locale identifier.  # noqa: E501
 
         :return: The default_file of this Format.  # noqa: E501
         :rtype: str
@@ -257,10 +276,13 @@ class Format(object):
     def default_file(self, default_file):
         """Sets the default_file of this Format.
 
+        Conventional file path pattern for this format. Contains locale_name as a placeholder for the locale identifier.  # noqa: E501
 
         :param default_file: The default_file of this Format.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and default_file is None:  # noqa: E501
+            raise ValueError("Invalid value for `default_file`, must not be `None`")  # noqa: E501
 
         self._default_file = default_file
 
@@ -268,6 +290,7 @@ class Format(object):
     def renders_default_locale(self):
         """Gets the renders_default_locale of this Format.  # noqa: E501
 
+        When true, exported files contain the default locale's content for any key that has no translation in the target locale.  # noqa: E501
 
         :return: The renders_default_locale of this Format.  # noqa: E501
         :rtype: bool
@@ -278,10 +301,13 @@ class Format(object):
     def renders_default_locale(self, renders_default_locale):
         """Sets the renders_default_locale of this Format.
 
+        When true, exported files contain the default locale's content for any key that has no translation in the target locale.  # noqa: E501
 
         :param renders_default_locale: The renders_default_locale of this Format.  # noqa: E501
         :type: bool
         """
+        if self.local_vars_configuration.client_side_validation and renders_default_locale is None:  # noqa: E501
+            raise ValueError("Invalid value for `renders_default_locale`, must not be `None`")  # noqa: E501
 
         self._renders_default_locale = renders_default_locale
 
@@ -289,6 +315,7 @@ class Format(object):
     def includes_locale_information(self):
         """Gets the includes_locale_information of this Format.  # noqa: E501
 
+        When true, files in this format embed locale information so Phrase can detect the locale automatically on import.  # noqa: E501
 
         :return: The includes_locale_information of this Format.  # noqa: E501
         :rtype: bool
@@ -299,10 +326,13 @@ class Format(object):
     def includes_locale_information(self, includes_locale_information):
         """Sets the includes_locale_information of this Format.
 
+        When true, files in this format embed locale information so Phrase can detect the locale automatically on import.  # noqa: E501
 
         :param includes_locale_information: The includes_locale_information of this Format.  # noqa: E501
         :type: bool
         """
+        if self.local_vars_configuration.client_side_validation and includes_locale_information is None:  # noqa: E501
+            raise ValueError("Invalid value for `includes_locale_information`, must not be `None`")  # noqa: E501
 
         self._includes_locale_information = includes_locale_information
 

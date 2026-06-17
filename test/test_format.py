@@ -37,19 +37,29 @@ class TestFormat(unittest.TestCase):
         """
         if include_optional :
             return Format(
-                name = '', 
-                api_name = '', 
-                description = '', 
-                extension = '', 
-                default_encoding = '', 
+                name = 'Ruby/Rails YAML', 
+                api_name = 'yml', 
+                description = 'YAML file format for use with Ruby/Rails applications', 
+                extension = 'yml', 
+                default_encoding = 'UTF-8', 
                 importable = True, 
                 exportable = True, 
-                default_file = '', 
-                renders_default_locale = True, 
-                includes_locale_information = True
+                default_file = './config/locales/<locale_name>.yml', 
+                renders_default_locale = False, 
+                includes_locale_information = False
             )
         else :
             return Format(
+                name = 'Ruby/Rails YAML',
+                api_name = 'yml',
+                description = 'YAML file format for use with Ruby/Rails applications',
+                extension = 'yml',
+                default_encoding = 'UTF-8',
+                importable = True,
+                exportable = True,
+                default_file = './config/locales/<locale_name>.yml',
+                renders_default_locale = False,
+                includes_locale_information = False,
         )
         """
 

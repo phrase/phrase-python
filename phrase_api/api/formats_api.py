@@ -38,7 +38,7 @@ class FormatsApi(object):
     def formats_list(self, **kwargs):  # noqa: E501
         """List formats  # noqa: E501
 
-        Get a handy list of all localization file formats supported in Phrase.  # noqa: E501
+        Returns all file formats that Phrase Strings supports. Use the api_name value from each format as the file_format parameter when uploading or downloading locale files. Not every format supports both directions: check the importable and exportable fields before using a format in a workflow. This endpoint does not require authentication and is not subject to rate limiting.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.formats_list(async_req=True)
@@ -62,7 +62,7 @@ class FormatsApi(object):
     def formats_list_with_http_info(self, **kwargs):  # noqa: E501
         """List formats  # noqa: E501
 
-        Get a handy list of all localization file formats supported in Phrase.  # noqa: E501
+        Returns all file formats that Phrase Strings supports. Use the api_name value from each format as the file_format parameter when uploading or downloading locale files. Not every format supports both directions: check the importable and exportable fields before using a format in a workflow. This endpoint does not require authentication and is not subject to rate limiting.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.formats_list_with_http_info(async_req=True)

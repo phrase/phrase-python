@@ -38,6 +38,7 @@ class TestRepoSyncCreateParameters(unittest.TestCase):
         if include_optional :
             return RepoSyncCreateParameters(
                 project_id = 'abcd1234abcd1234abcd1234abcd1234', 
+                name = '', 
                 git_provider = 'github', 
                 connection_type = 'github_app', 
                 repo_name = 'my-org/my-repo', 

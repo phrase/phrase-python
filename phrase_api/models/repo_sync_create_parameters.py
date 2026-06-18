@@ -33,6 +33,7 @@ class RepoSyncCreateParameters(object):
     """
     openapi_types = {
         'project_id': 'str',
+        'name': 'str',
         'git_provider': 'str',
         'connection_type': 'str',
         'repo_name': 'str',
@@ -45,6 +46,7 @@ class RepoSyncCreateParameters(object):
 
     attribute_map = {
         'project_id': 'project_id',
+        'name': 'name',
         'git_provider': 'git_provider',
         'connection_type': 'connection_type',
         'repo_name': 'repo_name',
@@ -55,13 +57,14 @@ class RepoSyncCreateParameters(object):
         'custom_api_endpoint': 'custom_api_endpoint'
     }
 
-    def __init__(self, project_id=None, git_provider='github', connection_type=None, repo_name=None, base_branch=None, pr_branch=None, auto_import=None, access_token=None, custom_api_endpoint=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, project_id=None, name=None, git_provider='github', connection_type=None, repo_name=None, base_branch=None, pr_branch=None, auto_import=None, access_token=None, custom_api_endpoint=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._project_id = None
+        self._name = None
         self._git_provider = None
         self._connection_type = None
         self._repo_name = None
@@ -73,6 +76,7 @@ class RepoSyncCreateParameters(object):
         self.discriminator = None
 
         self.project_id = project_id
+        self.name = name
         if git_provider is not None:
             self.git_provider = git_provider
         self.connection_type = connection_type
@@ -112,6 +116,32 @@ class RepoSyncCreateParameters(object):
             raise ValueError("Invalid value for `project_id`, must not be `None`")  # noqa: E501
 
         self._project_id = project_id
+
+    @property
+    def name(self):
+        """Gets the name of this RepoSyncCreateParameters.  # noqa: E501
+
+        Optional custom display name for this repo sync. Defaults to null; when null the project name is used as the display name.   # noqa: E501
+
+        :return: The name of this RepoSyncCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this RepoSyncCreateParameters.
+
+        Optional custom display name for this repo sync. Defaults to null; when null the project name is used as the display name.   # noqa: E501
+
+        :param name: The name of this RepoSyncCreateParameters.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                name is not None and len(name) > 100):
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `100`")  # noqa: E501
+
+        self._name = name
 
     @property
     def git_provider(self):

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
+**name** | **str** | Optional custom display name for this repo sync. When null or blank, the sync is displayed using the associated project name.  | [optional] 
 **project** | [**ProjectShort**](ProjectShort.md) |  | [optional] 
 **provider** | **str** |  | [optional] 
 **enabled** | **bool** |  | [optional] 

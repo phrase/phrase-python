@@ -33,6 +33,7 @@ class RepoSync(object):
     """
     openapi_types = {
         'id': 'str',
+        'name': 'str',
         'project': 'ProjectShort',
         'provider': 'str',
         'enabled': 'bool',
@@ -46,6 +47,7 @@ class RepoSync(object):
 
     attribute_map = {
         'id': 'id',
+        'name': 'name',
         'project': 'project',
         'provider': 'provider',
         'enabled': 'enabled',
@@ -57,13 +59,14 @@ class RepoSync(object):
         'last_export_at': 'last_export_at'
     }
 
-    def __init__(self, id=None, project=None, provider=None, enabled=None, auto_import=None, repo_name=None, pr_branch=None, created_at=None, last_import_at=None, last_export_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, project=None, provider=None, enabled=None, auto_import=None, repo_name=None, pr_branch=None, created_at=None, last_import_at=None, last_export_at=None, local_vars_configuration=None):  # noqa: E501
         """RepoSync - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
+        self._name = None
         self._project = None
         self._provider = None
         self._enabled = None
@@ -77,6 +80,7 @@ class RepoSync(object):
 
         if id is not None:
             self.id = id
+        self.name = name
         if project is not None:
             self.project = project
         if provider is not None:
@@ -90,10 +94,8 @@ class RepoSync(object):
         self.pr_branch = pr_branch
         if created_at is not None:
             self.created_at = created_at
-        if last_import_at is not None:
-            self.last_import_at = last_import_at
-        if last_export_at is not None:
-            self.last_export_at = last_export_at
+        self.last_import_at = last_import_at
+        self.last_export_at = last_export_at
 
     @property
     def id(self):
@@ -115,6 +117,32 @@ class RepoSync(object):
         """
 
         self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this RepoSync.  # noqa: E501
+
+        Optional custom display name for this repo sync. When null or blank, the sync is displayed using the associated project name.   # noqa: E501
+
+        :return: The name of this RepoSync.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this RepoSync.
+
+        Optional custom display name for this repo sync. When null or blank, the sync is displayed using the associated project name.   # noqa: E501
+
+        :param name: The name of this RepoSync.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                name is not None and len(name) > 100):
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `100`")  # noqa: E501
+
+        self._name = name
 
     @property
     def project(self):

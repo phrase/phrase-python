@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **project_id** | **str** | ID of the project to connect the Repo Sync to. | 
+**name** | **str** | Optional custom display name for this repo sync. Defaults to null; when null the project name is used as the display name.  | [optional] 
 **git_provider** | **str** | The Git provider to use. | [optional] [default to 'github']
 **connection_type** | **str** | The authentication method used to connect to the Git provider. Defaults to &#x60;token&#x60; if not specified.  Valid values: - &#x60;token&#x60; — Personal access token stored on the Repo Sync. Supported by all providers. - &#x60;github_app&#x60; — Authenticate via the Phrase GitHub App installation on your account. GitHub only. The account must already have the GitHub App installed; if not, the response will include a &#x60;github_app_installation_url&#x60;. - &#x60;self_hosted&#x60; — Token-based auth for self-hosted Git instances. Requires &#x60;custom_api_endpoint&#x60;. | 
 **repo_name** | **str** | Full repository name including the owner, e.g. &#x60;my-org/my-repo&#x60;. | 

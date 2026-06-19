@@ -49,6 +49,7 @@ class TestJobDetails(unittest.TestCase):
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 automation_id = '', 
                 job_template_id = '', 
+                review_due_date = '2015-03-25T11:43:52Z', 
                 owner = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 job_tag_name = '', 
                 source_translations_updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

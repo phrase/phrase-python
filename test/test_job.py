@@ -48,7 +48,8 @@ class TestJob(unittest.TestCase):
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 automation_id = '', 
-                job_template_id = ''
+                job_template_id = '', 
+                review_due_date = '2015-03-25T11:43:52Z'
             )
         else :
             return Job(

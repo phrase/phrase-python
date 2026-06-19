@@ -44,6 +44,7 @@ class JobDetails(object):
         'updated_at': 'datetime',
         'automation_id': 'str',
         'job_template_id': 'str',
+        'review_due_date': 'datetime',
         'owner': 'UserPreview',
         'job_tag_name': 'str',
         'source_translations_updated_at': 'datetime',
@@ -67,6 +68,7 @@ class JobDetails(object):
         'updated_at': 'updated_at',
         'automation_id': 'automation_id',
         'job_template_id': 'job_template_id',
+        'review_due_date': 'review_due_date',
         'owner': 'owner',
         'job_tag_name': 'job_tag_name',
         'source_translations_updated_at': 'source_translations_updated_at',
@@ -77,7 +79,7 @@ class JobDetails(object):
         'locked': 'locked'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, automation_id=None, job_template_id=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, annotations=None, locked=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, due_date=None, state=None, ticket_url=None, project=None, branch=None, created_at=None, updated_at=None, automation_id=None, job_template_id=None, review_due_date=None, owner=None, job_tag_name=None, source_translations_updated_at=None, source_locale=None, locales=None, keys=None, annotations=None, locked=None, local_vars_configuration=None):  # noqa: E501
         """JobDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -95,6 +97,7 @@ class JobDetails(object):
         self._updated_at = None
         self._automation_id = None
         self._job_template_id = None
+        self._review_due_date = None
         self._owner = None
         self._job_tag_name = None
         self._source_translations_updated_at = None
@@ -126,6 +129,7 @@ class JobDetails(object):
             self.updated_at = updated_at
         self.automation_id = automation_id
         self.job_template_id = job_template_id
+        self.review_due_date = review_due_date
         if owner is not None:
             self.owner = owner
         if job_tag_name is not None:
@@ -398,6 +402,29 @@ class JobDetails(object):
         """
 
         self._job_template_id = job_template_id
+
+    @property
+    def review_due_date(self):
+        """Gets the review_due_date of this JobDetails.  # noqa: E501
+
+        The review due date for this job. Returns `null` when the project does not have review workflow enabled.  # noqa: E501
+
+        :return: The review_due_date of this JobDetails.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._review_due_date
+
+    @review_due_date.setter
+    def review_due_date(self, review_due_date):
+        """Sets the review_due_date of this JobDetails.
+
+        The review due date for this job. Returns `null` when the project does not have review workflow enabled.  # noqa: E501
+
+        :param review_due_date: The review_due_date of this JobDetails.  # noqa: E501
+        :type: datetime
+        """
+
+        self._review_due_date = review_due_date
 
     @property
     def owner(self):

@@ -24,6 +24,10 @@ docs/BlacklistedKeyCreateParameters.md
 docs/BlacklistedKeyUpdateParameters.md
 docs/BlacklistedKeysApi.md
 docs/Branch.md
+docs/BranchComparison.md
+docs/BranchComparisonChange.md
+docs/BranchComparisonDiff.md
+docs/BranchComparisonDiffConflictsValue.md
 docs/BranchCreateComparisonParameters.md
 docs/BranchCreateParameters.md
 docs/BranchMergeParameters.md
@@ -369,6 +373,10 @@ phrase_api/models/blacklisted_key.py
 phrase_api/models/blacklisted_key_create_parameters.py
 phrase_api/models/blacklisted_key_update_parameters.py
 phrase_api/models/branch.py
+phrase_api/models/branch_comparison.py
+phrase_api/models/branch_comparison_change.py
+phrase_api/models/branch_comparison_diff.py
+phrase_api/models/branch_comparison_diff_conflicts_value.py
 phrase_api/models/branch_create_comparison_parameters.py
 phrase_api/models/branch_create_parameters.py
 phrase_api/models/branch_merge_parameters.py
@@ -608,6 +616,10 @@ test/test_blacklisted_key_create_parameters.py
 test/test_blacklisted_key_update_parameters.py
 test/test_blacklisted_keys_api.py
 test/test_branch.py
+test/test_branch_comparison.py
+test/test_branch_comparison_change.py
+test/test_branch_comparison_diff.py
+test/test_branch_comparison_diff_conflicts_value.py
 test/test_branch_create_comparison_parameters.py
 test/test_branch_create_parameters.py
 test/test_branch_merge_parameters.py

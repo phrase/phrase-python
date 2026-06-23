@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **branch_compare**
-> branch_compare(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
+> BranchComparison branch_compare(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
 
 Compare branches
 
@@ -45,7 +45,8 @@ with phrase_api.ApiClient(configuration) as api_client:
 
     try:
         # Compare branches
-        api_instance.branch_compare(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.branch_compare(project_id, name, x_phrase_app_otp=x_phrase_app_otp)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling BranchesApi->branch_compare: %s\n" % e)
 ```
@@ -61,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BranchComparison**](BranchComparison.md)
 
 ### Authorization
 
@@ -70,7 +71,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -12,11 +12,11 @@ Method | HTTP request | Description
 
 
 # **screenshot_create**
-> Screenshot screenshot_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, name=name, description=description, filename=filename)
+> Screenshot screenshot_create(project_id, filename, x_phrase_app_otp=x_phrase_app_otp, branch=branch, name=name, description=description)
 
 Create a screenshot
 
-Create a new screenshot.
+Creates a screenshot in a project to provide visual context for in-context translation. Attach translation keys to regions of the uploaded image so translators can see where each string appears in your UI.  This endpoint accepts a multipart/form-data request with a binary file upload, unlike most Phrase API endpoints that use JSON. Use a multipart form client or the -F flag in curl rather than a JSON body.  The screenshot name must be unique within the project (case-insensitive). When name is omitted, it is derived from the uploaded filename. The account must have the Screenshots feature enabled; requests to projects on accounts without it return 403. Creating a screenshot requires a token with the write scope and manage access to the project. 
 
 ### Example
 
@@ -36,15 +36,15 @@ with phrase_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = phrase_api.ScreenshotsApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
+    filename = None # bytearray | Image file to upload. Accepted formats are JPEG (jpg/jpeg), GIF, and PNG. Maximum file size is 10 MB. Submitting an unsupported format or a file exceeding the size limit returns 422. (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     branch = 'branch_example' # str | specify the branch to use
-    name = 'name_example' # str | Name of the screenshot
-    description = 'description_example' # str | Description of the screenshot
-    filename = None # bytearray | Screenshot file
+    name = 'name_example' # str | Display name for the screenshot. Must be unique within the project (case-insensitive). When omitted, the name is derived from the uploaded filename.
+    description = 'description_example' # str | Optional free-text description of the screenshot.
 
     try:
         # Create a screenshot
-        api_response = api_instance.screenshot_create(project_id, x_phrase_app_otp=x_phrase_app_otp, branch=branch, name=name, description=description, filename=filename)
+        api_response = api_instance.screenshot_create(project_id, filename, x_phrase_app_otp=x_phrase_app_otp, branch=branch, name=name, description=description)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ScreenshotsApi->screenshot_create: %s\n" % e)
@@ -56,11 +56,11 @@ with phrase_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
+ **filename** | **bytearray**| Image file to upload. Accepted formats are JPEG (jpg/jpeg), GIF, and PNG. Maximum file size is 10 MB. Submitting an unsupported format or a file exceeding the size limit returns 422. | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **branch** | **str**| specify the branch to use | [optional] 
- **name** | **str**| Name of the screenshot | [optional] 
- **description** | **str**| Description of the screenshot | [optional] 
- **filename** | **bytearray**| Screenshot file | [optional] 
+ **name** | **str**| Display name for the screenshot. Must be unique within the project (case-insensitive). When omitted, the name is derived from the uploaded filename. | [optional] 
+ **description** | **str**| Optional free-text description of the screenshot. | [optional] 
 
 ### Return type
 

@@ -35,22 +35,22 @@ class ScreenshotsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def screenshot_create(self, project_id, **kwargs):  # noqa: E501
+    def screenshot_create(self, project_id, filename, **kwargs):  # noqa: E501
         """Create a screenshot  # noqa: E501
 
-        Create a new screenshot.  # noqa: E501
+        Creates a screenshot in a project to provide visual context for in-context translation. Attach translation keys to regions of the uploaded image so translators can see where each string appears in your UI.  This endpoint accepts a multipart/form-data request with a binary file upload, unlike most Phrase API endpoints that use JSON. Use a multipart form client or the -F flag in curl rather than a JSON body.  The screenshot name must be unique within the project (case-insensitive). When name is omitted, it is derived from the uploaded filename. The account must have the Screenshots feature enabled; requests to projects on accounts without it return 403. Creating a screenshot requires a token with the write scope and manage access to the project.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.screenshot_create(project_id, async_req=True)
+        >>> thread = api.screenshot_create(project_id, filename, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
+        :param bytearray filename: Image file to upload. Accepted formats are JPEG (jpg/jpeg), GIF, and PNG. Maximum file size is 10 MB. Submitting an unsupported format or a file exceeding the size limit returns 422. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param str name: Name of the screenshot
-        :param str description: Description of the screenshot
-        :param bytearray filename: Screenshot file
+        :param str name: Display name for the screenshot. Must be unique within the project (case-insensitive). When omitted, the name is derived from the uploaded filename.
+        :param str description: Optional free-text description of the screenshot.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -63,24 +63,24 @@ class ScreenshotsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.screenshot_create_with_http_info(project_id, **kwargs)  # noqa: E501
+        return self.screenshot_create_with_http_info(project_id, filename, **kwargs)  # noqa: E501
 
-    def screenshot_create_with_http_info(self, project_id, **kwargs):  # noqa: E501
+    def screenshot_create_with_http_info(self, project_id, filename, **kwargs):  # noqa: E501
         """Create a screenshot  # noqa: E501
 
-        Create a new screenshot.  # noqa: E501
+        Creates a screenshot in a project to provide visual context for in-context translation. Attach translation keys to regions of the uploaded image so translators can see where each string appears in your UI.  This endpoint accepts a multipart/form-data request with a binary file upload, unlike most Phrase API endpoints that use JSON. Use a multipart form client or the -F flag in curl rather than a JSON body.  The screenshot name must be unique within the project (case-insensitive). When name is omitted, it is derived from the uploaded filename. The account must have the Screenshots feature enabled; requests to projects on accounts without it return 403. Creating a screenshot requires a token with the write scope and manage access to the project.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.screenshot_create_with_http_info(project_id, async_req=True)
+        >>> thread = api.screenshot_create_with_http_info(project_id, filename, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
+        :param bytearray filename: Image file to upload. Accepted formats are JPEG (jpg/jpeg), GIF, and PNG. Maximum file size is 10 MB. Submitting an unsupported format or a file exceeding the size limit returns 422. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
-        :param str name: Name of the screenshot
-        :param str description: Description of the screenshot
-        :param bytearray filename: Screenshot file
+        :param str name: Display name for the screenshot. Must be unique within the project (case-insensitive). When omitted, the name is derived from the uploaded filename.
+        :param str description: Optional free-text description of the screenshot.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -99,11 +99,11 @@ class ScreenshotsApi(object):
 
         all_params = [
             'project_id',
+            'filename',
             'x_phrase_app_otp',
             'branch',
             'name',
-            'description',
-            'filename'
+            'description'
         ]
         all_params.extend(
             [
@@ -126,6 +126,10 @@ class ScreenshotsApi(object):
         if self.api_client.client_side_validation and ('project_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_id` when calling `screenshot_create`")  # noqa: E501
+        # verify the required parameter 'filename' is set
+        if self.api_client.client_side_validation and ('filename' not in local_var_params or  # noqa: E501
+                                                        local_var_params['filename'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `filename` when calling `screenshot_create`")  # noqa: E501
 
         collection_formats = {}
 

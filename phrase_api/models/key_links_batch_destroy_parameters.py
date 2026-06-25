@@ -33,15 +33,17 @@ class KeyLinksBatchDestroyParameters(object):
     """
     openapi_types = {
         'child_key_ids': 'List[str]',
-        'unlink_parent': 'bool'
+        'unlink_parent': 'bool',
+        'strategy': 'str'
     }
 
     attribute_map = {
         'child_key_ids': 'child_key_ids',
-        'unlink_parent': 'unlink_parent'
+        'unlink_parent': 'unlink_parent',
+        'strategy': 'strategy'
     }
 
-    def __init__(self, child_key_ids=None, unlink_parent=False, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, child_key_ids=None, unlink_parent=False, strategy='keep_content', local_vars_configuration=None):  # noqa: E501
         """KeyLinksBatchDestroyParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -49,17 +51,20 @@ class KeyLinksBatchDestroyParameters(object):
 
         self._child_key_ids = None
         self._unlink_parent = None
+        self._strategy = None
         self.discriminator = None
 
         self.child_key_ids = child_key_ids
         if unlink_parent is not None:
             self.unlink_parent = unlink_parent
+        if strategy is not None:
+            self.strategy = strategy
 
     @property
     def child_key_ids(self):
         """Gets the child_key_ids of this KeyLinksBatchDestroyParameters.  # noqa: E501
 
-        The IDs of the child keys to unlink from the parent key.  # noqa: E501
+        Codes of the child keys to unlink. Required when unlink_parent is false or omitted. Ignored when unlink_parent is true.  # noqa: E501
 
         :return: The child_key_ids of this KeyLinksBatchDestroyParameters.  # noqa: E501
         :rtype: List[str]
@@ -70,7 +75,7 @@ class KeyLinksBatchDestroyParameters(object):
     def child_key_ids(self, child_key_ids):
         """Sets the child_key_ids of this KeyLinksBatchDestroyParameters.
 
-        The IDs of the child keys to unlink from the parent key.  # noqa: E501
+        Codes of the child keys to unlink. Required when unlink_parent is false or omitted. Ignored when unlink_parent is true.  # noqa: E501
 
         :param child_key_ids: The child_key_ids of this KeyLinksBatchDestroyParameters.  # noqa: E501
         :type: List[str]
@@ -84,7 +89,7 @@ class KeyLinksBatchDestroyParameters(object):
     def unlink_parent(self):
         """Gets the unlink_parent of this KeyLinksBatchDestroyParameters.  # noqa: E501
 
-        Whether to unlink the parent key as well and unmark it as linked-key.  # noqa: E501
+        When true, dissolves the entire linked-key group by unlinking all children and removing the group. The child_key_ids field is ignored when this is set to true.  # noqa: E501
 
         :return: The unlink_parent of this KeyLinksBatchDestroyParameters.  # noqa: E501
         :rtype: bool
@@ -95,13 +100,42 @@ class KeyLinksBatchDestroyParameters(object):
     def unlink_parent(self, unlink_parent):
         """Sets the unlink_parent of this KeyLinksBatchDestroyParameters.
 
-        Whether to unlink the parent key as well and unmark it as linked-key.  # noqa: E501
+        When true, dissolves the entire linked-key group by unlinking all children and removing the group. The child_key_ids field is ignored when this is set to true.  # noqa: E501
 
         :param unlink_parent: The unlink_parent of this KeyLinksBatchDestroyParameters.  # noqa: E501
         :type: bool
         """
 
         self._unlink_parent = unlink_parent
+
+    @property
+    def strategy(self):
+        """Gets the strategy of this KeyLinksBatchDestroyParameters.  # noqa: E501
+
+        Controls what happens to child key translation content after unlinking. keep_content (default) copies the parent translation into each child; remove_content clears each child translation.  # noqa: E501
+
+        :return: The strategy of this KeyLinksBatchDestroyParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._strategy
+
+    @strategy.setter
+    def strategy(self, strategy):
+        """Sets the strategy of this KeyLinksBatchDestroyParameters.
+
+        Controls what happens to child key translation content after unlinking. keep_content (default) copies the parent translation into each child; remove_content clears each child translation.  # noqa: E501
+
+        :param strategy: The strategy of this KeyLinksBatchDestroyParameters.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["keep_content", "remove_content"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and strategy not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `strategy` ({0}), must be one of {1}"  # noqa: E501
+                .format(strategy, allowed_values)
+            )
+
+        self._strategy = strategy
 
     def to_dict(self):
         """Returns the model properties as a dict"""

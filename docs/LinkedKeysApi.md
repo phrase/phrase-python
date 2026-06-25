@@ -11,11 +11,11 @@ Method | HTTP request | Description
 
 
 # **key_links_batch_destroy**
-> key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> KeyLink key_links_batch_destroy(project_id, id, x_phrase_app_otp=x_phrase_app_otp, key_links_batch_destroy_parameters=key_links_batch_destroy_parameters)
 
 Batch unlink child keys from a parent key
 
-Unlinks multiple child keys from a given parent key in a single operation.
+Removes one or more child keys from a parent key's linked-key group, or dissolves the entire group by setting unlink_parent to true.  Use this when you need to detach specific child keys from a shared translation source, or to fully break apart a linked-key group so each key manages its own translations independently. When child keys are unlinked, their translations are updated with a copy of the parent's current content (strategy keep_content, the default) or cleared (strategy remove_content).  This operation is only available on main projects. It returns 422 when a child key in `child_key_ids` is not currently linked to the parent, or when a translation update fails while unlinking. 
 
 ### Example
 
@@ -36,12 +36,13 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.LinkedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | Parent Translation Key ID (required)
-    key_links_batch_destroy_parameters = phrase_api.KeyLinksBatchDestroyParameters() # KeyLinksBatchDestroyParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    key_links_batch_destroy_parameters = phrase_api.KeyLinksBatchDestroyParameters() # KeyLinksBatchDestroyParameters | 
 
     try:
         # Batch unlink child keys from a parent key
-        api_instance.key_links_batch_destroy(project_id, id, key_links_batch_destroy_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.key_links_batch_destroy(project_id, id, x_phrase_app_otp=x_phrase_app_otp, key_links_batch_destroy_parameters=key_links_batch_destroy_parameters)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling LinkedKeysApi->key_links_batch_destroy: %s\n" % e)
 ```
@@ -53,12 +54,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **id** | **str**| Parent Translation Key ID | 
- **key_links_batch_destroy_parameters** | [**KeyLinksBatchDestroyParameters**](KeyLinksBatchDestroyParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **key_links_batch_destroy_parameters** | [**KeyLinksBatchDestroyParameters**](KeyLinksBatchDestroyParameters.md)|  | [optional] 
 
 ### Return type
 
-void (empty response body)
+[**KeyLink**](KeyLink.md)
 
 ### Authorization
 
@@ -72,7 +73,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**200** | Updated linked-key group reference after the unlink operation. |  -  |
 **400** | Bad request. The request could not be parsed or a parameter failed validation. Verify the request body, the content type, and the parameter types, then retry. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **401** | Unauthorized. Authentication failed because the access token is missing, expired, or invalid. Supply a valid access token and retry. |  -  |
 **403** | Forbidden. The credentials are valid but not permitted for this request: the access token may lack the required scope, the user may lack permission on the resource, or the account plan may not include the feature. Use a token with the required scope on an account and user that hold the necessary permissions. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

@@ -37,12 +37,13 @@ class TestKeyLinksBatchDestroyParameters(unittest.TestCase):
         """
         if include_optional :
             return KeyLinksBatchDestroyParameters(
-                child_key_ids = ["child_key_id1","child_key_id2"], 
-                unlink_parent = True
+                child_key_ids = ["feature.subtitle","nav.home"], 
+                unlink_parent = True, 
+                strategy = 'keep_content'
             )
         else :
             return KeyLinksBatchDestroyParameters(
-                child_key_ids = ["child_key_id1","child_key_id2"],
+                child_key_ids = ["feature.subtitle","nav.home"],
         )
         """
 

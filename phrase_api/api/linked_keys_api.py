@@ -320,7 +320,7 @@ class LinkedKeysApi(object):
     def key_links_destroy(self, project_id, id, child_key_id, **kwargs):  # noqa: E501
         """Unlink a child key from a parent key  # noqa: E501
 
-        Unlinks a single child key from a given parent key.  # noqa: E501
+        Removes a single child key from a parent key's link group. A link group is the relationship model that keeps child keys synchronized with a parent: while linked, a child key's translations are derived from the parent's content. When you call this endpoint, the child key leaves the group and becomes independent — its existing translations are updated with the parent's current content and then marked unverified, signalling that reviewers should confirm the content is still appropriate for the child's context.  Use this endpoint when you need to detach one specific child key while keeping other children linked. To detach multiple children at once, use the batch unlink endpoint. This operation is only available on main projects.  It returns 422 when the child key is not currently linked to the specified parent key, or when a translation update fails during the unlink process.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_links_destroy(project_id, id, child_key_id, async_req=True)
@@ -329,7 +329,7 @@ class LinkedKeysApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str id: Parent Translation Key ID (required)
-        :param str child_key_id: The ID of the child key to unlink. (required)
+        :param str child_key_id: The ID of the child translation key to unlink from the parent. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -348,7 +348,7 @@ class LinkedKeysApi(object):
     def key_links_destroy_with_http_info(self, project_id, id, child_key_id, **kwargs):  # noqa: E501
         """Unlink a child key from a parent key  # noqa: E501
 
-        Unlinks a single child key from a given parent key.  # noqa: E501
+        Removes a single child key from a parent key's link group. A link group is the relationship model that keeps child keys synchronized with a parent: while linked, a child key's translations are derived from the parent's content. When you call this endpoint, the child key leaves the group and becomes independent — its existing translations are updated with the parent's current content and then marked unverified, signalling that reviewers should confirm the content is still appropriate for the child's context.  Use this endpoint when you need to detach one specific child key while keeping other children linked. To detach multiple children at once, use the batch unlink endpoint. This operation is only available on main projects.  It returns 422 when the child key is not currently linked to the specified parent key, or when a translation update fails during the unlink process.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_links_destroy_with_http_info(project_id, id, child_key_id, async_req=True)
@@ -357,7 +357,7 @@ class LinkedKeysApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param str id: Parent Translation Key ID (required)
-        :param str child_key_id: The ID of the child key to unlink. (required)
+        :param str child_key_id: The ID of the child translation key to unlink from the parent. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param _return_http_data_only: response data without head status code
                                        and headers

@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 Unlink a child key from a parent key
 
-Unlinks a single child key from a given parent key.
+Removes a single child key from a parent key's link group. A link group is the relationship model that keeps child keys synchronized with a parent: while linked, a child key's translations are derived from the parent's content. When you call this endpoint, the child key leaves the group and becomes independent — its existing translations are updated with the parent's current content and then marked unverified, signalling that reviewers should confirm the content is still appropriate for the child's context.  Use this endpoint when you need to detach one specific child key while keeping other children linked. To detach multiple children at once, use the batch unlink endpoint. This operation is only available on main projects.  It returns 422 when the child key is not currently linked to the specified parent key, or when a translation update fails during the unlink process. 
 
 ### Example
 
@@ -181,7 +181,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.LinkedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | Parent Translation Key ID (required)
-    child_key_id = 'child_key_id_example' # str | The ID of the child key to unlink. (required)
+    child_key_id = '1234abcd1234cdef1234abcd1234cdef' # str | The ID of the child translation key to unlink from the parent. (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **project_id** | **str**| Project ID | 
  **id** | **str**| Parent Translation Key ID | 
- **child_key_id** | **str**| The ID of the child key to unlink. | 
+ **child_key_id** | **str**| The ID of the child translation key to unlink from the parent. | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
 
 ### Return type
@@ -217,7 +217,7 @@ void (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | OK |  -  |
+**200** | The child key was successfully unlinked from the parent key. The response body is empty. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **400** | Bad request. The request could not be parsed or a parameter failed validation. Verify the request body, the content type, and the parameter types, then retry. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **401** | Unauthorized. Authentication failed because the access token is missing, expired, or invalid. Supply a valid access token and retry. |  -  |
 **403** | Forbidden. The credentials are valid but not permitted for this request: the access token may lack the required scope, the user may lack permission on the resource, or the account plan may not include the feature. Use a token with the required scope on an account and user that hold the necessary permissions. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

@@ -54,6 +54,8 @@ class TestLocaleDownloadCreateParameters(unittest.TestCase):
                 fallback_for_unverified_translations = False, 
                 source_locale_id = 'abcd1234abcd1234abcd1234abcd1234', 
                 custom_metadata_filters = None, 
+                translation_key_prefix = 'prefix_', 
+                filter_by_prefix = True, 
                 updated_since = '2023-01-01T00:00:00Z'
             )
         else :

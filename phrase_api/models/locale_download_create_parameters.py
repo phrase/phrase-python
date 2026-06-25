@@ -49,6 +49,8 @@ class LocaleDownloadCreateParameters(object):
         'fallback_for_unverified_translations': 'bool',
         'source_locale_id': 'str',
         'custom_metadata_filters': 'object',
+        'translation_key_prefix': 'str',
+        'filter_by_prefix': 'bool',
         'updated_since': 'str'
     }
 
@@ -70,10 +72,12 @@ class LocaleDownloadCreateParameters(object):
         'fallback_for_unverified_translations': 'fallback_for_unverified_translations',
         'source_locale_id': 'source_locale_id',
         'custom_metadata_filters': 'custom_metadata_filters',
+        'translation_key_prefix': 'translation_key_prefix',
+        'filter_by_prefix': 'filter_by_prefix',
         'updated_since': 'updated_since'
     }
 
-    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, use_locale_fallback=None, fallback_for_unverified_translations=None, source_locale_id=None, custom_metadata_filters=None, updated_since=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, file_format=None, branch=None, tags=None, include_empty_translations=None, exclude_empty_zero_forms=None, include_translated_keys=None, keep_notranslate_tags=None, format_options=None, encoding=None, include_unverified_translations=None, use_last_reviewed_version=None, locale_ids=None, fallback_locale_id=None, use_locale_fallback=None, fallback_for_unverified_translations=None, source_locale_id=None, custom_metadata_filters=None, translation_key_prefix=None, filter_by_prefix=None, updated_since=None, local_vars_configuration=None):  # noqa: E501
         """LocaleDownloadCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -96,6 +100,8 @@ class LocaleDownloadCreateParameters(object):
         self._fallback_for_unverified_translations = None
         self._source_locale_id = None
         self._custom_metadata_filters = None
+        self._translation_key_prefix = None
+        self._filter_by_prefix = None
         self._updated_since = None
         self.discriminator = None
 
@@ -132,6 +138,10 @@ class LocaleDownloadCreateParameters(object):
             self.source_locale_id = source_locale_id
         if custom_metadata_filters is not None:
             self.custom_metadata_filters = custom_metadata_filters
+        if translation_key_prefix is not None:
+            self.translation_key_prefix = translation_key_prefix
+        if filter_by_prefix is not None:
+            self.filter_by_prefix = filter_by_prefix
         if updated_since is not None:
             self.updated_since = updated_since
 
@@ -527,6 +537,52 @@ class LocaleDownloadCreateParameters(object):
         """
 
         self._custom_metadata_filters = custom_metadata_filters
+
+    @property
+    def translation_key_prefix(self):
+        """Gets the translation_key_prefix of this LocaleDownloadCreateParameters.  # noqa: E501
+
+        Download all translation keys, and remove the specified prefix where possible. Warning: this may create duplicate key names if other keys share the same name after the prefix is removed.  # noqa: E501
+
+        :return: The translation_key_prefix of this LocaleDownloadCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._translation_key_prefix
+
+    @translation_key_prefix.setter
+    def translation_key_prefix(self, translation_key_prefix):
+        """Sets the translation_key_prefix of this LocaleDownloadCreateParameters.
+
+        Download all translation keys, and remove the specified prefix where possible. Warning: this may create duplicate key names if other keys share the same name after the prefix is removed.  # noqa: E501
+
+        :param translation_key_prefix: The translation_key_prefix of this LocaleDownloadCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._translation_key_prefix = translation_key_prefix
+
+    @property
+    def filter_by_prefix(self):
+        """Gets the filter_by_prefix of this LocaleDownloadCreateParameters.  # noqa: E501
+
+        Only download translation keys containing the prefix specified by `translation_key_prefix`, and remove that prefix from the generated file. Requires `translation_key_prefix` to be set.  # noqa: E501
+
+        :return: The filter_by_prefix of this LocaleDownloadCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._filter_by_prefix
+
+    @filter_by_prefix.setter
+    def filter_by_prefix(self, filter_by_prefix):
+        """Sets the filter_by_prefix of this LocaleDownloadCreateParameters.
+
+        Only download translation keys containing the prefix specified by `translation_key_prefix`, and remove that prefix from the generated file. Requires `translation_key_prefix` to be set.  # noqa: E501
+
+        :param filter_by_prefix: The filter_by_prefix of this LocaleDownloadCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._filter_by_prefix = filter_by_prefix
 
     @property
     def updated_since(self):

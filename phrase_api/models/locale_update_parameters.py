@@ -42,7 +42,8 @@ class LocaleUpdateParameters(object):
         'fallback_locale_id': 'str',
         'unverify_new_translations': 'bool',
         'unverify_updated_translations': 'bool',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'language_ai_profile': 'str'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class LocaleUpdateParameters(object):
         'fallback_locale_id': 'fallback_locale_id',
         'unverify_new_translations': 'unverify_new_translations',
         'unverify_updated_translations': 'unverify_updated_translations',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'language_ai_profile': 'language_ai_profile'
     }
 
-    def __init__(self, branch=None, name=None, code=None, default=None, main=None, rtl=None, source_locale_id=None, fallback_locale_id=None, unverify_new_translations=None, unverify_updated_translations=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, code=None, default=None, main=None, rtl=None, source_locale_id=None, fallback_locale_id=None, unverify_new_translations=None, unverify_updated_translations=None, autotranslate=None, language_ai_profile=None, local_vars_configuration=None):  # noqa: E501
         """LocaleUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -76,6 +78,7 @@ class LocaleUpdateParameters(object):
         self._unverify_new_translations = None
         self._unverify_updated_translations = None
         self._autotranslate = None
+        self._language_ai_profile = None
         self.discriminator = None
 
         if branch is not None:
@@ -100,6 +103,8 @@ class LocaleUpdateParameters(object):
             self.unverify_updated_translations = unverify_updated_translations
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if language_ai_profile is not None:
+            self.language_ai_profile = language_ai_profile
 
     @property
     def branch(self):
@@ -353,6 +358,29 @@ class LocaleUpdateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def language_ai_profile(self):
+        """Gets the language_ai_profile of this LocaleUpdateParameters.  # noqa: E501
+
+        Identifier of the Language AI profile to use for this locale.  # noqa: E501
+
+        :return: The language_ai_profile of this LocaleUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._language_ai_profile
+
+    @language_ai_profile.setter
+    def language_ai_profile(self, language_ai_profile):
+        """Sets the language_ai_profile of this LocaleUpdateParameters.
+
+        Identifier of the Language AI profile to use for this locale.  # noqa: E501
+
+        :param language_ai_profile: The language_ai_profile of this LocaleUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._language_ai_profile = language_ai_profile
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **unverify_new_translations** | **bool** | Indicates that new translations for this locale should be marked as unverified. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature. | [optional] 
 **unverify_updated_translations** | **bool** | Indicates that updated translations for this locale should be marked as unverified. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature. | [optional] 
 **autotranslate** | **bool** | If set, translations for this locale will be fetched automatically, right after creation. | [optional] 
+**language_ai_profile** | **str** | Identifier of the Language AI profile to use for this locale. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

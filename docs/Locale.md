@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **ordinal_plural_forms** | **List[str]** |  | [optional] 
 **source_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
 **fallback_locale** | [**LocalePreview**](LocalePreview.md) |  | [optional] 
+**language_ai_profile** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

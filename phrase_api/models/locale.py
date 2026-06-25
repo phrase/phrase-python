@@ -42,6 +42,7 @@ class Locale(object):
         'ordinal_plural_forms': 'List[str]',
         'source_locale': 'LocalePreview',
         'fallback_locale': 'LocalePreview',
+        'language_ai_profile': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -57,11 +58,12 @@ class Locale(object):
         'ordinal_plural_forms': 'ordinal_plural_forms',
         'source_locale': 'source_locale',
         'fallback_locale': 'fallback_locale',
+        'language_ai_profile': 'language_ai_profile',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, ordinal_plural_forms=None, source_locale=None, fallback_locale=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, ordinal_plural_forms=None, source_locale=None, fallback_locale=None, language_ai_profile=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Locale - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -77,6 +79,7 @@ class Locale(object):
         self._ordinal_plural_forms = None
         self._source_locale = None
         self._fallback_locale = None
+        self._language_ai_profile = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -101,6 +104,8 @@ class Locale(object):
             self.source_locale = source_locale
         if fallback_locale is not None:
             self.fallback_locale = fallback_locale
+        if language_ai_profile is not None:
+            self.language_ai_profile = language_ai_profile
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -315,6 +320,27 @@ class Locale(object):
         """
 
         self._fallback_locale = fallback_locale
+
+    @property
+    def language_ai_profile(self):
+        """Gets the language_ai_profile of this Locale.  # noqa: E501
+
+
+        :return: The language_ai_profile of this Locale.  # noqa: E501
+        :rtype: str
+        """
+        return self._language_ai_profile
+
+    @language_ai_profile.setter
+    def language_ai_profile(self, language_ai_profile):
+        """Sets the language_ai_profile of this Locale.
+
+
+        :param language_ai_profile: The language_ai_profile of this Locale.  # noqa: E501
+        :type: str
+        """
+
+        self._language_ai_profile = language_ai_profile
 
     @property
     def created_at(self):

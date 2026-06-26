@@ -37,11 +37,11 @@ class TestKeyLinksCreateParameters(unittest.TestCase):
         """
         if include_optional :
             return KeyLinksCreateParameters(
-                child_key_ids = ["child_key_id1","child_key_id2"]
+                child_key_ids = ["ijkl9012mnop3456ijkl9012mnop3456","abcd1234efgh5678abcd1234efgh5678"]
             )
         else :
             return KeyLinksCreateParameters(
-                child_key_ids = ["child_key_id1","child_key_id2"],
+                child_key_ids = ["ijkl9012mnop3456ijkl9012mnop3456","abcd1234efgh5678abcd1234efgh5678"],
         )
         """
 

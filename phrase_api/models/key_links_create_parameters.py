@@ -54,7 +54,7 @@ class KeyLinksCreateParameters(object):
     def child_key_ids(self):
         """Gets the child_key_ids of this KeyLinksCreateParameters.  # noqa: E501
 
-        The IDs of the child keys to link to the parent key. Can be left empty, to only mark the given translation-key as parent  # noqa: E501
+        Codes of the keys to link as children. Pass an empty array to mark the parent key without linking any children.  # noqa: E501
 
         :return: The child_key_ids of this KeyLinksCreateParameters.  # noqa: E501
         :rtype: List[str]
@@ -65,7 +65,7 @@ class KeyLinksCreateParameters(object):
     def child_key_ids(self, child_key_ids):
         """Sets the child_key_ids of this KeyLinksCreateParameters.
 
-        The IDs of the child keys to link to the parent key. Can be left empty, to only mark the given translation-key as parent  # noqa: E501
+        Codes of the keys to link as children. Pass an empty array to mark the parent key without linking any children.  # noqa: E501
 
         :param child_key_ids: The child_key_ids of this KeyLinksCreateParameters.  # noqa: E501
         :type: List[str]

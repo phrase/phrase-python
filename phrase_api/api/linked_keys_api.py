@@ -175,7 +175,7 @@ class LinkedKeysApi(object):
     def key_links_create(self, project_id, id, key_links_create_parameters, **kwargs):  # noqa: E501
         """Link child keys to a parent key  # noqa: E501
 
-        Creates links between a given parent key and one or more child keys.  # noqa: E501
+        Designates a translation key as a parent and links one or more child keys to it. Once linked, child keys receive a special reference marker as their translation content, signalling that their translations are derived from the parent. Use this when you want to group related keys — for example, a short label and its long-form variant — so translators see them in context together.  Pass an empty child_key_ids array to mark the key as a parent without linking any children yet. Both the parent key and every child key must belong to the main project; branch keys cannot participate in key links. A child key can have at most one parent at a time; attempting to link a child that already has a parent returns a 422 error with code CHILD_IS_ALREADY_LINKED. Parent and child key plurality must match — linking a plural child to a non-plural parent (or vice versa) also returns a 422.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_links_create(project_id, id, key_links_create_parameters, async_req=True)
@@ -203,7 +203,7 @@ class LinkedKeysApi(object):
     def key_links_create_with_http_info(self, project_id, id, key_links_create_parameters, **kwargs):  # noqa: E501
         """Link child keys to a parent key  # noqa: E501
 
-        Creates links between a given parent key and one or more child keys.  # noqa: E501
+        Designates a translation key as a parent and links one or more child keys to it. Once linked, child keys receive a special reference marker as their translation content, signalling that their translations are derived from the parent. Use this when you want to group related keys — for example, a short label and its long-form variant — so translators see them in context together.  Pass an empty child_key_ids array to mark the key as a parent without linking any children yet. Both the parent key and every child key must belong to the main project; branch keys cannot participate in key links. A child key can have at most one parent at a time; attempting to link a child that already has a parent returns a 422 error with code CHILD_IS_ALREADY_LINKED. Parent and child key plurality must match — linking a plural child to a non-plural parent (or vice versa) also returns a 422.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_links_create_with_http_info(project_id, id, key_links_create_parameters, async_req=True)

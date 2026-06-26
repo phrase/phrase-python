@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 Link child keys to a parent key
 
-Creates links between a given parent key and one or more child keys.
+Designates a translation key as a parent and links one or more child keys to it. Once linked, child keys receive a special reference marker as their translation content, signalling that their translations are derived from the parent. Use this when you want to group related keys — for example, a short label and its long-form variant — so translators see them in context together.  Pass an empty child_key_ids array to mark the key as a parent without linking any children yet. Both the parent key and every child key must belong to the main project; branch keys cannot participate in key links. A child key can have at most one parent at a time; attempting to link a child that already has a parent returns a 422 error with code CHILD_IS_ALREADY_LINKED. Parent and child key plurality must match — linking a plural child to a non-plural parent (or vice versa) also returns a 422. 
 
 ### Example
 
@@ -109,7 +109,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.LinkedKeysApi(api_client)
     project_id = 'project_id_example' # str | Project ID (required)
     id = 'id_example' # str | Parent Translation Key ID (required)
-    key_links_create_parameters = phrase_api.KeyLinksCreateParameters() # KeyLinksCreateParameters |  (required)
+    key_links_create_parameters = {"child_key_ids":["ijkl9012mnop3456ijkl9012mnop3456","abcd1234efgh5678abcd1234efgh5678"]} # KeyLinksCreateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
 
     try:
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Created |  -  |
+**201** | Key link reference created. |  -  |
 **400** | Bad request. The request could not be parsed or a parameter failed validation. Verify the request body, the content type, and the parameter types, then retry. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |
 **401** | Unauthorized. Authentication failed because the access token is missing, expired, or invalid. Supply a valid access token and retry. |  -  |
 **403** | Forbidden. The credentials are valid but not permitted for this request: the access token may lack the required scope, the user may lack permission on the resource, or the account plan may not include the feature. Use a token with the required scope on an account and user that hold the necessary permissions. |  * X-Rate-Limit-Limit -  <br>  * X-Rate-Limit-Remaining -  <br>  * X-Rate-Limit-Reset -  <br>  |

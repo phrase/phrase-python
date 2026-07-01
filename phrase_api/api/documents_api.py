@@ -166,7 +166,7 @@ class DocumentsApi(object):
     def documents_list(self, project_id, **kwargs):  # noqa: E501
         """List documents  # noqa: E501
 
-        List all documents the current user has access to.  # noqa: E501
+        Returns all documents in a project that the authenticated user has read access to. A Document is a source file — an HTML or DOCX file — that has been uploaded to Phrase Strings and whose content is segmented into translation keys for localization.  Use this endpoint to enumerate documents before downloading, previewing, or triggering translation workflows for individual files.  The q parameter performs a prefix match on the document name (case-insensitive). For example, passing q=invoice returns documents whose names begin with \"invoice\" but not documents containing \"invoice\" elsewhere in the name.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.documents_list(project_id, async_req=True)
@@ -177,7 +177,7 @@ class DocumentsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
-        :param str q: Search query. Filters documents by name (case-insensitive substring match).
+        :param str q: Filter documents by name prefix. Returns documents whose name starts with the given value (case-insensitive).
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -195,7 +195,7 @@ class DocumentsApi(object):
     def documents_list_with_http_info(self, project_id, **kwargs):  # noqa: E501
         """List documents  # noqa: E501
 
-        List all documents the current user has access to.  # noqa: E501
+        Returns all documents in a project that the authenticated user has read access to. A Document is a source file — an HTML or DOCX file — that has been uploaded to Phrase Strings and whose content is segmented into translation keys for localization.  Use this endpoint to enumerate documents before downloading, previewing, or triggering translation workflows for individual files.  The q parameter performs a prefix match on the document name (case-insensitive). For example, passing q=invoice returns documents whose names begin with \"invoice\" but not documents containing \"invoice\" elsewhere in the name.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.documents_list_with_http_info(project_id, async_req=True)
@@ -206,7 +206,7 @@ class DocumentsApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
-        :param str q: Search query. Filters documents by name (case-insensitive substring match).
+        :param str q: Filter documents by name prefix. Returns documents whose name starts with the given value (case-insensitive).
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

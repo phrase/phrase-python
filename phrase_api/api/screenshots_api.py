@@ -185,7 +185,7 @@ class ScreenshotsApi(object):
     def screenshot_delete(self, project_id, id, **kwargs):  # noqa: E501
         """Delete a screenshot  # noqa: E501
 
-        Delete an existing screenshot.  # noqa: E501
+        Permanently removes a screenshot and all its associated markers from the project. Use this when you need to fully remove a screenshot that is no longer relevant — for example, after a UI redesign renders the captured screen obsolete. This is a hard delete: the screenshot record and every key-to-region marker linked to it are destroyed together and cannot be recovered.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.screenshot_delete(project_id, id, async_req=True)
@@ -213,7 +213,7 @@ class ScreenshotsApi(object):
     def screenshot_delete_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
         """Delete a screenshot  # noqa: E501
 
-        Delete an existing screenshot.  # noqa: E501
+        Permanently removes a screenshot and all its associated markers from the project. Use this when you need to fully remove a screenshot that is no longer relevant — for example, after a UI redesign renders the captured screen obsolete. This is a hard delete: the screenshot record and every key-to-region marker linked to it are destroyed together and cannot be recovered.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.screenshot_delete_with_http_info(project_id, id, async_req=True)

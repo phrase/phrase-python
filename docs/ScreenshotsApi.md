@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 Delete a screenshot
 
-Delete an existing screenshot.
+Permanently removes a screenshot and all its associated markers from the project. Use this when you need to fully remove a screenshot that is no longer relevant — for example, after a UI redesign renders the captured screen obsolete. This is a hard delete: the screenshot record and every key-to-region marker linked to it are destroyed together and cannot be recovered. 
 
 ### Example
 

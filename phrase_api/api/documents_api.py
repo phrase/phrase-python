@@ -38,7 +38,7 @@ class DocumentsApi(object):
     def document_delete(self, project_id, id, **kwargs):  # noqa: E501
         """Delete document  # noqa: E501
 
-        Delete an existing document.  # noqa: E501
+        Permanently deletes a document and all of its associated translation segments from the project. Use this when you want to remove a document that is no longer needed; the deletion cannot be reversed and all associated segments will be lost.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.document_delete(project_id, id, async_req=True)
@@ -65,7 +65,7 @@ class DocumentsApi(object):
     def document_delete_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
         """Delete document  # noqa: E501
 
-        Delete an existing document.  # noqa: E501
+        Permanently deletes a document and all of its associated translation segments from the project. Use this when you want to remove a document that is no longer needed; the deletion cannot be reversed and all associated segments will be lost.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.document_delete_with_http_info(project_id, id, async_req=True)

@@ -80,7 +80,7 @@ class IcuSkeletonParameters(object):
     def content(self):
         """Gets the content of this IcuSkeletonParameters.  # noqa: E501
 
-        Source content to derive skeletons from. Mutually exclusive with `id`; exactly one of the two must be provided.   # noqa: E501
+        Source ICU message string to derive skeletons from. Mutually exclusive with `id`; exactly one of the two must be provided.   # noqa: E501
 
         :return: The content of this IcuSkeletonParameters.  # noqa: E501
         :rtype: str
@@ -91,7 +91,7 @@ class IcuSkeletonParameters(object):
     def content(self, content):
         """Sets the content of this IcuSkeletonParameters.
 
-        Source content to derive skeletons from. Mutually exclusive with `id`; exactly one of the two must be provided.   # noqa: E501
+        Source ICU message string to derive skeletons from. Mutually exclusive with `id`; exactly one of the two must be provided.   # noqa: E501
 
         :param content: The content of this IcuSkeletonParameters.  # noqa: E501
         :type: str
@@ -103,7 +103,7 @@ class IcuSkeletonParameters(object):
     def id(self):
         """Gets the id of this IcuSkeletonParameters.  # noqa: E501
 
-        Translation code to source content from. Mutually exclusive with `content`; exactly one of the two must be provided.   # noqa: E501
+        Code of an existing translation to source content from. Mutually exclusive with `content`; exactly one of the two must be provided. Returns 404 when the translation does not exist.   # noqa: E501
 
         :return: The id of this IcuSkeletonParameters.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class IcuSkeletonParameters(object):
     def id(self, id):
         """Sets the id of this IcuSkeletonParameters.
 
-        Translation code to source content from. Mutually exclusive with `content`; exactly one of the two must be provided.   # noqa: E501
+        Code of an existing translation to source content from. Mutually exclusive with `content`; exactly one of the two must be provided. Returns 404 when the translation does not exist.   # noqa: E501
 
         :param id: The id of this IcuSkeletonParameters.  # noqa: E501
         :type: str
@@ -126,7 +126,7 @@ class IcuSkeletonParameters(object):
     def locale_codes(self):
         """Gets the locale_codes of this IcuSkeletonParameters.  # noqa: E501
 
-        Locale codes  # noqa: E501
+        Locale codes for which to generate skeletons. The pluralization rules of each locale determine which plural forms appear in the output.   # noqa: E501
 
         :return: The locale_codes of this IcuSkeletonParameters.  # noqa: E501
         :rtype: List[str]
@@ -137,7 +137,7 @@ class IcuSkeletonParameters(object):
     def locale_codes(self, locale_codes):
         """Sets the locale_codes of this IcuSkeletonParameters.
 
-        Locale codes  # noqa: E501
+        Locale codes for which to generate skeletons. The pluralization rules of each locale determine which plural forms appear in the output.   # noqa: E501
 
         :param locale_codes: The locale_codes of this IcuSkeletonParameters.  # noqa: E501
         :type: List[str]
@@ -149,7 +149,7 @@ class IcuSkeletonParameters(object):
     def keep_content(self):
         """Gets the keep_content of this IcuSkeletonParameters.  # noqa: E501
 
-        Keep the content and add missing plural forms for each locale  # noqa: E501
+        When true, preserves the existing translation text in each plural form and adds any missing forms for the locale rather than stripping all literal content.  # noqa: E501
 
         :return: The keep_content of this IcuSkeletonParameters.  # noqa: E501
         :rtype: bool
@@ -160,7 +160,7 @@ class IcuSkeletonParameters(object):
     def keep_content(self, keep_content):
         """Sets the keep_content of this IcuSkeletonParameters.
 
-        Keep the content and add missing plural forms for each locale  # noqa: E501
+        When true, preserves the existing translation text in each plural form and adds any missing forms for the locale rather than stripping all literal content.  # noqa: E501
 
         :param keep_content: The keep_content of this IcuSkeletonParameters.  # noqa: E501
         :type: bool
@@ -172,7 +172,7 @@ class IcuSkeletonParameters(object):
     def zero_form_enabled(self):
         """Gets the zero_form_enabled of this IcuSkeletonParameters.  # noqa: E501
 
-        Indicates whether the zero form should be included or excluded in the returned skeletons  # noqa: E501
+        When true, includes the zero plural form in the generated skeleton for locales that support it.  # noqa: E501
 
         :return: The zero_form_enabled of this IcuSkeletonParameters.  # noqa: E501
         :rtype: bool
@@ -183,7 +183,7 @@ class IcuSkeletonParameters(object):
     def zero_form_enabled(self, zero_form_enabled):
         """Sets the zero_form_enabled of this IcuSkeletonParameters.
 
-        Indicates whether the zero form should be included or excluded in the returned skeletons  # noqa: E501
+        When true, includes the zero plural form in the generated skeleton for locales that support it.  # noqa: E501
 
         :param zero_form_enabled: The zero_form_enabled of this IcuSkeletonParameters.  # noqa: E501
         :type: bool
@@ -195,7 +195,7 @@ class IcuSkeletonParameters(object):
     def cldr_version(self):
         """Gets the cldr_version of this IcuSkeletonParameters.  # noqa: E501
 
-        Strings supports two CLDR variants, when it comes to pluralization rules. \\ You can choose which one you want to use when constructing the skeletons. Possible values \\ are `legacy` and `cldr_41`. Default value is `legacy`.  # noqa: E501
+        Pluralization rule set to apply when constructing skeletons. Accepted values are `legacy` and `cldr_41`. Defaults to `legacy` when omitted.  # noqa: E501
 
         :return: The cldr_version of this IcuSkeletonParameters.  # noqa: E501
         :rtype: str
@@ -206,11 +206,17 @@ class IcuSkeletonParameters(object):
     def cldr_version(self, cldr_version):
         """Sets the cldr_version of this IcuSkeletonParameters.
 
-        Strings supports two CLDR variants, when it comes to pluralization rules. \\ You can choose which one you want to use when constructing the skeletons. Possible values \\ are `legacy` and `cldr_41`. Default value is `legacy`.  # noqa: E501
+        Pluralization rule set to apply when constructing skeletons. Accepted values are `legacy` and `cldr_41`. Defaults to `legacy` when omitted.  # noqa: E501
 
         :param cldr_version: The cldr_version of this IcuSkeletonParameters.  # noqa: E501
         :type: str
         """
+        allowed_values = ["legacy", "cldr_41"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and cldr_version not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `cldr_version` ({0}), must be one of {1}"  # noqa: E501
+                .format(cldr_version, allowed_values)
+            )
 
         self._cldr_version = cldr_version
 

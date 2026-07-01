@@ -82,6 +82,7 @@ docs/GlossaryTermsApi.md
 docs/GlossaryUpdateParameters.md
 docs/ICUApi.md
 docs/Icu.md
+docs/IcuSkeletonError.md
 docs/IcuSkeletonParameters.md
 docs/Invitation.md
 docs/InvitationCreateParameters.md
@@ -418,6 +419,7 @@ phrase_api/models/glossary_term_translation_update_parameters.py
 phrase_api/models/glossary_term_update_parameters.py
 phrase_api/models/glossary_update_parameters.py
 phrase_api/models/icu.py
+phrase_api/models/icu_skeleton_error.py
 phrase_api/models/icu_skeleton_parameters.py
 phrase_api/models/invitation.py
 phrase_api/models/invitation_create_parameters.py
@@ -674,6 +676,7 @@ test/test_glossary_terms_api.py
 test/test_glossary_update_parameters.py
 test/test_icu.py
 test/test_icu_api.py
+test/test_icu_skeleton_error.py
 test/test_icu_skeleton_parameters.py
 test/test_invitation.py
 test/test_invitation_create_parameters.py

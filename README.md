@@ -497,6 +497,7 @@ Class | Method | HTTP request | Description
  - [GlossaryTermUpdateParameters](docs/GlossaryTermUpdateParameters.md)
  - [GlossaryUpdateParameters](docs/GlossaryUpdateParameters.md)
  - [Icu](docs/Icu.md)
+ - [IcuSkeletonError](docs/IcuSkeletonError.md)
  - [IcuSkeletonParameters](docs/IcuSkeletonParameters.md)
  - [Invitation](docs/Invitation.md)
  - [InvitationCreateParameters](docs/InvitationCreateParameters.md)

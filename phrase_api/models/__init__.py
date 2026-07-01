@@ -74,6 +74,7 @@ from phrase_api.models.glossary_term_translation_update_parameters import Glossa
 from phrase_api.models.glossary_term_update_parameters import GlossaryTermUpdateParameters
 from phrase_api.models.glossary_update_parameters import GlossaryUpdateParameters
 from phrase_api.models.icu import Icu
+from phrase_api.models.icu_skeleton_error import IcuSkeletonError
 from phrase_api.models.icu_skeleton_parameters import IcuSkeletonParameters
 from phrase_api.models.invitation import Invitation
 from phrase_api.models.invitation_create_parameters import InvitationCreateParameters

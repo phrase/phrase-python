@@ -453,7 +453,7 @@ class LinkedKeysApi(object):
     def key_links_index(self, project_id, id, **kwargs):  # noqa: E501
         """List child keys of a parent key  # noqa: E501
 
-        Returns detailed information about a parent key, including its linked child keys.  # noqa: E501
+        Returns the key link record for a parent key, including all child keys associated with it. Key linking lets translation keys share translations — a child key inherits content from its designated parent. Use this endpoint to inspect which keys are linked under a given parent before unlinking them or auditing translation consistency across related keys.  The key identified by `id` must be designated as a parent key (it must have at least one child key linked to it). Listing the links of a key that is not a parent returns 400.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_links_index(project_id, id, async_req=True)
@@ -480,7 +480,7 @@ class LinkedKeysApi(object):
     def key_links_index_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
         """List child keys of a parent key  # noqa: E501
 
-        Returns detailed information about a parent key, including its linked child keys.  # noqa: E501
+        Returns the key link record for a parent key, including all child keys associated with it. Key linking lets translation keys share translations — a child key inherits content from its designated parent. Use this endpoint to inspect which keys are linked under a given parent before unlinking them or auditing translation consistency across related keys.  The key identified by `id` must be designated as a parent key (it must have at least one child key linked to it). Listing the links of a key that is not a parent returns 400.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_links_index_with_http_info(project_id, id, async_req=True)

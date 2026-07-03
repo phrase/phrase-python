@@ -150,7 +150,7 @@ class AutomationsCreateParameters(object):
     def project_ids(self):
         """Gets the project_ids of this AutomationsCreateParameters.  # noqa: E501
 
-        List of project IDs to associate with the automation. Currently, only the first ID in the array is used. The array format leaves room for future support of multiple projects.   # noqa: E501
+        List of project IDs to associate with the automation. Providing more than one project ID requires the `advanced_job_automation` plan feature; accounts without this feature receive a 422 response with error field `project_ids`.   # noqa: E501
 
         :return: The project_ids of this AutomationsCreateParameters.  # noqa: E501
         :rtype: List[str]
@@ -161,7 +161,7 @@ class AutomationsCreateParameters(object):
     def project_ids(self, project_ids):
         """Sets the project_ids of this AutomationsCreateParameters.
 
-        List of project IDs to associate with the automation. Currently, only the first ID in the array is used. The array format leaves room for future support of multiple projects.   # noqa: E501
+        List of project IDs to associate with the automation. Providing more than one project ID requires the `advanced_job_automation` plan feature; accounts without this feature receive a 422 response with error field `project_ids`.   # noqa: E501
 
         :param project_ids: The project_ids of this AutomationsCreateParameters.  # noqa: E501
         :type: List[str]

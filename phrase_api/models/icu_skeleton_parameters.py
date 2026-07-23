@@ -195,7 +195,7 @@ class IcuSkeletonParameters(object):
     def cldr_version(self):
         """Gets the cldr_version of this IcuSkeletonParameters.  # noqa: E501
 
-        Pluralization rule set to apply when constructing skeletons. Accepted values are `legacy` and `cldr_41`. Defaults to `legacy` when omitted.  # noqa: E501
+        Pluralization rule set to use when constructing skeletons. Pass `legacy` for pre-CLDR behaviour, or a CLDR version string such as `cldr48`. Defaults to the project's configured version when omitted.  # noqa: E501
 
         :return: The cldr_version of this IcuSkeletonParameters.  # noqa: E501
         :rtype: str
@@ -206,17 +206,11 @@ class IcuSkeletonParameters(object):
     def cldr_version(self, cldr_version):
         """Sets the cldr_version of this IcuSkeletonParameters.
 
-        Pluralization rule set to apply when constructing skeletons. Accepted values are `legacy` and `cldr_41`. Defaults to `legacy` when omitted.  # noqa: E501
+        Pluralization rule set to use when constructing skeletons. Pass `legacy` for pre-CLDR behaviour, or a CLDR version string such as `cldr48`. Defaults to the project's configured version when omitted.  # noqa: E501
 
         :param cldr_version: The cldr_version of this IcuSkeletonParameters.  # noqa: E501
         :type: str
         """
-        allowed_values = ["legacy", "cldr_41"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and cldr_version not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `cldr_version` ({0}), must be one of {1}"  # noqa: E501
-                .format(cldr_version, allowed_values)
-            )
 
         self._cldr_version = cldr_version
 

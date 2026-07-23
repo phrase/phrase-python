@@ -40,6 +40,7 @@ from phrase_api.api.job_locales_api import JobLocalesApi
 from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
 from phrase_api.api.job_templates_api import JobTemplatesApi
 from phrase_api.api.jobs_api import JobsApi
+from phrase_api.api.key_format_annotations_api import KeyFormatAnnotationsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.keys_figma_attachments_api import KeysFigmaAttachmentsApi
 from phrase_api.api.linked_keys_api import LinkedKeysApi
@@ -181,6 +182,7 @@ from phrase_api.models.job_template_preview import JobTemplatePreview
 from phrase_api.models.job_template_update_parameters import JobTemplateUpdateParameters
 from phrase_api.models.job_update_parameters import JobUpdateParameters
 from phrase_api.models.key_create_parameters import KeyCreateParameters
+from phrase_api.models.key_format_annotations_list200_response_inner import KeyFormatAnnotationsList200ResponseInner
 from phrase_api.models.key_link import KeyLink
 from phrase_api.models.key_links_batch_destroy_parameters import KeyLinksBatchDestroyParameters
 from phrase_api.models.key_links_create_parameters import KeyLinksCreateParameters

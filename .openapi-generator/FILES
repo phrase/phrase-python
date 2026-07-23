@@ -126,6 +126,8 @@ docs/JobTemplatesApi.md
 docs/JobUpdateParameters.md
 docs/JobsApi.md
 docs/KeyCreateParameters.md
+docs/KeyFormatAnnotationsApi.md
+docs/KeyFormatAnnotationsList200ResponseInner.md
 docs/KeyLink.md
 docs/KeyLinksBatchDestroyParameters.md
 docs/KeyLinksCreateParameters.md
@@ -319,6 +321,7 @@ phrase_api/api/job_locales_api.py
 phrase_api/api/job_template_locales_api.py
 phrase_api/api/job_templates_api.py
 phrase_api/api/jobs_api.py
+phrase_api/api/key_format_annotations_api.py
 phrase_api/api/keys_api.py
 phrase_api/api/keys_figma_attachments_api.py
 phrase_api/api/linked_keys_api.py
@@ -455,6 +458,7 @@ phrase_api/models/job_template_preview.py
 phrase_api/models/job_template_update_parameters.py
 phrase_api/models/job_update_parameters.py
 phrase_api/models/key_create_parameters.py
+phrase_api/models/key_format_annotations_list200_response_inner.py
 phrase_api/models/key_link.py
 phrase_api/models/key_links_batch_destroy_parameters.py
 phrase_api/models/key_links_create_parameters.py
@@ -718,6 +722,8 @@ test/test_job_templates_api.py
 test/test_job_update_parameters.py
 test/test_jobs_api.py
 test/test_key_create_parameters.py
+test/test_key_format_annotations_api.py
+test/test_key_format_annotations_list200_response_inner.py
 test/test_key_link.py
 test/test_key_links_batch_destroy_parameters.py
 test/test_key_links_create_parameters.py

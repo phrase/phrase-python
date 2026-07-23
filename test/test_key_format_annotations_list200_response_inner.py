@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters  # noqa: E501
+from phrase_api.models.key_format_annotations_list200_response_inner import KeyFormatAnnotationsList200ResponseInner  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestScreenshotUpdateParameters(unittest.TestCase):
-    """ScreenshotUpdateParameters unit test stubs"""
+class TestKeyFormatAnnotationsList200ResponseInner(unittest.TestCase):
+    """KeyFormatAnnotationsList200ResponseInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,27 +28,25 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ScreenshotUpdateParameters
+        """Test KeyFormatAnnotationsList200ResponseInner
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.screenshot_update_parameters.ScreenshotUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.key_format_annotations_list200_response_inner.KeyFormatAnnotationsList200ResponseInner()  # noqa: E501
 
         """
         if include_optional :
-            return ScreenshotUpdateParameters(
-                branch = 'my-feature-branch', 
-                name = 'A screenshot name', 
-                description = 'A screenshot description', 
-                filename = '[B@269abd62'
+            return KeyFormatAnnotationsList200ResponseInner(
+                file_format = 'xliff_2', 
+                original_representation = '<note category="meaning">header</note>'
             )
         else :
-            return ScreenshotUpdateParameters(
+            return KeyFormatAnnotationsList200ResponseInner(
         )
         """
 
-    def testScreenshotUpdateParameters(self):
-        """Test ScreenshotUpdateParameters"""
+    def testKeyFormatAnnotationsList200ResponseInner(self):
+        """Test KeyFormatAnnotationsList200ResponseInner"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

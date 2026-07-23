@@ -27,6 +27,7 @@ from phrase_api.api.job_locales_api import JobLocalesApi
 from phrase_api.api.job_template_locales_api import JobTemplateLocalesApi
 from phrase_api.api.job_templates_api import JobTemplatesApi
 from phrase_api.api.jobs_api import JobsApi
+from phrase_api.api.key_format_annotations_api import KeyFormatAnnotationsApi
 from phrase_api.api.keys_api import KeysApi
 from phrase_api.api.keys_figma_attachments_api import KeysFigmaAttachmentsApi
 from phrase_api.api.linked_keys_api import LinkedKeysApi

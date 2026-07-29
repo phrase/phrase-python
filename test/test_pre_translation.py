@@ -15,11 +15,11 @@ import unittest
 import datetime
 
 import phrase_api
-from phrase_api.models.screenshot_update_parameters import ScreenshotUpdateParameters  # noqa: E501
+from phrase_api.models.pre_translation import PreTranslation  # noqa: E501
 from phrase_api.rest import ApiException
 
-class TestScreenshotUpdateParameters(unittest.TestCase):
-    """ScreenshotUpdateParameters unit test stubs"""
+class TestPreTranslation(unittest.TestCase):
+    """PreTranslation unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,27 +28,30 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test ScreenshotUpdateParameters
+        """Test PreTranslation
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = phrase_api.models.screenshot_update_parameters.ScreenshotUpdateParameters()  # noqa: E501
+        # model = phrase_api.models.pre_translation.PreTranslation()  # noqa: E501
 
         """
         if include_optional :
-            return ScreenshotUpdateParameters(
-                branch = 'my-feature-branch', 
-                name = 'A screenshot name', 
-                description = 'A screenshot description', 
-                filename = '[B@2818d9d7'
+            return PreTranslation(
+                id = 'abcd1234cdef1234abcd1234cdef1234', 
+                status = 'pending', 
+                translatable_type = 'locale', 
+                translatable_id = 'abcd1234cdef1234abcd1234cdef1234', 
+                error = '', 
+                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )
         else :
-            return ScreenshotUpdateParameters(
+            return PreTranslation(
         )
         """
 
-    def testScreenshotUpdateParameters(self):
-        """Test ScreenshotUpdateParameters"""
+    def testPreTranslation(self):
+        """Test PreTranslation"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

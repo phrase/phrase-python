@@ -180,6 +180,9 @@ docs/OrganizationJobTemplateLocalesApi.md
 docs/OrganizationJobTemplateLocalesCreateParameters.md
 docs/OrganizationJobTemplateUpdateParameters.md
 docs/OrganizationJobTemplatesApi.md
+docs/PreTranslation.md
+docs/PreTranslationCreateParameters.md
+docs/PreTranslationsApi.md
 docs/Project.md
 docs/ProjectCreateParameters.md
 docs/ProjectDetails.md
@@ -333,6 +336,7 @@ phrase_api/api/notifications_api.py
 phrase_api/api/orders_api.py
 phrase_api/api/organization_job_template_locales_api.py
 phrase_api/api/organization_job_templates_api.py
+phrase_api/api/pre_translations_api.py
 phrase_api/api/projects_api.py
 phrase_api/api/quality_performance_score_api.py
 phrase_api/api/release_triggers_api.py
@@ -500,6 +504,8 @@ phrase_api/models/organization_job_template_details.py
 phrase_api/models/organization_job_template_locale_update_parameters.py
 phrase_api/models/organization_job_template_locales_create_parameters.py
 phrase_api/models/organization_job_template_update_parameters.py
+phrase_api/models/pre_translation.py
+phrase_api/models/pre_translation_create_parameters.py
 phrase_api/models/project.py
 phrase_api/models/project_create_parameters.py
 phrase_api/models/project_details.py
@@ -775,6 +781,9 @@ test/test_organization_job_template_locales_api.py
 test/test_organization_job_template_locales_create_parameters.py
 test/test_organization_job_template_update_parameters.py
 test/test_organization_job_templates_api.py
+test/test_pre_translation.py
+test/test_pre_translation_create_parameters.py
+test/test_pre_translations_api.py
 test/test_project.py
 test/test_project_create_parameters.py
 test/test_project_details.py

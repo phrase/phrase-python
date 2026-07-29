@@ -326,6 +326,9 @@ Class | Method | HTTP request | Description
 *OrganizationJobTemplatesApi* | [**organization_job_template_update**](docs/OrganizationJobTemplatesApi.md#organization_job_template_update) | **PATCH** /accounts/{account_id}/job_templates/{id} | Update an organization job template
 *OrganizationJobTemplatesApi* | [**organization_job_templates_list**](docs/OrganizationJobTemplatesApi.md#organization_job_templates_list) | **GET** /accounts/{account_id}/job_templates | List organization job templates
 *OrganizationJobTemplatesApi* | [**organization_job_templates_show**](docs/OrganizationJobTemplatesApi.md#organization_job_templates_show) | **GET** /accounts/{account_id}/job_templates/{id} | Get a single organization job template
+*PreTranslationsApi* | [**pre_translation_create**](docs/PreTranslationsApi.md#pre_translation_create) | **POST** /projects/{project_id}/pre_translations | Create a pre-translation job
+*PreTranslationsApi* | [**pre_translation_show**](docs/PreTranslationsApi.md#pre_translation_show) | **GET** /projects/{project_id}/pre_translations/{id} | Get a single pre-translation job
+*PreTranslationsApi* | [**pre_translations_list**](docs/PreTranslationsApi.md#pre_translations_list) | **GET** /projects/{project_id}/pre_translations | List pre-translation jobs
 *ProjectsApi* | [**project_create**](docs/ProjectsApi.md#project_create) | **POST** /projects | Create a project
 *ProjectsApi* | [**project_delete**](docs/ProjectsApi.md#project_delete) | **DELETE** /projects/{id} | Delete a project
 *ProjectsApi* | [**project_show**](docs/ProjectsApi.md#project_show) | **GET** /projects/{id} | Get a single project
@@ -577,6 +580,8 @@ Class | Method | HTTP request | Description
  - [OrganizationJobTemplateLocaleUpdateParameters](docs/OrganizationJobTemplateLocaleUpdateParameters.md)
  - [OrganizationJobTemplateLocalesCreateParameters](docs/OrganizationJobTemplateLocalesCreateParameters.md)
  - [OrganizationJobTemplateUpdateParameters](docs/OrganizationJobTemplateUpdateParameters.md)
+ - [PreTranslation](docs/PreTranslation.md)
+ - [PreTranslationCreateParameters](docs/PreTranslationCreateParameters.md)
  - [Project](docs/Project.md)
  - [ProjectCreateParameters](docs/ProjectCreateParameters.md)
  - [ProjectDetails](docs/ProjectDetails.md)

@@ -39,6 +39,7 @@ from phrase_api.api.notifications_api import NotificationsApi
 from phrase_api.api.orders_api import OrdersApi
 from phrase_api.api.organization_job_template_locales_api import OrganizationJobTemplateLocalesApi
 from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
+from phrase_api.api.pre_translations_api import PreTranslationsApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.quality_performance_score_api import QualityPerformanceScoreApi
 from phrase_api.api.release_triggers_api import ReleaseTriggersApi

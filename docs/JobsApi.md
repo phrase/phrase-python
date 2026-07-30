@@ -846,7 +846,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     owned_by = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user owning job
     assigned_to = 'abcd1234cdef1234abcd1234cdef1234' # str | filter by user assigned to job
     state = 'completed' # str | filter by state of job; valid states are: `draft`, `in_progress`, `completed`
-    updated_since = '2013-02-21T00:00:00.000Z' # str | filter by jobs updated since given date
+    updated_since = '2013-02-21T00:00:00Z' # str | filter by jobs updated since given date
 
     try:
         # List account jobs
@@ -929,7 +929,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     state = 'completed' # str | filter by state of job; valid states are: `draft`, `in_progress`, `completed`
     states = ['[\"in_progress\",\"completed\"]'] # List[str] | Filter by multiple job states at once. Accepted values are the same as `state`. When supplied, `state` is ignored. Rejected with `400 Bad Request` if any value is unknown.
     key_id = 'abcd1234cdef1234abcd1234cdef1234' # str | Filter to jobs that include the translation key identified by this code (matches via the job's tags).
-    updated_since = '2013-02-21T00:00:00.000Z' # str | filter by jobs updated since given date
+    updated_since = '2013-02-21T00:00:00Z' # str | filter by jobs updated since given date
 
     try:
         # List jobs

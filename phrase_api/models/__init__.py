@@ -23,6 +23,8 @@ from phrase_api.models.authorization_create_parameters import AuthorizationCreat
 from phrase_api.models.authorization_update_parameters import AuthorizationUpdateParameters
 from phrase_api.models.authorization_with_token import AuthorizationWithToken
 from phrase_api.models.automation import Automation
+from phrase_api.models.automation_event import AutomationEvent
+from phrase_api.models.automation_event_project import AutomationEventProject
 from phrase_api.models.automations_create_parameters import AutomationsCreateParameters
 from phrase_api.models.automations_create_parameters1 import AutomationsCreateParameters1
 from phrase_api.models.blacklisted_key import BlacklistedKey

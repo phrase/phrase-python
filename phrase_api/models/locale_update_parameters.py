@@ -42,6 +42,7 @@ class LocaleUpdateParameters(object):
         'fallback_locale_id': 'str',
         'unverify_new_translations': 'bool',
         'unverify_updated_translations': 'bool',
+        'unverify_on_source_changes': 'bool',
         'autotranslate': 'bool',
         'language_ai_profile': 'str'
     }
@@ -57,11 +58,12 @@ class LocaleUpdateParameters(object):
         'fallback_locale_id': 'fallback_locale_id',
         'unverify_new_translations': 'unverify_new_translations',
         'unverify_updated_translations': 'unverify_updated_translations',
+        'unverify_on_source_changes': 'unverify_on_source_changes',
         'autotranslate': 'autotranslate',
         'language_ai_profile': 'language_ai_profile'
     }
 
-    def __init__(self, branch=None, name=None, code=None, default=None, main=None, rtl=None, source_locale_id=None, fallback_locale_id=None, unverify_new_translations=None, unverify_updated_translations=None, autotranslate=None, language_ai_profile=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, code=None, default=None, main=None, rtl=None, source_locale_id=None, fallback_locale_id=None, unverify_new_translations=None, unverify_updated_translations=None, unverify_on_source_changes=None, autotranslate=None, language_ai_profile=None, local_vars_configuration=None):  # noqa: E501
         """LocaleUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -77,6 +79,7 @@ class LocaleUpdateParameters(object):
         self._fallback_locale_id = None
         self._unverify_new_translations = None
         self._unverify_updated_translations = None
+        self._unverify_on_source_changes = None
         self._autotranslate = None
         self._language_ai_profile = None
         self.discriminator = None
@@ -101,6 +104,8 @@ class LocaleUpdateParameters(object):
             self.unverify_new_translations = unverify_new_translations
         if unverify_updated_translations is not None:
             self.unverify_updated_translations = unverify_updated_translations
+        if unverify_on_source_changes is not None:
+            self.unverify_on_source_changes = unverify_on_source_changes
         if autotranslate is not None:
             self.autotranslate = autotranslate
         if language_ai_profile is not None:
@@ -335,6 +340,29 @@ class LocaleUpdateParameters(object):
         """
 
         self._unverify_updated_translations = unverify_updated_translations
+
+    @property
+    def unverify_on_source_changes(self):
+        """Gets the unverify_on_source_changes of this LocaleUpdateParameters.  # noqa: E501
+
+        Indicates that translations for this locale should be marked as unverified when the source language has been changed.  # noqa: E501
+
+        :return: The unverify_on_source_changes of this LocaleUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._unverify_on_source_changes
+
+    @unverify_on_source_changes.setter
+    def unverify_on_source_changes(self, unverify_on_source_changes):
+        """Sets the unverify_on_source_changes of this LocaleUpdateParameters.
+
+        Indicates that translations for this locale should be marked as unverified when the source language has been changed.  # noqa: E501
+
+        :param unverify_on_source_changes: The unverify_on_source_changes of this LocaleUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._unverify_on_source_changes = unverify_on_source_changes
 
     @property
     def autotranslate(self):

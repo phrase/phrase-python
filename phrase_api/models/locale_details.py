@@ -43,6 +43,9 @@ class LocaleDetails(object):
         'source_locale': 'LocalePreview',
         'fallback_locale': 'LocalePreview',
         'language_ai_profile': 'str',
+        'unverify_new_translations': 'bool',
+        'unverify_updated_translations': 'bool',
+        'unverify_on_source_changes': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'statistics': 'LocaleStatistics'
@@ -60,12 +63,15 @@ class LocaleDetails(object):
         'source_locale': 'source_locale',
         'fallback_locale': 'fallback_locale',
         'language_ai_profile': 'language_ai_profile',
+        'unverify_new_translations': 'unverify_new_translations',
+        'unverify_updated_translations': 'unverify_updated_translations',
+        'unverify_on_source_changes': 'unverify_on_source_changes',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'statistics': 'statistics'
     }
 
-    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, ordinal_plural_forms=None, source_locale=None, fallback_locale=None, language_ai_profile=None, created_at=None, updated_at=None, statistics=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, code=None, default=None, main=None, rtl=None, plural_forms=None, ordinal_plural_forms=None, source_locale=None, fallback_locale=None, language_ai_profile=None, unverify_new_translations=None, unverify_updated_translations=None, unverify_on_source_changes=None, created_at=None, updated_at=None, statistics=None, local_vars_configuration=None):  # noqa: E501
         """LocaleDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -82,6 +88,9 @@ class LocaleDetails(object):
         self._source_locale = None
         self._fallback_locale = None
         self._language_ai_profile = None
+        self._unverify_new_translations = None
+        self._unverify_updated_translations = None
+        self._unverify_on_source_changes = None
         self._created_at = None
         self._updated_at = None
         self._statistics = None
@@ -109,6 +118,12 @@ class LocaleDetails(object):
             self.fallback_locale = fallback_locale
         if language_ai_profile is not None:
             self.language_ai_profile = language_ai_profile
+        if unverify_new_translations is not None:
+            self.unverify_new_translations = unverify_new_translations
+        if unverify_updated_translations is not None:
+            self.unverify_updated_translations = unverify_updated_translations
+        if unverify_on_source_changes is not None:
+            self.unverify_on_source_changes = unverify_on_source_changes
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -346,6 +361,75 @@ class LocaleDetails(object):
         """
 
         self._language_ai_profile = language_ai_profile
+
+    @property
+    def unverify_new_translations(self):
+        """Gets the unverify_new_translations of this LocaleDetails.  # noqa: E501
+
+        Indicates that new translations for this locale are marked as unverified. Only applies to locales using the basic verification workflow. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature.  # noqa: E501
+
+        :return: The unverify_new_translations of this LocaleDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._unverify_new_translations
+
+    @unverify_new_translations.setter
+    def unverify_new_translations(self, unverify_new_translations):
+        """Sets the unverify_new_translations of this LocaleDetails.
+
+        Indicates that new translations for this locale are marked as unverified. Only applies to locales using the basic verification workflow. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature.  # noqa: E501
+
+        :param unverify_new_translations: The unverify_new_translations of this LocaleDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._unverify_new_translations = unverify_new_translations
+
+    @property
+    def unverify_updated_translations(self):
+        """Gets the unverify_updated_translations of this LocaleDetails.  # noqa: E501
+
+        Indicates that updated translations for this locale are marked as unverified. Only applies to locales using the basic verification workflow. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature.  # noqa: E501
+
+        :return: The unverify_updated_translations of this LocaleDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._unverify_updated_translations
+
+    @unverify_updated_translations.setter
+    def unverify_updated_translations(self, unverify_updated_translations):
+        """Sets the unverify_updated_translations of this LocaleDetails.
+
+        Indicates that updated translations for this locale are marked as unverified. Only applies to locales using the basic verification workflow. Part of the [Advanced Workflows](https://support.phrase.com/hc/en-us/articles/5784094755484) feature.  # noqa: E501
+
+        :param unverify_updated_translations: The unverify_updated_translations of this LocaleDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._unverify_updated_translations = unverify_updated_translations
+
+    @property
+    def unverify_on_source_changes(self):
+        """Gets the unverify_on_source_changes of this LocaleDetails.  # noqa: E501
+
+        Indicates that translations for this locale are marked as unverified when the source language has been changed.  # noqa: E501
+
+        :return: The unverify_on_source_changes of this LocaleDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._unverify_on_source_changes
+
+    @unverify_on_source_changes.setter
+    def unverify_on_source_changes(self, unverify_on_source_changes):
+        """Sets the unverify_on_source_changes of this LocaleDetails.
+
+        Indicates that translations for this locale are marked as unverified when the source language has been changed.  # noqa: E501
+
+        :param unverify_on_source_changes: The unverify_on_source_changes of this LocaleDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._unverify_on_source_changes = unverify_on_source_changes
 
     @property
     def created_at(self):

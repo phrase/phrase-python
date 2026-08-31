@@ -36,6 +36,8 @@ class ProjectCreateParameters(object):
         'main_format': 'str',
         'media': 'str',
         'shares_translation_memory': 'bool',
+        'tm_ids': 'List[str]',
+        'term_base_ids': 'List[str]',
         'project_image': 'bytearray',
         'remove_project_image': 'bool',
         'account_id': 'str',
@@ -72,6 +74,8 @@ class ProjectCreateParameters(object):
         'main_format': 'main_format',
         'media': 'media',
         'shares_translation_memory': 'shares_translation_memory',
+        'tm_ids': 'tm_ids',
+        'term_base_ids': 'term_base_ids',
         'project_image': 'project_image',
         'remove_project_image': 'remove_project_image',
         'account_id': 'account_id',
@@ -103,7 +107,7 @@ class ProjectCreateParameters(object):
         'placeholder_styles': 'placeholder_styles'
     }
 
-    def __init__(self, name=None, main_format=None, media=None, shares_translation_memory=None, project_image=None, remove_project_image=None, account_id=None, point_of_contact=None, source_project_id=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, autocomplete_job_enabled=None, job_locking_enabled=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, translation_keys_sort_collation=None, default_encoding=None, cldr_version=None, placeholder_styles=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, main_format=None, media=None, shares_translation_memory=None, tm_ids=None, term_base_ids=None, project_image=None, remove_project_image=None, account_id=None, point_of_contact=None, source_project_id=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, autocomplete_job_enabled=None, job_locking_enabled=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, translation_keys_sort_collation=None, default_encoding=None, cldr_version=None, placeholder_styles=None, local_vars_configuration=None):  # noqa: E501
         """ProjectCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -113,6 +117,8 @@ class ProjectCreateParameters(object):
         self._main_format = None
         self._media = None
         self._shares_translation_memory = None
+        self._tm_ids = None
+        self._term_base_ids = None
         self._project_image = None
         self._remove_project_image = None
         self._account_id = None
@@ -151,6 +157,10 @@ class ProjectCreateParameters(object):
             self.media = media
         if shares_translation_memory is not None:
             self.shares_translation_memory = shares_translation_memory
+        if tm_ids is not None:
+            self.tm_ids = tm_ids
+        if term_base_ids is not None:
+            self.term_base_ids = term_base_ids
         if project_image is not None:
             self.project_image = project_image
         if remove_project_image is not None:
@@ -303,6 +313,52 @@ class ProjectCreateParameters(object):
         """
 
         self._shares_translation_memory = shares_translation_memory
+
+    @property
+    def tm_ids(self):
+        """Gets the tm_ids of this ProjectCreateParameters.  # noqa: E501
+
+        List of TMS translation memory IDs, used to provide reference translations for the AI translation agent.  # noqa: E501
+
+        :return: The tm_ids of this ProjectCreateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._tm_ids
+
+    @tm_ids.setter
+    def tm_ids(self, tm_ids):
+        """Sets the tm_ids of this ProjectCreateParameters.
+
+        List of TMS translation memory IDs, used to provide reference translations for the AI translation agent.  # noqa: E501
+
+        :param tm_ids: The tm_ids of this ProjectCreateParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._tm_ids = tm_ids
+
+    @property
+    def term_base_ids(self):
+        """Gets the term_base_ids of this ProjectCreateParameters.  # noqa: E501
+
+        List of TMS term base IDs, used to ensure consistent terminology for the AI translation agent.  # noqa: E501
+
+        :return: The term_base_ids of this ProjectCreateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._term_base_ids
+
+    @term_base_ids.setter
+    def term_base_ids(self, term_base_ids):
+        """Sets the term_base_ids of this ProjectCreateParameters.
+
+        List of TMS term base IDs, used to ensure consistent terminology for the AI translation agent.  # noqa: E501
+
+        :param term_base_ids: The term_base_ids of this ProjectCreateParameters.  # noqa: E501
+        :type: List[str]
+        """
+
+        self._term_base_ids = term_base_ids
 
     @property
     def project_image(self):

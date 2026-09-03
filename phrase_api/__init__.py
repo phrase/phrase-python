@@ -22,6 +22,7 @@ from phrase_api.api.automation_events_api import AutomationEventsApi
 from phrase_api.api.automations_api import AutomationsApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
+from phrase_api.api.checks_api import ChecksApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi
 from phrase_api.api.comment_replies_api import CommentRepliesApi
 from phrase_api.api.comments_api import CommentsApi
@@ -114,6 +115,7 @@ from phrase_api.models.branch_merge_parameters import BranchMergeParameters
 from phrase_api.models.branch_name import BranchName
 from phrase_api.models.branch_sync_parameters import BranchSyncParameters
 from phrase_api.models.branch_update_parameters import BranchUpdateParameters
+from phrase_api.models.check_issue import CheckIssue
 from phrase_api.models.comment import Comment
 from phrase_api.models.comment_create_parameters import CommentCreateParameters
 from phrase_api.models.comment_create_parameters1 import CommentCreateParameters1

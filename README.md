@@ -176,6 +176,8 @@ Class | Method | HTTP request | Description
 *BranchesApi* | [**branch_sync**](docs/BranchesApi.md#branch_sync) | **PATCH** /projects/{project_id}/branches/{name}/sync | Sync a branch
 *BranchesApi* | [**branch_update**](docs/BranchesApi.md#branch_update) | **PATCH** /projects/{project_id}/branches/{name} | Update a branch
 *BranchesApi* | [**branches_list**](docs/BranchesApi.md#branches_list) | **GET** /projects/{project_id}/branches | List branches
+*ChecksApi* | [**check_issue_dismiss**](docs/ChecksApi.md#check_issue_dismiss) | **PATCH** /projects/{project_id}/checks/issues/{id}/dismiss | Dismiss a check issue
+*ChecksApi* | [**check_issues_list**](docs/ChecksApi.md#check_issues_list) | **GET** /projects/{project_id}/checks/issues | List check issues
 *CommentReactionsApi* | [**reaction_create**](docs/CommentReactionsApi.md#reaction_create) | **POST** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions | Create a reaction
 *CommentReactionsApi* | [**reaction_delete**](docs/CommentReactionsApi.md#reaction_delete) | **DELETE** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions/{id} | Delete a reaction
 *CommentReactionsApi* | [**reaction_show**](docs/CommentReactionsApi.md#reaction_show) | **GET** /projects/{project_id}/keys/{key_id}/comments/{comment_id}/reactions/{id} | Get a single reaction
@@ -470,6 +472,7 @@ Class | Method | HTTP request | Description
  - [BranchName](docs/BranchName.md)
  - [BranchSyncParameters](docs/BranchSyncParameters.md)
  - [BranchUpdateParameters](docs/BranchUpdateParameters.md)
+ - [CheckIssue](docs/CheckIssue.md)
  - [Comment](docs/Comment.md)
  - [CommentCreateParameters](docs/CommentCreateParameters.md)
  - [CommentCreateParameters1](docs/CommentCreateParameters1.md)

@@ -38,6 +38,8 @@ docs/BranchName.md
 docs/BranchSyncParameters.md
 docs/BranchUpdateParameters.md
 docs/BranchesApi.md
+docs/CheckIssue.md
+docs/ChecksApi.md
 docs/Comment.md
 docs/CommentCreateParameters.md
 docs/CommentCreateParameters1.md
@@ -309,6 +311,7 @@ phrase_api/api/automation_events_api.py
 phrase_api/api/automations_api.py
 phrase_api/api/blacklisted_keys_api.py
 phrase_api/api/branches_api.py
+phrase_api/api/checks_api.py
 phrase_api/api/comment_reactions_api.py
 phrase_api/api/comment_replies_api.py
 phrase_api/api/comments_api.py
@@ -396,6 +399,7 @@ phrase_api/models/branch_merge_parameters.py
 phrase_api/models/branch_name.py
 phrase_api/models/branch_sync_parameters.py
 phrase_api/models/branch_update_parameters.py
+phrase_api/models/check_issue.py
 phrase_api/models/comment.py
 phrase_api/models/comment_create_parameters.py
 phrase_api/models/comment_create_parameters1.py
@@ -646,6 +650,8 @@ test/test_branch_name.py
 test/test_branch_sync_parameters.py
 test/test_branch_update_parameters.py
 test/test_branches_api.py
+test/test_check_issue.py
+test/test_checks_api.py
 test/test_comment.py
 test/test_comment_create_parameters.py
 test/test_comment_create_parameters1.py

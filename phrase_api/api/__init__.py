@@ -9,6 +9,7 @@ from phrase_api.api.automation_events_api import AutomationEventsApi
 from phrase_api.api.automations_api import AutomationsApi
 from phrase_api.api.blacklisted_keys_api import BlacklistedKeysApi
 from phrase_api.api.branches_api import BranchesApi
+from phrase_api.api.checks_api import ChecksApi
 from phrase_api.api.comment_reactions_api import CommentReactionsApi
 from phrase_api.api.comment_replies_api import CommentRepliesApi
 from phrase_api.api.comments_api import CommentsApi

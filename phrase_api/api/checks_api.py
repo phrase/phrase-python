@@ -180,6 +180,7 @@ class ChecksApi(object):
         :param str state: Filter by state of the check issue. Can be one of: `active`, `solved`, `dismissed`, `all`. Defaults to `active`.
         :param List[str] locale_ids: Filter by one or more locale IDs.
         :param List[str] check_names: Filter by one or more check names. Valid values are:  - `translation_content_length` — the translation exceeds the maximum character limit configured for the key. - `translation_placeholder_usage` — the translation is missing placeholders present in the source, or contains unexpected ones. - `translation_glossary_usage` — the translation does not follow the glossary term translations.
+        :param str created_since: Return only check issues created on or after this ISO 8601 datetime. Returns 400 if the value is not a valid date-time.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -211,6 +212,7 @@ class ChecksApi(object):
         :param str state: Filter by state of the check issue. Can be one of: `active`, `solved`, `dismissed`, `all`. Defaults to `active`.
         :param List[str] locale_ids: Filter by one or more locale IDs.
         :param List[str] check_names: Filter by one or more check names. Valid values are:  - `translation_content_length` — the translation exceeds the maximum character limit configured for the key. - `translation_placeholder_usage` — the translation is missing placeholders present in the source, or contains unexpected ones. - `translation_glossary_usage` — the translation does not follow the glossary term translations.
+        :param str created_since: Return only check issues created on or after this ISO 8601 datetime. Returns 400 if the value is not a valid date-time.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -234,7 +236,8 @@ class ChecksApi(object):
             'per_page',
             'state',
             'locale_ids',
-            'check_names'
+            'check_names',
+            'created_since'
         ]
         all_params.extend(
             [
@@ -277,6 +280,8 @@ class ChecksApi(object):
         if 'check_names' in local_var_params and local_var_params['check_names'] is not None:  # noqa: E501
             query_params.append(('check_names', local_var_params['check_names']))  # noqa: E501
             collection_formats['check_names'] = 'multi'  # noqa: E501
+        if 'created_since' in local_var_params and local_var_params['created_since'] is not None:  # noqa: E501
+            query_params.append(('created_since', local_var_params['created_since']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

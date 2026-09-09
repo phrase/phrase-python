@@ -45,7 +45,7 @@ class TestProjectUpdateParameters(unittest.TestCase):
                 shares_translation_memory = True, 
                 tm_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
                 term_base_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
-                project_image = '[B@450a6a51', 
+                project_image = '[B@29f3e3c7', 
                 remove_project_image = False, 
                 workflow = 'review', 
                 machine_translation_enabled = True, 

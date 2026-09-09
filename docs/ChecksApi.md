@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **check_issues_list**
-> List[CheckIssue] check_issues_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, state=state, locale_ids=locale_ids, check_names=check_names)
+> List[CheckIssue] check_issues_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, state=state, locale_ids=locale_ids, check_names=check_names, created_since=created_since)
 
 List check issues
 
@@ -110,10 +110,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     state = 'active' # str | Filter by state of the check issue. Can be one of: `active`, `solved`, `dismissed`, `all`. Defaults to `active`. (default to 'active')
     locale_ids = ['[\"abcd1234cdef1234abcd1234cdef1234\"]'] # List[str] | Filter by one or more locale IDs.
     check_names = ['[\"translation_placeholder_usage\"]'] # List[str] | Filter by one or more check names. Valid values are:  - `translation_content_length` — the translation exceeds the maximum character limit configured for the key. - `translation_placeholder_usage` — the translation is missing placeholders present in the source, or contains unexpected ones. - `translation_glossary_usage` — the translation does not follow the glossary term translations.
+    created_since = '2026-01-01T12:00:00Z' # str | Return only check issues created on or after this ISO 8601 datetime. Returns 400 if the value is not a valid date-time.
 
     try:
         # List check issues
-        api_response = api_instance.check_issues_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, state=state, locale_ids=locale_ids, check_names=check_names)
+        api_response = api_instance.check_issues_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, state=state, locale_ids=locale_ids, check_names=check_names, created_since=created_since)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ChecksApi->check_issues_list: %s\n" % e)
@@ -131,6 +132,7 @@ Name | Type | Description  | Notes
  **state** | **str**| Filter by state of the check issue. Can be one of: &#x60;active&#x60;, &#x60;solved&#x60;, &#x60;dismissed&#x60;, &#x60;all&#x60;. Defaults to &#x60;active&#x60;. | [optional] [default to &#39;active&#39;]
  **locale_ids** | [**List[str]**](str.md)| Filter by one or more locale IDs. | [optional] 
  **check_names** | [**List[str]**](str.md)| Filter by one or more check names. Valid values are:  - &#x60;translation_content_length&#x60; — the translation exceeds the maximum character limit configured for the key. - &#x60;translation_placeholder_usage&#x60; — the translation is missing placeholders present in the source, or contains unexpected ones. - &#x60;translation_glossary_usage&#x60; — the translation does not follow the glossary term translations. | [optional] 
+ **created_since** | **str**| Return only check issues created on or after this ISO 8601 datetime. Returns 400 if the value is not a valid date-time. | [optional] 
 
 ### Return type
 

@@ -304,6 +304,10 @@ Class | Method | HTTP request | Description
 *LocalesApi* | [**locale_show**](docs/LocalesApi.md#locale_show) | **GET** /projects/{project_id}/locales/{id} | Get a single locale
 *LocalesApi* | [**locale_update**](docs/LocalesApi.md#locale_update) | **PATCH** /projects/{project_id}/locales/{id} | Update a locale
 *LocalesApi* | [**locales_list**](docs/LocalesApi.md#locales_list) | **GET** /projects/{project_id}/locales | List locales
+*MachineTranslationApi* | [**machine_translation_locale_provider_mappings_create**](docs/MachineTranslationApi.md#machine_translation_locale_provider_mappings_create) | **POST** /accounts/{account_id}/machine_translation_locale_provider_mappings | Create a locale provider mapping
+*MachineTranslationApi* | [**machine_translation_locale_provider_mappings_destroy**](docs/MachineTranslationApi.md#machine_translation_locale_provider_mappings_destroy) | **DELETE** /accounts/{account_id}/machine_translation_locale_provider_mappings | Delete a locale provider mapping
+*MachineTranslationApi* | [**machine_translation_settings_show**](docs/MachineTranslationApi.md#machine_translation_settings_show) | **GET** /accounts/{account_id}/machine_translation_settings | Get machine translation settings
+*MachineTranslationApi* | [**machine_translation_settings_update**](docs/MachineTranslationApi.md#machine_translation_settings_update) | **PATCH** /accounts/{account_id}/machine_translation_settings | Update machine translation settings
 *MembersApi* | [**member_delete**](docs/MembersApi.md#member_delete) | **DELETE** /accounts/{account_id}/members/{id} | Remove a user from the account
 *MembersApi* | [**member_show**](docs/MembersApi.md#member_show) | **GET** /accounts/{account_id}/members/{id} | Get single member
 *MembersApi* | [**member_update**](docs/MembersApi.md#member_update) | **PATCH** /accounts/{account_id}/members/{id} | Update a member
@@ -570,6 +574,10 @@ Class | Method | HTTP request | Description
  - [LocaleTeamPreview](docs/LocaleTeamPreview.md)
  - [LocaleUpdateParameters](docs/LocaleUpdateParameters.md)
  - [LocaleUserPreview](docs/LocaleUserPreview.md)
+ - [MachineTranslationLocaleProviderMapping](docs/MachineTranslationLocaleProviderMapping.md)
+ - [MachineTranslationLocaleProviderMappingsCreateParameters](docs/MachineTranslationLocaleProviderMappingsCreateParameters.md)
+ - [MachineTranslationSettings](docs/MachineTranslationSettings.md)
+ - [MachineTranslationSettingsUpdateParameters](docs/MachineTranslationSettingsUpdateParameters.md)
  - [Member](docs/Member.md)
  - [MemberProjectDetail](docs/MemberProjectDetail.md)
  - [MemberProjectDetailProjectRolesInner](docs/MemberProjectDetailProjectRolesInner.md)

@@ -35,6 +35,7 @@ from phrase_api.api.keys_figma_attachments_api import KeysFigmaAttachmentsApi
 from phrase_api.api.linked_keys_api import LinkedKeysApi
 from phrase_api.api.locale_downloads_api import LocaleDownloadsApi
 from phrase_api.api.locales_api import LocalesApi
+from phrase_api.api.machine_translation_api import MachineTranslationApi
 from phrase_api.api.members_api import MembersApi
 from phrase_api.api.notification_groups_api import NotificationGroupsApi
 from phrase_api.api.notifications_api import NotificationsApi

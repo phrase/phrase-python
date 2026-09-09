@@ -162,6 +162,11 @@ docs/LocaleTeamPreview.md
 docs/LocaleUpdateParameters.md
 docs/LocaleUserPreview.md
 docs/LocalesApi.md
+docs/MachineTranslationApi.md
+docs/MachineTranslationLocaleProviderMapping.md
+docs/MachineTranslationLocaleProviderMappingsCreateParameters.md
+docs/MachineTranslationSettings.md
+docs/MachineTranslationSettingsUpdateParameters.md
 docs/Member.md
 docs/MemberProjectDetail.md
 docs/MemberProjectDetailProjectRolesInner.md
@@ -337,6 +342,7 @@ phrase_api/api/keys_figma_attachments_api.py
 phrase_api/api/linked_keys_api.py
 phrase_api/api/locale_downloads_api.py
 phrase_api/api/locales_api.py
+phrase_api/api/machine_translation_api.py
 phrase_api/api/members_api.py
 phrase_api/api/notification_groups_api.py
 phrase_api/api/notifications_api.py
@@ -497,6 +503,10 @@ phrase_api/models/locale_statistics.py
 phrase_api/models/locale_team_preview.py
 phrase_api/models/locale_update_parameters.py
 phrase_api/models/locale_user_preview.py
+phrase_api/models/machine_translation_locale_provider_mapping.py
+phrase_api/models/machine_translation_locale_provider_mappings_create_parameters.py
+phrase_api/models/machine_translation_settings.py
+phrase_api/models/machine_translation_settings_update_parameters.py
 phrase_api/models/member.py
 phrase_api/models/member_project_detail.py
 phrase_api/models/member_project_detail_project_roles_inner.py
@@ -773,6 +783,11 @@ test/test_locale_statistics.py
 test/test_locale_team_preview.py
 test/test_locale_update_parameters.py
 test/test_locale_user_preview.py
+test/test_machine_translation_api.py
+test/test_machine_translation_locale_provider_mapping.py
+test/test_machine_translation_locale_provider_mappings_create_parameters.py
+test/test_machine_translation_settings.py
+test/test_machine_translation_settings_update_parameters.py
 test/test_member.py
 test/test_member_project_detail.py
 test/test_member_project_detail_project_roles_inner.py

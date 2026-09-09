@@ -243,7 +243,7 @@ class JobCreateParameters(object):
     def tags(self):
         """Gets the tags of this JobCreateParameters.  # noqa: E501
 
-        tags of keys that should be included within the job  # noqa: E501
+        tags of keys that should be included within the job.  *Note: a tag matches every key currently carrying that tag, not just the ones you just tagged. For example, if hundreds of pre-existing keys already share the tag `myUploadTag`, adding it here pulls in every one of them, not only the key you just tagged. Use `translation_key_ids` to scope the job to specific keys instead.*   # noqa: E501
 
         :return: The tags of this JobCreateParameters.  # noqa: E501
         :rtype: List[str]
@@ -254,7 +254,7 @@ class JobCreateParameters(object):
     def tags(self, tags):
         """Sets the tags of this JobCreateParameters.
 
-        tags of keys that should be included within the job  # noqa: E501
+        tags of keys that should be included within the job.  *Note: a tag matches every key currently carrying that tag, not just the ones you just tagged. For example, if hundreds of pre-existing keys already share the tag `myUploadTag`, adding it here pulls in every one of them, not only the key you just tagged. Use `translation_key_ids` to scope the job to specific keys instead.*   # noqa: E501
 
         :param tags: The tags of this JobCreateParameters.  # noqa: E501
         :type: List[str]

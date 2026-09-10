@@ -43,7 +43,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 shares_translation_memory = True, 
                 tm_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
                 term_base_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
-                project_image = '[B@475ecd46', 
+                project_image = '[B@40d1d34d', 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 point_of_contact = 'abcd1234', 
@@ -72,7 +72,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 translation_keys_sort_collation = 'unicode_ci', 
                 default_encoding = 'UTF-8', 
                 cldr_version = 'cldr48', 
-                placeholder_styles = ["angular","iOS"]
+                placeholder_styles = ["rails_i18n","java_properties"]
             )
         else :
             return ProjectCreateParameters(

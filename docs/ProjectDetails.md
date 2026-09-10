@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **autotranslate_use_machine_translation** | **bool** |  | [optional] 
 **autotranslate_use_translation_memory** | **bool** |  | [optional] 
 **autotranslate_overwrite_unverified_translations** | **bool** |  | [optional] 
+**fallback_for_unverified_translations** | **bool** |  | [optional] 
 **autocomplete_job_enabled** | **bool** |  | [optional] 
 **default_encoding** | **str** |  | [optional] 
 **cldr_version** | **str** |  | [optional] 

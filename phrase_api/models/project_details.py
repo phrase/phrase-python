@@ -58,6 +58,7 @@ class ProjectDetails(object):
         'autotranslate_use_machine_translation': 'bool',
         'autotranslate_use_translation_memory': 'bool',
         'autotranslate_overwrite_unverified_translations': 'bool',
+        'fallback_for_unverified_translations': 'bool',
         'autocomplete_job_enabled': 'bool',
         'default_encoding': 'str',
         'cldr_version': 'str',
@@ -93,6 +94,7 @@ class ProjectDetails(object):
         'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
         'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
         'autotranslate_overwrite_unverified_translations': 'autotranslate_overwrite_unverified_translations',
+        'fallback_for_unverified_translations': 'fallback_for_unverified_translations',
         'autocomplete_job_enabled': 'autocomplete_job_enabled',
         'default_encoding': 'default_encoding',
         'cldr_version': 'cldr_version',
@@ -101,7 +103,7 @@ class ProjectDetails(object):
         'branch': 'branch'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, autocomplete_job_enabled=None, default_encoding=None, cldr_version=None, job_locking_enabled=None, placeholder_styles=None, branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, fallback_for_unverified_translations=None, autocomplete_job_enabled=None, default_encoding=None, cldr_version=None, job_locking_enabled=None, placeholder_styles=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -133,6 +135,7 @@ class ProjectDetails(object):
         self._autotranslate_use_machine_translation = None
         self._autotranslate_use_translation_memory = None
         self._autotranslate_overwrite_unverified_translations = None
+        self._fallback_for_unverified_translations = None
         self._autocomplete_job_enabled = None
         self._default_encoding = None
         self._cldr_version = None
@@ -193,6 +196,8 @@ class ProjectDetails(object):
             self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
         if autotranslate_overwrite_unverified_translations is not None:
             self.autotranslate_overwrite_unverified_translations = autotranslate_overwrite_unverified_translations
+        if fallback_for_unverified_translations is not None:
+            self.fallback_for_unverified_translations = fallback_for_unverified_translations
         if autocomplete_job_enabled is not None:
             self.autocomplete_job_enabled = autocomplete_job_enabled
         if default_encoding is not None:
@@ -751,6 +756,27 @@ class ProjectDetails(object):
         """
 
         self._autotranslate_overwrite_unverified_translations = autotranslate_overwrite_unverified_translations
+
+    @property
+    def fallback_for_unverified_translations(self):
+        """Gets the fallback_for_unverified_translations of this ProjectDetails.  # noqa: E501
+
+
+        :return: The fallback_for_unverified_translations of this ProjectDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._fallback_for_unverified_translations
+
+    @fallback_for_unverified_translations.setter
+    def fallback_for_unverified_translations(self, fallback_for_unverified_translations):
+        """Sets the fallback_for_unverified_translations of this ProjectDetails.
+
+
+        :param fallback_for_unverified_translations: The fallback_for_unverified_translations of this ProjectDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._fallback_for_unverified_translations = fallback_for_unverified_translations
 
     @property
     def autocomplete_job_enabled(self):

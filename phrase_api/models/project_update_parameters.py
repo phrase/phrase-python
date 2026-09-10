@@ -57,6 +57,7 @@ class ProjectUpdateParameters(object):
         'autotranslate_use_machine_translation': 'bool',
         'autotranslate_use_translation_memory': 'bool',
         'autotranslate_overwrite_unverified_translations': 'bool',
+        'fallback_for_unverified_translations': 'bool',
         'default_encoding': 'str',
         'placeholder_styles': 'List[str]',
         'autocomplete_job_enabled': 'bool',
@@ -94,6 +95,7 @@ class ProjectUpdateParameters(object):
         'autotranslate_use_machine_translation': 'autotranslate_use_machine_translation',
         'autotranslate_use_translation_memory': 'autotranslate_use_translation_memory',
         'autotranslate_overwrite_unverified_translations': 'autotranslate_overwrite_unverified_translations',
+        'fallback_for_unverified_translations': 'fallback_for_unverified_translations',
         'default_encoding': 'default_encoding',
         'placeholder_styles': 'placeholder_styles',
         'autocomplete_job_enabled': 'autocomplete_job_enabled',
@@ -105,7 +107,7 @@ class ProjectUpdateParameters(object):
         'cldr_version': 'cldr_version'
     }
 
-    def __init__(self, account_id=None, name=None, point_of_contact=None, main_format=None, media=None, shares_translation_memory=None, tm_ids=None, term_base_ids=None, project_image=None, remove_project_image=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, default_encoding=None, placeholder_styles=None, autocomplete_job_enabled=None, job_locking_enabled=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, translation_keys_sort_collation=None, cldr_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, account_id=None, name=None, point_of_contact=None, main_format=None, media=None, shares_translation_memory=None, tm_ids=None, term_base_ids=None, project_image=None, remove_project_image=None, workflow=None, machine_translation_enabled=None, enable_branching=None, protect_master_branch=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, zero_plural_form_enabled=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, fallback_for_unverified_translations=None, default_encoding=None, placeholder_styles=None, autocomplete_job_enabled=None, job_locking_enabled=None, smart_suggest_enabled=None, smart_suggest_use_glossary=None, smart_suggest_use_machine_translation=None, translation_keys_sort_collation=None, cldr_version=None, local_vars_configuration=None):  # noqa: E501
         """ProjectUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -136,6 +138,7 @@ class ProjectUpdateParameters(object):
         self._autotranslate_use_machine_translation = None
         self._autotranslate_use_translation_memory = None
         self._autotranslate_overwrite_unverified_translations = None
+        self._fallback_for_unverified_translations = None
         self._default_encoding = None
         self._placeholder_styles = None
         self._autocomplete_job_enabled = None
@@ -197,6 +200,8 @@ class ProjectUpdateParameters(object):
             self.autotranslate_use_translation_memory = autotranslate_use_translation_memory
         if autotranslate_overwrite_unverified_translations is not None:
             self.autotranslate_overwrite_unverified_translations = autotranslate_overwrite_unverified_translations
+        if fallback_for_unverified_translations is not None:
+            self.fallback_for_unverified_translations = fallback_for_unverified_translations
         if default_encoding is not None:
             self.default_encoding = default_encoding
         if placeholder_styles is not None:
@@ -790,6 +795,29 @@ class ProjectUpdateParameters(object):
         """
 
         self._autotranslate_overwrite_unverified_translations = autotranslate_overwrite_unverified_translations
+
+    @property
+    def fallback_for_unverified_translations(self):
+        """Gets the fallback_for_unverified_translations of this ProjectUpdateParameters.  # noqa: E501
+
+        (Optional) When enabled, the fallback locale's translation is used on export for unverified translations in addition to empty ones. Requires a fallback locale to be configured on the locale.  # noqa: E501
+
+        :return: The fallback_for_unverified_translations of this ProjectUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._fallback_for_unverified_translations
+
+    @fallback_for_unverified_translations.setter
+    def fallback_for_unverified_translations(self, fallback_for_unverified_translations):
+        """Sets the fallback_for_unverified_translations of this ProjectUpdateParameters.
+
+        (Optional) When enabled, the fallback locale's translation is used on export for unverified translations in addition to empty ones. Requires a fallback locale to be configured on the locale.  # noqa: E501
+
+        :param fallback_for_unverified_translations: The fallback_for_unverified_translations of this ProjectUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._fallback_for_unverified_translations = fallback_for_unverified_translations
 
     @property
     def default_encoding(self):

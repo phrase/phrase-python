@@ -36,6 +36,7 @@ class Upload(object):
         'filename': 'str',
         'format': 'str',
         'state': 'str',
+        'error_message': 'str',
         'tag': 'str',
         'tags': 'List[str]',
         'url': 'str',
@@ -50,6 +51,7 @@ class Upload(object):
         'filename': 'filename',
         'format': 'format',
         'state': 'state',
+        'error_message': 'error_message',
         'tag': 'tag',
         'tags': 'tags',
         'url': 'url',
@@ -59,7 +61,7 @@ class Upload(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, filename=None, format=None, state=None, tag=None, tags=None, url=None, user=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, filename=None, format=None, state=None, error_message=None, tag=None, tags=None, url=None, user=None, summary=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Upload - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,6 +71,7 @@ class Upload(object):
         self._filename = None
         self._format = None
         self._state = None
+        self._error_message = None
         self._tag = None
         self._tags = None
         self._url = None
@@ -86,6 +89,7 @@ class Upload(object):
             self.format = format
         if state is not None:
             self.state = state
+        self.error_message = error_message
         if tag is not None:
             self.tag = tag
         if tags is not None:
@@ -184,6 +188,29 @@ class Upload(object):
         """
 
         self._state = state
+
+    @property
+    def error_message(self):
+        """Gets the error_message of this Upload.  # noqa: E501
+
+        A user-facing message explaining why the upload failed, or `null` if the upload did not fail.  This message is intended for display only. Its wording may change at any time and it should not be parsed or relied upon programmatically.   # noqa: E501
+
+        :return: The error_message of this Upload.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_message
+
+    @error_message.setter
+    def error_message(self, error_message):
+        """Sets the error_message of this Upload.
+
+        A user-facing message explaining why the upload failed, or `null` if the upload did not fail.  This message is intended for display only. Its wording may change at any time and it should not be parsed or relied upon programmatically.   # noqa: E501
+
+        :param error_message: The error_message of this Upload.  # noqa: E501
+        :type: str
+        """
+
+        self._error_message = error_message
 
     @property
     def tag(self):

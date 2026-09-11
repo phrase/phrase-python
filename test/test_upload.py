@@ -41,6 +41,7 @@ class TestUpload(unittest.TestCase):
                 filename = '', 
                 format = '', 
                 state = '', 
+                error_message = '', 
                 tag = '', 
                 tags = [
                     ''

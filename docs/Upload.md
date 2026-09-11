@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **filename** | **str** |  | [optional] 
 **format** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
+**error_message** | **str** | A user-facing message explaining why the upload failed, or &#x60;null&#x60; if the upload did not fail.  This message is intended for display only. Its wording may change at any time and it should not be parsed or relied upon programmatically.  | [optional] 
 **tag** | **str** | Unique tag of the upload  | [optional] 
 **tags** | **List[str]** | List of tags that were assigned to the uploaded keys  | [optional] 
 **url** | **str** | The URL to the upload in Phrase Strings app.  | [optional] 

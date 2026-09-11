@@ -172,6 +172,7 @@ class Upload(object):
     def state(self):
         """Gets the state of this Upload.  # noqa: E501
 
+        Processing state of the upload: `initialized`, `processing`, `success`, or `error`. `error` means processing failed — for example the file could not be parsed, or a provided `file_format` didn't match the file's actual content. Poll this field until it leaves `initialized`/`processing` to get the final outcome.   # noqa: E501
 
         :return: The state of this Upload.  # noqa: E501
         :rtype: str
@@ -182,6 +183,7 @@ class Upload(object):
     def state(self, state):
         """Sets the state of this Upload.
 
+        Processing state of the upload: `initialized`, `processing`, `success`, or `error`. `error` means processing failed — for example the file could not be parsed, or a provided `file_format` didn't match the file's actual content. Poll this field until it leaves `initialized`/`processing` to get the final outcome.   # noqa: E501
 
         :param state: The state of this Upload.  # noqa: E501
         :type: str

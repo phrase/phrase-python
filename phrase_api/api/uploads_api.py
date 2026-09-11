@@ -38,7 +38,7 @@ class UploadsApi(object):
     def upload_create(self, project_id, file, file_format, locale_id, **kwargs):  # noqa: E501
         """Upload a new file  # noqa: E501
 
-        Upload a new language file. Creates necessary resources in your project.  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0).   # noqa: E501
+        Upload a new language file. Creates necessary resources in your project.  The upload is processed asynchronously: this endpoint returns `201 Created` once the file has been accepted and enqueued, not once processing has finished. Poll `GET /projects/{project_id}/uploads/{id}` and check the `state` field — `error` means processing failed (for example, an unparseable file or a `file_format` that doesn't match the file's actual content).  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.upload_create(project_id, file, file_format, locale_id, async_req=True)
@@ -47,7 +47,7 @@ class UploadsApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param bytearray file: File to be imported (required)
-        :param str file_format: File format. Auto-detected when possible and not specified. (required)
+        :param str file_format: File format of the uploaded file, given as a format's `api_name`. See our [Formats API Endpoint](/en/api/strings/formats/list-formats) for the full list of supported formats.  Optional. When omitted, Phrase tries to auto-detect the format from the file's content. This is not always possible for JSON files, since several JSON-based formats (e.g. `json`, `simple_json`, `nested_json`) share the same structure.  (required)
         :param str locale_id: Locale of the file's content. Can be the name or id of the locale. Preferred is id. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
@@ -87,7 +87,7 @@ class UploadsApi(object):
     def upload_create_with_http_info(self, project_id, file, file_format, locale_id, **kwargs):  # noqa: E501
         """Upload a new file  # noqa: E501
 
-        Upload a new language file. Creates necessary resources in your project.  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0).   # noqa: E501
+        Upload a new language file. Creates necessary resources in your project.  The upload is processed asynchronously: this endpoint returns `201 Created` once the file has been accepted and enqueued, not once processing has finished. Poll `GET /projects/{project_id}/uploads/{id}` and check the `state` field — `error` means processing failed (for example, an unparseable file or a `file_format` that doesn't match the file's actual content).  Note: be aware of [upload limits](https://support.phrase.com/hc/en-us/articles/8548271212188-Phrase-Strings-Limits#file-size-upload-limits-0-0).   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.upload_create_with_http_info(project_id, file, file_format, locale_id, async_req=True)
@@ -96,7 +96,7 @@ class UploadsApi(object):
         :param async_req bool: execute request asynchronously
         :param str project_id: Project ID (required)
         :param bytearray file: File to be imported (required)
-        :param str file_format: File format. Auto-detected when possible and not specified. (required)
+        :param str file_format: File format of the uploaded file, given as a format's `api_name`. See our [Formats API Endpoint](/en/api/strings/formats/list-formats) for the full list of supported formats.  Optional. When omitted, Phrase tries to auto-detect the format from the file's content. This is not always possible for JSON files, since several JSON-based formats (e.g. `json`, `simple_json`, `nested_json`) share the same structure.  (required)
         :param str locale_id: Locale of the file's content. Can be the name or id of the locale. Preferred is id. (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str branch: specify the branch to use
@@ -288,7 +288,7 @@ class UploadsApi(object):
     def upload_show(self, project_id, id, **kwargs):  # noqa: E501
         """Get a single upload  # noqa: E501
 
-        View details and summary for a single upload.  # noqa: E501
+        View details and summary for a single upload. Use this endpoint to poll for the outcome of an upload created via `POST /projects/{project_id}/uploads` — check the `state` field.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.upload_show(project_id, id, async_req=True)
@@ -316,7 +316,7 @@ class UploadsApi(object):
     def upload_show_with_http_info(self, project_id, id, **kwargs):  # noqa: E501
         """Get a single upload  # noqa: E501
 
-        View details and summary for a single upload.  # noqa: E501
+        View details and summary for a single upload. Use this endpoint to poll for the outcome of an upload created via `POST /projects/{project_id}/uploads` — check the `state` field.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.upload_show_with_http_info(project_id, id, async_req=True)

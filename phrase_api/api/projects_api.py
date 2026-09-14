@@ -399,7 +399,7 @@ class ProjectsApi(object):
     def project_update(self, id, project_update_parameters, **kwargs):  # noqa: E501
         """Update a project  # noqa: E501
 
-        Update an existing project.  # noqa: E501
+        Update an existing project, including its review workflow, pre-translation/autotranslate rules, and machine-translation configuration (see workflow, machine_translation_enabled, and the autotranslate_* fields below).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_update(id, project_update_parameters, async_req=True)
@@ -426,7 +426,7 @@ class ProjectsApi(object):
     def project_update_with_http_info(self, id, project_update_parameters, **kwargs):  # noqa: E501
         """Update a project  # noqa: E501
 
-        Update an existing project.  # noqa: E501
+        Update an existing project, including its review workflow, pre-translation/autotranslate rules, and machine-translation configuration (see workflow, machine_translation_enabled, and the autotranslate_* fields below).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_update_with_http_info(id, project_update_parameters, async_req=True)

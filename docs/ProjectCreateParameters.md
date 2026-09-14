@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **smart_suggest_use_machine_translation** | **bool** | (Optional) Allow Smart Suggest to source suggestions from machine translation. Defaults to &#x60;true&#x60; when omitted. | [optional] 
 **translation_keys_sort_collation** | **str** | (Optional) Collation used when sorting translation keys alphabetically. Defaults to &#x60;unicode_ci&#x60; when omitted. | [optional] 
 **default_encoding** | **str** | (Optional) Sets the default encoding for Uploads. If you leave it empty, we will try to guess it automatically for you when you Upload a file. You can still override this value by setting the [&#x60;file_encoding&#x60;](/en/api/strings/uploads/upload-a-new-file) parameter for Uploads. | [optional] 
-**cldr_version** | **str** | (Optional) CLDR plural-rule version used by the project. | [optional] 
+**cldr_version** | **str** | (Optional) CLDR plural-rule version used by the project. Pass &#x60;legacy&#x60; for pre-CLDR pluralization behaviour, or a CLDR version string such as &#x60;cldr48&#x60;. Also used as the default version for the ICU skeleton endpoint (&#x60;POST /icu/skeleton&#x60;) when its own &#x60;cldr_version&#x60; parameter is omitted. | [optional] 
 **placeholder_styles** | **List[str]** | (Optional) List of placeholder styles enabled for the project. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

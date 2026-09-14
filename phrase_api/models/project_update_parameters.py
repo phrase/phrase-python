@@ -1013,7 +1013,7 @@ class ProjectUpdateParameters(object):
     def cldr_version(self):
         """Gets the cldr_version of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) CLDR plural-rule version used by the project.  # noqa: E501
+        (Optional) CLDR plural-rule version used by the project. Pass `legacy` for pre-CLDR pluralization behaviour, or a CLDR version string such as `cldr48`. Also used as the default version for the ICU skeleton endpoint (`POST /icu/skeleton`) when its own `cldr_version` parameter is omitted.  # noqa: E501
 
         :return: The cldr_version of this ProjectUpdateParameters.  # noqa: E501
         :rtype: str
@@ -1024,7 +1024,7 @@ class ProjectUpdateParameters(object):
     def cldr_version(self, cldr_version):
         """Sets the cldr_version of this ProjectUpdateParameters.
 
-        (Optional) CLDR plural-rule version used by the project.  # noqa: E501
+        (Optional) CLDR plural-rule version used by the project. Pass `legacy` for pre-CLDR pluralization behaviour, or a CLDR version string such as `cldr48`. Also used as the default version for the ICU skeleton endpoint (`POST /icu/skeleton`) when its own `cldr_version` parameter is omitted.  # noqa: E501
 
         :param cldr_version: The cldr_version of this ProjectUpdateParameters.  # noqa: E501
         :type: str

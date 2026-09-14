@@ -54,7 +54,7 @@ class MachineTranslationSettingsUpdateParameters(object):
     def default_service(self):
         """Gets the default_service of this MachineTranslationSettingsUpdateParameters.  # noqa: E501
 
-        The machine translation engine to use as the account default. Supported values: language_ai_translate, aita_translate, microsoft_translate, google_translate, amazon_translate, intento_translate, gpt_translate. Pass null or an empty string to reset to the plan default.   # noqa: E501
+        The machine translation engine to use as the account default. Supported values: language_ai_translate, aita_translate, microsoft_translate, google_translate, amazon_translate. Pass null or an empty string to reset to the plan default.   # noqa: E501
 
         :return: The default_service of this MachineTranslationSettingsUpdateParameters.  # noqa: E501
         :rtype: str
@@ -65,7 +65,7 @@ class MachineTranslationSettingsUpdateParameters(object):
     def default_service(self, default_service):
         """Sets the default_service of this MachineTranslationSettingsUpdateParameters.
 
-        The machine translation engine to use as the account default. Supported values: language_ai_translate, aita_translate, microsoft_translate, google_translate, amazon_translate, intento_translate, gpt_translate. Pass null or an empty string to reset to the plan default.   # noqa: E501
+        The machine translation engine to use as the account default. Supported values: language_ai_translate, aita_translate, microsoft_translate, google_translate, amazon_translate. Pass null or an empty string to reset to the plan default.   # noqa: E501
 
         :param default_service: The default_service of this MachineTranslationSettingsUpdateParameters.  # noqa: E501
         :type: str

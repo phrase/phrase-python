@@ -154,7 +154,7 @@ class MemberUpdateParameters(object):
     def locale_ids(self):
         """Gets the locale_ids of this MemberUpdateParameters.  # noqa: E501
 
-        List of locale ids the user has access to.  # noqa: E501
+        List of locale ids the user has access to. This is project-scoped and must be paired with `project_ids` (and `strategy`) to take effect; it does not grant account-wide language access.  # noqa: E501
 
         :return: The locale_ids of this MemberUpdateParameters.  # noqa: E501
         :rtype: str
@@ -165,7 +165,7 @@ class MemberUpdateParameters(object):
     def locale_ids(self, locale_ids):
         """Sets the locale_ids of this MemberUpdateParameters.
 
-        List of locale ids the user has access to.  # noqa: E501
+        List of locale ids the user has access to. This is project-scoped and must be paired with `project_ids` (and `strategy`) to take effect; it does not grant account-wide language access.  # noqa: E501
 
         :param locale_ids: The locale_ids of this MemberUpdateParameters.  # noqa: E501
         :type: str
@@ -177,7 +177,7 @@ class MemberUpdateParameters(object):
     def default_locale_codes(self):
         """Gets the default_locale_codes of this MemberUpdateParameters.  # noqa: E501
 
-        List of default locales for the user.  # noqa: E501
+        List of default locales for the user, applied across all of the user's projects. This is the account-level field corresponding to \"Language access\" in the translator profile UI.  # noqa: E501
 
         :return: The default_locale_codes of this MemberUpdateParameters.  # noqa: E501
         :rtype: List[str]
@@ -188,7 +188,7 @@ class MemberUpdateParameters(object):
     def default_locale_codes(self, default_locale_codes):
         """Sets the default_locale_codes of this MemberUpdateParameters.
 
-        List of default locales for the user.  # noqa: E501
+        List of default locales for the user, applied across all of the user's projects. This is the account-level field corresponding to \"Language access\" in the translator profile UI.  # noqa: E501
 
         :param default_locale_codes: The default_locale_codes of this MemberUpdateParameters.  # noqa: E501
         :type: List[str]

@@ -294,7 +294,7 @@ class MembersApi(object):
     def member_update(self, account_id, id, member_update_parameters, **kwargs):  # noqa: E501
         """Update a member  # noqa: E501
 
-        Update user permissions in the account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
+        Update user permissions in the account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. To grant account-wide language access instead of access scoped to specific projects, use `default_locale_codes`. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_update(account_id, id, member_update_parameters, async_req=True)
@@ -322,7 +322,7 @@ class MembersApi(object):
     def member_update_with_http_info(self, account_id, id, member_update_parameters, **kwargs):  # noqa: E501
         """Update a member  # noqa: E501
 
-        Update user permissions in the account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. Access token scope must include `team.manage`.  # noqa: E501
+        Update user permissions in the account. Developers and translators need `project_ids` and `locale_ids` assigned to access them. To grant account-wide language access instead of access scoped to specific projects, use `default_locale_codes`. Access token scope must include `team.manage`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.member_update_with_http_info(account_id, id, member_update_parameters, async_req=True)

@@ -574,6 +574,7 @@ class SpacesApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
+        :param str q: Filter results by name. Supports the prefix-match syntax `name:<value>`, which returns only spaces whose names begin with `<value>`. Other query formats are ignored; omitting `q` returns all accessible spaces. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -602,6 +603,7 @@ class SpacesApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
+        :param str q: Filter results by name. Supports the prefix-match syntax `name:<value>`, which returns only spaces whose names begin with `<value>`. Other query formats are ignored; omitting `q` returns all accessible spaces. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -622,7 +624,8 @@ class SpacesApi(object):
             'account_id',
             'x_phrase_app_otp',
             'page',
-            'per_page'
+            'per_page',
+            'q'
         ]
         all_params.extend(
             [
@@ -657,6 +660,8 @@ class SpacesApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'q' in local_var_params and local_var_params['q'] is not None:  # noqa: E501
+            query_params.append(('q', local_var_params['q']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

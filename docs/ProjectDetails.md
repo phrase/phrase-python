@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **autocomplete_job_enabled** | **bool** |  | [optional] 
 **default_encoding** | **str** |  | [optional] 
 **cldr_version** | **str** |  | [optional] 
+**translation_keys_sort_collation** | **str** |  | [optional] 
 **job_locking_enabled** | **bool** |  | [optional] 
 **placeholder_styles** | **List[str]** |  | [optional] 
 **branch** | [**Branch**](Branch.md) |  | [optional] 

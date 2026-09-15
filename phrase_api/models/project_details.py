@@ -62,6 +62,7 @@ class ProjectDetails(object):
         'autocomplete_job_enabled': 'bool',
         'default_encoding': 'str',
         'cldr_version': 'str',
+        'translation_keys_sort_collation': 'str',
         'job_locking_enabled': 'bool',
         'placeholder_styles': 'List[str]',
         'branch': 'Branch'
@@ -98,12 +99,13 @@ class ProjectDetails(object):
         'autocomplete_job_enabled': 'autocomplete_job_enabled',
         'default_encoding': 'default_encoding',
         'cldr_version': 'cldr_version',
+        'translation_keys_sort_collation': 'translation_keys_sort_collation',
         'job_locking_enabled': 'job_locking_enabled',
         'placeholder_styles': 'placeholder_styles',
         'branch': 'branch'
     }
 
-    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, fallback_for_unverified_translations=None, autocomplete_job_enabled=None, default_encoding=None, cldr_version=None, job_locking_enabled=None, placeholder_styles=None, branch=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, slug=None, main_format=None, project_image_url=None, media=None, account=None, space=None, point_of_contact=None, created_at=None, updated_at=None, shares_translation_memory=None, machine_translation_enabled=None, zero_plural_form_enabled=None, enable_all_data_type_translation_keys_for_translators=None, enable_icu_message_format=None, enable_branching=None, protect_master_branch=None, autotranslate_enabled=None, autotranslate_check_new_translation_keys=None, autotranslate_check_new_uploads=None, autotranslate_check_new_locales=None, autotranslate_mark_as_unverified=None, autotranslate_use_machine_translation=None, autotranslate_use_translation_memory=None, autotranslate_overwrite_unverified_translations=None, fallback_for_unverified_translations=None, autocomplete_job_enabled=None, default_encoding=None, cldr_version=None, translation_keys_sort_collation=None, job_locking_enabled=None, placeholder_styles=None, branch=None, local_vars_configuration=None):  # noqa: E501
         """ProjectDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -139,6 +141,7 @@ class ProjectDetails(object):
         self._autocomplete_job_enabled = None
         self._default_encoding = None
         self._cldr_version = None
+        self._translation_keys_sort_collation = None
         self._job_locking_enabled = None
         self._placeholder_styles = None
         self._branch = None
@@ -204,6 +207,8 @@ class ProjectDetails(object):
             self.default_encoding = default_encoding
         if cldr_version is not None:
             self.cldr_version = cldr_version
+        if translation_keys_sort_collation is not None:
+            self.translation_keys_sort_collation = translation_keys_sort_collation
         if job_locking_enabled is not None:
             self.job_locking_enabled = job_locking_enabled
         if placeholder_styles is not None:
@@ -840,6 +845,33 @@ class ProjectDetails(object):
         """
 
         self._cldr_version = cldr_version
+
+    @property
+    def translation_keys_sort_collation(self):
+        """Gets the translation_keys_sort_collation of this ProjectDetails.  # noqa: E501
+
+
+        :return: The translation_keys_sort_collation of this ProjectDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._translation_keys_sort_collation
+
+    @translation_keys_sort_collation.setter
+    def translation_keys_sort_collation(self, translation_keys_sort_collation):
+        """Sets the translation_keys_sort_collation of this ProjectDetails.
+
+
+        :param translation_keys_sort_collation: The translation_keys_sort_collation of this ProjectDetails.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["general_ci", "unicode_ci"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and translation_keys_sort_collation not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `translation_keys_sort_collation` ({0}), must be one of {1}"  # noqa: E501
+                .format(translation_keys_sort_collation, allowed_values)
+            )
+
+        self._translation_keys_sort_collation = translation_keys_sort_collation
 
     @property
     def job_locking_enabled(self):

@@ -67,6 +67,7 @@ class TestProjectDetails(unittest.TestCase):
                 autocomplete_job_enabled = False, 
                 default_encoding = 'UTF-8', 
                 cldr_version = 'legacy', 
+                translation_keys_sort_collation = 'unicode_ci', 
                 job_locking_enabled = False, 
                 placeholder_styles = ["rails_i18n","java_properties"], 
                 branch = {"name":"new-branch","created_at":"2015-01-28T09:52:53Z","updated_at":"2015-01-28T09:52:53Z","merged_at":"2015-01-28T09:52:53Z","merged_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"created_by":{"id":"abcd1234cdef1234abcd1234cdef1234","username":"joe.doe","name":"Joe Doe"},"state":"success","child_branches":["feature_2","feature_3"]}

@@ -983,6 +983,12 @@ class ProjectCreateParameters(object):
         :param translation_keys_sort_collation: The translation_keys_sort_collation of this ProjectCreateParameters.  # noqa: E501
         :type: str
         """
+        allowed_values = ["general_ci", "unicode_ci"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and translation_keys_sort_collation not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `translation_keys_sort_collation` ({0}), must be one of {1}"  # noqa: E501
+                .format(translation_keys_sort_collation, allowed_values)
+            )
 
         self._translation_keys_sort_collation = translation_keys_sort_collation
 

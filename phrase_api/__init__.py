@@ -241,6 +241,7 @@ from phrase_api.models.project import Project
 from phrase_api.models.project_create_parameters import ProjectCreateParameters
 from phrase_api.models.project_details import ProjectDetails
 from phrase_api.models.project_locales import ProjectLocales
+from phrase_api.models.project_member import ProjectMember
 from phrase_api.models.project_report import ProjectReport
 from phrase_api.models.project_short import ProjectShort
 from phrase_api.models.project_update_parameters import ProjectUpdateParameters

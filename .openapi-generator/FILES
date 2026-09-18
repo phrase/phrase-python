@@ -197,6 +197,7 @@ docs/Project.md
 docs/ProjectCreateParameters.md
 docs/ProjectDetails.md
 docs/ProjectLocales.md
+docs/ProjectMember.md
 docs/ProjectReport.md
 docs/ProjectShort.md
 docs/ProjectUpdateParameters.md
@@ -530,6 +531,7 @@ phrase_api/models/project.py
 phrase_api/models/project_create_parameters.py
 phrase_api/models/project_details.py
 phrase_api/models/project_locales.py
+phrase_api/models/project_member.py
 phrase_api/models/project_report.py
 phrase_api/models/project_short.py
 phrase_api/models/project_update_parameters.py
@@ -818,6 +820,7 @@ test/test_project.py
 test/test_project_create_parameters.py
 test/test_project_details.py
 test/test_project_locales.py
+test/test_project_member.py
 test/test_project_report.py
 test/test_project_short.py
 test/test_project_update_parameters.py

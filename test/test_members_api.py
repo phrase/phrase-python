@@ -55,6 +55,13 @@ class TestMembersApi(unittest.TestCase):
         """
         pass
 
+    def test_members_by_project(self):
+        """Test case for members_by_project
+
+        List project members  # noqa: E501
+        """
+        pass
+
     def test_members_list(self):
         """Test case for members_list
 

@@ -43,7 +43,7 @@ class TestProjectCreateParameters(unittest.TestCase):
                 shares_translation_memory = True, 
                 tm_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
                 term_base_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
-                project_image = '[B@18ae64b5', 
+                project_image = '[B@62cd39d3', 
                 remove_project_image = True, 
                 account_id = 'abcd1234', 
                 point_of_contact = 'abcd1234', 

@@ -249,6 +249,7 @@ docs/StyleguideDetails.md
 docs/StyleguidePreview.md
 docs/StyleguideUpdateParameters.md
 docs/Subscription.md
+docs/SupportedLanguagesApi.md
 docs/Tag.md
 docs/TagCreateParameters.md
 docs/TagWithStats.md
@@ -363,6 +364,7 @@ phrase_api/api/screenshots_api.py
 phrase_api/api/search_api.py
 phrase_api/api/spaces_api.py
 phrase_api/api/style_guides_api.py
+phrase_api/api/supported_languages_api.py
 phrase_api/api/tags_api.py
 phrase_api/api/teams_api.py
 phrase_api/api/translations_api.py
@@ -872,6 +874,7 @@ test/test_styleguide_details.py
 test/test_styleguide_preview.py
 test/test_styleguide_update_parameters.py
 test/test_subscription.py
+test/test_supported_languages_api.py
 test/test_tag.py
 test/test_tag_create_parameters.py
 test/test_tag_with_stats.py

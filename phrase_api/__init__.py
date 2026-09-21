@@ -68,6 +68,7 @@ from phrase_api.api.screenshots_api import ScreenshotsApi
 from phrase_api.api.search_api import SearchApi
 from phrase_api.api.spaces_api import SpacesApi
 from phrase_api.api.style_guides_api import StyleGuidesApi
+from phrase_api.api.supported_languages_api import SupportedLanguagesApi
 from phrase_api.api.tags_api import TagsApi
 from phrase_api.api.teams_api import TeamsApi
 from phrase_api.api.translations_api import TranslationsApi

@@ -390,6 +390,7 @@ Class | Method | HTTP request | Description
 *StyleGuidesApi* | [**styleguide_show**](docs/StyleGuidesApi.md#styleguide_show) | **GET** /projects/{project_id}/styleguides/{id} | Get a single style guide
 *StyleGuidesApi* | [**styleguide_update**](docs/StyleGuidesApi.md#styleguide_update) | **PATCH** /projects/{project_id}/styleguides/{id} | Update a style guide
 *StyleGuidesApi* | [**styleguides_list**](docs/StyleGuidesApi.md#styleguides_list) | **GET** /projects/{project_id}/styleguides | List style guides
+*SupportedLanguagesApi* | [**languages_list**](docs/SupportedLanguagesApi.md#languages_list) | **GET** /languages | List supported languages
 *TagsApi* | [**tag_create**](docs/TagsApi.md#tag_create) | **POST** /projects/{project_id}/tags | Create a tag
 *TagsApi* | [**tag_delete**](docs/TagsApi.md#tag_delete) | **DELETE** /projects/{project_id}/tags/{name} | Delete a tag
 *TagsApi* | [**tag_show**](docs/TagsApi.md#tag_show) | **GET** /projects/{project_id}/tags/{name} | Get a single tag

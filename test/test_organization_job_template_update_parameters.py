@@ -39,7 +39,8 @@ class TestOrganizationJobTemplateUpdateParameters(unittest.TestCase):
             return OrganizationJobTemplateUpdateParameters(
                 name = 'template', 
                 briefing = 'text', 
-                autotranslate = True
+                autotranslate = True, 
+                owner_id = ''
             )
         else :
             return OrganizationJobTemplateUpdateParameters(

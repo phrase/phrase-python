@@ -36,7 +36,8 @@ class JobTemplateUpdateParameters(object):
         'name': 'str',
         'briefing': 'str',
         'autotranslate': 'bool',
-        'source_locale_id': 'str'
+        'source_locale_id': 'str',
+        'owner_id': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class JobTemplateUpdateParameters(object):
         'name': 'name',
         'briefing': 'briefing',
         'autotranslate': 'autotranslate',
-        'source_locale_id': 'source_locale_id'
+        'source_locale_id': 'source_locale_id',
+        'owner_id': 'owner_id'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, autotranslate=None, source_locale_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, briefing=None, autotranslate=None, source_locale_id=None, owner_id=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplateUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,6 +60,7 @@ class JobTemplateUpdateParameters(object):
         self._briefing = None
         self._autotranslate = None
         self._source_locale_id = None
+        self._owner_id = None
         self.discriminator = None
 
         if branch is not None:
@@ -69,6 +72,8 @@ class JobTemplateUpdateParameters(object):
             self.autotranslate = autotranslate
         if source_locale_id is not None:
             self.source_locale_id = source_locale_id
+        if owner_id is not None:
+            self.owner_id = owner_id
 
     @property
     def branch(self):
@@ -186,6 +191,29 @@ class JobTemplateUpdateParameters(object):
         """
 
         self._source_locale_id = source_locale_id
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this JobTemplateUpdateParameters.  # noqa: E501
+
+        Code of the account member to set as the job template owner. The referenced user must also be a member of the project; passing the code of an account member who is not a project member returns a 404. Pass an empty string to clear a previously set owner; when blank, jobs created from this template will default to assigning the job creator as owner.   # noqa: E501
+
+        :return: The owner_id of this JobTemplateUpdateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this JobTemplateUpdateParameters.
+
+        Code of the account member to set as the job template owner. The referenced user must also be a member of the project; passing the code of an account member who is not a project member returns a 404. Pass an empty string to clear a previously set owner; when blank, jobs created from this template will default to assigning the job creator as owner.   # noqa: E501
+
+        :param owner_id: The owner_id of this JobTemplateUpdateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

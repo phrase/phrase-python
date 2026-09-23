@@ -34,16 +34,18 @@ class OrganizationJobTemplateCreateParameters(object):
     openapi_types = {
         'name': 'str',
         'briefing': 'str',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'owner_id': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'briefing': 'briefing',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'owner_id': 'owner_id'
     }
 
-    def __init__(self, name=None, briefing=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, briefing=None, autotranslate=None, owner_id=None, local_vars_configuration=None):  # noqa: E501
         """OrganizationJobTemplateCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -52,6 +54,7 @@ class OrganizationJobTemplateCreateParameters(object):
         self._name = None
         self._briefing = None
         self._autotranslate = None
+        self._owner_id = None
         self.discriminator = None
 
         self.name = name
@@ -59,6 +62,8 @@ class OrganizationJobTemplateCreateParameters(object):
             self.briefing = briefing
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if owner_id is not None:
+            self.owner_id = owner_id
 
     @property
     def name(self):
@@ -130,6 +135,29 @@ class OrganizationJobTemplateCreateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this OrganizationJobTemplateCreateParameters.  # noqa: E501
+
+        Code of the account member to set as the job template owner. When omitted or blank, no owner is pre-set; the user who creates a job from this template is assigned as its owner at job-creation time.   # noqa: E501
+
+        :return: The owner_id of this OrganizationJobTemplateCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this OrganizationJobTemplateCreateParameters.
+
+        Code of the account member to set as the job template owner. When omitted or blank, no owner is pre-set; the user who creates a job from this template is assigned as its owner at job-creation time.   # noqa: E501
+
+        :param owner_id: The owner_id of this OrganizationJobTemplateCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

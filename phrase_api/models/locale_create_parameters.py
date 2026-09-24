@@ -136,7 +136,7 @@ class LocaleCreateParameters(object):
     def name(self):
         """Gets the name of this LocaleCreateParameters.  # noqa: E501
 
-        Locale name  # noqa: E501
+        Locale name. Must be unique per project.  # noqa: E501
 
         :return: The name of this LocaleCreateParameters.  # noqa: E501
         :rtype: str
@@ -147,7 +147,7 @@ class LocaleCreateParameters(object):
     def name(self, name):
         """Sets the name of this LocaleCreateParameters.
 
-        Locale name  # noqa: E501
+        Locale name. Must be unique per project.  # noqa: E501
 
         :param name: The name of this LocaleCreateParameters.  # noqa: E501
         :type: str
@@ -161,7 +161,7 @@ class LocaleCreateParameters(object):
     def code(self):
         """Gets the code of this LocaleCreateParameters.  # noqa: E501
 
-        Locale ISO code  # noqa: E501
+        Locale ISO code. Unlike `name`, `code` is not required to be unique per project - creating a locale whose `code` duplicates an existing locale's `code` in the same project will succeed rather than error, resulting in two locales that share the same code.  # noqa: E501
 
         :return: The code of this LocaleCreateParameters.  # noqa: E501
         :rtype: str
@@ -172,7 +172,7 @@ class LocaleCreateParameters(object):
     def code(self, code):
         """Sets the code of this LocaleCreateParameters.
 
-        Locale ISO code  # noqa: E501
+        Locale ISO code. Unlike `name`, `code` is not required to be unique per project - creating a locale whose `code` duplicates an existing locale's `code` in the same project will succeed rather than error, resulting in two locales that share the same code.  # noqa: E501
 
         :param code: The code of this LocaleCreateParameters.  # noqa: E501
         :type: str

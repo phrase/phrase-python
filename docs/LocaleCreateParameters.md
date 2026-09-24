@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **branch** | **str** | specify the branch to use | [optional] 
-**name** | **str** | Locale name | 
-**code** | **str** | Locale ISO code | 
+**name** | **str** | Locale name. Must be unique per project. | 
+**code** | **str** | Locale ISO code. Unlike &#x60;name&#x60;, &#x60;code&#x60; is not required to be unique per project - creating a locale whose &#x60;code&#x60; duplicates an existing locale&#39;s &#x60;code&#x60; in the same project will succeed rather than error, resulting in two locales that share the same code. | 
 **default** | **bool** | Indicates whether locale is the default locale. If set to true, the previous default locale the project is no longer the default locale. | [optional] 
 **main** | **bool** | Indicates whether locale is a main locale. Main locales are part of the [Verification System](https://support.phrase.com/hc/en-us/articles/5784094755484) feature. | [optional] 
 **rtl** | **bool** | Indicates whether locale is a RTL (Right-to-Left) locale. | [optional] 

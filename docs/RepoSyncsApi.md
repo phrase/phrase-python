@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repo_sync_list**
-> List[RepoSync] repo_sync_list(account_id, x_phrase_app_otp=x_phrase_app_otp)
+> List[RepoSync] repo_sync_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
 
 Get Repo Syncs
 
@@ -398,10 +398,12 @@ with phrase_api.ApiClient(configuration) as api_client:
     api_instance = phrase_api.RepoSyncsApi(api_client)
     account_id = 'account_id_example' # str | Account ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    page = 1 # int | Page number
+    per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
 
     try:
         # Get Repo Syncs
-        api_response = api_instance.repo_sync_list(account_id, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.repo_sync_list(account_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RepoSyncsApi->repo_sync_list: %s\n" % e)
@@ -414,6 +416,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **str**| Account ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **page** | **int**| Page number | [optional] 
+ **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
 
 ### Return type
 

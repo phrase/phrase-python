@@ -36,9 +36,9 @@ class ReportsApi(object):
         self.api_client = api_client
 
     def report_locales_list(self, project_id, **kwargs):  # noqa: E501
-        """List Locale Reports  # noqa: E501
+        """List Locale Reports (word count, character count, translation statistics)  # noqa: E501
 
-        List all locale reports for the given project  # noqa: E501
+        List all locale reports for the given project. Each report includes translation statistics per locale, including word count and character count fields (`source_word_count`, `word_count`, `word_count_unverified`, `word_count_missing`) as well as translation completion statistics (`keys_count`, `completed_translations_count`, `untranslated_keys_count`, `unverified_translations_count`, `reviewed_translations_count`, and their percentages). Use the `tag` parameter to scope the report to a specific job (e.g. its job tag) to get job-scoped word count statistics.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.report_locales_list(project_id, async_req=True)
@@ -67,9 +67,9 @@ class ReportsApi(object):
         return self.report_locales_list_with_http_info(project_id, **kwargs)  # noqa: E501
 
     def report_locales_list_with_http_info(self, project_id, **kwargs):  # noqa: E501
-        """List Locale Reports  # noqa: E501
+        """List Locale Reports (word count, character count, translation statistics)  # noqa: E501
 
-        List all locale reports for the given project  # noqa: E501
+        List all locale reports for the given project. Each report includes translation statistics per locale, including word count and character count fields (`source_word_count`, `word_count`, `word_count_unverified`, `word_count_missing`) as well as translation completion statistics (`keys_count`, `completed_translations_count`, `untranslated_keys_count`, `unverified_translations_count`, `reviewed_translations_count`, and their percentages). Use the `tag` parameter to scope the report to a specific job (e.g. its job tag) to get job-scoped word count statistics.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.report_locales_list_with_http_info(project_id, async_req=True)

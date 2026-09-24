@@ -30,7 +30,7 @@ class TestReportsApi(unittest.TestCase):
     def test_report_locales_list(self):
         """Test case for report_locales_list
 
-        List Locale Reports  # noqa: E501
+        List Locale Reports (word count, character count, translation statistics)  # noqa: E501
         """
         pass
 

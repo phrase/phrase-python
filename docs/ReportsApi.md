@@ -4,16 +4,16 @@ All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**report_locales_list**](ReportsApi.md#report_locales_list) | **GET** /projects/{project_id}/report/locales | List Locale Reports
+[**report_locales_list**](ReportsApi.md#report_locales_list) | **GET** /projects/{project_id}/report/locales | List Locale Reports (word count, character count, translation statistics)
 [**report_show**](ReportsApi.md#report_show) | **GET** /projects/{project_id}/report | Get Project Report
 
 
 # **report_locales_list**
 > List[LocaleReport] report_locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, locale_codes=locale_codes, tag=tag, branch=branch)
 
-List Locale Reports
+List Locale Reports (word count, character count, translation statistics)
 
-List all locale reports for the given project
+List all locale reports for the given project. Each report includes translation statistics per locale, including word count and character count fields (`source_word_count`, `word_count`, `word_count_unverified`, `word_count_missing`) as well as translation completion statistics (`keys_count`, `completed_translations_count`, `untranslated_keys_count`, `unverified_translations_count`, `reviewed_translations_count`, and their percentages). Use the `tag` parameter to scope the report to a specific job (e.g. its job tag) to get job-scoped word count statistics.
 
 ### Example
 
@@ -41,7 +41,7 @@ with phrase_api.ApiClient(configuration) as api_client:
     branch = 'my-feature-branch' # str | specify the branch to use
 
     try:
-        # List Locale Reports
+        # List Locale Reports (word count, character count, translation statistics)
         api_response = api_instance.report_locales_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, locale_codes=locale_codes, tag=tag, branch=branch)
         pprint(api_response)
     except ApiException as e:

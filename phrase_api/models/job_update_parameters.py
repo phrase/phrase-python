@@ -32,7 +32,6 @@ class JobUpdateParameters(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'branch': 'str',
         'name': 'str',
         'briefing': 'str',
         'due_date': 'datetime',
@@ -42,7 +41,6 @@ class JobUpdateParameters(object):
     }
 
     attribute_map = {
-        'branch': 'branch',
         'name': 'name',
         'briefing': 'briefing',
         'due_date': 'due_date',
@@ -51,13 +49,12 @@ class JobUpdateParameters(object):
         'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, briefing=None, due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, briefing=None, due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._branch = None
         self._name = None
         self._briefing = None
         self._due_date = None
@@ -66,8 +63,6 @@ class JobUpdateParameters(object):
         self._autotranslate = None
         self.discriminator = None
 
-        if branch is not None:
-            self.branch = branch
         if name is not None:
             self.name = name
         if briefing is not None:
@@ -79,29 +74,6 @@ class JobUpdateParameters(object):
             self.target_locale_ids = target_locale_ids
         if autotranslate is not None:
             self.autotranslate = autotranslate
-
-    @property
-    def branch(self):
-        """Gets the branch of this JobUpdateParameters.  # noqa: E501
-
-        specify the branch to use  # noqa: E501
-
-        :return: The branch of this JobUpdateParameters.  # noqa: E501
-        :rtype: str
-        """
-        return self._branch
-
-    @branch.setter
-    def branch(self, branch):
-        """Sets the branch of this JobUpdateParameters.
-
-        specify the branch to use  # noqa: E501
-
-        :param branch: The branch of this JobUpdateParameters.  # noqa: E501
-        :type: str
-        """
-
-        self._branch = branch
 
     @property
     def name(self):

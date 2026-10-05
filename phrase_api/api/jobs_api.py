@@ -1424,6 +1424,7 @@ class JobsApi(object):
         :param str id: ID (required)
         :param JobUpdateParameters job_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: Branch to use
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1452,6 +1453,7 @@ class JobsApi(object):
         :param str id: ID (required)
         :param JobUpdateParameters job_update_parameters: (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
+        :param str branch: Branch to use
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1472,7 +1474,8 @@ class JobsApi(object):
             'project_id',
             'id',
             'job_update_parameters',
-            'x_phrase_app_otp'
+            'x_phrase_app_otp',
+            'branch'
         ]
         all_params.extend(
             [
@@ -1513,6 +1516,8 @@ class JobsApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'branch' in local_var_params and local_var_params['branch'] is not None:  # noqa: E501
+            query_params.append(('branch', local_var_params['branch']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

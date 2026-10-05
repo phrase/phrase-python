@@ -743,7 +743,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **job_update**
-> JobDetails job_update(project_id, id, job_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+> JobDetails job_update(project_id, id, job_update_parameters, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
 
 Update a job
 
@@ -770,10 +770,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     id = 'id_example' # str | ID (required)
     job_update_parameters = phrase_api.JobUpdateParameters() # JobUpdateParameters |  (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
+    branch = 'my-feature-branch' # str | Branch to use
 
     try:
         # Update a job
-        api_response = api_instance.job_update(project_id, id, job_update_parameters, x_phrase_app_otp=x_phrase_app_otp)
+        api_response = api_instance.job_update(project_id, id, job_update_parameters, x_phrase_app_otp=x_phrase_app_otp, branch=branch)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling JobsApi->job_update: %s\n" % e)
@@ -788,6 +789,7 @@ Name | Type | Description  | Notes
  **id** | **str**| ID | 
  **job_update_parameters** | [**JobUpdateParameters**](JobUpdateParameters.md)|  | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
+ **branch** | **str**| Branch to use | [optional] 
 
 ### Return type
 

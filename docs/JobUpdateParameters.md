@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**branch** | **str** | specify the branch to use | [optional] 
 **name** | **str** | Job name | [optional] 
 **briefing** | **str** | Briefing for the translators | [optional] 
 **due_date** | **datetime** | Date the job should be finished | [optional] 

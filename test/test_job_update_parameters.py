@@ -37,7 +37,6 @@ class TestJobUpdateParameters(unittest.TestCase):
         """
         if include_optional :
             return JobUpdateParameters(
-                branch = 'my-feature-branch', 
                 name = 'de', 
                 briefing = 'de-DE', 
                 due_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

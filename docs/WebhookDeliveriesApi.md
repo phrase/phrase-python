@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **webhook_deliveries_list**
-> List[WebhookDelivery] webhook_deliveries_list(project_id, webhook_id, x_phrase_app_otp=x_phrase_app_otp, response_status_codes=response_status_codes)
+> List[WebhookDelivery] webhook_deliveries_list(project_id, webhook_id, x_phrase_app_otp=x_phrase_app_otp, response_status_codes=response_status_codes, status=status)
 
 List webhook deliveries
 
@@ -37,10 +37,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     webhook_id = 'webhook_id_example' # str | Webhook ID (required)
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     response_status_codes = 'response_status_codes_example' # str | List of Response Status Codes
+    status = 'failed' # str | Filter deliveries by outcome. `success` returns deliveries with a 2xx response code or a soft error. `failed` returns all other deliveries, including exceptions and timeouts without a response code. 
 
     try:
         # List webhook deliveries
-        api_response = api_instance.webhook_deliveries_list(project_id, webhook_id, x_phrase_app_otp=x_phrase_app_otp, response_status_codes=response_status_codes)
+        api_response = api_instance.webhook_deliveries_list(project_id, webhook_id, x_phrase_app_otp=x_phrase_app_otp, response_status_codes=response_status_codes, status=status)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling WebhookDeliveriesApi->webhook_deliveries_list: %s\n" % e)
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **webhook_id** | **str**| Webhook ID | 
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **response_status_codes** | **str**| List of Response Status Codes | [optional] 
+ **status** | **str**| Filter deliveries by outcome. &#x60;success&#x60; returns deliveries with a 2xx response code or a soft error. &#x60;failed&#x60; returns all other deliveries, including exceptions and timeouts without a response code.  | [optional] 
 
 ### Return type
 

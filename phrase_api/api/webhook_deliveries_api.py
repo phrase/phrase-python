@@ -49,6 +49,7 @@ class WebhookDeliveriesApi(object):
         :param str webhook_id: Webhook ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str response_status_codes: List of Response Status Codes
+        :param str status: Filter deliveries by outcome. `success` returns deliveries with a 2xx response code or a soft error. `failed` returns all other deliveries, including exceptions and timeouts without a response code. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -77,6 +78,7 @@ class WebhookDeliveriesApi(object):
         :param str webhook_id: Webhook ID (required)
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param str response_status_codes: List of Response Status Codes
+        :param str status: Filter deliveries by outcome. `success` returns deliveries with a 2xx response code or a soft error. `failed` returns all other deliveries, including exceptions and timeouts without a response code. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -97,7 +99,8 @@ class WebhookDeliveriesApi(object):
             'project_id',
             'webhook_id',
             'x_phrase_app_otp',
-            'response_status_codes'
+            'response_status_codes',
+            'status'
         ]
         all_params.extend(
             [
@@ -136,6 +139,8 @@ class WebhookDeliveriesApi(object):
         query_params = []
         if 'response_status_codes' in local_var_params and local_var_params['response_status_codes'] is not None:  # noqa: E501
             query_params.append(('response_status_codes', local_var_params['response_status_codes']))  # noqa: E501
+        if 'status' in local_var_params and local_var_params['status'] is not None:  # noqa: E501
+            query_params.append(('status', local_var_params['status']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

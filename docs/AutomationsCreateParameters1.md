@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **time_zone** | **str** | along with cron_schedule, specifies when the scheduled automation is supposed to run | [optional] 
 **job_owner_id** | **str** | User ID of the job owner that newly created jobs are assigned to.  | [optional] 
 **include_only_updated_locales** | **bool** | When &#x60;true&#x60;, the automation only acts on locales that changed since its last run.  | [optional] 
+**include_branches** | **bool** | When true, the automation also runs against branches of the configured projects. The designated job owner must have permission to create jobs in branches for every configured project; otherwise the request is rejected with 403.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

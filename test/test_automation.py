@@ -51,6 +51,7 @@ class TestAutomation(unittest.TestCase):
                 job_template_id = '', 
                 job_owner_id = '', 
                 include_only_updated_locales = True, 
+                include_branches = True, 
                 tags = [
                     ''
                     ], 

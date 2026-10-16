@@ -41,7 +41,8 @@ class AutomationsCreateParameters1(object):
         'cron_schedule': 'str',
         'time_zone': 'str',
         'job_owner_id': 'str',
-        'include_only_updated_locales': 'bool'
+        'include_only_updated_locales': 'bool',
+        'include_branches': 'bool'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class AutomationsCreateParameters1(object):
         'cron_schedule': 'cron_schedule',
         'time_zone': 'time_zone',
         'job_owner_id': 'job_owner_id',
-        'include_only_updated_locales': 'include_only_updated_locales'
+        'include_only_updated_locales': 'include_only_updated_locales',
+        'include_branches': 'include_branches'
     }
 
-    def __init__(self, name=None, trigger=None, project_ids=None, job_template_id=None, status_filters=None, tags=None, cron_schedule=None, time_zone=None, job_owner_id=None, include_only_updated_locales=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, trigger=None, project_ids=None, job_template_id=None, status_filters=None, tags=None, cron_schedule=None, time_zone=None, job_owner_id=None, include_only_updated_locales=None, include_branches=None, local_vars_configuration=None):  # noqa: E501
         """AutomationsCreateParameters1 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,6 +75,7 @@ class AutomationsCreateParameters1(object):
         self._time_zone = None
         self._job_owner_id = None
         self._include_only_updated_locales = None
+        self._include_branches = None
         self.discriminator = None
 
         self.name = name
@@ -91,6 +94,8 @@ class AutomationsCreateParameters1(object):
             self.job_owner_id = job_owner_id
         if include_only_updated_locales is not None:
             self.include_only_updated_locales = include_only_updated_locales
+        if include_branches is not None:
+            self.include_branches = include_branches
 
     @property
     def name(self):
@@ -341,6 +346,29 @@ class AutomationsCreateParameters1(object):
         """
 
         self._include_only_updated_locales = include_only_updated_locales
+
+    @property
+    def include_branches(self):
+        """Gets the include_branches of this AutomationsCreateParameters1.  # noqa: E501
+
+        When true, the automation also runs against branches of the configured projects. The designated job owner must have permission to create jobs in branches for every configured project; otherwise the request is rejected with 403.   # noqa: E501
+
+        :return: The include_branches of this AutomationsCreateParameters1.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_branches
+
+    @include_branches.setter
+    def include_branches(self, include_branches):
+        """Sets the include_branches of this AutomationsCreateParameters1.
+
+        When true, the automation also runs against branches of the configured projects. The designated job owner must have permission to create jobs in branches for every configured project; otherwise the request is rejected with 403.   # noqa: E501
+
+        :param include_branches: The include_branches of this AutomationsCreateParameters1.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_branches = include_branches
 
     def to_dict(self):
         """Returns the model properties as a dict"""

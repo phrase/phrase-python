@@ -42,6 +42,7 @@ class Automation(object):
         'job_template_id': 'str',
         'job_owner_id': 'str',
         'include_only_updated_locales': 'bool',
+        'include_branches': 'bool',
         'tags': 'List[str]',
         'cron_schedule': 'str',
         'time_zone': 'str',
@@ -61,6 +62,7 @@ class Automation(object):
         'job_template_id': 'job_template_id',
         'job_owner_id': 'job_owner_id',
         'include_only_updated_locales': 'include_only_updated_locales',
+        'include_branches': 'include_branches',
         'tags': 'tags',
         'cron_schedule': 'cron_schedule',
         'time_zone': 'time_zone',
@@ -69,7 +71,7 @@ class Automation(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, status=None, trigger=None, status_filters=None, project_id=None, project_ids=None, job_template_id=None, job_owner_id=None, include_only_updated_locales=None, tags=None, cron_schedule=None, time_zone=None, account=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, status=None, trigger=None, status_filters=None, project_id=None, project_ids=None, job_template_id=None, job_owner_id=None, include_only_updated_locales=None, include_branches=None, tags=None, cron_schedule=None, time_zone=None, account=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Automation - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -85,6 +87,7 @@ class Automation(object):
         self._job_template_id = None
         self._job_owner_id = None
         self._include_only_updated_locales = None
+        self._include_branches = None
         self._tags = None
         self._cron_schedule = None
         self._time_zone = None
@@ -112,6 +115,8 @@ class Automation(object):
         self.job_owner_id = job_owner_id
         if include_only_updated_locales is not None:
             self.include_only_updated_locales = include_only_updated_locales
+        if include_branches is not None:
+            self.include_branches = include_branches
         if tags is not None:
             self.tags = tags
         if cron_schedule is not None:
@@ -362,6 +367,29 @@ class Automation(object):
         """
 
         self._include_only_updated_locales = include_only_updated_locales
+
+    @property
+    def include_branches(self):
+        """Gets the include_branches of this Automation.  # noqa: E501
+
+        When true, the automation targets branches of the configured projects in addition to the main project. Requires the designated job owner to have permission to create jobs in branches for every configured project.   # noqa: E501
+
+        :return: The include_branches of this Automation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_branches
+
+    @include_branches.setter
+    def include_branches(self, include_branches):
+        """Sets the include_branches of this Automation.
+
+        When true, the automation targets branches of the configured projects in addition to the main project. Requires the designated job owner to have permission to create jobs in branches for every configured project.   # noqa: E501
+
+        :param include_branches: The include_branches of this Automation.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_branches = include_branches
 
     @property
     def tags(self):

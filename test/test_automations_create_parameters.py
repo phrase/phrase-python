@@ -48,7 +48,8 @@ class TestAutomationsCreateParameters(unittest.TestCase):
                 cron_schedule = '00 13 * * 1,2', 
                 time_zone = 'GMT', 
                 job_owner_id = 'abcd1234abcd1234abcd1234abcd1234', 
-                include_only_updated_locales = False
+                include_only_updated_locales = False, 
+                include_branches = True
             )
         else :
             return AutomationsCreateParameters(

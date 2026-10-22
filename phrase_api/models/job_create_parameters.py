@@ -37,6 +37,7 @@ class JobCreateParameters(object):
         'source_locale_id': 'str',
         'briefing': 'str',
         'due_date': 'datetime',
+        'review_due_date': 'datetime',
         'ticket_url': 'str',
         'tags': 'List[str]',
         'translation_key_ids': 'List[str]',
@@ -51,6 +52,7 @@ class JobCreateParameters(object):
         'source_locale_id': 'source_locale_id',
         'briefing': 'briefing',
         'due_date': 'due_date',
+        'review_due_date': 'review_due_date',
         'ticket_url': 'ticket_url',
         'tags': 'tags',
         'translation_key_ids': 'translation_key_ids',
@@ -59,7 +61,7 @@ class JobCreateParameters(object):
         'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, ticket_url=None, tags=None, translation_key_ids=None, target_locale_ids=None, job_template_id=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, review_due_date=None, ticket_url=None, tags=None, translation_key_ids=None, target_locale_ids=None, job_template_id=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class JobCreateParameters(object):
         self._source_locale_id = None
         self._briefing = None
         self._due_date = None
+        self._review_due_date = None
         self._ticket_url = None
         self._tags = None
         self._translation_key_ids = None
@@ -86,6 +89,8 @@ class JobCreateParameters(object):
         if briefing is not None:
             self.briefing = briefing
         self.due_date = due_date
+        if review_due_date is not None:
+            self.review_due_date = review_due_date
         if ticket_url is not None:
             self.ticket_url = ticket_url
         if tags is not None:
@@ -215,6 +220,29 @@ class JobCreateParameters(object):
         """
 
         self._due_date = due_date
+
+    @property
+    def review_due_date(self):
+        """Gets the review_due_date of this JobCreateParameters.  # noqa: E501
+
+        Date the review of the job should be finished. Must not be before `due_date`.  # noqa: E501
+
+        :return: The review_due_date of this JobCreateParameters.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._review_due_date
+
+    @review_due_date.setter
+    def review_due_date(self, review_due_date):
+        """Sets the review_due_date of this JobCreateParameters.
+
+        Date the review of the job should be finished. Must not be before `due_date`.  # noqa: E501
+
+        :param review_due_date: The review_due_date of this JobCreateParameters.  # noqa: E501
+        :type: datetime
+        """
+
+        self._review_due_date = review_due_date
 
     @property
     def ticket_url(self):

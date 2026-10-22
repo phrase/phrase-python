@@ -35,6 +35,7 @@ class JobUpdateParameters(object):
         'name': 'str',
         'briefing': 'str',
         'due_date': 'datetime',
+        'review_due_date': 'datetime',
         'ticket_url': 'str',
         'target_locale_ids': 'List[str]',
         'autotranslate': 'bool'
@@ -44,12 +45,13 @@ class JobUpdateParameters(object):
         'name': 'name',
         'briefing': 'briefing',
         'due_date': 'due_date',
+        'review_due_date': 'review_due_date',
         'ticket_url': 'ticket_url',
         'target_locale_ids': 'target_locale_ids',
         'autotranslate': 'autotranslate'
     }
 
-    def __init__(self, name=None, briefing=None, due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, briefing=None, due_date=None, review_due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
         """JobUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -58,6 +60,7 @@ class JobUpdateParameters(object):
         self._name = None
         self._briefing = None
         self._due_date = None
+        self._review_due_date = None
         self._ticket_url = None
         self._target_locale_ids = None
         self._autotranslate = None
@@ -68,6 +71,8 @@ class JobUpdateParameters(object):
         if briefing is not None:
             self.briefing = briefing
         self.due_date = due_date
+        if review_due_date is not None:
+            self.review_due_date = review_due_date
         if ticket_url is not None:
             self.ticket_url = ticket_url
         if target_locale_ids is not None:
@@ -143,6 +148,29 @@ class JobUpdateParameters(object):
         """
 
         self._due_date = due_date
+
+    @property
+    def review_due_date(self):
+        """Gets the review_due_date of this JobUpdateParameters.  # noqa: E501
+
+        Date the review of the job should be finished. Must not be before `due_date`.  # noqa: E501
+
+        :return: The review_due_date of this JobUpdateParameters.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._review_due_date
+
+    @review_due_date.setter
+    def review_due_date(self, review_due_date):
+        """Sets the review_due_date of this JobUpdateParameters.
+
+        Date the review of the job should be finished. Must not be before `due_date`.  # noqa: E501
+
+        :param review_due_date: The review_due_date of this JobUpdateParameters.  # noqa: E501
+        :type: datetime
+        """
+
+        self._review_due_date = review_due_date
 
     @property
     def ticket_url(self):

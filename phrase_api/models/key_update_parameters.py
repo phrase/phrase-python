@@ -106,8 +106,7 @@ class KeyUpdateParameters(object):
             self.branch = branch
         if name is not None:
             self.name = name
-        if description is not None:
-            self.description = description
+        self.description = description
         if plural is not None:
             self.plural = plural
         if use_ordinal_rules is not None:
@@ -191,7 +190,7 @@ class KeyUpdateParameters(object):
     def description(self):
         """Gets the description of this KeyUpdateParameters.  # noqa: E501
 
-        Key description (usually includes contextual information for translators)  # noqa: E501
+        Key description (usually includes contextual information for translators). Send an empty string or `null` to clear the description; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The description of this KeyUpdateParameters.  # noqa: E501
         :rtype: str
@@ -202,7 +201,7 @@ class KeyUpdateParameters(object):
     def description(self, description):
         """Sets the description of this KeyUpdateParameters.
 
-        Key description (usually includes contextual information for translators)  # noqa: E501
+        Key description (usually includes contextual information for translators). Send an empty string or `null` to clear the description; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param description: The description of this KeyUpdateParameters.  # noqa: E501
         :type: str

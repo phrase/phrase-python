@@ -71,8 +71,7 @@ class TranslationUpdateParameters(object):
 
         if branch is not None:
             self.branch = branch
-        if content is not None:
-            self.content = content
+        self.content = content
         if plural_suffix is not None:
             self.plural_suffix = plural_suffix
         if unverified is not None:
@@ -113,7 +112,7 @@ class TranslationUpdateParameters(object):
     def content(self):
         """Gets the content of this TranslationUpdateParameters.  # noqa: E501
 
-        Translation content  # noqa: E501
+        Translation content. Send an empty string or `null` to clear the translation's content; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The content of this TranslationUpdateParameters.  # noqa: E501
         :rtype: str
@@ -124,7 +123,7 @@ class TranslationUpdateParameters(object):
     def content(self, content):
         """Sets the content of this TranslationUpdateParameters.
 
-        Translation content  # noqa: E501
+        Translation content. Send an empty string or `null` to clear the translation's content; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param content: The content of this TranslationUpdateParameters.  # noqa: E501
         :type: str

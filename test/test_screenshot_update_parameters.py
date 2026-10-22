@@ -40,7 +40,7 @@ class TestScreenshotUpdateParameters(unittest.TestCase):
                 branch = 'my-feature-branch', 
                 name = 'A screenshot name', 
                 description = 'A screenshot description', 
-                filename = '[B@53eb6ac5'
+                filename = '[B@656fcf12'
             )
         else :
             return ScreenshotUpdateParameters(

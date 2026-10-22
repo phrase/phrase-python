@@ -34,6 +34,7 @@ class Glossary(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
+        'terms_count': 'int',
         'projects': 'List[ProjectShort]',
         'spaces': 'List[Space]',
         'created_at': 'datetime',
@@ -43,13 +44,14 @@ class Glossary(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'terms_count': 'terms_count',
         'projects': 'projects',
         'spaces': 'spaces',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, projects=None, spaces=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, terms_count=None, projects=None, spaces=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Glossary - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class Glossary(object):
 
         self._id = None
         self._name = None
+        self._terms_count = None
         self._projects = None
         self._spaces = None
         self._created_at = None
@@ -67,6 +70,8 @@ class Glossary(object):
             self.id = id
         if name is not None:
             self.name = name
+        if terms_count is not None:
+            self.terms_count = terms_count
         if projects is not None:
             self.projects = projects
         if spaces is not None:
@@ -117,6 +122,29 @@ class Glossary(object):
         """
 
         self._name = name
+
+    @property
+    def terms_count(self):
+        """Gets the terms_count of this Glossary.  # noqa: E501
+
+        Number of terms in the glossary.  # noqa: E501
+
+        :return: The terms_count of this Glossary.  # noqa: E501
+        :rtype: int
+        """
+        return self._terms_count
+
+    @terms_count.setter
+    def terms_count(self, terms_count):
+        """Sets the terms_count of this Glossary.
+
+        Number of terms in the glossary.  # noqa: E501
+
+        :param terms_count: The terms_count of this Glossary.  # noqa: E501
+        :type: int
+        """
+
+        self._terms_count = terms_count
 
     @property
     def projects(self):

@@ -1305,7 +1305,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `unverified:{true|false}` for verification status * `tags:XYZ` for tags on the translation * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: * `id:translation_id,...` for queries on a comma-separated list of translation ids * `locale.id:locale_id,...` for queries on a comma-separated list of locale ids * `locale.name:locale_name,...` for queries on a comma-separated list of locale names * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1338,7 +1338,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `unverified:{true|false}` for verification status * `tags:XYZ` for tags on the translation * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: * `id:translation_id,...` for queries on a comma-separated list of translation ids * `locale.id:locale_id,...` for queries on a comma-separated list of locale ids * `locale.name:locale_name,...` for queries on a comma-separated list of locale names * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1463,7 +1463,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: - `id:translation_id,...` for queries on a comma-separated list of ids - `unverified:{true|false}` for verification status - `tags:XYZ` for tags on the translation - `excluded:{true|false}` for exclusion status - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: * `id:translation_id,...` for queries on a comma-separated list of translation ids * `key.id:key_id,...` for queries on a comma-separated list of translation key ids * `key.name:key_name,...` for queries on a comma-separated list of translation key names * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1496,7 +1496,7 @@ class TranslationsApi(object):
         :param str branch: specify the branch to use
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: - `id:translation_id,...` for queries on a comma-separated list of ids - `unverified:{true|false}` for verification status - `tags:XYZ` for tags on the translation - `excluded:{true|false}` for exclusion status - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries  Find more examples [here](/en/api/strings/usage-examples). 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: * `id:translation_id,...` for queries on a comma-separated list of translation ids * `key.id:key_id,...` for queries on a comma-separated list of translation key ids * `key.name:key_name,...` for queries on a comma-separated list of translation key names * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1888,7 +1888,7 @@ class TranslationsApi(object):
         :param str locale_id: Filter translations to those for the given locale (locale code or id). Equivalent to calling `GET /projects/{project_id}/locales/{locale_id}/translations`.
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: * `id:translation_id,...` for queries on a comma-separated list of translation ids * `key.id:key_id,...` for queries on a comma-separated list of translation key ids * `key.name:key_name,...` for queries on a comma-separated list of translation key names * `locale.id:locale_id,...` for queries on a comma-separated list of locale ids * `locale.name:locale_name,...` for queries on a comma-separated list of locale names * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1924,7 +1924,7 @@ class TranslationsApi(object):
         :param str locale_id: Filter translations to those for the given locale (locale code or id). Equivalent to calling `GET /projects/{project_id}/locales/{locale_id}/translations`.
         :param str sort: Sort criteria. Can be one of: key_name, created_at, updated_at.
         :param str order: Order direction. Can be one of: asc, desc.
-        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query:  * `id:translation_id,...` for queries on a comma-separated list of ids * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
+        :param str q: Specify a query to find translations by content (including wildcards).  *Note: Search is limited to 10000 results and may not include recently updated data (depending on the project size).*  The following qualifiers are supported in the query: * `id:translation_id,...` for queries on a comma-separated list of translation ids * `key.id:key_id,...` for queries on a comma-separated list of translation key ids * `key.name:key_name,...` for queries on a comma-separated list of translation key names * `locale.id:locale_id,...` for queries on a comma-separated list of locale ids * `locale.name:locale_name,...` for queries on a comma-separated list of locale names * `tags:XYZ` for tags on the translation * `unverified:{true|false}` for verification status * `excluded:{true|false}` for exclusion status * `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries * `reviewed_after:2013-02-21T00:00:00Z` for fetching translations that were reviewed after the given timestamp  Find more examples [here](/en/api/strings/usage-examples). 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2445,7 +2445,7 @@ class TranslationsApi(object):
     def translations_unverify_collection(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
         """Unverify translations by query  # noqa: E501
 
-        Mark translations matching query as unverified.  # noqa: E501
+        Mark translations matching query as unverified.  To unverify the translations of specific keys, filter by key id (and optionally locale) directly, for example `key.id:KEY_ID_1,KEY_ID_2 locale.id:LOCALE_ID`. There is no need to look up translation ids first.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_unverify_collection(project_id, translations_unverify_parameters, async_req=True)
@@ -2472,7 +2472,7 @@ class TranslationsApi(object):
     def translations_unverify_collection_with_http_info(self, project_id, translations_unverify_parameters, **kwargs):  # noqa: E501
         """Unverify translations by query  # noqa: E501
 
-        Mark translations matching query as unverified.  # noqa: E501
+        Mark translations matching query as unverified.  To unverify the translations of specific keys, filter by key id (and optionally locale) directly, for example `key.id:KEY_ID_1,KEY_ID_2 locale.id:LOCALE_ID`. There is no need to look up translation ids first.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.translations_unverify_collection_with_http_info(project_id, translations_unverify_parameters, async_req=True)

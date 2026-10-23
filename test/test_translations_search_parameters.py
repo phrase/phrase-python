@@ -40,7 +40,7 @@ class TestTranslationsSearchParameters(unittest.TestCase):
                 branch = 'my-feature-branch', 
                 sort = 'updated_at', 
                 order = 'desc', 
-                q = 'PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center'
+                q = 'key.name:home.title,home.subtitle locale.name:de-DE tags:feature'
             )
         else :
             return TranslationsSearchParameters(

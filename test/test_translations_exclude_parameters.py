@@ -38,7 +38,7 @@ class TestTranslationsExcludeParameters(unittest.TestCase):
         if include_optional :
             return TranslationsExcludeParameters(
                 branch = 'my-feature-branch', 
-                q = 'PhraseApp*%20verified:true%20tags:feature,center', 
+                q = 'key.name:home.title,home.subtitle locale.name:de-DE tags:feature', 
                 sort = 'updated_at', 
                 order = 'desc'
             )

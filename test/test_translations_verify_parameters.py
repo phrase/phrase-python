@@ -39,7 +39,7 @@ class TestTranslationsVerifyParameters(unittest.TestCase):
             return TranslationsVerifyParameters(
                 branch = 'my-feature-branch', 
                 locale_id = 'fc2f11dd6a658fa9652f6f0a9ebee688', 
-                q = 'PhraseApp*%20unverified:true%20tags:feature,center'
+                q = 'key.name:home.title,home.subtitle locale.name:de-DE tags:feature'
             )
         else :
             return TranslationsVerifyParameters(

@@ -38,7 +38,7 @@ class TestTranslationsUnreviewParameters(unittest.TestCase):
         if include_optional :
             return TranslationsUnreviewParameters(
                 branch = 'my-feature-branch', 
-                q = 'PhraseApp*%reviewed:true%20tags:feature,center'
+                q = 'key.name:home.title,home.subtitle locale.name:de-DE tags:feature'
             )
         else :
             return TranslationsUnreviewParameters(

@@ -86,30 +86,21 @@ class StyleguideUpdateParameters(object):
 
         if title is not None:
             self.title = title
-        if audience is not None:
-            self.audience = audience
+        self.audience = audience
         if target_audience is not None:
             self.target_audience = target_audience
         if grammatical_person is not None:
             self.grammatical_person = grammatical_person
         if vocabulary_type is not None:
             self.vocabulary_type = vocabulary_type
-        if business is not None:
-            self.business = business
-        if company_branding is not None:
-            self.company_branding = company_branding
-        if formatting is not None:
-            self.formatting = formatting
-        if glossary_terms is not None:
-            self.glossary_terms = glossary_terms
-        if grammar_consistency is not None:
-            self.grammar_consistency = grammar_consistency
-        if literal_translation is not None:
-            self.literal_translation = literal_translation
-        if overall_tone is not None:
-            self.overall_tone = overall_tone
-        if samples is not None:
-            self.samples = samples
+        self.business = business
+        self.company_branding = company_branding
+        self.formatting = formatting
+        self.glossary_terms = glossary_terms
+        self.grammar_consistency = grammar_consistency
+        self.literal_translation = literal_translation
+        self.overall_tone = overall_tone
+        self.samples = samples
 
     @property
     def title(self):
@@ -138,7 +129,7 @@ class StyleguideUpdateParameters(object):
     def audience(self):
         """Gets the audience of this StyleguideUpdateParameters.  # noqa: E501
 
-        Audience description  # noqa: E501
+        Audience description. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The audience of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -149,7 +140,7 @@ class StyleguideUpdateParameters(object):
     def audience(self, audience):
         """Sets the audience of this StyleguideUpdateParameters.
 
-        Audience description  # noqa: E501
+        Audience description. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param audience: The audience of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -248,7 +239,7 @@ class StyleguideUpdateParameters(object):
     def business(self):
         """Gets the business of this StyleguideUpdateParameters.  # noqa: E501
 
-        Description of the business  # noqa: E501
+        Description of the business. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The business of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -259,7 +250,7 @@ class StyleguideUpdateParameters(object):
     def business(self, business):
         """Sets the business of this StyleguideUpdateParameters.
 
-        Description of the business  # noqa: E501
+        Description of the business. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param business: The business of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -271,7 +262,7 @@ class StyleguideUpdateParameters(object):
     def company_branding(self):
         """Gets the company_branding of this StyleguideUpdateParameters.  # noqa: E501
 
-        Company branding to remain consistent.  # noqa: E501
+        Company branding to remain consistent. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The company_branding of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -282,7 +273,7 @@ class StyleguideUpdateParameters(object):
     def company_branding(self, company_branding):
         """Sets the company_branding of this StyleguideUpdateParameters.
 
-        Company branding to remain consistent.  # noqa: E501
+        Company branding to remain consistent. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param company_branding: The company_branding of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -294,7 +285,7 @@ class StyleguideUpdateParameters(object):
     def formatting(self):
         """Gets the formatting of this StyleguideUpdateParameters.  # noqa: E501
 
-        Formatting requirements and character limitations.  # noqa: E501
+        Formatting requirements and character limitations. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The formatting of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -305,7 +296,7 @@ class StyleguideUpdateParameters(object):
     def formatting(self, formatting):
         """Sets the formatting of this StyleguideUpdateParameters.
 
-        Formatting requirements and character limitations.  # noqa: E501
+        Formatting requirements and character limitations. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param formatting: The formatting of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -317,7 +308,7 @@ class StyleguideUpdateParameters(object):
     def glossary_terms(self):
         """Gets the glossary_terms of this StyleguideUpdateParameters.  # noqa: E501
 
-        List of terms and/or phrases that need to be translated consistently.  # noqa: E501
+        List of terms and/or phrases that need to be translated consistently. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The glossary_terms of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -328,7 +319,7 @@ class StyleguideUpdateParameters(object):
     def glossary_terms(self, glossary_terms):
         """Sets the glossary_terms of this StyleguideUpdateParameters.
 
-        List of terms and/or phrases that need to be translated consistently.  # noqa: E501
+        List of terms and/or phrases that need to be translated consistently. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param glossary_terms: The glossary_terms of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -340,7 +331,7 @@ class StyleguideUpdateParameters(object):
     def grammar_consistency(self):
         """Gets the grammar_consistency of this StyleguideUpdateParameters.  # noqa: E501
 
-        Formal or informal pronouns, consistent conjugation, grammatical gender  # noqa: E501
+        Formal or informal pronouns, consistent conjugation, grammatical gender. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The grammar_consistency of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -351,7 +342,7 @@ class StyleguideUpdateParameters(object):
     def grammar_consistency(self, grammar_consistency):
         """Sets the grammar_consistency of this StyleguideUpdateParameters.
 
-        Formal or informal pronouns, consistent conjugation, grammatical gender  # noqa: E501
+        Formal or informal pronouns, consistent conjugation, grammatical gender. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param grammar_consistency: The grammar_consistency of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -363,7 +354,7 @@ class StyleguideUpdateParameters(object):
     def literal_translation(self):
         """Gets the literal_translation of this StyleguideUpdateParameters.  # noqa: E501
 
-        Can be one of: Cultural/Conversational, Literal, Neutral.  # noqa: E501
+        Can be one of: Cultural/Conversational, Literal, Neutral. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The literal_translation of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -374,7 +365,7 @@ class StyleguideUpdateParameters(object):
     def literal_translation(self, literal_translation):
         """Sets the literal_translation of this StyleguideUpdateParameters.
 
-        Can be one of: Cultural/Conversational, Literal, Neutral.  # noqa: E501
+        Can be one of: Cultural/Conversational, Literal, Neutral. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param literal_translation: The literal_translation of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -386,7 +377,7 @@ class StyleguideUpdateParameters(object):
     def overall_tone(self):
         """Gets the overall_tone of this StyleguideUpdateParameters.  # noqa: E501
 
-        Tone requirement descriptions  # noqa: E501
+        Tone requirement descriptions. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The overall_tone of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -397,7 +388,7 @@ class StyleguideUpdateParameters(object):
     def overall_tone(self, overall_tone):
         """Sets the overall_tone of this StyleguideUpdateParameters.
 
-        Tone requirement descriptions  # noqa: E501
+        Tone requirement descriptions. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param overall_tone: The overall_tone of this StyleguideUpdateParameters.  # noqa: E501
         :type: str
@@ -409,7 +400,7 @@ class StyleguideUpdateParameters(object):
     def samples(self):
         """Gets the samples of this StyleguideUpdateParameters.  # noqa: E501
 
-        Provide links to sample product pages, FAQ pages, etc. to give the translator a point of reference. You can also provide past translations. Even snippets or short paragraphs are helpful for maintaining consistency.  # noqa: E501
+        Provide links to sample product pages, FAQ pages, etc. to give the translator a point of reference. You can also provide past translations. Even snippets or short paragraphs are helpful for maintaining consistency. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The samples of this StyleguideUpdateParameters.  # noqa: E501
         :rtype: str
@@ -420,7 +411,7 @@ class StyleguideUpdateParameters(object):
     def samples(self, samples):
         """Sets the samples of this StyleguideUpdateParameters.
 
-        Provide links to sample product pages, FAQ pages, etc. to give the translator a point of reference. You can also provide past translations. Even snippets or short paragraphs are helpful for maintaining consistency.  # noqa: E501
+        Provide links to sample product pages, FAQ pages, etc. to give the translator a point of reference. You can also provide past translations. Even snippets or short paragraphs are helpful for maintaining consistency. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param samples: The samples of this StyleguideUpdateParameters.  # noqa: E501
         :type: str

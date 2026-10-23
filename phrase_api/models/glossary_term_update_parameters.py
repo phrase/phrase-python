@@ -59,8 +59,7 @@ class GlossaryTermUpdateParameters(object):
 
         if term is not None:
             self.term = term
-        if description is not None:
-            self.description = description
+        self.description = description
         if translatable is not None:
             self.translatable = translatable
         if case_sensitive is not None:
@@ -93,7 +92,7 @@ class GlossaryTermUpdateParameters(object):
     def description(self):
         """Gets the description of this GlossaryTermUpdateParameters.  # noqa: E501
 
-        Description of term  # noqa: E501
+        Description of term. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The description of this GlossaryTermUpdateParameters.  # noqa: E501
         :rtype: str
@@ -104,7 +103,7 @@ class GlossaryTermUpdateParameters(object):
     def description(self, description):
         """Sets the description of this GlossaryTermUpdateParameters.
 
-        Description of term  # noqa: E501
+        Description of term. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param description: The description of this GlossaryTermUpdateParameters.  # noqa: E501
         :type: str

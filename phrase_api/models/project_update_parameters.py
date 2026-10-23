@@ -154,8 +154,7 @@ class ProjectUpdateParameters(object):
             self.account_id = account_id
         if name is not None:
             self.name = name
-        if point_of_contact is not None:
-            self.point_of_contact = point_of_contact
+        self.point_of_contact = point_of_contact
         if main_format is not None:
             self.main_format = main_format
         if media is not None:
@@ -271,7 +270,7 @@ class ProjectUpdateParameters(object):
     def point_of_contact(self):
         """Gets the point_of_contact of this ProjectUpdateParameters.  # noqa: E501
 
-        (Optional) User ID of the point of contact for the project. Pass `null` to unset.  # noqa: E501
+        (Optional) User ID of the point of contact for the project. Pass `null` or an empty string to unset. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The point_of_contact of this ProjectUpdateParameters.  # noqa: E501
         :rtype: str
@@ -282,7 +281,7 @@ class ProjectUpdateParameters(object):
     def point_of_contact(self, point_of_contact):
         """Sets the point_of_contact of this ProjectUpdateParameters.
 
-        (Optional) User ID of the point of contact for the project. Pass `null` to unset.  # noqa: E501
+        (Optional) User ID of the point of contact for the project. Pass `null` or an empty string to unset. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param point_of_contact: The point_of_contact of this ProjectUpdateParameters.  # noqa: E501
         :type: str

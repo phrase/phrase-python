@@ -58,8 +58,7 @@ class OrganizationJobTemplateUpdateParameters(object):
         self.discriminator = None
 
         self.name = name
-        if briefing is not None:
-            self.briefing = briefing
+        self.briefing = briefing
         if autotranslate is not None:
             self.autotranslate = autotranslate
         if owner_id is not None:
@@ -94,7 +93,7 @@ class OrganizationJobTemplateUpdateParameters(object):
     def briefing(self):
         """Gets the briefing of this OrganizationJobTemplateUpdateParameters.  # noqa: E501
 
-        Briefing for the translators  # noqa: E501
+        Briefing for the translators. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The briefing of this OrganizationJobTemplateUpdateParameters.  # noqa: E501
         :rtype: str
@@ -105,7 +104,7 @@ class OrganizationJobTemplateUpdateParameters(object):
     def briefing(self, briefing):
         """Sets the briefing of this OrganizationJobTemplateUpdateParameters.
 
-        Briefing for the translators  # noqa: E501
+        Briefing for the translators. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param briefing: The briefing of this OrganizationJobTemplateUpdateParameters.  # noqa: E501
         :type: str

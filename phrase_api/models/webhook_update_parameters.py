@@ -67,8 +67,7 @@ class WebhookUpdateParameters(object):
             self.callback_url = callback_url
         if secret is not None:
             self.secret = secret
-        if description is not None:
-            self.description = description
+        self.description = description
         if events is not None:
             self.events = events
         if active is not None:
@@ -126,7 +125,7 @@ class WebhookUpdateParameters(object):
     def description(self):
         """Gets the description of this WebhookUpdateParameters.  # noqa: E501
 
-        Webhook description  # noqa: E501
+        Webhook description. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The description of this WebhookUpdateParameters.  # noqa: E501
         :rtype: str
@@ -137,7 +136,7 @@ class WebhookUpdateParameters(object):
     def description(self, description):
         """Sets the description of this WebhookUpdateParameters.
 
-        Webhook description  # noqa: E501
+        Webhook description. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param description: The description of this WebhookUpdateParameters.  # noqa: E501
         :type: str

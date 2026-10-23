@@ -61,8 +61,7 @@ class CustomMetadataPropertiesUpdateParameters(object):
             self.name = name
         if project_ids is not None:
             self.project_ids = project_ids
-        if description is not None:
-            self.description = description
+        self.description = description
         if value_options is not None:
             self.value_options = value_options
 
@@ -116,7 +115,7 @@ class CustomMetadataPropertiesUpdateParameters(object):
     def description(self):
         """Gets the description of this CustomMetadataPropertiesUpdateParameters.  # noqa: E501
 
-        description of property  # noqa: E501
+        description of property. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The description of this CustomMetadataPropertiesUpdateParameters.  # noqa: E501
         :rtype: str
@@ -127,7 +126,7 @@ class CustomMetadataPropertiesUpdateParameters(object):
     def description(self, description):
         """Sets the description of this CustomMetadataPropertiesUpdateParameters.
 
-        description of property  # noqa: E501
+        description of property. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param description: The description of this CustomMetadataPropertiesUpdateParameters.  # noqa: E501
         :type: str

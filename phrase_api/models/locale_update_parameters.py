@@ -98,8 +98,7 @@ class LocaleUpdateParameters(object):
             self.rtl = rtl
         if source_locale_id is not None:
             self.source_locale_id = source_locale_id
-        if fallback_locale_id is not None:
-            self.fallback_locale_id = fallback_locale_id
+        self.fallback_locale_id = fallback_locale_id
         if unverify_new_translations is not None:
             self.unverify_new_translations = unverify_new_translations
         if unverify_updated_translations is not None:
@@ -108,8 +107,7 @@ class LocaleUpdateParameters(object):
             self.unverify_on_source_changes = unverify_on_source_changes
         if autotranslate is not None:
             self.autotranslate = autotranslate
-        if language_ai_profile is not None:
-            self.language_ai_profile = language_ai_profile
+        self.language_ai_profile = language_ai_profile
 
     @property
     def branch(self):
@@ -276,7 +274,7 @@ class LocaleUpdateParameters(object):
     def fallback_locale_id(self):
         """Gets the fallback_locale_id of this LocaleUpdateParameters.  # noqa: E501
 
-        Fallback locale for empty translations. Can be a locale name or id.  # noqa: E501
+        Fallback locale for empty translations. Can be a locale name or id. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The fallback_locale_id of this LocaleUpdateParameters.  # noqa: E501
         :rtype: str
@@ -287,7 +285,7 @@ class LocaleUpdateParameters(object):
     def fallback_locale_id(self, fallback_locale_id):
         """Sets the fallback_locale_id of this LocaleUpdateParameters.
 
-        Fallback locale for empty translations. Can be a locale name or id.  # noqa: E501
+        Fallback locale for empty translations. Can be a locale name or id. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param fallback_locale_id: The fallback_locale_id of this LocaleUpdateParameters.  # noqa: E501
         :type: str
@@ -391,7 +389,7 @@ class LocaleUpdateParameters(object):
     def language_ai_profile(self):
         """Gets the language_ai_profile of this LocaleUpdateParameters.  # noqa: E501
 
-        Identifier of the Language AI profile to use for this locale.  # noqa: E501
+        Identifier of the Language AI profile to use for this locale. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The language_ai_profile of this LocaleUpdateParameters.  # noqa: E501
         :rtype: str
@@ -402,7 +400,7 @@ class LocaleUpdateParameters(object):
     def language_ai_profile(self, language_ai_profile):
         """Sets the language_ai_profile of this LocaleUpdateParameters.
 
-        Identifier of the Language AI profile to use for this locale.  # noqa: E501
+        Identifier of the Language AI profile to use for this locale. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param language_ai_profile: The language_ai_profile of this LocaleUpdateParameters.  # noqa: E501
         :type: str

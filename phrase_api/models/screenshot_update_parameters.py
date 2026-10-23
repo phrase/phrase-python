@@ -61,8 +61,7 @@ class ScreenshotUpdateParameters(object):
             self.branch = branch
         if name is not None:
             self.name = name
-        if description is not None:
-            self.description = description
+        self.description = description
         if filename is not None:
             self.filename = filename
 
@@ -116,7 +115,7 @@ class ScreenshotUpdateParameters(object):
     def description(self):
         """Gets the description of this ScreenshotUpdateParameters.  # noqa: E501
 
-        Description of the screenshot  # noqa: E501
+        Description of the screenshot. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The description of this ScreenshotUpdateParameters.  # noqa: E501
         :rtype: str
@@ -127,7 +126,7 @@ class ScreenshotUpdateParameters(object):
     def description(self, description):
         """Sets the description of this ScreenshotUpdateParameters.
 
-        Description of the screenshot  # noqa: E501
+        Description of the screenshot. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param description: The description of this ScreenshotUpdateParameters.  # noqa: E501
         :type: str

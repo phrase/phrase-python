@@ -60,14 +60,11 @@ class ReleaseUpdateParameters(object):
         self._branch = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
+        self.description = description
         if platforms is not None:
             self.platforms = platforms
-        if app_min_version is not None:
-            self.app_min_version = app_min_version
-        if app_max_version is not None:
-            self.app_max_version = app_max_version
+        self.app_min_version = app_min_version
+        self.app_max_version = app_max_version
         if branch is not None:
             self.branch = branch
 
@@ -75,7 +72,7 @@ class ReleaseUpdateParameters(object):
     def description(self):
         """Gets the description of this ReleaseUpdateParameters.  # noqa: E501
 
-        Description of the release  # noqa: E501
+        Description of the release. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The description of this ReleaseUpdateParameters.  # noqa: E501
         :rtype: str
@@ -86,7 +83,7 @@ class ReleaseUpdateParameters(object):
     def description(self, description):
         """Sets the description of this ReleaseUpdateParameters.
 
-        Description of the release  # noqa: E501
+        Description of the release. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param description: The description of this ReleaseUpdateParameters.  # noqa: E501
         :type: str
@@ -121,7 +118,7 @@ class ReleaseUpdateParameters(object):
     def app_min_version(self):
         """Gets the app_min_version of this ReleaseUpdateParameters.  # noqa: E501
 
-        Minimum version of the app that the release supports in semver format  # noqa: E501
+        Minimum version of the app that the release supports in semver format. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The app_min_version of this ReleaseUpdateParameters.  # noqa: E501
         :rtype: str
@@ -132,7 +129,7 @@ class ReleaseUpdateParameters(object):
     def app_min_version(self, app_min_version):
         """Sets the app_min_version of this ReleaseUpdateParameters.
 
-        Minimum version of the app that the release supports in semver format  # noqa: E501
+        Minimum version of the app that the release supports in semver format. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param app_min_version: The app_min_version of this ReleaseUpdateParameters.  # noqa: E501
         :type: str
@@ -144,7 +141,7 @@ class ReleaseUpdateParameters(object):
     def app_max_version(self):
         """Gets the app_max_version of this ReleaseUpdateParameters.  # noqa: E501
 
-        Maximum version of the app that the release supports in semver format  # noqa: E501
+        Maximum version of the app that the release supports in semver format. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The app_max_version of this ReleaseUpdateParameters.  # noqa: E501
         :rtype: str
@@ -155,7 +152,7 @@ class ReleaseUpdateParameters(object):
     def app_max_version(self, app_max_version):
         """Sets the app_max_version of this ReleaseUpdateParameters.
 
-        Maximum version of the app that the release supports in semver format  # noqa: E501
+        Maximum version of the app that the release supports in semver format. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param app_max_version: The app_max_version of this ReleaseUpdateParameters.  # noqa: E501
         :type: str

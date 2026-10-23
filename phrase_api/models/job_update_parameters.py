@@ -68,13 +68,11 @@ class JobUpdateParameters(object):
 
         if name is not None:
             self.name = name
-        if briefing is not None:
-            self.briefing = briefing
+        self.briefing = briefing
         self.due_date = due_date
         if review_due_date is not None:
             self.review_due_date = review_due_date
-        if ticket_url is not None:
-            self.ticket_url = ticket_url
+        self.ticket_url = ticket_url
         if target_locale_ids is not None:
             self.target_locale_ids = target_locale_ids
         if autotranslate is not None:
@@ -107,7 +105,7 @@ class JobUpdateParameters(object):
     def briefing(self):
         """Gets the briefing of this JobUpdateParameters.  # noqa: E501
 
-        Briefing for the translators  # noqa: E501
+        Briefing for the translators. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The briefing of this JobUpdateParameters.  # noqa: E501
         :rtype: str
@@ -118,7 +116,7 @@ class JobUpdateParameters(object):
     def briefing(self, briefing):
         """Sets the briefing of this JobUpdateParameters.
 
-        Briefing for the translators  # noqa: E501
+        Briefing for the translators. Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param briefing: The briefing of this JobUpdateParameters.  # noqa: E501
         :type: str
@@ -176,7 +174,7 @@ class JobUpdateParameters(object):
     def ticket_url(self):
         """Gets the ticket_url of this JobUpdateParameters.  # noqa: E501
 
-        URL to a ticket for this job (e.g. Jira, Trello)  # noqa: E501
+        URL to a ticket for this job (e.g. Jira, Trello) Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :return: The ticket_url of this JobUpdateParameters.  # noqa: E501
         :rtype: str
@@ -187,7 +185,7 @@ class JobUpdateParameters(object):
     def ticket_url(self, ticket_url):
         """Sets the ticket_url of this JobUpdateParameters.
 
-        URL to a ticket for this job (e.g. Jira, Trello)  # noqa: E501
+        URL to a ticket for this job (e.g. Jira, Trello) Send an empty string or `null` to clear the value; omit the field to leave it unchanged. The Phrase CLI drops `null` values before sending, so use an empty string there.  # noqa: E501
 
         :param ticket_url: The ticket_url of this JobUpdateParameters.  # noqa: E501
         :type: str

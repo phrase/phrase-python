@@ -45,6 +45,11 @@ class TestRepoSyncEvent(unittest.TestCase):
                 auto_import = True, 
                 errors = [
                     ''
+                    ], 
+                uploads = [
+                    phrase_api.models.repo_sync_event_uploads_inner.repo_sync_event_uploads_inner(
+                        id = 'abcd1234', 
+                        state = 'initialized', )
                     ]
             )
         else :

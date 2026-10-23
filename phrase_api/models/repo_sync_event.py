@@ -38,7 +38,8 @@ class RepoSyncEvent(object):
         'status': 'str',
         'pull_request_url': 'str',
         'auto_import': 'bool',
-        'errors': 'List[str]'
+        'errors': 'List[str]',
+        'uploads': 'List[RepoSyncEventUploadsInner]'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class RepoSyncEvent(object):
         'status': 'status',
         'pull_request_url': 'pull_request_url',
         'auto_import': 'auto_import',
-        'errors': 'errors'
+        'errors': 'errors',
+        'uploads': 'uploads'
     }
 
-    def __init__(self, id=None, type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, uploads=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncEvent - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +66,7 @@ class RepoSyncEvent(object):
         self._pull_request_url = None
         self._auto_import = None
         self._errors = None
+        self._uploads = None
         self.discriminator = None
 
         if id is not None:
@@ -80,6 +83,7 @@ class RepoSyncEvent(object):
             self.auto_import = auto_import
         if errors is not None:
             self.errors = errors
+        self.uploads = uploads
 
     @property
     def id(self):
@@ -245,6 +249,29 @@ class RepoSyncEvent(object):
         """
 
         self._errors = errors
+
+    @property
+    def uploads(self):
+        """Gets the uploads of this RepoSyncEvent.  # noqa: E501
+
+        The uploads associated with this import event, or `null` if no upload batch has been created yet. Each entry identifies a single file upload by its public code (`id`) and its current public state (`state`). Present on show responses only; absent from list responses. Possible `state` values: `initialized`, `waiting_for_preview`, `processing`, `success`, `error`.   # noqa: E501
+
+        :return: The uploads of this RepoSyncEvent.  # noqa: E501
+        :rtype: List[RepoSyncEventUploadsInner]
+        """
+        return self._uploads
+
+    @uploads.setter
+    def uploads(self, uploads):
+        """Sets the uploads of this RepoSyncEvent.
+
+        The uploads associated with this import event, or `null` if no upload batch has been created yet. Each entry identifies a single file upload by its public code (`id`) and its current public state (`state`). Present on show responses only; absent from list responses. Possible `state` values: `initialized`, `waiting_for_preview`, `processing`, `success`, `error`.   # noqa: E501
+
+        :param uploads: The uploads of this RepoSyncEvent.  # noqa: E501
+        :type: List[RepoSyncEventUploadsInner]
+        """
+
+        self._uploads = uploads
 
     def to_dict(self):
         """Returns the model properties as a dict"""

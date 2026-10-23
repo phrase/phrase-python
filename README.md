@@ -623,6 +623,7 @@ Class | Method | HTTP request | Description
  - [RepoSync](docs/RepoSync.md)
  - [RepoSyncCreateParameters](docs/RepoSyncCreateParameters.md)
  - [RepoSyncEvent](docs/RepoSyncEvent.md)
+ - [RepoSyncEventUploadsInner](docs/RepoSyncEventUploadsInner.md)
  - [RepoSyncExportParameters](docs/RepoSyncExportParameters.md)
  - [RepoSyncImportParameters](docs/RepoSyncImportParameters.md)
  - [Screenshot](docs/Screenshot.md)

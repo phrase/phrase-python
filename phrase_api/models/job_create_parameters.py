@@ -340,7 +340,7 @@ class JobCreateParameters(object):
     def job_template_id(self):
         """Gets the job_template_id of this JobCreateParameters.  # noqa: E501
 
-        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with `target_locale_ids`.  # noqa: E501
+        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with `target_locale_ids`. The calling user must have read access to the template; if the template exists but is not accessible, the request returns 404.   # noqa: E501
 
         :return: The job_template_id of this JobCreateParameters.  # noqa: E501
         :rtype: str
@@ -351,7 +351,7 @@ class JobCreateParameters(object):
     def job_template_id(self, job_template_id):
         """Sets the job_template_id of this JobCreateParameters.
 
-        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with `target_locale_ids`.  # noqa: E501
+        id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with `target_locale_ids`. The calling user must have read access to the template; if the template exists but is not accessible, the request returns 404.   # noqa: E501
 
         :param job_template_id: The job_template_id of this JobCreateParameters.  # noqa: E501
         :type: str

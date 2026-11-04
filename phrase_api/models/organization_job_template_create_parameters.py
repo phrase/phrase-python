@@ -35,6 +35,7 @@ class OrganizationJobTemplateCreateParameters(object):
         'name': 'str',
         'briefing': 'str',
         'autotranslate': 'bool',
+        'exclude_linked_child_keys': 'bool',
         'owner_id': 'str'
     }
 
@@ -42,10 +43,11 @@ class OrganizationJobTemplateCreateParameters(object):
         'name': 'name',
         'briefing': 'briefing',
         'autotranslate': 'autotranslate',
+        'exclude_linked_child_keys': 'exclude_linked_child_keys',
         'owner_id': 'owner_id'
     }
 
-    def __init__(self, name=None, briefing=None, autotranslate=None, owner_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, briefing=None, autotranslate=None, exclude_linked_child_keys=None, owner_id=None, local_vars_configuration=None):  # noqa: E501
         """OrganizationJobTemplateCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +56,7 @@ class OrganizationJobTemplateCreateParameters(object):
         self._name = None
         self._briefing = None
         self._autotranslate = None
+        self._exclude_linked_child_keys = None
         self._owner_id = None
         self.discriminator = None
 
@@ -62,6 +65,8 @@ class OrganizationJobTemplateCreateParameters(object):
             self.briefing = briefing
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if exclude_linked_child_keys is not None:
+            self.exclude_linked_child_keys = exclude_linked_child_keys
         if owner_id is not None:
             self.owner_id = owner_id
 
@@ -135,6 +140,29 @@ class OrganizationJobTemplateCreateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def exclude_linked_child_keys(self):
+        """Gets the exclude_linked_child_keys of this OrganizationJobTemplateCreateParameters.  # noqa: E501
+
+        Exclude linked child keys from jobs created from this template. Defaults to `false`.  # noqa: E501
+
+        :return: The exclude_linked_child_keys of this OrganizationJobTemplateCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclude_linked_child_keys
+
+    @exclude_linked_child_keys.setter
+    def exclude_linked_child_keys(self, exclude_linked_child_keys):
+        """Sets the exclude_linked_child_keys of this OrganizationJobTemplateCreateParameters.
+
+        Exclude linked child keys from jobs created from this template. Defaults to `false`.  # noqa: E501
+
+        :param exclude_linked_child_keys: The exclude_linked_child_keys of this OrganizationJobTemplateCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._exclude_linked_child_keys = exclude_linked_child_keys
 
     @property
     def owner_id(self):

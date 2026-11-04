@@ -48,7 +48,8 @@ class TestOrganizationJobTemplateDetails(unittest.TestCase):
                 creator = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
                 locales = [
                     {"id":"abcd1234cdef1234abcd1234cdef1234","name":"English","code":"en-GB"}
-                    ]
+                    ], 
+                exclude_linked_child_keys = False
             )
         else :
             return OrganizationJobTemplateDetails(

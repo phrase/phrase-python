@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **owner** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **creator** | [**UserPreview**](UserPreview.md) |  | [optional] 
 **locales** | [**List[LocalePreview]**](LocalePreview.md) |  | [optional] 
+**exclude_linked_child_keys** | **bool** | &#x60;true&#x60; if jobs created from this template exclude linked child keys.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

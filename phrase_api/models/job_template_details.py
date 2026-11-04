@@ -42,7 +42,8 @@ class JobTemplateDetails(object):
         'updated_at': 'datetime',
         'owner': 'UserPreview',
         'creator': 'UserPreview',
-        'locales': 'List[LocalePreview]'
+        'locales': 'List[LocalePreview]',
+        'exclude_linked_child_keys': 'bool'
     }
 
     attribute_map = {
@@ -56,10 +57,11 @@ class JobTemplateDetails(object):
         'updated_at': 'updated_at',
         'owner': 'owner',
         'creator': 'creator',
-        'locales': 'locales'
+        'locales': 'locales',
+        'exclude_linked_child_keys': 'exclude_linked_child_keys'
     }
 
-    def __init__(self, id=None, name=None, briefing=None, project=None, branch=None, autotranslate_enabled=None, created_at=None, updated_at=None, owner=None, creator=None, locales=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, briefing=None, project=None, branch=None, autotranslate_enabled=None, created_at=None, updated_at=None, owner=None, creator=None, locales=None, exclude_linked_child_keys=None, local_vars_configuration=None):  # noqa: E501
         """JobTemplateDetails - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -76,6 +78,7 @@ class JobTemplateDetails(object):
         self._owner = None
         self._creator = None
         self._locales = None
+        self._exclude_linked_child_keys = None
         self.discriminator = None
 
         if id is not None:
@@ -100,6 +103,8 @@ class JobTemplateDetails(object):
             self.creator = creator
         if locales is not None:
             self.locales = locales
+        if exclude_linked_child_keys is not None:
+            self.exclude_linked_child_keys = exclude_linked_child_keys
 
     @property
     def id(self):
@@ -333,6 +338,29 @@ class JobTemplateDetails(object):
         """
 
         self._locales = locales
+
+    @property
+    def exclude_linked_child_keys(self):
+        """Gets the exclude_linked_child_keys of this JobTemplateDetails.  # noqa: E501
+
+        `true` if jobs created from this template exclude linked child keys.   # noqa: E501
+
+        :return: The exclude_linked_child_keys of this JobTemplateDetails.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclude_linked_child_keys
+
+    @exclude_linked_child_keys.setter
+    def exclude_linked_child_keys(self, exclude_linked_child_keys):
+        """Sets the exclude_linked_child_keys of this JobTemplateDetails.
+
+        `true` if jobs created from this template exclude linked child keys.   # noqa: E501
+
+        :param exclude_linked_child_keys: The exclude_linked_child_keys of this JobTemplateDetails.  # noqa: E501
+        :type: bool
+        """
+
+        self._exclude_linked_child_keys = exclude_linked_child_keys
 
     def to_dict(self):
         """Returns the model properties as a dict"""

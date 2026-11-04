@@ -41,6 +41,7 @@ class TestJobTemplateCreateParameters(unittest.TestCase):
                 name = 'template', 
                 briefing = 'text', 
                 autotranslate = True, 
+                exclude_linked_child_keys = False, 
                 source_locale_id = 'abcd1234cdef1234abcd1234cdef1234', 
                 owner_id = ''
             )

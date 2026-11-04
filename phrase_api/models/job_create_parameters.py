@@ -43,7 +43,8 @@ class JobCreateParameters(object):
         'translation_key_ids': 'List[str]',
         'target_locale_ids': 'List[str]',
         'job_template_id': 'str',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'exclude_linked_child_keys': 'bool'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class JobCreateParameters(object):
         'translation_key_ids': 'translation_key_ids',
         'target_locale_ids': 'target_locale_ids',
         'job_template_id': 'job_template_id',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'exclude_linked_child_keys': 'exclude_linked_child_keys'
     }
 
-    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, review_due_date=None, ticket_url=None, tags=None, translation_key_ids=None, target_locale_ids=None, job_template_id=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, branch=None, name=None, source_locale_id=None, briefing=None, due_date=None, review_due_date=None, ticket_url=None, tags=None, translation_key_ids=None, target_locale_ids=None, job_template_id=None, autotranslate=None, exclude_linked_child_keys=None, local_vars_configuration=None):  # noqa: E501
         """JobCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -79,6 +81,7 @@ class JobCreateParameters(object):
         self._target_locale_ids = None
         self._job_template_id = None
         self._autotranslate = None
+        self._exclude_linked_child_keys = None
         self.discriminator = None
 
         if branch is not None:
@@ -103,6 +106,8 @@ class JobCreateParameters(object):
             self.job_template_id = job_template_id
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if exclude_linked_child_keys is not None:
+            self.exclude_linked_child_keys = exclude_linked_child_keys
 
     @property
     def branch(self):
@@ -381,6 +386,29 @@ class JobCreateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def exclude_linked_child_keys(self):
+        """Gets the exclude_linked_child_keys of this JobCreateParameters.  # noqa: E501
+
+        Exclude linked child keys from the job. While enabled, linked child keys cannot be added to the job. Defaults to `false`.  # noqa: E501
+
+        :return: The exclude_linked_child_keys of this JobCreateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclude_linked_child_keys
+
+    @exclude_linked_child_keys.setter
+    def exclude_linked_child_keys(self, exclude_linked_child_keys):
+        """Sets the exclude_linked_child_keys of this JobCreateParameters.
+
+        Exclude linked child keys from the job. While enabled, linked child keys cannot be added to the job. Defaults to `false`.  # noqa: E501
+
+        :param exclude_linked_child_keys: The exclude_linked_child_keys of this JobCreateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._exclude_linked_child_keys = exclude_linked_child_keys
 
     def to_dict(self):
         """Returns the model properties as a dict"""

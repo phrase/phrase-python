@@ -38,7 +38,8 @@ class JobUpdateParameters(object):
         'review_due_date': 'datetime',
         'ticket_url': 'str',
         'target_locale_ids': 'List[str]',
-        'autotranslate': 'bool'
+        'autotranslate': 'bool',
+        'exclude_linked_child_keys': 'bool'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class JobUpdateParameters(object):
         'review_due_date': 'review_due_date',
         'ticket_url': 'ticket_url',
         'target_locale_ids': 'target_locale_ids',
-        'autotranslate': 'autotranslate'
+        'autotranslate': 'autotranslate',
+        'exclude_linked_child_keys': 'exclude_linked_child_keys'
     }
 
-    def __init__(self, name=None, briefing=None, due_date=None, review_due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, briefing=None, due_date=None, review_due_date=None, ticket_url=None, target_locale_ids=None, autotranslate=None, exclude_linked_child_keys=None, local_vars_configuration=None):  # noqa: E501
         """JobUpdateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -64,6 +66,7 @@ class JobUpdateParameters(object):
         self._ticket_url = None
         self._target_locale_ids = None
         self._autotranslate = None
+        self._exclude_linked_child_keys = None
         self.discriminator = None
 
         if name is not None:
@@ -77,6 +80,8 @@ class JobUpdateParameters(object):
             self.target_locale_ids = target_locale_ids
         if autotranslate is not None:
             self.autotranslate = autotranslate
+        if exclude_linked_child_keys is not None:
+            self.exclude_linked_child_keys = exclude_linked_child_keys
 
     @property
     def name(self):
@@ -238,6 +243,29 @@ class JobUpdateParameters(object):
         """
 
         self._autotranslate = autotranslate
+
+    @property
+    def exclude_linked_child_keys(self):
+        """Gets the exclude_linked_child_keys of this JobUpdateParameters.  # noqa: E501
+
+        Exclude linked child keys from the job. When set to `true`, linked child keys already in the job are removed and none can be added while the option is enabled.  # noqa: E501
+
+        :return: The exclude_linked_child_keys of this JobUpdateParameters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclude_linked_child_keys
+
+    @exclude_linked_child_keys.setter
+    def exclude_linked_child_keys(self, exclude_linked_child_keys):
+        """Sets the exclude_linked_child_keys of this JobUpdateParameters.
+
+        Exclude linked child keys from the job. When set to `true`, linked child keys already in the job are removed and none can be added while the option is enabled.  # noqa: E501
+
+        :param exclude_linked_child_keys: The exclude_linked_child_keys of this JobUpdateParameters.  # noqa: E501
+        :type: bool
+        """
+
+        self._exclude_linked_child_keys = exclude_linked_child_keys
 
     def to_dict(self):
         """Returns the model properties as a dict"""

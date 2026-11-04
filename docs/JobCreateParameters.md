@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **target_locale_ids** | **List[str]** | List of target locales for the job. Mutually exclusive with &#x60;job_template_id&#x60;. | [optional] 
 **job_template_id** | **str** | id of a job template you would like to model the created job after. Any manually added parameters will take preference over template attributes. Mutually exclusive with &#x60;target_locale_ids&#x60;. The calling user must have read access to the template; if the template exists but is not accessible, the request returns 404.  | [optional] 
 **autotranslate** | **bool** | Automatically translate the job using machine translation. | [optional] 
+**exclude_linked_child_keys** | **bool** | Exclude linked child keys from the job. While enabled, linked child keys cannot be added to the job. Defaults to &#x60;false&#x60;. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

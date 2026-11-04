@@ -48,7 +48,8 @@ class TestJobCreateParameters(unittest.TestCase):
                 translation_key_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
                 target_locale_ids = ["abcd1234cdef1234abcd1234cdef1234"], 
                 job_template_id = 'abcd1234cdef1234abcd1234cdef1234', 
-                autotranslate = True
+                autotranslate = True, 
+                exclude_linked_child_keys = False
             )
         else :
             return JobCreateParameters(

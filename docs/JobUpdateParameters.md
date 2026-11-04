@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **ticket_url** | **str** | URL to a ticket for this job (e.g. Jira, Trello) Send an empty string or &#x60;null&#x60; to clear the value; omit the field to leave it unchanged. The Phrase CLI drops &#x60;null&#x60; values before sending, so use an empty string there. | [optional] 
 **target_locale_ids** | **List[str]** | List of target locales for the job. | [optional] 
 **autotranslate** | **bool** | Automatically translate the job using machine translation | [optional] 
+**exclude_linked_child_keys** | **bool** | Exclude linked child keys from the job. When set to &#x60;true&#x60;, linked child keys already in the job are removed and none can be added while the option is enabled. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

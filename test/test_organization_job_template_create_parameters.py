@@ -40,6 +40,7 @@ class TestOrganizationJobTemplateCreateParameters(unittest.TestCase):
                 name = 'template', 
                 briefing = 'text', 
                 autotranslate = True, 
+                exclude_linked_child_keys = False, 
                 owner_id = ''
             )
         else :

@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **keys** | [**List[KeyPreview]**](KeyPreview.md) |  | [optional] 
 **annotations** | [**List[JobAnnotationShort]**](JobAnnotationShort.md) | Returned only when &#x60;include_annotations&#x3D;true&#x60; is supplied on the request. | [optional] 
 **locked** | **bool** | &#x60;true&#x60; if the job has been locked by the project&#39;s job-locking workflow (translations attached to the job are read-only until the job advances).  | [optional] 
+**exclude_linked_child_keys** | **bool** | &#x60;true&#x60; if linked child keys are excluded from this job. While enabled, linked child keys cannot be added to the job.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -227,6 +227,8 @@ from phrase_api.models.translation_exclude_parameters import TranslationExcludeP
 from phrase_api.models.translation_include_parameters import TranslationIncludeParameters
 from phrase_api.models.translation_key import TranslationKey
 from phrase_api.models.translation_key_details import TranslationKeyDetails
+from phrase_api.models.translation_key_linked_key import TranslationKeyLinkedKey
+from phrase_api.models.translation_key_linked_key_parent import TranslationKeyLinkedKeyParent
 from phrase_api.models.translation_order import TranslationOrder
 from phrase_api.models.translation_parent import TranslationParent
 from phrase_api.models.translation_review_parameters import TranslationReviewParameters

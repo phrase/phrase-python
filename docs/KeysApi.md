@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **keys_list**
-> List[TranslationKey] keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q, locale_id=locale_id)
+> List[TranslationKey] keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q, locale_id=locale_id, include_linked_keys=include_linked_keys)
 
 List keys
 
@@ -552,10 +552,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     order = 'desc' # str | Order direction. Can be one of: asc, desc.
     q = 'mykey* translated:true' # str | Specify a query to do broad search for keys by name (including wildcards).  The following qualifiers are also supported in the search term:  - `ids:key_id,...` for queries on a comma-separated list of ids - `name:key_name` for text queries on exact key names - spaces, commas, and colons  need to be escaped with double backslashes - `tags:tag_name` to filter for keys with certain tags - `translated:{true|false}` for translation status (also requires `locale_id` to be specified) - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries - `unmentioned_in_upload:upload_id,...` to filter keys unmentioned within upload. When multiple upload IDs provided, matches only keys not mentioned in **all** uploads  **Caution:** Query parameters with empty values will be treated as though they are not included in the request and will be ignored.  Find more examples [here](/en/api/strings/usage-examples). 
     locale_id = 'abcd1234abcd1234abcd1234abcd1234' # str | Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
+    include_linked_keys = True # bool | When set to `true`, each key object in the response includes a `linked_key` field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent's id and name (for child keys). Keys with no active link return `linked_key: null`. Omit this parameter or set it to `false` to leave the `linked_key` field out of the response entirely. 
 
     try:
         # List keys
-        api_response = api_instance.keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q, locale_id=locale_id)
+        api_response = api_instance.keys_list(project_id, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, branch=branch, sort=sort, order=order, q=q, locale_id=locale_id, include_linked_keys=include_linked_keys)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KeysApi->keys_list: %s\n" % e)
@@ -575,6 +576,7 @@ Name | Type | Description  | Notes
  **order** | **str**| Order direction. Can be one of: asc, desc. | [optional] 
  **q** | **str**| Specify a query to do broad search for keys by name (including wildcards).  The following qualifiers are also supported in the search term:  - &#x60;ids:key_id,...&#x60; for queries on a comma-separated list of ids - &#x60;name:key_name&#x60; for text queries on exact key names - spaces, commas, and colons  need to be escaped with double backslashes - &#x60;tags:tag_name&#x60; to filter for keys with certain tags - &#x60;translated:{true|false}&#x60; for translation status (also requires &#x60;locale_id&#x60; to be specified) - &#x60;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&#x60; for date range queries - &#x60;unmentioned_in_upload:upload_id,...&#x60; to filter keys unmentioned within upload. When multiple upload IDs provided, matches only keys not mentioned in **all** uploads  **Caution:** Query parameters with empty values will be treated as though they are not included in the request and will be ignored.  Find more examples [here](/en/api/strings/usage-examples).  | [optional] 
  **locale_id** | **str**| Locale used to determine the translation state of a key when filtering for untranslated or translated keys. | [optional] 
+ **include_linked_keys** | **bool**| When set to &#x60;true&#x60;, each key object in the response includes a &#x60;linked_key&#x60; field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent&#39;s id and name (for child keys). Keys with no active link return &#x60;linked_key: null&#x60;. Omit this parameter or set it to &#x60;false&#x60; to leave the &#x60;linked_key&#x60; field out of the response entirely.  | [optional] 
 
 ### Return type
 
@@ -602,7 +604,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **keys_search**
-> List[TranslationKey] keys_search(project_id, keys_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+> List[TranslationKey] keys_search(project_id, keys_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, include_linked_keys=include_linked_keys)
 
 Search keys
 
@@ -630,10 +632,11 @@ with phrase_api.ApiClient(configuration) as api_client:
     x_phrase_app_otp = 'x_phrase_app_otp_example' # str | Two-Factor-Authentication token (optional)
     page = 1 # int | Page number
     per_page = 25 # int | Limit on the number of objects to be returned, between 1 and 100. 25 by default
+    include_linked_keys = True # bool | When set to `true`, each key object in the response includes a `linked_key` field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent's id and name (for child keys). Keys with no active link return `linked_key: null`. Omit this parameter or set it to `false` to leave the `linked_key` field out of the response entirely. 
 
     try:
         # Search keys
-        api_response = api_instance.keys_search(project_id, keys_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page)
+        api_response = api_instance.keys_search(project_id, keys_search_parameters, x_phrase_app_otp=x_phrase_app_otp, page=page, per_page=per_page, include_linked_keys=include_linked_keys)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KeysApi->keys_search: %s\n" % e)
@@ -649,6 +652,7 @@ Name | Type | Description  | Notes
  **x_phrase_app_otp** | **str**| Two-Factor-Authentication token (optional) | [optional] 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Limit on the number of objects to be returned, between 1 and 100. 25 by default | [optional] 
+ **include_linked_keys** | **bool**| When set to &#x60;true&#x60;, each key object in the response includes a &#x60;linked_key&#x60; field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent&#39;s id and name (for child keys). Keys with no active link return &#x60;linked_key: null&#x60;. Omit this parameter or set it to &#x60;false&#x60; to leave the &#x60;linked_key&#x60; field out of the response entirely.  | [optional] 
 
 ### Return type
 

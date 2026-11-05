@@ -41,7 +41,8 @@ class TranslationKey(object):
         'tags': 'List[str]',
         'data_type': 'str',
         'created_at': 'datetime',
-        'updated_at': 'datetime'
+        'updated_at': 'datetime',
+        'linked_key': 'TranslationKeyLinkedKey'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class TranslationKey(object):
         'tags': 'tags',
         'data_type': 'data_type',
         'created_at': 'created_at',
-        'updated_at': 'updated_at'
+        'updated_at': 'updated_at',
+        'linked_key': 'linked_key'
     }
 
-    def __init__(self, id=None, name=None, description=None, name_hash=None, plural=None, use_ordinal_rules=None, tags=None, data_type=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, name_hash=None, plural=None, use_ordinal_rules=None, tags=None, data_type=None, created_at=None, updated_at=None, linked_key=None, local_vars_configuration=None):  # noqa: E501
         """TranslationKey - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,6 +75,7 @@ class TranslationKey(object):
         self._data_type = None
         self._created_at = None
         self._updated_at = None
+        self._linked_key = None
         self.discriminator = None
 
         if id is not None:
@@ -95,6 +98,7 @@ class TranslationKey(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        self.linked_key = linked_key
 
     @property
     def id(self):
@@ -305,6 +309,27 @@ class TranslationKey(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def linked_key(self):
+        """Gets the linked_key of this TranslationKey.  # noqa: E501
+
+
+        :return: The linked_key of this TranslationKey.  # noqa: E501
+        :rtype: TranslationKeyLinkedKey
+        """
+        return self._linked_key
+
+    @linked_key.setter
+    def linked_key(self, linked_key):
+        """Sets the linked_key of this TranslationKey.
+
+
+        :param linked_key: The linked_key of this TranslationKey.  # noqa: E501
+        :type: TranslationKeyLinkedKey
+        """
+
+        self._linked_key = linked_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

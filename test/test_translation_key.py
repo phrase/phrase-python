@@ -48,7 +48,8 @@ class TestTranslationKey(unittest.TestCase):
                     ], 
                 data_type = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                linked_key = {"role":"parent","parent":null,"children_count":3}
             )
         else :
             return TranslationKey(

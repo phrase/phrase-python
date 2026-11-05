@@ -273,6 +273,8 @@ docs/TranslationExcludeParameters.md
 docs/TranslationIncludeParameters.md
 docs/TranslationKey.md
 docs/TranslationKeyDetails.md
+docs/TranslationKeyLinkedKey.md
+docs/TranslationKeyLinkedKeyParent.md
 docs/TranslationOrder.md
 docs/TranslationParent.md
 docs/TranslationReviewParameters.md
@@ -595,6 +597,8 @@ phrase_api/models/translation_exclude_parameters.py
 phrase_api/models/translation_include_parameters.py
 phrase_api/models/translation_key.py
 phrase_api/models/translation_key_details.py
+phrase_api/models/translation_key_linked_key.py
+phrase_api/models/translation_key_linked_key_parent.py
 phrase_api/models/translation_order.py
 phrase_api/models/translation_parent.py
 phrase_api/models/translation_review_parameters.py
@@ -900,6 +904,8 @@ test/test_translation_exclude_parameters.py
 test/test_translation_include_parameters.py
 test/test_translation_key.py
 test/test_translation_key_details.py
+test/test_translation_key_linked_key.py
+test/test_translation_key_linked_key_parent.py
 test/test_translation_order.py
 test/test_translation_parent.py
 test/test_translation_review_parameters.py

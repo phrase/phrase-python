@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **data_type** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
+**linked_key** | [**TranslationKeyLinkedKey**](TranslationKeyLinkedKey.md) |  | [optional] 
 **name_plural** | **str** |  | [optional] 
 **comments_count** | **int** |  | [optional] 
 **max_characters_allowed** | **int** |  | [optional] 

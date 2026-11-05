@@ -991,6 +991,7 @@ class KeysApi(object):
         :param str order: Order direction. Can be one of: asc, desc.
         :param str q: Specify a query to do broad search for keys by name (including wildcards).  The following qualifiers are also supported in the search term:  - `ids:key_id,...` for queries on a comma-separated list of ids - `name:key_name` for text queries on exact key names - spaces, commas, and colons  need to be escaped with double backslashes - `tags:tag_name` to filter for keys with certain tags - `translated:{true|false}` for translation status (also requires `locale_id` to be specified) - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries - `unmentioned_in_upload:upload_id,...` to filter keys unmentioned within upload. When multiple upload IDs provided, matches only keys not mentioned in **all** uploads  **Caution:** Query parameters with empty values will be treated as though they are not included in the request and will be ignored.  Find more examples [here](/en/api/strings/usage-examples). 
         :param str locale_id: Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
+        :param bool include_linked_keys: When set to `true`, each key object in the response includes a `linked_key` field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent's id and name (for child keys). Keys with no active link return `linked_key: null`. Omit this parameter or set it to `false` to leave the `linked_key` field out of the response entirely. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1024,6 +1025,7 @@ class KeysApi(object):
         :param str order: Order direction. Can be one of: asc, desc.
         :param str q: Specify a query to do broad search for keys by name (including wildcards).  The following qualifiers are also supported in the search term:  - `ids:key_id,...` for queries on a comma-separated list of ids - `name:key_name` for text queries on exact key names - spaces, commas, and colons  need to be escaped with double backslashes - `tags:tag_name` to filter for keys with certain tags - `translated:{true|false}` for translation status (also requires `locale_id` to be specified) - `updated_at:{>=|<=}2013-02-21T00:00:00Z` for date range queries - `unmentioned_in_upload:upload_id,...` to filter keys unmentioned within upload. When multiple upload IDs provided, matches only keys not mentioned in **all** uploads  **Caution:** Query parameters with empty values will be treated as though they are not included in the request and will be ignored.  Find more examples [here](/en/api/strings/usage-examples). 
         :param str locale_id: Locale used to determine the translation state of a key when filtering for untranslated or translated keys.
+        :param bool include_linked_keys: When set to `true`, each key object in the response includes a `linked_key` field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent's id and name (for child keys). Keys with no active link return `linked_key: null`. Omit this parameter or set it to `false` to leave the `linked_key` field out of the response entirely. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1049,7 +1051,8 @@ class KeysApi(object):
             'sort',
             'order',
             'q',
-            'locale_id'
+            'locale_id',
+            'include_linked_keys'
         ]
         all_params.extend(
             [
@@ -1094,6 +1097,8 @@ class KeysApi(object):
             query_params.append(('q', local_var_params['q']))  # noqa: E501
         if 'locale_id' in local_var_params and local_var_params['locale_id'] is not None:  # noqa: E501
             query_params.append(('locale_id', local_var_params['locale_id']))  # noqa: E501
+        if 'include_linked_keys' in local_var_params and local_var_params['include_linked_keys'] is not None:  # noqa: E501
+            query_params.append(('include_linked_keys', local_var_params['include_linked_keys']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:
@@ -1141,6 +1146,7 @@ class KeysApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
+        :param bool include_linked_keys: When set to `true`, each key object in the response includes a `linked_key` field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent's id and name (for child keys). Keys with no active link return `linked_key: null`. Omit this parameter or set it to `false` to leave the `linked_key` field out of the response entirely. 
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1170,6 +1176,7 @@ class KeysApi(object):
         :param str x_phrase_app_otp: Two-Factor-Authentication token (optional)
         :param int page: Page number
         :param int per_page: Limit on the number of objects to be returned, between 1 and 100. 25 by default
+        :param bool include_linked_keys: When set to `true`, each key object in the response includes a `linked_key` field describing whether the key is a parent or child in a key-link relationship, and the number of children (for parent keys) or the parent's id and name (for child keys). Keys with no active link return `linked_key: null`. Omit this parameter or set it to `false` to leave the `linked_key` field out of the response entirely. 
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1191,7 +1198,8 @@ class KeysApi(object):
             'keys_search_parameters',
             'x_phrase_app_otp',
             'page',
-            'per_page'
+            'per_page',
+            'include_linked_keys'
         ]
         all_params.extend(
             [
@@ -1230,6 +1238,8 @@ class KeysApi(object):
             query_params.append(('page', local_var_params['page']))  # noqa: E501
         if 'per_page' in local_var_params and local_var_params['per_page'] is not None:  # noqa: E501
             query_params.append(('per_page', local_var_params['per_page']))  # noqa: E501
+        if 'include_linked_keys' in local_var_params and local_var_params['include_linked_keys'] is not None:  # noqa: E501
+            query_params.append(('include_linked_keys', local_var_params['include_linked_keys']))  # noqa: E501
 
         header_params = {}
         if 'x_phrase_app_otp' in local_var_params:

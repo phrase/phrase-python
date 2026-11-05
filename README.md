@@ -664,6 +664,8 @@ Class | Method | HTTP request | Description
  - [TranslationIncludeParameters](docs/TranslationIncludeParameters.md)
  - [TranslationKey](docs/TranslationKey.md)
  - [TranslationKeyDetails](docs/TranslationKeyDetails.md)
+ - [TranslationKeyLinkedKey](docs/TranslationKeyLinkedKey.md)
+ - [TranslationKeyLinkedKeyParent](docs/TranslationKeyLinkedKeyParent.md)
  - [TranslationOrder](docs/TranslationOrder.md)
  - [TranslationParent](docs/TranslationParent.md)
  - [TranslationReviewParameters](docs/TranslationReviewParameters.md)

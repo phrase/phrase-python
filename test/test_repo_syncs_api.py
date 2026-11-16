@@ -76,6 +76,13 @@ class TestRepoSyncsApi(unittest.TestCase):
         """
         pass
 
+    def test_repo_sync_update(self):
+        """Test case for repo_sync_update
+
+        Update a repo sync  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

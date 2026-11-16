@@ -46,7 +46,18 @@ class TestRepoSyncCreateParameters(unittest.TestCase):
                 pr_branch = 'phrase-translations', 
                 auto_import = False, 
                 access_token = 'ghp_xxxxxxxxxxxxxxxxxxxx', 
-                custom_api_endpoint = 'https://git.example.com/api/v4'
+                custom_api_endpoint = 'https://git.example.com/api/v4', 
+                owner_id = '', 
+                export_triggers = [
+                    'schedule'
+                    ], 
+                export_schedule = phrase_api.models.repo_sync_create_parameters_export_schedule.repo_sync_create_parameters_export_schedule(
+                    frequency = 'hour', 
+                    time = '09:00', 
+                    time_zone = 'Europe/Berlin', 
+                    days_of_week = '1,3', 
+                    day_of_month = 56, 
+                    cron_schedule = '0 9 * * 1', )
             )
         else :
             return RepoSyncCreateParameters(

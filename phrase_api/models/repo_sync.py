@@ -42,7 +42,10 @@ class RepoSync(object):
         'pr_branch': 'str',
         'created_at': 'datetime',
         'last_import_at': 'datetime',
-        'last_export_at': 'datetime'
+        'last_export_at': 'datetime',
+        'owner': 'UserShort',
+        'export_triggers': 'List[str]',
+        'export_schedule': 'RepoSyncExportSchedule'
     }
 
     attribute_map = {
@@ -56,10 +59,13 @@ class RepoSync(object):
         'pr_branch': 'pr_branch',
         'created_at': 'created_at',
         'last_import_at': 'last_import_at',
-        'last_export_at': 'last_export_at'
+        'last_export_at': 'last_export_at',
+        'owner': 'owner',
+        'export_triggers': 'export_triggers',
+        'export_schedule': 'export_schedule'
     }
 
-    def __init__(self, id=None, name=None, project=None, provider=None, enabled=None, auto_import=None, repo_name=None, pr_branch=None, created_at=None, last_import_at=None, last_export_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, project=None, provider=None, enabled=None, auto_import=None, repo_name=None, pr_branch=None, created_at=None, last_import_at=None, last_export_at=None, owner=None, export_triggers=None, export_schedule=None, local_vars_configuration=None):  # noqa: E501
         """RepoSync - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -76,6 +82,9 @@ class RepoSync(object):
         self._created_at = None
         self._last_import_at = None
         self._last_export_at = None
+        self._owner = None
+        self._export_triggers = None
+        self._export_schedule = None
         self.discriminator = None
 
         if id is not None:
@@ -96,6 +105,11 @@ class RepoSync(object):
             self.created_at = created_at
         self.last_import_at = last_import_at
         self.last_export_at = last_export_at
+        if owner is not None:
+            self.owner = owner
+        if export_triggers is not None:
+            self.export_triggers = export_triggers
+        self.export_schedule = export_schedule
 
     @property
     def id(self):
@@ -334,6 +348,79 @@ class RepoSync(object):
         """
 
         self._last_export_at = last_export_at
+
+    @property
+    def owner(self):
+        """Gets the owner of this RepoSync.  # noqa: E501
+
+
+        :return: The owner of this RepoSync.  # noqa: E501
+        :rtype: UserShort
+        """
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this RepoSync.
+
+
+        :param owner: The owner of this RepoSync.  # noqa: E501
+        :type: UserShort
+        """
+
+        self._owner = owner
+
+    @property
+    def export_triggers(self):
+        """Gets the export_triggers of this RepoSync.  # noqa: E501
+
+        Events that trigger an automatic export. Only present when the automatic export feature is enabled for the account. Possible values: `schedule` (runs on the configured schedule), `branch_merged` (runs when a branch is merged in the connected repository), `job_completed` (runs when a translation job completes in the project).   # noqa: E501
+
+        :return: The export_triggers of this RepoSync.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._export_triggers
+
+    @export_triggers.setter
+    def export_triggers(self, export_triggers):
+        """Sets the export_triggers of this RepoSync.
+
+        Events that trigger an automatic export. Only present when the automatic export feature is enabled for the account. Possible values: `schedule` (runs on the configured schedule), `branch_merged` (runs when a branch is merged in the connected repository), `job_completed` (runs when a translation job completes in the project).   # noqa: E501
+
+        :param export_triggers: The export_triggers of this RepoSync.  # noqa: E501
+        :type: List[str]
+        """
+        allowed_values = ["schedule", "branch_merged", "job_completed"]  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                not set(export_triggers).issubset(set(allowed_values))):  # noqa: E501
+            raise ValueError(
+                "Invalid values for `export_triggers` [{0}], must be a subset of [{1}]"  # noqa: E501
+                .format(", ".join(map(str, set(export_triggers) - set(allowed_values))),  # noqa: E501
+                        ", ".join(map(str, allowed_values)))
+            )
+
+        self._export_triggers = export_triggers
+
+    @property
+    def export_schedule(self):
+        """Gets the export_schedule of this RepoSync.  # noqa: E501
+
+
+        :return: The export_schedule of this RepoSync.  # noqa: E501
+        :rtype: RepoSyncExportSchedule
+        """
+        return self._export_schedule
+
+    @export_schedule.setter
+    def export_schedule(self, export_schedule):
+        """Sets the export_schedule of this RepoSync.
+
+
+        :param export_schedule: The export_schedule of this RepoSync.  # noqa: E501
+        :type: RepoSyncExportSchedule
+        """
+
+        self._export_schedule = export_schedule
 
     def to_dict(self):
         """Returns the model properties as a dict"""

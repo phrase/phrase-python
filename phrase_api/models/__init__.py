@@ -185,10 +185,14 @@ from phrase_api.models.release_update_parameters import ReleaseUpdateParameters
 from phrase_api.models.release_update_parameters1 import ReleaseUpdateParameters1
 from phrase_api.models.repo_sync import RepoSync
 from phrase_api.models.repo_sync_create_parameters import RepoSyncCreateParameters
+from phrase_api.models.repo_sync_create_parameters_export_schedule import RepoSyncCreateParametersExportSchedule
 from phrase_api.models.repo_sync_event import RepoSyncEvent
 from phrase_api.models.repo_sync_event_uploads_inner import RepoSyncEventUploadsInner
 from phrase_api.models.repo_sync_export_parameters import RepoSyncExportParameters
+from phrase_api.models.repo_sync_export_schedule import RepoSyncExportSchedule
 from phrase_api.models.repo_sync_import_parameters import RepoSyncImportParameters
+from phrase_api.models.repo_sync_update_parameters import RepoSyncUpdateParameters
+from phrase_api.models.repo_sync_update_parameters_export_schedule import RepoSyncUpdateParametersExportSchedule
 from phrase_api.models.screenshot import Screenshot
 from phrase_api.models.screenshot_marker import ScreenshotMarker
 from phrase_api.models.screenshot_marker_create_parameters import ScreenshotMarkerCreateParameters
@@ -251,6 +255,7 @@ from phrase_api.models.upload_batches_create_parameters import UploadBatchesCrea
 from phrase_api.models.upload_summary import UploadSummary
 from phrase_api.models.user import User
 from phrase_api.models.user_preview import UserPreview
+from phrase_api.models.user_short import UserShort
 from phrase_api.models.variable import Variable
 from phrase_api.models.variable_create_parameters import VariableCreateParameters
 from phrase_api.models.variable_update_parameters import VariableUpdateParameters

@@ -47,7 +47,16 @@ class TestRepoSync(unittest.TestCase):
                 pr_branch = '', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 last_import_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                last_export_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
+                last_export_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                owner = {"id":"abcd1234cdef1234abcd1234cdef1234","username":"johndoe","name":"John Doe","gravatar_uid":"205e460b479e2e5b48aec07710c08d50"}, 
+                export_triggers = [
+                    'schedule'
+                    ], 
+                export_schedule = phrase_api.models.repo_sync_export_schedule.repo_sync_export_schedule(
+                    frequency = 'hour', 
+                    cron_schedule = '0 9 * * 1', 
+                    time_zone = 'Europe/Berlin', 
+                    next_run_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
             )
         else :
             return RepoSync(

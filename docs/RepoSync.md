@@ -14,6 +14,9 @@ Name | Type | Description | Notes
 **created_at** | **datetime** |  | [optional] 
 **last_import_at** | **datetime** |  | [optional] 
 **last_export_at** | **datetime** |  | [optional] 
+**owner** | [**UserShort**](UserShort.md) |  | [optional] 
+**export_triggers** | **List[str]** | Events that trigger an automatic export. Only present when the automatic export feature is enabled for the account. Possible values: &#x60;schedule&#x60; (runs on the configured schedule), &#x60;branch_merged&#x60; (runs when a branch is merged in the connected repository), &#x60;job_completed&#x60; (runs when a translation job completes in the project).  | [optional] 
+**export_schedule** | [**RepoSyncExportSchedule**](RepoSyncExportSchedule.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

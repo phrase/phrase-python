@@ -41,7 +41,10 @@ class RepoSyncCreateParameters(object):
         'pr_branch': 'str',
         'auto_import': 'bool',
         'access_token': 'str',
-        'custom_api_endpoint': 'str'
+        'custom_api_endpoint': 'str',
+        'owner_id': 'str',
+        'export_triggers': 'List[str]',
+        'export_schedule': 'RepoSyncCreateParametersExportSchedule'
     }
 
     attribute_map = {
@@ -54,10 +57,13 @@ class RepoSyncCreateParameters(object):
         'pr_branch': 'pr_branch',
         'auto_import': 'auto_import',
         'access_token': 'access_token',
-        'custom_api_endpoint': 'custom_api_endpoint'
+        'custom_api_endpoint': 'custom_api_endpoint',
+        'owner_id': 'owner_id',
+        'export_triggers': 'export_triggers',
+        'export_schedule': 'export_schedule'
     }
 
-    def __init__(self, project_id=None, name=None, git_provider='github', connection_type=None, repo_name=None, base_branch=None, pr_branch=None, auto_import=None, access_token=None, custom_api_endpoint=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, project_id=None, name=None, git_provider='github', connection_type=None, repo_name=None, base_branch=None, pr_branch=None, auto_import=None, access_token=None, custom_api_endpoint=None, owner_id=None, export_triggers=None, export_schedule=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncCreateParameters - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,6 +79,9 @@ class RepoSyncCreateParameters(object):
         self._auto_import = None
         self._access_token = None
         self._custom_api_endpoint = None
+        self._owner_id = None
+        self._export_triggers = None
+        self._export_schedule = None
         self.discriminator = None
 
         self.project_id = project_id
@@ -91,6 +100,12 @@ class RepoSyncCreateParameters(object):
             self.access_token = access_token
         if custom_api_endpoint is not None:
             self.custom_api_endpoint = custom_api_endpoint
+        if owner_id is not None:
+            self.owner_id = owner_id
+        if export_triggers is not None:
+            self.export_triggers = export_triggers
+        if export_schedule is not None:
+            self.export_schedule = export_schedule
 
     @property
     def project_id(self):
@@ -342,6 +357,81 @@ class RepoSyncCreateParameters(object):
         """
 
         self._custom_api_endpoint = custom_api_endpoint
+
+    @property
+    def owner_id(self):
+        """Gets the owner_id of this RepoSyncCreateParameters.  # noqa: E501
+
+        Code of the user who will own this repo sync. Automated actions run as this user. Defaults to the account owner when not set.   # noqa: E501
+
+        :return: The owner_id of this RepoSyncCreateParameters.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id):
+        """Sets the owner_id of this RepoSyncCreateParameters.
+
+        Code of the user who will own this repo sync. Automated actions run as this user. Defaults to the account owner when not set.   # noqa: E501
+
+        :param owner_id: The owner_id of this RepoSyncCreateParameters.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_id = owner_id
+
+    @property
+    def export_triggers(self):
+        """Gets the export_triggers of this RepoSyncCreateParameters.  # noqa: E501
+
+        Events that should trigger an automatic export. Requires the automatic export feature to be enabled for the account; returns `422` otherwise. Accepted values: `schedule`, `branch_merged`, `job_completed`.   # noqa: E501
+
+        :return: The export_triggers of this RepoSyncCreateParameters.  # noqa: E501
+        :rtype: List[str]
+        """
+        return self._export_triggers
+
+    @export_triggers.setter
+    def export_triggers(self, export_triggers):
+        """Sets the export_triggers of this RepoSyncCreateParameters.
+
+        Events that should trigger an automatic export. Requires the automatic export feature to be enabled for the account; returns `422` otherwise. Accepted values: `schedule`, `branch_merged`, `job_completed`.   # noqa: E501
+
+        :param export_triggers: The export_triggers of this RepoSyncCreateParameters.  # noqa: E501
+        :type: List[str]
+        """
+        allowed_values = ["schedule", "branch_merged", "job_completed"]  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                not set(export_triggers).issubset(set(allowed_values))):  # noqa: E501
+            raise ValueError(
+                "Invalid values for `export_triggers` [{0}], must be a subset of [{1}]"  # noqa: E501
+                .format(", ".join(map(str, set(export_triggers) - set(allowed_values))),  # noqa: E501
+                        ", ".join(map(str, allowed_values)))
+            )
+
+        self._export_triggers = export_triggers
+
+    @property
+    def export_schedule(self):
+        """Gets the export_schedule of this RepoSyncCreateParameters.  # noqa: E501
+
+
+        :return: The export_schedule of this RepoSyncCreateParameters.  # noqa: E501
+        :rtype: RepoSyncCreateParametersExportSchedule
+        """
+        return self._export_schedule
+
+    @export_schedule.setter
+    def export_schedule(self, export_schedule):
+        """Sets the export_schedule of this RepoSyncCreateParameters.
+
+
+        :param export_schedule: The export_schedule of this RepoSyncCreateParameters.  # noqa: E501
+        :type: RepoSyncCreateParametersExportSchedule
+        """
+
+        self._export_schedule = export_schedule
 
     def to_dict(self):
         """Returns the model properties as a dict"""

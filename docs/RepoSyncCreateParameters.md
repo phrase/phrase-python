@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **auto_import** | **bool** | Enable automatic import of translations triggered by pushes to the repository. | [optional] 
 **access_token** | **str** | Personal access token for the Git provider. Required when &#x60;connection_type&#x60; is &#x60;token&#x60; or &#x60;self_hosted&#x60;. Not used for &#x60;github_app&#x60;. | [optional] 
 **custom_api_endpoint** | **str** | Custom API endpoint URL for self-hosted Git instances. Required when &#x60;connection_type&#x60; is &#x60;self_hosted&#x60;. | [optional] 
+**owner_id** | **str** | Code of the user who will own this repo sync. Automated actions run as this user. Defaults to the account owner when not set.  | [optional] 
+**export_triggers** | **List[str]** | Events that should trigger an automatic export. Requires the automatic export feature to be enabled for the account; returns &#x60;422&#x60; otherwise. Accepted values: &#x60;schedule&#x60;, &#x60;branch_merged&#x60;, &#x60;job_completed&#x60;.  | [optional] 
+**export_schedule** | [**RepoSyncCreateParametersExportSchedule**](RepoSyncCreateParametersExportSchedule.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

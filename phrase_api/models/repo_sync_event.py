@@ -36,6 +36,7 @@ class RepoSyncEvent(object):
         'type': 'str',
         'created_at': 'datetime',
         'status': 'str',
+        'automatic': 'bool',
         'pull_request_url': 'str',
         'auto_import': 'bool',
         'errors': 'List[str]',
@@ -47,13 +48,14 @@ class RepoSyncEvent(object):
         'type': 'type',
         'created_at': 'created_at',
         'status': 'status',
+        'automatic': 'automatic',
         'pull_request_url': 'pull_request_url',
         'auto_import': 'auto_import',
         'errors': 'errors',
         'uploads': 'uploads'
     }
 
-    def __init__(self, id=None, type=None, created_at=None, status=None, pull_request_url=None, auto_import=None, errors=None, uploads=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, type=None, created_at=None, status=None, automatic=None, pull_request_url=None, auto_import=None, errors=None, uploads=None, local_vars_configuration=None):  # noqa: E501
         """RepoSyncEvent - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -63,6 +65,7 @@ class RepoSyncEvent(object):
         self._type = None
         self._created_at = None
         self._status = None
+        self._automatic = None
         self._pull_request_url = None
         self._auto_import = None
         self._errors = None
@@ -77,6 +80,8 @@ class RepoSyncEvent(object):
             self.created_at = created_at
         if status is not None:
             self.status = status
+        if automatic is not None:
+            self.automatic = automatic
         if pull_request_url is not None:
             self.pull_request_url = pull_request_url
         if auto_import is not None:
@@ -182,6 +187,29 @@ class RepoSyncEvent(object):
         self._status = status
 
     @property
+    def automatic(self):
+        """Gets the automatic of this RepoSyncEvent.  # noqa: E501
+
+        When `true`, the sync was triggered automatically (for example by a Zero Touch Localization rule or an automation). When `false`, it was triggered manually.   # noqa: E501
+
+        :return: The automatic of this RepoSyncEvent.  # noqa: E501
+        :rtype: bool
+        """
+        return self._automatic
+
+    @automatic.setter
+    def automatic(self, automatic):
+        """Sets the automatic of this RepoSyncEvent.
+
+        When `true`, the sync was triggered automatically (for example by a Zero Touch Localization rule or an automation). When `false`, it was triggered manually.   # noqa: E501
+
+        :param automatic: The automatic of this RepoSyncEvent.  # noqa: E501
+        :type: bool
+        """
+
+        self._automatic = automatic
+
+    @property
     def pull_request_url(self):
         """Gets the pull_request_url of this RepoSyncEvent.  # noqa: E501
 
@@ -208,7 +236,7 @@ class RepoSyncEvent(object):
     def auto_import(self):
         """Gets the auto_import of this RepoSyncEvent.  # noqa: E501
 
-        Whether the import was triggered by the repo push event  # noqa: E501
+        **Deprecated.** Use `automatic` instead. Only present on import events. Indicates whether the import was triggered automatically.   # noqa: E501
 
         :return: The auto_import of this RepoSyncEvent.  # noqa: E501
         :rtype: bool
@@ -219,7 +247,7 @@ class RepoSyncEvent(object):
     def auto_import(self, auto_import):
         """Sets the auto_import of this RepoSyncEvent.
 
-        Whether the import was triggered by the repo push event  # noqa: E501
+        **Deprecated.** Use `automatic` instead. Only present on import events. Indicates whether the import was triggered automatically.   # noqa: E501
 
         :param auto_import: The auto_import of this RepoSyncEvent.  # noqa: E501
         :type: bool

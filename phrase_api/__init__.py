@@ -56,6 +56,7 @@ from phrase_api.api.orders_api import OrdersApi
 from phrase_api.api.organization_job_template_locales_api import OrganizationJobTemplateLocalesApi
 from phrase_api.api.organization_job_templates_api import OrganizationJobTemplatesApi
 from phrase_api.api.pre_translations_api import PreTranslationsApi
+from phrase_api.api.project_notes_api import ProjectNotesApi
 from phrase_api.api.projects_api import ProjectsApi
 from phrase_api.api.quality_performance_score_api import QualityPerformanceScoreApi
 from phrase_api.api.release_triggers_api import ReleaseTriggersApi
@@ -225,6 +226,7 @@ from phrase_api.models.member_project_detail_project_roles_inner import MemberPr
 from phrase_api.models.member_spaces_inner import MemberSpacesInner
 from phrase_api.models.member_update_parameters import MemberUpdateParameters
 from phrase_api.models.member_update_settings_parameters import MemberUpdateSettingsParameters
+from phrase_api.models.note import Note
 from phrase_api.models.notification import Notification
 from phrase_api.models.notification_group import NotificationGroup
 from phrase_api.models.notification_group_detail import NotificationGroupDetail
@@ -243,6 +245,7 @@ from phrase_api.models.project_create_parameters import ProjectCreateParameters
 from phrase_api.models.project_details import ProjectDetails
 from phrase_api.models.project_locales import ProjectLocales
 from phrase_api.models.project_member import ProjectMember
+from phrase_api.models.project_note_update_parameters import ProjectNoteUpdateParameters
 from phrase_api.models.project_report import ProjectReport
 from phrase_api.models.project_short import ProjectShort
 from phrase_api.models.project_update_parameters import ProjectUpdateParameters

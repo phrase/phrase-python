@@ -338,6 +338,9 @@ Class | Method | HTTP request | Description
 *PreTranslationsApi* | [**pre_translation_create**](docs/PreTranslationsApi.md#pre_translation_create) | **POST** /projects/{project_id}/pre_translations | Create a pre-translation job
 *PreTranslationsApi* | [**pre_translation_show**](docs/PreTranslationsApi.md#pre_translation_show) | **GET** /projects/{project_id}/pre_translations/{id} | Get a single pre-translation job
 *PreTranslationsApi* | [**pre_translations_list**](docs/PreTranslationsApi.md#pre_translations_list) | **GET** /projects/{project_id}/pre_translations | List pre-translation jobs
+*ProjectNotesApi* | [**project_note_destroy**](docs/ProjectNotesApi.md#project_note_destroy) | **DELETE** /projects/{project_id}/note | Delete a project note
+*ProjectNotesApi* | [**project_note_show**](docs/ProjectNotesApi.md#project_note_show) | **GET** /projects/{project_id}/note | Get a project note
+*ProjectNotesApi* | [**project_note_update**](docs/ProjectNotesApi.md#project_note_update) | **PATCH** /projects/{project_id}/note | Create or update a project note
 *ProjectsApi* | [**project_create**](docs/ProjectsApi.md#project_create) | **POST** /projects | Create a project
 *ProjectsApi* | [**project_delete**](docs/ProjectsApi.md#project_delete) | **DELETE** /projects/{id} | Delete a project
 *ProjectsApi* | [**project_show**](docs/ProjectsApi.md#project_show) | **GET** /projects/{id} | Get a single project
@@ -587,6 +590,7 @@ Class | Method | HTTP request | Description
  - [MemberSpacesInner](docs/MemberSpacesInner.md)
  - [MemberUpdateParameters](docs/MemberUpdateParameters.md)
  - [MemberUpdateSettingsParameters](docs/MemberUpdateSettingsParameters.md)
+ - [Note](docs/Note.md)
  - [Notification](docs/Notification.md)
  - [NotificationGroup](docs/NotificationGroup.md)
  - [NotificationGroupDetail](docs/NotificationGroupDetail.md)
@@ -605,6 +609,7 @@ Class | Method | HTTP request | Description
  - [ProjectDetails](docs/ProjectDetails.md)
  - [ProjectLocales](docs/ProjectLocales.md)
  - [ProjectMember](docs/ProjectMember.md)
+ - [ProjectNoteUpdateParameters](docs/ProjectNoteUpdateParameters.md)
  - [ProjectReport](docs/ProjectReport.md)
  - [ProjectShort](docs/ProjectShort.md)
  - [ProjectUpdateParameters](docs/ProjectUpdateParameters.md)
